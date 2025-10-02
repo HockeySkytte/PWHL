@@ -26,3 +26,5 @@ pip-wheel-metadata/
 !Teams2.csv
 !pwhl_schedule_*.json
 !pwhl_schedule_*.csv
+!app/
+!app/__init__.py
