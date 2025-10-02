@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWHL Game Details</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; background-color: #1e2329; color: #ffffff; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 1rem; }
+        .header { background-color: #2d3748; border: 1px solid #4a5568; border-radius: 0.5rem; padding: 1.5rem; margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .back-btn { background-color: #4a5568; color: #ffffff; border: none; padding: 0.5rem 1rem; border-radius: 0.375rem; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; transition: background-color 0.2s; }
+        .back-btn:hover { background-color: #718096; }
+        .btn { background-color: #4299e1; color: #ffffff; border: none; padding: 0.5rem 1rem; border-radius: 0.375rem; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; font-weight: 500; transition: background-color 0.2s; }
+        .btn:hover { background-color: #3182ce; }
+        .btn-sm { padding: 0.375rem 0.75rem; font-size: 0.75rem; }
+        .game-info { flex: 1; text-align: center; margin: 0 2rem; }
+        .game-title { font-size: 1.5rem; font-weight: 700; color: #4299e1; margin-bottom: 0.5rem; }
+        .game-meta { color: #a0aec0; font-size: 0.875rem; }
+        .tabs { background-color: #2d3748; border: 1px solid #4a5568; border-radius: 0.5rem; margin-bottom: 2rem; overflow: hidden; }
+        .tab-list { display: flex; background-color: #1e2329; }
+        .tab { background-color: transparent; color: #a0aec0; border: none; padding: 1rem 2rem; cursor: pointer; border-bottom: 3px solid transparent; transition: all 0.2s; flex: 1; text-align: center; }
+        .tab.active { background-color: #2d3748; color: #4299e1; border-bottom-color: #4299e1; }
+        .tab-content { padding: 2rem; min-height: 400px; }
+        .loading { text-align: center; padding: 4rem 2rem; color: #a0aec0; }
+        .error { text-align: center; padding: 4rem 2rem; color: #f56565; }
+        .game-summary { display: flex; flex-direction: column; gap: 2rem; }
+        .section { background-color: #1e2329; border: 1px solid #4a5568; border-radius: 0.5rem; padding: 1.5rem; }
+        .section h3 { margin: 0 0 1.5rem 0; color: #4299e1; border-bottom: 1px solid #4a5568; padding-bottom: 0.75rem; font-size: 1.25rem; }
+        .section h4 { margin: 1.5rem 0 1rem 0; color: #e2e8f0; font-size: 1rem; }
+        .roster-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem; margin-top: 1rem; }
+        .player-card { background-color: #2d3748; border: 1px solid #4a5568; border-radius: 0.375rem; padding: 1rem; min-width: 300px; transition: transform 0.2s, box-shadow 0.2s; }
+        .player-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+        .play-by-play { display: flex; flex-direction: column; gap: 1rem; }
+        .pbp-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+        .pbp-table th, .pbp-table td { padding: 6px 8px; border-bottom: 1px solid #4a5568; white-space: nowrap; }
+        .pbp-table thead th { position: sticky; top: 0; background-color: #1a202c; z-index: 1; text-transform: none; font-weight: 600; color: #e2e8f0; }
+        .pbp-col-center { text-align: center; }
+        .pbp-col-left { text-align: left; }
+        .pbp-col-right { text-align: right; }
+        .events-list { max-height: 600px; overflow-y: auto; border: 1px solid #4a5568; border-radius: 0.5rem; }
+        .event-item { display: flex; align-items: center; gap: 1rem; padding: 1rem; border-bottom: 1px solid #4a5568; background-color: #1e2329; }
+        .event-item:last-child { border-bottom: none; }
+        .event-item.goal { background-color: rgba(72,187,120,0.1); border-left: 4px solid #48bb78; }
+        .event-item.penalty { background-color: rgba(245,101,101,0.1); border-left: 4px solid #f56565; }
+        .event-time { min-width: 100px; text-align: center; font-family: 'Courier New', monospace; color: #a0aec0; font-size: 0.875rem; }
+        .event-description { flex: 1; color: #e2e8f0; }
+        .csv-btn { background-color: #23283a; color: #fff; border: none; border-radius: 10px; padding: 0.7rem 1.5rem; font-size: 1rem; font-weight: 500; margin-right: 0.5rem; margin-bottom: 0.5rem; cursor: pointer; box-shadow: none; transition: background 0.2s; }
+    .csv-btn:hover { background-color: #2d3348; }
+    .tab-list .csv-btn { margin-top: 6px; }
+    .pbp-scroll { max-height: 70vh; overflow-y: auto; }
+        @media (max-width: 768px) {
+            .header { flex-direction: column; text-align: center; gap: 1rem; }
+            .game-info { margin: 0; }
+            .tab-list { flex-direction: column; }
+            .roster-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="/" class="back-btn">
+                ← Back to Schedule
+            </a>
+            <div class="game-info">
+                <div class="game-title" id="gameTitle">Loading Game...</div>
+                <div class="game-meta" id="gameMeta">Game Details</div>
+            </div>
+            <div style="width: 120px;"></div> <!-- Spacer for centering -->
+        </div>
+
+        <div class="tabs">
+            <div class="tab-list" style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <button class="tab active" onclick="switchTab('lineups')">📋 Lineups</button>
+                    <button class="tab" onclick="switchTab('playbyplay')">⚡ Play-by-Play</button>
+                </div>
+                <div>
+                    <button id="export-lineups-btn" class="csv-btn" onclick="exportLineups()">Export CSV</button>
+                    <button id="export-playbyplay-btn" class="csv-btn" onclick="exportPlayByPlay()" style="display: none;">Export CSV</button>
+                </div>
+            </div>
+            <div class="tab-content">
+                <div id="lineups-content" class="tab-panel active">
+                    <div class="loading">Loading lineup data...</div>
+                </div>
+                <div id="playbyplay-content" class="tab-panel" style="display: none;">
+                    <div class="loading">Loading play-by-play data...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentGameId = null;
+        let activeTab = 'lineups';
+
+        // Get game ID from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        currentGameId = urlParams.get('id');
+
+        if (!currentGameId) {
+            document.getElementById('gameTitle').innerText = 'No Game Selected';
+            document.getElementById('gameMeta').innerText = 'Please go back and select a game';
+        } else {
+            loadGameData();
+        }
+
+        async function loadGameData() {
+            try {
+                // Load basic game info first (we'll get this from schedule API)
+                await loadGameInfo();
+                // Preload both summary and play-by-play so we can resolve shootout teams and avoid tab refetches
+                const [sumResp, pbpResp] = await Promise.all([
+                    fetch(`/api/game/summary/${currentGameId}`).catch(() => null),
+                    fetch(`/api/game/playbyplay/${currentGameId}`).catch(() => null)
+                ]);
+                if (sumResp) {
+                    try { const sumData = await sumResp.json(); if (sumResp.ok) window.currentGameSummaryData = sumData; } catch {}
+                }
+                if (pbpResp) {
+                    try { const pbpData = await pbpResp.json(); if (pbpResp.ok) window.currentPlayByPlayData = pbpData; } catch {}
+                }
+                // Render the active tab from cached data
+                await loadTabContent(activeTab);
+            } catch (error) {
+                console.error('Error loading game data:', error);
+            }
+        }
+
+        async function loadGameInfo() {
+            try {
+                const response = await fetch(`/api/game/info/${currentGameId}`);
+                const gameInfo = await response.json();
+                
+                if (response.ok) {
+                    // Update title with proper format: "{Date} - {AwayTeam} at {HomeTeam}"
+                    const title = `${gameInfo.date} - ${gameInfo.away_team} at ${gameInfo.home_team}`;
+                    document.getElementById('gameTitle').innerText = title;
+                    
+                    // Update meta info
+                    let meta = `${gameInfo.season_year} ${gameInfo.season_state}`;
+                    if (gameInfo.status.includes('Final')) {
+                        meta += ` | Final: ${gameInfo.away_team} ${gameInfo.away_score} - ${gameInfo.home_score} ${gameInfo.home_team}`;
+                    } else {
+                        meta += ` | ${gameInfo.status}`;
+                    }
+                    document.getElementById('gameMeta').innerText = meta;
+                    
+                    // Store game info for use in other functions
+                    window.currentGameInfo = gameInfo;
+                } else {
+                    document.getElementById('gameTitle').innerText = `Game ${currentGameId}`;
+                    document.getElementById('gameMeta').innerText = `Game details unavailable`;
+                }
+            } catch (error) {
+                console.error('Error loading game info:', error);
+                document.getElementById('gameTitle').innerText = `Game ${currentGameId}`;
+                document.getElementById('gameMeta').innerText = `PWHL Game Details`;
+            }
+        }
+
+        async function loadTabContent(tabName) {
+            const contentId = `${tabName}-content`;
+            const contentDiv = document.getElementById(contentId);
+            
+            if (!contentDiv) return;
+
+            // Show loading state
+            contentDiv.innerHTML = '<div class="loading">Loading...</div>';
+
+            try {
+                let data = null; let formatFunction = null;
+                if (tabName === 'lineups') {
+                    formatFunction = formatGameSummary;
+                    data = window.currentGameSummaryData;
+                    if (!data) {
+                        const r = await fetch(`/api/game/summary/${currentGameId}`);
+                        const j = await r.json();
+                        if (r.ok) { window.currentGameSummaryData = j; data = j; }
+                    }
+                } else if (tabName === 'playbyplay') {
+                    // Ensure summary exists for lineup-based lookups
+                    if (!window.currentGameSummaryData) {
+                        const rs = await fetch(`/api/game/summary/${currentGameId}`);
+                        const js = await rs.json();
+                        if (rs.ok) window.currentGameSummaryData = js;
+                    }
+                    formatFunction = formatPlayByPlay;
+                    data = window.currentPlayByPlayData;
+                    if (!data) {
+                        const r = await fetch(`/api/game/playbyplay/${currentGameId}`);
+                        const j = await r.json();
+                        if (r.ok) { window.currentPlayByPlayData = j; data = j; }
+                    }
+                }
+                if (data) {
+                    contentDiv.innerHTML = formatFunction(data);
+                } else {
+                    contentDiv.innerHTML = `<div class="error">Error loading ${tabName}: data unavailable</div>`;
+                }
+            } catch (error) {
+                console.error(`Error loading ${tabName}:`, error);
+                contentDiv.innerHTML = `<div class="error">Error loading ${tabName}. Please try again.</div>`;
+            }
+        }
+
+        function switchTab(tabName) {
+            // Update active tab
+            activeTab = tabName;
+            
+            // Update tab buttons
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Update tab content
+            document.querySelectorAll('.tab-panel').forEach(panel => {
+                panel.style.display = 'none';
+            });
+            document.getElementById(`${tabName}-content`).style.display = 'block';
+
+            // Show/hide appropriate export buttons
+            if (tabName === 'lineups') {
+                document.getElementById('export-lineups-btn').style.display = 'inline-block';
+                document.getElementById('export-playbyplay-btn').style.display = 'none';
+            } else if (tabName === 'playbyplay') {
+                document.getElementById('export-lineups-btn').style.display = 'none';
+                document.getElementById('export-playbyplay-btn').style.display = 'inline-block';
+            }
+
+            // Load content for the new tab
+            loadTabContent(tabName);
+        }
+
+        function formatGameSummary(data) {
+            let html = '<div class="game-summary">';
+            
+            // Check if we have the expected homeTeam/visitingTeam structure
+            if (data && data.homeTeam && data.visitingTeam) {
+                // Get team logos from current game info
+                const homeTeamLogo = window.currentGameInfo?.home_team_logo || '';
+                const awayTeamLogo = window.currentGameInfo?.away_team_logo || '';
+                
+                // Home Team Lineup
+                html += `<div class="section">
+                    <h3 style="display: flex; align-items: center; gap: 0.75rem;">
+                        ${homeTeamLogo ? `<img src="${homeTeamLogo}" alt="${window.currentGameInfo?.home_team || 'Home Team'}" style="width: 32px; height: 32px;">` : '🏠'}
+                        ${window.currentGameInfo?.home_team || data.homeTeam.name || 'Home Team'}
+                    </h3>`;
+                
+                // Goalies
+                if (data.homeTeam.goalies && Array.isArray(data.homeTeam.goalies)) {
+                    html += '<h4>🥅 Goalies</h4><div class="roster-grid">';
+                    data.homeTeam.goalies.forEach(player => {
+                        const stats = player.stats || {};
+                        const playerImage = player.playerImageURL || '';
+                        html += `<div class="player-card" style="display: flex; align-items: flex-start; gap: 1rem;">
+                            ${playerImage ? `<img src="${playerImage}" alt="${player.name}" style="width: 80px; height: 80px; border-radius: 0.375rem; flex-shrink: 0;">` : '<div style="width: 80px; height: 80px; background-color: #4a5568; border-radius: 0.375rem; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 2.5rem;">🥅</div>'}
+                            <div style="flex: 1;">
+                                <strong>#${player.jersey || 'N/A'} ${player.name || 'Unknown'}</strong><br>
+                                <small>${player.position || 'G'}${stats.timeOnIce ? ` | TOI: ${stats.timeOnIce}` : ''}</small><br>
+                                ${stats.gamesPlayed ? `<small>GP: ${stats.gamesPlayed} | W: ${stats.wins || 0} | L: ${stats.losses || 0}</small><br>` : ''}
+                                ${stats.shotsAgainst !== undefined ? `<small>SA: ${stats.shotsAgainst} | Sv%: ${stats.shotsAgainst > 0 ? ((stats.saves / stats.shotsAgainst * 100).toFixed(1) + '%') : 'N/A'}</small>` : ''}
+                            </div>
+                        </div>`;
+                    });
+                    html += '</div>';
+                }
+                
+                // Skaters
+                if (data.homeTeam.skaters && Array.isArray(data.homeTeam.skaters)) {
+                    html += '<h4>🏒 Skaters</h4><div class="roster-grid">';
+                    data.homeTeam.skaters.forEach(player => {
+                        const stats = player.stats || {};
+                        const playerImage = player.playerImageURL || '';
+                        html += `<div class="player-card" style="display: flex; align-items: flex-start; gap: 1rem;">
+                            ${playerImage ? `<img src="${playerImage}" alt="${player.name}" style="width: 80px; height: 80px; border-radius: 0.375rem; flex-shrink: 0;">` : '<div style="width: 80px; height: 80px; background-color: #4a5568; border-radius: 0.375rem; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 2.5rem;">🏒</div>'}
+                            <div style="flex: 1;">
+                                <strong>#${player.jersey || 'N/A'} ${player.name || 'Unknown'}</strong><br>
+                                <small>${player.position || 'Skater'}${stats.toi ? ` | TOI: ${stats.toi}` : ''}</small><br>
+                                ${stats.goals !== undefined ? `<small>G: ${stats.goals} | A: ${stats.assists || 0} | P: ${stats.points || 0}</small><br>` : ''}
+                                ${stats.plusMinus !== undefined || stats.penaltyMinutes !== undefined ? `<small>+/-: ${stats.plusMinus !== undefined ? (stats.plusMinus > 0 ? '+' + stats.plusMinus : stats.plusMinus) : 'N/A'} | PIM: ${stats.penaltyMinutes || 0}</small>` : ''}
+                            </div>
+                        </div>`;
+                    });
+                    html += '</div>';
+                }
+                
+                html += '</div>';
+                
+                // Visiting Team Lineup
+                html += `<div class="section">
+                    <h3 style="display: flex; align-items: center; gap: 0.75rem;">
+                        ${awayTeamLogo ? `<img src="${awayTeamLogo}" alt="${window.currentGameInfo?.away_team || 'Visiting Team'}" style="width: 32px; height: 32px;">` : '✈️'}
+                        ${window.currentGameInfo?.away_team || data.visitingTeam.name || 'Visiting Team'}
+                    </h3>`;
+                
+                // Goalies
+                if (data.visitingTeam.goalies && Array.isArray(data.visitingTeam.goalies)) {
+                    html += '<h4>🥅 Goalies</h4><div class="roster-grid">';
+                    data.visitingTeam.goalies.forEach(player => {
+                        const stats = player.stats || {};
+                        const playerImage = player.playerImageURL || '';
+                        html += `<div class="player-card" style="display: flex; align-items: flex-start; gap: 1rem;">
+                            ${playerImage ? `<img src="${playerImage}" alt="${player.name}" style="width: 80px; height: 80px; border-radius: 0.375rem; flex-shrink: 0;">` : '<div style="width: 80px; height: 80px; background-color: #4a5568; border-radius: 0.375rem; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 2.5rem;">🥅</div>'}
+                            <div style="flex: 1;">
+                                <strong>#${player.jersey || 'N/A'} ${player.name || 'Unknown'}</strong><br>
+                                <small>${player.position || 'G'}${stats.timeOnIce ? ` | TOI: ${stats.timeOnIce}` : ''}</small><br>
+                                ${stats.gamesPlayed ? `<small>GP: ${stats.gamesPlayed} | W: ${stats.wins || 0} | L: ${stats.losses || 0}</small><br>` : ''}
+                                ${stats.shotsAgainst !== undefined ? `<small>SA: ${stats.shotsAgainst} | Sv%: ${stats.shotsAgainst > 0 ? ((stats.saves / stats.shotsAgainst * 100).toFixed(1) + '%') : 'N/A'}</small>` : ''}
+                            </div>
+                        </div>`;
+                    });
+                    html += '</div>';
+                }
+                
+                // Skaters
+                if (data.visitingTeam.skaters && Array.isArray(data.visitingTeam.skaters)) {
+                    html += '<h4>🏒 Skaters</h4><div class="roster-grid">';
+                    data.visitingTeam.skaters.forEach(player => {
+                        const stats = player.stats || {};
+                        const playerImage = player.playerImageURL || '';
+                        html += `<div class="player-card" style="display: flex; align-items: flex-start; gap: 1rem;">
+                            ${playerImage ? `<img src="${playerImage}" alt="${player.name}" style="width: 80px; height: 80px; border-radius: 0.375rem; flex-shrink: 0;">` : '<div style="width: 80px; height: 80px; background-color: #4a5568; border-radius: 0.375rem; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 2.5rem;">🏒</div>'}
+                            <div style="flex: 1;">
+                                <strong>#${player.jersey || 'N/A'} ${player.name || 'Unknown'}</strong><br>
+                                <small>${player.position || 'Skater'}${stats.toi ? ` | TOI: ${stats.toi}` : ''}</small><br>
+                                ${stats.goals !== undefined ? `<small>G: ${stats.goals} | A: ${stats.assists || 0} | P: ${stats.points || 0}</small><br>` : ''}
+                                ${stats.plusMinus !== undefined || stats.penaltyMinutes !== undefined ? `<small>+/-: ${stats.plusMinus !== undefined ? (stats.plusMinus > 0 ? '+' + stats.plusMinus : stats.plusMinus) : 'N/A'} | PIM: ${stats.penaltyMinutes || 0}</small>` : ''}
+                            </div>
+                        </div>`;
+                    });
+                    html += '</div>';
+                }
+                
+                html += '</div>';
+            } 
+            // Handle the case where API returns "Client access denied" or other errors
+            else if (typeof data === 'string' && data.includes('denied')) {
+                html += `<div class="section" style="text-align: center; padding: 2rem;">
+                    <h3>🔒 Lineup Data Currently Unavailable</h3>
+                    <p style="color: #a0aec0; margin: 1rem 0;">
+                        The PWHL lineup data is currently restricted by the API provider.
+                    </p>
+                    <p style="color: #a0aec0; margin: 1rem 0;">
+                        We're working on alternative methods to provide team lineups including:
+                    </p>
+                    <ul style="text-align: left; max-width: 400px; margin: 1rem auto; color: #e2e8f0;">
+                        <li>🥅 Goalie assignments</li>
+                        <li>🏒 Starting skater lineups</li>
+                        <li>📋 Full roster information</li>
+                        <li>📊 Player statistics</li>
+                    </ul>
+                    <p style="color: #4299e1; margin-top: 1.5rem;">
+                        <strong>Play-by-Play data is still available!</strong>
+                    </p>
+                </div>`;
+            }
+            // Any other data structure - show for debugging
+            else {
+                html += '<div class="section">';
+                html += '<h3>📊 Game Data</h3>';
+                html += `<p style="color: #a0aec0; margin-bottom: 1rem;">Raw API response:</p>`;
+                html += `<pre style="white-space: pre-wrap; font-size: 11px; overflow-x: auto; background-color: #1e2329; padding: 1rem; border-radius: 0.25rem; max-height: 400px; overflow-y: auto;">${JSON.stringify(data, null, 2)}</pre>`;
+                html += '</div>';
+            }
+            
+            html += '</div>';
+            return html;
+        }
+
+        function formatPlayByPlay(data) {
+            if (!Array.isArray(data) || data.length === 0) {
+                return '<div style="text-align: center; padding: 2rem; color: #a0aec0;">No play-by-play data available.</div>';
+            }
+
+            const gameInfo = window.currentGameInfo || {};
+            // Build lineup index for resolving shooter teams (used for shootout events)
+            const lineupIndex = buildLineupIndex(window.currentGameSummaryData, gameInfo);
+
+            // Build merged/filtered events to match CSV export logic
+            const keyFor = (ev) => {
+                const d = ev.details || {};
+                const periodId = (d.period && (d.period.id || d.period.shortName)) || '';
+                const time = d.time || '';
+                return `${periodId}|${time}`;
+            };
+            const eventsByKey = new Map();
+            data.forEach(ev => {
+                const k = keyFor(ev);
+                if (!eventsByKey.has(k)) eventsByKey.set(k, []);
+                eventsByKey.get(k).push(ev);
+            });
+            const removedTypes = new Set(['goalie_change', 'goalie-change', 'hit', 'faceoff']);
+            const consumed = new Set();
+            const finalEvents = [];
+            const ids1 = getGameTeamIds(gameInfo);
+            const homeId = ids1.homeId;
+            const awayId = ids1.awayId;
+
+            data.forEach((ev, idx) => {
+                if (consumed.has(idx)) return;
+                const type = (ev.event || '').toLowerCase();
+                if (removedTypes.has(type)) return;
+                const d = ev.details || {};
+                const key = keyFor(ev);
+                if (type === 'goal') {
+                    const goalTeamId = String(d.team?.id || '');
+                    let shotEv = null;
+                    const group = eventsByKey.get(key) || [];
+                    for (const cand of group) {
+                        if ((cand.event || '').toLowerCase() !== 'shot') continue;
+                        const cd = cand.details || {};
+                        if (String(cd.shooterTeamId || '') === goalTeamId) { shotEv = cand; break; }
+                    }
+                    if (shotEv) {
+                        const shotIdx = data.indexOf(shotEv);
+                        if (shotIdx >= 0) consumed.add(shotIdx);
+                    }
+                    const shotD = shotEv ? (shotEv.details || {}) : {};
+                    finalEvents.push({
+                        ...ev,
+                        _computedTeamId: goalTeamId,
+                        _mergedScorer: shotD.shooter || d.scoredBy || d.scorer || d.player || null,
+                        _mergedAssists: Array.isArray(d.assists) ? d.assists.slice(0, 2) : [],
+                        _mergedGoalie: shotD.goalie || d.goalie || null,
+                        _x: (d.xLocation !== undefined ? d.xLocation : shotD.xLocation),
+                        _y: (d.yLocation !== undefined ? d.yLocation : shotD.yLocation)
+                    });
+                    return;
+                }
+                if (type === 'shot') {
+                    const shooterTeamId = String(d.shooterTeamId || d.teamId || d.team_id || '');
+                    const group = eventsByKey.get(key) || [];
+                    const hasMatchingGoal = group.some(g => {
+                        if ((g.event || '').toLowerCase() !== 'goal') return false;
+                        const gd = g.details || {};
+                        return String(gd.team?.id || '') === shooterTeamId;
+                    });
+                    if (hasMatchingGoal) return;
+                    finalEvents.push({ ...ev, _computedTeamId: shooterTeamId, _x: d.xLocation, _y: d.yLocation });
+                    return;
+                }
+                if (type === 'shootout') {
+                    const teamResolved = resolveShootoutTeamId(d, lineupIndex, gameInfo);
+                    const soIsGoal = boolish(d?.isGoal) || boolish(d?.properties?.isGoal);
+                    let teamIdForSO = teamResolved;
+                    if (soIsGoal && d.scoredBy) {
+                        const via = getPlayerTeamIdFromLineups(d.scoredBy, lineupIndex, gameInfo);
+                        if (via) teamIdForSO = via;
+                    }
+                    finalEvents.push({ ...ev, _computedTeamId: String(teamIdForSO||''), _overrideEvent: soIsGoal ? 'SO_goal' : 'SO_miss' });
+                    return;
+                }
+                if (type === 'penalty') {
+                    // Per spec: againstTeam holds the team taking the penalty
+                    let commitId = String(d.againstTeam?.id || '');
+                    if (!commitId && d.againstTeam?.abbreviation) {
+                        commitId = getTeamIdByAbbrev(d.againstTeam.abbreviation);
+                    }
+                    if (!commitId) {
+                        const candidates = [d.team?.id, d.committingTeam?.id, d.penaltyTeam?.id, d.penalizedTeam?.id, d.offendingTeam?.id, d.teamId, d.team_id];
+                        commitId = String(candidates.find(v => v !== undefined && v !== null && String(v) !== '') || '');
+                    }
+                    finalEvents.push({ ...ev, _computedTeamId: commitId });
+                    return;
+                }
+                const computed = String(d.teamId || d.team_id || d.shooterTeamId || d.scorerTeamId || (d.team && d.team.id) || '');
+                finalEvents.push({ ...ev, _computedTeamId: computed });
+            });
+
+            const escapeHTML = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c]));
+            const convertX = (x) => (x || x===0) ? (((x - 300) / 300 * 100).toFixed(1)) : '';
+            const convertY = (y) => (y || y===0) ? (((y - 150) / 150 * 42.5).toFixed(1)) : '';
+
+            let html = '<div class="play-by-play">';
+            html += '<h3>⚡ Play-by-Play</h3>';
+            html += '<div class="pbp-scroll" style="overflow-x: auto; margin-top: 0.5rem;">';
+            html += '<table class="pbp-table">';
+            html += '<thead><tr>'+
+                '<th class="pbp-col-right">id</th>'+
+                '<th class="pbp-col-left">timestamp</th>'+
+                '<th class="pbp-col-left">event</th>'+
+                '<th class="pbp-col-left">team</th>'+
+                '<th class="pbp-col-left">venue</th>'+
+                '<th class="pbp-col-left">team_home</th>'+
+                '<th class="pbp-col-left">team_away</th>'+
+                '<th class="pbp-col-center">period</th>'+
+                '<th class="pbp-col-left">perspective</th>'+
+                '<th class="pbp-col-left">strength</th>'+
+                '<th class="pbp-col-right">p1_no</th>'+
+                '<th class="pbp-col-left">p1_name</th>'+
+                '<th class="pbp-col-right">p2_no</th>'+
+                '<th class="pbp-col-left">p2_name</th>'+
+                '<th class="pbp-col-right">p3_no</th>'+
+                '<th class="pbp-col-left">p3_name</th>'+
+                '<th class="pbp-col-right">g_no</th>'+
+                '<th class="pbp-col-left">goalie_name</th>'+
+                '<th class="pbp-col-left">home_line</th>'+
+                '<th class="pbp-col-left">home_players</th>'+
+                '<th class="pbp-col-left">home_players_names</th>'+
+                '<th class="pbp-col-left">away_line</th>'+
+                '<th class="pbp-col-left">away_players</th>'+
+                '<th class="pbp-col-left">away_players_names</th>'+
+                '<th class="pbp-col-right">x</th>'+
+                '<th class="pbp-col-right">y</th>'+
+                '<th class="pbp-col-right">game_id</th>'+
+                '<th class="pbp-col-left">game_date</th>'+
+                '<th class="pbp-col-left">competition</th>'+
+                '<th class="pbp-col-left">season</th>'+
+                '<th class="pbp-col-left">state</th>'+
+            '</tr></thead><tbody>';
+
+            let idCounter = 1;
+            // Ensure shootout events have teams; alternate if some are missing
+            fixShootoutTeams(finalEvents, gameInfo);
+            const strengths = computeStrengths(finalEvents, gameInfo);
+            finalEvents.forEach((ev, idx) => {
+                const details = ev.details || {};
+                const eventType = getEventLabel(ev);
+                const teamId = String(ev._computedTeamId || '');
+                let teamName = getTeamNameById(teamId) || (details.team && (details.team.name || details.team.fullName)) || '';
+                if (!teamName) {
+                    // Fallback by comparing with known game team names when IDs are missing
+                    if (teamId && teamId === String(gameInfo.home_team_id || '')) teamName = gameInfo.home_team || '';
+                    else if (teamId && teamId === String(gameInfo.away_team_id || '')) teamName = gameInfo.away_team || '';
+                }
+                let isHome = teamId === String(gameInfo.home_team_id || '');
+                if (!String(gameInfo.home_team_id || '')) {
+                    // Fallback when IDs are unavailable: compare names
+                    if (teamName && gameInfo.home_team && teamName.toLowerCase() === String(gameInfo.home_team).toLowerCase()) isHome = true;
+                    else if (teamName && gameInfo.away_team && teamName.toLowerCase() === String(gameInfo.away_team).toLowerCase()) isHome = false;
+                }
+                const venue = isHome ? 'Home' : 'Away';
+
+                // players
+                let p1_no='',p1_name='',p2_no='',p2_name='',p3_no='',p3_name='',g_no='',goalie_name='';
+                if (eventType === 'goal') {
+                    const scorer = ev._mergedScorer || details.scoredBy || details.scorer || details.player;
+                    if (scorer) { p1_no = scorer.jerseyNumber || scorer.id || ''; p1_name = `${scorer.firstName||''} ${scorer.lastName||''}`.trim(); }
+                    const assists = Array.isArray(ev._mergedAssists) ? ev._mergedAssists : (Array.isArray(details.assists) ? details.assists : []);
+                    if (assists[0]) { p2_no = assists[0].jerseyNumber || assists[0].id || ''; p2_name = `${assists[0].firstName||''} ${assists[0].lastName||''}`.trim(); }
+                    if (assists[1]) { p3_no = assists[1].jerseyNumber || assists[1].id || ''; p3_name = `${assists[1].firstName||''} ${assists[1].lastName||''}`.trim(); }
+                    const gsrc = ev._mergedGoalie || details.goalie; if (gsrc) { g_no = gsrc.jerseyNumber || gsrc.id || ''; goalie_name = `${gsrc.firstName||''} ${gsrc.lastName||''}`.trim(); }
+                } else if (eventType === 'penalty') {
+                    const penaltyTaker = details.takenBy || details.player || details.servedBy; if (penaltyTaker) { p1_no = penaltyTaker.jerseyNumber || penaltyTaker.id || ''; p1_name = `${penaltyTaker.firstName||''} ${penaltyTaker.lastName||''}`.trim(); }
+                    const penaltyDrawer = details.drawnBy; if (penaltyDrawer) { p2_no = penaltyDrawer.jerseyNumber || penaltyDrawer.id || ''; p2_name = `${penaltyDrawer.firstName||''} ${penaltyDrawer.lastName||''}`.trim(); }
+                } else {
+                    const player = details.shooter || details.player; if (player) { p1_no = player.jerseyNumber || player.id || ''; p1_name = `${player.firstName||''} ${player.lastName||''}`.trim(); }
+                    if (details.goalie) { g_no = details.goalie.jerseyNumber || details.goalie.id || ''; goalie_name = `${details.goalie.firstName||''} ${details.goalie.lastName||''}`.trim(); }
+                }
+
+                // On-ice players from plus/minus style fields
+                const toList = (arr) => (Array.isArray(arr) ? arr.map(p => {
+                    if (p && typeof p === 'object') return (p.jerseyNumber||p.id||'');
+                    return String(p||'');
+                }).filter(Boolean) : []);
+                const toNames = (arr) => (Array.isArray(arr) ? arr.map(p => {
+                    if (p && typeof p === 'object') return `${p.firstName||''} ${p.lastName||''}`.trim();
+                    return String(p||'');
+                }).filter(Boolean) : []);
+                // Prefer snake_case plus_players/minus_players when present
+                const plusPlayers = details.plus_players || details.plusPlayers || details.homePlayers || details.homeOnIce || [];
+                const minusPlayers = details.minus_players || details.minusPlayers || details.awayPlayers || details.awayOnIce || [];
+                const homePlayers = isHome ? plusPlayers : minusPlayers;
+                const awayPlayers = isHome ? minusPlayers : plusPlayers;
+                const homePlayersNo = toList(homePlayers);
+                const homePlayersNames = toNames(homePlayers);
+                const awayPlayersNo = toList(awayPlayers);
+                const awayPlayersNames = toNames(awayPlayers);
+
+                let period = details.period ? (details.period.shortName || details.period.id || '') : '';
+                if (eventType === 'SO_goal' || eventType === 'SO_miss') period = 'SO';
+                const x = (ev._x !== undefined) ? ev._x : (details.xLocation !== undefined ? details.xLocation : details.xCoord);
+                const y = (ev._y !== undefined) ? ev._y : (details.yLocation !== undefined ? details.yLocation : details.yCoord);
+
+                const row = [
+                    {v:idCounter++, cls:'pbp-col-right'},
+                    {v:details.time||'', cls:'pbp-col-left'},
+                    {v:eventType, cls:'pbp-col-left'},
+                    {v:teamName, cls:'pbp-col-left'},
+                    {v:venue, cls:'pbp-col-left'},
+                    {v:gameInfo.home_team||'', cls:'pbp-col-left'},
+                    {v:gameInfo.away_team||'', cls:'pbp-col-left'},
+                    {v:period, cls:'pbp-col-center'},
+                    {v:'event', cls:'pbp-col-left'},
+                    {v: strengths[idx] || '', cls:'pbp-col-left'},
+                    {v:p1_no, cls:'pbp-col-right'},
+                    {v:p1_name, cls:'pbp-col-left'},
+                    {v:p2_no, cls:'pbp-col-right'},
+                    {v:p2_name, cls:'pbp-col-left'},
+                    {v:p3_no, cls:'pbp-col-right'},
+                    {v:p3_name, cls:'pbp-col-left'},
+                    {v:g_no, cls:'pbp-col-right'},
+                    {v:goalie_name, cls:'pbp-col-left'},
+                    {v:'', cls:'pbp-col-left'},
+                    {v:homePlayersNo.join(' '), cls:'pbp-col-left'},
+                    {v:homePlayersNames.join(' - '), cls:'pbp-col-left'},
+                    {v:'', cls:'pbp-col-left'},
+                    {v:awayPlayersNo.join(' '), cls:'pbp-col-left'},
+                    {v:awayPlayersNames.join(' - '), cls:'pbp-col-left'},
+                    {v:convertX(x), cls:'pbp-col-right'},
+                    {v:convertY(y), cls:'pbp-col-right'},
+                    {v:gameInfo.game_id||'', cls:'pbp-col-right'},
+                    {v:normalizeGameDate(gameInfo.date, gameInfo.season_year), cls:'pbp-col-left'},
+                    {v:'PWHL', cls:'pbp-col-left'},
+                    {v:gameInfo.season_year||'', cls:'pbp-col-left'},
+                    {v:gameInfo.season_state||'', cls:'pbp-col-left'}
+                ];
+                html += '<tr>' + row.map(c => `<td class="${c.cls}">${escapeHTML(c.v)}</td>`).join('') + '</tr>';
+            });
+
+            html += '</tbody></table></div></div>';
+            return html;
+        }
+
+        function exportLineups() {
+            if (!window.currentGameSummaryData || !window.currentGameInfo) {
+                alert('No lineup data available to export.');
+                return;
+            }
+
+            const data = window.currentGameSummaryData;
+            const gameInfo = window.currentGameInfo;
+            
+            // CSV headers matching shotplotter format
+            const headers = [
+                'Number', 'Name', 'Line', 'Venue', 'Team', 'Team Color', 
+                'Game ID', 'Date', 'Competition', 'Season', 'State'
+            ];
+            
+            let csvContent = headers.join(',') + '\n';
+            
+            // Process home team players
+            if (data.homeTeam) {
+                const homeTeamData = window.currentGameInfo.home_team;
+                const homeTeamColor = getTeamColor(homeTeamData);
+                
+                // Add goalies
+                if (data.homeTeam.goalies) {
+                    data.homeTeam.goalies.forEach(player => {
+                        csvContent += formatPlayerRow(player, homeTeamData, homeTeamColor, gameInfo, true);
+                    });
+                }
+                
+                // Add skaters
+                if (data.homeTeam.skaters) {
+                    data.homeTeam.skaters.forEach(player => {
+                        csvContent += formatPlayerRow(player, homeTeamData, homeTeamColor, gameInfo, true);
+                    });
+                }
+            }
+            
+            // Process visiting team players
+            if (data.visitingTeam) {
+                const awayTeamData = window.currentGameInfo.away_team;
+                const awayTeamColor = getTeamColor(awayTeamData);
+                
+                // Add goalies
+                if (data.visitingTeam.goalies) {
+                    data.visitingTeam.goalies.forEach(player => {
+                        csvContent += formatPlayerRow(player, awayTeamData, awayTeamColor, gameInfo, false);
+                    });
+                }
+                
+                // Add skaters
+                if (data.visitingTeam.skaters) {
+                    data.visitingTeam.skaters.forEach(player => {
+                        csvContent += formatPlayerRow(player, awayTeamData, awayTeamColor, gameInfo, false);
+                    });
+                }
+            }
+            
+            // Download CSV
+            const safeLineupsDate = normalizeGameDate(gameInfo.date, gameInfo.season_year).replace(/[^a-zA-Z0-9]/g, '_');
+            downloadCSV(csvContent, `PWHL_Lineups_Game${gameInfo.game_id}_${safeLineupsDate}.csv`);
+        }
+
+        async function exportPlayByPlay() {
+            if (!window.currentPlayByPlayData || !window.currentGameInfo) {
+                alert('No play-by-play data available to export.');
+                return;
+            }
+
+            // Make sure summary data is available for lineup-based lookups (shootout shooter team)
+            if (!window.currentGameSummaryData) {
+                try {
+                    const sumResp = await fetch(`/api/game/summary/${currentGameId}`);
+                    const sumData = await sumResp.json();
+                    if (sumResp.ok) window.currentGameSummaryData = sumData;
+                } catch (e) { /* ignore */ }
+            }
+
+            const data = window.currentPlayByPlayData;
+            const gameInfo = window.currentGameInfo;
+            const lineupIndex = buildLineupIndex(window.currentGameSummaryData, gameInfo);
+            
+            // CSV headers matching shotplotter format
+            const headers = [
+                'id', 'timestamp', 'event', 'team', 'venue', 'team_home', 'team_away', 'period',
+                'perspective', 'strength', 'p1_no', 'p1_name', 'p2_no', 'p2_name', 'p3_no', 'p3_name',
+                'g_no', 'goalie_name', 'home_line', 'home_players', 'home_players_names',
+                'away_line', 'away_players', 'away_players_names', 'x', 'y', 'game_id', 'game_date',
+                'competition', 'season', 'state'
+            ];
+            
+            let csvContent = headers.join(',') + '\n';
+
+            // Group events by period/time for merging goal+shot at same timestamp
+            const keyFor = (ev) => {
+                const d = ev.details || {};
+                const periodId = (d.period && (d.period.id || d.period.shortName)) || '';
+                const time = d.time || '';
+                return `${periodId}|${time}`;
+            };
+            const eventsByKey = new Map();
+            data.forEach(ev => {
+                const k = keyFor(ev);
+                if (!eventsByKey.has(k)) eventsByKey.set(k, []);
+                eventsByKey.get(k).push(ev);
+            });
+
+            const removedTypes = new Set(['goalie_change', 'goalie-change', 'hit', 'faceoff']);
+            const consumed = new Set();
+            const finalEvents = [];
+            const ids2 = getGameTeamIds(gameInfo);
+            const homeId = ids2.homeId;
+            const awayId = ids2.awayId;
+
+            data.forEach((ev, idx) => {
+                if (consumed.has(idx)) return;
+                const type = (ev.event || '').toLowerCase();
+                if (removedTypes.has(type)) return;
+
+                const d = ev.details || {};
+                const key = keyFor(ev);
+
+                if (type === 'goal') {
+                    const goalTeamId = String(d.team?.id || '');
+                    let shotEv = null;
+                    const group = eventsByKey.get(key) || [];
+                    for (const cand of group) {
+                        if ((cand.event || '').toLowerCase() !== 'shot') continue;
+                        const cd = cand.details || {};
+                        if (String(cd.shooterTeamId || '') === goalTeamId) {
+                            shotEv = cand;
+                            break;
+                        }
+                    }
+                    if (shotEv) {
+                        const shotIdx = data.indexOf(shotEv);
+                        if (shotIdx >= 0) consumed.add(shotIdx);
+                    }
+                    const shotD = shotEv ? (shotEv.details || {}) : {};
+                    finalEvents.push({
+                        ...ev,
+                        _computedTeamId: goalTeamId,
+                        _mergedScorer: shotD.shooter || d.scoredBy || d.scorer || d.player || null,
+                        _mergedAssists: Array.isArray(d.assists) ? d.assists.slice(0, 2) : [],
+                        _mergedGoalie: shotD.goalie || d.goalie || null,
+                        _x: (d.xLocation !== undefined ? d.xLocation : shotD.xLocation),
+                        _y: (d.yLocation !== undefined ? d.yLocation : shotD.yLocation)
+                    });
+                    return;
+                }
+
+                if (type === 'shot') {
+                    const shooterTeamId = String(d.shooterTeamId || d.teamId || d.team_id || '');
+                    const group = eventsByKey.get(key) || [];
+                    const hasMatchingGoal = group.some(g => {
+                        if ((g.event || '').toLowerCase() !== 'goal') return false;
+                        const gd = g.details || {};
+                        return String(gd.team?.id || '') === shooterTeamId;
+                    });
+                    if (hasMatchingGoal) return; // will be emitted with the goal
+                    finalEvents.push({ ...ev, _computedTeamId: shooterTeamId, _x: d.xLocation, _y: d.yLocation });
+                    return;
+                }
+                if (type === 'shootout') {
+                    const teamResolved = resolveShootoutTeamId(d, lineupIndex, gameInfo);
+                    const soIsGoal = boolish(d?.isGoal) || boolish(d?.properties?.isGoal);
+                    let teamIdForSO = teamResolved;
+                    if (soIsGoal && d.scoredBy) {
+                        const via = getPlayerTeamIdFromLineups(d.scoredBy, lineupIndex, gameInfo);
+                        if (via) teamIdForSO = via;
+                    }
+                    finalEvents.push({ ...ev, _computedTeamId: String(teamIdForSO||''), _overrideEvent: soIsGoal ? 'SO_goal' : 'SO_miss' });
+                    return;
+                }
+
+                if (type === 'penalty') {
+                    // Per spec: againstTeam holds the team taking the penalty
+                    const commitId = String(d.againstTeam?.id || d.teamId || d.team_id || '');
+                    finalEvents.push({ ...ev, _computedTeamId: commitId });
+                    return;
+                }
+
+                // Default
+                const computed = String(d.teamId || d.team_id || d.shooterTeamId || d.scorerTeamId || (d.team && d.team.id) || '');
+                finalEvents.push({ ...ev, _computedTeamId: computed });
+            });
+
+            // Ensure shootout events have teams; alternate if some are missing
+            fixShootoutTeams(finalEvents, gameInfo);
+            // Compute strengths for events
+            const strengths = computeStrengths(finalEvents, gameInfo);
+
+            let idCounter = 1;
+            finalEvents.forEach((ev, idx) => {
+                csvContent += formatPlayByPlayRow(ev, idCounter++, gameInfo, strengths[idx] || '');
+            });
+
+            const safePbpDate = normalizeGameDate(gameInfo.date, gameInfo.season_year).replace(/[^a-zA-Z0-9]/g, '_');
+            downloadCSV(csvContent, `PWHL_PlayByPlay_Game${gameInfo.game_id}_${safePbpDate}.csv`);
+        }
+
+        // Shared date normalizer for yyyy-mm-dd using season logic
+        function normalizeGameDate(dateStr, seasonYear) {
+            if (!dateStr) return '';
+            const iso = String(dateStr).match(/^(\d{4})-(\d{2})-(\d{2})/);
+            if (iso) return `${iso[1]}-${iso[2]}-${iso[3]}`;
+            const monthMap = {jan:1,january:1,feb:2,february:2,mar:3,march:3,apr:4,april:4,may:5,jun:6,june:6,jul:7,july:7,aug:8,august:8,sep:9,sept:9,september:9,oct:10,october:10,nov:11,november:11,dec:12,december:12};
+            const parts = (seasonYear || '').split('/');
+            const y1 = parseInt(parts[0],10); const y2 = parseInt(parts[1],10);
+            const m = String(dateStr).match(/(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:t|tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+(\d{1,2})/i);
+            if (m) {
+                const month = monthMap[m[1].toLowerCase()];
+                const day = parseInt(m[2],10);
+                let year = (month>=8&&month<=12)?y1:y2;
+                if (!isFinite(year)) year = new Date().getFullYear();
+                return `${year}-${String(month).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
+            }
+            try { const d = new Date(dateStr); if (!isNaN(d.getTime())) return d.toISOString().split('T')[0]; } catch {}
+            return String(dateStr);
+        }
+
+        function formatPlayerRow(player, teamName, teamColor, gameInfo, isHomeTeam) {
+            const escapeCSV = (str) => {
+                if (typeof str !== 'string') str = String(str || '');
+                if (str.includes(',') || str.includes('"') || str.includes('\n')) {
+                    return '"' + str.replace(/"/g, '""') + '"';
+                }
+                return str;
+            };
+
+            return [
+                escapeCSV(player.jersey || ''),
+                escapeCSV(player.name || ''),
+                escapeCSV(player.position || ''), // Line = Position
+                escapeCSV(isHomeTeam ? 'Home' : 'Away'), // Venue = Home or Away
+                escapeCSV(teamName),
+                escapeCSV(teamColor),
+                escapeCSV(gameInfo.game_id),
+                escapeCSV(normalizeGameDate(gameInfo.date, gameInfo.season_year)),
+                escapeCSV('PWHL'),
+                escapeCSV(gameInfo.season_year),
+                escapeCSV(gameInfo.season_state)
+            ].join(',') + '\n';
+        }
+
+    function formatPlayByPlayRow(event, id, gameInfo, strengthOverride='') {
+            const escapeCSV = (str) => {
+                if (typeof str !== 'string') str = String(str || '');
+                if (str.includes(',') || str.includes('"') || str.includes('\n')) {
+                    return '"' + str.replace(/"/g, '""') + '"';
+                }
+                return str;
+            };
+
+            // Convert coordinates from PWHL scale to shotplotter scale
+            const convertX = (x) => {
+                if (!x && x !== 0) return '';
+                // Convert from 0-600 to -100 to +100
+                return ((x - 300) / 300 * 100).toFixed(1);
+            };
+
+            const convertY = (y) => {
+                if (!y && y !== 0) return '';
+                // Convert from 0-300 to -42.5 to +42.5
+                return ((y - 150) / 150 * 42.5).toFixed(1);
+            };
+
+            // date normalizer is shared: normalizeGameDate()
+
+            const details = event.details || {};
+            const eventType = getEventLabel(event);
+            // prefer precomputed team id if available
+            const eventTeamId = (event._computedTeamId !== undefined) ? String(event._computedTeamId) : String(details.teamId || details.team_id || details.shooterTeamId || details.scorerTeamId || details.team?.id || '');
+            let eventTeamName = getTeamNameById(eventTeamId) || (details.team && (details.team.name || details.team.fullName)) || '';
+            if (!eventTeamName) {
+                if (eventTeamId && eventTeamId === String(gameInfo.home_team_id || '')) eventTeamName = gameInfo.home_team || '';
+                else if (eventTeamId && eventTeamId === String(gameInfo.away_team_id || '')) eventTeamName = gameInfo.away_team || '';
+                else eventTeamName = eventTeamId;
+            }
+            let isHomeTeam = eventTeamId === String(gameInfo.home_team_id || '');
+            if (!String(gameInfo.home_team_id || '')) {
+                if (eventTeamName && gameInfo.home_team && eventTeamName.toLowerCase() === String(gameInfo.home_team).toLowerCase()) isHomeTeam = true;
+                else if (eventTeamName && gameInfo.away_team && eventTeamName.toLowerCase() === String(gameInfo.away_team).toLowerCase()) isHomeTeam = false;
+            }
+            
+            // Determine venue (Home/Away from event team perspective)
+            const venue = isHomeTeam ? 'Home' : 'Away';
+            
+            // Extract player information based on event type
+            let p1_no = '', p1_name = '', p2_no = '', p2_name = '', p3_no = '', p3_name = '';
+            let g_no = '', goalie_name = '';
+            
+            if (eventType === 'goal') {
+                // Merge scorer from shot if present
+                const scorer = event._mergedScorer || details.scoredBy || details.scorer || details.player;
+                if (scorer) {
+                    p1_no = scorer.jerseyNumber || scorer.id || '';
+                    p1_name = `${scorer.firstName || ''} ${scorer.lastName || ''}`.trim();
+                }
+                const assists = Array.isArray(event._mergedAssists) ? event._mergedAssists : (Array.isArray(details.assists) ? details.assists : []);
+                if (assists[0]) {
+                    p2_no = assists[0].jerseyNumber || assists[0].id || '';
+                    p2_name = `${assists[0].firstName || ''} ${assists[0].lastName || ''}`.trim();
+                }
+                if (assists[1]) {
+                    p3_no = assists[1].jerseyNumber || assists[1].id || '';
+                    p3_name = `${assists[1].firstName || ''} ${assists[1].lastName || ''}`.trim();
+                }
+                const gsrc = event._mergedGoalie || details.goalie;
+                if (gsrc) {
+                    g_no = gsrc.jerseyNumber || gsrc.id || '';
+                    goalie_name = `${gsrc.firstName || ''} ${gsrc.lastName || ''}`.trim();
+                }
+            } else if (eventType === 'penalty') {
+                // For penalties: Player 1 = takenBy (taker), Player 2 = drawnBy
+                const penaltyTaker = details.takenBy || details.player || details.servedBy;
+                if (penaltyTaker) {
+                    p1_no = penaltyTaker.jerseyNumber || penaltyTaker.id || '';
+                    p1_name = `${penaltyTaker.firstName || ''} ${penaltyTaker.lastName || ''}`.trim();
+                }
+                const penaltyDrawer = details.drawnBy;
+                if (penaltyDrawer) {
+                    p2_no = penaltyDrawer.jerseyNumber || penaltyDrawer.id || '';
+                    p2_name = `${penaltyDrawer.firstName || ''} ${penaltyDrawer.lastName || ''}`.trim();
+                }
+            } else {
+                // For other events, use players as they are
+                const player = details.shooter || details.player;
+                if (player) {
+                    p1_no = player.jerseyNumber || player.id || '';
+                    p1_name = `${player.firstName || ''} ${player.lastName || ''}`.trim();
+                }
+                
+                if (details.goalie) {
+                    g_no = details.goalie.jerseyNumber || details.goalie.id || '';
+                    goalie_name = `${details.goalie.firstName || ''} ${details.goalie.lastName || ''}`.trim();
+                }
+            }
+
+            let period = details.period ? details.period.shortName || details.period.id || '' : '';
+            if (getEventLabel(event) === 'SO_goal' || getEventLabel(event) === 'SO_miss') period = 'SO';
+
+            // Coordinates (merge goal coordinates with shot if needed)
+            const x = (event._x !== undefined) ? event._x : (details.xLocation !== undefined ? details.xLocation : details.xCoord);
+            const y = (event._y !== undefined) ? event._y : (details.yLocation !== undefined ? details.yLocation : details.yCoord);
+
+            // On-ice players: derive from plus/minus style arrays
+            const toList = (arr) => (Array.isArray(arr) ? arr.map(p => (p.jerseyNumber||p.id||'')).filter(Boolean) : []);
+            const toNames = (arr) => (Array.isArray(arr) ? arr.map(p => `${p.firstName||''} ${p.lastName||''}`.trim()).filter(Boolean) : []);
+            const plusPlayers = details.plusPlayers || details.homePlayers || details.homeOnIce || [];
+            const minusPlayers = details.minusPlayers || details.awayPlayers || details.awayOnIce || [];
+            const homePlayers = isHomeTeam ? plusPlayers : minusPlayers;
+            const awayPlayers = isHomeTeam ? minusPlayers : plusPlayers;
+            const homePlayersNo = toList(homePlayers).join(' ');
+            const homePlayersNames = toNames(homePlayers).join(' | ');
+            const awayPlayersNo = toList(awayPlayers).join(' ');
+            const awayPlayersNames = toNames(awayPlayers).join(' | ');
+
+            return [
+                escapeCSV(id),
+                escapeCSV(details.time || ''),
+                escapeCSV(eventType || ''),
+                escapeCSV(eventTeamName),
+                escapeCSV(venue),
+                escapeCSV(gameInfo.home_team),
+                escapeCSV(gameInfo.away_team),
+                escapeCSV(period),
+                escapeCSV('event'), // perspective is always 'event'
+                escapeCSV(strengthOverride || ''),
+                escapeCSV(p1_no),
+                escapeCSV(p1_name),
+                escapeCSV(p2_no),
+                escapeCSV(p2_name),
+                escapeCSV(p3_no),
+                escapeCSV(p3_name),
+                escapeCSV(g_no),
+                escapeCSV(goalie_name),
+                escapeCSV(''), // home_line - not available
+                escapeCSV(homePlayersNo),
+                escapeCSV(homePlayersNames.replace(/\s*\|\s*/g, ' - ')),
+                escapeCSV(''), // away_line - not available
+                escapeCSV(awayPlayersNo),
+                escapeCSV(awayPlayersNames.replace(/\s*\|\s*/g, ' - ')),
+                escapeCSV(convertX(x)),
+                escapeCSV(convertY(y)),
+                escapeCSV(gameInfo.game_id),
+                escapeCSV(normalizeGameDate(gameInfo.date, gameInfo.season_year)),
+                escapeCSV('PWHL'),
+                escapeCSV(gameInfo.season_year),
+                escapeCSV(gameInfo.season_state)
+            ].join(',') + '\n';
+        }
+
+        // Helpers for shootout handling and general parsing
+        function boolish(v) {
+            if (v === true || v === 1) return true;
+            const s = String(v).toLowerCase();
+            return s === '1' || s === 'true' || s === 'yes' || s === 'y' || s === 't';
+        }
+
+        function buildLineupIndex(summaryData, gameInfo) {
+            const idx = { ids:{}, names:{}, namesLast:{}, homeNumbers:new Set(), awayNumbers:new Set() };
+            const homeId = String(gameInfo.home_team_id || '') || getTeamIdByName(gameInfo.home_team || '');
+            const awayId = String(gameInfo.away_team_id || '') || getTeamIdByName(gameInfo.away_team || '');
+            const addPlayer = (p, teamId, isHome) => {
+                if (!p) return;
+                const pid = String(p.id || p.playerId || '').trim();
+                if (pid) idx.ids[pid] = teamId;
+                const first = String(p.firstName||'').trim();
+                const last = String(p.lastName||'').trim();
+                const full = `${first} ${last}`.trim();
+                const normFull = normalizeName(full);
+                const normLast = normalizeName(last);
+                if (normFull) idx.names[normFull] = teamId;
+                if (normLast) {
+                    if (!idx.namesLast[normLast]) idx.namesLast[normLast] = new Set();
+                    idx.namesLast[normLast].add(teamId);
+                }
+                const num = String(p.jerseyNumber || p.jersey || '').trim();
+                if (num) (isHome ? idx.homeNumbers : idx.awayNumbers).add(num);
+            };
+            try {
+                if (summaryData?.homeTeam) {
+                    (summaryData.homeTeam.goalies||[]).forEach(p=>addPlayer(p, homeId, true));
+                    (summaryData.homeTeam.skaters||[]).forEach(p=>addPlayer(p, homeId, true));
+                }
+                if (summaryData?.visitingTeam) {
+                    (summaryData.visitingTeam.goalies||[]).forEach(p=>addPlayer(p, awayId, false));
+                    (summaryData.visitingTeam.skaters||[]).forEach(p=>addPlayer(p, awayId, false));
+                }
+            } catch {}
+            idx.homeId = homeId; idx.awayId = awayId;
+            return idx;
+        }
+
+        function getPlayerTeamIdFromLineups(player, idx, gameInfo) {
+            if (!idx || !player) return '';
+            if (typeof player === 'object') {
+                const pid = String(player.id || player.playerId || player.playerID || '').trim();
+                // Hardcode: Marie-Philip Poulin (id=31) -> Montréal Victoire
+                if (pid === '31') return getTeamIdByName('Montréal Victoire') || '3';
+                if (pid && idx.ids[pid]) return idx.ids[pid];
+                const rawName = player.name || player.fullName || `${player.firstName||''} ${player.lastName||''}`;
+                const nameKey = normalizeName(rawName);
+                if (nameKey && idx.names[nameKey]) return idx.names[nameKey];
+                // Try last-name-only unique match (avoid collisions)
+                const lastKey = normalizeName(player.lastName || rawName.split(' ').pop() || '');
+                if (lastKey && idx.namesLast[lastKey]) {
+                    const set = idx.namesLast[lastKey];
+                    if (set.size === 1) { for (const t of set) return t; }
+                }
+                const num = String(player.jerseyNumber || player.jersey || '').trim();
+                if (num) {
+                    const inHome = idx.homeNumbers.has(num);
+                    const inAway = idx.awayNumbers.has(num);
+                    if (inHome && !inAway) return idx.homeId;
+                    if (inAway && !inHome) return idx.awayId;
+                }
+            } else if (typeof player === 'string' || typeof player === 'number') {
+                const s = String(player).trim();
+                const nameKey = normalizeName(s);
+                if (nameKey && idx.names[nameKey]) return idx.names[nameKey];
+                // Try last-name-only unique match
+                const lastKey = normalizeName(String(s).split(' ').pop() || '');
+                if (lastKey && idx.namesLast[lastKey]) {
+                    const set = idx.namesLast[lastKey];
+                    if (set.size === 1) { for (const t of set) return t; }
+                }
+                if (/^\d+$/.test(s)) {
+                    const inHome = idx.homeNumbers.has(s);
+                    const inAway = idx.awayNumbers.has(s);
+                    if (inHome && !inAway) return idx.homeId;
+                    if (inAway && !inHome) return idx.awayId;
+                }
+            }
+            return '';
+        }
+
+        function getEventLabel(ev) {
+            if (ev && ev._overrideEvent) return String(ev._overrideEvent);
+            return String(ev?.event || '').toLowerCase();
+        }
+
+        function normalizeName(s) {
+            if (!s) return '';
+            return String(s)
+                .normalize('NFD')
+                .replace(/[\u0300-\u036f]/g, '')
+                .toLowerCase()
+                // normalize common punctuation/hyphens to spaces
+                .replace(/[-’'`]/g, ' ')
+                // collapse other whitespace
+                .replace(/\s+/g, ' ')
+                .trim();
+        }
+
+        // Resolve shootout shooter team leveraging multiple hints
+        function resolveShootoutTeamId(details, lineupIndex, gameInfo) {
+            const ids = getGameTeamIds(gameInfo);
+            const canon = (tid, name, abbr) => {
+                const t = String(tid||'').trim();
+                if (t && (t === ids.homeId || t === ids.awayId)) return t;
+                // try mapping via name/abbr
+                if (abbr) {
+                    const m = getTeamIdByAbbrev(abbr);
+                    if (m) return m;
+                }
+                if (name) {
+                    const m2 = getTeamIdByName(name);
+                    if (m2) return m2;
+                }
+                return '';
+            };
+            // 1) Direct team info on event
+            const direct = String(details.team?.id || details.teamId || details.team_id || '').trim();
+            if (direct) {
+                const c = canon(direct, details.team?.name || details.team?.fullName, details.team?.abbreviation);
+                if (c) return c;
+            }
+            // 2) Shooter object via lineups (include scoredBy for SO_goal)
+            const shooter = details.shooter || details.player || details.scoredBy || null;
+            const viaLineups = getPlayerTeamIdFromLineups(shooter, lineupIndex, gameInfo);
+            if (viaLineups) return viaLineups;
+            // 2b) Try direct shooter identifiers
+            const sid = String(details.shooterId || details.shooter_id || details.playerId || details.player_id || details.scorerId || details.scorer_id || '').trim();
+            // Hardcode: Marie-Philip Poulin (id=31)
+            if (sid === '31') return getTeamIdByName('Montréal Victoire') || '3';
+            if (sid && lineupIndex.ids[sid]) return lineupIndex.ids[sid];
+            const sname = normalizeName(details.shooterName || details.playerName || details.scorerName || '');
+            if (sname && lineupIndex.names[sname]) return lineupIndex.names[sname];
+            const sjersey = String(details.shooterJersey || details.jerseyNumber || details.scorerJersey || '').trim();
+            if (sjersey) {
+                const inHome = lineupIndex.homeNumbers.has(sjersey);
+                const inAway = lineupIndex.awayNumbers.has(sjersey);
+                if (inHome && !inAway) return lineupIndex.homeId;
+                if (inAway && !inHome) return lineupIndex.awayId;
+            }
+            // 3) If goalie present, use opponent team
+            const goalie = details.goalie || null;
+            const goalieTeam = getPlayerTeamIdFromLineups(goalie, lineupIndex, gameInfo);
+            if (goalie && goalieTeam) {
+                return goalieTeam === ids.homeId ? ids.awayId : ids.homeId;
+            }
+            // 4) If team name/abbrev present
+            const teamName = details.team?.name || details.team?.fullName || '';
+            const abbr = details.team?.abbreviation;
+            const mapped = canon('', teamName, abbr);
+            if (mapped) return mapped;
+            // 5) Last resort: empty
+            return '';
+        }
+
+        // Fill missing shootout team IDs by alternating between home/away, starting from first known
+        function fixShootoutTeams(finalEvents, gameInfo) {
+            const ids = getGameTeamIds(gameInfo);
+            const soIdxs = [];
+            for (let i=0;i<finalEvents.length;i++) {
+                const ev = finalEvents[i];
+                const label = getEventLabel(ev);
+                if (label === 'SO_goal' || label === 'SO_miss' || String(ev.event||'').toLowerCase()==='shootout') {
+                    soIdxs.push(i);
+                }
+            }
+            if (soIdxs.length === 0) return;
+            // determine alternation from first two known entries if possible
+            let startTeam = '';
+            let secondTeam = '';
+            for (const i of soIdxs) {
+                const t = String(finalEvents[i]._computedTeamId||'').trim();
+                if (t && (t===ids.homeId || t===ids.awayId)) {
+                    if (!startTeam) startTeam = t; else if (!secondTeam && t!==startTeam) { secondTeam = t; break; }
+                }
+            }
+            if (!startTeam) startTeam = ids.awayId; // default if not inferable
+            if (!secondTeam) secondTeam = (startTeam===ids.homeId?ids.awayId:ids.homeId);
+            let current = startTeam;
+            const other = (t)=> t===ids.homeId ? ids.awayId : ids.homeId;
+            for (const i of soIdxs) {
+                const t = String(finalEvents[i]._computedTeamId||'').trim();
+                if (!t) {
+                    finalEvents[i]._computedTeamId = current;
+                } else if (t === ids.homeId || t === ids.awayId) {
+                    // snap to the alternation sequence: if provided team doesn't match current, flip current and keep provided
+                    if (t !== current) current = t;
+                } else {
+                    // non-canonical, force canonical based on current
+                    finalEvents[i]._computedTeamId = current;
+                }
+                current = other(current);
+            }
+        }
+
+        // Compute Strength strings per event per the rules
+        function computeStrengths(events, gameInfo) {
+            // Normalize sort: by period index and time ascending
+            const toSeconds = (t) => {
+                if (!t) return 0;
+                const m = String(t).split(':');
+                const mm = parseInt(m[0]||'0',10); const ss = parseInt(m[1]||'0',10);
+                return mm*60+ss;
+            };
+            const toBool = (v) => {
+                if (v === true || v === 1) return true;
+                const s = String(v).toLowerCase();
+                return s === '1' || s === 'true' || s === 'yes' || s === 'y' || s === 't';
+            };
+            const parsePenaltySeconds = (minutesVal) => {
+                if (minutesVal === undefined || minutesVal === null) return 120;
+                if (typeof minutesVal === 'number') return Math.max(0, Math.round(minutesVal*60));
+                const s = String(minutesVal).trim();
+                if (/^\d+$/.test(s)) return parseInt(s,10)*60; // '2', '5'
+                const m = s.match(/^(\d{1,2}):(\d{2})$/); // '2:00', '00:02'
+                if (m) return parseInt(m[1],10)*60 + parseInt(m[2],10);
+                return 120;
+            };
+            const isPenaltyShotEvent = (ev, d) => {
+                const type=(ev.event||'').toLowerCase();
+                if (type==='penalty shot') return true;
+                const pt = (d.penaltyType||'').toLowerCase();
+                return pt.includes('penalty shot');
+            };
+            const penaltyCreatesPP = (d) => {
+                // Only root-level penalty flag determines manpower; ignore properties and duration
+                if (toBool(d?.isPowerPlay)) return true;
+                if (toBool(d?.is_power_play)) return true;
+                return false;
+            };
+            const periodIndex = (d) => {
+                const p = d.period ? (d.period.id || d.period.shortName) : '';
+                const sp = String(p).toUpperCase();
+                if (sp === '1' || sp === '2' || sp === '3') return parseInt(sp,10);
+                if (sp === '4' || sp === 'OT' || sp.startsWith('OT')) return 4; // OT, OT1, OT2...
+                if (sp === 'SO' || sp === 'SHOOTOUT') return 5;
+                const n = parseInt(sp,10); return isFinite(n) ? n : 1;
+            };
+            const isRegularSeason = (gameInfo.season_state||'').toLowerCase() === 'regular season';
+
+            // Copy and sort with original index
+            const list = events.map((e,i)=>({e,i,pi:periodIndex(e.details||{}),ts:toSeconds((e.details||{}).time||'0:00')}))
+                .sort((a,b)=> a.pi===b.pi ? (a.ts===b.ts ? a.i-b.i : a.ts-b.ts) : a.pi-b.pi);
+
+            // Resolve team IDs robustly
+            const ids0 = getGameTeamIds(gameInfo);
+            const gameHomeId = ids0.homeId;
+            const gameAwayId = ids0.awayId;
+
+            // Active penalties: track array of {teamId, duration, endPi, endTs}; pending: penalties waiting to start due to 3-skater minimum
+            const active = [];
+            const pending = [];
+            const resultsByIdx = {};
+            const popExpired = (pi,ts) => {
+                for (let j=active.length-1;j>=0;j--) {
+                    const p=active[j];
+                    if (pi>p.endPi || (pi===p.endPi && ts>=p.endTs)) active.splice(j,1);
+                }
+                // Try to start pending penalties if room is available (max 2 active against a team)
+                if (pending.length) {
+                    // Count active by team
+                    const actByTeam = {};
+                    for (const a of active) actByTeam[a.teamId] = (actByTeam[a.teamId]||0)+1;
+                    for (let k=0;k<pending.length;k++) {
+                        const pen = pending[k];
+                        const count = actByTeam[pen.teamId]||0;
+                        if (count < 2) {
+                            // start now at current pi/ts
+                            const started = computeEnd(pi, ts, pen.duration);
+                            active.push({ teamId: pen.teamId, duration: pen.duration, endPi: started.endPi, endTs: started.endTs });
+                            actByTeam[pen.teamId] = count+1;
+                            pending.splice(k,1); k--;
+                        }
+                    }
+                }
+            };
+            const computeEnd = (pi,ts,dur) => {
+                let endPi = pi; let endTs = ts + dur;
+                while (endTs >= 1200) { endTs -= 1200; endPi += 1; }
+                return { endPi, endTs };
+            };
+            const addPenalty = (pi,ts,minutes,teamId) => {
+                const dur = parseInt(minutes||'2',10)*60; // default 2 min
+                const tId = String(teamId||'');
+                // enforce max 2 simultaneous minors per team; queue extras
+                const count = active.filter(p=>p.teamId===tId).length;
+                if (count < 2) {
+                    const end = computeEnd(pi, ts, dur);
+                    active.push({ teamId: tId, duration: dur, endPi: end.endPi, endTs: end.endTs });
+                } else {
+                    pending.push({ teamId: tId, duration: dur });
+                }
+            };
+
+            // Helper to see if any penalty affects a team
+            const countAgainst = (teamId) => active.filter(p=>p.teamId===String(teamId||'')).length;
+
+            // Iterate grouped by (period, time) so all events at same second share the same strength
+            let ptr = 0;
+            while (ptr < list.length) {
+                const groupStart = ptr;
+                const { pi, ts } = list[groupStart];
+                // Expire penalties first for this timestamp
+                popExpired(pi, ts);
+
+                // Identify group end
+                let groupEnd = groupStart + 1;
+                while (groupEnd < list.length && list[groupEnd].pi === pi && list[groupEnd].ts === ts) groupEnd++;
+
+                // Emit strengths for all rows in this group based on current active penalties
+                for (let k = groupStart; k < groupEnd; k++) {
+                    const row = list[k];
+                    const ev = row.e; const d = ev.details||{}; const type=(ev.event||'').toLowerCase();
+                    const teamId = String(ev._computedTeamId||'');
+
+                    let homeBase=5, awayBase=5;
+                    const isOT = (pi===4);
+                    if (isOT && isRegularSeason) { homeBase=3; awayBase=3; }
+
+                    if (isPenaltyShotEvent(ev, d) || d.isPenaltyShot===true || type==='shootout') {
+                        resultsByIdx[row.i] = '1v0';
+                        continue;
+                    }
+
+                    const homeId = String(gameHomeId||'');
+                    const awayId = String(gameAwayId||'');
+                    const homePens = countAgainst(homeId);
+                    const awayPens = countAgainst(awayId);
+                    if (isOT && isRegularSeason) {
+                        // OT rule: add a skater to the non-penalized team, penalized stays at 3
+                        homeBase = Math.min(5, 3 + awayPens);
+                        awayBase = Math.min(5, 3 + homePens);
+                    } else {
+                        homeBase = Math.max(3, homeBase - homePens);
+                        awayBase = Math.max(3, awayBase - awayPens);
+                    }
+
+                    const isHome = teamId && teamId === homeId;
+                    const strengthStr = isHome ? `${homeBase}v${awayBase}` : `${awayBase}v${homeBase}`;
+                    resultsByIdx[row.i] = strengthStr;
+                }
+
+                // Apply state changes after the entire timestamp group
+                // 1) Add manpower penalties for qualifying penalties
+                for (let k = groupStart; k < groupEnd; k++) {
+                    const row = list[k];
+                    const ev = row.e; const d = ev.details||{}; const type=(ev.event||'').toLowerCase();
+                    if (type==='penalty') {
+                        if (penaltyCreatesPP(d) && !isPenaltyShotEvent(ev, d)) {
+                            const minutes = d.minutes || d.penaltyMinutes || 2;
+                            let penalizedTeamId = String(d.againstTeam?.id || '');
+                            if (!penalizedTeamId && d.againstTeam?.abbreviation) {
+                                penalizedTeamId = getTeamIdByAbbrev(d.againstTeam.abbreviation);
+                            }
+                            if (!penalizedTeamId) penalizedTeamId = String(ev._computedTeamId||'');
+                            if (penalizedTeamId) addPenalty(pi, ts, minutes, penalizedTeamId);
+                        }
+                    }
+                }
+
+                // 2) Expire penalties on PP/SH goals (but NOT 5-minute majors)
+                for (let k = groupStart; k < groupEnd; k++) {
+                    const row = list[k];
+                    const ev = row.e; const d = ev.details||{}; const type=(ev.event||'').toLowerCase();
+                    if (type==='goal') {
+                        const teamId = String(ev._computedTeamId||'');
+                        const homeId = String(gameHomeId||'');
+                        const awayId = String(gameAwayId||'');
+                        const isHome = teamId && teamId === homeId;
+                        const isPP = toBool(d?.properties?.isPowerPlay) || toBool(d?.isPowerPlay) || toBool(d?.is_power_play);
+                        const isSH = toBool(d?.properties?.isShortHanded) || toBool(d?.isShortHanded) || toBool(d?.is_short_handed);
+                        if (isPP || isSH) {
+                            const oppId = isHome ? awayId : homeId;
+                            const idx = active.findIndex(p=>p.teamId===oppId && p.duration < 5*60);
+                            if (idx>=0) active.splice(idx,1);
+                        }
+                    }
+                }
+
+                ptr = groupEnd;
+            }
+
+            // Map back to original order
+            return events.map((_,i)=>resultsByIdx[i]||'');
+        }
+
+        function getTeamColor(teamName) {
+            const teamColors = {
+                'Boston Fleet': '#004D29',
+                'Minnesota Frost': '#353364',
+                'Montréal Victoire': '#8F001E',
+                'New York Sirens': '#009E90',
+                'Ottawa Charge': '#D1011B',
+                'Toronto Sceptres': '#377BC2'
+            };
+            return teamColors[teamName] || '';
+        }
+
+        function getTeamNameById(teamId) {
+            const teamMap = {
+                '1': 'Boston Fleet',
+                '2': 'Minnesota Frost',
+                '3': 'Montréal Victoire',
+                '4': 'New York Sirens',
+                '5': 'Ottawa Charge',
+                '6': 'Toronto Sceptres',
+                '7': 'PWHL Seattle',
+                '8': 'PWHL Vancouver'
+            };
+            return teamMap[teamId] || '';
+        }
+
+        function getTeamIdByName(name) {
+            if (!name) return '';
+            const normalized = String(name).toLowerCase();
+            const map = {
+                'boston fleet':'1',
+                'minnesota frost':'2',
+                'montréal victoire':'3',
+                'montreal victoire':'3',
+                'new york sirens':'4',
+                'ottawa charge':'5',
+                'toronto sceptres':'6',
+                'pwhl seattle':'7',
+                'pwhl vancouver':'8'
+            };
+            return map[normalized] || '';
+        }
+
+        function getTeamIdByAbbrev(abbrev) {
+            if (!abbrev) return '';
+            const a = String(abbrev).toUpperCase();
+            const map = { BOS:'1', MIN:'2', MTL:'3', NY:'4', OTT:'5', TOR:'6', SEA:'7', VAN:'8' };
+            return map[a] || '';
+        }
+
+        function getGameTeamIds(gameInfo) {
+            const homeId = String(gameInfo.home_team_id || '') || getTeamIdByName(gameInfo.home_team || '');
+            const awayId = String(gameInfo.away_team_id || '') || getTeamIdByName(gameInfo.away_team || '');
+            return { homeId, awayId };
+        }
+
+        function downloadCSV(csvContent, filename) {
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            if (link.download !== undefined) {
+                const url = URL.createObjectURL(blob);
+                link.setAttribute('href', url);
+                link.setAttribute('download', filename);
+                link.style.visibility = 'hidden';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        }
+    </script>
+</body>
+</html>

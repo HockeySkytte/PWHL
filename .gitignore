@@ -9,7 +9,9 @@ venv/
 pip-wheel-metadata/
 *
 !templates/
+!templates/**
 !static/
+!static/**
 !.gitignore
 !requirements.txt
 !README.md
