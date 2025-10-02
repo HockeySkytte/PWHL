@@ -5,3 +5,6 @@ seaborn
 jupyter
 beautifulsoup4
 python-dateutil
+flask
+flask-cors
+gunicorn
