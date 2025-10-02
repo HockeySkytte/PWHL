@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+venv/
+.env.local
+pip-wheel-metadata/
+*
+!templates/
+!static/
+!.gitignore
+!requirements.txt
+!README.md
+!WEB_APP_README.md
+!start_app.ps1
+!start_app.bat
+!flask_app.py
+!scraper.py
+!project_summary.py
+!visualizer.py
+!test_*.py
+!Teams.csv
+!Teams2.csv
+!pwhl_schedule_*.json
+!pwhl_schedule_*.csv
