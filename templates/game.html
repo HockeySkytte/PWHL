@@ -521,6 +521,7 @@
             finalEvents.forEach((ev, idx) => {
                 const details = ev.details || {};
                 const eventType = getEventLabel(ev);
+                const displayEventType = prettifyEventLabel(eventType);
                 const teamId = String(ev._computedTeamId || '');
                 let teamName = getTeamNameById(teamId) || (details.team && (details.team.name || details.team.fullName)) || '';
                 if (!teamName) {
@@ -580,7 +581,7 @@
                 const row = [
                     {v:idCounter++, cls:'pbp-col-right'},
                     {v:details.time||'', cls:'pbp-col-left'},
-                    {v:eventType, cls:'pbp-col-left'},
+                    {v:displayEventType, cls:'pbp-col-left'},
                     {v:teamName, cls:'pbp-col-left'},
                     {v:venue, cls:'pbp-col-left'},
                     {v:gameInfo.home_team||'', cls:'pbp-col-left'},
@@ -1097,6 +1098,18 @@
         function getEventLabel(ev) {
             if (ev && ev._overrideEvent) return String(ev._overrideEvent);
             return String(ev?.event || '').toLowerCase();
+        }
+
+        // Map internal event keys to display labels for the UI table
+        function prettifyEventLabel(key) {
+            const k = String(key || '').toLowerCase();
+            // Only override the specified events; leave others as-is
+            if (k === 'goal') return 'Goal';
+            if (k === 'shot') return 'Shot';
+            if (k === 'penalty') return 'Penalty';
+            if (k === 'blocked-shot' || k === 'blocked_shot' || k === 'block') return 'Block';
+            // Keep shootout labels and other events unchanged
+            return key;
         }
 
         function normalizeName(s) {
