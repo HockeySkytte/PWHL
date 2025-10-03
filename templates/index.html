@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PWHL Analytics</title>
-    <link rel="icon" type="image/png" href="{{ url_for('static', filename='PWHL_logo.png') }}">
+    <!-- Favicons: add multiple rels and sizes, with cache-busting -->
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='PWHL_logo.png', v='1') }}">
+    <meta name="theme-color" content="#160A3A">
     <style>
         :root {
             --pwhl-bg-1: #160A3A; /* deep purple */
@@ -122,6 +125,7 @@
             cursor: pointer;
             border-bottom: 3px solid transparent;
             transition: all 0.2s;
+            font-size: 1.125rem; /* bump up tab text */
         }
 
         .tab.active {

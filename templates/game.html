@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PWHL Game Details</title>
-    <link rel="icon" type="image/png" href="{{ url_for('static', filename='PWHL_logo.png') }}">
+    <!-- Favicons: add multiple rels and sizes, with cache-busting -->
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='PWHL_logo.png', v='1') }}">
+    <meta name="theme-color" content="#160A3A">
     <style>
         :root {
             --pwhl-bg-1: #160A3A;
@@ -30,7 +33,7 @@
         .game-meta { color: #a0aec0; font-size: 0.875rem; }
     .tabs { background: var(--pwhl-surface-strong); border: 1px solid var(--pwhl-border); border-radius: 0.5rem; margin-bottom: 2rem; overflow: hidden; }
     .tab-list { display: flex; background: transparent; }
-    .tab { background-color: transparent; color: #d6d3e9; border: none; padding: 1rem 2rem; cursor: pointer; border-bottom: 3px solid transparent; transition: all 0.2s; flex: 1; text-align: center; }
+    .tab { background-color: transparent; color: #d6d3e9; border: none; padding: 1rem 2rem; cursor: pointer; border-bottom: 3px solid transparent; transition: all 0.2s; flex: 1; text-align: center; font-size: 1.125rem; }
     .tab.active { background-color: transparent; color: var(--pwhl-accent-strong); border-bottom-color: var(--pwhl-accent-strong); }
         .tab-content { padding: 2rem; min-height: 400px; }
         .loading { text-align: center; padding: 4rem 2rem; color: #a0aec0; }

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, render_template, jsonify, request, send_from_directory
 from flask_cors import CORS
 import requests
 import json
@@ -390,6 +390,11 @@ data_api = PWHLDataAPI()
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/favicon.ico')
+def favicon():
+    # Serve PNG logo as favicon; browsers support PNG favicons
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'PWHL_logo.png', mimetype='image/png')
 
 @app.route('/game/<int:game_id>')
 def game_page(game_id):
