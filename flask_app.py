@@ -1,19 +1,8 @@
-from flask import Flask, render_template, jsonify, request, send_from_directory, Response
+from flask import Flask, render_template, jsonify, request, send_from_directory, Response, redirect
 from flask_cors import CORS
-import requests
-import json
-import pandas as pd
+import requests, json, pandas as pd
 from datetime import datetime
-import csv
-import os
-import time
-
-# Simple in-memory cache for aggregated report events
-report_cache = {
-    'events': [],  # list of parsed pbp events from Data/Play-by-Play CSVs
-    'mtimes': {},  # filepath -> last modified time when cached
-    'last_load': 0.0,
-}
+import csv, os
 
 app = Flask(__name__)
 CORS(app)
@@ -23,45 +12,26 @@ class PWHLDataAPI:
         self.api_base_url = "https://lscluster.hockeytech.com/feed/index.php"
         self.api_key = "446521baf8c38984"
         self.client_code = "pwhl"
-        
-        # Season mapping - organized by year and type
         self.season_mapping = {
-            "2023/2024": {
-                "Regular Season": 1,
-                "Playoffs": 3
-            },
-            "2024/2025": {
-                "Regular Season": 5,
-                "Playoffs": 6
-            },
-            "2025/2026": {
-                "Regular Season": 8
-            }
+            "2023/2024": {"Regular Season": 1, "Playoffs": 3},
+            "2024/2025": {"Regular Season": 5, "Playoffs": 6},
+            "2025/2026": {"Regular Season": 8}
         }
-        
-        # All available seasons for API calls
-        self.all_seasons = [1, 3, 5, 6, 8]  # Include new 2025/2026 Regular Season (8)
-        
-        # Season years
+        self.all_seasons = [1, 3, 5, 6, 8]
         self.season_years = ["2023/2024", "2024/2025", "2025/2026"]
         self.season_states = ["Regular Season", "Playoffs"]
-        
-        # Load team data
         self.teams = self.load_team_data()
-    
+
     def load_team_data(self):
-        """Load team data from Teams.csv"""
         teams = {}
         city_to_full_name = {}
         csv_path = os.path.join(os.path.dirname(__file__), 'Teams.csv')
-        
         try:
             with open(csv_path, 'r', encoding='utf-8') as file:
                 reader = csv.DictReader(file)
                 for row in reader:
                     if not row or 'name' not in row:
                         continue
-                    
                     team_data = {
                         'id': row.get('id', ''),
                         'name': row.get('name', ''),
@@ -70,473 +40,174 @@ class PWHLDataAPI:
                         'logo': row.get('logo', ''),
                         'color': row.get('color', '')
                     }
-                    
-                    # Use full team name as key for easy lookup
                     teams[row['name']] = team_data
-                    
-                    # Create city to full name mapping
-                    # Handle special cases like "New York" and Montreal variations
                     if row['name'].startswith('New York'):
                         city_name = 'New York'
                     elif row['name'].startswith('Montréal'):
-                        # Handle both Montreal and Montréal variations
                         city_to_full_name['Montreal'] = row['name']
                         city_to_full_name['Montréal'] = row['name']
                         city_name = 'Montréal'
                     else:
-                        # Extract city (first or second word for 'PWHL City' style names)
                         parts = row['name'].split(' ')
                         if parts[0] == 'PWHL' and len(parts) > 1:
-                            city_name = parts[1]  # e.g., 'Seattle' from 'PWHL Seattle'
+                            city_name = parts[1]
                         else:
                             city_name = parts[0]
                     city_to_full_name[city_name] = row['name']
-                    
-            print(f"Loaded {len(teams)} teams: {list(teams.keys())}")
-            print(f"City mapping: {city_to_full_name}")
         except Exception as e:
             print(f"Error loading team data: {e}")
-            
-        # Store the city mapping for later use
         self.city_to_full_name = city_to_full_name
         return teams
 
-def _scan_pbp_data_folder() -> list[dict]:
-    """Scan Data/Play-by-Play folder and parse *_shots.csv into event dicts.
-    Cached aggressively; re-reads only files whose mtime changed since last load.
-    """
-    base = os.path.join(app.root_path, 'Data', 'Play-by-Play')
-    if not os.path.isdir(base):
-        return []
-    updated_events: list[dict] = []
-    # Track whether we need full rebuild (if any disappeared) – simplest approach: rebuild always if counts differ
-    try:
-        file_paths = [os.path.join(base, f) for f in os.listdir(base) if f.endswith('_shots.csv')]
-    except Exception:
-        return []
-    # Check mtimes
-    global report_cache
-    cache_mtimes = report_cache.get('mtimes', {})
-    need_reload = False
-    if len(cache_mtimes) != len(file_paths):
-        need_reload = True
-    else:
-        for fp in file_paths:
-            try:
-                mt = os.path.getmtime(fp)
-            except Exception:
-                need_reload = True
-                break
-            if cache_mtimes.get(fp) != mt:
-                need_reload = True
-                break
-    if not need_reload and report_cache.get('events'):
-        return report_cache['events']
-    # Rebuild
-    new_mtimes: dict[str, float] = {}
-    for fp in sorted(file_paths):
-        try:
-            mt = os.path.getmtime(fp)
-            new_mtimes[fp] = mt
-            with open(fp, 'r', encoding='utf-8') as f:
-                import csv
-                r = csv.DictReader(f)
-                for row in r:
-                    # Normalize & filter minimal fields we need client side
-                    # Expect columns: id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,...,x,y,game_id,game_date
-                    ev_type = (row.get('event') or '').strip()
-                    if not ev_type:
-                        continue
-                    # Convert coordinates to float if possible
-                    def to_float(v):
-                        try:
-                            return float(v)
-                        except Exception:
-                            return None
-                    x = to_float(row.get('x'))
-                    y = to_float(row.get('y'))
-                    period = row.get('period') or ''
-                    # Shooting / goal flags
-                    is_goal = ev_type.lower() == 'goal'
-                    is_shot_family = ev_type.lower() in ('shot','goal')
-                    strength = row.get('strength') or ''
-                    updated_events.append({
-                        'game_id': row.get('game_id') or '',
-                        'timestamp': row.get('timestamp') or row.get('time') or '',
-                        'event': ev_type,
-                        'team': row.get('team') or '',
-                        'venue': row.get('venue') or '',
-                        'period': period,
-                        'strength': strength,
-                        'player': row.get('p1_name') or '',
-                        'player_no': row.get('p1_no') or '',
-                        'goalie': row.get('goalie_name') or '',
-                        'x': x,
-                        'y': y,
-                        'is_goal': is_goal,
-                        'is_shot': is_shot_family,
-                        'game_date': row.get('game_date') or '',
-                    })
-        except Exception as e:
-            print(f"Error parsing {fp}: {e}")
-    report_cache['events'] = updated_events
-    report_cache['mtimes'] = new_mtimes
-    report_cache['last_load'] = time.time()
-    return updated_events
-
-def _aggregate_report(events: list[dict]) -> dict:
-    """Compute lightweight aggregate metrics for report tab."""
-    shots = sum(1 for e in events if e.get('is_shot'))
-    goals = sum(1 for e in events if e.get('is_goal'))
-    blocks = sum(1 for e in events if str(e.get('event','')).lower() == 'block')
-    corsi = shots + blocks  # (Shots incl goals) + blocks
-    fenwick = shots  # Without blocks (already just shots/goals set)
-    sh_pct = round((goals / shots * 100.0), 1) if shots else 0.0
-    teams = sorted({e.get('team') for e in events if e.get('team')})
-    periods = sorted({e.get('period') for e in events if e.get('period')})
-    strengths = sorted({e.get('strength') for e in events if e.get('strength')})
-    players = sorted({e.get('player') for e in events if e.get('player')})
-    return {
-        'totals': {
-            'shots': shots,
-            'goals': goals,
-            'blocks': blocks,
-            'corsi': corsi,
-            'fenwick': fenwick,
-            'sh_pct': sh_pct,
-        },
-        'filters': {
-            'teams': teams,
-            'periods': periods,
-            'strengths': strengths,
-            'players': players,
-            'events': sorted({e.get('event') for e in events if e.get('event')})
-        }
-    }
-
-@app.route('/api/report/events')
-def api_report_events():
-    try:
-        events = _scan_pbp_data_folder()
-        agg = _aggregate_report(events)
-        # Optional filtering via query params
-        q_team = (request.args.get('team') or '').strip().lower()
-        q_player = (request.args.get('player') or '').strip().lower()
-        q_event = (request.args.get('event') or '').strip().lower()
-        q_period = (request.args.get('period') or '').strip().lower()
-        q_strength = (request.args.get('strength') or '').strip().lower()
-        filtered = []
-        for e in events:
-            if q_team and e.get('team','').lower() != q_team: continue
-            if q_player and e.get('player','').lower() != q_player: continue
-            if q_event and e.get('event','').lower() != q_event: continue
-            if q_period and str(e.get('period','')).lower() != q_period: continue
-            if q_strength and e.get('strength','').lower() != q_strength: continue
-            filtered.append(e)
-        return jsonify({'events': filtered, 'aggregate': agg, 'count': len(filtered)})
-    except Exception as e:
-        return jsonify({'error': str(e)}), 500
-
-class PWHLDataAPI:
-    def __init__(self):
-        pass  # placeholder (existing definition is earlier; we won't duplicate logic here)
-
+    # ---------------- Schedule / Game Methods ---------------- #
     def fetch_schedule_data(self, season):
-        """Fetch schedule data from PWHL API"""
         params = {
-            'feed': 'statviewfeed',
-            'view': 'schedule',
-            'team': -1,
-            'season': season,
-            'month': -1,
-            'location': 'homeaway',
-            'key': self.api_key,
-            'client_code': self.client_code,
-            'site_id': 0,
-            'league_id': 1,
-            'conference_id': -1,
-            'division_id': -1,
-            'lang': 'en'
+            'feed': 'statviewfeed', 'view': 'schedule', 'team': -1, 'season': season,
+            'month': -1, 'location': 'homeaway', 'key': self.api_key, 'client_code': self.client_code,
+            'site_id': 0, 'league_id': 1, 'conference_id': -1, 'division_id': -1, 'lang': 'en'
         }
-        
-        headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-        }
-        
+        headers = {'User-Agent': 'Mozilla/5.0'}
         try:
-            response = requests.get(self.api_base_url, params=params, headers=headers)
-            response.raise_for_status()
-            
-            # Clean the response (remove parentheses)
-            raw_data = response.text.strip()
-            if raw_data.startswith('(') and raw_data.endswith(')'):
-                raw_data = raw_data[1:-1]
-            
-            data = json.loads(raw_data)
-            
-            # Extract games from the API response structure
-            if isinstance(data, list) and len(data) > 0 and 'sections' in data[0]:
+            r = requests.get(self.api_base_url, params=params, headers=headers)
+            r.raise_for_status()
+            raw = r.text.strip()
+            if raw.startswith('(') and raw.endswith(')'):
+                raw = raw[1:-1]
+            data = json.loads(raw)
+            if isinstance(data, list) and data and 'sections' in data[0]:
                 sections = data[0]['sections']
-                if sections and len(sections) > 0 and 'data' in sections[0]:
+                if sections and 'data' in sections[0]:
                     return sections[0]['data']
             return []
-            
         except Exception as e:
-            print(f"Error fetching data: {str(e)}")
+            print(f"Error fetching data: {e}")
             return []
-    
+
     def parse_games_data(self, games_data, season):
-        """Parse games data into structured format"""
-        parsed_games = []
-        
+        parsed = []
         for game in games_data:
             row = game.get('row', {})
-            
-            # Determine season state and year based on season ID
-            # Determine season state and year based on season ID
-            if season in [1, 5, 8]:
-                season_state = "Regular Season"
-            elif season in [3, 6]:
-                season_state = "Playoffs"
-            else:
-                season_state = "Regular Season"
-
-            if season in [1, 3]:
-                season_year = "2023/2024"
-            elif season in [5, 6]:
-                season_year = "2024/2025"
-            elif season in [8]:
-                season_year = "2025/2026"
-            else:
-                season_year = "Unknown"
-            
-            # Parse date with better year detection
+            season_state = "Regular Season" if season in [1,5,8] else ("Playoffs" if season in [3,6] else "Regular Season")
+            if season in [1,3]: season_year = "2023/2024"
+            elif season in [5,6]: season_year = "2024/2025"
+            elif season in [8]: season_year = "2025/2026"
+            else: season_year = "Unknown"
             date_str = row.get('date_with_day', '')
             try:
                 if date_str:
-                    # Determine the correct year based on season
                     if season_year == "2023/2024":
-                        # Games could be in 2023 or 2024
-                        year = 2024 if "Jan" in date_str or "Feb" in date_str or "Mar" in date_str or "Apr" in date_str or "May" in date_str else 2023
+                        year = 2024 if any(m in date_str for m in ["Jan","Feb","Mar","Apr","May"]) else 2023
                     elif season_year == "2024/2025":
-                        # Games could be in 2024 or 2025
-                        year = 2025 if "Jan" in date_str or "Feb" in date_str or "Mar" in date_str or "Apr" in date_str or "May" in date_str else 2024
+                        year = 2025 if any(m in date_str for m in ["Jan","Feb","Mar","Apr","May"]) else 2024
                     elif season_year == "2025/2026":
-                        # Games could be in 2025 or 2026
-                        year = 2026 if "Jan" in date_str or "Feb" in date_str or "Mar" in date_str or "Apr" in date_str or "May" in date_str else 2025
+                        year = 2026 if any(m in date_str for m in ["Jan","Feb","Mar","Apr","May"]) else 2025
                     else:
                         year = datetime.now().year
-                    
                     date_parsed = pd.to_datetime(f"{date_str}, {year}", format='%a, %b %d, %Y', errors='coerce')
                     formatted_date = date_parsed.strftime('%a, %b %d') if pd.notna(date_parsed) else 'TBD'
                     full_date = date_parsed.strftime('%Y-%m-%d') if pd.notna(date_parsed) else ''
                 else:
-                    formatted_date = 'TBD'
-                    full_date = ''
-                    date_parsed = pd.NaT
-            except:
-                formatted_date = 'TBD'
-                full_date = ''
-                date_parsed = pd.NaT
-            
-            # Get team names from API (these are city names)
-            away_team_city = row.get('visiting_team_city', '')
-            home_team_city = row.get('home_team_city', '')
-            
-            # Convert city names to full team names and get logos
-            away_team_full_name = self.city_to_full_name.get(away_team_city, away_team_city)
-            home_team_full_name = self.city_to_full_name.get(home_team_city, home_team_city)
-            
-            away_team_logo = ''
-            home_team_logo = ''
-            if away_team_full_name in self.teams:
-                away_team_logo = self.teams[away_team_full_name]['logo']
-            if home_team_full_name in self.teams:
-                home_team_logo = self.teams[home_team_full_name]['logo']
-            
-            # Resolve team IDs: prefer API fields; fallback to lookup by full team name from loaded Teams.csv
-            away_team_id_val = row.get('visiting_team_id', '')
-            home_team_id_val = row.get('home_team_id', '')
-            if not away_team_id_val and away_team_full_name in self.teams:
-                away_team_id_val = str(self.teams[away_team_full_name].get('id') or '')
-            if not home_team_id_val and home_team_full_name in self.teams:
-                home_team_id_val = str(self.teams[home_team_full_name].get('id') or '')
+                    formatted_date = 'TBD'; full_date=''; date_parsed = pd.NaT
+            except Exception:
+                formatted_date = 'TBD'; full_date=''; date_parsed = pd.NaT
+            away_city = row.get('visiting_team_city','')
+            home_city = row.get('home_team_city','')
+            away_full = self.city_to_full_name.get(away_city, away_city)
+            home_full = self.city_to_full_name.get(home_city, home_city)
+            away_logo = self.teams.get(away_full, {}).get('logo','')
+            home_logo = self.teams.get(home_full, {}).get('logo','')
+            away_id = row.get('visiting_team_id','') or str(self.teams.get(away_full,{}).get('id') or '')
+            home_id = row.get('home_team_id','') or str(self.teams.get(home_full,{}).get('id') or '')
+            parsed.append({
+                'date': formatted_date,'full_date': full_date,'date_obj': date_parsed,
+                'season_year': season_year,'season_state': season_state,
+                'away_team': away_full,'home_team': home_full,
+                'away_team_id': away_id,'home_team_id': home_id,
+                'away_team_city': away_city,'home_team_city': home_city,
+                'away_team_logo': away_logo,'home_team_logo': home_logo,
+                'status': row.get('game_status',''),
+                'away_score': row.get('visiting_goal_count',''),
+                'home_score': row.get('home_goal_count',''),
+                'game_id': row.get('game_id',''),
+                'venue': row.get('venue_name','')
+            })
+        return parsed
 
-            game_info = {
-                'date': formatted_date,
-                'full_date': full_date,
-                'date_obj': date_parsed,
-                'season_year': season_year,
-                'season_state': season_state,
-                'away_team': away_team_full_name,  # Use full team name
-                'home_team': home_team_full_name,  # Use full team name
-                'away_team_id': away_team_id_val,
-                'home_team_id': home_team_id_val,
-                'away_team_city': away_team_city,  # Keep city for reference
-                'home_team_city': home_team_city,  # Keep city for reference
-                'away_team_logo': away_team_logo,
-                'home_team_logo': home_team_logo,
-                'status': row.get('game_status', ''),
-                'away_score': row.get('visiting_goal_count', ''),
-                'home_score': row.get('home_goal_count', ''),
-                'game_id': row.get('game_id', ''),
-                'venue': row.get('venue_name', '')
-            }
-            parsed_games.append(game_info)
-        
-        return parsed_games
-    
     def fetch_game_summary(self, game_id):
-        """Fetch game summary/lineup data from PWHL API"""
         params = {
-            'feed': 'statviewfeed',
-            'view': 'gameSummary',
-            'game_id': game_id,
-            'key': self.api_key,
-            'site_id': 0,
-            'client_code': self.client_code,
-            'lang': 'en',
-            'league_id': ''
+            'feed':'statviewfeed','view':'gameSummary','game_id':game_id,'key':self.api_key,
+            'site_id':0,'client_code':self.client_code,'lang':'en','league_id': ''
         }
-        
-        headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-        }
-        
+        headers={'User-Agent':'Mozilla/5.0'}
         try:
-            response = requests.get(self.api_base_url, params=params, headers=headers)
-            response.raise_for_status()
-            
-            # Clean the response (remove parentheses)
-            raw_data = response.text.strip()
-            if raw_data.startswith('(') and raw_data.endswith(')'):
-                raw_data = raw_data[1:-1]
-            
-            data = json.loads(raw_data)
-            
-            # Process and expand the nested team data
-            processed_data = self.process_game_summary_data(data)
-            return processed_data
-            
+            r = requests.get(self.api_base_url, params=params, headers=headers)
+            r.raise_for_status()
+            raw = r.text.strip()
+            if raw.startswith('(') and raw.endswith(')'):
+                raw = raw[1:-1]
+            data = json.loads(raw)
+            return self.process_game_summary_data(data)
         except Exception as e:
-            print(f"Error fetching game summary for game {game_id}: {str(e)}")
+            print(f"Error fetching game summary for game {game_id}: {e}")
             return None
-    
+
     def process_game_summary_data(self, data):
-        """Process and expand the nested game summary data"""
-        if not data or not isinstance(data, dict):
+        if not isinstance(data, dict):
             return data
-            
         processed = {}
-        
-        # Process homeTeam data
-        if 'homeTeam' in data and isinstance(data['homeTeam'], dict):
-            home_team = data['homeTeam'].copy()
-            processed['homeTeam'] = {
-                'name': home_team.get('name', 'Home Team'),
-                'goalies': [],
-                'skaters': []
-            }
-            
-            # Expand homeTeam goalies
-            if 'goalies' in home_team and isinstance(home_team['goalies'], list):
-                for goalie in home_team['goalies']:
-                    if isinstance(goalie, dict):
-                        expanded_goalie = self.expand_player_data(goalie)
-                        if expanded_goalie:
-                            processed['homeTeam']['goalies'].append(expanded_goalie)
-            
-            # Expand homeTeam skaters
-            if 'skaters' in home_team and isinstance(home_team['skaters'], list):
-                for skater in home_team['skaters']:
-                    if isinstance(skater, dict):
-                        expanded_skater = self.expand_player_data(skater)
-                        if expanded_skater:
-                            processed['homeTeam']['skaters'].append(expanded_skater)
-        
-        # Process visitingTeam data
-        if 'visitingTeam' in data and isinstance(data['visitingTeam'], dict):
-            visiting_team = data['visitingTeam'].copy()
-            processed['visitingTeam'] = {
-                'name': visiting_team.get('name', 'Visiting Team'),
-                'goalies': [],
-                'skaters': []
-            }
-            
-            # Expand visitingTeam goalies
-            if 'goalies' in visiting_team and isinstance(visiting_team['goalies'], list):
-                for goalie in visiting_team['goalies']:
-                    if isinstance(goalie, dict):
-                        expanded_goalie = self.expand_player_data(goalie)
-                        if expanded_goalie:
-                            processed['visitingTeam']['goalies'].append(expanded_goalie)
-            
-            # Expand visitingTeam skaters
-            if 'skaters' in visiting_team and isinstance(visiting_team['skaters'], list):
-                for skater in visiting_team['skaters']:
-                    if isinstance(skater, dict):
-                        expanded_skater = self.expand_player_data(skater)
-                        if expanded_skater:
-                            processed['visitingTeam']['skaters'].append(expanded_skater)
-        
+        if isinstance(data.get('homeTeam'), dict):
+            home = data['homeTeam']
+            processed['homeTeam'] = {'name': home.get('name','Home Team'), 'goalies': [], 'skaters': []}
+            for g in home.get('goalies', []) or []:
+                eg = self.expand_player_data(g)
+                if eg: processed['homeTeam']['goalies'].append(eg)
+            for s in home.get('skaters', []) or []:
+                es = self.expand_player_data(s)
+                if es: processed['homeTeam']['skaters'].append(es)
+        if isinstance(data.get('visitingTeam'), dict):
+            vis = data['visitingTeam']
+            processed['visitingTeam'] = {'name': vis.get('name','Visiting Team'), 'goalies': [], 'skaters': []}
+            for g in vis.get('goalies', []) or []:
+                eg = self.expand_player_data(g)
+                if eg: processed['visitingTeam']['goalies'].append(eg)
+            for s in vis.get('skaters', []) or []:
+                es = self.expand_player_data(s)
+                if es: processed['visitingTeam']['skaters'].append(es)
         return processed
-    
+
     def expand_player_data(self, player):
-        """Expand player data by combining info and stats"""
         if not isinstance(player, dict):
             return None
-            
+        info = player.get('info') if isinstance(player.get('info'), dict) else {}
         expanded = {}
-        
-        # Get info data
-        if 'info' in player and isinstance(player['info'], dict):
-            info = player['info']
+        if info:
             expanded.update({
-                'name': f"{info.get('firstName', '')} {info.get('lastName', '')}".strip(),
-                'jersey': info.get('jerseyNumber', ''),
-                'position': info.get('position', ''),
-                'birthDate': info.get('birthDate', ''),
-                'playerImageURL': info.get('playerImageURL', '')
+                'name': f"{info.get('firstName','')} {info.get('lastName','')}".strip(),
+                'jersey': info.get('jerseyNumber',''),
+                'position': info.get('position',''),
+                'birthDate': info.get('birthDate',''),
+                'playerImageURL': info.get('playerImageURL','')
             })
-        
-        # Get stats data
-        if 'stats' in player and isinstance(player['stats'], dict):
-            stats = player['stats']
+        stats = player.get('stats') if isinstance(player.get('stats'), dict) else None
+        if stats:
             expanded['stats'] = stats
-        
-        return expanded if expanded else None
-    
+        return expanded or None
+
     def fetch_play_by_play(self, game_id):
-        """Fetch play-by-play data from PWHL API"""
         params = {
-            'feed': 'statviewfeed',
-            'view': 'gameCenterPlayByPlay',
-            'game_id': game_id,
-            'key': self.api_key,
-            'site_id': 0,
-            'client_code': self.client_code,
-            'lang': 'en',
-            'league_id': ''
+            'feed':'statviewfeed','view':'gameCenterPlayByPlay','game_id':game_id,'key':self.api_key,
+            'site_id':0,'client_code':self.client_code,'lang':'en','league_id': ''
         }
-        
-        headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-        }
-        
+        headers={'User-Agent':'Mozilla/5.0'}
         try:
-            response = requests.get(self.api_base_url, params=params, headers=headers)
-            response.raise_for_status()
-            
-            # Clean the response (remove parentheses)
-            raw_data = response.text.strip()
-            if raw_data.startswith('(') and raw_data.endswith(')'):
-                raw_data = raw_data[1:-1]
-            
-            data = json.loads(raw_data)
-            return data
-            
+            r = requests.get(self.api_base_url, params=params, headers=headers)
+            r.raise_for_status()
+            raw = r.text.strip()
+            if raw.startswith('(') and raw.endswith(')'):
+                raw = raw[1:-1]
+            return json.loads(raw)
         except Exception as e:
-            print(f"Error fetching play-by-play for game {game_id}: {str(e)}")
+            print(f"Error fetching play-by-play for game {game_id}: {e}")
             return None
 
 # Initialize the data API
@@ -551,6 +222,11 @@ def index():
 def report_page():
     # Serve the static report HTML (no API dependencies for data)
     return render_template('report/report.html')
+
+@app.route('/Report')
+def report_page_cap():
+    # Provide capitalized path alias expected by user
+    return redirect('/report', code=302)
 
 @app.route('/favicon.ico')
 def favicon():
