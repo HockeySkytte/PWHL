@@ -1280,7 +1280,6 @@
             const pending = [];
             const resultsByIdx = {};
             const popExpired = (pi,ts) => {
-            const eventType = prettifyEventLabel(getEventLabel(event));
                     const p=active[j];
                     if (pi>p.endPi || (pi===p.endPi && ts>=p.endTs)) active.splice(j,1);
                 }
