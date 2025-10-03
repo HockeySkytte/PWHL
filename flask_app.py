@@ -393,8 +393,32 @@ def index():
 
 @app.route('/favicon.ico')
 def favicon():
-    # Serve PNG logo as favicon; browsers support PNG favicons
-    return send_from_directory(os.path.join(app.root_path, 'static'), 'PWHL_logo.png', mimetype='image/png')
+    # Prefer a real .ico if present; else try favicon.png; else fall back to PWHL_logo.png
+    root = app.root_path
+    static_dir = os.path.join(app.root_path, 'static')
+    ico_root = os.path.join(root, 'favicon.ico')
+    ico_static = os.path.join(static_dir, 'favicon.ico')
+    png_root = os.path.join(root, 'favicon.png')
+    png_static = os.path.join(static_dir, 'favicon.png')
+
+    try:
+        if os.path.exists(ico_root):
+            return send_from_directory(root, 'favicon.ico', mimetype='image/x-icon')
+        if os.path.exists(ico_static):
+            return send_from_directory(static_dir, 'favicon.ico', mimetype='image/x-icon')
+        if os.path.exists(png_root):
+            return send_from_directory(root, 'favicon.png', mimetype='image/png')
+        if os.path.exists(png_static):
+            return send_from_directory(static_dir, 'favicon.png', mimetype='image/png')
+    except Exception:
+        pass
+
+    return send_from_directory(static_dir, 'PWHL_logo.png', mimetype='image/png')
+
+@app.route('/favicon.png')
+def favicon_png():
+    # Serve root-level favicon.png if present (user-provided smaller icon)
+    return send_from_directory(app.root_path, 'favicon.png', mimetype='image/png')
 
 @app.route('/game/<int:game_id>')
 def game_page(game_id):
