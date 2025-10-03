@@ -85,8 +85,9 @@
 (async function(){
   const state = { raw: [], filtered: [], meta: {teams:new Set(), events:new Set(), players:new Set(), goalies:new Set(), periods:new Set(), strengths:new Set(), venues:new Set()} };
   const el = id => document.getElementById(id);
-  const CSV_DIR = '/Data/Play-by-Play/';
-  const LINEUPS_DIR = '/Data/Lineups/';
+  // Use backend /data route to serve CSV safely (read-only)
+  const CSV_DIR = '/data/Play-by-Play/';
+  const LINEUPS_DIR = '/data/Lineups/';
 
   function parseCSV(text){
     const lines = text.split(/\r?\n/).filter(l=>l.trim().length>0);

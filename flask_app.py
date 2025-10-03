@@ -214,6 +214,22 @@ class PWHLDataAPI:
 data_api = PWHLDataAPI()
 from export_utils import generate_lineups_csv, generate_pbp_csv
 
+@app.route('/data/<path:filename>')
+def serve_data_file(filename: str):
+    # Only allow serving from Data directory and restrict to .csv
+    safe_root = os.path.join(app.root_path, 'Data')
+    abs_path = os.path.abspath(os.path.join(safe_root, filename))
+    if not abs_path.startswith(os.path.abspath(safe_root)):
+        return jsonify({'error':'Forbidden'}), 403
+    if not abs_path.lower().endswith('.csv'):
+        return jsonify({'error':'Unsupported file type'}), 400
+    rel_dir = os.path.dirname(os.path.relpath(abs_path, safe_root))
+    dir_to_send = os.path.join(safe_root, rel_dir)
+    fname = os.path.basename(abs_path)
+    if not os.path.exists(abs_path):
+        return jsonify({'error':'Not found'}), 404
+    return send_from_directory(dir_to_send, fname, mimetype='text/csv')
+
 @app.route('/')
 def index():
     return render_template('index.html')
