@@ -514,10 +514,34 @@
 
         <div class="main-content">
             <div class="tabs">
-                <button class="tab active" onclick="switchTab('schedule')">📅 Schedule</button>
+                <button class="tab active" id="tabSchedule" onclick="switchTab('schedule')">📅 Schedule</button>
+                <button class="tab" id="tabReport" onclick="switchTab('report')">📊 Report</button>
             </div>
 
             <div class="tab-content">
+                <div id="reportView" style="display:none; padding:1rem;">
+                    <h2 style="margin-bottom:0.75rem;">Play-by-Play Report</h2>
+                    <div id="reportFilters" style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.75rem;">
+                        <select id="rfTeam" class="filter-select" style="width:160px;">
+                            <option value="">All Teams</option>
+                        </select>
+                        <select id="rfPlayer" class="filter-select" style="width:200px;">
+                            <option value="">All Players</option>
+                        </select>
+                        <select id="rfEvent" class="filter-select" style="width:140px;">
+                            <option value="">All Events</option>
+                        </select>
+                        <select id="rfPeriod" class="filter-select" style="width:120px;">
+                            <option value="">All Periods</option>
+                        </select>
+                        <select id="rfStrength" class="filter-select" style="width:130px;">
+                            <option value="">All Strengths</option>
+                        </select>
+                        <button class="btn" onclick="reloadReport()">Apply</button>
+                    </div>
+                    <div id="reportKpis" style="display:flex; flex-wrap:wrap; gap:1rem; margin-bottom:1rem;"></div>
+                    <div id="reportTableWrap" style="max-height:55vh; overflow:auto; border:1px solid var(--pwhl-border); border-radius:6px; background: var(--pwhl-surface);"></div>
+                </div>
                 <div class="stats-grid">
                     <div class="stat-card">
                         <div class="stat-value" id="totalGames">-</div>
@@ -806,8 +830,120 @@
         }
 
         function switchTab(tabName) {
-            // For future expansion with multiple tabs
-            console.log('Switched to tab:', tabName);
+            const scheduleStats = document.querySelector('.stats-grid');
+            const scheduleTable = document.querySelector('.table-container');
+            const reportView = document.getElementById('reportView');
+            document.getElementById('tabSchedule').classList.remove('active');
+            document.getElementById('tabReport').classList.remove('active');
+            if (tabName === 'report') {
+                reportView.style.display = 'block';
+                scheduleStats.style.display = 'none';
+                scheduleTable.style.display = 'none';
+                document.getElementById('tabReport').classList.add('active');
+                // Lazy load report data first time
+                if (!reportLoadedOnce) reloadReport();
+            } else {
+                reportView.style.display = 'none';
+                scheduleStats.style.display = 'grid';
+                scheduleTable.style.display = 'block';
+                document.getElementById('tabSchedule').classList.add('active');
+            }
+        }
+
+        let reportLoadedOnce = false;
+        async function reloadReport() {
+            const team = document.getElementById('rfTeam').value;
+            const player = document.getElementById('rfPlayer').value;
+            const eventType = document.getElementById('rfEvent').value;
+            const period = document.getElementById('rfPeriod').value;
+            const strength = document.getElementById('rfStrength').value;
+            const params = new URLSearchParams();
+            if (team) params.append('team', team);
+            if (player) params.append('player', player);
+            if (eventType) params.append('event', eventType);
+            if (period) params.append('period', period);
+            if (strength) params.append('strength', strength);
+            const url = '/api/report/events' + (params.toString() ? ('?' + params.toString()) : '');
+            const wrap = document.getElementById('reportTableWrap');
+            wrap.innerHTML = '<div style="padding:1rem; text-align:center;">Loading...</div>';
+            try {
+                const resp = await fetch(url, { cache: 'no-store' });
+                const data = await resp.json();
+                if (!resp.ok) throw new Error(data.error || 'Failed');
+                reportLoadedOnce = true;
+                populateReportFilters(data.aggregate.filters);
+                renderReportKpis(data.aggregate.totals, data.count);
+                renderReportTable(data.events);
+            } catch (e) {
+                wrap.innerHTML = '<div style="padding:1rem; color:#f56565; text-align:center;">Error loading report</div>';
+                console.error('Report load failed', e);
+            }
+        }
+
+        function populateReportFilters(filters) {
+            const selTeam = document.getElementById('rfTeam');
+            const currentTeam = selTeam.value; // preserve selection
+            if (selTeam.options.length <= 1) { // only initial option
+                filters.teams.forEach(t => { if (t) selTeam.appendChild(new Option(t, t)); });
+            }
+            const selPlayer = document.getElementById('rfPlayer');
+            if (selPlayer.options.length <= 1) {
+                filters.players.forEach(p => { if (p) selPlayer.appendChild(new Option(p, p)); });
+            }
+            const selEvent = document.getElementById('rfEvent');
+            if (selEvent.options.length <= 1) {
+                filters.events.forEach(ev => { if (ev) selEvent.appendChild(new Option(ev, ev)); });
+            }
+            const selPeriod = document.getElementById('rfPeriod');
+            if (selPeriod.options.length <= 1) {
+                filters.periods.forEach(pr => { if (pr) selPeriod.appendChild(new Option(pr, pr)); });
+            }
+            const selStrength = document.getElementById('rfStrength');
+            if (selStrength.options.length <= 1) {
+                filters.strengths.forEach(st => { if (st) selStrength.appendChild(new Option(st, st)); });
+            }
+        }
+
+        function renderReportKpis(totals, count) {
+            const k = document.getElementById('reportKpis');
+            const items = [
+                { label: 'Events', value: count },
+                { label: 'Shots', value: totals.shots },
+                { label: 'Goals', value: totals.goals },
+                { label: 'Blocks', value: totals.blocks },
+                { label: 'Corsi', value: totals.corsi },
+                { label: 'Fenwick', value: totals.fenwick },
+                { label: 'Sh%', value: totals.sh_pct + '%' },
+            ];
+            k.innerHTML = items.map(i => `<div style="min-width:110px; background:var(--pwhl-surface); padding:0.75rem 0.9rem; border:1px solid var(--pwhl-border); border-radius:6px;">
+                <div style="font-size:1.1rem; font-weight:600;">${i.value}</div>
+                <div style="font-size:0.7rem; text-transform:uppercase; letter-spacing:0.5px; opacity:0.8;">${i.label}</div>
+            </div>`).join('');
+        }
+
+        function renderReportTable(events) {
+            const wrap = document.getElementById('reportTableWrap');
+            if (!events.length) { wrap.innerHTML = '<div style="padding:1rem; text-align:center;">No events for filters.</div>'; return; }
+            const header = ['Game','Date','Time','Period','Event','Team','Venue','Strength','Player','Goalie','X','Y'];
+            const rows = events.map(e => {
+                const x = (e.x === null || e.x === undefined) ? '' : e.x.toFixed(1);
+                const y = (e.y === null || e.y === undefined) ? '' : e.y.toFixed(1);
+                return `<tr>
+                    <td>${e.game_id}</td>
+                    <td>${e.game_date}</td>
+                    <td>${e.timestamp}</td>
+                    <td>${e.period}</td>
+                    <td>${e.event}</td>
+                    <td>${e.team}</td>
+                    <td>${e.venue}</td>
+                    <td>${e.strength}</td>
+                    <td>${e.player}</td>
+                    <td>${e.goalie}</td>
+                    <td>${x}</td>
+                    <td>${y}</td>
+                </tr>`;
+            }).join('');
+            wrap.innerHTML = `<table class="table"><thead><tr>${header.map(h => `<th>${h}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table>`;
         }
 
         function refreshData() {

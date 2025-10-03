@@ -6,7 +6,14 @@ import pandas as pd
 from datetime import datetime
 import csv
 import os
-import os
+import time
+
+# Simple in-memory cache for aggregated report events
+report_cache = {
+    'events': [],  # list of parsed pbp events from Data/Play-by-Play CSVs
+    'mtimes': {},  # filepath -> last modified time when cached
+    'last_load': 0.0,
+}
 
 app = Flask(__name__)
 CORS(app)
@@ -93,6 +100,142 @@ class PWHLDataAPI:
         # Store the city mapping for later use
         self.city_to_full_name = city_to_full_name
         return teams
+
+def _scan_pbp_data_folder() -> list[dict]:
+    """Scan Data/Play-by-Play folder and parse *_shots.csv into event dicts.
+    Cached aggressively; re-reads only files whose mtime changed since last load.
+    """
+    base = os.path.join(app.root_path, 'Data', 'Play-by-Play')
+    if not os.path.isdir(base):
+        return []
+    updated_events: list[dict] = []
+    # Track whether we need full rebuild (if any disappeared) – simplest approach: rebuild always if counts differ
+    try:
+        file_paths = [os.path.join(base, f) for f in os.listdir(base) if f.endswith('_shots.csv')]
+    except Exception:
+        return []
+    # Check mtimes
+    global report_cache
+    cache_mtimes = report_cache.get('mtimes', {})
+    need_reload = False
+    if len(cache_mtimes) != len(file_paths):
+        need_reload = True
+    else:
+        for fp in file_paths:
+            try:
+                mt = os.path.getmtime(fp)
+            except Exception:
+                need_reload = True
+                break
+            if cache_mtimes.get(fp) != mt:
+                need_reload = True
+                break
+    if not need_reload and report_cache.get('events'):
+        return report_cache['events']
+    # Rebuild
+    new_mtimes: dict[str, float] = {}
+    for fp in sorted(file_paths):
+        try:
+            mt = os.path.getmtime(fp)
+            new_mtimes[fp] = mt
+            with open(fp, 'r', encoding='utf-8') as f:
+                import csv
+                r = csv.DictReader(f)
+                for row in r:
+                    # Normalize & filter minimal fields we need client side
+                    # Expect columns: id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,...,x,y,game_id,game_date
+                    ev_type = (row.get('event') or '').strip()
+                    if not ev_type:
+                        continue
+                    # Convert coordinates to float if possible
+                    def to_float(v):
+                        try:
+                            return float(v)
+                        except Exception:
+                            return None
+                    x = to_float(row.get('x'))
+                    y = to_float(row.get('y'))
+                    period = row.get('period') or ''
+                    # Shooting / goal flags
+                    is_goal = ev_type.lower() == 'goal'
+                    is_shot_family = ev_type.lower() in ('shot','goal')
+                    strength = row.get('strength') or ''
+                    updated_events.append({
+                        'game_id': row.get('game_id') or '',
+                        'timestamp': row.get('timestamp') or row.get('time') or '',
+                        'event': ev_type,
+                        'team': row.get('team') or '',
+                        'venue': row.get('venue') or '',
+                        'period': period,
+                        'strength': strength,
+                        'player': row.get('p1_name') or '',
+                        'player_no': row.get('p1_no') or '',
+                        'goalie': row.get('goalie_name') or '',
+                        'x': x,
+                        'y': y,
+                        'is_goal': is_goal,
+                        'is_shot': is_shot_family,
+                        'game_date': row.get('game_date') or '',
+                    })
+        except Exception as e:
+            print(f"Error parsing {fp}: {e}")
+    report_cache['events'] = updated_events
+    report_cache['mtimes'] = new_mtimes
+    report_cache['last_load'] = time.time()
+    return updated_events
+
+def _aggregate_report(events: list[dict]) -> dict:
+    """Compute lightweight aggregate metrics for report tab."""
+    shots = sum(1 for e in events if e.get('is_shot'))
+    goals = sum(1 for e in events if e.get('is_goal'))
+    blocks = sum(1 for e in events if str(e.get('event','')).lower() == 'block')
+    corsi = shots + blocks  # (Shots incl goals) + blocks
+    fenwick = shots  # Without blocks (already just shots/goals set)
+    sh_pct = round((goals / shots * 100.0), 1) if shots else 0.0
+    teams = sorted({e.get('team') for e in events if e.get('team')})
+    periods = sorted({e.get('period') for e in events if e.get('period')})
+    strengths = sorted({e.get('strength') for e in events if e.get('strength')})
+    players = sorted({e.get('player') for e in events if e.get('player')})
+    return {
+        'totals': {
+            'shots': shots,
+            'goals': goals,
+            'blocks': blocks,
+            'corsi': corsi,
+            'fenwick': fenwick,
+            'sh_pct': sh_pct,
+        },
+        'filters': {
+            'teams': teams,
+            'periods': periods,
+            'strengths': strengths,
+            'players': players,
+            'events': sorted({e.get('event') for e in events if e.get('event')})
+        }
+    }
+
+@app.route('/api/report/events')
+def api_report_events():
+    try:
+        events = _scan_pbp_data_folder()
+        agg = _aggregate_report(events)
+        # Optional filtering via query params
+        q_team = (request.args.get('team') or '').strip().lower()
+        q_player = (request.args.get('player') or '').strip().lower()
+        q_event = (request.args.get('event') or '').strip().lower()
+        q_period = (request.args.get('period') or '').strip().lower()
+        q_strength = (request.args.get('strength') or '').strip().lower()
+        filtered = []
+        for e in events:
+            if q_team and e.get('team','').lower() != q_team: continue
+            if q_player and e.get('player','').lower() != q_player: continue
+            if q_event and e.get('event','').lower() != q_event: continue
+            if q_period and str(e.get('period','')).lower() != q_period: continue
+            if q_strength and e.get('strength','').lower() != q_strength: continue
+            filtered.append(e)
+        return jsonify({'events': filtered, 'aggregate': agg, 'count': len(filtered)})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
     
     def fetch_schedule_data(self, season):
         """Fetch schedule data from PWHL API"""
