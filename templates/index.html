@@ -8,44 +8,126 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=2">
     <link rel="icon" href="/favicon.ico?v=2">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='PWHL_logo.png', v='2') }}">
+    <meta name="theme-color" content="#160A3A">
     <style>
-        /* Core layout + schedule styling */
-        :root { --pwhl-bg:#160A3A; --pwhl-surface:#1e2329; --pwhl-border:#4a5568; --pwhl-accent:#8E7CD6; --pwhl-accent-strong:#B9A7FF; }
-        body { margin:0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Helvetica, Arial, sans-serif; background:linear-gradient(135deg,#160A3A 0%,#251055 48%,#3B1E7A 100%); color:#e2e8f0; }
-        .header { display:flex; justify-content:space-between; align-items:center; padding:0.75rem 1rem; background:rgba(0,0,0,.25); backdrop-filter:blur(6px); border-bottom:1px solid rgba(255,255,255,.07); }
-        .header h1 { display:flex; gap:.5rem; align-items:center; font-size:1.05rem; margin:0; letter-spacing:.5px; }
-        .header-actions button { margin-left:.5rem; }
-        .btn { background:var(--pwhl-accent); color:#fff; border:none; padding:.55rem .9rem; border-radius:6px; font-weight:600; cursor:pointer; font-size:.75rem; letter-spacing:.5px; }
-        .btn:hover { background:var(--pwhl-accent-strong); }
-        .btn.btn-secondary { background:#2d3748; }
-        .btn.btn-secondary:hover { background:#374151; }
-        .container { display:flex; min-height:calc(100vh - 56px); }
-        .sidebar { width:240px; padding:1rem; background:rgba(0,0,0,.25); backdrop-filter:blur(6px); border-right:1px solid rgba(255,255,255,.08); }
-        .main-content { flex:1; display:flex; flex-direction:column; }
-        .tabs { display:flex; gap:.25rem; padding:.5rem 1rem .25rem; border-bottom:1px solid rgba(255,255,255,.08); }
-        .tab { background:transparent; border:none; color:#cbd5e0; padding:.6rem 1rem; font-weight:600; cursor:pointer; font-size:.8rem; letter-spacing:.5px; border-bottom:2px solid transparent; }
-        .tab.active { color:var(--pwhl-accent-strong); border-bottom-color:var(--pwhl-accent-strong); }
-        .tab-content { flex:1; padding:1rem 1.25rem 2rem; overflow:auto; }
-        .filter-label { display:block; margin-bottom:.35rem; font-size:.65rem; text-transform:uppercase; letter-spacing:.5px; font-weight:600; opacity:.85; }
-        .filter-select { width:100%; background:#2d3748; border:1px solid #4a5568; color:#fff; border-radius:4px; padding:.5rem .55rem; font-size:.75rem; }
-        .filter-select:focus { outline:none; border-color:var(--pwhl-accent); box-shadow:0 0 0 3px rgba(142,124,214,.25); }
-        input[type=date].filter-select { color-scheme:dark; }
-        .stats-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:.75rem; margin-bottom:1rem; }
-        .stat-card { background:rgba(0,0,0,.25); border:1px solid rgba(255,255,255,.08); border-radius:6px; padding:.75rem .85rem; }
-        .stat-value { font-size:1.4rem; font-weight:600; color:var(--pwhl-accent-strong); margin:0 0 .15rem; }
-        .stat-label { font-size:.65rem; text-transform:uppercase; letter-spacing:.5px; opacity:.7; }
-        .table-container { background:rgba(0,0,0,.25); border:1px solid rgba(255,255,255,.08); border-radius:6px; overflow:hidden; }
-        table { width:100%; border-collapse:collapse; font-size:.72rem; }
-        th, td { padding:.55rem .6rem; text-align:center; border-bottom:1px solid rgba(255,255,255,.06); }
-        th { background:rgba(255,255,255,.05); text-transform:uppercase; font-size:.6rem; letter-spacing:.6px; font-weight:600; }
-        tr:hover { background:rgba(142,124,214,.12); }
-        td.score { font-weight:600; }
-        .status-badge { padding:.2rem .45rem; border-radius:12px; font-size:.55rem; text-transform:uppercase; font-weight:700; letter-spacing:.5px; }
-        .status-final { background:#48bb78; color:#102415; }
-        .status-pending { background:#ed8936; color:#2d1d06; }
-        .no-data { padding:1.25rem; text-align:center; font-size:.75rem; opacity:.75; }
-        @media (max-width:880px){ .container { flex-direction:column; } .sidebar { width:100%; display:flex; flex-wrap:wrap; gap:1rem; max-height:none; } .filter-group { width:calc(50% - .5rem); } }
-    </style>
+        :root {
+            --pwhl-bg-1: #160A3A; /* deep purple */
+            --pwhl-bg-2: #251055; /* mid purple */
+            --pwhl-bg-3: #3B1E7A; /* bright purple */
+            --pwhl-surface: rgba(19, 13, 46, 0.75);
+            --pwhl-surface-strong: rgba(25, 16, 60, 0.85);
+            --pwhl-border: rgba(142, 124, 214, 0.25);
+            --pwhl-accent: #8E7CD6; /* light lavender accent */
+            --pwhl-accent-strong: #B9A7FF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, var(--pwhl-bg-1) 0%, var(--pwhl-bg-2) 48%, var(--pwhl-bg-3) 100%);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .header {
+            background: var(--pwhl-surface-strong);
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--pwhl-border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            background-color: var(--pwhl-accent);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: var(--pwhl-accent-strong);
+        }
+
+        .btn-secondary {
+            background-color: #718096;
+        }
+
+        .btn-secondary:hover {
+            background-color: #4a5568;
+        }
+
+        .btn-sm {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.75rem;
+            margin: 0 0.125rem;
+            border-radius: 0.25rem;
+        }
+
+        .text-muted {
+            color: #718096;
+        }
+
+        .container {
+            display: flex;
+            height: calc(100vh - 80px);
+        }
+
+        .sidebar {
+            width: 300px;
+            background: var(--pwhl-surface);
+            border-right: 1px solid var(--pwhl-border);
+            padding: 1.5rem;
+            overflow-y: auto;
+        }
+
+        .main-content {
+            flex: 1;
+            background: transparent;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tabs {
+            display: flex;
+            background: var(--pwhl-surface-strong);
+            border-bottom: 1px solid var(--pwhl-border);
+        }
+
+        .tab {
+            background: transparent;
+            color: #d6d3e9;
+            border: none;
+            padding: 1rem 2rem;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            transition: all 0.2s;
+            font-size: 1.125rem; /* bump up tab text */
+        }
 
         .tab.active {
             background: transparent;
@@ -432,17 +514,133 @@
 
         <div class="main-content">
             <div class="tabs">
-                <button class="tab active" id="tabSchedule" onclick="switchTab('schedule')">📅 Schedule</button>
-                <a class="tab" id="tabReportLink" href="/Report" style="text-decoration:none; display:inline-block; padding:0.75rem 1rem;">📊 Report</a>
+                <button class="tab active" onclick="switchTab('schedule')">📅 Schedule</button>
             </div>
 
             <div class="tab-content">
-                <!-- Schedule stats -->
-                <div class="stats-grid" id="scheduleStats">
-                    <div class="stat-card"><div class="stat-value" id="statTotal">0</div><div class="stat-label">Games</div></div>
-                    <div class="stat-card"><div class="stat-value" id="statCompleted">0</div><div class="stat-label">Completed</div></div>
-                    <div class="stat-card"><div class="stat-value" id="statPending">0</div><div class="stat-label">Pending</div></div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value" id="totalGames">-</div>
+                        <div class="stat-label">Total Games</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="completedGames">-</div>
+                        <div class="stat-label">Completed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="pendingGames">-</div>
+                        <div class="stat-label">Pending</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="avgGoals">-</div>
+                        <div class="stat-label">Avg Goals/Game</div>
+                    </div>
                 </div>
+
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Season</th>
+                                <th>State</th>
+                                <th>Away Team</th>
+                                <th>Home Team</th>
+                                <th>Status</th>
+                                <th>Away Score</th>
+                                <th>Home Score</th>
+                            </tr>
+                        </thead>
+                        <tbody id="scheduleTableBody">
+                            <tr>
+                                <td colspan="8" class="loading">Loading schedule data...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Game Details -->
+    <div id="gameModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Game Details</h2>
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Content will be dynamically loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentData = [];
+        let allFilters = {};
+
+        // Simple in-memory cache for schedule responses, keyed by request URL
+        const scheduleCache = {};
+        const CACHE_TTL_MS = 5 * 60 * 1000; // 5 minutes
+
+        // Helpers: filter state persistence
+        function getFilterStateFromUI() {
+            return {
+                seasonYear: document.getElementById('seasonFilter').value,
+                seasonState: document.getElementById('seasonStateFilter').value,
+                team: document.getElementById('teamFilter').value,
+                status: document.getElementById('statusFilter').value,
+                dateFrom: document.getElementById('dateFromFilter').value,
+                dateTo: document.getElementById('dateToFilter').value,
+            };
+        }
+
+        function saveFilterState(state) {
+            try {
+                localStorage.setItem('pwhl_filters', JSON.stringify(state));
+            } catch (e) {
+                console.warn('Unable to save filters to localStorage:', e);
+            }
+        }
+
+        function loadFilterState() {
+            try {
+                const raw = localStorage.getItem('pwhl_filters');
+                if (!raw) return null;
+                return JSON.parse(raw);
+            } catch (e) {
+                console.warn('Unable to load filters from localStorage:', e);
+                return null;
+            }
+        }
+
+        function restoreFiltersToUI(state) {
+            if (!state) return;
+            const seasonEl = document.getElementById('seasonFilter');
+            const seasonStateEl = document.getElementById('seasonStateFilter');
+            const teamEl = document.getElementById('teamFilter');
+            const statusEl = document.getElementById('statusFilter');
+            const dateFromEl = document.getElementById('dateFromFilter');
+            const dateToEl = document.getElementById('dateToFilter');
+
+            if (state.seasonYear) seasonEl.value = state.seasonYear;
+            if (state.seasonState) seasonStateEl.value = state.seasonState;
+            if (state.dateFrom) dateFromEl.value = state.dateFrom;
+            if (state.dateTo) dateToEl.value = state.dateTo;
+            // Team and status options are populated after fetching; set now if "All" or leave for later
+            if (state.team && state.team !== 'All') teamEl.value = state.team;
+            if (state.status && state.status !== 'All') statusEl.value = state.status;
+        }
+
+        // Initialize the app
+        document.addEventListener('DOMContentLoaded', function() {
+            // Restore any saved filters, then apply
+            const saved = loadFilterState();
+            if (saved) {
+                restoreFiltersToUI(saved);
+            }
+            applyFilters({ preferCache: true });
+        });
 
         async function loadSchedule() {
             // This function is now handled by applyFilters()
@@ -551,9 +749,71 @@
             }
         }
 
-        /* Schedule only page; removed embedded report code */
+        function updateStats(stats) {
+            document.getElementById('totalGames').textContent = stats.total_games;
+            document.getElementById('completedGames').textContent = stats.completed_games;
+            document.getElementById('pendingGames').textContent = stats.pending_games;
+            
+            // Calculate average goals per game
+            const completedGames = currentData.filter(game => game.status.includes('Final'));
+            if (completedGames.length > 0) {
+                const totalGoals = completedGames.reduce((sum, game) => {
+                    const home = parseInt(game.home_score) || 0;
+                    const away = parseInt(game.away_score) || 0;
+                    return sum + home + away;
+                }, 0);
+                const avgGoals = (totalGoals / completedGames.length).toFixed(1);
+                document.getElementById('avgGoals').textContent = avgGoals;
+            } else {
+                document.getElementById('avgGoals').textContent = '-';
+            }
+        }
 
-        function refreshData(){ applyFilters({force:true}); }
+        function renderTable(games) {
+            const tbody = document.getElementById('scheduleTableBody');
+            
+            if (games.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="8" class="no-data">No games found for the selected filters</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = games.map(game => {
+                const statusClass = game.status.includes('Final') ? 'status-final' : 'status-pending';
+                const awayScore = game.away_score || '';
+                const homeScore = game.home_score || '';
+                
+                // Format team logos (just logo, no text as requested)
+                const awayTeamDisplay = game.away_team_logo ? 
+                    `<div style="display: flex; align-items: center; justify-content: center;"><img src="${game.away_team_logo}" alt="${game.away_team}" style="width: 32px; height: 32px;" title="${game.away_team}"></div>` : 
+                    game.away_team;
+                const homeTeamDisplay = game.home_team_logo ? 
+                    `<div style="display: flex; align-items: center; justify-content: center;"><img src="${game.home_team_logo}" alt="${game.home_team}" style="width: 32px; height: 32px;" title="${game.home_team}"></div>` : 
+                    game.home_team;
+                
+                return `
+                    <tr class="game-row ${game.status.includes('Final') ? 'clickable' : ''}" onclick="${game.status.includes('Final') ? `goToGamePage('${game.game_id}')` : ''}" style="${game.status.includes('Final') ? 'cursor: pointer;' : 'cursor: default;'}">
+                        <td>${game.date}</td>
+                        <td>${game.season_year}</td>
+                        <td>${game.season_state}</td>
+                        <td>${awayTeamDisplay}</td>
+                        <td>${homeTeamDisplay}</td>
+                        <td><span class="status-badge ${statusClass}">${game.status}</span></td>
+                        <td class="score">${awayScore}</td>
+                        <td class="score">${homeScore}</td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function switchTab(tabName) {
+            // For future expansion with multiple tabs
+            console.log('Switched to tab:', tabName);
+        }
+
+        function refreshData() {
+            // Force bypass cache for current filters
+            applyFilters({ force: true });
+        }
 
         function goToGamePage(gameId) {
             window.location.href = `/game/${gameId}?id=${gameId}`;
@@ -605,7 +865,7 @@
             }
         }
 
-    function formatGameSummary(data) {
+        function formatGameSummary(data) {
             let html = '<div class="game-summary">';
             
             // Home Team Lineup
@@ -717,7 +977,7 @@
             return html;
         }
 
-    function formatPlayByPlay(data) {
+        function formatPlayByPlay(data) {
             if (!Array.isArray(data) || data.length === 0) {
                 return '<div style="text-align: center; padding: 2rem; color: #a0aec0;">No play-by-play data available.</div>';
             }
