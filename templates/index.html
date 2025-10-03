@@ -515,151 +515,14 @@
         <div class="main-content">
             <div class="tabs">
                 <button class="tab active" id="tabSchedule" onclick="switchTab('schedule')">📅 Schedule</button>
-                <button class="tab" id="tabReport" onclick="switchTab('report')">📊 Report</button>
+                <a class="tab" id="tabReportLink" href="/Report" style="text-decoration:none; display:inline-block; padding:0.75rem 1rem;">📊 Report</a>
             </div>
 
             <div class="tab-content">
-                <div id="reportView" style="display:none; padding:1rem;">
-                    <h2 style="margin-bottom:0.75rem;">Play-by-Play Report</h2>
-                    <div id="reportFilters" style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.75rem;">
-                        <select id="rfTeam" class="filter-select" style="width:160px;">
-                            <option value="">All Teams</option>
-                        </select>
-                        <select id="rfPlayer" class="filter-select" style="width:200px;">
-                            <option value="">All Players</option>
-                        </select>
-                        <select id="rfEvent" class="filter-select" style="width:140px;">
-                            <option value="">All Events</option>
-                        </select>
-                        <select id="rfPeriod" class="filter-select" style="width:120px;">
-                            <option value="">All Periods</option>
-                        </select>
-                        <select id="rfStrength" class="filter-select" style="width:130px;">
-                            <option value="">All Strengths</option>
-                        </select>
-                        <button class="btn" onclick="reloadReport()">Apply</button>
-                    </div>
-                    <div id="reportKpis" style="display:flex; flex-wrap:wrap; gap:1rem; margin-bottom:1rem;"></div>
-                    <div id="reportTableWrap" style="max-height:55vh; overflow:auto; border:1px solid var(--pwhl-border); border-radius:6px; background: var(--pwhl-surface);"></div>
-                </div>
+                <!-- Report content removed; standalone at /Report -->
                 <div class="stats-grid">
                     <div class="stat-card">
-                        <div class="stat-value" id="totalGames">-</div>
-                        <div class="stat-label">Total Games</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-value" id="completedGames">-</div>
-                        <div class="stat-label">Completed</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-value" id="pendingGames">-</div>
-                        <div class="stat-label">Pending</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-value" id="avgGoals">-</div>
-                        <div class="stat-label">Avg Goals/Game</div>
-                    </div>
-                </div>
-
-                <div class="table-container">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Season</th>
-                                <th>State</th>
-                                <th>Away Team</th>
-                                <th>Home Team</th>
-                                <th>Status</th>
-                                <th>Away Score</th>
-                                <th>Home Score</th>
-                            </tr>
-                        </thead>
-                        <tbody id="scheduleTableBody">
-                            <tr>
-                                <td colspan="8" class="loading">Loading schedule data...</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal for Game Details -->
-    <div id="gameModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 id="modalTitle">Game Details</h2>
-                <span class="close" onclick="closeModal()">&times;</span>
-            </div>
-            <div class="modal-body" id="modalBody">
-                <!-- Content will be dynamically loaded here -->
-            </div>
-        </div>
-    </div>
-
-    <script>
-        let currentData = [];
-        let allFilters = {};
-
-        // Simple in-memory cache for schedule responses, keyed by request URL
-        const scheduleCache = {};
-        const CACHE_TTL_MS = 5 * 60 * 1000; // 5 minutes
-
-        // Helpers: filter state persistence
-        function getFilterStateFromUI() {
-            return {
-                seasonYear: document.getElementById('seasonFilter').value,
-                seasonState: document.getElementById('seasonStateFilter').value,
-                team: document.getElementById('teamFilter').value,
-                status: document.getElementById('statusFilter').value,
-                dateFrom: document.getElementById('dateFromFilter').value,
-                dateTo: document.getElementById('dateToFilter').value,
-            };
-        }
-
-        function saveFilterState(state) {
-            try {
-                localStorage.setItem('pwhl_filters', JSON.stringify(state));
-            } catch (e) {
-                console.warn('Unable to save filters to localStorage:', e);
-            }
-        }
-
-        function loadFilterState() {
-            try {
-                const raw = localStorage.getItem('pwhl_filters');
-                if (!raw) return null;
-                return JSON.parse(raw);
-            } catch (e) {
-                console.warn('Unable to load filters from localStorage:', e);
-                return null;
-            }
-        }
-
-        function restoreFiltersToUI(state) {
-            if (!state) return;
-            const seasonEl = document.getElementById('seasonFilter');
-            const seasonStateEl = document.getElementById('seasonStateFilter');
-            const teamEl = document.getElementById('teamFilter');
-            const statusEl = document.getElementById('statusFilter');
-            const dateFromEl = document.getElementById('dateFromFilter');
-            const dateToEl = document.getElementById('dateToFilter');
-
-            if (state.seasonYear) seasonEl.value = state.seasonYear;
-            if (state.seasonState) seasonStateEl.value = state.seasonState;
-            if (state.dateFrom) dateFromEl.value = state.dateFrom;
-            if (state.dateTo) dateToEl.value = state.dateTo;
-            // Team and status options are populated after fetching; set now if "All" or leave for later
-            if (state.team && state.team !== 'All') teamEl.value = state.team;
-            if (state.status && state.status !== 'All') statusEl.value = state.status;
-        }
-
-        // Initialize the app
-        document.addEventListener('DOMContentLoaded', function() {
-            // Restore any saved filters, then apply
-            const saved = loadFilterState();
+                        function switchTab(tabName) { /* only schedule now */ }
             if (saved) {
                 restoreFiltersToUI(saved);
             }
@@ -773,53 +636,7 @@
             }
         }
 
-        function updateStats(stats) {
-            document.getElementById('totalGames').textContent = stats.total_games;
-            document.getElementById('completedGames').textContent = stats.completed_games;
-            document.getElementById('pendingGames').textContent = stats.pending_games;
-            
-            // Calculate average goals per game
-            const completedGames = currentData.filter(game => game.status.includes('Final'));
-            if (completedGames.length > 0) {
-                const totalGoals = completedGames.reduce((sum, game) => {
-                    const home = parseInt(game.home_score) || 0;
-                    const away = parseInt(game.away_score) || 0;
-                    return sum + home + away;
-                }, 0);
-                const avgGoals = (totalGoals / completedGames.length).toFixed(1);
-                document.getElementById('avgGoals').textContent = avgGoals;
-            } else {
-                document.getElementById('avgGoals').textContent = '-';
-            }
-        }
-
-        function renderTable(games) {
-            const tbody = document.getElementById('scheduleTableBody');
-            
-            if (games.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="8" class="no-data">No games found for the selected filters</td></tr>';
-                return;
-            }
-
-            tbody.innerHTML = games.map(game => {
-                const statusClass = game.status.includes('Final') ? 'status-final' : 'status-pending';
-                const awayScore = game.away_score || '';
-                const homeScore = game.home_score || '';
-                
-                // Format team logos (just logo, no text as requested)
-                const awayTeamDisplay = game.away_team_logo ? 
-                    `<div style="display: flex; align-items: center; justify-content: center;"><img src="${game.away_team_logo}" alt="${game.away_team}" style="width: 32px; height: 32px;" title="${game.away_team}"></div>` : 
-                    game.away_team;
-                const homeTeamDisplay = game.home_team_logo ? 
-                    `<div style="display: flex; align-items: center; justify-content: center;"><img src="${game.home_team_logo}" alt="${game.home_team}" style="width: 32px; height: 32px;" title="${game.home_team}"></div>` : 
-                    game.home_team;
-                
-                return `
-                    <tr class="game-row ${game.status.includes('Final') ? 'clickable' : ''}" onclick="${game.status.includes('Final') ? `goToGamePage('${game.game_id}')` : ''}" style="${game.status.includes('Final') ? 'cursor: pointer;' : 'cursor: default;'}">
-                        <td>${game.date}</td>
-                        <td>${game.season_year}</td>
-                        <td>${game.season_state}</td>
-                        <td>${awayTeamDisplay}</td>
+        function switchTab(tabName) { /* no-op: only schedule tab on this page now */ }
                         <td>${homeTeamDisplay}</td>
                         <td><span class="status-badge ${statusClass}">${game.status}</span></td>
                         <td class="score">${awayScore}</td>
