@@ -887,7 +887,8 @@
             // date normalizer is shared: normalizeGameDate()
 
             const details = event.details || {};
-            const eventType = getEventLabel(event);
+            const eventKey = getEventLabel(event); // raw key (e.g., 'goal', 'shot', 'penalty', 'blocked-shot')
+            const eventType = prettifyEventLabel(eventKey); // display for CSV
             // prefer precomputed team id if available
             const eventTeamId = (event._computedTeamId !== undefined) ? String(event._computedTeamId) : String(details.teamId || details.team_id || details.shooterTeamId || details.scorerTeamId || details.team?.id || '');
             let eventTeamName = getTeamNameById(eventTeamId) || (details.team && (details.team.name || details.team.fullName)) || '';
@@ -909,7 +910,7 @@
             let p1_no = '', p1_name = '', p2_no = '', p2_name = '', p3_no = '', p3_name = '';
             let g_no = '', goalie_name = '';
             
-            if (eventType === 'goal') {
+            if (eventKey === 'goal') {
                 // Merge scorer from shot if present
                 const scorer = event._mergedScorer || details.scoredBy || details.scorer || details.player;
                 if (scorer) {
@@ -930,7 +931,7 @@
                     g_no = gsrc.jerseyNumber || gsrc.id || '';
                     goalie_name = `${gsrc.firstName || ''} ${gsrc.lastName || ''}`.trim();
                 }
-            } else if (eventType === 'penalty') {
+            } else if (eventKey === 'penalty') {
                 // For penalties: Player 1 = takenBy (taker), Player 2 = drawnBy
                 const penaltyTaker = details.takenBy || details.player || details.servedBy;
                 if (penaltyTaker) {
