@@ -236,7 +236,11 @@ def api_report_events():
         return jsonify({'events': filtered, 'aggregate': agg, 'count': len(filtered)})
     except Exception as e:
         return jsonify({'error': str(e)}), 500
-    
+
+class PWHLDataAPI:
+    def __init__(self):
+        pass  # placeholder (existing definition is earlier; we won't duplicate logic here)
+
     def fetch_schedule_data(self, season):
         """Fetch schedule data from PWHL API"""
         params = {
@@ -542,6 +546,11 @@ from export_utils import generate_lineups_csv, generate_pbp_csv
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/report')
+def report_page():
+    # Serve the static report HTML (no API dependencies for data)
+    return render_template('report/report.html')
 
 @app.route('/favicon.ico')
 def favicon():
