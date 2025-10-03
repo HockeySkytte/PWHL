@@ -1279,24 +1279,26 @@
             const active = [];
             const pending = [];
             const resultsByIdx = {};
-            const popExpired = (pi,ts) => {
-                    const p=active[j];
-                    if (pi>p.endPi || (pi===p.endPi && ts>=p.endTs)) active.splice(j,1);
+            const popExpired = (pi, ts) => {
+                // Remove expired penalties
+                for (let j = active.length - 1; j >= 0; j--) {
+                    const p = active[j];
+                    if (pi > p.endPi || (pi === p.endPi && ts >= p.endTs)) active.splice(j, 1);
                 }
                 // Try to start pending penalties if room is available (max 2 active against a team)
                 if (pending.length) {
                     // Count active by team
                     const actByTeam = {};
-                    for (const a of active) actByTeam[a.teamId] = (actByTeam[a.teamId]||0)+1;
-                    for (let k=0;k<pending.length;k++) {
+                    for (const a of active) actByTeam[a.teamId] = (actByTeam[a.teamId] || 0) + 1;
+                    for (let k = 0; k < pending.length; k++) {
                         const pen = pending[k];
-                        const count = actByTeam[pen.teamId]||0;
+                        const count = actByTeam[pen.teamId] || 0;
                         if (count < 2) {
                             // start now at current pi/ts
                             const started = computeEnd(pi, ts, pen.duration);
                             active.push({ teamId: pen.teamId, duration: pen.duration, endPi: started.endPi, endTs: started.endTs });
-                            actByTeam[pen.teamId] = count+1;
-                            pending.splice(k,1); k--;
+                            actByTeam[pen.teamId] = count + 1;
+                            pending.splice(k, 1); k--;
                         }
                     }
                 }
