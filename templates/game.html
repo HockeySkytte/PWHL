@@ -634,203 +634,29 @@
         }
 
         async function exportLineups() {
-            if (!window.currentGameSummaryData || !window.currentGameInfo) {
-                alert('No lineup data available to export.');
-                return;
+            if (!window.currentGameInfo) { alert('No lineup data available to export.'); return; }
+            try {
+                const resp = await fetch(`/api/export/lineups/${currentGameId}.csv`, { cache: 'no-store' });
+                if (!resp.ok) throw new Error('Failed to fetch CSV');
+                const csvText = await resp.text();
+                await downloadCSV(csvText, `${currentGameId}_teams.csv`, { includeBOM: false });
+            } catch (e) {
+                console.error('Export lineups failed, falling back to in-browser generator:', e);
+                alert('Unable to export via server. Please try again.');
             }
-
-            const data = window.currentGameSummaryData;
-            const gameInfo = window.currentGameInfo;
-            
-            // CSV headers matching shotplotter format (with extra TOI column at the end)
-            const headers = [
-                'Number', 'Name', 'Line', 'Venue', 'Team', 'Team Color', 
-                'Game ID', 'Date', 'Competition', 'Season', 'State', 'TOI'
-            ];
-            
-            let csvContent = headers.join(',') + '\n';
-            
-            // Process home team players
-            if (data.homeTeam) {
-                const homeTeamData = window.currentGameInfo.home_team;
-                const homeTeamColor = getTeamColor(homeTeamData);
-                
-                // Add goalies
-                if (data.homeTeam.goalies) {
-                    data.homeTeam.goalies.forEach(player => {
-                        csvContent += formatPlayerRow(player, homeTeamData, homeTeamColor, gameInfo, true);
-                    });
-                }
-                
-                // Add skaters
-                if (data.homeTeam.skaters) {
-                    data.homeTeam.skaters.forEach(player => {
-                        csvContent += formatPlayerRow(player, homeTeamData, homeTeamColor, gameInfo, true);
-                    });
-                }
-            }
-            
-            // Process visiting team players
-            if (data.visitingTeam) {
-                const awayTeamData = window.currentGameInfo.away_team;
-                const awayTeamColor = getTeamColor(awayTeamData);
-                
-                // Add goalies
-                if (data.visitingTeam.goalies) {
-                    data.visitingTeam.goalies.forEach(player => {
-                        csvContent += formatPlayerRow(player, awayTeamData, awayTeamColor, gameInfo, false);
-                    });
-                }
-                
-                // Add skaters
-                if (data.visitingTeam.skaters) {
-                    data.visitingTeam.skaters.forEach(player => {
-                        csvContent += formatPlayerRow(player, awayTeamData, awayTeamColor, gameInfo, false);
-                    });
-                }
-            }
-            
-            // Download CSV
-            const safeLineupsDate = normalizeGameDate(gameInfo.date, gameInfo.season_year).replace(/[^a-zA-Z0-9]/g, '_');
-            await downloadCSV(csvContent, `PWHL_Lineups_Game${gameInfo.game_id}_${safeLineupsDate}.csv`);
         }
 
         async function exportPlayByPlay() {
-            if (!window.currentPlayByPlayData || !window.currentGameInfo) {
-                alert('No play-by-play data available to export.');
-                return;
+            if (!window.currentGameInfo) { alert('No play-by-play data available to export.'); return; }
+            try {
+                const resp = await fetch(`/api/export/pbp/${currentGameId}.csv`, { cache: 'no-store' });
+                if (!resp.ok) throw new Error('Failed to fetch CSV');
+                const csvText = await resp.text();
+                await downloadCSV(csvText, `${currentGameId}_shots.csv`, { includeBOM: false });
+            } catch (e) {
+                console.error('Export PBP failed, please try again:', e);
+                alert('Unable to export via server. Please try again.');
             }
-
-            // Make sure summary data is available for lineup-based lookups (shootout shooter team)
-            if (!window.currentGameSummaryData) {
-                try {
-                    const sumResp = await fetch(`/api/game/summary/${currentGameId}`);
-                    const sumData = await sumResp.json();
-                    if (sumResp.ok) window.currentGameSummaryData = sumData;
-                } catch (e) { /* ignore */ }
-            }
-
-            const data = window.currentPlayByPlayData;
-            const gameInfo = window.currentGameInfo;
-            const lineupIndex = buildLineupIndex(window.currentGameSummaryData, gameInfo);
-            
-            // CSV headers matching shotplotter format
-            const headers = [
-                'id', 'timestamp', 'event', 'team', 'venue', 'team_home', 'team_away', 'period',
-                'perspective', 'strength', 'p1_no', 'p1_name', 'p2_no', 'p2_name', 'p3_no', 'p3_name',
-                'g_no', 'goalie_name', 'home_line', 'home_players', 'home_players_names',
-                'away_line', 'away_players', 'away_players_names', 'x', 'y', 'game_id', 'game_date',
-                'competition', 'season', 'state'
-            ];
-            
-            let csvContent = headers.join(',') + '\n';
-
-            // Group events by period/time for merging goal+shot at same timestamp
-            const keyFor = (ev) => {
-                const d = ev.details || {};
-                const periodId = (d.period && (d.period.id || d.period.shortName)) || '';
-                const time = d.time || '';
-                return `${periodId}|${time}`;
-            };
-            const eventsByKey = new Map();
-            data.forEach(ev => {
-                const k = keyFor(ev);
-                if (!eventsByKey.has(k)) eventsByKey.set(k, []);
-                eventsByKey.get(k).push(ev);
-            });
-
-            const removedTypes = new Set(['goalie_change', 'goalie-change', 'hit', 'faceoff']);
-            const consumed = new Set();
-            const finalEvents = [];
-            const ids2 = getGameTeamIds(gameInfo);
-            const homeId = ids2.homeId;
-            const awayId = ids2.awayId;
-
-            data.forEach((ev, idx) => {
-                if (consumed.has(idx)) return;
-                const type = (ev.event || '').toLowerCase();
-                if (removedTypes.has(type)) return;
-
-                const d = ev.details || {};
-                const key = keyFor(ev);
-
-                if (type === 'goal') {
-                    const goalTeamId = String(d.team?.id || '');
-                    let shotEv = null;
-                    const group = eventsByKey.get(key) || [];
-                    for (const cand of group) {
-                        if ((cand.event || '').toLowerCase() !== 'shot') continue;
-                        const cd = cand.details || {};
-                        if (String(cd.shooterTeamId || '') === goalTeamId) {
-                            shotEv = cand;
-                            break;
-                        }
-                    }
-                    if (shotEv) {
-                        const shotIdx = data.indexOf(shotEv);
-                        if (shotIdx >= 0) consumed.add(shotIdx);
-                    }
-                    const shotD = shotEv ? (shotEv.details || {}) : {};
-                    finalEvents.push({
-                        ...ev,
-                        _computedTeamId: goalTeamId,
-                        _mergedScorer: shotD.shooter || d.scoredBy || d.scorer || d.player || null,
-                        _mergedAssists: Array.isArray(d.assists) ? d.assists.slice(0, 2) : [],
-                        _mergedGoalie: shotD.goalie || d.goalie || null,
-                        _x: (d.xLocation !== undefined ? d.xLocation : shotD.xLocation),
-                        _y: (d.yLocation !== undefined ? d.yLocation : shotD.yLocation)
-                    });
-                    return;
-                }
-
-                if (type === 'shot') {
-                    const shooterTeamId = String(d.shooterTeamId || d.teamId || d.team_id || '');
-                    const group = eventsByKey.get(key) || [];
-                    const hasMatchingGoal = group.some(g => {
-                        if ((g.event || '').toLowerCase() !== 'goal') return false;
-                        const gd = g.details || {};
-                        return String(gd.team?.id || '') === shooterTeamId;
-                    });
-                    if (hasMatchingGoal) return; // will be emitted with the goal
-                    finalEvents.push({ ...ev, _computedTeamId: shooterTeamId, _x: d.xLocation, _y: d.yLocation });
-                    return;
-                }
-                if (type === 'shootout') {
-                    const teamResolved = resolveShootoutTeamId(d, lineupIndex, gameInfo);
-                    const soIsGoal = boolish(d?.isGoal) || boolish(d?.properties?.isGoal);
-                    let teamIdForSO = teamResolved;
-                    if (soIsGoal && d.scoredBy) {
-                        const via = getPlayerTeamIdFromLineups(d.scoredBy, lineupIndex, gameInfo);
-                        if (via) teamIdForSO = via;
-                    }
-                    finalEvents.push({ ...ev, _computedTeamId: String(teamIdForSO||''), _overrideEvent: soIsGoal ? 'SO_goal' : 'SO_miss' });
-                    return;
-                }
-
-                if (type === 'penalty') {
-                    // Per spec: againstTeam holds the team taking the penalty
-                    const commitId = String(d.againstTeam?.id || d.teamId || d.team_id || '');
-                    finalEvents.push({ ...ev, _computedTeamId: commitId });
-                    return;
-                }
-
-                // Default
-                const computed = String(d.teamId || d.team_id || d.shooterTeamId || d.scorerTeamId || (d.team && d.team.id) || '');
-                finalEvents.push({ ...ev, _computedTeamId: computed });
-            });
-
-            // Ensure shootout events have teams; alternate if some are missing
-            fixShootoutTeams(finalEvents, gameInfo);
-            // Compute strengths for events
-            const strengths = computeStrengths(finalEvents, gameInfo);
-
-            let idCounter = 1;
-            finalEvents.forEach((ev, idx) => {
-                csvContent += formatPlayByPlayRow(ev, idCounter++, gameInfo, strengths[idx] || '');
-            });
-
-            const safePbpDate = normalizeGameDate(gameInfo.date, gameInfo.season_year).replace(/[^a-zA-Z0-9]/g, '_');
-            await downloadCSV(csvContent, `PWHL_PlayByPlay_Game${gameInfo.game_id}_${safePbpDate}.csv`);
         }
 
         // Shared date normalizer for yyyy-mm-dd using season logic
@@ -853,6 +679,28 @@
             return String(dateStr);
         }
 
+        // Helper: parse TOI strings like MM:SS or HH:MM:SS into total seconds
+        function toiToSeconds(toiVal) {
+            if (toiVal === null || toiVal === undefined) return '';
+            if (typeof toiVal === 'number' && isFinite(toiVal)) return Math.max(0, Math.floor(toiVal));
+            const s = String(toiVal).trim();
+            if (!s) return '';
+            const parts = s.split(':').map(x => parseInt(x, 10));
+            if (parts.some(n => isNaN(n))) {
+                const n = parseInt(s, 10);
+                return isNaN(n) ? '' : Math.max(0, n);
+            }
+            if (parts.length === 3) {
+                const [hh, mm, ss] = parts;
+                return (hh * 3600) + (mm * 60) + ss;
+            }
+            if (parts.length === 2) {
+                const [mm, ss] = parts;
+                return (mm * 60) + ss;
+            }
+            return parts[0] || 0;
+        }
+
         function formatPlayerRow(player, teamName, teamColor, gameInfo, isHomeTeam) {
             const escapeCSV = (str) => {
                 if (typeof str !== 'string') str = String(str || '');
@@ -863,7 +711,8 @@
             };
 
             const stats = player?.stats || {};
-            const toi = stats.timeOnIce || stats.toi || '';
+            const toiRaw = stats.timeOnIce || stats.toi || '';
+            const toi = toiToSeconds(toiRaw);
 
             return [
                 escapeCSV(player.jersey || ''),
@@ -1489,9 +1338,9 @@
             return { homeId, awayId };
         }
 
-        async function downloadCSV(csvContent, filename) {
-            // Prepend UTF-8 BOM so Excel displays special characters correctly
-            const csvString = '\\ufeff' + csvContent;
+        async function downloadCSV(csvContent, filename, { includeBOM = false } = {}) {
+            // Optionally prepend UTF-8 BOM (disabled by default to keep first header exactly "Number")
+            const csvString = (includeBOM ? '\\ufeff' : '') + csvContent;
             const blob = new Blob([csvString], { type: 'text/csv;charset=utf-8' });
 
             // Try modern Save As dialog (Chrome/Edge, secure context including localhost)

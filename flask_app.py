@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, request, send_from_directory
+from flask import Flask, render_template, jsonify, request, send_from_directory, Response
 from flask_cors import CORS
 import requests
 import json
@@ -207,6 +207,14 @@ class PWHLDataAPI:
             if home_team_full_name in self.teams:
                 home_team_logo = self.teams[home_team_full_name]['logo']
             
+            # Resolve team IDs: prefer API fields; fallback to lookup by full team name from loaded Teams.csv
+            away_team_id_val = row.get('visiting_team_id', '')
+            home_team_id_val = row.get('home_team_id', '')
+            if not away_team_id_val and away_team_full_name in self.teams:
+                away_team_id_val = str(self.teams[away_team_full_name].get('id') or '')
+            if not home_team_id_val and home_team_full_name in self.teams:
+                home_team_id_val = str(self.teams[home_team_full_name].get('id') or '')
+
             game_info = {
                 'date': formatted_date,
                 'full_date': full_date,
@@ -215,8 +223,8 @@ class PWHLDataAPI:
                 'season_state': season_state,
                 'away_team': away_team_full_name,  # Use full team name
                 'home_team': home_team_full_name,  # Use full team name
-                'away_team_id': row.get('visiting_team_id', ''),
-                'home_team_id': row.get('home_team_id', ''),
+                'away_team_id': away_team_id_val,
+                'home_team_id': home_team_id_val,
                 'away_team_city': away_team_city,  # Keep city for reference
                 'home_team_city': home_team_city,  # Keep city for reference
                 'away_team_logo': away_team_logo,
@@ -386,6 +394,7 @@ class PWHLDataAPI:
 
 # Initialize the data API
 data_api = PWHLDataAPI()
+from export_utils import generate_lineups_csv, generate_pbp_csv
 
 @app.route('/')
 def index():
@@ -583,6 +592,52 @@ def get_game_summary(game_id):
         return jsonify({'error': 'Game summary not found'}), 404
     
     return jsonify(summary_data)
+
+@app.route('/api/export/lineups/<int:game_id>.csv')
+def export_lineups_csv(game_id: int):
+    # Find game info
+    try:
+        games = []
+        for season_id in data_api.all_seasons:
+            parsed = data_api.parse_games_data(data_api.fetch_schedule_data(season_id), season_id)
+            games.extend(parsed)
+        game_info = next((g for g in games if str(g.get('game_id')) == str(game_id)), None)
+        if not game_info:
+            return jsonify({'error':'Game not found'}), 404
+        summary_data = data_api.fetch_game_summary(game_id)
+        if not isinstance(summary_data, dict):
+            return jsonify({'error':'Summary unavailable'}), 404
+        # Build team color mapping from Teams.csv already loaded in data_api
+        team_color_by_name = { name: (t.get('color') or '') for name, t in data_api.teams.items() }
+        team_color_by_id = { str(t.get('id') or ''): (t.get('color') or '') for t in data_api.teams.values() }
+        csv_text = generate_lineups_csv(game_info, summary_data, team_color_by_name, team_color_by_id)
+        return Response(csv_text, mimetype='text/csv; charset=utf-8', headers={'Content-Disposition': f'attachment; filename="{game_id}_teams.csv"'})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/api/export/pbp/<int:game_id>.csv')
+def export_pbp_csv(game_id: int):
+    try:
+        games = []
+        for season_id in data_api.all_seasons:
+            parsed = data_api.parse_games_data(data_api.fetch_schedule_data(season_id), season_id)
+            games.extend(parsed)
+        game_info = next((g for g in games if str(g.get('game_id')) == str(game_id)), None)
+        if not game_info:
+            return jsonify({'error':'Game not found'}), 404
+        pbp_data = data_api.fetch_play_by_play(game_id)
+        if not isinstance(pbp_data, list):
+            return jsonify({'error':'Play-by-play unavailable'}), 404
+        # Also fetch summary for lineup-based shootout inference
+        summary_data = data_api.fetch_game_summary(game_id)
+        # Build team code/name maps from Teams.csv to assist mapping when numeric ids are missing
+        code_to_name = { (t.get('team_code') or ''): name for name, t in data_api.teams.items() if t.get('team_code') }
+        name_to_code = { name: (t.get('team_code') or '') for name, t in data_api.teams.items() if t.get('team_code') }
+        teams_meta = { 'code_to_name': code_to_name, 'name_to_code': name_to_code }
+        csv_text = generate_pbp_csv(game_info, pbp_data, summary_data if isinstance(summary_data, dict) else None, teams_meta)
+        return Response(csv_text, mimetype='text/csv; charset=utf-8', headers={'Content-Disposition': f'attachment; filename="{game_id}_shots.csv"'})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 @app.route('/api/game/summary/test/<int:game_id>')
 def get_game_summary_test(game_id):

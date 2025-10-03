@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PWHL Analytics</title>
-    <!-- Favicons: add multiple rels and sizes, with cache-busting -->
-    <link rel="icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='PWHL_logo.png', v='1') }}">
+    <!-- Favicons: prefer small PNG; fallback to ICO -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=2">
+    <link rel="icon" href="/favicon.ico?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='PWHL_logo.png', v='2') }}">
     <meta name="theme-color" content="#160A3A">
     <style>
         :root {
@@ -469,7 +470,7 @@
         <div class="sidebar">
             <div class="filter-group">
                 <label class="filter-label">Season</label>
-                <select class="filter-select" id="seasonFilter" onchange="applyFilters()">
+                <select class="filter-select" id="seasonFilter" onchange="applyFilters({preferCache: true})">
                     <option value="All">All Seasons</option>
                     <option value="2025/2026" selected>2025/2026</option>
                     <option value="2024/2025">2024/2025</option>
@@ -479,7 +480,7 @@
 
             <div class="filter-group">
                 <label class="filter-label">Season State</label>
-                <select class="filter-select" id="seasonStateFilter" onchange="applyFilters()">
+                <select class="filter-select" id="seasonStateFilter" onchange="applyFilters({preferCache: true})">
                     <option value="All">All Season States</option>
                     <option value="Regular Season" selected>Regular Season</option>
                     <option value="Playoffs">Playoffs</option>
@@ -488,24 +489,24 @@
 
             <div class="filter-group">
                 <label class="filter-label">Date From</label>
-                <input type="date" class="filter-select" id="dateFromFilter" onchange="applyFilters()">
+                <input type="date" class="filter-select" id="dateFromFilter" onchange="applyFilters({preferCache: true})">
             </div>
 
             <div class="filter-group">
                 <label class="filter-label">Date To</label>
-                <input type="date" class="filter-select" id="dateToFilter" onchange="applyFilters()">
+                <input type="date" class="filter-select" id="dateToFilter" onchange="applyFilters({preferCache: true})">
             </div>
 
             <div class="filter-group">
                 <label class="filter-label">Team</label>
-                <select class="filter-select" id="teamFilter" onchange="applyFilters()">
+                <select class="filter-select" id="teamFilter" onchange="applyFilters({preferCache: true})">
                     <option value="All">All Teams</option>
                 </select>
             </div>
 
             <div class="filter-group">
                 <label class="filter-label">Status</label>
-                <select class="filter-select" id="statusFilter" onchange="applyFilters()">
+                <select class="filter-select" id="statusFilter" onchange="applyFilters({preferCache: true})">
                     <option value="All">All Statuses</option>
                 </select>
             </div>
@@ -578,9 +579,67 @@
         let currentData = [];
         let allFilters = {};
 
+        // Simple in-memory cache for schedule responses, keyed by request URL
+        const scheduleCache = {};
+        const CACHE_TTL_MS = 5 * 60 * 1000; // 5 minutes
+
+        // Helpers: filter state persistence
+        function getFilterStateFromUI() {
+            return {
+                seasonYear: document.getElementById('seasonFilter').value,
+                seasonState: document.getElementById('seasonStateFilter').value,
+                team: document.getElementById('teamFilter').value,
+                status: document.getElementById('statusFilter').value,
+                dateFrom: document.getElementById('dateFromFilter').value,
+                dateTo: document.getElementById('dateToFilter').value,
+            };
+        }
+
+        function saveFilterState(state) {
+            try {
+                localStorage.setItem('pwhl_filters', JSON.stringify(state));
+            } catch (e) {
+                console.warn('Unable to save filters to localStorage:', e);
+            }
+        }
+
+        function loadFilterState() {
+            try {
+                const raw = localStorage.getItem('pwhl_filters');
+                if (!raw) return null;
+                return JSON.parse(raw);
+            } catch (e) {
+                console.warn('Unable to load filters from localStorage:', e);
+                return null;
+            }
+        }
+
+        function restoreFiltersToUI(state) {
+            if (!state) return;
+            const seasonEl = document.getElementById('seasonFilter');
+            const seasonStateEl = document.getElementById('seasonStateFilter');
+            const teamEl = document.getElementById('teamFilter');
+            const statusEl = document.getElementById('statusFilter');
+            const dateFromEl = document.getElementById('dateFromFilter');
+            const dateToEl = document.getElementById('dateToFilter');
+
+            if (state.seasonYear) seasonEl.value = state.seasonYear;
+            if (state.seasonState) seasonStateEl.value = state.seasonState;
+            if (state.dateFrom) dateFromEl.value = state.dateFrom;
+            if (state.dateTo) dateToEl.value = state.dateTo;
+            // Team and status options are populated after fetching; set now if "All" or leave for later
+            if (state.team && state.team !== 'All') teamEl.value = state.team;
+            if (state.status && state.status !== 'All') statusEl.value = state.status;
+        }
+
         // Initialize the app
         document.addEventListener('DOMContentLoaded', function() {
-            applyFilters();
+            // Restore any saved filters, then apply
+            const saved = loadFilterState();
+            if (saved) {
+                restoreFiltersToUI(saved);
+            }
+            applyFilters({ preferCache: true });
         });
 
         async function loadSchedule() {
@@ -618,7 +677,8 @@
             });
         }
 
-        async function applyFilters() {
+        async function applyFilters(options = {}) {
+            const { preferCache = false, force = false } = options;
             const seasonYear = document.getElementById('seasonFilter').value;
             const seasonState = document.getElementById('seasonStateFilter').value;
             const team = document.getElementById('teamFilter').value;
@@ -626,25 +686,62 @@
             const dateFrom = document.getElementById('dateFromFilter').value;
             const dateTo = document.getElementById('dateToFilter').value;
 
-            // Show loading state
+            // Persist current filters
+            saveFilterState({ seasonYear, seasonState, team, status, dateFrom, dateTo });
+
+            // Build request URL (also used as cache key)
+            let url = `/api/schedule?season_year=${encodeURIComponent(seasonYear)}&season_state=${encodeURIComponent(seasonState)}&team=${encodeURIComponent(team)}&status=${encodeURIComponent(status)}`;
+            if (dateFrom) url += `&date_from=${encodeURIComponent(dateFrom)}`;
+            if (dateTo) url += `&date_to=${encodeURIComponent(dateTo)}`;
+
+            const now = Date.now();
+
+            // Cache-first path
+            const cached = scheduleCache[url];
+            const fresh = cached && (now - cached.fetchedAt) < CACHE_TTL_MS;
+
+            if (!force && preferCache && cached) {
+                // Render immediately from cache
+                const data = cached.data;
+                currentData = data.games;
+                allFilters = data.filters;
+                updateFilterOptions();
+                updateStats(data.stats);
+                renderTable(data.games);
+
+                // If cache is fresh, skip network; else revalidate in background
+                if (fresh) return;
+
+                // Background revalidation
+                try {
+                    const resp = await fetch(url, { cache: 'no-store' });
+                    const newData = await resp.json();
+                    scheduleCache[url] = { data: newData, fetchedAt: Date.now() };
+                    currentData = newData.games;
+                    allFilters = newData.filters;
+                    updateFilterOptions();
+                    updateStats(newData.stats);
+                    renderTable(newData.games);
+                } catch (e) {
+                    console.warn('Revalidation failed, using cached data:', e);
+                }
+                return;
+            }
+
+            // If we get here and either no cache or not preferring cache, show loading
             document.getElementById('scheduleTableBody').innerHTML = 
                 '<tr><td colspan="8" class="loading">Loading schedule data...</td></tr>';
 
             try {
-                let url = `/api/schedule?season_year=${seasonYear}&season_state=${seasonState}&team=${team}&status=${status}`;
-                if (dateFrom) url += `&date_from=${dateFrom}`;
-                if (dateTo) url += `&date_to=${dateTo}`;
-                
-                const response = await fetch(url);
+                const response = await fetch(url, { cache: force ? 'reload' : 'default' });
                 const data = await response.json();
-                
+                scheduleCache[url] = { data, fetchedAt: Date.now() };
+
                 currentData = data.games;
                 allFilters = data.filters;
-                
                 updateFilterOptions();
                 updateStats(data.stats);
                 renderTable(data.games);
-                
             } catch (error) {
                 console.error('Error applying filters:', error);
                 document.getElementById('scheduleTableBody').innerHTML = 
@@ -714,7 +811,8 @@
         }
 
         function refreshData() {
-            applyFilters();
+            // Force bypass cache for current filters
+            applyFilters({ force: true });
         }
 
         function goToGamePage(gameId) {
@@ -963,29 +1061,49 @@
             }
         }
 
-        function exportCSV() {
+        async function exportCSV() {
             const seasonYear = document.getElementById('seasonFilter').value;
             const seasonState = document.getElementById('seasonStateFilter').value;
-            
-            const csvContent = "data:text/csv;charset=utf-8," + 
-                "Date,Season,State,Away Team,Home Team,Status,Away Score,Home Score,Game ID\n" +
-                currentData.map(game => 
-                    `"${game.date}","${game.season_year}","${game.season_state}","${game.away_team}","${game.home_team}","${game.status}","${game.away_score}","${game.home_score}","${game.game_id}"`
-                ).join('\n');
-            
-            const encodedUri = encodeURI(csvContent);
-            const link = document.createElement('a');
-            link.setAttribute('href', encodedUri);
-            
+
+            // Build CSV string with UTF-8 BOM so Excel respects encoding (handles accents like Montréal)
+            const header = "Date,Season,State,Away Team,Home Team,Status,Away Score,Home Score,Game ID\n";
+            const rows = currentData.map(game => 
+                `"${game.date}","${game.season_year}","${game.season_state}","${game.away_team}","${game.home_team}","${game.status}","${game.away_score}","${game.home_score}","${game.game_id}"`
+            ).join('\n');
+            const csvString = '\ufeff' + header + rows; // Keep BOM for schedule export (helps Excel)
+            const blob = new Blob([csvString], { type: 'text/csv;charset=utf-8' });
+
+            // Suggested filename
             let filename = 'pwhl_schedule';
             if (seasonYear !== 'All') filename += `_${seasonYear.replace('/', '_')}`;
             if (seasonState !== 'All') filename += `_${seasonState.replace(' ', '_').toLowerCase()}`;
             filename += '.csv';
-            
-            link.setAttribute('download', filename);
+
+            // Use File System Access API when available (Chrome/Edge) for a real Save As dialog
+            try {
+                if ('showSaveFilePicker' in window) {
+                    const fileHandle = await window.showSaveFilePicker({
+                        suggestedName: filename,
+                        types: [{ description: 'CSV Files', accept: { 'text/csv': ['.csv'] } }]
+                    });
+                    const writable = await fileHandle.createWritable();
+                    await writable.write(blob);
+                    await writable.close();
+                    return;
+                }
+            } catch (err) {
+                console.warn('Save File Picker failed, falling back to standard download:', err);
+            }
+
+            // Fallback for browsers without File System Access API
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = filename; // Triggers Save As in most browsers or uses default Downloads
             document.body.appendChild(link);
             link.click();
-            document.body.removeChild(link);
+            link.remove();
+            URL.revokeObjectURL(url);
         }
     </script>
 </body>
