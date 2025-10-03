@@ -4,7 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PWHL Analytics</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='PWHL_logo.png') }}">
     <style>
+        :root {
+            --pwhl-bg-1: #160A3A; /* deep purple */
+            --pwhl-bg-2: #251055; /* mid purple */
+            --pwhl-bg-3: #3B1E7A; /* bright purple */
+            --pwhl-surface: rgba(19, 13, 46, 0.75);
+            --pwhl-surface-strong: rgba(25, 16, 60, 0.85);
+            --pwhl-border: rgba(142, 124, 214, 0.25);
+            --pwhl-accent: #8E7CD6; /* light lavender accent */
+            --pwhl-accent-strong: #B9A7FF;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -13,15 +25,15 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background-color: #1e2329;
+            background: linear-gradient(135deg, var(--pwhl-bg-1) 0%, var(--pwhl-bg-2) 48%, var(--pwhl-bg-3) 100%);
             color: #ffffff;
             overflow-x: hidden;
         }
 
         .header {
-            background-color: #2d3748;
+            background: var(--pwhl-surface-strong);
             padding: 1rem 2rem;
-            border-bottom: 1px solid #4a5568;
+            border-bottom: 1px solid var(--pwhl-border);
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -31,6 +43,9 @@
             font-size: 1.5rem;
             font-weight: 700;
             color: #ffffff;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
         }
 
         .header-actions {
@@ -39,7 +54,7 @@
         }
 
         .btn {
-            background-color: #4299e1;
+            background-color: var(--pwhl-accent);
             color: white;
             border: none;
             padding: 0.5rem 1rem;
@@ -51,7 +66,7 @@
         }
 
         .btn:hover {
-            background-color: #3182ce;
+            background-color: var(--pwhl-accent-strong);
         }
 
         .btn-secondary {
@@ -80,28 +95,28 @@
 
         .sidebar {
             width: 300px;
-            background-color: #2d3748;
-            border-right: 1px solid #4a5568;
+            background: var(--pwhl-surface);
+            border-right: 1px solid var(--pwhl-border);
             padding: 1.5rem;
             overflow-y: auto;
         }
 
         .main-content {
             flex: 1;
-            background-color: #1e2329;
+            background: transparent;
             display: flex;
             flex-direction: column;
         }
 
         .tabs {
             display: flex;
-            background-color: #2d3748;
-            border-bottom: 1px solid #4a5568;
+            background: var(--pwhl-surface-strong);
+            border-bottom: 1px solid var(--pwhl-border);
         }
 
         .tab {
-            background-color: #2d3748;
-            color: #a0aec0;
+            background: transparent;
+            color: #d6d3e9;
             border: none;
             padding: 1rem 2rem;
             cursor: pointer;
@@ -110,9 +125,9 @@
         }
 
         .tab.active {
-            background-color: #1e2329;
-            color: #4299e1;
-            border-bottom-color: #4299e1;
+            background: transparent;
+            color: var(--pwhl-accent-strong);
+            border-bottom-color: var(--pwhl-accent-strong);
         }
 
         .tab-content {
@@ -188,8 +203,8 @@
         }
 
         .table-container {
-            background-color: #2d3748;
-            border: 1px solid #4a5568;
+            background: var(--pwhl-surface);
+            border: 1px solid var(--pwhl-border);
             border-radius: 0.5rem;
             overflow: hidden;
         }
@@ -212,7 +227,7 @@
         }
 
         .table th {
-            background-color: #1a202c;
+            background: rgba(26, 32, 44, 0.5);
             font-weight: 600;
             color: #e2e8f0;
             font-size: 0.875rem;
@@ -226,7 +241,7 @@
         }
 
         .table tbody tr:hover {
-            background-color: #4a5568;
+            background-color: rgba(142, 124, 214, 0.12);
         }
 
         .status-badge {
@@ -436,7 +451,10 @@
 </head>
 <body>
     <div class="header">
-        <h1>🏒 PWHL Analytics</h1>
+        <h1>
+            <img src="{{ url_for('static', filename='PWHL_logo.png') }}" alt="PWHL" style="height:28px; width:auto; vertical-align:middle; display:inline-block;">
+            <span>PWHL Analytics</span>
+        </h1>
         <div class="header-actions">
             <button class="btn btn-secondary" onclick="exportCSV()">Export CSV</button>
             <button class="btn" onclick="refreshData()">Refresh</button>
