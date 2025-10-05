@@ -637,23 +637,39 @@ class ReportDataStore:
             s=ensure_player(shooter, team)
             s['GP'].add(r['game_id'])
             self._load_lineups_for_game(r['game_id'])
-            if r['is_goal']:
-                s['G']+=1
-                if r.get('assist1') and r['assist1'] not in goalie_names:
-                    ensure_player(r['assist1'], team)['GP'].add(r['game_id'])
-                if r.get('assist2') and r['assist2'] not in goalie_names:
-                    ensure_player(r['assist2'], team)['GP'].add(r['game_id'])
-            if r['is_shot']: s['Shots']+=1
-            if r['is_miss']: s['Misses']+=1
-            if r['is_block']: s['Shots_in_block']+=1
+            row_class = self._classify_strength(r['strength'], team, True)
+            # Determine if this row should count for individual offensive stats under current strength filter
+            def strength_row_matches(row_class: str) -> bool:
+                if strength_filter=='All': return True
+                if strength_filter=='EV': return row_class in ('5v5','EV')
+                if strength_filter=='5v5': return row_class=='5v5'
+                if strength_filter in ('PP','SH'): return row_class==strength_filter
+                return row_class==strength_filter
+            if strength_row_matches(row_class):
+                if r['is_goal']:
+                    s['G']+=1
+                    if r.get('assist1') and r['assist1'] not in goalie_names:
+                        ensure_player(r['assist1'], team)['GP'].add(r['game_id'])
+                    if r.get('assist2') and r['assist2'] not in goalie_names:
+                        ensure_player(r['assist2'], team)['GP'].add(r['game_id'])
+                if r['is_shot']: s['Shots']+=1
+                if r['is_miss']: s['Misses']+=1
+                if r['is_block']: s['Shots_in_block']+=1
         # Second pass assists & penalties
         for r in rows:
             if r['event']=='Goal':
                 for a_field in ('assist1','assist2'):
                     a=r.get(a_field)
                     if a and a not in goalie_names:
-                        s=ensure_player(a, r['team_for'])
-                        s['A']+=1
+                        team=r['team_for']
+                        row_class = self._classify_strength(r['strength'], team, True)
+                        if strength_filter=='All' or \
+                           (strength_filter=='EV' and row_class in ('5v5','EV')) or \
+                           (strength_filter=='5v5' and row_class=='5v5') or \
+                           (strength_filter in ('PP','SH') and row_class==strength_filter) or \
+                           (row_class==strength_filter):
+                            s=ensure_player(a, team)
+                            s['A']+=1
             if r['event']=='Penalty':
                 shooter=r.get('shooter')
                 if shooter and shooter not in goalie_names:
@@ -674,12 +690,26 @@ class ReportDataStore:
                 against_players=r.get('on_ice_home') or []
             if shooter and shooter not in for_players and shooter not in goalie_names:
                 for_players=list(for_players)+[shooter]
+            # For each on-ice player decide classification from their team POV and gate GF/GA attribution
             for p in for_players:
                 if p in goalie_names: continue
-                s=ensure_player(p, shooting_team); s['GF']+=1; s['GP'].add(gid)
+                row_class_for = self._classify_strength(r['strength'], shooting_team, True)
+                if strength_filter=='All' or \
+                   (strength_filter=='EV' and row_class_for in ('5v5','EV')) or \
+                   (strength_filter=='5v5' and row_class_for=='5v5') or \
+                   (strength_filter in ('PP','SH') and row_class_for==strength_filter) or \
+                   (row_class_for==strength_filter):
+                    s=ensure_player(p, shooting_team); s['GF']+=1; s['GP'].add(gid)
             for p in against_players:
                 if p in goalie_names: continue
-                s=ensure_player(p, r['team_against']); s['GA']+=1; s['GP'].add(gid)
+                opp_team = r['team_against']
+                row_class_against = self._classify_strength(r['strength'], opp_team, False)
+                if strength_filter=='All' or \
+                   (strength_filter=='EV' and row_class_against in ('5v5','EV')) or \
+                   (strength_filter=='5v5' and row_class_against=='5v5') or \
+                   (strength_filter in ('PP','SH') and row_class_against==strength_filter) or \
+                   (row_class_against==strength_filter):
+                    s=ensure_player(p, opp_team); s['GA']+=1; s['GP'].add(gid)
         out=[]
         for s in stats.values():
             s['GP']=len(s['GP'])
