@@ -395,10 +395,266 @@ class PWHLDataAPI:
 # Initialize the data API
 data_api = PWHLDataAPI()
 from export_utils import generate_lineups_csv, generate_pbp_csv
+from report_data import report_store
 
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/report')
+def report_page():
+    """Prototype report dashboard (UI only)."""
+    return render_template('report.html')
+
+@app.route('/api/report/kpis')
+def report_kpis():
+    # Base single-value params
+    params = {
+        'team': request.args.get('team','All'),
+        'strength': request.args.get('strength','All'),  # legacy single strength
+        'season': request.args.get('season','All'),
+        'date_from': request.args.get('date_from',''),
+        'date_to': request.args.get('date_to',''),
+        'segment': request.args.get('segment','all'),
+        'perspective': request.args.get('perspective','For'),
+    }
+    # Multi-select helpers (accept repeated params OR single comma-separated string)
+    def _get_multi(name):
+        vals = request.args.getlist(name)
+        if len(vals)==1 and ',' in vals[0]:
+            vals = [v for v in vals[0].split(',') if v]
+        return [v for v in vals if v]
+    params['games'] = _get_multi('games')
+    params['players'] = _get_multi('players')
+    params['opponents'] = _get_multi('opponents')
+    params['periods'] = _get_multi('periods')
+    params['events'] = _get_multi('events')
+    strengths_multi = _get_multi('strengths')
+    if strengths_multi:
+        params['strengths_multi'] = strengths_multi
+    params['goalies'] = _get_multi('goalies')
+    onice_multi = _get_multi('onice')
+    if onice_multi:
+        params['onice'] = onice_multi
+    seasons_multi = _get_multi('seasons')
+    if seasons_multi:
+        params['seasons_multi'] = seasons_multi
+    data = report_store.compute_kpis(**params)
+    return jsonify(data)
+
+@app.route('/api/report/shotmap')
+def report_shotmap():
+    params = {
+        'team': request.args.get('team','All'),
+        'strength': request.args.get('strength','All'),
+        'season': request.args.get('season','All'),
+        'date_from': request.args.get('date_from',''),
+        'date_to': request.args.get('date_to',''),
+        'segment': request.args.get('segment','all'),
+        'perspective': request.args.get('perspective','For'),
+    }
+    def _get_multi(name):
+        vals = request.args.getlist(name)
+        if len(vals)==1 and ',' in vals[0]:
+            vals = [v for v in vals[0].split(',') if v]
+        return [v for v in vals if v]
+    params['games'] = _get_multi('games')
+    params['players'] = _get_multi('players')
+    params['opponents'] = _get_multi('opponents')
+    params['periods'] = _get_multi('periods')
+    params['events'] = _get_multi('events')
+    strengths_multi = _get_multi('strengths')
+    if strengths_multi:
+        params['strengths_multi'] = strengths_multi
+    params['goalies'] = _get_multi('goalies')
+    onice_multi = _get_multi('onice')
+    if onice_multi:
+        params['onice'] = onice_multi
+    seasons_multi = _get_multi('seasons')
+    if seasons_multi:
+        params['seasons_multi'] = seasons_multi
+    data = report_store.shotmap(**params)
+    return jsonify(data)
+
+@app.route('/api/report/tables')
+def report_tables():
+    table_type = request.args.get('type','skaters')
+    params = {
+        'team': request.args.get('team','All'),
+        'strength': request.args.get('strength','All'),
+        'season': request.args.get('season','All'),
+        'season_state': request.args.get('season_state','All'),
+        'date_from': request.args.get('date_from',''),
+        'date_to': request.args.get('date_to',''),
+        'segment': request.args.get('segment','all'),
+    }
+    def _get_multi(name):
+        vals = request.args.getlist(name)
+        if len(vals)==1 and ',' in vals[0]:
+            vals = [v for v in vals[0].split(',') if v]
+        return [v for v in vals if v]
+    params['games'] = _get_multi('games')
+    params['players'] = _get_multi('players')
+    params['opponents'] = _get_multi('opponents')
+    params['periods'] = _get_multi('periods')
+    params['events'] = _get_multi('events')
+    strengths_multi = _get_multi('strengths')
+    if strengths_multi: params['strengths_multi']=strengths_multi
+    params['goalies'] = _get_multi('goalies')
+    onice_multi = _get_multi('onice')
+    if onice_multi: params['onice']=onice_multi
+    seasons_multi = _get_multi('seasons')
+    if seasons_multi: params['seasons_multi']=seasons_multi
+    if table_type in ('skaters','skaters_individual'):
+        data=report_store.tables_skaters_individual(**params)
+    elif table_type=='goalies':
+        data=report_store.tables_goalies(**params)
+    elif table_type=='teams':
+        data=report_store.tables_teams(**params)
+    else:
+        data=[]
+    return jsonify({'type': table_type, 'rows': data})
+
+@app.route('/api/report/filters')
+def report_filters():
+    """Return option sets for multi-select slicers."""
+    report_store.load()
+    rows = report_store.rows
+    # Build game labels using stored meta if available for home/away (preferred: Date Away at Home)
+    # Collect games with dates and sort newest first (descending by date); blanks last
+    game_ids = {r['game_id'] for r in rows if r['game_id']}
+    game_meta_list = []
+    for gid in game_ids:
+        meta = report_store.game_meta.get(gid, {})
+        date_str = meta.get('date','') or ''
+        # Expect ISO YYYY-MM-DD; fallback sorts after real dates
+        sort_key = date_str if date_str else '0000-00-00'
+        game_meta_list.append((sort_key, gid, meta))
+    game_meta_list.sort(key=lambda t: t[0], reverse=True)
+    game_labels = []
+    for _, gid, meta in game_meta_list:
+        date = meta.get('date','')
+        away = meta.get('away_team','') or ''
+        home = meta.get('home_team','') or ''
+        if away and home:
+            label = f"{date} {away} at {home}"
+        else:
+            label = f"{date} {gid}"
+        game_labels.append({'value': gid, 'label': label})
+    players = sorted({r['shooter'] for r in rows if r.get('shooter')})
+    goalies = sorted({r['goalie'] for r in rows if r.get('goalie')})
+    periods = sorted({r['period'] for r in rows if r.get('period')})
+    events = sorted({r['event'] for r in rows if r.get('event')})
+    strengths = sorted({r['strength'] for r in rows if r.get('strength')})
+    opp_teams = sorted({r['team_against'] for r in rows if r.get('team_against')})
+    seasons = sorted({r['season'] for r in rows if r.get('season')})
+    season_states = sorted({r['state'] for r in rows if r.get('state')})
+    # On-ice player names set (distinct from shooter list). We union all on_ice_all lists.
+    onice_players = sorted({p for r in rows for p in (r.get('on_ice_all') or [])})
+    return jsonify({'games': game_labels,'players': players,'goalies': goalies,'periods': periods,'events': events,'strengths': strengths,'opponents': opp_teams,'seasons': seasons,'season_states': season_states,'onice': onice_players})
+
+@app.route('/api/report/games')
+def report_games():
+    """Return only games that have data given current (non-game) filters.
+    Games filter itself is ignored when determining availability so user can re-select.
+    Accepts same multi-select params as other endpoints.
+    """
+    report_store.load()
+    rows = report_store.rows
+    def _get_multi(name):
+        vals = request.args.getlist(name)
+        if len(vals)==1 and ',' in vals[0]:
+            vals = [v for v in vals[0].split(',') if v]
+        return [v for v in vals if v]
+    # Gather filters (exclude games)
+    players = _get_multi('players')
+    opponents = _get_multi('opponents')
+    periods = _get_multi('periods')
+    events = _get_multi('events')
+    strengths_multi = _get_multi('strengths')
+    goalies = _get_multi('goalies')
+    onice_multi = _get_multi('onice')
+    seasons_multi = _get_multi('seasons')
+    date_from = request.args.get('date_from','')
+    date_to = request.args.get('date_to','')
+    # Apply filters analogous to shotmap
+    if seasons_multi:
+        rows = [r for r in rows if r['season'] in seasons_multi]
+    if players:
+        rows = [r for r in rows if r.get('shooter') in players]
+    if opponents:
+        rows = [r for r in rows if r['team_against'] in opponents or r['team_for'] in opponents]
+    if periods:
+        rows = [r for r in rows if r['period'] in periods]
+    if events:
+        rows = [r for r in rows if r['event'] in events]
+    if strengths_multi:
+        rows = [r for r in rows if r['strength'] in strengths_multi]
+    if goalies:
+        rows = [r for r in rows if r.get('goalie') in goalies]
+    if onice_multi:
+        rows = [r for r in rows if all(p in (r.get('on_ice_all') or []) for p in onice_multi)]
+    if date_from:
+        rows = [r for r in rows if r['date'] >= date_from]
+    if date_to:
+        rows = [r for r in rows if r['date'] <= date_to]
+    # Build and sort games newest first
+    game_ids = {r['game_id'] for r in rows if r['game_id']}
+    meta_list = []
+    for gid in game_ids:
+        meta = report_store.game_meta.get(gid, {})
+        date_str = meta.get('date','') or ''
+        sort_key = date_str if date_str else '0000-00-00'
+        meta_list.append((sort_key, gid, meta))
+    meta_list.sort(key=lambda t: t[0], reverse=True)
+    out = []
+    for _, gid, meta in meta_list:
+        date = meta.get('date','')
+        away = meta.get('away_team','') or ''
+        home = meta.get('home_team','') or ''
+        label = f"{date} {away} at {home}" if away and home else f"{date} {gid}"
+        out.append({'value': gid, 'label': label})
+    return jsonify({'games': out})
+
+@app.route('/Teams.csv')
+def teams_csv_raw():
+    """Serve root Teams.csv so front-end color lookup succeeds (was 404)."""
+    root_csv = os.path.join(app.root_path, 'Teams.csv')
+    if os.path.exists(root_csv):
+        return send_from_directory(app.root_path, 'Teams.csv', mimetype='text/csv')
+    return jsonify({'error':'Teams.csv not found'}), 404
+
+@app.route('/hockey-rink.png')
+def hockey_rink_image():
+    """Serve the rink image from project root if present; otherwise fall back to logo.
+    This avoids needing to relocate the binary into static/ while prototype evolves."""
+    root_img = os.path.join(app.root_path, 'hockey-rink.png')
+    if os.path.exists(root_img):
+        return send_from_directory(app.root_path, 'hockey-rink.png', mimetype='image/png')
+    return send_from_directory(os.path.join(app.root_path,'static'), 'PWHL_logo.png', mimetype='image/png')
+
+@app.route('/api/report/reload', methods=['POST'])
+def report_reload():
+    report_store.load(force=True)
+    return jsonify({'status':'reloaded','rows':len(report_store.rows)})
+
+@app.route('/api/report/teams')
+def report_teams():
+    """Return the list of distinct teams present in the loaded report store."""
+    report_store.load()
+    teams = sorted({r['team_for'] for r in report_store.rows if r['team_for']})
+    return jsonify({'teams': teams})
+
+@app.route('/api/report/strengths')
+def report_strengths():
+    """Return unique strength strings present. Optional team parameter to scope to games involving that team."""
+    team = request.args.get('team','').strip()
+    report_store.load()
+    rows = report_store.rows
+    if team:
+        rows = [r for r in rows if r['team_for']==team or r['team_against']==team]
+    strengths = sorted({r['strength'] for r in rows if r['strength']})
+    return jsonify({'strengths': strengths})
 
 @app.route('/favicon.ico')
 def favicon():

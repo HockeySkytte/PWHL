@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PWHL Analytics</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=2">
+  <link rel="icon" href="/favicon.ico?v=2">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='PWHL_logo.png', v='2') }}">
+  <meta name="theme-color" content="#160A3A">
+  <style>
+    :root { --pwhl-bg-1:#160A3A; --pwhl-bg-2:#251055; --pwhl-bg-3:#3B1E7A; --pwhl-surface:rgba(19,13,46,.75); --pwhl-surface-strong:rgba(25,16,60,.85); --pwhl-border:rgba(142,124,214,.25); --pwhl-accent:#8E7CD6; --pwhl-accent-strong:#B9A7FF; --pwhl-bad:#E15D64; --pwhl-good:#42d392; }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:linear-gradient(135deg,var(--pwhl-bg-1),var(--pwhl-bg-2) 48%,var(--pwhl-bg-3));color:#fff;min-height:100vh;display:flex;flex-direction:column;}
+    header{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:var(--pwhl-surface-strong);border-bottom:1px solid var(--pwhl-border);} 
+    header h1{font-size:1.5rem;font-weight:700;display:inline-flex;align-items:center;gap:.75rem;}
+    .tabs{display:flex;background:var(--pwhl-surface-strong);border-bottom:1px solid var(--pwhl-border);margin-top:.75rem;}
+    .tab{background:transparent;color:#d6d3e9;border:none;padding:1rem 2rem;cursor:pointer;border-bottom:3px solid transparent;transition:.2s;font-size:1.125rem;text-decoration:none;display:flex;align-items:center;gap:.4rem;}
+    .tab.active{color:var(--pwhl-accent-strong);border-bottom-color:var(--pwhl-accent-strong);} 
+    main{flex:1;display:flex;flex-direction:column;padding:0 0 2rem;}
+    .slicers-wrapper{background:var(--pwhl-surface-strong);border-bottom:1px solid var(--pwhl-border);padding:.75rem 2rem;display:flex;flex-direction:column;gap:.6rem;}
+    .team-row{display:flex;align-items:flex-end;gap:1.25rem;}
+  .slicers{display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;}
+  .filter-group{display:flex;flex-direction:column;min-width:160px;position:relative;}
+    .filter-label{margin-bottom:.4rem;font-weight:600;color:#e2e8f0;font-size:.75rem;letter-spacing:.05em;text-transform:uppercase;}
+  .filter-select{width:160px;background:#4a5568;border:1px solid #718096;border-radius:.375rem;padding:.45rem .6rem;color:#fff;font-size:.7rem;}
+  .dropdown{position:relative;}
+  .dropdown-toggle{position:relative;width:160px;background:#4a5568;border:1px solid #718096;border-radius:.375rem;padding:.45rem .85rem .45rem .6rem;color:#fff;font-size:.7rem;text-align:left;display:flex;justify-content:flex-start;align-items:center;cursor:pointer;-webkit-appearance:none;appearance:none;}
+  .dropdown-toggle:after{content:"";position:absolute;right:.55rem;top:50%;width:0;height:0;pointer-events:none;border-left:5px solid transparent;border-right:5px solid transparent;border-top:6px solid #e5e7eb;opacity:.9;transform:translateY(-50%);transition:.18s ease;}
+  .dropdown.open .dropdown-toggle:after{transform:translateY(-50%) rotate(180deg);} 
+  .dropdown-menu{position:absolute;top:100%;left:0;z-index:40;background:#2d3550;border:1px solid #718096;border-radius:.4rem;padding:.4rem;display:none;flex-direction:column;max-height:260px;overflow:auto;width:230px;box-shadow:0 4px 14px rgba(0,0,0,.5);} .dropdown.open .dropdown-menu{display:flex;}
+  .dropdown-menu .filter-actions{display:flex;justify-content:space-between;align-items:center;gap:.4rem;margin-bottom:.35rem;}
+  .dropdown-menu .filter-actions button{flex:1;background:#4a5568;border:1px solid #718096;color:#e2e8f0;font-size:.55rem;padding:.25rem .4rem;border-radius:.3rem;cursor:pointer;letter-spacing:.04em;}
+  .dropdown-menu .filter-actions button:hover{background:#576079;}
+  .dropdown-menu .search-box{position:relative;margin-bottom:.35rem;}
+  .dropdown-menu .search-box input{width:100%;background:#394566;border:1px solid #556080;color:#fff;font-size:.6rem;padding:.3rem .5rem;border-radius:.3rem;}
+  .dropdown-menu .search-box input:focus{outline:none;border-color:var(--pwhl-accent);}
+  .dropdown-menu label{display:flex;align-items:center;gap:.45rem;font-size:.65rem;padding:.28rem .35rem;border-radius:.3rem;cursor:pointer;}
+  .dropdown-menu label:hover{background:rgba(255,255,255,.08);} .pill-summary{display:inline-flex;flex-wrap:wrap;gap:.25rem;margin-top:.35rem;max-width:230px;}
+  .pill{background:#394566;color:#fff;font-size:.55rem;padding:.18rem .5rem;border-radius:999px;line-height:1;display:inline-flex;align-items:center;gap:.3rem;}
+  .pill button{background:transparent;border:none;color:#fff;font-size:.65rem;cursor:pointer;line-height:1;padding:0;margin:0;}
+  .clear-link{color:var(--pwhl-accent-strong);font-size:.55rem;margin-top:.3rem;cursor:pointer;text-decoration:underline;align-self:flex-start;}
+    .filter-select:focus{outline:none;border-color:var(--pwhl-accent);box-shadow:0 0 0 2px rgba(142,124,214,.25);} input[type=date].filter-select{color-scheme:dark;}
+    .sub-tabs{display:flex;gap:.25rem;margin-top:.25rem;}
+    .sub-tab{background:transparent;color:#d6d3e9;border:none;padding:.65rem 1.15rem;font-size:.8rem;cursor:pointer;border-bottom:3px solid transparent;transition:.2s;border-radius:.25rem .25rem 0 0;}
+    .sub-tab.active{color:var(--pwhl-accent-strong);border-bottom-color:var(--pwhl-accent-strong);background:rgba(255,255,255,.02);} 
+  .rink-row{display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;padding:.4rem 2rem 0;align-items:stretch;}
+  .rink{background:var(--pwhl-surface);border:1px solid var(--pwhl-border);border-radius:.9rem;padding:.55rem;display:flex;flex-direction:column;}
+  #defRinkWrap,#offRinkWrap{display:flex;flex-direction:column;}
+  .zone-wrap{flex:1;}
+  .rink h2{font-size:.95rem;margin:0 0 .35rem;font-weight:600;letter-spacing:.03em;color:var(--pwhl-accent-strong);text-align:center;}
+  .zone-wrap{position:relative;width:100%;max-width:560px;aspect-ratio:75/85;overflow:hidden;border-radius:.65rem;background:#0d0d18;display:flex;align-items:center;justify-content:center;margin:0 auto;}
+  .rink-base,.zone-canvas{position:absolute;inset:0;width:100%;height:100%;image-rendering:crisp-edges;}
+    .kpi-column{display:flex;flex-direction:column;gap:1rem;}
+  .kpi-card{background:var(--pwhl-surface);border:1px solid var(--pwhl-border);border-radius:.85rem;padding:.7rem;width:260px;display:flex;flex-direction:column;gap:.4rem;}
+    .kpi-card h3{margin:0;font-size:.9rem;font-weight:600;letter-spacing:.03em;text-align:center;}
+    .kpi-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem;}
+  .kpi-metric{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:.55rem;padding:.35rem .3rem;display:flex;flex-direction:column;align-items:center;gap:.25rem;min-height:50px;}
+    .kpi-metric .label{font-size:.55rem;letter-spacing:.05em;font-weight:600;color:#b7b3cf;text-transform:uppercase;}
+    .kpi-metric .value{font-size:1.05rem;font-weight:600;line-height:1;color:#fff;}
+    .kpi-metric.middle{background:#fff;border-color:#fff;color:#111827;}
+    .kpi-metric.middle .value{color:#111827;} .kpi-metric.middle .label{color:#374151;}
+    /* Metric & table button styling */
+    .metric-btn{background:#394566;color:#fff;border:1px solid #566080;padding:.5rem 1rem;border-radius:.55rem;font-size:.7rem;cursor:pointer;transition:.18s;}
+    .metric-btn:hover{background:#445273;}
+    .metric-btn.active{background:var(--pwhl-accent-strong)!important;color:#111!important;border-color:var(--pwhl-accent-strong)!important;font-weight:600;}
+    .tbl-sub-btn.active{background:var(--pwhl-accent-strong)!important;color:#111!important;border-color:var(--pwhl-accent-strong)!important;font-weight:600;}
+  footer{padding:.4rem .9rem;font-size:.6rem;color:#8684a3;text-align:center;border-top:1px solid var(--pwhl-border);background:var(--pwhl-surface-strong);margin-top:.25rem;}
+    @media (max-width:1400px){.rink-row{grid-template-columns:1fr;} .kpi-column{flex-direction:row;flex-wrap:wrap;} .kpi-card{width:calc(50% - .5rem);} }
+    @media (max-width:900px){.kpi-card{width:100%;} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><img src="{{ url_for('static', filename='PWHL_logo.png') }}" alt="PWHL" style="height:28px;width:auto;"> <span>PWHL Analytics</span></h1>
+  </header>
+  <div class="tabs">
+    <a class="tab" href="/">📅 Schedule</a>
+    <a class="tab active" href="/report">📊 Report</a>
+  </div>
+  <main>
+    <div class="slicers-wrapper" id="slicersWrapper">
+      <div class="team-row" style="gap:1.25rem;flex-wrap:wrap;align-items:flex-end;">
+        <div class="filter-group" style="min-width:180px;">
+          <label class="filter-label" for="teamSelect">Team Perspective</label>
+          <select class="filter-select" id="teamSelect" style="width:180px;"></select>
+        </div>
+        <div class="filter-group" style="min-width:150px;">
+          <label class="filter-label" for="dateFrom">Date From</label>
+          <input id="dateFrom" type="date" class="filter-select" style="width:150px;" />
+        </div>
+        <div class="filter-group" style="min-width:150px;">
+          <label class="filter-label" for="dateTo">Date To</label>
+          <input id="dateTo" type="date" class="filter-select" style="width:150px;" />
+        </div>
+        <div class="filter-group" data-filter="seasons" style="min-width:170px;">
+          <label class="filter-label">Season</label>
+          <div class="dropdown" id="seasonsDropdown"><button class="dropdown-toggle" type="button">Select Seasons</button><div class="dropdown-menu" id="seasonsMenu"></div></div>
+        </div>
+        <div class="filter-group" data-filter="season_states" style="min-width:170px;">
+          <label class="filter-label">Season State</label>
+          <div class="dropdown" id="seasonStatesDropdown"><button class="dropdown-toggle" type="button">Select States</button><div class="dropdown-menu" id="seasonStatesMenu"></div></div>
+        </div>
+      </div>
+      <div class="slicers">
+        <div class="filter-group" data-filter="games">
+          <label class="filter-label">Games</label>
+          <div class="dropdown" id="gamesDropdown"><button class="dropdown-toggle" type="button">Select Games</button><div class="dropdown-menu" id="gamesMenu"></div></div>
+          
+        </div>
+        <div class="filter-group" data-filter="players">
+          <label class="filter-label">Player</label>
+          <div class="dropdown" id="playersDropdown"><button class="dropdown-toggle" type="button">Select Players</button><div class="dropdown-menu" id="playersMenu"></div></div>
+          
+        </div>
+        <div class="filter-group" data-filter="opponents">
+          <label class="filter-label">Against Team</label>
+          <div class="dropdown" id="opponentsDropdown"><button class="dropdown-toggle" type="button">Select Teams</button><div class="dropdown-menu" id="opponentsMenu"></div></div>
+          
+        </div>
+        <div class="filter-group" data-filter="periods">
+          <label class="filter-label">Period</label>
+          <div class="dropdown" id="periodsDropdown"><button class="dropdown-toggle" type="button">Select Periods</button><div class="dropdown-menu" id="periodsMenu"></div></div>
+          
+        </div>
+        <div class="filter-group" data-filter="events">
+          <label class="filter-label">Event</label>
+          <div class="dropdown" id="eventsDropdown"><button class="dropdown-toggle" type="button">Select Events</button><div class="dropdown-menu" id="eventsMenu"></div></div>
+          
+        </div>
+        <div class="filter-group" data-filter="strengths">
+          <label class="filter-label">Strength</label>
+          <div class="dropdown" id="strengthsDropdown"><button class="dropdown-toggle" type="button">Select Strengths</button><div class="dropdown-menu" id="strengthsMenu"></div></div>
+          
+        </div>
+        <div class="filter-group" data-filter="goalies">
+          <label class="filter-label">Goalie</label>
+          <div class="dropdown" id="goaliesDropdown"><button class="dropdown-toggle" type="button">Select Goalies</button><div class="dropdown-menu" id="goaliesMenu"></div></div>
+          
+        </div>
+        <div class="filter-group" data-filter="onice">
+          <label class="filter-label">On-Ice</label>
+          <div class="dropdown" id="oniceDropdown"><button class="dropdown-toggle" type="button">Select Players</button><div class="dropdown-menu" id="oniceMenu"></div></div>
+        </div>
+  <!-- Date filters moved to top row -->
+      </div>
+      <div class="sub-tabs" id="subTabs">
+        <button class="sub-tab active" data-view="shot-map">Shot Map</button>
+        <button class="sub-tab" data-view="heat-map">Heat Map</button>
+        <button class="sub-tab" data-view="shot-aim">Shot Aim</button>
+        <button class="sub-tab" data-view="tables">Tables</button>
+        <button class="sub-tab" data-view="video">Video</button>
+      </div>
+    </div>
+    <div class="rink-row" id="shotMapRow">
+      <!-- Heat Map metric buttons (visible only in Heat Map view) -->
+      <div id="topMetricBar" style="grid-column:1 / -1;display:none;flex-wrap:wrap;gap:.5rem;justify-content:center;margin:0 0 .4rem;">
+        <button type="button" class="metric-btn active" data-metric="corsi">Corsi</button>
+        <button type="button" class="metric-btn" data-metric="fenwick">Fenwick</button>
+        <button type="button" class="metric-btn" data-metric="shots">Shots</button>
+        <button type="button" class="metric-btn" data-metric="goals">Goals</button>
+        <button type="button" class="metric-btn" data-metric="shpct">Sh%</button>
+      </div>
+      <div class="rink defensive-zone" id="defRinkWrap">
+        <h2>Defensive Zone</h2>
+        <div class="zone-wrap">
+          <canvas id="defRinkBase" class="rink-base"></canvas>
+          <canvas id="defShotCanvas" class="zone-canvas"></canvas>
+          <!-- Heat map shading canvas (hidden during Shot Map view) -->
+          <canvas id="defHeatCanvas" class="zone-canvas" style="display:none;"></canvas>
+        </div>
+      </div>
+      <div class="kpi-column" id="kpiColumn">
+        <div class="kpi-card" data-group="corsi"><h3>Corsi</h3><div class="kpi-metrics"><div class="kpi-metric" id="metric-ca"><span class="label">CA</span><span class="value">—</span></div><div class="kpi-metric middle" id="metric-cfpct"><span class="label">CF%</span><span class="value">—</span></div><div class="kpi-metric" id="metric-cf"><span class="label">CF</span><span class="value">—</span></div></div></div>
+        <div class="kpi-card" data-group="fenwick"><h3>Fenwick</h3><div class="kpi-metrics"><div class="kpi-metric" id="metric-fa"><span class="label">FA</span><span class="value">—</span></div><div class="kpi-metric middle" id="metric-ffpct"><span class="label">FF%</span><span class="value">—</span></div><div class="kpi-metric" id="metric-ff"><span class="label">FF</span><span class="value">—</span></div></div></div>
+        <div class="kpi-card" data-group="shots"><h3>Shots</h3><div class="kpi-metrics"><div class="kpi-metric" id="metric-sa"><span class="label">SA</span><span class="value">—</span></div><div class="kpi-metric middle" id="metric-sfpct"><span class="label">SF%</span><span class="value">—</span></div><div class="kpi-metric" id="metric-sf"><span class="label">SF</span><span class="value">—</span></div></div></div>
+        <div class="kpi-card" data-group="xg"><h3>xG</h3><div class="kpi-metrics"><div class="kpi-metric" id="metric-xga"><span class="label">xGA</span><span class="value">—</span></div><div class="kpi-metric middle" id="metric-xgfpct"><span class="label">xGF%</span><span class="value">—</span></div><div class="kpi-metric" id="metric-xgf"><span class="label">xGF</span><span class="value">—</span></div></div></div>
+        <div class="kpi-card" data-group="goals"><h3>Goals</h3><div class="kpi-metrics"><div class="kpi-metric" id="metric-ga"><span class="label">GA</span><span class="value">—</span></div><div class="kpi-metric middle" id="metric-gfpct"><span class="label">GF%</span><span class="value">—</span></div><div class="kpi-metric" id="metric-gf"><span class="label">GF</span><span class="value">—</span></div></div></div>
+        <div class="kpi-card" data-group="goaltending-shooting"><h3>Shooting / Goaltending</h3><div class="kpi-metrics"><div class="kpi-metric" id="metric-svpct"><span class="label">Sv%</span><span class="value">—</span></div><div class="kpi-metric middle" id="metric-pdo"><span class="label">PDO</span><span class="value">—</span></div><div class="kpi-metric" id="metric-shpct"><span class="label">Sh%</span><span class="value">—</span></div></div></div>
+        <div id="markerLegend" style="margin-top:auto;display:flex;flex-direction:column;gap:.55rem;padding-top:.25rem;">
+          <div style="font-size:.7rem;letter-spacing:.07em;font-weight:600;color:#b7b3cf;text-transform:uppercase;text-align:center;">Legend</div>
+          <div style="display:flex;flex-wrap:wrap;gap:.9rem;justify-content:center;align-items:center;">
+            <div style="display:flex;align-items:center;gap:.35rem;font-size:.7rem;">
+              <canvas data-icon="shot" width="14" height="14" style="background:transparent;"></canvas><span>Shot</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:.35rem;font-size:.7rem;">
+              <canvas data-icon="goal" width="14" height="14" style="background:transparent;"></canvas><span>Goal</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:.35rem;font-size:.7rem;">
+              <canvas data-icon="miss" width="14" height="14" style="background:transparent;"></canvas><span>Miss</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:.35rem;font-size:.7rem;">
+              <canvas data-icon="block" width="14" height="14" style="background:transparent;"></canvas><span>Block</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:.35rem;font-size:.7rem;">
+              <canvas data-icon="penalty" width="14" height="14" style="background:transparent;"></canvas><span>Penalty</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rink offensive-zone" id="offRinkWrap">
+        <h2>Offensive Zone</h2>
+        <div class="zone-wrap">
+          <canvas id="offRinkBase" class="rink-base"></canvas>
+          <canvas id="offShotCanvas" class="zone-canvas"></canvas>
+          <!-- Heat map shading canvas (hidden during Shot Map view) -->
+          <canvas id="offHeatCanvas" class="zone-canvas" style="display:none;"></canvas>
+        </div>
+      </div>
+    </div>
+    <!-- Heat Map controls (gradient legend only) -->
+    <div id="heatControls" style="display:none;flex-direction:column;align-items:center;gap:.5rem;margin-top:.35rem;">
+      <div id="heatGradientWrapper" style="display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;justify-content:center;">
+        <canvas id="heatLegend" width="280" height="14" style="border-radius:6px;border:1px solid #24315b;background:#fff;"></canvas>
+      </div>
+    </div>
+    <div id="shotAimPlaceholder" style="display:none;text-align:center;padding:2.5rem 1rem;font-size:1rem;font-weight:600;letter-spacing:.03em;color:#b7b3cf;">Shot Aim: coming later.</div>
+    <div id="tablesWrapper" style="display:none;padding:1rem 2rem;">
+      <div style="display:flex;gap:.6rem;margin-bottom:.75rem;flex-wrap:wrap;">
+        <button type="button" class="metric-btn tbl-sub-btn active" data-table="skaters">Skaters</button>
+        <button type="button" class="metric-btn tbl-sub-btn" data-table="goalies">Goaltenders</button>
+        <button type="button" class="metric-btn tbl-sub-btn" data-table="teams">Teams</button>
+      </div>
+      <div style="display:flex;align-items:stretch;gap:1rem;">
+        <!-- Table Filters Side Panel -->
+        <div id="tableFilterPanel" style="width:220px;flex:0 0 220px;display:flex;flex-direction:column;gap:.75rem;background:var(--pwhl-surface);border:1px solid var(--pwhl-border);border-radius:.75rem;padding:.75rem;">
+          <div style="font-size:.65rem;font-weight:600;letter-spacing:.07em;color:#b7b3cf;text-transform:uppercase;">Table Filters</div>
+          <div style="display:flex;gap:.5rem;">
+            <button id="tfModeTotals" type="button" class="metric-btn" style="flex:1;">Totals</button>
+            <button id="tfModePerGame" type="button" class="metric-btn" style="flex:1;">Per Game</button>
+          </div>
+          <label style="display:flex;flex-direction:column;gap:.3rem;font-size:.6rem;">
+            <span style="font-weight:500;letter-spacing:.05em;">Season</span>
+            <select id="tfSeason" style="background:#394566;border:1px solid #566080;color:#fff;border-radius:.45rem;padding:.4rem .55rem;font-size:.65rem;">
+              <option value="All">All</option>
+            </select>
+          </label>
+          <label style="display:flex;flex-direction:column;gap:.3rem;font-size:.6rem;">
+            <span style="font-weight:500;letter-spacing:.05em;">Season State</span>
+            <select id="tfSeasonState" style="background:#394566;border:1px solid #566080;color:#fff;border-radius:.45rem;padding:.4rem .55rem;font-size:.65rem;">
+              <option value="All">All</option>
+              <option value="Regular Season">Regular Season</option>
+              <option value="Playoffs">Playoffs</option>
+            </select>
+          </label>
+          <label style="display:flex;flex-direction:column;gap:.3rem;font-size:.6rem;">
+            <span style="font-weight:500;letter-spacing:.05em;">Search (Name)</span>
+            <input id="tfSearch" type="text" placeholder="Type to filter..." style="background:#394566;border:1px solid #566080;color:#fff;border-radius:.45rem;padding:.4rem .55rem;font-size:.65rem;" />
+          </label>
+          <label style="display:flex;flex-direction:column;gap:.25rem;font-size:.55rem;">
+            <span style="font-weight:500;letter-spacing:.05em;">Min GP</span>
+            <input id="tfMinGP" type="number" min="0" placeholder="0" style="background:#394566;border:1px solid #566080;color:#fff;border-radius:.4rem;padding:.35rem .45rem;font-size:.6rem;" />
+          </label>
+          <label style="display:flex;flex-direction:column;gap:.3rem;font-size:.55rem;">
+            <span style="font-weight:500;letter-spacing:.05em;">Strength</span>
+            <select id="tfStrength" style="background:#394566;border:1px solid #566080;color:#fff;border-radius:.45rem;padding:.4rem .55rem;font-size:.6rem;">
+              <option value="All">All</option>
+              <option value="5v5">5v5</option>
+              <option value="EV">EV</option>
+              <option value="PP">PP</option>
+              <option value="SH">SH</option>
+            </select>
+          </label>
+          <div style="display:flex;gap:.5rem;">
+            <button id="tfReset" type="button" class="metric-btn" style="flex:1;">Reset</button>
+          </div>
+          <div id="tfSummary" style="font-size:.55rem;color:#b7b3cf;letter-spacing:.04em;margin-top:.25rem;">—</div>
+        </div>
+        <!-- Table Scrollable Area -->
+        <div style="flex:1;display:flex;flex-direction:column;">
+          <div style="border:1px solid var(--pwhl-border);border-radius:.75rem;background:var(--pwhl-surface);max-height:62vh;overflow:auto;">
+            <table id="statsTable" style="width:100%;border-collapse:separate;border-spacing:0;font-size:.7rem;">
+              <thead style="background:rgba(255,255,255,.05);position:sticky;top:0;z-index:5;">
+                <tr id="statsHeader"></tr>
+              </thead>
+              <tbody id="statsBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+  <script>
+  /* ---------------- Embedded Zones GeoJSON (full half-rink zone set) ---------------- */
+  window.HOCKEY_ZONES = { "type": "FeatureCollection", "features": [
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[89,-12.5],[100,-12.5],[100,-14],[99.9989034876783,-14.25],[99.99561369755,-14.5],[99.9901298698339,-14.75],[99.9824507372522,-15],[99.9725745235657,-15.25],[99.9604989415154,-15.5],[99.9462211901686,-15.75],[99.929737951659,-16],[99.9110453873137,-16.25],[99.8901391331568,-16.5],[99.8670142947755,-16.75],[99.8416654415368,-17],[99.814086600136,-17.25],[99.7842712474619,-17.5],[99.752212302756,-17.75],[99.7179021190449,-18],[99.6813324738203,-18.25],[99.6424945589406,-18.5],[99.6013789697232,-18.75],[99.5579756931964,-19],[99.5122740954747,-19.25],[99.4642629082191,-19.5],[99.4139302141422,-19.75],[99.3612634315101,-20],[99.306249297595,-20.25],[99.2488738510232,-20.5],[99.1891224129621,-20.75],[99.1269795670826,-21],[99.0624291382309,-21.25],[98.995454169735,-21.5],[98.9260368992678,-21.75],[98.8541587331799,-22],[98.7798002192098,-22.25],[98.7029410174709,-22.5],[98.6235598696041,-22.75],[98.5416345659799,-23],[98.4571419108184,-23.25],[98.3700576850888,-23.5],[98.2803566070357,-23.75],[98.188012290165,-24],[98.0929971985107,-24.25],[97.9952825989835,-24.5],[97.8948385105876,-24.75],[97.7916336502698,-25],[97.6856353751441,-25.25],[97.5768096208106,-25.5],[97.4651208354592,-25.75],[97.3505319094211,-26],[97.2330040997937,-26.25],[97.1124969497314,-26.5],[96.9889682019496,-26.75],[96.8623737059448,-27],[96.7326673183792,-27.25],[96.5998007960223,-27.5],[96.463723680573,-27.75],[96.3243831746128,-28],[96.1817240078565,-28.25],[96.0356882927706,-28.5],[95.8862153685233,-28.75],[95.7332416321053,-29],[95.5767003553228,-29.25],[95.4165214862028,-29.5],[95.2526314331697,-29.75],[95.0849528301415,-30],[94.9134042804544,-30.25],[94.7379000772445,-30.5],[94.5583498975967,-30.75],[94.3746584673957,-31],[94.1867251933813,-31.25],[93.994443758404,-31.5],[93.7977016752848,-31.75],[93.5963797939844,-32],[93.3903517559677,-32.25],[93.1794833886788,-32.5],[92.9636320318813,-32.75],[92.742645786248,-33],[92.516362672927,-33.25],[92.2846096908265,-33.5],[92.0472017559569,-33.75],[91.803940504247,-34],[91.5546129356814,-34.25],[91.2989898732233,-34.5],[91.036824204563,-34.75],[90.7678488679977,-35],[90.4917745353087,-35.25],[90.2082869338697,-35.5],[89.917043736713,-35.75],[89.6176709319934,-36],[89.3097585609688,-36.25],[89,-36.5],[89,-12.5]]]},"properties":{"id":"O01","ZONE":"O"},"id":"O01"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[89,-12.5],[100,-12.5],[100,12.5],[89,12.5],[89,-12.5]]]},"properties":{"id":"O02","ZONE":"O"},"id":"O02"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[89,12.5],[100,12.5],[100,14],[99.9989034876783,14.25],[99.99561369755,14.5],[99.9901298698339,14.75],[99.9824507372522,15],[99.9725745235657,15.25],[99.9604989415154,15.5],[99.9462211901686,15.75],[99.929737951659,16],[99.9110453873137,16.25],[99.8901391331568,16.5],[99.8670142947755,16.75],[99.8416654415368,17],[99.814086600136,17.25],[99.7842712474619,17.5],[99.752212302756,17.75],[99.7179021190449,18],[99.6813324738203,18.25],[99.6424945589406,18.5],[99.6013789697232,18.75],[99.5579756931964,19],[99.5122740954747,19.25],[99.4642629082191,19.5],[99.4139302141422,19.75],[99.3612634315101,20],[99.306249297595,20.25],[99.2488738510232,20.5],[99.1891224129621,20.75],[99.1269795670826,21],[99.0624291382309,21.25],[98.995454169735,21.5],[98.9260368992678,21.75],[98.8541587331799,22],[98.7798002192098,22.25],[98.7029410174709,22.5],[98.6235598696041,22.75],[98.5416345659799,23],[98.4571419108184,23.25],[98.3700576850888,23.5],[98.2803566070357,23.75],[98.188012290165,24],[98.0929971985107,24.25],[97.9952825989835,24.5],[97.8948385105876,24.75],[97.7916336502698,25],[97.6856353751441,25.25],[97.5768096208106,25.5],[97.4651208354592,25.75],[97.3505319094211,26],[97.2330040997937,26.25],[97.1124969497314,26.5],[96.9889682019496,26.75],[96.8623737059448,27],[96.7326673183792,27.25],[96.5998007960223,27.5],[96.463723680573,27.75],[96.3243831746128,28],[96.1817240078565,28.25],[96.0356882927706,28.5],[95.8862153685233,28.75],[95.7332416321053,29],[95.5767003553228,29.25],[95.4165214862028,29.5],[95.2526314331697,29.75],[95.0849528301415,30],[94.9134042804544,30.25],[94.7379000772445,30.5],[94.5583498975967,30.75],[94.3746584673957,31],[94.1867251933813,31.25],[93.994443758404,31.5],[93.7977016752848,31.75],[93.5963797939844,32],[93.3903517559677,32.25],[93.1794833886788,32.5],[92.9636320318813,32.75],[92.742645786248,33],[92.516362672927,33.25],[92.2846096908265,33.5],[92.0472017559569,33.75],[91.803940504247,34],[91.5546129356814,34.25],[91.2989898732233,34.5],[91.036824204563,34.75],[90.7678488679977,35],[90.4917745353087,35.25],[90.2082869338697,35.5],[89.917043736713,35.75],[89.6176709319934,36],[89.3097585609688,36.25],[89,36.5],[89,12.5]]]},"properties":{"id":"O03","ZONE":"O"},"id":"O03"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[89,-36.5],[89,-28],[60,-42.5],[71.5,-42.5],[75.2666297933298,-42.25],[76.8150729063673,-42],[77.9951905283833,-41.75],[78.9833147735479,-41.5],[79.847903928532,-41.25],[80.6241437954473,-41],[81.3329802196486,-40.75],[81.9880884817015,-40.5],[82.5989864402116,-40.25],[83.1726175299288,-40],[83.7142335003061,-39.75],[84.2279220613579,-39.5],[84.7169398878863,-39.25],[85.183932183404,-39],[85.6310827610626,-38.75],[86.060219778561,-38.5],[86.472892172189,-38.25],[86.8704261489394,-38],[87.2539677541882,-37.75],[87.6245154965971,-37.5],[87.9829457318769,-37.25],[88.3300326797068,-37],[88.6664644001029,-36.75],[89,-36.5]]]},"properties":{"id":"O04","ZONE":"O"},"id":"O04"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[89,-28],[89,-16],[73,-24],[73,-36],[89,-28]]]},"properties":{"id":"O05","ZONE":"O"},"id":"O05"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[89,-16],[89,-4],[73,-12],[73,-24],[89,-16]]]},"properties":{"id":"O06","ZONE":"O"},"id":"O06"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[89,-4],[89,4],[83,7],[83,-7],[89,-4]]]},"properties":{"id":"O07","ZONE":"O"},"id":"O07"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[89,4],[89,16],[73,24],[73,12],[89,4]]]},"properties":{"id":"O08","ZONE":"O"},"id":"O08"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[89,16],[89,28],[73,36],[73,24],[89,16]]]},"properties":{"id":"O09","ZONE":"O"},"id":"O09"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[89,36.5],[89,28],[60,42.5],[71.5,42.5],[75.2666297933298,42.25],[76.8150729063673,42],[77.9951905283833,41.75],[78.9833147735479,41.5],[79.847903928532,41.25],[80.6241437954473,41],[81.3329802196486,40.75],[81.9880884817015,40.5],[82.5989864402116,40.25],[83.1726175299288,40],[83.7142335003061,39.75],[84.2279220613579,39.5],[84.7169398878863,39.25],[85.183932183404,39],[85.6310827610626,38.75],[86.060219778561,38.5],[86.472892172189,38.25],[86.8704261489394,38],[87.2539677541882,37.75],[87.6245154965971,37.5],[87.9829457318769,37.25],[88.3300326797068,37],[88.6664644001029,36.75],[89,36.5]]]},"properties":{"id":"O10","ZONE":"O"},"id":"O10"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[83,-7],[83,7],[73,12],[73,-12],[83,-7]]]},"properties":{"id":"O11","ZONE":"O"},"id":"O11"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[73,-36],[73,-24],[57,-32],[57,-42.5],[60,-42.5],[73,-36]]]},"properties":{"id":"O12","ZONE":"O"},"id":"O12"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[73,-24],[73,-12],[57,-20],[57,-32],[73,-24]]]},"properties":{"id":"O13","ZONE":"O"},"id":"O13"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[73,-12],[73,0],[57,-8],[57,-20],[73,-12]]]},"properties":{"id":"O14","ZONE":"O"},"id":"O14"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[73,0],[57,8],[57,-8],[73,0]]]},"properties":{"id":"O15","ZONE":"O"},"id":"O15"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[73,0],[73,12],[57,20],[57,8],[73,0]]]},"properties":{"id":"O16","ZONE":"O"},"id":"O16"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[73,12],[73,24],[57,32],[57,20],[73,12]]]},"properties":{"id":"O17","ZONE":"O"},"id":"O17"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[73,24],[73,36],[60,42.5],[57,42.5],[57,32],[73,24]]]},"properties":{"id":"O18","ZONE":"O"},"id":"O18"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[57,-42.5],[57,-20],[41,-28],[41,-42.5],[57,-42.5]]]},"properties":{"id":"O19","ZONE":"O"},"id":"O19"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[57,-20],[57,-8],[41,-16],[41,-28],[57,-20]]]},"properties":{"id":"O20","ZONE":"O"},"id":"O20"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[57,-8],[57,8],[41,16],[41,-16],[57,-8]]]},"properties":{"id":"O21","ZONE":"O"},"id":"O21"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[57,8],[57,20],[41,28],[41,16],[57,8]]]},"properties":{"id":"O22","ZONE":"O"},"id":"O22"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[57,20],[57,42.5],[41,42.5],[41,28],[57,20]]]},"properties":{"id":"O23","ZONE":"O"},"id":"O23"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[41,-42.5],[41,-16],[25,-24],[25,-42.5],[41,-42.5]]]},"properties":{"id":"O24","ZONE":"O"},"id":"O24"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[41,-16],[41,16],[25,24],[25,-24],[41,-16]]]},"properties":{"id":"O25","ZONE":"O"},"id":"O25"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[41,16],[41,42.5],[25,42.5],[25,24],[41,16]]]},"properties":{"id":"O26","ZONE":"O"},"id":"O26"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[25,-42.5],[25,-17.5],[0,-17.5],[0,-42.5],[25,-42.5]]]},"properties":{"id":"N01","ZONE":"N"},"id":"N01"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[25,-17.5],[25,17.5],[0,17.5],[0,-17.5],[25,-17.5]]]},"properties":{"id":"N02","ZONE":"N"},"id":"N02"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[25,17.5],[25,42.5],[0,42.5],[0,17.5],[25,17.5]]]},"properties":{"id":"N03","ZONE":"N"},"id":"N03"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[0,-42.5],[0,-17.5],[-25,-17.5],[-25,-42.5],[0,-42.5]]]},"properties":{"id":"N04","ZONE":"N"},"id":"N04"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[0,-17.5],[0,17.5],[-25,17.5],[-25,-17.5],[0,-17.5]]]},"properties":{"id":"N05","ZONE":"N"},"id":"N05"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[0,17.5],[0,42.5],[-25,42.5],[-25,17.5],[0,17.5]]]},"properties":{"id":"N06","ZONE":"N"},"id":"N06"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-89,12.5],[-100,12.5],[-100,14],[-99.9989034876783,14.25],[-99.99561369755,14.5],[-99.9901298698339,14.75],[-99.9824507372522,15],[-99.9725745235657,15.25],[-99.9604989415154,15.5],[-99.9462211901686,15.75],[-99.929737951659,16],[-99.9110453873137,16.25],[-99.8901391331568,16.5],[-99.8670142947755,16.75],[-99.8416654415368,17],[-99.814086600136,17.25],[-99.7842712474619,17.5],[-99.752212302756,17.75],[-99.7179021190449,18],[-99.6813324738203,18.25],[-99.6424945589406,18.5],[-99.6013789697232,18.75],[-99.5579756931964,19],[-99.5122740954747,19.25],[-99.4642629082191,19.5],[-99.4139302141422,19.75],[-99.3612634315101,20],[-99.306249297595,20.25],[-99.2488738510232,20.5],[-99.1891224129621,20.75],[-99.1269795670826,21],[-99.0624291382309,21.25],[-98.995454169735,21.5],[-98.9260368992678,21.75],[-98.8541587331799,22],[-98.7798002192098,22.25],[-98.7029410174709,22.5],[-98.6235598696041,22.75],[-98.5416345659799,23],[-98.4571419108184,23.25],[-98.3700576850888,23.5],[-98.2803566070357,23.75],[-98.188012290165,24],[-98.0929971985107,24.25],[-97.9952825989835,24.5],[-97.8948385105876,24.75],[-97.7916336502698,25],[-97.6856353751441,25.25],[-97.5768096208106,25.5],[-97.4651208354592,25.75],[-97.3505319094211,26],[-97.2330040997937,26.25],[-97.1124969497314,26.5],[-96.9889682019496,26.75],[-96.8623737059448,27],[-96.7326673183792,27.25],[-96.5998007960223,27.5],[-96.463723680573,27.75],[-96.3243831746128,28],[-96.1817240078565,28.25],[-96.0356882927706,28.5],[-95.8862153685233,28.75],[-95.7332416321053,29],[-95.5767003553228,29.25],[-95.4165214862028,29.5],[-95.2526314331697,29.75],[-95.0849528301415,30],[-94.9134042804544,30.25],[-94.7379000772445,30.5],[-94.5583498975967,30.75],[-94.3746584673957,31],[-94.1867251933813,31.25],[-93.994443758404,31.5],[-93.7977016752848,31.75],[-93.5963797939844,32],[-93.3903517559677,32.25],[-93.1794833886788,32.5],[-92.9636320318813,32.75],[-92.742645786248,33],[-92.516362672927,33.25],[-92.2846096908265,33.5],[-92.0472017559569,33.75],[-91.803940504247,34],[-91.5546129356814,34.25],[-91.2989898732233,34.5],[-91.036824204563,34.75],[-90.7678488679977,35],[-90.4917745353087,35.25],[-90.2082869338697,35.5],[-89.917043736713,35.75],[-89.6176709319934,36],[-89.3097585609688,36.25],[-89,36.5],[-89,12.5]]]},"properties":{"id":"D01","ZONE":"D"},"id":"D01"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-89,12.5],[-100,12.5],[-100,-12.5],[-89,-12.5],[-89,12.5]]]},"properties":{"id":"D02","ZONE":"D"},"id":"D02"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-89,-12.5],[-100,-12.5],[-100,-14],[-99.9989034876783,-14.25],[-99.99561369755,-14.5],[-99.9901298698339,-14.75],[-99.9824507372522,-15],[-99.9725745235657,-15.25],[-99.9604989415154,-15.5],[-99.9462211901686,-15.75],[-99.929737951659,-16],[-99.9110453873137,-16.25],[-99.8901391331568,-16.5],[-99.8670142947755,-16.75],[-99.8416654415368,-17],[-99.814086600136,-17.25],[-99.7842712474619,-17.5],[-99.752212302756,-17.75],[-99.7179021190449,-18],[-99.6813324738203,-18.25],[-99.6424945589406,-18.5],[-99.6013789697232,-18.75],[-99.5579756931964,-19],[-99.5122740954747,-19.25],[-99.4642629082191,-19.5],[-99.4139302141422,-19.75],[-99.3612634315101,-20],[-99.306249297595,-20.25],[-99.2488738510232,-20.5],[-99.1891224129621,-20.75],[-99.1269795670826,-21],[-99.0624291382309,-21.25],[-98.995454169735,-21.5],[-98.9260368992678,-21.75],[-98.8541587331799,-22],[-98.7798002192098,-22.25],[-98.7029410174709,-22.5],[-98.6235598696041,-22.75],[-98.5416345659799,-23],[-98.4571419108184,-23.25],[-98.3700576850888,-23.5],[-98.2803566070357,-23.75],[-98.188012290165,-24],[-98.0929971985107,-24.25],[-97.9952825989835,-24.5],[-97.8948385105876,-24.75],[-97.7916336502698,-25],[-97.6856353751441,-25.25],[-97.5768096208106,-25.5],[-97.4651208354592,-25.75],[-97.3505319094211,-26],[-97.2330040997937,-26.25],[-97.1124969497314,-26.5],[-96.9889682019496,-26.75],[-96.8623737059448,-27],[-96.7326673183792,-27.25],[-96.5998007960223,-27.5],[-96.463723680573,-27.75],[-96.3243831746128,-28],[-96.1817240078565,-28.25],[-96.0356882927706,-28.5],[-95.8862153685233,-28.75],[-95.7332416321053,-29],[-95.5767003553228,-29.25],[-95.4165214862028,-29.5],[-95.2526314331697,-29.75],[-95.0849528301415,-30],[-94.9134042804544,-30.25],[-94.7379000772445,-30.5],[-94.5583498975967,-30.75],[-94.3746584673957,-31],[-94.1867251933813,-31.25],[-93.994443758404,-31.5],[-93.7977016752848,-31.75],[-93.5963797939844,-32],[-93.3903517559677,-32.25],[-93.1794833886788,-32.5],[-92.9636320318813,-32.75],[-92.742645786248,-33],[-92.516362672927,-33.25],[-92.2846096908265,-33.5],[-92.0472017559569,-33.75],[-91.803940504247,-34],[-91.5546129356814,-34.25],[-91.2989898732233,-34.5],[-91.036824204563,-34.75],[-90.7678488679977,-35],[-90.4917745353087,-35.25],[-90.2082869338697,-35.5],[-89.917043736713,-35.75],[-89.6176709319934,-36],[-89.3097585609688,-36.25],[-89,-36.5],[-89,-12.5]]]},"properties":{"id":"D03","ZONE":"D"},"id":"D03"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-89,36.5],[-89,28],[-60,42.5],[-71.5,42.5],[-75.2666297933298,42.25],[-76.8150729063673,42],[-77.9951905283833,41.75],[-78.9833147735479,41.5],[-79.847903928532,41.25],[-80.6241437954473,41],[-81.3329802196486,40.75],[-81.9880884817015,40.5],[-82.5989864402116,40.25],[-83.1726175299288,40],[-83.7142335003061,39.75],[-84.2279220613579,39.5],[-84.7169398878863,39.25],[-85.183932183404,39],[-85.6310827610626,38.75],[-86.060219778561,38.5],[-86.472892172189,38.25],[-86.8704261489394,38],[-87.2539677541882,37.75],[-87.6245154965971,37.5],[-87.9829457318769,37.25],[-88.3300326797068,37],[-88.6664644001029,36.75],[-89,36.5]]]},"properties":{"id":"D04","ZONE":"D"},"id":"D04"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-89,28],[-89,16],[-73,24],[-73,36],[-89,28]]]},"properties":{"id":"D05","ZONE":"D"},"id":"D05"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-89,16],[-89,4],[-73,12],[-73,24],[-89,16]]]},"properties":{"id":"D06","ZONE":"D"},"id":"D06"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-89,4],[-89,-4],[-83,-7],[-83,7],[-89,4]]]},"properties":{"id":"D07","ZONE":"D"},"id":"D07"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-89,-4],[-89,-16],[-73,-24],[-73,-12],[-89,-4]]]},"properties":{"id":"D08","ZONE":"D"},"id":"D08"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-89,-16],[-89,-28],[-73,-36],[-73,-24],[-89,-16]]]},"properties":{"id":"D09","ZONE":"D"},"id":"D09"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-89,-36.5],[-89,-28],[-60,-42.5],[-71.5,-42.5],[-75.2666297933298,-42.25],[-76.8150729063673,-42],[-77.9951905283833,-41.75],[-78.9833147735479,-41.5],[-79.847903928532,-41.25],[-80.6241437954473,-41],[-81.3329802196486,-40.75],[-81.9880884817015,-40.5],[-82.5989864402116,-40.25],[-83.1726175299288,-40],[-83.7142335003061,-39.75],[-84.2279220613579,-39.5],[-84.7169398878863,-39.25],[-85.183932183404,-39],[-85.6310827610626,-38.75],[-86.060219778561,-38.5],[-86.472892172189,-38.25],[-86.8704261489394,-38],[-87.2539677541882,-37.75],[-87.6245154965971,-37.5],[-87.9829457318769,-37.25],[-88.3300326797068,-37],[-88.6664644001029,-36.75],[-89,-36.5]]]},"properties":{"id":"D10","ZONE":"D"},"id":"D10"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-83,7],[-83,-7],[-73,-12],[-73,12],[-83,7]]]},"properties":{"id":"D11","ZONE":"D"},"id":"D11"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-73,36],[-73,24],[-57,32],[-57,42.5],[-60,42.5],[-73,36]]]},"properties":{"id":"D12","ZONE":"D"},"id":"D12"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-73,24],[-73,12],[-57,20],[-57,32],[-73,24]]]},"properties":{"id":"D13","ZONE":"D"},"id":"D13"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-73,12],[-73,0],[-57,8],[-57,20],[-73,12]]]},"properties":{"id":"D14","ZONE":"D"},"id":"D14"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-73,0],[-57,-8],[-57,8],[-73,0]]]},"properties":{"id":"D15","ZONE":"D"},"id":"D15"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-73,0],[-73,-12],[-57,-20],[-57,-8],[-73,0]]]},"properties":{"id":"D16","ZONE":"D"},"id":"D16"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-73,-12],[-73,-24],[-57,-32],[-57,-20],[-73,-12]]]},"properties":{"id":"D17","ZONE":"D"},"id":"D17"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-73,-24],[-73,-36],[-60,-42.5],[-57,-42.5],[-57,-32],[-73,-24]]]},"properties":{"id":"D18","ZONE":"D"},"id":"D18"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-57,42.5],[-57,20],[-41,28],[-41,42.5],[-57,42.5]]]},"properties":{"id":"D19","ZONE":"D"},"id":"D19"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-57,20],[-57,8],[-41,16],[-41,28],[-57,20]]]},"properties":{"id":"D20","ZONE":"D"},"id":"D20"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-57,8],[-57,-8],[-41,-16],[-41,16],[-57,8]]]},"properties":{"id":"D21","ZONE":"D"},"id":"D21"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-57,-8],[-57,-20],[-41,-28],[-41,-16],[-57,-8]]]},"properties":{"id":"D22","ZONE":"D"},"id":"D22"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-57,-20],[-57,-42.5],[-41,-42.5],[-41,-28],[-57,-20]]]},"properties":{"id":"D23","ZONE":"D"},"id":"D23"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-41,42.5],[-41,16],[-25,24],[-25,42.5],[-41,42.5]]]},"properties":{"id":"D24","ZONE":"D"},"id":"D24"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-41,16],[-41,-16],[-25,-24],[-25,24],[-41,16]]]},"properties":{"id":"D25","ZONE":"D"},"id":"D25"},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-41,-16],[-41,-42.5],[-25,-42.5],[-25,-24],[-41,-16]]]},"properties":{"id":"D26","ZONE":"D"},"id":"D26"}
+  ] };
+    // State & persistence
+    const STORE_KEY='pwhl_report_filters_v1';
+    function saveState(state){ localStorage.setItem(STORE_KEY, JSON.stringify(state)); }
+    function loadState(){ try{return JSON.parse(localStorage.getItem(STORE_KEY)||'{}');}catch(e){return {};} }
+  // multiIds includes 'onice' which uses AND semantics handled server-side
+  const multiIds=['seasons','season_states','games','players','opponents','periods','events','strengths','goalies','onice'];
+    function getMultiValues(id){ return Array.from(document.querySelectorAll(`#${id}Menu input:checked`)).map(i=>i.value); }
+    function getState(){ const st={team:document.getElementById('teamSelect').value,date_from:dateFrom.value||'',date_to:dateTo.value||''}; multiIds.forEach(id=>{st[id]=getMultiValues(id);}); return st; }
+    function restoreState(){ const st=loadState(); if(!st) return; if(st.team){ const sel=document.getElementById('teamSelect'); if(Array.from(sel.options).some(o=>o.value===st.team)) sel.value=st.team; }
+      if(st.date_from) dateFrom.value=st.date_from; if(st.date_to) dateTo.value=st.date_to; multiIds.forEach(id=>{ (st[id]||[]).forEach(v=>{ const cb=document.querySelector(`#${id}Menu input[value="${CSS.escape(v)}"]`); if(cb) cb.checked=true; }); updatePills(id); }); }
+    function toggleDropdown(drop){ document.querySelectorAll('.dropdown').forEach(d=>{ if(d!==drop) d.classList.remove('open');}); drop.classList.toggle('open'); }
+    document.addEventListener('click',e=>{ const dd=e.target.closest('.dropdown'); if(!dd) document.querySelectorAll('.dropdown').forEach(d=>d.classList.remove('open')); });
+    function buildMenu(id, items){ const menu=document.getElementById(id+'Menu'); if(!menu) return; menu.innerHTML='';
+      // Search box
+      const searchWrap=document.createElement('div'); searchWrap.className='search-box';
+      const search=document.createElement('input'); search.type='text'; search.placeholder='Search...'; searchWrap.appendChild(search); menu.appendChild(searchWrap);
+      // Action buttons
+      const actions=document.createElement('div'); actions.className='filter-actions';
+      const btnAll=document.createElement('button'); btnAll.type='button'; btnAll.textContent='All';
+      const btnNone=document.createElement('button'); btnNone.type='button'; btnNone.textContent='None';
+      actions.appendChild(btnAll); actions.appendChild(btnNone); menu.appendChild(actions);
+      const listWrap=document.createElement('div'); listWrap.className='option-list'; menu.appendChild(listWrap);
+      function render(filter=''){ listWrap.innerHTML=''; (items||[]).filter(v=>{ const labelTxt=(v.label||v).toLowerCase(); return !filter || labelTxt.includes(filter.toLowerCase()); }).forEach(v=>{ const label=document.createElement('label'); const cb=document.createElement('input'); cb.type='checkbox'; cb.value=v.value||v; label.appendChild(cb); const span=document.createElement('span'); span.textContent=v.label||v; label.appendChild(span); label.addEventListener('click',()=>{ setTimeout(()=>{ updateSelectionState(id); },0); }); listWrap.appendChild(label); }); restoreChecks(id); }
+      search.addEventListener('input',()=>render(search.value));
+      btnAll.addEventListener('click',()=>{ listWrap.querySelectorAll('input[type=checkbox]').forEach(cb=>cb.checked=true); updateSelectionState(id); });
+      btnNone.addEventListener('click',()=>{ listWrap.querySelectorAll('input[type=checkbox]').forEach(cb=>cb.checked=false); updateSelectionState(id); });
+      render(); }
+    function restoreChecks(id){ const saved=loadState(); const vals=(saved && saved[id])?saved[id]:[]; vals.forEach(v=>{ const cb=document.querySelector(`#${id}Menu input[value="${CSS.escape(v)}"]`); if(cb) cb.checked=true; }); }
+  function updateSelectionState(id){
+    updateButtonLabel(id);
+    saveState(getState());
+    if(id!=='games'){ refreshGames(); }
+    fetchKPIs();
+    fetchShotMap();
+    if(currentView==='heat-map'){
+      computeAndDrawHeat();
+    }
+  }
+  function updateButtonLabel(id){ const selected=getMultiValues(id); const btn=document.querySelector(`#${id}Dropdown .dropdown-toggle`); if(!btn) return; if(selected.length===0){ btn.textContent=`Select ${id.charAt(0).toUpperCase()+id.slice(1)}`; } else if(selected.length===1){ btn.textContent=selected[0]; } else { btn.textContent=`${selected.length} selected`; } }
+  function updatePills(id){ /* pills removed */ updateButtonLabel(id); }
+    document.addEventListener('click',e=>{ const t=e.target.closest('.dropdown-toggle'); if(t){ toggleDropdown(t.parentElement); }});
+  // external clear links removed
+    async function fetchKPIs(){ const team=document.getElementById('teamSelect').value; if(!team) return; const date_from=dateFrom.value||''; const date_to=dateTo.value||''; const params=new URLSearchParams({team,perspective:'For',date_from,date_to}); multiIds.forEach(id=>{ getMultiValues(id).forEach(v=>params.append(id, v)); }); const r=await fetch(`/api/report/kpis?${params.toString()}`);
+      if(!r.ok) return; const data=await r.json(); const m=data.metrics||{};
+      const map={ 'metric-ca':m['CA'],'metric-cfpct':m['CF%'],'metric-cf':m['CF'], 'metric-fa':m['FA'],'metric-ffpct':m['FF%'],'metric-ff':m['FF'], 'metric-sa':m['SA'],'metric-sfpct':m['SF%'],'metric-sf':m['SF'], 'metric-xga':m['xGA'],'metric-xgfpct':m['xGF%'],'metric-xgf':m['xGF'], 'metric-ga':m['GA'],'metric-gfpct':m['GF%'],'metric-gf':m['GF'], 'metric-svpct':m['Sv%'],'metric-pdo':m['PDO'],'metric-shpct':m['Sh%'] };
+      Object.entries(map).forEach(([id,val])=>{ const el=document.getElementById(id)?.querySelector('.value'); if(el) el.textContent=(val==null||val==='')?'—':val; });
+    }
+    // Strength & Team population
+    async function populateTeams(){ try{ const r=await fetch('/api/report/teams'); if(!r.ok) return; const data=await r.json(); const sel=document.getElementById('teamSelect'); sel.innerHTML=''; (data.teams||[]).forEach(t=>{const o=document.createElement('option');o.value=t;o.textContent=t;sel.appendChild(o);}); if(data.teams?.length){ sel.value=data.teams[0]; } }catch(e){} }
+    async function populateStrengths(){ const team=document.getElementById('teamSelect').value; if(!team) return; try{ const r=await fetch(`/api/report/strengths?team=${encodeURIComponent(team)}`); if(!r.ok) return; const data=await r.json(); const sel=document.getElementById('strengthSelect'); sel.innerHTML=''; const optAll=document.createElement('option'); optAll.value='All'; optAll.textContent='All'; sel.appendChild(optAll); (data.strengths||[]).forEach(s=>{const o=document.createElement('option');o.value=s;o.textContent=s;sel.appendChild(o);}); }catch(e){} }
+    // Rink drawing
+    function setupCanvas(c){ c.width=c.clientWidth; c.height=c.clientHeight; return c.getContext('2d'); }
+    const RINK_SRC='/hockey-rink.png'; let rinkImgPromise=null; function loadRink(){ if(rinkImgPromise) return rinkImgPromise; rinkImgPromise=new Promise(res=>{const i=new Image(); i.onload=()=>res(i); i.src=RINK_SRC;}); return rinkImgPromise; }
+    async function drawZoneBases(){ const img=await loadRink(); const def=document.getElementById('defRinkBase'); const off=document.getElementById('offRinkBase'); if(!def||!off) return; const d=setupCanvas(def); const o=setupCanvas(off); d.clearRect(0,0,def.width,def.height); o.clearRect(0,0,off.width,off.height); const sw=img.naturalWidth, sh=img.naturalHeight; const zoneW=sw*0.375; d.drawImage(img,0,0,zoneW,sh,0,0,def.width,def.height); o.drawImage(img,sw-zoneW,0,zoneW,sh,0,0,off.width,off.height); }
+  function normalizeZoneCoord(x,y,isFor){ return { zx: isFor ? (x-25)/75 : (x+100)/75, zy:(42.5 - y)/85 }; }
+  async function fetchShotMap(){ const team=document.getElementById('teamSelect').value; if(!team) return; const date_from=dateFrom.value||''; const date_to=dateTo.value||''; const params=new URLSearchParams({team,perspective:'All',date_from,date_to}); multiIds.forEach(id=>{ getMultiValues(id).forEach(v=>params.append(id, v)); }); const r=await fetch(`/api/report/shotmap?${params.toString()}`); if(!r.ok) return; const data=await r.json(); drawShotMap(data.attempts||[], team); }
+  async function populateFilters(){ try{ const r=await fetch('/api/report/filters'); if(!r.ok) return; const data=await r.json(); buildMenu('seasons', data.seasons||[]); buildMenu('season_states', data.season_states||data.states||[]); buildMenu('games', data.games||[]); buildMenu('players', data.players||[]); buildMenu('opponents', data.opponents||[]); buildMenu('periods', data.periods||[]); buildMenu('events', data.events||[]); buildMenu('strengths', data.strengths||[]); buildMenu('goalies', data.goalies||[]); buildMenu('onice', data.onice||[]); setTimeout(()=>{ restoreState(); multiIds.forEach(id=>updateButtonLabel(id)); fetchKPIs(); fetchShotMap(); },0); }catch(e){} }
+  async function refreshGames(){ const params=new URLSearchParams(); ['players','opponents','periods','events','strengths','goalies','seasons','season_states','onice'].forEach(id=>{ getMultiValues(id).forEach(v=>params.append(id,v)); }); const df=dateFrom.value||''; const dt=dateTo.value||''; if(df) params.set('date_from',df); if(dt) params.set('date_to',dt); const r=await fetch('/api/report/games?'+params.toString()); if(!r.ok) return; const data=await r.json(); buildMenu('games', data.games||[]); updateButtonLabel('games'); }
+    // Team color lookup (quick parse of Teams.csv once)
+    const teamColorCache = (function(){ let colors=null; return async function(team){ if(colors) return colors[team]||'#53b3ff'; try{ const resp=await fetch('/Teams.csv'); if(resp.ok){ colors={}; const txt=await resp.text(); const lines=txt.split(/\n/); const header=lines.shift(); lines.forEach(l=>{ const c=l.split(','); if(c.length>5){ colors[c[1]]=c[5]; }}); return colors[team]||'#53b3ff'; } }catch(e){} return '#53b3ff'; }; })();
+    function drawShape(ctx, shape, x, y, color){ ctx.save(); ctx.strokeStyle=color; ctx.fillStyle=color; ctx.lineWidth=1.4; switch(shape){ case 'goal': ctx.beginPath(); ctx.moveTo(x,y-5); ctx.lineTo(x+4.5,y+5); ctx.lineTo(x-4.5,y+1.5); ctx.lineTo(x+4.5,y+1.5); ctx.lineTo(x-4.5,y+5); ctx.closePath(); ctx.fill(); break; case 'shot': ctx.beginPath(); ctx.arc(x,y,5,0,Math.PI*2); ctx.stroke(); break; case 'miss': ctx.beginPath(); ctx.moveTo(x,y-5); ctx.lineTo(x+5,y+5); ctx.lineTo(x-5,y+5); ctx.closePath(); ctx.stroke(); break; case 'block': ctx.strokeRect(x-5,y-5,10,10); break; case 'penalty': ctx.beginPath(); ctx.moveTo(x,y-5); ctx.lineTo(x+5,y); ctx.lineTo(x,y+5); ctx.lineTo(x-5,y); ctx.closePath(); ctx.stroke(); break; } ctx.restore(); }
+    async function drawLegend(){ document.querySelectorAll('canvas[data-icon]').forEach(c=>{ const ctx=c.getContext('2d'); const shape=c.dataset.icon; drawShape(ctx, shape, 7,7, '#ffffff'); }); }
+    // Tooltip
+  const tooltip=document.createElement('div'); tooltip.style.cssText='position:absolute;pointer-events:none;background:rgba(20,24,38,.94);border:1px solid #6b7280;padding:.55rem .7rem;border-radius:.5rem;font-size:.7rem;line-height:1.25;z-index:200;display:none;max-width:210px;white-space:normal;font-weight:500;'; document.body.appendChild(tooltip);
+    function showTooltip(evt, html){ tooltip.innerHTML=html; tooltip.style.display='block'; const pad=12; const x=evt.clientX+pad; const y=evt.clientY+pad; tooltip.style.left=x+'px'; tooltip.style.top=y+'px'; }
+    function hideTooltip(){ tooltip.style.display='none'; }
+    async function drawShotMap(attempts, team){ const defC=document.getElementById('defShotCanvas'); const offC=document.getElementById('offShotCanvas'); const defCtx=setupCanvas(defC); const offCtx=setupCanvas(offC); defCtx.clearRect(0,0,defC.width,defC.height); offCtx.clearRect(0,0,offC.width,offC.height); const tColor=await teamColorCache(team); const pointIndex=[]; for(const a of attempts){ if(a.adj_x==null||a.adj_y==null) continue; if(a.forTeam!==team && a.againstTeam!==team) continue; const isFor=a.forTeam===team; const rawX=isFor? a.adj_x : -a.adj_x; const rawY=isFor? a.adj_y : -a.adj_y; if(rawX>-25 && rawX<25) continue; if(isFor && rawX<25) continue; if(!isFor && rawX>-25) continue; const {zx,zy}=normalizeZoneCoord(rawX,rawY,isFor); const ctx=isFor?offCtx:defCtx; const shape = a.event==='Goal'?'goal': a.event==='Shot'?'shot': a.event==='Miss'?'miss': a.event==='Block'?'block': a.event==='Penalty'?'penalty':'shot'; const px=zx*ctx.canvas.width; const py=zy*ctx.canvas.height; drawShape(ctx, shape, px, py, tColor); pointIndex.push({canvas:ctx.canvas,x:px,y:py,r:7,data:a,isFor}); }
+      function handleMove(e){ const rectDef=defC.getBoundingClientRect(); const rectOff=offC.getBoundingClientRect(); const mx=e.clientX; const my=e.clientY; let found=null; for(const p of pointIndex){ const rect=p.canvas.getBoundingClientRect(); if(mx<rect.left||mx>rect.right||my<rect.top||my>rect.bottom) continue; const dx=mx- (rect.left + p.x/ p.canvas.width * rect.width); const dy=my- (rect.top + p.y/ p.canvas.height * rect.height); const dist=Math.hypot(dx,dy); if(dist <= p.r){ found=p; break; } } if(found){ const d=found.data; const html=`<strong style='color:${tColor}'>${d.forTeam}</strong><br>${d.event} (${d.strength||''})<br>Shooter: ${d.shooter||'—'}<br>Goalie: ${d.goalie||'—'}<br>Period: ${d.period}`; showTooltip(e, html);} else hideTooltip(); }
+      function attach(canvas){ canvas.addEventListener('mousemove',handleMove); canvas.addEventListener('mouseleave',hideTooltip); }
+      attach(defC); attach(offC);
+    }
+    // Events
+  document.addEventListener('change', e=>{ if(['teamSelect','dateFrom','dateTo'].includes(e.target.id)){ saveState(getState()); fetchKPIs(); fetchShotMap(); if(currentView==='heat-map'){ computeAndDrawHeat(); } }});
+    // Init
+  (async()=>{ await populateTeams(); await populateFilters(); await drawZoneBases(); await drawLegend(); window.addEventListener('resize',()=>{drawZoneBases(); fetchShotMap();}); })();
+  /** ---------------- Heat Map (Zones) ----------------- */
+  let currentView='shot-map';
+  const defHeatCanvas=document.getElementById('defHeatCanvas');
+  const offHeatCanvas=document.getElementById('offHeatCanvas');
+  function resizeHeatCanvases(){ [defHeatCanvas,offHeatCanvas].forEach(c=>{ if(!c) return; c.width=c.clientWidth; c.height=c.clientHeight; }); }
+  window.addEventListener('resize',()=>{ if(currentView==='heat-map'){ resizeHeatCanvases(); computeAndDrawHeat(); } });
+  function toggleView(view){ currentView=view; const showHeat=(view==='heat-map'); const showShotMap=(view==='shot-map'); const showShotAim=(view==='shot-aim'); const showTables=(view==='tables'); const shotMapRow=document.getElementById('shotMapRow'); const shotAim=document.getElementById('shotAimPlaceholder'); const tablesWrap=document.getElementById('tablesWrapper');
+    document.getElementById('heatControls').style.display= showHeat? 'flex':'none';
+    defHeatCanvas.style.display= showHeat? 'block':'none';
+    offHeatCanvas.style.display= showHeat? 'block':'none';
+    document.getElementById('defShotCanvas').style.display= showHeat||showShotMap? (showHeat? 'none':'block'):'none';
+    document.getElementById('offShotCanvas').style.display= showHeat||showShotMap? (showHeat? 'none':'block'):'none';
+    shotMapRow.style.display = (showHeat||showShotMap)? 'grid':'none';
+    shotAim.style.display = showShotAim? 'block':'none';
+    tablesWrap.style.display = showTables? 'block':'none';
+    const metricBar=document.getElementById('topMetricBar'); if(metricBar) metricBar.style.display= showHeat? 'flex':'none';
+    const markerLegend=document.getElementById('markerLegend'); if(markerLegend) markerLegend.style.display= showShotMap? 'flex':'none';
+    if(showHeat){ resizeHeatCanvases(); computeAndDrawHeat(); }
+  else if(showTables){ fetchCurrentTable(); }
+    else { if(selectedZoneIds.size){ selectedZoneIds.clear(); } fetchKPIs(); if(showShotMap) fetchShotMap(); }
+  }
+  // Use existing sub-tabs
+  (function wireSubTabs(){ const container=document.getElementById('subTabs'); if(!container) return; container.addEventListener('click',e=>{ const btn=e.target.closest('.sub-tab'); if(!btn) return; container.querySelectorAll('.sub-tab').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); toggleView(btn.dataset.view); }); })();
+  // Heat metric buttons
+  let currentHeatMetric='corsi';
+  const heatControls=document.getElementById('heatControls');
+  // Rewire metric buttons (now in topMetricBar, always visible)
+  (function initMetricButtons(){ const bar=document.getElementById('topMetricBar'); if(!bar) return; const btns=bar.querySelectorAll('.metric-btn'); btns.forEach(btn=>btn.addEventListener('click',()=>{ btns.forEach(b=>b.classList.remove('active')); btn.classList.add('active'); currentHeatMetric=btn.dataset.metric; if(currentView==='heat-map'){ computeAndDrawHeat(); updateKpisForZoneSelection(); } })); })();
+  const selectedZoneIds=new Set();
+  function pairedIds(id){ if(id.startsWith('N')) return [id]; if(id.startsWith('D')) return [id, 'O'+id.slice(1)]; if(id.startsWith('O')) return [id, 'D'+id.slice(1)]; return [id]; }
+  function toggleZoneSelection(id){
+    // If currently selected (either id or its pair), clear selection
+    const pair=pairedIds(id);
+    const alreadySelected = pair.every(pid=>selectedZoneIds.has(pid));
+    selectedZoneIds.clear();
+    if(!alreadySelected){
+      // Only add if feature exists
+      pair.forEach(pid=>{ if(window.HOCKEY_ZONES.features.some(f=>f.properties.id===pid)) selectedZoneIds.add(pid); });
+    }
+    computeAndDrawHeat();
+    updateKpisForZoneSelection();
+  }
+  // Projection & drawing helpers
+  // Project rink coordinates to canvas (match shot map normalization)
+  function projectPoint(x,y,isOffensive){
+    const zx = isOffensive ? (x-25)/75 : (x+100)/75; // Offensive: x in [25,100]; Defensive: x in [-100,-25]
+    const zy = (42.5 - y)/85; // Same for both halves (no vertical mirroring)
+    return [zx,zy];
+  }
+  function drawZonePath(ctx, feature, isOffensive){ const coords=feature.geometry.coordinates[0]; ctx.beginPath(); let started=false; for(let i=0;i<coords.length;i++){ const [x,y]=coords[i]; const inHalf=isOffensive? x>=25 : x<=-25; if(!inHalf) continue; const [px,py]=projectPoint(x,y,isOffensive); const cx=px*ctx.canvas.width; const cy=py*ctx.canvas.height; if(!started){ ctx.moveTo(cx,cy); started=true; } else ctx.lineTo(cx,cy); } ctx.closePath(); }
+  let latestAttempts=[]; // last attempts for heat & zone filtering
+  async function fetchHeatSource(){ const team=document.getElementById('teamSelect').value; if(!team) return []; const date_from=dateFrom.value||''; const date_to=dateTo.value||''; const params=new URLSearchParams({team,perspective:'All',date_from,date_to}); multiIds.forEach(id=>{ getMultiValues(id).forEach(v=>params.append(id,v)); }); const r=await fetch(`/api/report/shotmap?${params.toString()}`); if(!r.ok) return []; const data=await r.json(); latestAttempts=data.attempts||[]; return latestAttempts; }
+  function pointInPoly(poly,x,y){ let inside=false; for(let i=0,j=poly.length-1;i<poly.length;j=i++) { const xi=poly[i][0], yi=poly[i][1]; const xj=poly[j][0], yj=poly[j][1]; const intersect=((yi>y)!==(yj>y)) && (x < (xj - xi)*(y - yi)/(yj - yi + 1e-9) + xi); if(intersect) inside=!inside; } return inside; }
+  function pointZoneId(a, team){
+    // Cache per team perspective key
+    const cacheKey = team + '_zoneId';
+    if(a[cacheKey]!==undefined) return a[cacheKey];
+    if(a.adj_x==null||a.adj_y==null){ a[cacheKey]=null; return null; }
+    // Transform coordinates so that relative to selected team: Offensive (team) in +x half, Defensive (opponent) in -x half
+    let x,y;
+    if(a.forTeam===team){ x=a.adj_x; y=a.adj_y; }
+    else if(a.againstTeam===team){ x=-a.adj_x; y=-a.adj_y; }
+    else { a[cacheKey]=null; return null; }
+    for(const feat of (window.HOCKEY_ZONES?.features||[])){
+      const poly=feat.geometry.coordinates[0];
+      if(pointInPoly(poly,x,y)){ a[cacheKey]=feat.properties.id; return a[cacheKey]; }
+    }
+    a[cacheKey]=null; return null;
+  }
+  function aggregateZones(team){
+    const stats={};
+    const ensure=id=>{ if(!stats[id]) stats[id]={CF:0,FF:0,SF:0,GF:0,CA:0,FA:0,SA:0,GA:0}; return stats[id]; };
+    for(const a of latestAttempts){
+      if(a.forTeam!==team && a.againstTeam!==team) continue; // only events involving team
+      const zid=pointZoneId(a, team); if(!zid) continue;
+      const isOffensiveZone = zid.startsWith('O') || zid.startsWith('N');
+      const isTeamEvent = a.forTeam===team; // true if event for team (offense)
+      const s=ensure(zid);
+      const includeForOffense = isOffensiveZone && isTeamEvent; // offensive half uses team events
+      const includeForDefense = (!isOffensiveZone) && (!isTeamEvent); // defensive half uses opponent events
+      if(!(includeForOffense || includeForDefense)) continue; // skip mismatched events
+      const forSide = includeForOffense; // true => add to CF family, false => add to CA family
+      if(['Shot','Goal','Miss','Block'].includes(a.event)) { if(forSide) s.CF++; else s.CA++; }
+      if(['Shot','Goal','Miss'].includes(a.event)) { if(forSide) s.FF++; else s.FA++; }
+      if(['Shot','Goal'].includes(a.event)) {
+        if(forSide){ s.SF++; if(a.event==='Goal') s.GF++; }
+        else { s.SA++; if(a.event==='Goal') s.GA++; }
+      }
+    }
+    return stats;
+  }
+  function computeMetricValue(zoneId, stat, metric){ if(!stat) return 0; const defensive = zoneId.startsWith('D');
+    if(defensive){
+      switch(metric){
+        case 'corsi': return stat.CA; case 'fenwick': return stat.FA; case 'shots': return stat.SA; case 'goals': return stat.GA; case 'shpct': return stat.SA? (stat.GA/stat.SA*100):0; default: return 0;
+      }
+    } else { // offensive or neutral -> for team
+      switch(metric){
+        case 'corsi': return stat.CF; case 'fenwick': return stat.FF; case 'shots': return stat.SF; case 'goals': return stat.GF; case 'shpct': return stat.SF? (stat.GF/stat.SF*100):0; default: return 0;
+      }
+    }
+  }
+  function computeColor(val,minVal,maxVal){ if(maxVal<=minVal) return 'rgba(255,220,220,0.45)'; const t=(val-minVal)/(maxVal-minVal); const r=255; const g=Math.round(220*(1-t)+25*t); const b=Math.round(220*(1-t)+40*t); const alpha=0.45 + 0.35*t; return `rgba(${r},${g},${b},${alpha})`; }
+  async function computeAndDrawHeat(){ if(currentView!=='heat-map') return; await fetchHeatSource(); const team=document.getElementById('teamSelect').value; if(!team) return; const zoneStats=aggregateZones(team); const values=Object.keys(zoneStats).map(id=>computeMetricValue(id,zoneStats[id],currentHeatMetric)); const minVal = values.length? Math.min(...values):0; const maxVal = values.length? Math.max(...values):1; const defCtx=defHeatCanvas.getContext('2d'); const offCtx=offHeatCanvas.getContext('2d'); defCtx.clearRect(0,0,defHeatCanvas.width,defHeatCanvas.height); offCtx.clearRect(0,0,offHeatCanvas.width,offHeatCanvas.height);
+  (window.HOCKEY_ZONES?.features||[]).forEach(feat=>{ const id=feat.properties.id; const isOffensive = id.startsWith('O')|| id.startsWith('N'); const ctx=isOffensive? offCtx : defCtx; drawZonePath(ctx,feat,isOffensive); const stat=zoneStats[id]; const val=computeMetricValue(id,stat,currentHeatMetric); ctx.fillStyle=computeColor(val,minVal,maxVal); ctx.fill(); ctx.lineWidth= selectedZoneIds.has(id)?2:1; ctx.strokeStyle= selectedZoneIds.has(id)? '#000000':'rgba(255,255,255,0.25)'; ctx.stroke();
+      // centroid via area-weighted polygon in projected space
+      const poly=feat.geometry.coordinates[0]; const pts=[]; for(const [px,py] of poly){ const inHalf=isOffensive? px>=25: px<=-25; if(!inHalf) continue; const [lx,ly]=projectPoint(px,py,isOffensive); pts.push([lx*ctx.canvas.width, ly*ctx.canvas.height]); }
+      if(pts.length>=3){ let area=0,cx=0,cy=0; for(let i=0;i<pts.length;i++){ const [x1,y1]=pts[i]; const [x2,y2]=pts[(i+1)%pts.length]; const cross = x1*y2 - x2*y1; area += cross; cx += (x1 + x2)*cross; cy += (y1 + y2)*cross; } area*=0.5; if(Math.abs(area)>1e-6){ cx /= (6*area); cy /= (6*area); ctx.font='10px Inter, sans-serif'; const labelVal=currentHeatMetric==='shpct'? (val? val.toFixed(1):'0.0') : (val|0); ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.strokeStyle='rgba(0,0,0,0.55)'; ctx.lineWidth=3; ctx.strokeText(labelVal,cx,cy); ctx.fillStyle='#fff'; ctx.fillText(labelVal,cx,cy); } }
+    }); drawHeatLegend(minVal,maxVal); attachZoneEvents(); }
+  function drawHeatLegend(minVal,maxVal){ const c=document.getElementById('heatLegend'); if(!c) return; const ctx=c.getContext('2d'); const w=c.width; const h=c.height; ctx.clearRect(0,0,w,h); for(let x=0;x<w;x++){ const t=x/(w-1); const r=255; const g=Math.round(220*(1-t)+25*t); const b=Math.round(220*(1-t)+40*t); ctx.fillStyle=`rgb(${r},${g},${b})`; ctx.fillRect(x,0,1,h); } ctx.fillStyle='#fff'; ctx.font='9px Inter, sans-serif'; ctx.textBaseline='top'; ctx.textAlign='left'; ctx.fillText(`${minVal}`,4,h+2); ctx.textAlign='right'; ctx.fillText(`${maxVal}`,w-4,h+2); }
+  function attachZoneEvents(){ [defHeatCanvas,offHeatCanvas].forEach(canvas=>{ if(canvas._zoneEventsAttached) return; canvas._zoneEventsAttached=true; canvas.addEventListener('click',e=>{ const rect=canvas.getBoundingClientRect(); const x=(e.clientX-rect.left)/rect.width; const y=(e.clientY-rect.top)/rect.height; const ctx=canvas.getContext('2d'); let hitId=null; (window.HOCKEY_ZONES?.features||[]).forEach(f=>{ const isOffensive=f.properties.id.startsWith('O')||f.properties.id.startsWith('N'); if(isOffensive !== (canvas===offHeatCanvas)) return; ctx.beginPath(); drawZonePath(ctx,f,isOffensive); if(ctx.isPointInPath(x*canvas.width,y*canvas.height)) hitId=f.properties.id; ctx.closePath(); }); if(hitId) toggleZoneSelection(hitId); }); }); }
+  function updateKpisForZoneSelection(){ if(currentView!=='heat-map') return; if(selectedZoneIds.size===0){ fetchKPIs(); return; } const team=document.getElementById('teamSelect').value; if(!team) return; // compute metrics limited to selected offensive zone only
+    // Determine offensive and defensive ids from selection (pairing logic ensures <=1 pair)
+    let offensiveId=null, defensiveId=null;
+    selectedZoneIds.forEach(id=>{ if(id.startsWith('O')||id.startsWith('N')) offensiveId=id; else if(id.startsWith('D')) defensiveId=id; });
+    let CF=0,CA=0,FF=0,FA=0,SF=0,SA=0,GF=0,GA=0;
+    for(const a of latestAttempts){ if(a.forTeam!==team && a.againstTeam!==team) continue; const zid=pointZoneId(a, team); if(!zid) continue; const isFor=a.forTeam===team; const isAgainst=a.againstTeam===team; // Only count team offense in offensiveId AND opponent offense in defensiveId
+      if(isFor){ if(!offensiveId || zid!==offensiveId) continue; } else if(isAgainst){ if(!defensiveId || zid!==defensiveId) continue; } else continue;
+      if(['Shot','Goal','Miss','Block'].includes(a.event)){ if(isFor) CF++; if(isAgainst) CA++; }
+      if(['Shot','Goal','Miss'].includes(a.event)){ if(isFor) FF++; if(isAgainst) FA++; }
+      if(['Shot','Goal'].includes(a.event)){
+        if(isFor){ SF++; if(a.event==='Goal') GF++; }
+        if(isAgainst){ SA++; if(a.event==='Goal') GA++; }
+      }
+    }
+    const metrics={
+      'CA':CA,'CF':CF,'CF%': (CF+CA)? (CF/(CF+CA)*100).toFixed(1):'—',
+      'FA':FA,'FF':FF,'FF%': (FF+FA)? (FF/(FF+FA)*100).toFixed(1):'—',
+      'SA':SA,'SF':SF,'SF%': (SF+SA)? (SF/(SF+SA)*100).toFixed(1):'—',
+      'GA':GA,'GF':GF,'GF%': (GF+GA)? (GF/(GF+GA)*100).toFixed(1):'—',
+      'Sv%': (SA>0)? ((1-GA/SA)*100).toFixed(1):'—',
+      'PDO': ( (SF>0? (GF/SF*100):0) + (SA>0? (1-GA/SA)*100:0) ).toFixed(1),
+      'Sh%': (SF>0)? (GF/SF*100).toFixed(1):'—'
+    };
+    document.querySelectorAll('.kpi-metric').forEach(mEl=>{ const label=mEl.querySelector('.label')?.textContent; const valEl=mEl.querySelector('.value'); if(!label||!valEl) return; if(metrics[label]!==undefined) valEl.textContent=metrics[label]; });
+  }
+  // Initial fetch to have attempts ready for heat map on view switch
+  (async()=>{ await fetchHeatSource(); })();
+  /* ---------------- Tables ---------------- */
+  const tableHeader=document.getElementById('statsHeader');
+  const tableBody=document.getElementById('statsBody');
+  function clearTable(){ tableHeader.innerHTML=''; tableBody.innerHTML=''; }
+  const TABLE_COLUMNS={
+    // Skaters (individual production focus first, then on-ice)
+    skaters:['Name','Team','Season','State','Strength','GP','TOI','G','A','P','Sh%','Shots','Misses','Shots in block','Blocks','GF','GA','GF%','PEN taken','PEN drawn'],
+    // Goalies (lean set – usage + shot faced results)
+    goalies:['Name','Team','Season','State','Strength','GP','TOI','SA','GA','Sv%'],
+    // Teams (drive & results + discipline)
+    teams:['Team','Season','State','Strength','GP','CF','CA','CF%','FF','FA','FF%','SF','SA','SF%','GF','GA','GF%','PEN taken','PEN drawn','Sh%','Sv%','PDO']
+  };
+  function renderTable(type, rows){
+    clearTable();
+    const cols=TABLE_COLUMNS[type]||[];
+    // store current rows for export/sorting
+    window._currentTableType=type;
+    window._currentTableRows=rows.slice();
+    cols.forEach(c=>{
+      const th=document.createElement('th');
+      th.textContent=c;
+      th.style.padding='.5rem .6rem';
+      th.style.textAlign=(c==='Name'||c==='Team')?'left':'center';
+      th.style.fontWeight='600';
+      th.style.fontSize='.6rem';
+      th.style.letterSpacing='.05em';
+      th.style.whiteSpace='nowrap';
+      th.style.cursor='pointer';
+      th.dataset.col=c;
+      th.addEventListener('click',()=>sortTableBy(c));
+      tableHeader.appendChild(th);
+    });
+    rows.forEach(r=>{
+      const tr=document.createElement('tr');
+      tr.style.borderTop='1px solid rgba(255,255,255,0.05)';
+      const values=cols.map(col=>{
+        switch(col){
+          case 'Name': return r.player||r.team||'';
+          case 'Team': return r.team||'';
+          case 'Season': return r.Season || r.season || '';
+          case 'State': return r.Season_State || r.state || '';
+          case 'Strength': return r.Strength || r.strength_class || r.strength || '';
+          case 'PEN taken': return r.PEN_taken||0;
+          case 'PEN drawn': return r.PEN_drawn||0;
+          case 'Shots in block': return r.Shots_in_block||0;
+          default: return r[col.replace(/%$/,'%')] ?? r[col] ?? r[col.replace(' ','_')] ?? '';
+        }
+      });
+      values.forEach((val,i)=>{
+        const col=cols[i];
+        const td=document.createElement('td');
+        td.textContent=val===undefined?'':val;
+        td.style.padding='.45rem .6rem';
+        td.style.textAlign=(col==='Name'||col==='Team')?'left':'center';
+        td.style.fontSize='.6rem';
+        tr.appendChild(td);
+      });
+      tableBody.appendChild(tr);
+    });
+  }
+  // Sorting state
+  let sortState={col:null, dir:1};
+  function sortTableBy(col){
+    const rows=window._currentTableRows||[]; if(!rows.length) return;
+    const isNumeric = (v)=> typeof v==='number' || (!isNaN(parseFloat(v)) && isFinite(v));
+    if(sortState.col===col){ sortState.dir*=-1; } else { sortState.col=col; sortState.dir=1; }
+    rows.sort((a,b)=>{
+      const av = extractValue(a,col);
+      const bv = extractValue(b,col);
+      if(isNumeric(av)&&isNumeric(bv)) return (parseFloat(av)-parseFloat(bv))*sortState.dir;
+      return String(av).localeCompare(String(bv))*sortState.dir;
+    });
+    renderTable(window._currentTableType, rows); // re-render
+    // indicate sort
+    Array.from(tableHeader.children).forEach(th=>{ if(th.dataset.col===col){ th.textContent=col + (sortState.dir===1?' ▲':' ▼'); } else { th.textContent=th.dataset.col; }});
+  }
+  function extractValue(row,col){
+    switch(col){
+      case 'Name': return row.player||row.team||'';
+  case 'Team': return row.team||'';
+  case 'Season': return row.Season || row.season || '';
+  case 'State': return row.Season_State || row.state || '';
+  case 'Strength': return row.Strength || row.strength_class || row.strength || '';
+      case 'PEN taken': return row.PEN_taken||0;
+      case 'PEN drawn': return row.PEN_drawn||0;
+      case 'Shots in block': return row.Shots_in_block||0;
+      default: return row[col.replace(/%$/,'%')] ?? row[col] ?? row[col.replace(' ','_')] ?? '';
+    }
+  }
+  // CSV Export
+  function exportCurrentTable(){ const type=window._currentTableType; const rows=window._currentTableRows||[]; if(!type||!rows.length) return; const cols=TABLE_COLUMNS[type]; const lines=[]; lines.push(cols.join(',')); rows.forEach(r=>{ const line=cols.map(c=>{ let v=extractValue(r,c); if(typeof v==='string'){ if(v.includes('"')||v.includes(',')||v.includes('\n')) v='"'+v.replace(/"/g,'""')+'"'; } return v; }).join(','); lines.push(line); }); const blob=new Blob([lines.join('\n')],{type:'text/csv'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=`${type}_export.csv`; document.body.appendChild(a); a.click(); setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); },0); }
+  // Inject export button next to table selector buttons
+  (function addExportBtn(){ const wrap=document.querySelector('#tablesWrapper > div:first-child'); if(!wrap) return; const btn=document.createElement('button'); btn.type='button'; btn.textContent='Export CSV'; btn.className='metric-btn'; btn.style.marginLeft='auto'; btn.addEventListener('click',exportCurrentTable); wrap.appendChild(btn); })();
+  async function fetchCurrentTable(){
+    const active=document.querySelector('.tbl-sub-btn.active'); if(!active) return; const type=active.dataset.table; const team=document.getElementById('teamSelect').value||'All';
+  const params=new URLSearchParams({type,team}); const date_from=dateFrom.value||''; const date_to=dateTo.value||''; if(date_from) params.set('date_from',date_from); if(date_to) params.set('date_to',date_to);
+  const seasonOverride=document.getElementById('tfSeason')?.value; if(seasonOverride && seasonOverride!=='All') params.set('season', seasonOverride);
+  const seasonStateOverride=document.getElementById('tfSeasonState')?.value; if(seasonStateOverride && seasonStateOverride!=='All') params.set('season_state', seasonStateOverride);
+  const strengthOverride=document.getElementById('tfStrength')?.value; if(strengthOverride && strengthOverride!=='All') params.set('strength', strengthOverride);
+    multiIds.forEach(id=>{ getMultiValues(id).forEach(v=>params.append(id,v)); });
+    const r=await fetch('/api/report/tables?'+params.toString()); if(!r.ok) return; const data=await r.json();
+    // Shallow copy raw rows
+    window._baseTableRows = (data.rows||[]).map(o=>({...o}));
+    if(type==='skaters'){
+      // Recompute Points defensively to guarantee P == G + A (guard against any cached mutated value)
+      window._baseTableRows.forEach(row=>{
+        if(typeof row.G==='number' && typeof row.A==='number'){
+          const expected = row.G + row.A;
+            if(row.P !== expected){
+              // Debug: can be viewed in browser dev tools
+              try{ console.debug('[PWHL] Correcting P mismatch for', row.player, 'backend P=', row.P, 'G=', row.G, 'A=', row.A, 'Setting to', expected); }catch(e){}
+              row.P = expected;
+            }
+        }
+      });
+    }
+    applyTableFilters(true);
+  }
+
+  function applyTableFilters(initial=false){
+    const type=window._currentTableType || (document.querySelector('.tbl-sub-btn.active')?.dataset.table);
+    if(!type) return;
+    const base = window._baseTableRows || [];
+    let search = document.getElementById('tfSearch')?.value.trim().toLowerCase() || '';
+    const minGP = parseFloat(document.getElementById('tfMinGP')?.value || '');
+  // Season & Strength handled via backend refetch; not filtered client-side
+    const perGameMode = window._tableMode === 'per_game';
+    let rows = base.filter(r=>{
+      let ok = true;
+      if(search){ const name=(r.player||r.team||'').toLowerCase(); ok = ok && name.includes(search); }
+      if(!isNaN(minGP)) ok = ok && (r.GP||0) >= minGP;
+      return ok;
+    });
+    if(perGameMode){
+      rows = rows.map(r=>{
+        const gp = r.GP || 1;
+        const clone = {...r};
+        // Recompute P again in case upstream changed
+        if(typeof clone.G==='number' && typeof clone.A==='number') clone.P = clone.G + clone.A;
+        Object.keys(clone).forEach(k=>{
+          if(['player','team','Name','Team','GP','season','Season','strength_class','Strength','Season_State'].includes(k)) return;
+          if(typeof clone[k]==='number' && !['GF%','Sv%','Sh%','PDO'].includes(k)){
+            clone[k] = +(clone[k]/gp).toFixed(2);
+          }
+        });
+        return clone;
+      });
+    }
+    renderTable(type, rows);
+    const summary=document.getElementById('tfSummary');
+    if(summary){ summary.textContent = base.length? `${rows.length} / ${base.length} rows` + (perGameMode?' (Per Game)':'') : '—'; }
+    if(initial){ if(summary && !search && isNaN(minGP)) summary.textContent = `${rows.length} rows` + (perGameMode?' (Per Game)':''); }
+  }
+
+  // Wire filter panel events
+  (function wireTableFilters(){
+    window._tableMode='totals';
+    const search=document.getElementById('tfSearch');
+    const minGP=document.getElementById('tfMinGP');
+  const seasonSel=document.getElementById('tfSeason');
+  const seasonStateSel=document.getElementById('tfSeasonState');
+    const strengthSel=document.getElementById('tfStrength');
+    const resetBtn=document.getElementById('tfReset');
+    const btnTotals=document.getElementById('tfModeTotals');
+    const btnPerGame=document.getElementById('tfModePerGame');
+    function updateModeButtons(){
+      [btnTotals,btnPerGame].forEach(b=>{ if(!b) return; b.classList.remove('active'); });
+      if(window._tableMode==='per_game'){ btnPerGame?.classList.add('active'); } else { btnTotals?.classList.add('active'); }
+    }
+    if(btnTotals) btnTotals.addEventListener('click',()=>{ window._tableMode='totals'; updateModeButtons(); applyTableFilters(); });
+  if(btnPerGame) btnPerGame.addEventListener('click',()=>{ window._tableMode='per_game'; updateModeButtons(); applyTableFilters(); });
+  if(resetBtn) resetBtn.addEventListener('click',()=>{ if(search) search.value=''; if(minGP) minGP.value=''; if(seasonSel) seasonSel.value='All'; if(seasonStateSel) seasonStateSel.value='All'; if(strengthSel) strengthSel.value='All'; window._tableMode='totals'; updateModeButtons(); fetchCurrentTable(); });
+    if(search) search.addEventListener('input',()=>applyTableFilters());
+  ;[minGP].forEach(inp=>{ if(inp) inp.addEventListener('change',()=>applyTableFilters()); });
+  if(seasonSel) seasonSel.addEventListener('change',()=>fetchCurrentTable());
+  if(seasonStateSel) seasonStateSel.addEventListener('change',()=>fetchCurrentTable());
+  if(strengthSel) strengthSel.addEventListener('change',()=>fetchCurrentTable());
+    updateModeButtons();
+    // Populate season options dynamically from global filter menu (reuse filters data if loaded)
+    fetch('/api/report/filters').then(r=>r.json()).then(data=>{ if(seasonSel && data.seasons){ const existing=new Set(Array.from(seasonSel.options).map(o=>o.value)); (data.seasons||[]).forEach(s=>{ if(!existing.has(s.value||s)){ const opt=document.createElement('option'); opt.value=s.value||s; opt.textContent=s.label||s; seasonSel.appendChild(opt); } }); }}).catch(()=>{});
+  })();
+  document.querySelectorAll('.tbl-sub-btn').forEach(btn=>{ btn.addEventListener('click',()=>{ document.querySelectorAll('.tbl-sub-btn').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); fetchCurrentTable(); }); });
+  // Ensure a fresh fetch when leaving Per Game mode to reset any derived rounding drift
+  document.getElementById('tfModeTotals')?.addEventListener('click',()=>{ fetchCurrentTable(); });
+  </script>
+</body>
+</html>
