@@ -611,118 +611,152 @@ class ReportDataStore:
 
     def tables_skaters_individual(self, **kwargs):
         self.load()
-        rows=self.rows
-        rows=self._apply_common_filters(rows, row_strength_independent=True, **kwargs)
+        requested_strength = kwargs.get('strength','All')
+        # Always pull all strengths for internal aggregation to avoid double counting logic
+        k_all = dict(kwargs)
+        k_all['strength'] = 'All'
+        rows = self._apply_common_filters(self.rows, row_strength_independent=True, **k_all)
         season_filter = kwargs.get('season','All')
         season_state_filter = kwargs.get('season_state','All')
-        strength_filter = kwargs.get('strength','All')
-        stats={}
         goalie_names = {r['goalie'] for r in rows if r.get('goalie')}
-        def ensure_player(name: str, team: str):
-            return stats.setdefault(name, {
-                'player': name,
-                'team': team,
-                'GP': set(),
-                'G':0,'A':0,'P':0,
-                'PEN_taken':0,'PEN_drawn':0,
-                'Shots':0,'Misses':0,'Shots_in_block':0,'Blocks':0,
-                'GF':0,'GA':0
-            })
-        # First pass
+
+        # Structure: stats[player] = {'team':team,'GP':set(),'tot':{metrics}, 'by':{strength_class: metrics}}
+        def blank_metrics():
+            return {'G':0,'A':0,'Shots':0,'Misses':0,'Shots_in_block':0,'Blocks':0,'GF':0,'GA':0,'PEN_taken':0,'PEN_drawn':0}
+        stats: Dict[str, Dict[str, Any]] = {}
+
+        def ensure(player: str, team: str):
+            if player not in stats:
+                stats[player] = {'player':player,'team':team,'GP':set(),'tot':blank_metrics(),'by':{'5v5':blank_metrics(),'EV':blank_metrics(),'PP':blank_metrics(),'SH':blank_metrics()}}
+            return stats[player]
+
+        # Helper to map raw row strength to classification from perspective of team_for or opponent
+        def row_class_for_team(row, team, is_for: bool):
+            return self._classify_strength(row['strength'], team, is_for)
+
+        # Iterate events once
         for r in rows:
-            shooter=r.get('shooter')
-            if not shooter or shooter in goalie_names:
-                continue
-            team=r['team_for']
-            s=ensure_player(shooter, team)
-            s['GP'].add(r['game_id'])
-            self._load_lineups_for_game(r['game_id'])
-            row_class = self._classify_strength(r['strength'], team, True)
-            # Determine if this row should count for individual offensive stats under current strength filter
-            def strength_row_matches(row_class: str) -> bool:
-                if strength_filter=='All': return True
-                if strength_filter=='EV': return row_class in ('5v5','EV')
-                if strength_filter=='5v5': return row_class=='5v5'
-                if strength_filter in ('PP','SH'): return row_class==strength_filter
-                return row_class==strength_filter
-            if strength_row_matches(row_class):
+            gid = r['game_id']
+            shooter = r.get('shooter')
+            team_for = r['team_for']
+            if shooter and shooter not in goalie_names:
+                rec = ensure(shooter, team_for)
+                rec['GP'].add(gid)
+                cls = row_class_for_team(r, team_for, True)
+                # Offensive individual events
                 if r['is_goal']:
-                    s['G']+=1
-                    if r.get('assist1') and r['assist1'] not in goalie_names:
-                        ensure_player(r['assist1'], team)['GP'].add(r['game_id'])
-                    if r.get('assist2') and r['assist2'] not in goalie_names:
-                        ensure_player(r['assist2'], team)['GP'].add(r['game_id'])
-                if r['is_shot']: s['Shots']+=1
-                if r['is_miss']: s['Misses']+=1
-                if r['is_block']: s['Shots_in_block']+=1
-        # Second pass assists & penalties
-        for r in rows:
+                    rec['tot']['G'] += 1
+                    rec['by'][cls]['G'] += 1
+                if r['is_shot']:
+                    rec['tot']['Shots'] += 1; rec['by'][cls]['Shots'] += 1
+                if r['is_miss']:
+                    rec['tot']['Misses'] += 1; rec['by'][cls]['Misses'] += 1
+                if r['is_block']:
+                    rec['tot']['Shots_in_block'] += 1; rec['by'][cls]['Shots_in_block'] += 1
+            # Assists
             if r['event']=='Goal':
                 for a_field in ('assist1','assist2'):
-                    a=r.get(a_field)
+                    a = r.get(a_field)
                     if a and a not in goalie_names:
-                        team=r['team_for']
-                        row_class = self._classify_strength(r['strength'], team, True)
-                        if strength_filter=='All' or \
-                           (strength_filter=='EV' and row_class in ('5v5','EV')) or \
-                           (strength_filter=='5v5' and row_class=='5v5') or \
-                           (strength_filter in ('PP','SH') and row_class==strength_filter) or \
-                           (row_class==strength_filter):
-                            s=ensure_player(a, team)
-                            s['A']+=1
+                        rec = ensure(a, team_for)
+                        rec['GP'].add(gid)
+                        cls = row_class_for_team(r, team_for, True)
+                        rec['tot']['A'] += 1
+                        rec['by'][cls]['A'] += 1
+            # Penalties (taken only for now)
             if r['event']=='Penalty':
-                shooter=r.get('shooter')
-                if shooter and shooter not in goalie_names:
-                    ensure_player(shooter, r['team_for'])['PEN_taken']+=1
-        # On-ice goals
+                pen_player = r.get('shooter')
+                if pen_player and pen_player not in goalie_names:
+                    rec = ensure(pen_player, team_for)
+                    rec['GP'].add(gid)
+                    cls = row_class_for_team(r, team_for, True)
+                    rec['tot']['PEN_taken'] += 1
+                    rec['by'][cls]['PEN_taken'] += 1
+        # On-ice GF/GA
         for r in rows:
-            if r['event']!='Goal': continue
-            gid=r['game_id']
-            meta=self.game_meta.get(gid, {})
-            home=meta.get('home_team')
-            shooting_team=r['team_for']
-            shooter=r.get('shooter')
+            if r['event']!='Goal':
+                continue
+            gid = r['game_id']
+            meta = self.game_meta.get(gid, {})
+            home = meta.get('home_team')
+            shooting_team = r['team_for']
+            shooter = r.get('shooter')
             if shooting_team==home:
-                for_players=r.get('on_ice_home') or []
-                against_players=r.get('on_ice_away') or []
+                on_for = list(r.get('on_ice_home') or [])
+                on_against = list(r.get('on_ice_away') or [])
             else:
-                for_players=r.get('on_ice_away') or []
-                against_players=r.get('on_ice_home') or []
-            if shooter and shooter not in for_players and shooter not in goalie_names:
-                for_players=list(for_players)+[shooter]
-            # For each on-ice player decide classification from their team POV and gate GF/GA attribution
-            for p in for_players:
+                on_for = list(r.get('on_ice_away') or [])
+                on_against = list(r.get('on_ice_home') or [])
+            if shooter and shooter not in on_for and shooter not in goalie_names:
+                on_for.append(shooter)
+            # For side scoring
+            cls_for = row_class_for_team(r, shooting_team, True)
+            for p in on_for:
                 if p in goalie_names: continue
-                row_class_for = self._classify_strength(r['strength'], shooting_team, True)
-                if strength_filter=='All' or \
-                   (strength_filter=='EV' and row_class_for in ('5v5','EV')) or \
-                   (strength_filter=='5v5' and row_class_for=='5v5') or \
-                   (strength_filter in ('PP','SH') and row_class_for==strength_filter) or \
-                   (row_class_for==strength_filter):
-                    s=ensure_player(p, shooting_team); s['GF']+=1; s['GP'].add(gid)
-            for p in against_players:
+                rec = ensure(p, shooting_team)
+                rec['GP'].add(gid)
+                rec['tot']['GF'] += 1
+                rec['by'][cls_for]['GF'] += 1
+            # Against side
+            for p in on_against:
                 if p in goalie_names: continue
                 opp_team = r['team_against']
-                row_class_against = self._classify_strength(r['strength'], opp_team, False)
-                if strength_filter=='All' or \
-                   (strength_filter=='EV' and row_class_against in ('5v5','EV')) or \
-                   (strength_filter=='5v5' and row_class_against=='5v5') or \
-                   (strength_filter in ('PP','SH') and row_class_against==strength_filter) or \
-                   (row_class_against==strength_filter):
-                    s=ensure_player(p, opp_team); s['GA']+=1; s['GP'].add(gid)
+                cls_against = row_class_for_team(r, opp_team, False)
+                rec = ensure(p, opp_team)
+                rec['GP'].add(gid)
+                rec['tot']['GA'] += 1
+                rec['by'][cls_against]['GA'] += 1
+
+        # Prepare output selecting requested strength subset
+        def select_metrics(rec):
+            if requested_strength=='All':
+                return rec['tot']
+            if requested_strength=='EV':
+                # Combine 5v5 + EV buckets
+                ev = blank_metrics()
+                for k in ('5v5','EV'):
+                    b = rec['by'][k]
+                    for m,v in b.items():
+                        ev[m]+=v
+                return ev
+            # direct bucket (PP, SH, 5v5)
+            if requested_strength in rec['by']:
+                return rec['by'][requested_strength]
+            return blank_metrics()
+
         out=[]
-        for s in stats.values():
-            s['GP']=len(s['GP'])
-            s['P']=s['G']+s['A']
-            s['Sh%']=round(s['G']/s['Shots']*100,1) if s['Shots']>0 else 0
-            total_toi_secs=sum(secs for (gid,name),secs in self.toi_lookup.items() if name==s['player'])
-            s['TOI']=round(total_toi_secs/60,1) if total_toi_secs else 0.0
-            total_goals=s['GF']+s['GA']
-            s['GF%']=round(s['GF']/total_goals*100,1) if total_goals>0 else None
-            s['Season']=season_filter
-            s['Season_State']=season_state_filter
-            s['Strength']=strength_filter
-            out.append(s)
+        for rec in stats.values():
+            metrics = select_metrics(rec)
+            G = metrics['G']; A = metrics['A']
+            Shots = metrics['Shots']; Misses=metrics['Misses']; Sib=metrics['Shots_in_block']
+            GF=metrics['GF']; GA=metrics['GA']
+            P = G + A
+            Shp = round(G / Shots * 100,1) if Shots>0 else 0
+            total_goals = GF + GA
+            GFp = round(GF/total_goals*100,1) if total_goals>0 else None
+            total_toi_secs = sum(secs for (gid,name),secs in self.toi_lookup.items() if name==rec['player'])
+            out.append({
+                'player': rec['player'],
+                'team': rec['team'],
+                'GP': len(rec['GP']),
+                'TOI': round(total_toi_secs/60,1) if total_toi_secs else 0.0,
+                'G': G,
+                'A': A,
+                'P': P,
+                'Shots': Shots,
+                'Misses': Misses,
+                'Shots_in_block': Sib,
+                'Blocks': 0,
+                'GF': GF,
+                'GA': GA,
+                'GF%': GFp,
+                'PEN_taken': metrics['PEN_taken'],
+                'PEN_drawn': 0,
+                'Sh%': Shp,
+                'Season': season_filter,
+                'Season_State': season_state_filter,
+                'Strength': requested_strength
+            })
         out.sort(key=lambda x:(-x['P'],-x['G'],x['player']))
         return out
 
