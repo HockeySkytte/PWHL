@@ -279,28 +279,35 @@ class ReportDataStore:
                     pp=ensure_player(p, r['team_for'])
                     pp['PEN_taken']+=1
                     pp['GP'].add(r['game_id'])
-        # On-ice GF/GA (unfiltered aside from initial filters) – keeps raw totals
-        for r in rows:
-            if r['event']!='Goal': continue
-            gid=r['game_id']
-            meta=self.game_meta.get(gid, {})
-            home=meta.get('home_team')
-            shooting_team=r['team_for']
-            shooter=r.get('shooter')
-            if shooting_team==home:
-                for_players=r.get('on_ice_home') or []
-                against_players=r.get('on_ice_away') or []
+        # 5v5-only on-ice GF/GA regardless of selected strength: We pull ALL strength rows (preserve other filters) then isolate 5v5 goals.
+        k_all = dict(kwargs)
+        k_all['strength'] = 'All'
+        gf_rows = self._apply_common_filters(self.rows, row_strength_independent=True, **k_all)
+        for r in gf_rows:
+            if r['event'] != 'Goal':
+                continue
+            gid = r['game_id']
+            meta = self.game_meta.get(gid, {})
+            home = meta.get('home_team')
+            shooting_team = r['team_for']
+            shooter = r.get('shooter')
+            # classify from shooting team POV; only count if true 5v5
+            if self._classify_strength(r['strength'], shooting_team, True) != '5v5':
+                continue
+            if shooting_team == home:
+                for_players = list(r.get('on_ice_home') or [])
+                against_players = list(r.get('on_ice_away') or [])
             else:
-                for_players=r.get('on_ice_away') or []
-                against_players=r.get('on_ice_home') or []
+                for_players = list(r.get('on_ice_away') or [])
+                against_players = list(r.get('on_ice_home') or [])
             if shooter and shooter not in for_players and shooter not in goalie_names:
-                for_players=list(for_players)+[shooter]
+                for_players.append(shooter)
             for p in for_players:
                 if p in goalie_names: continue
-                sp=ensure_player(p, shooting_team); sp['GF']+=1; sp['GP'].add(gid)
+                sp = ensure_player(p, shooting_team); sp['GF'] += 1; sp['GP'].add(gid)
             for p in against_players:
                 if p in goalie_names: continue
-                ap=ensure_player(p, r['team_against']); ap['GA']+=1; ap['GP'].add(gid)
+                ap = ensure_player(p, r['team_against']); ap['GA'] += 1; ap['GP'].add(gid)
         out=[]
         for rec in stats.values():
             rec['GP']=len(rec['GP'])
