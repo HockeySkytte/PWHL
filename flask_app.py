@@ -1,3 +1,17 @@
+@app.route('/api/report/video_events')
+def report_video_events():
+    """Return all video events for the Video tab."""
+    # Accept optional filters for team, season, season_state, games
+    team = request.args.get('team', 'All')
+    season = request.args.get('season', 'All')
+    season_state = request.args.get('season_state', 'All')
+    games = request.args.getlist('games')
+    if len(games) == 1 and ',' in games[0]:
+        games = [g for g in games[0].split(',') if g]
+    if not games:
+        games = None
+    events = report_store.video_events_list(team=team, season=season, season_state=season_state, games=games)
+    return jsonify({'events': events})
 from flask import Flask, render_template, jsonify, request, send_from_directory, Response
 from flask_cors import CORS
 import requests
