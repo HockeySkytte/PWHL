@@ -229,6 +229,100 @@ class ReportDataStore:
     def _pct(self, numer: float, denom: float) -> Optional[float]:
         return round(numer/denom*100,1) if denom > 0 else None
 
+    def compute_kpis(self, team: str = 'All', strength: str = 'All', season: str = 'All', date_from: str = '', date_to: str = '', segment: str = 'all', perspective: str='For', games: List[str]=None, players: List[str]=None, opponents: List[str]=None, periods: List[str]=None, events: List[str]=None, strengths_multi: List[str]=None, goalies: List[str]=None, seasons_multi: List[str]=None, onice: List[str]=None) -> Dict[str, Any]:
+        """Lightweight KPI aggregation (CF/FF/SF/GF and against) replicating earliest stable logic.
+        Intentionally simple: apply filters, split rows into FOR vs AGAINST for chosen team; for league (team=='All') treat symmetric.
+        """
+        self.load()
+        games = games or []
+        players = players or []
+        opponents = opponents or []
+        periods = periods or []
+        events = events or []
+        strengths_multi = strengths_multi or []
+        goalies = goalies or []
+        seasons_multi = seasons_multi or []
+        onice = onice or []
+        # Base row set (no strength reclassification here)
+        rows = [r for r in self.rows]
+        # Season & date filters
+        if seasons_multi:
+            rows = [r for r in rows if r['season'] in seasons_multi]
+        elif season != 'All':
+            rows = [r for r in rows if r['season'] == season]
+        if date_from:
+            rows = [r for r in rows if r['date'] >= date_from]
+        if date_to:
+            rows = [r for r in rows if r['date'] <= date_to]
+        if games:
+            rows = [r for r in rows if r['game_id'] in games]
+        if players:
+            rows = [r for r in rows if r.get('shooter') in players]
+        if opponents:
+            rows = [r for r in rows if r['team_against'] in opponents]
+        if periods:
+            rows = [r for r in rows if r['period'] in periods]
+        if events:
+            rows = [r for r in rows if r['event'] in events]
+        if strengths_multi:
+            rows = [r for r in rows if r['strength'] in strengths_multi]
+        if goalies:
+            rows = [r for r in rows if r.get('goalie') in goalies]
+        if onice:
+            rows = [r for r in rows if all(p in (r.get('on_ice_all') or []) for p in onice)]
+        # Strength high-level filter (PP/SH/5v5/EV) using classification from row perspective
+        if strength != 'All':
+            filtered = []
+            for r in rows:
+                cls = self._classify_strength(r['strength'], r['team_for'], True)
+                if strength=='EV':
+                    if cls in ('5v5','EV'): filtered.append(r)
+                elif strength in ('PP','SH','5v5'):
+                    if cls == strength: filtered.append(r)
+                else:
+                    if r['strength'] == strength: filtered.append(r)
+            rows = filtered
+        if team == 'All':
+            CF = sum(1 for r in rows if r['is_corsi'])
+            FF = sum(1 for r in rows if r['is_fenwick'])
+            SF = sum(1 for r in rows if r['is_shot'])
+            GF = sum(1 for r in rows if r['is_goal'])
+            CA,FA,SA,GA = CF,FF,SF,GF
+            games_sample = {r['game_id'] for r in rows}
+        else:
+            rows_for = [r for r in rows if r['team_for'] == team]
+            rows_against = [r for r in rows if r['team_against'] == team]
+            # Segment cut based on game chronology
+            game_ids_ordered = sorted({*(r['game_id'] for r in rows_for), *(r['game_id'] for r in rows_against)}, key=lambda g: self.game_meta.get(g,{}).get('date',''))
+            if segment.lower() in ('last5','last_5'):
+                keep = set(game_ids_ordered[-5:])
+                rows_for = [r for r in rows_for if r['game_id'] in keep]
+                rows_against = [r for r in rows_against if r['game_id'] in keep]
+            elif segment.lower() in ('last10','last_10'):
+                keep = set(game_ids_ordered[-10:])
+                rows_for = [r for r in rows_for if r['game_id'] in keep]
+                rows_against = [r for r in rows_against if r['game_id'] in keep]
+            CF = sum(1 for r in rows_for if r['is_corsi'])
+            CA = sum(1 for r in rows_against if r['is_corsi'])
+            FF = sum(1 for r in rows_for if r['is_fenwick'])
+            FA = sum(1 for r in rows_against if r['is_fenwick'])
+            SF = sum(1 for r in rows_for if r['is_shot'])
+            SA = sum(1 for r in rows_against if r['is_shot'])
+            GF = sum(1 for r in rows_for if r['is_goal'])
+            GA = sum(1 for r in rows_against if r['is_goal'])
+            games_sample = {r['game_id'] for r in rows_for+rows_against}
+        metrics = {
+            'CF': CF, 'CA': CA, 'CF%': self._pct(CF, CF+CA),
+            'FF': FF, 'FA': FA, 'FF%': self._pct(FF, FF+FA),
+            'SF': SF, 'SA': SA, 'SF%': self._pct(SF, SF+SA),
+            'GF': GF, 'GA': GA, 'GF%': self._pct(GF, GF+GA),
+        }
+        return {
+            'filters': {'team':team,'strength':strength,'season':season,'segment':segment,'perspective':perspective,'date_from':date_from,'date_to':date_to},
+            'sample': {'games': len(games_sample), 'attempt_rows': len([r for r in rows if r['is_corsi']])},
+            'metrics': metrics
+        }
+
     def tables_skaters_individual(self, **kwargs):
         # Revert to the earlier minimal implementation (no strength slicing inside; rely on external filter) to remove inflation root cause.
         self.load()
