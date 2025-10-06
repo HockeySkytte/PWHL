@@ -8,6 +8,12 @@
   <link rel="icon" href="/favicon.ico?v=2">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='PWHL_logo.png', v='2') }}">
   <meta name="theme-color" content="#160A3A">
+  <!-- Attempt to prefer landscape orientation on mobile -->
+  <meta name="screen-orientation" content="landscape">
+  <meta name="x5-orientation" content="landscape">
+  <meta name="full-screen" content="yes">
+  <meta name="x5-fullscreen" content="true">
+  <meta name="360-fullscreen" content="true">
   <style>
     :root { --pwhl-bg-1:#160A3A; --pwhl-bg-2:#251055; --pwhl-bg-3:#3B1E7A; --pwhl-surface:rgba(19,13,46,.75); --pwhl-surface-strong:rgba(25,16,60,.85); --pwhl-border:rgba(142,124,214,.25); --pwhl-accent:#8E7CD6; --pwhl-accent-strong:#B9A7FF; --pwhl-bad:#E15D64; --pwhl-good:#42d392; }
     *{box-sizing:border-box;margin:0;padding:0;}
@@ -15,8 +21,9 @@
     header{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:var(--pwhl-surface-strong);border-bottom:1px solid var(--pwhl-border);} 
     header h1{font-size:1.5rem;font-weight:700;display:inline-flex;align-items:center;gap:.75rem;}
     .tabs{display:flex;background:var(--pwhl-surface-strong);border-bottom:1px solid var(--pwhl-border);margin-top:.75rem;}
-    .tab{background:transparent;color:#d6d3e9;border:none;padding:1rem 2rem;cursor:pointer;border-bottom:3px solid transparent;transition:.2s;font-size:1.125rem;text-decoration:none;display:flex;align-items:center;gap:.4rem;}
-    .tab.active{color:var(--pwhl-accent-strong);border-bottom-color:var(--pwhl-accent-strong);} 
+  .tab{background:transparent;color:#d6d3e9;border:none;padding:1rem 2rem;cursor:pointer;border-bottom:3px solid transparent;transition:.2s;font-size:1.05rem;text-decoration:none;display:flex;align-items:center;gap:.4rem;font-weight:600;}
+  .tab:hover{color:#fff;text-decoration:none;}
+  .tab.active{color:var(--pwhl-accent-strong);border-bottom-color:var(--pwhl-accent-strong);text-decoration:none;}
     main{flex:1;display:flex;flex-direction:column;padding:0 0 2rem;}
     .slicers-wrapper{background:var(--pwhl-surface-strong);border-bottom:1px solid var(--pwhl-border);padding:.75rem 2rem;display:flex;flex-direction:column;gap:.6rem;}
     .team-row{display:flex;align-items:flex-end;gap:1rem;flex-wrap:wrap;}
@@ -75,6 +82,26 @@
     @media (max-width:1400px){.rink-row{grid-template-columns:1fr;} .kpi-column{flex-direction:row;flex-wrap:wrap;} .kpi-card{width:calc(50% - .5rem);} }
     @media (max-width:900px){.kpi-card{width:100%;} }
   </style>
+  <script>
+    // Soft prompt users to rotate if in portrait on small devices
+    function checkOrientation(){
+      const warnId='rotateWarning';
+      let el=document.getElementById(warnId);
+      const isSmall= window.innerWidth < 900 && window.innerHeight > window.innerWidth + 40;
+      if(isSmall){
+        if(!el){
+          el=document.createElement('div');
+          el.id=warnId;
+          el.style.cssText='position:fixed;inset:auto 0 0 0;background:#0d1120;color:#fff;padding:.6rem .9rem;font-size:.7rem;letter-spacing:.05em;text-align:center;z-index:400;border-top:1px solid rgba(255,255,255,.15);';
+          el.innerHTML='Best viewed in landscape – rotate your device for full rink view.';
+          document.body.appendChild(el);
+        }
+      } else if(el){ el.remove(); }
+    }
+    window.addEventListener('load',checkOrientation);
+    window.addEventListener('resize',checkOrientation);
+    window.addEventListener('orientationchange',()=>setTimeout(checkOrientation,200));
+  </script>
 </head>
 <body>
   <header>
@@ -537,7 +564,8 @@
   }
   function aggregateZones(team){
     const stats={};
-  const ensure=id=>{ if(!stats[id]) stats[id]={CF:0,FF:0,SF:0,CA:0,FA:0,SA:0}; return stats[id]; };
+  // Each zone keeps for-team (CF/FF/SF/GF) and against-team (CA/FA/SA/GA) tallies
+  const ensure=id=>{ if(!stats[id]) stats[id]={CF:0,FF:0,SF:0,GF:0,CA:0,FA:0,SA:0,GA:0}; return stats[id]; };
     for(const a of latestAttempts){
       if(a.forTeam!==team && a.againstTeam!==team) continue; // only events involving team
       const zid=pointZoneId(a, team); if(!zid) continue;
@@ -554,17 +582,31 @@
         if(forSide){ s.SF++; }
         else { s.SA++; }
       }
+      if(a.event==='Goal'){
+        if(forSide){ s.GF++; }
+        else { s.GA++; }
+      }
     }
     return stats;
   }
   function computeMetricValue(zoneId, stat, metric){ if(!stat) return 0; const defensive = zoneId.startsWith('D');
     if(defensive){
       switch(metric){
-  case 'corsi': return stat.CA; case 'fenwick': return stat.FA; case 'shots': return stat.SA; case 'goals': return 0; case 'shpct': return 0; default: return 0;
+  case 'corsi': return stat.CA; 
+  case 'fenwick': return stat.FA; 
+  case 'shots': return stat.SA; 
+  case 'goals': return stat.GA; 
+  case 'shpct': return stat.SA ? (stat.GA / stat.SA * 100) : 0; // Opponent shooting % in defensive zone
+  default: return 0;
       }
     } else { // offensive or neutral -> for team
       switch(metric){
-  case 'corsi': return stat.CF; case 'fenwick': return stat.FF; case 'shots': return stat.SF; case 'goals': return 0; case 'shpct': return 0; default: return 0;
+  case 'corsi': return stat.CF; 
+  case 'fenwick': return stat.FF; 
+  case 'shots': return stat.SF; 
+  case 'goals': return stat.GF; 
+  case 'shpct': return stat.SF ? (stat.GF / stat.SF * 100) : 0; // Team shooting % in offensive/neutral zone
+  default: return 0;
       }
     }
   }
@@ -581,7 +623,7 @@
     // Determine offensive and defensive ids from selection (pairing logic ensures <=1 pair)
     let offensiveId=null, defensiveId=null;
     selectedZoneIds.forEach(id=>{ if(id.startsWith('O')||id.startsWith('N')) offensiveId=id; else if(id.startsWith('D')) defensiveId=id; });
-  let CF=0,CA=0,FF=0,FA=0,SF=0,SA=0;
+  let CF=0,CA=0,FF=0,FA=0,SF=0,SA=0,GF=0,GA=0;
     for(const a of latestAttempts){ if(a.forTeam!==team && a.againstTeam!==team) continue; const zid=pointZoneId(a, team); if(!zid) continue; const isFor=a.forTeam===team; const isAgainst=a.againstTeam===team; // Only count team offense in offensiveId AND opponent offense in defensiveId
       if(isFor){ if(!offensiveId || zid!==offensiveId) continue; } else if(isAgainst){ if(!defensiveId || zid!==defensiveId) continue; } else continue;
       if(['Shot','Goal','Miss','Block'].includes(a.event)){ if(isFor) CF++; if(isAgainst) CA++; }
@@ -590,11 +632,19 @@
         if(isFor){ SF++; }
         if(isAgainst){ SA++; }
       }
+      if(a.event==='Goal'){
+        if(isFor){ GF++; }
+        if(isAgainst){ GA++; }
+      }
     }
     const metrics={
       'CA':CA,'CF':CF,'CF%': (CF+CA)? (CF/(CF+CA)*100).toFixed(1):'—',
       'FA':FA,'FF':FF,'FF%': (FF+FA)? (FF/(FF+FA)*100).toFixed(1):'—',
-  'SA':SA,'SF':SF,'SF%': (SF+SA)? (SF/(SF+SA)*100).toFixed(1):'—'
+  'SA':SA,'SF':SF,'SF%': (SF+SA)? (SF/(SF+SA)*100).toFixed(1):'—',
+      'GA':GA,'GF':GF,'GF%': (GF+GA)? (GF/(GF+GA)*100).toFixed(1):'—',
+      'Sh%': SF? (GF/SF*100).toFixed(1):'—',
+      'Sv%': SA? ((1 - (GA/SA))*100).toFixed(1):'—',
+      'PDO': ( (SF? (GF/SF*100):0) + (SA? ((1 - GA/SA)*100):0) ).toFixed(1)
     };
     document.querySelectorAll('.kpi-metric').forEach(mEl=>{ const label=mEl.querySelector('.label')?.textContent; const valEl=mEl.querySelector('.value'); if(!label||!valEl) return; if(metrics[label]!==undefined) valEl.textContent=metrics[label]; });
   }
