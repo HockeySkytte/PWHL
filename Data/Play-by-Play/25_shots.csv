@@ -1,0 +1,58 @@
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
+1,0:04,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,1,event,5v5,41,Denisa Křížová,,,,,50,Kristen Campbell,,,,,,,69.3,-28.6,25,2024-02-03,PWHL,2023/2024,Regular Season
+2,0:40,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,1,event,5v5,12,Kelly Pannek,,,,,50,Kristen Campbell,,,,,,,61.0,-2.3,25,2024-02-03,PWHL,2023/2024,Regular Season
+3,0:59,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,1,event,5v5,51,Victoria Bach,,,,,29,Nicole Hensley,,,,,,,-47.7,-3.1,25,2024-02-03,PWHL,2023/2024,Regular Season
+4,2:00,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,1,event,5v5,6,Kali Flanagan,,,,,29,Nicole Hensley,,,,,,,-44.3,5.4,25,2024-02-03,PWHL,2023/2024,Regular Season
+5,5:42,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,1,event,5v5,20,Sarah Nurse,,,,,29,Nicole Hensley,,,,,,,-63.0,-9.1,25,2024-02-03,PWHL,2023/2024,Regular Season
+6,6:33,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,1,event,5v5,3,Jocelyne Larocque,,,,,29,Nicole Hensley,,,,,,,-49.0,21.2,25,2024-02-03,PWHL,2023/2024,Regular Season
+7,9:07,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,1,event,5v5,14,Renata Fast,,,,,29,Nicole Hensley,,,,,,,-39.3,-23.8,25,2024-02-03,PWHL,2023/2024,Regular Season
+8,9:44,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,1,event,5v5,77,Susanna Tapani,,,,,50,Kristen Campbell,,,,,,,29.0,-38.5,25,2024-02-03,PWHL,2023/2024,Regular Season
+9,11:58,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,1,event,5v5,51,Victoria Bach,,,,,29,Nicole Hensley,,,,,,,-60.7,12.2,25,2024-02-03,PWHL,2023/2024,Regular Season
+10,12:52,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,1,event,5v5,86,Michela Cava,,,,,50,Kristen Campbell,,,,,,,79.3,-7.1,25,2024-02-03,PWHL,2023/2024,Regular Season
+11,12:57,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,1,event,5v5,2,Lee Stecklein,,,,,50,Kristen Campbell,,,,,,,65.7,-16.7,25,2024-02-03,PWHL,2023/2024,Regular Season
+12,13:10,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,1,event,5v5,18,Jesse Compher,,,,,29,Nicole Hensley,,,,,,,-70.0,-15.3,25,2024-02-03,PWHL,2023/2024,Regular Season
+13,14:20,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,1,event,5v5,6,Kali Flanagan,,,,,,,,,,,,,,,25,2024-02-03,PWHL,2023/2024,Regular Season
+14,14:56,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,1,event,5v4,2,Lee Stecklein,,,,,50,Kristen Campbell,,,,,,,31.3,0.3,25,2024-02-03,PWHL,2023/2024,Regular Season
+15,15:28,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,1,event,5v4,26,Kendall Coyne Schofield,,,,,50,Kristen Campbell,,,,,,,78.7,12.8,25,2024-02-03,PWHL,2023/2024,Regular Season
+16,15:43,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,1,event,5v4,77,Susanna Tapani,,,,,50,Kristen Campbell,,,,,,,63.7,9.9,25,2024-02-03,PWHL,2023/2024,Regular Season
+17,15:58,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,1,event,4v5,24,Natalie Spooner,,,,,29,Nicole Hensley,,,,,,,-74.3,4.8,25,2024-02-03,PWHL,2023/2024,Regular Season
+18,16:49,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,1,event,5v5,24,Abby Boreen,,,,,50,Kristen Campbell,,,,,,,84.3,-9.1,25,2024-02-03,PWHL,2023/2024,Regular Season
+19,17:36,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,1,event,5v5,22,Natalie Buchbinder,,,,,50,Kristen Campbell,,,,,,,46.3,20.7,25,2024-02-03,PWHL,2023/2024,Regular Season
+20,18:06,Penalty,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,1,event,5v5,19,Maggie Flaherty,,,,,,,,,,,,,,,25,2024-02-03,PWHL,2023/2024,Regular Season
+21,19:05,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,1,event,5v4,24,Natalie Spooner,,,,,29,Nicole Hensley,,,,,,,-87.0,-1.1,25,2024-02-03,PWHL,2023/2024,Regular Season
+22,19:06,Goal,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,1,event,5v4,24,Natalie Spooner,20,Sarah Nurse,19,Rebecca Leslie,29,Nicole Hensley,,6 19 20 24 51,Kali Flanagan - Rebecca Leslie - Sarah Nurse - Natalie Spooner - Victoria Bach,,9 12 13 25,Abby Cook - Kelly Pannek - Grace Zumwinkle - Emma Greco,-84.0,-2.5,25,2024-02-03,PWHL,2023/2024,Regular Season
+23,19:42,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,1,event,5v5,3,Jocelyne Larocque,,,,,29,Nicole Hensley,,,,,,,-84.0,6.2,25,2024-02-03,PWHL,2023/2024,Regular Season
+24,0:10,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,2,event,5v5,2,Lee Stecklein,,,,,50,Kristen Campbell,,,,,,,23.0,35.7,25,2024-02-03,PWHL,2023/2024,Regular Season
+25,1:20,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,2,event,5v5,12,Allie Munroe,,,,,,,,,,,,,,,25,2024-02-03,PWHL,2023/2024,Regular Season
+26,3:56,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,2,event,5v5,24,Natalie Spooner,,,,,29,Nicole Hensley,,,,,,,-61.0,0.0,25,2024-02-03,PWHL,2023/2024,Regular Season
+27,4:46,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,2,event,5v5,2,Lee Stecklein,,,,,50,Kristen Campbell,,,,,,,77.0,11.1,25,2024-02-03,PWHL,2023/2024,Regular Season
+28,4:56,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,2,event,5v5,17,Brooke Bryant,,,,,50,Kristen Campbell,,,,,,,63.7,0.3,25,2024-02-03,PWHL,2023/2024,Regular Season
+29,6:24,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,2,event,5v5,19,Rebecca Leslie,,,,,29,Nicole Hensley,,,,,,,-82.3,6.2,25,2024-02-03,PWHL,2023/2024,Regular Season
+30,6:36,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,2,event,5v5,11,Sophia Kunin,,,,,50,Kristen Campbell,,,,,,,57.0,11.1,25,2024-02-03,PWHL,2023/2024,Regular Season
+31,10:27,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,2,event,5v5,9,Abby Cook,,,,,50,Kristen Campbell,,,,,,,53.7,9.3,25,2024-02-03,PWHL,2023/2024,Regular Season
+32,12:05,Goal,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,2,event,5v5,12,Kelly Pannek,12,Kelly Pannek,22,Natalie Buchbinder,50,Kristen Campbell,,3 10 14 17 41,Jocelyne Larocque - Alexa Vasko - Renata Fast - Samantha Cogan - Brittany Howard,,12 19 24 25 26,Kelly Pannek - Maggie Flaherty - Abby Boreen - Emma Greco - Kendall Coyne Schofield,84.0,-6.2,25,2024-02-03,PWHL,2023/2024,Regular Season
+33,12:58,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,2,event,5v5,41,Denisa Křížová,,,,,50,Kristen Campbell,,,,,,,82.0,5.4,25,2024-02-03,PWHL,2023/2024,Regular Season
+34,13:53,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,2,event,5v5,86,Michela Cava,,,,,50,Kristen Campbell,,,,,,,80.7,-7.9,25,2024-02-03,PWHL,2023/2024,Regular Season
+35,15:10,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,2,event,5v5,41,Brittany Howard,,,,,29,Nicole Hensley,,,,,,,-55.3,13.9,25,2024-02-03,PWHL,2023/2024,Regular Season
+36,17:15,Goal,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,2,event,5v5,34,Hannah Miller,,,,,29,Nicole Hensley,,3 14 20 22 34,Jocelyne Larocque - Renata Fast - Sarah Nurse - Maggie Connors - Hannah Miller,,2 17 21 22 86,Lee Stecklein - Brooke Bryant - Liz Schepers - Natalie Buchbinder - Michela Cava,-62.3,-2.8,25,2024-02-03,PWHL,2023/2024,Regular Season
+37,18:33,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,2,event,5v5,18,Jesse Compher,,,,,29,Nicole Hensley,,,,,,,-84.0,2.3,25,2024-02-03,PWHL,2023/2024,Regular Season
+38,18:34,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,2,event,5v5,18,Jesse Compher,,,,,29,Nicole Hensley,,,,,,,-76.7,9.3,25,2024-02-03,PWHL,2023/2024,Regular Season
+39,18:39,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,2,event,5v5,24,Natalie Spooner,,,,,29,Nicole Hensley,,,,,,,-83.0,-2.0,25,2024-02-03,PWHL,2023/2024,Regular Season
+40,18:39,Penalty,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,2,event,5v5,11,Sophia Kunin,,,,,,,,,,,,,,,25,2024-02-03,PWHL,2023/2024,Regular Season
+41,19:24,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,2,event,5v4,40,Blayre Turnbull,,,,,29,Nicole Hensley,,,,,,,-85.0,-2.5,25,2024-02-03,PWHL,2023/2024,Regular Season
+42,0:50,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,3,event,5v5,19,Maggie Flaherty,,,,,50,Kristen Campbell,,,,,,,67.3,21.2,25,2024-02-03,PWHL,2023/2024,Regular Season
+43,1:11,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,3,event,5v5,27,Taylor Heise,,,,,50,Kristen Campbell,,,,,,,67.3,-7.6,25,2024-02-03,PWHL,2023/2024,Regular Season
+44,1:22,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,3,event,5v5,24,Abby Boreen,,,,,50,Kristen Campbell,,,,,,,75.0,5.7,25,2024-02-03,PWHL,2023/2024,Regular Season
+45,3:54,Penalty,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,3,event,5v5,41,Denisa Křížová,,,,,,,,,,,,,,,25,2024-02-03,PWHL,2023/2024,Regular Season
+46,6:32,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,3,event,5v5,3,Jocelyne Larocque,,,,,29,Nicole Hensley,,,,,,,-80.3,23.0,25,2024-02-03,PWHL,2023/2024,Regular Season
+47,7:54,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,3,event,5v5,34,Hannah Miller,,,,,29,Nicole Hensley,,,,,,,-72.7,-13.9,25,2024-02-03,PWHL,2023/2024,Regular Season
+48,10:14,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,3,event,5v5,24,Natalie Spooner,,,,,29,Nicole Hensley,,,,,,,-70.7,-5.7,25,2024-02-03,PWHL,2023/2024,Regular Season
+49,11:24,Goal,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,3,event,5v5,40,Blayre Turnbull,24,Natalie Spooner,27,Emma Maltais,29,Nicole Hensley,,3 14 24 27 40,Jocelyne Larocque - Renata Fast - Natalie Spooner - Emma Maltais - Blayre Turnbull,,19 23 24 26 27,Maggie Flaherty - Mellissa Channell-Watkins - Abby Boreen - Kendall Coyne Schofield - Taylor Heise,-81.3,2.8,25,2024-02-03,PWHL,2023/2024,Regular Season
+50,11:40,Goal,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,3,event,5v5,24,Natalie Spooner,3,Jocelyne Larocque,,,29,Nicole Hensley,,3 14 24 27 40,Jocelyne Larocque - Renata Fast - Natalie Spooner - Emma Maltais - Blayre Turnbull,,19 23 24 26 27,Maggie Flaherty - Mellissa Channell-Watkins - Abby Boreen - Kendall Coyne Schofield - Taylor Heise,-80.3,-6.0,25,2024-02-03,PWHL,2023/2024,Regular Season
+51,12:59,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,3,event,5v5,20,Sarah Nurse,,,,,29,Nicole Hensley,,,,,,,-75.0,6.2,25,2024-02-03,PWHL,2023/2024,Regular Season
+52,15:26,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,3,event,5v5,41,Brittany Howard,,,,,29,Nicole Hensley,,,,,,,-63.0,-17.0,25,2024-02-03,PWHL,2023/2024,Regular Season
+53,15:54,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,3,event,5v5,11,Sophia Kunin,,,,,50,Kristen Campbell,,,,,,,77.7,-17.0,25,2024-02-03,PWHL,2023/2024,Regular Season
+54,16:02,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,3,event,5v5,14,Renata Fast,,,,,,,,,,,,,,,25,2024-02-03,PWHL,2023/2024,Regular Season
+55,16:49,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,3,event,4v5,40,Blayre Turnbull,,,,,29,Nicole Hensley,,,,,,,50.0,0.8,25,2024-02-03,PWHL,2023/2024,Regular Season
+56,18:06,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,3,event,5v5,26,Kendall Coyne Schofield,,,,,50,Kristen Campbell,,,,,,,63.0,-15.9,25,2024-02-03,PWHL,2023/2024,Regular Season
+57,19:43,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,3,event,5v5,27,Taylor Heise,,,,,50,Kristen Campbell,,,,,,,64.0,-1.1,25,2024-02-03,PWHL,2023/2024,Regular Season

@@ -1,0 +1,80 @@
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
+1,0:15,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,1,event,5v5,9,Sophie Shirley,,,,,38,Emerance Maschmeyer,,,,,,,77.3,3.1,151,2025-02-20,PWHL,2024/2025,Regular Season
+2,0:21,Block,Boston Fleet,Away,Ottawa Charge,Boston Fleet,1,event,5v5,15,Sydney Bard,,,,,38,Emerance Maschmeyer,,,,,,,67.0,-18.1,151,2025-02-20,PWHL,2024/2025,Regular Season
+3,1:28,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,1,event,5v5,37,Theresa Schafzahl,,,,,38,Emerance Maschmeyer,,,,,,,62.7,-9.3,151,2025-02-20,PWHL,2024/2025,Regular Season
+4,3:41,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,1,event,5v5,10,Alexa Vasko,,,,,31,Aerin Frankel,,,,,,,-87.7,17.8,151,2025-02-20,PWHL,2024/2025,Regular Season
+5,5:43,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,1,event,5v5,44,Jill Saulnier,,,,,38,Emerance Maschmeyer,,,,,,,81.7,6.8,151,2025-02-20,PWHL,2024/2025,Regular Season
+6,7:40,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,1,event,5v5,5,Megan Keller,,,,,38,Emerance Maschmeyer,,,,,,,33.0,-22.1,151,2025-02-20,PWHL,2024/2025,Regular Season
+7,8:18,Goal,Boston Fleet,Away,Ottawa Charge,Boston Fleet,1,event,5v5,37,Theresa Schafzahl,47,Jamie Lee Rattray,20,Hannah Brandt,38,Emerance Maschmeyer,,6 12 19 88 92,Stephanie Markowski - Victoria Bach - Brianne Jenner - Ronja Savolainen - Danielle Serdachny,,7 20 37 47 55,Sidney Morin - Hannah Brandt - Theresa Schafzahl - Jamie Lee Rattray - Daniela Pejšová,66.7,-7.9,151,2025-02-20,PWHL,2024/2025,Regular Season
+8,11:47,Penalty,Boston Fleet,Away,Ottawa Charge,Boston Fleet,1,event,5v5,55,Daniela Pejšová,,,,,,,,,,,,,,,151,2025-02-20,PWHL,2024/2025,Regular Season
+9,12:09,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,1,event,5v4,26,Emily Clark,,,,,31,Aerin Frankel,,,,,,,-85.0,-6.2,151,2025-02-20,PWHL,2024/2025,Regular Season
+10,13:32,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,1,event,5v4,12,Victoria Bach,,,,,31,Aerin Frankel,,,,,,,-64.0,-25.8,151,2025-02-20,PWHL,2024/2025,Regular Season
+11,13:57,Block,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,1,event,5v5,92,Danielle Serdachny,,,,,31,Aerin Frankel,,,,,,,-42.7,24.4,151,2025-02-20,PWHL,2024/2025,Regular Season
+12,14:54,Block,Boston Fleet,Away,Ottawa Charge,Boston Fleet,1,event,5v5,25,Emma Greco,,,,,38,Emerance Maschmeyer,,,,,,,33.0,-18.1,151,2025-02-20,PWHL,2024/2025,Regular Season
+13,15:49,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,1,event,5v5,26,Emily Clark,,,,,31,Aerin Frankel,,,,,,,-81.0,8.5,151,2025-02-20,PWHL,2024/2025,Regular Season
+14,15:55,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,1,event,5v5,17,Gabbie Hughes,,,,,31,Aerin Frankel,,,,,,,-67.0,21.2,151,2025-02-20,PWHL,2024/2025,Regular Season
+15,16:03,Penalty,Boston Fleet,Away,Ottawa Charge,Boston Fleet,1,event,5v5,21,Hilary Knight,,,,,,,,,,,,,,,151,2025-02-20,PWHL,2024/2025,Regular Season
+16,16:12,Goal,Boston Fleet,Away,Ottawa Charge,Boston Fleet,1,event,4v5,11,Alina Müller,25,Emma Greco,,,38,Emerance Maschmeyer,,13 17 23 26 71,Tereza Vanišová - Gabbie Hughes - Jocelyne Larocque - Emily Clark - Jincy Roese,,5 11 22 27,Megan Keller - Alina Müller - Jessica DiGirolamo - Shay Maloney,70.0,0.0,151,2025-02-20,PWHL,2024/2025,Regular Season
+17,16:38,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,1,event,5v4,8,Natalie Snodgrass,,,,,31,Aerin Frankel,,,,,,,-78.7,-12.5,151,2025-02-20,PWHL,2024/2025,Regular Season
+18,17:16,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,1,event,4v5,9,Sophie Shirley,,,,,38,Emerance Maschmeyer,,,,,,,82.7,-5.4,151,2025-02-20,PWHL,2024/2025,Regular Season
+19,19:21,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,1,event,5v5,5,Megan Keller,,,,,38,Emerance Maschmeyer,,,,,,,34.7,-21.8,151,2025-02-20,PWHL,2024/2025,Regular Season
+20,0:34,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,2,event,5v5,44,Jill Saulnier,,,,,38,Emerance Maschmeyer,,,,,,,33.3,-26.1,151,2025-02-20,PWHL,2024/2025,Regular Season
+21,3:04,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,2,event,5v5,16,Amanda Pelkey,,,,,38,Emerance Maschmeyer,,,,,,,28.0,23.8,151,2025-02-20,PWHL,2024/2025,Regular Season
+22,3:26,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,2,event,5v5,14,Jillian Dempsey,,,,,38,Emerance Maschmeyer,,,,,,,68.7,-8.8,151,2025-02-20,PWHL,2024/2025,Regular Season
+23,3:45,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,2,event,5v5,14,Jillian Dempsey,,,,,38,Emerance Maschmeyer,,,,,,,78.3,0.6,151,2025-02-20,PWHL,2024/2025,Regular Season
+24,4:58,Penalty,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,2,event,5v5,26,Emily Clark,,,,,,,,,,,,,,,151,2025-02-20,PWHL,2024/2025,Regular Season
+25,6:31,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,2,event,4v5,10,Alexa Vasko,,,,,31,Aerin Frankel,,,,,,,-66.3,0.3,151,2025-02-20,PWHL,2024/2025,Regular Season
+26,8:49,Block,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,2,event,5v5,3,Zoe Boyd,,,,,31,Aerin Frankel,,,,,,,-30.0,34.9,151,2025-02-20,PWHL,2024/2025,Regular Season
+27,9:21,Block,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,2,event,5v5,71,Jincy Roese,,,,,31,Aerin Frankel,,,,,,,-43.7,-0.3,151,2025-02-20,PWHL,2024/2025,Regular Season
+28,9:59,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,2,event,5v5,17,Gabbie Hughes,,,,,31,Aerin Frankel,,,,,,,-85.7,36.3,151,2025-02-20,PWHL,2024/2025,Regular Season
+29,10:06,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,2,event,5v5,18,Mannon McMahon,,,,,31,Aerin Frankel,,,,,,,-87.0,-7.4,151,2025-02-20,PWHL,2024/2025,Regular Season
+30,11:44,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,2,event,5v5,92,Danielle Serdachny,,,,,31,Aerin Frankel,,,,,,,-83.0,6.2,151,2025-02-20,PWHL,2024/2025,Regular Season
+31,13:10,Block,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,2,event,5v4,8,Natalie Snodgrass,,,,,31,Aerin Frankel,,,,,,,-66.3,-16.7,151,2025-02-20,PWHL,2024/2025,Regular Season
+32,14:02,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,2,event,5v5,11,Alina Müller,,,,,38,Emerance Maschmeyer,,,,,,,85.7,6.2,151,2025-02-20,PWHL,2024/2025,Regular Season
+33,16:12,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,2,event,5v5,92,Danielle Serdachny,,,,,31,Aerin Frankel,,,,,,,-52.3,2.0,151,2025-02-20,PWHL,2024/2025,Regular Season
+34,16:39,Block,Boston Fleet,Away,Ottawa Charge,Boston Fleet,2,event,4v5,47,Jamie Lee Rattray,,,,,38,Emerance Maschmeyer,,,,,,,62.3,-23.0,151,2025-02-20,PWHL,2024/2025,Regular Season
+35,17:08,Penalty,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,2,event,5v5,71,Jincy Roese,,,,,,,,,,,,,,,151,2025-02-20,PWHL,2024/2025,Regular Season
+36,17:37,Block,Boston Fleet,Away,Ottawa Charge,Boston Fleet,2,event,4v5,5,Megan Keller,,,,,38,Emerance Maschmeyer,,,,,,,28.0,2.5,151,2025-02-20,PWHL,2024/2025,Regular Season
+37,17:56,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,2,event,5v4,21,Hilary Knight,,,,,38,Emerance Maschmeyer,,,,,,,66.3,0.8,151,2025-02-20,PWHL,2024/2025,Regular Season
+38,18:36,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,2,event,5v4,9,Sophie Shirley,,,,,38,Emerance Maschmeyer,,,,,,,77.7,-0.8,151,2025-02-20,PWHL,2024/2025,Regular Season
+39,19:22,Penalty,Boston Fleet,Away,Ottawa Charge,Boston Fleet,2,event,5v5,27,Shay Maloney,,,,,,,,,,,,,,,151,2025-02-20,PWHL,2024/2025,Regular Season
+40,2:36,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,3,event,5v5,22,Taylor House,,,,,31,Aerin Frankel,,,,,,,-82.3,-4.5,151,2025-02-20,PWHL,2024/2025,Regular Season
+41,2:45,Block,Boston Fleet,Away,Ottawa Charge,Boston Fleet,3,event,5v5,88,Lexie Adzija,,,,,38,Emerance Maschmeyer,,,,,,,63.0,-20.1,151,2025-02-20,PWHL,2024/2025,Regular Season
+42,3:42,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,3,event,5v5,92,Danielle Serdachny,,,,,31,Aerin Frankel,,,,,,,-67.7,-7.1,151,2025-02-20,PWHL,2024/2025,Regular Season
+43,3:58,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,3,event,5v5,25,Emma Greco,,,,,38,Emerance Maschmeyer,,,,,,,57.0,-4.2,151,2025-02-20,PWHL,2024/2025,Regular Season
+44,4:17,Block,Boston Fleet,Away,Ottawa Charge,Boston Fleet,3,event,5v5,27,Shay Maloney,,,,,38,Emerance Maschmeyer,,,,,,,71.7,7.6,151,2025-02-20,PWHL,2024/2025,Regular Season
+45,6:14,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,3,event,5v5,25,Emma Greco,,,,,38,Emerance Maschmeyer,,,,,,,38.7,39.9,151,2025-02-20,PWHL,2024/2025,Regular Season
+46,6:23,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,3,event,5v5,27,Shay Maloney,,,,,38,Emerance Maschmeyer,,,,,,,86.3,-6.2,151,2025-02-20,PWHL,2024/2025,Regular Season
+47,6:31,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,3,event,5v5,7,Sidney Morin,,,,,38,Emerance Maschmeyer,,,,,,,74.3,-16.1,151,2025-02-20,PWHL,2024/2025,Regular Season
+48,7:12,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,3,event,5v5,26,Emily Clark,,,,,31,Aerin Frankel,,,,,,,-77.3,0.8,151,2025-02-20,PWHL,2024/2025,Regular Season
+49,7:16,Block,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,3,event,5v5,2,Aneta Tejralová,,,,,31,Aerin Frankel,,,,,,,-32.3,-26.4,151,2025-02-20,PWHL,2024/2025,Regular Season
+50,8:59,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,3,event,5v5,20,Hannah Brandt,,,,,38,Emerance Maschmeyer,,,,,,,81.0,30.3,151,2025-02-20,PWHL,2024/2025,Regular Season
+51,9:09,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,3,event,5v5,25,Emma Greco,,,,,38,Emerance Maschmeyer,,,,,,,33.0,34.0,151,2025-02-20,PWHL,2024/2025,Regular Season
+52,10:17,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,3,event,5v5,88,Ronja Savolainen,,,,,31,Aerin Frankel,,,,,,,-17.7,-6.2,151,2025-02-20,PWHL,2024/2025,Regular Season
+53,10:31,Block,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,3,event,5v5,88,Ronja Savolainen,,,,,31,Aerin Frankel,,,,,,,-65.0,22.1,151,2025-02-20,PWHL,2024/2025,Regular Season
+54,11:18,Penalty,Boston Fleet,Away,Ottawa Charge,Boston Fleet,3,event,5v5,44,Jill Saulnier,,,,,,,,,,,,,,,151,2025-02-20,PWHL,2024/2025,Regular Season
+55,11:18,Penalty,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,3,event,5v5,13,Tereza Vanišová,,,,,,,,,,,,,,,151,2025-02-20,PWHL,2024/2025,Regular Season
+56,11:18,Penalty,Boston Fleet,Away,Ottawa Charge,Boston Fleet,3,event,5v5,44,Jill Saulnier,,,,,,,,,,,,,,,151,2025-02-20,PWHL,2024/2025,Regular Season
+57,12:17,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,3,event,3v4,11,Alina Müller,,,,,38,Emerance Maschmeyer,,,,,,,74.3,25.8,151,2025-02-20,PWHL,2024/2025,Regular Season
+58,13:18,Penalty,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,3,event,5v5,13,Tereza Vanišová,,,,,,,,,,,,,,,151,2025-02-20,PWHL,2024/2025,Regular Season
+59,13:34,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,3,event,5v4,47,Jamie Lee Rattray,,,,,38,Emerance Maschmeyer,,,,,,,78.0,7.6,151,2025-02-20,PWHL,2024/2025,Regular Season
+60,14:27,Penalty,Boston Fleet,Away,Ottawa Charge,Boston Fleet,3,event,5v4,22,Jessica DiGirolamo,,,,,,,,,,,,,,,151,2025-02-20,PWHL,2024/2025,Regular Season
+61,14:36,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,3,event,4v4,26,Emily Clark,,,,,31,Aerin Frankel,,,,,,,-51.0,-19.3,151,2025-02-20,PWHL,2024/2025,Regular Season
+62,14:54,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,3,event,4v4,17,Gabbie Hughes,,,,,31,Aerin Frankel,,,,,,,-82.0,-2.3,151,2025-02-20,PWHL,2024/2025,Regular Season
+63,15:13,Block,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,3,event,5v5,19,Brianne Jenner,,,,,31,Aerin Frankel,,,,,,,-47.0,23.0,151,2025-02-20,PWHL,2024/2025,Regular Season
+64,15:22,Block,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,3,event,5v5,26,Emily Clark,,,,,31,Aerin Frankel,,,,,,,-61.0,-18.1,151,2025-02-20,PWHL,2024/2025,Regular Season
+65,16:27,Goal,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,3,event,5v5,88,Ronja Savolainen,13,Tereza Vanišová,92,Danielle Serdachny,31,Aerin Frankel,,12 13 71 88 92,Victoria Bach - Tereza Vanišová - Jincy Roese - Ronja Savolainen - Danielle Serdachny,,5 15 27 37,Megan Keller - Sydney Bard - Shay Maloney - Theresa Schafzahl,-61.7,-10.8,151,2025-02-20,PWHL,2024/2025,Regular Season
+66,16:37,Penalty,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,3,event,5v5,17,Gabbie Hughes,,,,,,,,,,,,,,,151,2025-02-20,PWHL,2024/2025,Regular Season
+67,17:33,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,3,event,5v4,11,Alina Müller,,,,,38,Emerance Maschmeyer,,,,,,,84.7,8.2,151,2025-02-20,PWHL,2024/2025,Regular Season
+68,18:04,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,3,event,5v4,9,Sophie Shirley,,,,,38,Emerance Maschmeyer,,,,,,,79.0,-10.8,151,2025-02-20,PWHL,2024/2025,Regular Season
+69,18:10,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,3,event,5v4,27,Shay Maloney,,,,,38,Emerance Maschmeyer,,,,,,,81.0,7.6,151,2025-02-20,PWHL,2024/2025,Regular Season
+70,18:49,Block,Boston Fleet,Away,Ottawa Charge,Boston Fleet,3,event,5v5,25,Emma Greco,,,,,38,Emerance Maschmeyer,,,,,,,41.3,-34.9,151,2025-02-20,PWHL,2024/2025,Regular Season
+71,19:53,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,3,event,5v5,92,Danielle Serdachny,,,,,31,Aerin Frankel,,,,,,,-54.7,-18.4,151,2025-02-20,PWHL,2024/2025,Regular Season
+72,19:57,Goal,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,3,event,5v5,13,Tereza Vanišová,26,Emily Clark,71,Jincy Roese,31,Aerin Frankel,,13 17 19 26 71 92,Tereza Vanišová - Gabbie Hughes - Brianne Jenner - Emily Clark - Jincy Roese - Danielle Serdachny,,5 7 11 21 77,Megan Keller - Sidney Morin - Alina Müller - Hilary Knight - Susanna Tapani,-61.0,8.5,151,2025-02-20,PWHL,2024/2025,Regular Season
+73,0:13,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,OT1,event,3v3,5,Megan Keller,,,,,38,Emerance Maschmeyer,,,,,,,69.0,14.5,151,2025-02-20,PWHL,2024/2025,Regular Season
+74,0:41,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,OT1,event,3v3,9,Sophie Shirley,,,,,38,Emerance Maschmeyer,,,,,,,62.7,6.0,151,2025-02-20,PWHL,2024/2025,Regular Season
+75,1:13,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,OT1,event,3v3,21,Hilary Knight,,,,,38,Emerance Maschmeyer,,,,,,,50.3,-13.3,151,2025-02-20,PWHL,2024/2025,Regular Season
+76,2:14,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,OT1,event,3v3,19,Brianne Jenner,,,,,31,Aerin Frankel,,,,,,,-73.0,10.5,151,2025-02-20,PWHL,2024/2025,Regular Season
+77,3:11,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,OT1,event,3v3,88,Ronja Savolainen,,,,,31,Aerin Frankel,,,,,,,-75.7,-13.9,151,2025-02-20,PWHL,2024/2025,Regular Season
+78,3:32,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,OT1,event,3v3,19,Brianne Jenner,,,,,31,Aerin Frankel,,,,,,,-83.0,-11.3,151,2025-02-20,PWHL,2024/2025,Regular Season
+79,4:12,Goal,Boston Fleet,Away,Ottawa Charge,Boston Fleet,OT1,event,3v3,77,Susanna Tapani,,,,,38,Emerance Maschmeyer,,13 19 71,Tereza Vanišová - Brianne Jenner - Jincy Roese,,5 11 77,Megan Keller - Alina Müller - Susanna Tapani,61.7,0.8,151,2025-02-20,PWHL,2024/2025,Regular Season

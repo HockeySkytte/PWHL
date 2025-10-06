@@ -1,0 +1,95 @@
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
+1,0:36,Block,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,2,Lee Stecklein,,,,,33,Lindsey Post,,,,,,,39.0,-28.3,73,2024-05-04,PWHL,2023/2024,Regular Season
+2,2:00,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,4,Taylor Baker,,,,,29,Nicole Hensley,,,,,,,-79.0,-20.1,73,2024-05-04,PWHL,2023/2024,Regular Season
+3,2:00,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,13,Alexandra Labelle,,,,,29,Nicole Hensley,,,,,,,-74.7,-2.8,73,2024-05-04,PWHL,2023/2024,Regular Season
+4,2:08,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,4,Taylor Baker,,,,,29,Nicole Hensley,,,,,,,-64.3,-23.2,73,2024-05-04,PWHL,2023/2024,Regular Season
+5,2:33,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,21,Liz Schepers,,,,,33,Lindsey Post,,,,,,,60.0,9.1,73,2024-05-04,PWHL,2023/2024,Regular Season
+6,2:44,Goal,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,14,Jaime Bourbonnais,6,Brooke Hobson,,,29,Nicole Hensley,,6 10 14 44 71,Brooke Hobson - Kayla Vespa - Jaime Bourbonnais - Jill Saulnier - Savannah Norcross,,7 14 19 25 27,Claire Butorac - Clair DeGeorge - Maggie Flaherty - Emma Greco - Taylor Heise,-62.0,0.8,73,2024-05-04,PWHL,2023/2024,Regular Season
+7,3:26,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,2,Lee Stecklein,,,,,33,Lindsey Post,,,,,,,27.7,-0.3,73,2024-05-04,PWHL,2023/2024,Regular Season
+8,4:21,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,12,Kelly Pannek,,,,,33,Lindsey Post,,,,,,,88.0,-9.3,73,2024-05-04,PWHL,2023/2024,Regular Season
+9,4:26,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,14,Jaime Bourbonnais,,,,,29,Nicole Hensley,,,,,,,-64.7,2.3,73,2024-05-04,PWHL,2023/2024,Regular Season
+10,6:26,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,26,Kendall Coyne Schofield,,,,,33,Lindsey Post,,,,,,,72.3,-11.1,73,2024-05-04,PWHL,2023/2024,Regular Season
+11,6:41,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,16,Sophie Jaques,,,,,33,Lindsey Post,,,,,,,67.0,20.4,73,2024-05-04,PWHL,2023/2024,Regular Season
+12,7:03,Block,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,27,Taylor Heise,,,,,33,Lindsey Post,,,,,,,45.0,2.0,73,2024-05-04,PWHL,2023/2024,Regular Season
+13,7:41,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,13,Grace Zumwinkle,,,,,33,Lindsey Post,,,,,,,75.7,-12.2,73,2024-05-04,PWHL,2023/2024,Regular Season
+14,7:48,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,41,Denisa Křížová,,,,,33,Lindsey Post,,,,,,,81.3,-0.6,73,2024-05-04,PWHL,2023/2024,Regular Season
+15,8:24,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,12,Kelly Pannek,,,,,33,Lindsey Post,,,,,,,75.7,17.8,73,2024-05-04,PWHL,2023/2024,Regular Season
+16,9:02,Block,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,19,Maggie Flaherty,,,,,33,Lindsey Post,,,,,,,32.3,31.4,73,2024-05-04,PWHL,2023/2024,Regular Season
+17,9:28,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,44,Jill Saulnier,,,,,29,Nicole Hensley,,,,,,,-72.7,2.5,73,2024-05-04,PWHL,2023/2024,Regular Season
+18,9:48,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,6,Brooke Hobson,,,,,29,Nicole Hensley,,,,,,,-77.3,29.2,73,2024-05-04,PWHL,2023/2024,Regular Season
+19,10:09,Goal,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,17,Ella Shelton,9,Jessie Eldridge,,,29,Nicole Hensley,,6 9 12 17 67,Brooke Hobson - Jessie Eldridge - Chloé Aurard - Ella Shelton - Emma Woods,,7 14 21 22 23,Claire Butorac - Clair DeGeorge - Liz Schepers - Natalie Buchbinder - Mellissa Channell-Watkins,-45.7,-23.0,73,2024-05-04,PWHL,2023/2024,Regular Season
+20,11:07,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,13,Alexandra Labelle,,,,,29,Nicole Hensley,,,,,,,-51.0,30.6,73,2024-05-04,PWHL,2023/2024,Regular Season
+21,12:55,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,26,Kendall Coyne Schofield,,,,,33,Lindsey Post,,,,,,,59.7,4.8,73,2024-05-04,PWHL,2023/2024,Regular Season
+22,13:51,Goal,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,41,Denisa Křížová,13,Grace Zumwinkle,12,Kelly Pannek,33,Lindsey Post,,11 17 18 25 59,Abby Roque - Ella Shelton - Élizabeth Giguère - Alex Carpenter - Johanna Fällman,,2 12 13 16 41,Lee Stecklein - Kelly Pannek - Grace Zumwinkle - Sophie Jaques - Denisa Křížová,83.0,-4.5,73,2024-05-04,PWHL,2023/2024,Regular Season
+23,15:18,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,16,Sophie Jaques,,,,,33,Lindsey Post,,,,,,,42.7,34.0,73,2024-05-04,PWHL,2023/2024,Regular Season
+24,16:46,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,25,Alex Carpenter,,,,,29,Nicole Hensley,,,,,,,-64.3,27.2,73,2024-05-04,PWHL,2023/2024,Regular Season
+25,17:00,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,18,Élizabeth Giguère,,,,,29,Nicole Hensley,,,,,,,-60.3,16.1,73,2024-05-04,PWHL,2023/2024,Regular Season
+26,17:12,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,11,Abby Roque,,,,,29,Nicole Hensley,,,,,,,-86.3,11.1,73,2024-05-04,PWHL,2023/2024,Regular Season
+27,17:30,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,17,Ella Shelton,,,,,29,Nicole Hensley,,,,,,,-28.3,17.8,73,2024-05-04,PWHL,2023/2024,Regular Season
+28,18:18,Block,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,86,Michela Cava,,,,,33,Lindsey Post,,,,,,,-31.3,1.1,73,2024-05-04,PWHL,2023/2024,Regular Season
+29,18:54,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,25,Alex Carpenter,,,,,29,Nicole Hensley,,,,,,,-58.0,3.7,73,2024-05-04,PWHL,2023/2024,Regular Season
+30,0:52,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,11,Abby Roque,,,,,29,Nicole Hensley,,,,,,,-61.0,-32.3,73,2024-05-04,PWHL,2023/2024,Regular Season
+31,2:46,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,6,Brooke Hobson,,,,,29,Nicole Hensley,,,,,,,-59.0,0.0,73,2024-05-04,PWHL,2023/2024,Regular Season
+32,3:00,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,14,Jaime Bourbonnais,,,,,29,Nicole Hensley,,,,,,,-74.3,-0.3,73,2024-05-04,PWHL,2023/2024,Regular Season
+33,3:00,Penalty,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,21,Liz Schepers,,,,,,,,,,,,,,,73,2024-05-04,PWHL,2023/2024,Regular Season
+34,3:41,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v4,11,Abby Roque,,,,,29,Nicole Hensley,,,,,,,-85.7,9.3,73,2024-05-04,PWHL,2023/2024,Regular Season
+35,3:47,Goal,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v4,14,Jaime Bourbonnais,17,Ella Shelton,25,Alex Carpenter,29,Nicole Hensley,,9 11 14 17 25,Jessie Eldridge - Abby Roque - Jaime Bourbonnais - Ella Shelton - Alex Carpenter,,2 12 13 25,Lee Stecklein - Kelly Pannek - Grace Zumwinkle - Emma Greco,-44.0,22.4,73,2024-05-04,PWHL,2023/2024,Regular Season
+36,3:59,Penalty,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,9,Jessie Eldridge,,,,,,,,,,,,,,,73,2024-05-04,PWHL,2023/2024,Regular Season
+37,4:26,Block,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,16,Sophie Jaques,,,,,33,Lindsey Post,,,,,,,30.0,1.4,73,2024-05-04,PWHL,2023/2024,Regular Season
+38,5:00,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v4,13,Grace Zumwinkle,,,,,33,Lindsey Post,,,,,,,51.7,-19.6,73,2024-05-04,PWHL,2023/2024,Regular Season
+39,5:22,Block,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,13,Grace Zumwinkle,,,,,33,Lindsey Post,,,,,,,51.0,17.8,73,2024-05-04,PWHL,2023/2024,Regular Season
+40,6:02,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,12,Kelly Pannek,,,,,33,Lindsey Post,,,,,,,82.7,-16.4,73,2024-05-04,PWHL,2023/2024,Regular Season
+41,6:43,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,13,Alexandra Labelle,,,,,29,Nicole Hensley,,,,,,,-80.3,14.5,73,2024-05-04,PWHL,2023/2024,Regular Season
+42,6:49,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,27,Jade Downie-Landry,,,,,29,Nicole Hensley,,,,,,,-78.0,15.0,73,2024-05-04,PWHL,2023/2024,Regular Season
+43,7:16,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,19,Paetyn Levis,,,,,29,Nicole Hensley,,,,,,,-76.0,14.5,73,2024-05-04,PWHL,2023/2024,Regular Season
+44,7:30,Penalty,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,27,Taylor Heise,,,,,,,,,,,,,,,73,2024-05-04,PWHL,2023/2024,Regular Season
+45,8:56,Goal,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v4,27,Jade Downie-Landry,,,,,29,Nicole Hensley,,14 18 27 28 67,Jaime Bourbonnais - Élizabeth Giguère - Jade Downie-Landry - Micah Zandee-Hart - Emma Woods,,11 21 22 23,Sophia Kunin - Liz Schepers - Natalie Buchbinder - Mellissa Channell-Watkins,-65.0,-6.8,73,2024-05-04,PWHL,2023/2024,Regular Season
+46,9:23,Block,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,41,Denisa Křížová,,,,,33,Lindsey Post,,,,,,,45.3,-7.6,73,2024-05-04,PWHL,2023/2024,Regular Season
+47,9:49,Block,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,12,Kelly Pannek,,,,,33,Lindsey Post,,,,,,,63.0,0.0,73,2024-05-04,PWHL,2023/2024,Regular Season
+48,10:10,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,26,Kendall Coyne Schofield,,,,,33,Lindsey Post,,,,,,,72.3,6.8,73,2024-05-04,PWHL,2023/2024,Regular Season
+49,11:07,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,18,Élizabeth Giguère,,,,,29,Nicole Hensley,,,,,,,-80.3,-13.3,73,2024-05-04,PWHL,2023/2024,Regular Season
+50,11:23,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,13,Grace Zumwinkle,,,,,33,Lindsey Post,,,,,,,59.7,-2.3,73,2024-05-04,PWHL,2023/2024,Regular Season
+51,11:33,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,22,Natalie Buchbinder,,,,,33,Lindsey Post,,,,,,,64.0,22.7,73,2024-05-04,PWHL,2023/2024,Regular Season
+52,11:45,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,12,Kelly Pannek,,,,,33,Lindsey Post,,,,,,,83.0,1.1,73,2024-05-04,PWHL,2023/2024,Regular Season
+53,12:10,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,16,Sophie Jaques,,,,,33,Lindsey Post,,,,,,,32.0,24.6,73,2024-05-04,PWHL,2023/2024,Regular Season
+54,12:47,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,86,Michela Cava,,,,,33,Lindsey Post,,,,,,,83.7,-4.0,73,2024-05-04,PWHL,2023/2024,Regular Season
+55,13:01,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,2,Lee Stecklein,,,,,33,Lindsey Post,,,,,,,28.3,-16.4,73,2024-05-04,PWHL,2023/2024,Regular Season
+56,14:02,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,19,Maggie Flaherty,,,,,33,Lindsey Post,,,,,,,43.0,16.1,73,2024-05-04,PWHL,2023/2024,Regular Season
+57,14:22,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,25,Alex Carpenter,,,,,29,Nicole Hensley,,,,,,,-71.0,-15.3,73,2024-05-04,PWHL,2023/2024,Regular Season
+58,14:37,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,25,Alex Carpenter,,,,,29,Nicole Hensley,,,,,,,-75.7,2.5,73,2024-05-04,PWHL,2023/2024,Regular Season
+59,15:28,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,27,Taylor Heise,,,,,33,Lindsey Post,,,,,,,76.0,3.7,73,2024-05-04,PWHL,2023/2024,Regular Season
+60,16:26,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,17,Ella Shelton,,,,,29,Nicole Hensley,,,,,,,-42.7,38.2,73,2024-05-04,PWHL,2023/2024,Regular Season
+61,18:56,Block,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,23,Mellissa Channell-Watkins,,,,,33,Lindsey Post,,,,,,,62.0,12.8,73,2024-05-04,PWHL,2023/2024,Regular Season
+62,19:23,Block,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,27,Taylor Heise,,,,,33,Lindsey Post,,,,,,,78.3,14.5,73,2024-05-04,PWHL,2023/2024,Regular Season
+63,1:15,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,22,Natalie Buchbinder,,,,,33,Lindsey Post,,,,,,,71.0,37.4,73,2024-05-04,PWHL,2023/2024,Regular Season
+64,1:26,Penalty,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,18,Brittyn Fleming,,,,,,,,,,,,,,,73,2024-05-04,PWHL,2023/2024,Regular Season
+65,2:21,Goal,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,4v5,13,Grace Zumwinkle,12,Kelly Pannek,,,33,Lindsey Post,,9 11 18 25 28,Jessie Eldridge - Abby Roque - Élizabeth Giguère - Alex Carpenter - Micah Zandee-Hart,,12 13 22 23,Kelly Pannek - Grace Zumwinkle - Natalie Buchbinder - Mellissa Channell-Watkins,85.0,-3.4,73,2024-05-04,PWHL,2023/2024,Regular Season
+66,2:55,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v4,67,Emma Woods,,,,,29,Nicole Hensley,,,,,,,-86.3,6.8,73,2024-05-04,PWHL,2023/2024,Regular Season
+67,2:55,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v4,67,Emma Woods,,,,,29,Nicole Hensley,,,,,,,-88.0,7.6,73,2024-05-04,PWHL,2023/2024,Regular Season
+68,3:43,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,18,Élizabeth Giguère,,,,,29,Nicole Hensley,,,,,,,-78.7,-2.5,73,2024-05-04,PWHL,2023/2024,Regular Season
+69,5:00,Block,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,2,Lee Stecklein,,,,,33,Lindsey Post,,,,,,,37.3,-16.1,73,2024-05-04,PWHL,2023/2024,Regular Season
+70,5:36,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,27,Taylor Heise,,,,,33,Lindsey Post,,,,,,,46.3,-8.8,73,2024-05-04,PWHL,2023/2024,Regular Season
+71,5:42,Penalty,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,44,Jill Saulnier,,,,,,,,,,,,,,,73,2024-05-04,PWHL,2023/2024,Regular Season
+72,6:13,Block,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,13,Grace Zumwinkle,,,,,33,Lindsey Post,,,,,,,59.7,-17.3,73,2024-05-04,PWHL,2023/2024,Regular Season
+73,6:39,Penalty,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,4v5,6,Brooke Hobson,,,,,,,,,,,,,,,73,2024-05-04,PWHL,2023/2024,Regular Season
+74,6:41,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v3,13,Grace Zumwinkle,,,,,33,Lindsey Post,,,,,,,61.0,-15.9,73,2024-05-04,PWHL,2023/2024,Regular Season
+75,6:52,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,3v5,17,Ella Shelton,,,,,29,Nicole Hensley,,,,,,,42.3,29.2,73,2024-05-04,PWHL,2023/2024,Regular Season
+76,7:24,Block,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,16,Sophie Jaques,,,,,33,Lindsey Post,,,,,,,55.7,22.1,73,2024-05-04,PWHL,2023/2024,Regular Season
+77,7:44,Block,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,17,Brooke Bryant,,,,,33,Lindsey Post,,,,,,,59.7,4.0,73,2024-05-04,PWHL,2023/2024,Regular Season
+78,8:06,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v4,13,Grace Zumwinkle,,,,,33,Lindsey Post,,,,,,,64.7,-17.0,73,2024-05-04,PWHL,2023/2024,Regular Season
+79,8:13,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v4,16,Sophie Jaques,,,,,33,Lindsey Post,,,,,,,52.3,-5.7,73,2024-05-04,PWHL,2023/2024,Regular Season
+80,8:39,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,6,Brooke Hobson,,,,,29,Nicole Hensley,,,,,,,-79.0,-2.0,73,2024-05-04,PWHL,2023/2024,Regular Season
+81,8:39,Penalty,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,,,,,,,,,,,,,,,,,73,2024-05-04,PWHL,2023/2024,Regular Season
+82,9:01,Goal,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v4,11,Abby Roque,9,Jessie Eldridge,17,Ella Shelton,29,Nicole Hensley,,9 11 14 17 25,Jessie Eldridge - Abby Roque - Jaime Bourbonnais - Ella Shelton - Alex Carpenter,,14 21 22 23,Clair DeGeorge - Liz Schepers - Natalie Buchbinder - Mellissa Channell-Watkins,-84.7,-7.9,73,2024-05-04,PWHL,2023/2024,Regular Season
+83,9:25,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,4,Taylor Baker,,,,,29,Nicole Hensley,,,,,,,-34.0,-27.2,73,2024-05-04,PWHL,2023/2024,Regular Season
+84,12:51,Block,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,11,Sophia Kunin,,,,,33,Lindsey Post,,,,,,,57.0,-5.4,73,2024-05-04,PWHL,2023/2024,Regular Season
+85,13:22,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,12,Kelly Pannek,,,,,33,Lindsey Post,,,,,,,83.7,26.4,73,2024-05-04,PWHL,2023/2024,Regular Season
+86,13:52,Block,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,22,Natalie Buchbinder,,,,,33,Lindsey Post,,,,,,,42.0,-6.0,73,2024-05-04,PWHL,2023/2024,Regular Season
+87,14:27,Penalty,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,19,Paetyn Levis,,,,,,,,,,,,,,,73,2024-05-04,PWHL,2023/2024,Regular Season
+88,14:35,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,4,Taylor Baker,,,,,29,Nicole Hensley,,,,,,,-27.0,-29.5,73,2024-05-04,PWHL,2023/2024,Regular Season
+89,16:37,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,10,Kayla Vespa,,,,,29,Nicole Hensley,,,,,,,-73.3,13.0,73,2024-05-04,PWHL,2023/2024,Regular Season
+90,17:12,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,41,Denisa Křížová,,,,,33,Lindsey Post,,,,,,,82.7,8.5,73,2024-05-04,PWHL,2023/2024,Regular Season
+91,18:17,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,11,Sophia Kunin,,,,,33,Lindsey Post,,,,,,,80.7,5.7,73,2024-05-04,PWHL,2023/2024,Regular Season
+92,19:31,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,16,Sophie Jaques,,,,,33,Lindsey Post,,,,,,,82.0,14.7,73,2024-05-04,PWHL,2023/2024,Regular Season
+93,19:41,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,19,Paetyn Levis,,,,,29,Nicole Hensley,,,,,,,-64.3,-11.1,73,2024-05-04,PWHL,2023/2024,Regular Season
+94,19:47,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,59,Johanna Fällman,,,,,29,Nicole Hensley,,,,,,,-58.0,9.1,73,2024-05-04,PWHL,2023/2024,Regular Season

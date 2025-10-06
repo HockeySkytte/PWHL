@@ -1,0 +1,98 @@
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
+1,0:16,Shot,Montréal Victoire,Home,Montréal Victoire,New York Sirens,1,event,5v5,9,Kati Tabin,,,,,30,Corinne Schroeder,,,,,,,-54.0,12.8,170,2025-04-01,PWHL,2024/2025,Regular Season
+2,1:14,Block,Montréal Victoire,Home,Montréal Victoire,New York Sirens,1,event,5v5,44,Amanda Boulier,,,,,30,Corinne Schroeder,,,,,,,-39.0,-14.5,170,2025-04-01,PWHL,2024/2025,Regular Season
+3,1:20,Block,Montréal Victoire,Home,Montréal Victoire,New York Sirens,1,event,5v5,44,Amanda Boulier,,,,,30,Corinne Schroeder,,,,,,,-42.7,-1.1,170,2025-04-01,PWHL,2024/2025,Regular Season
+4,1:23,Block,Montréal Victoire,Home,Montréal Victoire,New York Sirens,1,event,5v5,21,Maureen Murphy,,,,,30,Corinne Schroeder,,,,,,,-61.0,-18.1,170,2025-04-01,PWHL,2024/2025,Regular Season
+5,2:06,Block,Montréal Victoire,Home,Montréal Victoire,New York Sirens,1,event,5v5,18,Mikyla Grant-Mentis,,,,,30,Corinne Schroeder,,,,,,,-63.3,22.4,170,2025-04-01,PWHL,2024/2025,Regular Season
+6,2:35,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,1,event,5v5,27,Jade Downie-Landry,,,,,20,Elaine Chuli,,,,,,,72.0,-16.1,170,2025-04-01,PWHL,2024/2025,Regular Season
+7,2:40,Block,New York Sirens,Away,Montréal Victoire,New York Sirens,1,event,5v5,14,Jaime Bourbonnais,,,,,20,Elaine Chuli,,,,,,,38.0,12.8,170,2025-04-01,PWHL,2024/2025,Regular Season
+8,3:23,Block,New York Sirens,Away,Montréal Victoire,New York Sirens,1,event,5v5,11,Abby Roque,,,,,20,Elaine Chuli,,,,,,,43.0,28.1,170,2025-04-01,PWHL,2024/2025,Regular Season
+9,4:15,Block,Montréal Victoire,Home,Montréal Victoire,New York Sirens,1,event,5v5,29,Marie-Philip Poulin,,,,,30,Corinne Schroeder,,,,,,,-59.0,0.3,170,2025-04-01,PWHL,2024/2025,Regular Season
+10,4:29,Block,Montréal Victoire,Home,Montréal Victoire,New York Sirens,1,event,5v5,21,Maureen Murphy,,,,,30,Corinne Schroeder,,,,,,,-49.0,-23.8,170,2025-04-01,PWHL,2024/2025,Regular Season
+11,5:35,Block,Montréal Victoire,Home,Montréal Victoire,New York Sirens,1,event,5v5,24,Abby Boreen,,,,,30,Corinne Schroeder,,,,,,,-47.0,-4.8,170,2025-04-01,PWHL,2024/2025,Regular Season
+12,5:45,Block,Montréal Victoire,Home,Montréal Victoire,New York Sirens,1,event,5v5,3,Cayla Barnes,,,,,30,Corinne Schroeder,,,,,,,-37.0,-11.1,170,2025-04-01,PWHL,2024/2025,Regular Season
+13,6:03,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,1,event,5v5,11,Abby Roque,,,,,20,Elaine Chuli,,,,,,,65.0,30.0,170,2025-04-01,PWHL,2024/2025,Regular Season
+14,6:18,Block,New York Sirens,Away,Montréal Victoire,New York Sirens,1,event,5v5,13,Elle Hartje,,,,,20,Elaine Chuli,,,,,,,42.3,34.0,170,2025-04-01,PWHL,2024/2025,Regular Season
+15,6:34,Shot,Montréal Victoire,Home,Montréal Victoire,New York Sirens,1,event,5v5,7,Laura Stacey,,,,,30,Corinne Schroeder,,,,,,,11.0,-36.0,170,2025-04-01,PWHL,2024/2025,Regular Season
+16,8:21,Block,Montréal Victoire,Home,Montréal Victoire,New York Sirens,1,event,5v5,2,Mariah Keopple,,,,,30,Corinne Schroeder,,,,,,,-32.7,29.7,170,2025-04-01,PWHL,2024/2025,Regular Season
+17,10:00,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,1,event,5v5,17,Ella Shelton,,,,,20,Elaine Chuli,,,,,,,31.0,-34.3,170,2025-04-01,PWHL,2024/2025,Regular Season
+18,10:31,Block,Montréal Victoire,Home,Montréal Victoire,New York Sirens,1,event,5v5,25,Lina Ljungblom,,,,,30,Corinne Schroeder,,,,,,,-48.3,-19.3,170,2025-04-01,PWHL,2024/2025,Regular Season
+19,10:55,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,1,event,5v5,15,Gabby Rosenthal,,,,,20,Elaine Chuli,,,,,,,78.0,-13.3,170,2025-04-01,PWHL,2024/2025,Regular Season
+20,11:35,Block,New York Sirens,Away,Montréal Victoire,New York Sirens,1,event,5v5,12,Chloé Aurard,,,,,20,Elaine Chuli,,,,,,,56.7,-18.1,170,2025-04-01,PWHL,2024/2025,Regular Season
+21,11:43,Block,New York Sirens,Away,Montréal Victoire,New York Sirens,1,event,5v5,29,Emmy Fecteau,,,,,20,Elaine Chuli,,,,,,,30.3,-12.5,170,2025-04-01,PWHL,2024/2025,Regular Season
+22,12:02,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,1,event,5v5,29,Emmy Fecteau,,,,,20,Elaine Chuli,,,,,,,6.3,-30.0,170,2025-04-01,PWHL,2024/2025,Regular Season
+23,12:36,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,1,event,5v5,9,Jessie Eldridge,,,,,20,Elaine Chuli,,,,,,,57.3,-15.0,170,2025-04-01,PWHL,2024/2025,Regular Season
+24,14:20,Shot,Montréal Victoire,Home,Montréal Victoire,New York Sirens,1,event,5v5,19,Kaitlin Willoughby,,,,,30,Corinne Schroeder,,,,,,,-33.0,-36.3,170,2025-04-01,PWHL,2024/2025,Regular Season
+25,14:45,Penalty,Montréal Victoire,Home,Montréal Victoire,New York Sirens,1,event,5v5,9,Kati Tabin,,,,,,,,,,,,,,,170,2025-04-01,PWHL,2024/2025,Regular Season
+26,14:45,Penalty,Montréal Victoire,Home,Montréal Victoire,New York Sirens,1,event,5v5,9,Kati Tabin,,,,,,,,,,,,,,,170,2025-04-01,PWHL,2024/2025,Regular Season
+27,15:07,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,1,event,5v3,10,Sarah Fillier,,,,,20,Elaine Chuli,,,,,,,75.0,-4.0,170,2025-04-01,PWHL,2024/2025,Regular Season
+28,16:07,Block,New York Sirens,Away,Montréal Victoire,New York Sirens,1,event,5v3,14,Jaime Bourbonnais,,,,,20,Elaine Chuli,,,,,,,41.0,20.7,170,2025-04-01,PWHL,2024/2025,Regular Season
+29,17:46,Shot,Montréal Victoire,Home,Montréal Victoire,New York Sirens,1,event,5v5,29,Marie-Philip Poulin,,,,,30,Corinne Schroeder,,,,,,,-71.0,39.4,170,2025-04-01,PWHL,2024/2025,Regular Season
+30,18:23,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,1,event,5v5,14,Jaime Bourbonnais,,,,,20,Elaine Chuli,,,,,,,31.7,12.8,170,2025-04-01,PWHL,2024/2025,Regular Season
+31,18:26,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,1,event,5v5,28,Micah Zandee-Hart,,,,,20,Elaine Chuli,,,,,,,82.3,-7.1,170,2025-04-01,PWHL,2024/2025,Regular Season
+32,18:33,Block,New York Sirens,Away,Montréal Victoire,New York Sirens,1,event,5v5,13,Elle Hartje,,,,,20,Elaine Chuli,,,,,,,61.7,21.5,170,2025-04-01,PWHL,2024/2025,Regular Season
+33,18:46,Block,New York Sirens,Away,Montréal Victoire,New York Sirens,1,event,5v5,17,Ella Shelton,,,,,20,Elaine Chuli,,,,,,,55.3,-4.2,170,2025-04-01,PWHL,2024/2025,Regular Season
+34,19:48,Goal,New York Sirens,Away,Montréal Victoire,New York Sirens,1,event,5v5,27,Jade Downie-Landry,15,Gabby Rosenthal,,,20,Elaine Chuli,,3 7 12 23 29,Cayla Barnes - Laura Stacey - Jenn Gardiner - Erin Ambrose - Marie-Philip Poulin,,14 15 27 28 71,Jaime Bourbonnais - Gabby Rosenthal - Jade Downie-Landry - Micah Zandee-Hart - Taylor Girard,65.0,4.2,170,2025-04-01,PWHL,2024/2025,Regular Season
+35,0:16,Block,New York Sirens,Away,Montréal Victoire,New York Sirens,2,event,5v5,20,Allyson Simpson,,,,,20,Elaine Chuli,,,,,,,33.7,17.8,170,2025-04-01,PWHL,2024/2025,Regular Season
+36,0:24,Block,Montréal Victoire,Home,Montréal Victoire,New York Sirens,2,event,5v5,7,Laura Stacey,,,,,30,Corinne Schroeder,,,,,,,-53.7,-25.5,170,2025-04-01,PWHL,2024/2025,Regular Season
+37,1:09,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,2,event,5v5,17,Ella Shelton,,,,,20,Elaine Chuli,,,,,,,60.3,-34.9,170,2025-04-01,PWHL,2024/2025,Regular Season
+38,1:23,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,2,event,5v5,13,Elle Hartje,,,,,20,Elaine Chuli,,,,,,,67.7,36.5,170,2025-04-01,PWHL,2024/2025,Regular Season
+39,3:18,Shot,Montréal Victoire,Home,Montréal Victoire,New York Sirens,2,event,5v5,7,Laura Stacey,,,,,30,Corinne Schroeder,,,,,,,-84.7,7.6,170,2025-04-01,PWHL,2024/2025,Regular Season
+40,4:00,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,2,event,5v5,19,Paetyn Levis,,,,,20,Elaine Chuli,,,,,,,65.0,5.4,170,2025-04-01,PWHL,2024/2025,Regular Season
+41,4:10,Block,New York Sirens,Away,Montréal Victoire,New York Sirens,2,event,5v5,6,Brooke Hobson,,,,,20,Elaine Chuli,,,,,,,32.3,4.5,170,2025-04-01,PWHL,2024/2025,Regular Season
+42,4:48,Block,Montréal Victoire,Home,Montréal Victoire,New York Sirens,2,event,5v5,18,Mikyla Grant-Mentis,,,,,30,Corinne Schroeder,,,,,,,-35.7,-11.1,170,2025-04-01,PWHL,2024/2025,Regular Season
+43,5:10,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,2,event,5v5,17,Ella Shelton,,,,,20,Elaine Chuli,,,,,,,71.0,8.8,170,2025-04-01,PWHL,2024/2025,Regular Season
+44,5:22,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,2,event,5v5,29,Emmy Fecteau,,,,,20,Elaine Chuli,,,,,,,79.0,-12.2,170,2025-04-01,PWHL,2024/2025,Regular Season
+45,5:27,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,2,event,5v5,40,Noora Tulus,,,,,20,Elaine Chuli,,,,,,,74.3,-13.9,170,2025-04-01,PWHL,2024/2025,Regular Season
+46,5:41,Block,New York Sirens,Away,Montréal Victoire,New York Sirens,2,event,5v5,20,Allyson Simpson,,,,,20,Elaine Chuli,,,,,,,34.7,-5.4,170,2025-04-01,PWHL,2024/2025,Regular Season
+47,5:50,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,2,event,5v5,27,Jade Downie-Landry,,,,,20,Elaine Chuli,,,,,,,35.3,28.3,170,2025-04-01,PWHL,2024/2025,Regular Season
+48,5:53,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,2,event,5v5,71,Taylor Girard,,,,,20,Elaine Chuli,,,,,,,79.0,-11.6,170,2025-04-01,PWHL,2024/2025,Regular Season
+49,7:02,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,2,event,5v5,25,Alex Carpenter,,,,,20,Elaine Chuli,,,,,,,83.7,17.6,170,2025-04-01,PWHL,2024/2025,Regular Season
+50,8:29,Block,Montréal Victoire,Home,Montréal Victoire,New York Sirens,2,event,5v5,5,Anna Wilgren,,,,,30,Corinne Schroeder,,,,,,,-37.7,-22.1,170,2025-04-01,PWHL,2024/2025,Regular Season
+51,9:44,Shot,Montréal Victoire,Home,Montréal Victoire,New York Sirens,2,event,5v5,5,Anna Wilgren,,,,,30,Corinne Schroeder,,,,,,,-34.3,24.4,170,2025-04-01,PWHL,2024/2025,Regular Season
+52,11:28,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,2,event,5v5,10,Sarah Fillier,,,,,20,Elaine Chuli,,,,,,,79.0,18.4,170,2025-04-01,PWHL,2024/2025,Regular Season
+53,12:09,Block,Montréal Victoire,Home,Montréal Victoire,New York Sirens,2,event,5v5,21,Maureen Murphy,,,,,30,Corinne Schroeder,,,,,,,-54.3,-13.9,170,2025-04-01,PWHL,2024/2025,Regular Season
+54,12:15,Block,Montréal Victoire,Home,Montréal Victoire,New York Sirens,2,event,5v5,21,Maureen Murphy,,,,,30,Corinne Schroeder,,,,,,,-81.0,-29.7,170,2025-04-01,PWHL,2024/2025,Regular Season
+55,12:28,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,2,event,5v5,10,Sarah Fillier,,,,,20,Elaine Chuli,,,,,,,82.3,14.5,170,2025-04-01,PWHL,2024/2025,Regular Season
+56,13:06,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,2,event,5v5,40,Noora Tulus,,,,,20,Elaine Chuli,,,,,,,62.7,0.6,170,2025-04-01,PWHL,2024/2025,Regular Season
+57,14:02,Block,Montréal Victoire,Home,Montréal Victoire,New York Sirens,2,event,5v5,29,Marie-Philip Poulin,,,,,30,Corinne Schroeder,,,,,,,-65.0,16.4,170,2025-04-01,PWHL,2024/2025,Regular Season
+58,14:32,Block,Montréal Victoire,Home,Montréal Victoire,New York Sirens,2,event,5v5,24,Abby Boreen,,,,,30,Corinne Schroeder,,,,,,,-41.0,16.4,170,2025-04-01,PWHL,2024/2025,Regular Season
+59,15:30,Shot,Montréal Victoire,Home,Montréal Victoire,New York Sirens,2,event,5v5,26,Clair DeGeorge,,,,,30,Corinne Schroeder,,,,,,,-75.3,4.8,170,2025-04-01,PWHL,2024/2025,Regular Season
+60,15:48,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,2,event,5v5,10,Sarah Fillier,,,,,20,Elaine Chuli,,,,,,,66.3,-21.2,170,2025-04-01,PWHL,2024/2025,Regular Season
+61,16:37,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,2,event,5v5,14,Jaime Bourbonnais,,,,,20,Elaine Chuli,,,,,,,41.0,26.1,170,2025-04-01,PWHL,2024/2025,Regular Season
+62,16:56,Shot,Montréal Victoire,Home,Montréal Victoire,New York Sirens,2,event,5v5,25,Lina Ljungblom,,,,,30,Corinne Schroeder,,,,,,,-53.3,-24.6,170,2025-04-01,PWHL,2024/2025,Regular Season
+63,17:13,Block,New York Sirens,Away,Montréal Victoire,New York Sirens,2,event,5v5,11,Abby Roque,,,,,20,Elaine Chuli,,,,,,,63.7,-9.3,170,2025-04-01,PWHL,2024/2025,Regular Season
+64,18:01,Shot,Montréal Victoire,Home,Montréal Victoire,New York Sirens,2,event,5v5,29,Marie-Philip Poulin,,,,,30,Corinne Schroeder,,,,,,,-73.3,-5.4,170,2025-04-01,PWHL,2024/2025,Regular Season
+65,18:52,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,2,event,5v5,10,Sarah Fillier,,,,,20,Elaine Chuli,,,,,,,75.3,-1.1,170,2025-04-01,PWHL,2024/2025,Regular Season
+66,19:14,Block,New York Sirens,Away,Montréal Victoire,New York Sirens,2,event,5v5,13,Elle Hartje,,,,,20,Elaine Chuli,,,,,,,66.3,-15.9,170,2025-04-01,PWHL,2024/2025,Regular Season
+67,1:04,Penalty,Montréal Victoire,Home,Montréal Victoire,New York Sirens,3,event,5v5,26,Clair DeGeorge,,,,,,,,,,,,,,,170,2025-04-01,PWHL,2024/2025,Regular Season
+68,2:17,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v4,28,Micah Zandee-Hart,,,,,20,Elaine Chuli,,,,,,,55.7,-11.1,170,2025-04-01,PWHL,2024/2025,Regular Season
+69,2:27,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v4,28,Micah Zandee-Hart,,,,,20,Elaine Chuli,,,,,,,33.0,-27.5,170,2025-04-01,PWHL,2024/2025,Regular Season
+70,3:31,Shot,Montréal Victoire,Home,Montréal Victoire,New York Sirens,3,event,5v5,24,Abby Boreen,,,,,30,Corinne Schroeder,,,,,,,-60.3,-4.2,170,2025-04-01,PWHL,2024/2025,Regular Season
+71,3:40,Shot,Montréal Victoire,Home,Montréal Victoire,New York Sirens,3,event,5v5,44,Amanda Boulier,,,,,30,Corinne Schroeder,,,,,,,-36.0,-17.0,170,2025-04-01,PWHL,2024/2025,Regular Season
+72,5:23,Block,Montréal Victoire,Home,Montréal Victoire,New York Sirens,3,event,5v5,24,Abby Boreen,,,,,30,Corinne Schroeder,,,,,,,-57.0,19.0,170,2025-04-01,PWHL,2024/2025,Regular Season
+73,5:35,Shot,Montréal Victoire,Home,Montréal Victoire,New York Sirens,3,event,5v5,28,Catherine Dubois,,,,,30,Corinne Schroeder,,,,,,,-33.0,29.7,170,2025-04-01,PWHL,2024/2025,Regular Season
+74,8:24,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v5,19,Paetyn Levis,,,,,20,Elaine Chuli,,,,,,,38.3,33.7,170,2025-04-01,PWHL,2024/2025,Regular Season
+75,8:26,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v5,25,Alex Carpenter,,,,,20,Elaine Chuli,,,,,,,83.0,0.0,170,2025-04-01,PWHL,2024/2025,Regular Season
+76,8:26,Penalty,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v5,10,Sarah Fillier,,,,,,,,,,,,,,,170,2025-04-01,PWHL,2024/2025,Regular Season
+77,8:26,Penalty,Montréal Victoire,Home,Montréal Victoire,New York Sirens,3,event,5v5,2,Mariah Keopple,,,,,,,,,,,,,,,170,2025-04-01,PWHL,2024/2025,Regular Season
+78,8:53,Block,Montréal Victoire,Home,Montréal Victoire,New York Sirens,3,event,5v5,7,Laura Stacey,,,,,30,Corinne Schroeder,,,,,,,-45.0,21.2,170,2025-04-01,PWHL,2024/2025,Regular Season
+79,9:54,Shot,Montréal Victoire,Home,Montréal Victoire,New York Sirens,3,event,5v5,2,Mariah Keopple,,,,,30,Corinne Schroeder,,,,,,,-69.0,24.6,170,2025-04-01,PWHL,2024/2025,Regular Season
+80,10:18,Penalty,Montréal Victoire,Home,Montréal Victoire,New York Sirens,3,event,5v5,3,Cayla Barnes,,,,,,,,,,,,,,,170,2025-04-01,PWHL,2024/2025,Regular Season
+81,10:42,Block,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v5,25,Alex Carpenter,,,,,20,Elaine Chuli,,,,,,,41.7,9.3,170,2025-04-01,PWHL,2024/2025,Regular Season
+82,10:52,Block,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v5,9,Jessie Eldridge,,,,,20,Elaine Chuli,,,,,,,43.7,-14.7,170,2025-04-01,PWHL,2024/2025,Regular Season
+83,11:01,Block,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v5,25,Alex Carpenter,,,,,20,Elaine Chuli,,,,,,,69.0,28.1,170,2025-04-01,PWHL,2024/2025,Regular Season
+84,11:16,Penalty,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v4,11,Abby Roque,,,,,,,,,,,,,,,170,2025-04-01,PWHL,2024/2025,Regular Season
+85,11:25,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,4v4,9,Jessie Eldridge,,,,,20,Elaine Chuli,,,,,,,-12.0,32.3,170,2025-04-01,PWHL,2024/2025,Regular Season
+86,11:33,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,4v4,17,Ella Shelton,,,,,20,Elaine Chuli,,,,,,,50.3,-26.1,170,2025-04-01,PWHL,2024/2025,Regular Season
+87,11:39,Block,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v5,14,Jaime Bourbonnais,,,,,20,Elaine Chuli,,,,,,,66.3,21.2,170,2025-04-01,PWHL,2024/2025,Regular Season
+88,11:49,Block,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v5,17,Ella Shelton,,,,,20,Elaine Chuli,,,,,,,36.0,22.7,170,2025-04-01,PWHL,2024/2025,Regular Season
+89,12:54,Shot,Montréal Victoire,Home,Montréal Victoire,New York Sirens,3,event,5v4,7,Laura Stacey,,,,,30,Corinne Schroeder,,,,,,,-80.3,0.6,170,2025-04-01,PWHL,2024/2025,Regular Season
+90,13:27,Block,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v5,11,Abby Roque,,,,,20,Elaine Chuli,,,,,,,52.0,-18.1,170,2025-04-01,PWHL,2024/2025,Regular Season
+91,15:11,Block,Montréal Victoire,Home,Montréal Victoire,New York Sirens,3,event,3v5,7,Laura Stacey,,,,,30,Corinne Schroeder,,,,,,,-44.7,-18.4,170,2025-04-01,PWHL,2024/2025,Regular Season
+92,16:54,Block,Montréal Victoire,Home,Montréal Victoire,New York Sirens,3,event,5v5,18,Mikyla Grant-Mentis,,,,,30,Corinne Schroeder,,,,,,,-36.3,-1.7,170,2025-04-01,PWHL,2024/2025,Regular Season
+93,17:45,Block,Montréal Victoire,Home,Montréal Victoire,New York Sirens,3,event,5v5,23,Erin Ambrose,,,,,30,Corinne Schroeder,,,,,,,-51.0,24.6,170,2025-04-01,PWHL,2024/2025,Regular Season
+94,17:56,Shot,Montréal Victoire,Home,Montréal Victoire,New York Sirens,3,event,5v5,29,Marie-Philip Poulin,,,,,30,Corinne Schroeder,,,,,,,-30.0,-9.1,170,2025-04-01,PWHL,2024/2025,Regular Season
+95,18:43,Penalty,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v5,20,Allyson Simpson,,,,,,,,,,,,,,,170,2025-04-01,PWHL,2024/2025,Regular Season
+96,19:16,Shot,Montréal Victoire,Home,Montréal Victoire,New York Sirens,3,event,5v4,12,Jenn Gardiner,,,,,30,Corinne Schroeder,,,,,,,-82.0,-7.6,170,2025-04-01,PWHL,2024/2025,Regular Season
+97,19:46,Block,Montréal Victoire,Home,Montréal Victoire,New York Sirens,3,event,5v5,7,Laura Stacey,,,,,30,Corinne Schroeder,,,,,,,-47.0,27.2,170,2025-04-01,PWHL,2024/2025,Regular Season

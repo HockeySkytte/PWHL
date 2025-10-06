@@ -1,0 +1,119 @@
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
+1,0:28,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v5,26,Emily Clark,,,,,35,Ann-Renée Desbiens,,,,,,,72.3,5.1,49,2024-03-10,PWHL,2023/2024,Regular Season
+2,0:31,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v5,21,Ashton Bell,,,,,35,Ann-Renée Desbiens,,,,,,,27.7,32.9,49,2024-03-10,PWHL,2023/2024,Regular Season
+3,1:35,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v5,28,Amanda Boulier,,,,,35,Ann-Renée Desbiens,,,,,,,60.7,39.4,49,2024-03-10,PWHL,2023/2024,Regular Season
+4,2:08,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v5,25,Mélodie Daoust,,,,,38,Emerance Maschmeyer,,,,,,,-54.0,-13.0,49,2024-03-10,PWHL,2023/2024,Regular Season
+5,2:20,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v5,81,Rosalie Demers,,,,,35,Ann-Renée Desbiens,,,,,,,53.7,-14.5,49,2024-03-10,PWHL,2023/2024,Regular Season
+6,2:24,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v5,16,Sarah Lefort,,,,,38,Emerance Maschmeyer,,,,,,,-4.0,39.4,49,2024-03-10,PWHL,2023/2024,Regular Season
+7,2:31,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v5,28,Catherine Dubois,,,,,38,Emerance Maschmeyer,,,,,,,-52.0,20.7,49,2024-03-10,PWHL,2023/2024,Regular Season
+8,2:37,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v5,2,Mariah Keopple,,,,,38,Emerance Maschmeyer,,,,,,,-59.3,34.0,49,2024-03-10,PWHL,2023/2024,Regular Season
+9,4:17,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v5,2,Aneta Tejralová,,,,,35,Ann-Renée Desbiens,,,,,,,23.7,-36.5,49,2024-03-10,PWHL,2023/2024,Regular Season
+10,5:49,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v5,14,Hayley Scamurra,,,,,35,Ann-Renée Desbiens,,,,,,,87.0,24.6,49,2024-03-10,PWHL,2023/2024,Regular Season
+11,6:15,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v5,21,Tereza Vanišová,,,,,38,Emerance Maschmeyer,,,,,,,-68.0,14.7,49,2024-03-10,PWHL,2023/2024,Regular Season
+12,6:23,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v5,9,Kati Tabin,,,,,38,Emerance Maschmeyer,,,,,,,-34.0,38.0,49,2024-03-10,PWHL,2023/2024,Regular Season
+13,6:49,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v5,9,Daryl Watts,,,,,35,Ann-Renée Desbiens,,,,,,,83.0,11.1,49,2024-03-10,PWHL,2023/2024,Regular Season
+14,7:05,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v5,15,Maureen Murphy,,,,,38,Emerance Maschmeyer,,,,,,,-52.3,21.2,49,2024-03-10,PWHL,2023/2024,Regular Season
+15,7:15,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v5,3,Zoe Boyd,,,,,35,Ann-Renée Desbiens,,,,,,,54.0,12.2,49,2024-03-10,PWHL,2023/2024,Regular Season
+16,7:58,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v5,14,Jillian Dempsey,,,,,38,Emerance Maschmeyer,,,,,,,-76.3,-6.0,49,2024-03-10,PWHL,2023/2024,Regular Season
+17,9:26,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v5,21,Tereza Vanišová,,,,,38,Emerance Maschmeyer,,,,,,,-60.0,22.1,49,2024-03-10,PWHL,2023/2024,Regular Season
+18,10:20,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v5,8,Gabrielle David,,,,,38,Emerance Maschmeyer,,,,,,,-47.3,-16.1,49,2024-03-10,PWHL,2023/2024,Regular Season
+19,10:25,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v5,25,Mélodie Daoust,,,,,38,Emerance Maschmeyer,,,,,,,-61.0,-22.4,49,2024-03-10,PWHL,2023/2024,Regular Season
+20,10:47,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v5,21,Ashton Bell,,,,,35,Ann-Renée Desbiens,,,,,,,33.0,16.7,49,2024-03-10,PWHL,2023/2024,Regular Season
+21,10:54,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v5,9,Daryl Watts,,,,,35,Ann-Renée Desbiens,,,,,,,59.0,-14.5,49,2024-03-10,PWHL,2023/2024,Regular Season
+22,11:23,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v5,26,Emily Clark,,,,,35,Ann-Renée Desbiens,,,,,,,53.3,-0.3,49,2024-03-10,PWHL,2023/2024,Regular Season
+23,11:30,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v5,14,Hayley Scamurra,,,,,35,Ann-Renée Desbiens,,,,,,,73.3,9.1,49,2024-03-10,PWHL,2023/2024,Regular Season
+24,11:50,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v5,16,Sarah Lefort,,,,,38,Emerance Maschmeyer,,,,,,,-72.7,-9.3,49,2024-03-10,PWHL,2023/2024,Regular Season
+25,12:16,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v5,15,Savannah Harmon,,,,,35,Ann-Renée Desbiens,,,,,,,-13.7,-27.8,49,2024-03-10,PWHL,2023/2024,Regular Season
+26,15:10,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v5,9,Daryl Watts,,,,,35,Ann-Renée Desbiens,,,,,,,65.7,-24.9,49,2024-03-10,PWHL,2023/2024,Regular Season
+27,16:08,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v5,21,Ashton Bell,,,,,35,Ann-Renée Desbiens,,,,,,,53.7,18.7,49,2024-03-10,PWHL,2023/2024,Regular Season
+28,16:12,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v5,19,Brianne Jenner,,,,,35,Ann-Renée Desbiens,,,,,,,52.3,23.0,49,2024-03-10,PWHL,2023/2024,Regular Season
+29,16:28,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v5,14,Hayley Scamurra,,,,,35,Ann-Renée Desbiens,,,,,,,83.3,-3.4,49,2024-03-10,PWHL,2023/2024,Regular Season
+30,16:38,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v5,25,Mélodie Daoust,,,,,38,Emerance Maschmeyer,,,,,,,-61.3,38.2,49,2024-03-10,PWHL,2023/2024,Regular Season
+31,16:49,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v5,15,Maureen Murphy,,,,,38,Emerance Maschmeyer,,,,,,,-78.3,-2.0,49,2024-03-10,PWHL,2023/2024,Regular Season
+32,16:57,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v5,9,Kati Tabin,,,,,38,Emerance Maschmeyer,,,,,,,-42.3,12.5,49,2024-03-10,PWHL,2023/2024,Regular Season
+33,18:16,Penalty,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v5,26,Sarah Bujold,,,,,,,,,,,,,,,49,2024-03-10,PWHL,2023/2024,Regular Season
+34,19:03,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v4,9,Daryl Watts,,,,,35,Ann-Renée Desbiens,,,,,,,63.0,19.6,49,2024-03-10,PWHL,2023/2024,Regular Season
+35,19:11,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v4,9,Daryl Watts,,,,,35,Ann-Renée Desbiens,,,,,,,63.0,0.8,49,2024-03-10,PWHL,2023/2024,Regular Season
+36,19:23,Goal,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v4,19,Brianne Jenner,16,Kateřina Mrázová,2,Aneta Tejralová,35,Ann-Renée Desbiens,,4 8 9 24,Catherine Daoust - Gabrielle David - Kati Tabin - Ann-Sophie Bettez,,2 9 16 19 88,Aneta Tejralová - Daryl Watts - Kateřina Mrázová - Brianne Jenner - Lexie Adzija,74.0,13.9,49,2024-03-10,PWHL,2023/2024,Regular Season
+37,0:41,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,5v5,26,Emily Clark,,,,,35,Ann-Renée Desbiens,,,,,,,54.7,7.6,49,2024-03-10,PWHL,2023/2024,Regular Season
+38,1:38,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v5,4,Catherine Daoust,,,,,38,Emerance Maschmeyer,,,,,,,-40.0,26.6,49,2024-03-10,PWHL,2023/2024,Regular Season
+39,1:44,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,5v5,11,Akane Shiga,,,,,35,Ann-Renée Desbiens,,,,,,,87.0,-6.8,49,2024-03-10,PWHL,2023/2024,Regular Season
+40,2:14,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v5,4,Catherine Daoust,,,,,38,Emerance Maschmeyer,,,,,,,-63.0,-28.1,49,2024-03-10,PWHL,2023/2024,Regular Season
+41,3:03,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v5,28,Catherine Dubois,,,,,38,Emerance Maschmeyer,,,,,,,-30.0,-9.3,49,2024-03-10,PWHL,2023/2024,Regular Season
+42,3:24,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v5,23,Erin Ambrose,,,,,38,Emerance Maschmeyer,,,,,,,-27.0,-26.1,49,2024-03-10,PWHL,2023/2024,Regular Season
+43,3:47,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,5v5,3,Zoe Boyd,,,,,35,Ann-Renée Desbiens,,,,,,,32.3,-37.4,49,2024-03-10,PWHL,2023/2024,Regular Season
+44,4:11,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,5v5,26,Emily Clark,,,,,35,Ann-Renée Desbiens,,,,,,,30.3,37.7,49,2024-03-10,PWHL,2023/2024,Regular Season
+45,4:16,Penalty,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v5,2,Mariah Keopple,,,,,,,,,,,,,,,49,2024-03-10,PWHL,2023/2024,Regular Season
+46,4:29,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,5v5,2,Aneta Tejralová,,,,,35,Ann-Renée Desbiens,,,,,,,30.0,14.5,49,2024-03-10,PWHL,2023/2024,Regular Season
+47,4:33,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,5v5,19,Brianne Jenner,,,,,35,Ann-Renée Desbiens,,,,,,,64.7,-17.6,49,2024-03-10,PWHL,2023/2024,Regular Season
+48,4:51,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,5v4,19,Brianne Jenner,,,,,35,Ann-Renée Desbiens,,,,,,,75.0,-8.8,49,2024-03-10,PWHL,2023/2024,Regular Season
+49,5:04,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,5v5,19,Brianne Jenner,,,,,35,Ann-Renée Desbiens,,,,,,,41.0,15.0,49,2024-03-10,PWHL,2023/2024,Regular Season
+50,5:27,Penalty,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,5v4,16,Kateřina Mrázová,,,,,,,,,,,,,,,49,2024-03-10,PWHL,2023/2024,Regular Season
+51,6:10,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,4v4,7,Laura Stacey,,,,,38,Emerance Maschmeyer,,,,,,,-34.3,-23.0,49,2024-03-10,PWHL,2023/2024,Regular Season
+52,6:39,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v5,23,Erin Ambrose,,,,,38,Emerance Maschmeyer,,,,,,,-34.0,-9.3,49,2024-03-10,PWHL,2023/2024,Regular Season
+53,6:55,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v4,25,Mélodie Daoust,,,,,38,Emerance Maschmeyer,,,,,,,-75.0,-18.7,49,2024-03-10,PWHL,2023/2024,Regular Season
+54,7:15,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v4,25,Mélodie Daoust,,,,,38,Emerance Maschmeyer,,,,,,,-85.3,5.7,49,2024-03-10,PWHL,2023/2024,Regular Season
+55,7:32,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,5v5,10,Becca Gilmore,,,,,35,Ann-Renée Desbiens,,,,,,,48.3,-7.4,49,2024-03-10,PWHL,2023/2024,Regular Season
+56,7:45,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v5,16,Sarah Lefort,,,,,38,Emerance Maschmeyer,,,,,,,-73.0,-20.4,49,2024-03-10,PWHL,2023/2024,Regular Season
+57,8:50,Penalty,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v5,16,Sarah Lefort,,,,,,,,,,,,,,,49,2024-03-10,PWHL,2023/2024,Regular Season
+58,8:58,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,5v4,17,Gabbie Hughes,,,,,35,Ann-Renée Desbiens,,,,,,,69.7,2.0,49,2024-03-10,PWHL,2023/2024,Regular Season
+59,10:06,Penalty,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,4v5,35,Ann-Renée Desbiens,,,,,,,,,,,,,,,49,2024-03-10,PWHL,2023/2024,Regular Season
+60,10:13,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,5v3,9,Daryl Watts,,,,,35,Ann-Renée Desbiens,,,,,,,65.3,19.6,49,2024-03-10,PWHL,2023/2024,Regular Season
+61,10:27,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,5v5,9,Daryl Watts,,,,,35,Ann-Renée Desbiens,,,,,,,49.0,4.8,49,2024-03-10,PWHL,2023/2024,Regular Season
+62,12:10,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,5v5,17,Gabbie Hughes,,,,,35,Ann-Renée Desbiens,,,,,,,50.7,33.1,49,2024-03-10,PWHL,2023/2024,Regular Season
+63,13:15,Goal,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,5v5,9,Daryl Watts,16,Kateřina Mrázová,71,Jincy Roese,35,Ann-Renée Desbiens,,2 7 21 23 43,Mariah Keopple - Laura Stacey - Tereza Vanišová - Erin Ambrose - Kristin O'Neill,,9 16 19 28 71,Daryl Watts - Kateřina Mrázová - Brianne Jenner - Amanda Boulier - Jincy Roese,57.0,-13.0,49,2024-03-10,PWHL,2023/2024,Regular Season
+64,13:59,Penalty,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,5v5,71,Jincy Roese,,,,,,,,,,,,,,,49,2024-03-10,PWHL,2023/2024,Regular Season
+65,14:31,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,4v5,16,Kateřina Mrázová,,,,,35,Ann-Renée Desbiens,,,,,,,59.0,-36.5,49,2024-03-10,PWHL,2023/2024,Regular Season
+66,14:33,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v4,7,Laura Stacey,,,,,38,Emerance Maschmeyer,,,,,,,-53.0,-21.2,49,2024-03-10,PWHL,2023/2024,Regular Season
+67,14:44,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v4,43,Kristin O'Neill,,,,,38,Emerance Maschmeyer,,,,,,,-84.0,-6.8,49,2024-03-10,PWHL,2023/2024,Regular Season
+68,14:45,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v4,43,Kristin O'Neill,,,,,38,Emerance Maschmeyer,,,,,,,-85.3,-6.2,49,2024-03-10,PWHL,2023/2024,Regular Season
+69,15:09,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v5,21,Tereza Vanišová,,,,,38,Emerance Maschmeyer,,,,,,,-71.0,9.3,49,2024-03-10,PWHL,2023/2024,Regular Season
+70,15:17,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v4,28,Catherine Dubois,,,,,38,Emerance Maschmeyer,,,,,,,-77.7,33.1,49,2024-03-10,PWHL,2023/2024,Regular Season
+71,15:30,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v5,6,Madison Bizal,,,,,38,Emerance Maschmeyer,,,,,,,-53.0,21.0,49,2024-03-10,PWHL,2023/2024,Regular Season
+72,16:03,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v5,4,Catherine Daoust,,,,,38,Emerance Maschmeyer,,,,,,,-35.3,-30.9,49,2024-03-10,PWHL,2023/2024,Regular Season
+73,16:58,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,5v5,19,Brianne Jenner,,,,,35,Ann-Renée Desbiens,,,,,,,61.0,7.4,49,2024-03-10,PWHL,2023/2024,Regular Season
+74,17:10,Penalty,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,5v5,9,Daryl Watts,,,,,,,,,,,,,,,49,2024-03-10,PWHL,2023/2024,Regular Season
+75,17:19,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v4,23,Erin Ambrose,,,,,38,Emerance Maschmeyer,,,,,,,-32.3,4.0,49,2024-03-10,PWHL,2023/2024,Regular Season
+76,18:49,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v4,6,Madison Bizal,,,,,38,Emerance Maschmeyer,,,,,,,-38.0,-19.0,49,2024-03-10,PWHL,2023/2024,Regular Season
+77,19:04,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v4,25,Mélodie Daoust,,,,,38,Emerance Maschmeyer,,,,,,,-51.3,9.3,49,2024-03-10,PWHL,2023/2024,Regular Season
+78,19:16,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v5,23,Erin Ambrose,,,,,38,Emerance Maschmeyer,,,,,,,-51.3,24.1,49,2024-03-10,PWHL,2023/2024,Regular Season
+79,19:56,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,5v5,9,Daryl Watts,,,,,35,Ann-Renée Desbiens,,,,,,,54.7,20.4,49,2024-03-10,PWHL,2023/2024,Regular Season
+80,1:36,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,3,event,5v5,8,Natalie Snodgrass,,,,,35,Ann-Renée Desbiens,,,,,,,38.3,-1.1,49,2024-03-10,PWHL,2023/2024,Regular Season
+81,2:24,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v5,14,Jillian Dempsey,,,,,38,Emerance Maschmeyer,,,,,,,-58.3,-13.6,49,2024-03-10,PWHL,2023/2024,Regular Season
+82,2:29,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v5,28,Catherine Dubois,,,,,38,Emerance Maschmeyer,,,,,,,-33.0,-10.2,49,2024-03-10,PWHL,2023/2024,Regular Season
+83,2:53,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v5,23,Erin Ambrose,,,,,38,Emerance Maschmeyer,,,,,,,-31.0,-23.2,49,2024-03-10,PWHL,2023/2024,Regular Season
+84,2:53,Penalty,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,3,event,5v5,15,Savannah Harmon,,,,,,,,,,,,,,,49,2024-03-10,PWHL,2023/2024,Regular Season
+85,3:05,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v5,23,Erin Ambrose,,,,,38,Emerance Maschmeyer,,,,,,,-33.7,16.7,49,2024-03-10,PWHL,2023/2024,Regular Season
+86,3:47,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v4,23,Erin Ambrose,,,,,38,Emerance Maschmeyer,,,,,,,-35.0,3.1,49,2024-03-10,PWHL,2023/2024,Regular Season
+87,3:56,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v5,25,Mélodie Daoust,,,,,38,Emerance Maschmeyer,,,,,,,-45.3,-21.5,49,2024-03-10,PWHL,2023/2024,Regular Season
+88,4:07,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v5,23,Erin Ambrose,,,,,38,Emerance Maschmeyer,,,,,,,-30.0,34.9,49,2024-03-10,PWHL,2023/2024,Regular Season
+89,4:18,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v4,7,Laura Stacey,,,,,38,Emerance Maschmeyer,,,,,,,-63.0,19.8,49,2024-03-10,PWHL,2023/2024,Regular Season
+90,4:41,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,3,event,4v5,17,Gabbie Hughes,,,,,35,Ann-Renée Desbiens,,,,,,,79.0,4.2,49,2024-03-10,PWHL,2023/2024,Regular Season
+91,5:14,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v5,17,Alexandra Poznikoff,,,,,38,Emerance Maschmeyer,,,,,,,-76.3,13.0,49,2024-03-10,PWHL,2023/2024,Regular Season
+92,6:03,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v5,7,Laura Stacey,,,,,38,Emerance Maschmeyer,,,,,,,-85.7,6.8,49,2024-03-10,PWHL,2023/2024,Regular Season
+93,6:22,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v5,43,Kristin O'Neill,,,,,38,Emerance Maschmeyer,,,,,,,-73.3,7.6,49,2024-03-10,PWHL,2023/2024,Regular Season
+94,6:31,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v5,23,Erin Ambrose,,,,,38,Emerance Maschmeyer,,,,,,,-74.0,33.1,49,2024-03-10,PWHL,2023/2024,Regular Season
+95,8:31,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v5,28,Catherine Dubois,,,,,38,Emerance Maschmeyer,,,,,,,-87.0,-5.4,49,2024-03-10,PWHL,2023/2024,Regular Season
+96,8:36,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v5,14,Jillian Dempsey,,,,,38,Emerance Maschmeyer,,,,,,,-58.7,-2.3,49,2024-03-10,PWHL,2023/2024,Regular Season
+97,9:16,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,3,event,5v5,8,Natalie Snodgrass,,,,,35,Ann-Renée Desbiens,,,,,,,68.7,-18.4,49,2024-03-10,PWHL,2023/2024,Regular Season
+98,9:42,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,3,event,5v5,17,Gabbie Hughes,,,,,35,Ann-Renée Desbiens,,,,,,,85.3,-9.3,49,2024-03-10,PWHL,2023/2024,Regular Season
+99,10:09,Penalty,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,3,event,5v5,17,Gabbie Hughes,,,,,,,,,,,,,,,49,2024-03-10,PWHL,2023/2024,Regular Season
+100,10:24,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v5,9,Kati Tabin,,,,,38,Emerance Maschmeyer,,,,,,,-69.3,-16.4,49,2024-03-10,PWHL,2023/2024,Regular Season
+101,10:34,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v4,9,Kati Tabin,,,,,38,Emerance Maschmeyer,,,,,,,-65.3,5.1,49,2024-03-10,PWHL,2023/2024,Regular Season
+102,10:44,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v4,9,Kati Tabin,,,,,38,Emerance Maschmeyer,,,,,,,-62.0,-20.7,49,2024-03-10,PWHL,2023/2024,Regular Season
+103,10:46,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v4,28,Catherine Dubois,,,,,38,Emerance Maschmeyer,,,,,,,-82.0,-2.3,49,2024-03-10,PWHL,2023/2024,Regular Season
+104,11:10,Goal,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v4,7,Laura Stacey,23,Erin Ambrose,43,Kristin O'Neill,38,Emerance Maschmeyer,,7 15 23 25 43,Laura Stacey - Maureen Murphy - Erin Ambrose - Mélodie Daoust - Kristin O'Neill,,3 10 14 21,Zoe Boyd - Becca Gilmore - Hayley Scamurra - Ashton Bell,-40.3,23.2,49,2024-03-10,PWHL,2023/2024,Regular Season
+105,11:33,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v5,23,Erin Ambrose,,,,,38,Emerance Maschmeyer,,,,,,,-33.7,-6.2,49,2024-03-10,PWHL,2023/2024,Regular Season
+106,12:35,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,3,event,5v5,28,Amanda Boulier,,,,,35,Ann-Renée Desbiens,,,,,,,6.3,39.1,49,2024-03-10,PWHL,2023/2024,Regular Season
+107,12:53,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,3,event,5v5,14,Hayley Scamurra,,,,,35,Ann-Renée Desbiens,,,,,,,76.3,-30.9,49,2024-03-10,PWHL,2023/2024,Regular Season
+108,13:02,Penalty,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v5,43,Kristin O'Neill,,,,,,,,,,,,,,,49,2024-03-10,PWHL,2023/2024,Regular Season
+109,13:24,Goal,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,3,event,5v4,2,Aneta Tejralová,19,Brianne Jenner,16,Kateřina Mrázová,35,Ann-Renée Desbiens,,2 7 23 26,Mariah Keopple - Laura Stacey - Erin Ambrose - Sarah Bujold,,2 9 16 19 88,Aneta Tejralová - Daryl Watts - Kateřina Mrázová - Brianne Jenner - Lexie Adzija,31.0,11.3,49,2024-03-10,PWHL,2023/2024,Regular Season
+110,16:05,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,3,event,5v5,88,Lexie Adzija,,,,,35,Ann-Renée Desbiens,,,,,,,41.0,31.4,49,2024-03-10,PWHL,2023/2024,Regular Season
+111,16:12,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,3,event,5v5,88,Lexie Adzija,,,,,35,Ann-Renée Desbiens,,,,,,,69.0,-2.5,49,2024-03-10,PWHL,2023/2024,Regular Season
+112,16:55,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v5,25,Mélodie Daoust,,,,,38,Emerance Maschmeyer,,,,,,,-87.0,8.5,49,2024-03-10,PWHL,2023/2024,Regular Season
+113,17:02,Goal,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v5,25,Mélodie Daoust,7,Laura Stacey,9,Kati Tabin,38,Emerance Maschmeyer,,4 7 9 25 26 43,Catherine Daoust - Laura Stacey - Kati Tabin - Mélodie Daoust - Sarah Bujold - Kristin O'Neill,,8 10 28 71 88,Natalie Snodgrass - Becca Gilmore - Amanda Boulier - Jincy Roese - Lexie Adzija,-72.0,-4.8,49,2024-03-10,PWHL,2023/2024,Regular Season
+114,18:19,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,3,event,5v4,9,Daryl Watts,,,,,35,Ann-Renée Desbiens,,,,,,,60.7,0.3,49,2024-03-10,PWHL,2023/2024,Regular Season
+115,18:21,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,3,event,5v4,19,Brianne Jenner,,,,,35,Ann-Renée Desbiens,,,,,,,69.7,4.8,49,2024-03-10,PWHL,2023/2024,Regular Season
+116,18:40,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,3,event,5v5,19,Brianne Jenner,,,,,35,Ann-Renée Desbiens,,,,,,,74.0,1.7,49,2024-03-10,PWHL,2023/2024,Regular Season
+117,18:55,Goal,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,3,event,5v5,17,Gabbie Hughes,14,Hayley Scamurra,26,Emily Clark,35,Ann-Renée Desbiens,,2 7 15 23 28 43,Mariah Keopple - Laura Stacey - Maureen Murphy - Erin Ambrose - Catherine Dubois - Kristin O'Neill,,14 17 21 26 71,Hayley Scamurra - Gabbie Hughes - Ashton Bell - Emily Clark - Jincy Roese,71.0,8.8,49,2024-03-10,PWHL,2023/2024,Regular Season
+118,19:30,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v5,17,Alexandra Poznikoff,,,,,38,Emerance Maschmeyer,,,,,,,-88.7,8.5,49,2024-03-10,PWHL,2023/2024,Regular Season

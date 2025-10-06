@@ -1,0 +1,88 @@
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
+1,1:30,Goal,Boston Fleet,Away,Ottawa Charge,Boston Fleet,1,event,5v5,21,Hilary Knight,20,Hannah Brandt,,,38,Emerance Maschmeyer,,2 8 10 13 15,Aneta Tejralová - Natalie Snodgrass - Becca Gilmore - Tereza Vanišová - Savannah Harmon,,7 20 21 47 97,Sidney Morin - Hannah Brandt - Hilary Knight - Jamie Lee Rattray - Jess Healey,82.0,-0.3,69,2024-04-24,PWHL,2023/2024,Regular Season
+2,2:02,Penalty,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,1,event,5v5,,,,,,,,,,,,,,,,,69,2024-04-24,PWHL,2023/2024,Regular Season
+3,2:51,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,1,event,5v4,21,Hilary Knight,,,,,38,Emerance Maschmeyer,,,,,,,81.0,2.0,69,2024-04-24,PWHL,2023/2024,Regular Season
+4,3:14,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,1,event,5v4,5,Megan Keller,,,,,38,Emerance Maschmeyer,,,,,,,29.3,21.8,69,2024-04-24,PWHL,2023/2024,Regular Season
+5,4:58,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,1,event,5v5,47,Jamie Lee Rattray,,,,,38,Emerance Maschmeyer,,,,,,,61.0,26.4,69,2024-04-24,PWHL,2023/2024,Regular Season
+6,5:37,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,1,event,5v5,26,Emily Clark,,,,,31,Aerin Frankel,,,,,,,-75.0,17.6,69,2024-04-24,PWHL,2023/2024,Regular Season
+7,6:16,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,1,event,5v5,11,Alina Müller,,,,,38,Emerance Maschmeyer,,,,,,,52.3,-25.8,69,2024-04-24,PWHL,2023/2024,Regular Season
+8,6:55,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,1,event,5v5,8,Lexie Adzija,,,,,38,Emerance Maschmeyer,,,,,,,46.7,-28.1,69,2024-04-24,PWHL,2023/2024,Regular Season
+9,7:21,Penalty,Boston Fleet,Away,Ottawa Charge,Boston Fleet,1,event,5v5,13,Kaleigh Fratkin,,,,,,,,,,,,,,,69,2024-04-24,PWHL,2023/2024,Regular Season
+10,7:43,Goal,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,1,event,5v4,19,Brianne Jenner,8,Natalie Snodgrass,9,Daryl Watts,31,Aerin Frankel,,2 8 9 16 19,Aneta Tejralová - Natalie Snodgrass - Daryl Watts - Kateřina Mrázová - Brianne Jenner,,2 5 17 20,Emily Brown - Megan Keller - Taylor Girard - Hannah Brandt,-85.0,-6.0,69,2024-04-24,PWHL,2023/2024,Regular Season
+11,8:01,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,1,event,5v5,97,Jess Healey,,,,,38,Emerance Maschmeyer,,,,,,,3.7,-23.5,69,2024-04-24,PWHL,2023/2024,Regular Season
+12,9:01,Block,Boston Fleet,Away,Ottawa Charge,Boston Fleet,1,event,5v5,9,Sophie Shirley,,,,,38,Emerance Maschmeyer,,,,,,,62.7,15.6,69,2024-04-24,PWHL,2023/2024,Regular Season
+13,9:38,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,1,event,5v5,17,Taylor Girard,,,,,38,Emerance Maschmeyer,,,,,,,49.0,24.9,69,2024-04-24,PWHL,2023/2024,Regular Season
+14,9:58,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,1,event,5v5,27,Shiann Darkangelo,,,,,31,Aerin Frankel,,,,,,,-54.3,10.8,69,2024-04-24,PWHL,2023/2024,Regular Season
+15,10:26,Block,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,1,event,5v5,15,Savannah Harmon,,,,,31,Aerin Frankel,,,,,,,-55.3,-23.0,69,2024-04-24,PWHL,2023/2024,Regular Season
+16,10:29,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,1,event,5v5,19,Brianne Jenner,,,,,31,Aerin Frankel,,,,,,,-71.3,19.6,69,2024-04-24,PWHL,2023/2024,Regular Season
+17,10:48,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,1,event,5v5,16,Kateřina Mrázová,,,,,31,Aerin Frankel,,,,,,,-80.3,7.6,69,2024-04-24,PWHL,2023/2024,Regular Season
+18,11:50,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,1,event,5v5,26,Emily Clark,,,,,31,Aerin Frankel,,,,,,,-86.7,5.4,69,2024-04-24,PWHL,2023/2024,Regular Season
+19,11:57,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,1,event,5v5,26,Emily Clark,,,,,31,Aerin Frankel,,,,,,,-84.0,7.6,69,2024-04-24,PWHL,2023/2024,Regular Season
+20,12:05,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,1,event,5v5,9,Daryl Watts,,,,,31,Aerin Frankel,,,,,,,-52.7,22.1,69,2024-04-24,PWHL,2023/2024,Regular Season
+21,12:43,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,1,event,5v5,2,Emily Brown,,,,,38,Emerance Maschmeyer,,,,,,,57.7,-26.6,69,2024-04-24,PWHL,2023/2024,Regular Season
+22,14:09,Block,Boston Fleet,Away,Ottawa Charge,Boston Fleet,1,event,5v5,47,Jamie Lee Rattray,,,,,38,Emerance Maschmeyer,,,,,,,51.0,31.4,69,2024-04-24,PWHL,2023/2024,Regular Season
+23,15:00,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,1,event,5v5,17,Taylor Girard,,,,,38,Emerance Maschmeyer,,,,,,,61.0,-24.6,69,2024-04-24,PWHL,2023/2024,Regular Season
+24,16:23,Penalty,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,1,event,5v5,8,Natalie Snodgrass,,,,,,,,,,,,,,,69,2024-04-24,PWHL,2023/2024,Regular Season
+25,16:36,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,1,event,5v4,21,Hilary Knight,,,,,38,Emerance Maschmeyer,,,,,,,87.3,-6.2,69,2024-04-24,PWHL,2023/2024,Regular Season
+26,17:08,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,1,event,5v4,5,Megan Keller,,,,,38,Emerance Maschmeyer,,,,,,,27.3,-13.3,69,2024-04-24,PWHL,2023/2024,Regular Season
+27,17:31,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,1,event,5v4,21,Hilary Knight,,,,,38,Emerance Maschmeyer,,,,,,,41.0,21.5,69,2024-04-24,PWHL,2023/2024,Regular Season
+28,18:02,Block,Boston Fleet,Away,Ottawa Charge,Boston Fleet,1,event,5v4,8,Lexie Adzija,,,,,38,Emerance Maschmeyer,,,,,,,31.3,-9.1,69,2024-04-24,PWHL,2023/2024,Regular Season
+29,18:06,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,1,event,5v4,20,Hannah Brandt,,,,,38,Emerance Maschmeyer,,,,,,,54.3,15.6,69,2024-04-24,PWHL,2023/2024,Regular Season
+30,19:01,Goal,Boston Fleet,Away,Ottawa Charge,Boston Fleet,1,event,5v5,47,Jamie Lee Rattray,,,,,38,Emerance Maschmeyer,,2 9 15 16 19,Aneta Tejralová - Daryl Watts - Savannah Harmon - Kateřina Mrázová - Brianne Jenner,,2 5 20 21 47,Emily Brown - Megan Keller - Hannah Brandt - Hilary Knight - Jamie Lee Rattray,84.3,-0.8,69,2024-04-24,PWHL,2023/2024,Regular Season
+31,19:56,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,1,event,5v5,8,Natalie Snodgrass,,,,,31,Aerin Frankel,,,,,,,-83.0,-7.9,69,2024-04-24,PWHL,2023/2024,Regular Season
+32,0:28,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,2,event,5v5,47,Jamie Lee Rattray,,,,,38,Emerance Maschmeyer,,,,,,,80.7,-1.1,69,2024-04-24,PWHL,2023/2024,Regular Season
+33,2:21,Penalty,Boston Fleet,Away,Ottawa Charge,Boston Fleet,2,event,5v5,9,Sophie Shirley,,,,,,,,,,,,,,,69,2024-04-24,PWHL,2023/2024,Regular Season
+34,2:43,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,2,event,5v4,17,Gabbie Hughes,,,,,31,Aerin Frankel,,,,,,,-84.0,-11.9,69,2024-04-24,PWHL,2023/2024,Regular Season
+35,4:12,Block,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,2,event,5v5,17,Gabbie Hughes,,,,,31,Aerin Frankel,,,,,,,-62.7,-21.5,69,2024-04-24,PWHL,2023/2024,Regular Season
+36,5:11,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,2,event,5v5,47,Jamie Lee Rattray,,,,,38,Emerance Maschmeyer,,,,,,,83.0,-6.2,69,2024-04-24,PWHL,2023/2024,Regular Season
+37,5:28,Penalty,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,2,event,5v5,71,Jincy Roese,,,,,,,,,,,,,,,69,2024-04-24,PWHL,2023/2024,Regular Season
+38,6:06,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,2,event,5v4,16,Amanda Pelkey,,,,,38,Emerance Maschmeyer,,,,,,,58.3,0.3,69,2024-04-24,PWHL,2023/2024,Regular Season
+39,7:01,Block,Boston Fleet,Away,Ottawa Charge,Boston Fleet,2,event,5v5,47,Jamie Lee Rattray,,,,,38,Emerance Maschmeyer,,,,,,,61.7,9.9,69,2024-04-24,PWHL,2023/2024,Regular Season
+40,7:27,Penalty,Boston Fleet,Away,Ottawa Charge,Boston Fleet,2,event,5v4,13,Kaleigh Fratkin,,,,,,,,,,,,,,,69,2024-04-24,PWHL,2023/2024,Regular Season
+41,8:01,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,2,event,4v5,5,Megan Keller,,,,,38,Emerance Maschmeyer,,,,,,,85.3,6.0,69,2024-04-24,PWHL,2023/2024,Regular Season
+42,9:01,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,2,event,5v4,14,Hayley Scamurra,,,,,31,Aerin Frankel,,,,,,,-85.7,6.0,69,2024-04-24,PWHL,2023/2024,Regular Season
+43,9:33,Block,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,2,event,5v5,2,Aneta Tejralová,,,,,31,Aerin Frankel,,,,,,,-30.7,-27.2,69,2024-04-24,PWHL,2023/2024,Regular Season
+44,10:11,Block,Boston Fleet,Away,Ottawa Charge,Boston Fleet,2,event,5v5,5,Megan Keller,,,,,38,Emerance Maschmeyer,,,,,,,76.7,-18.7,69,2024-04-24,PWHL,2023/2024,Regular Season
+45,11:35,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,2,event,5v5,14,Hayley Scamurra,,,,,31,Aerin Frankel,,,,,,,-73.7,-0.8,69,2024-04-24,PWHL,2023/2024,Regular Season
+46,12:28,Block,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,2,event,5v5,71,Jincy Roese,,,,,31,Aerin Frankel,,,,,,,-32.7,29.7,69,2024-04-24,PWHL,2023/2024,Regular Season
+47,12:50,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,2,event,5v5,14,Hayley Scamurra,,,,,31,Aerin Frankel,,,,,,,-78.7,2.5,69,2024-04-24,PWHL,2023/2024,Regular Season
+48,14:49,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,2,event,5v5,77,Nicole Kosta,,,,,38,Emerance Maschmeyer,,,,,,,77.0,9.1,69,2024-04-24,PWHL,2023/2024,Regular Season
+49,15:31,Block,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,2,event,5v5,71,Jincy Roese,,,,,31,Aerin Frankel,,,,,,,-29.0,24.1,69,2024-04-24,PWHL,2023/2024,Regular Season
+50,19:17,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,2,event,5v5,47,Jamie Lee Rattray,,,,,38,Emerance Maschmeyer,,,,,,,77.3,-4.2,69,2024-04-24,PWHL,2023/2024,Regular Season
+51,2:03,Block,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,3,event,4v5,5,Samantha Isbell,,,,,31,Aerin Frankel,,,,,,,-31.7,20.4,69,2024-04-24,PWHL,2023/2024,Regular Season
+52,2:11,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,3,event,5v5,5,Samantha Isbell,,,,,31,Aerin Frankel,,,,,,,-46.0,12.5,69,2024-04-24,PWHL,2023/2024,Regular Season
+53,2:43,Block,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,3,event,4v5,8,Natalie Snodgrass,,,,,31,Aerin Frankel,,,,,,,-49.3,-26.6,69,2024-04-24,PWHL,2023/2024,Regular Season
+54,3:12,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,3,event,5v5,14,Hayley Scamurra,,,,,31,Aerin Frankel,,,,,,,-85.0,6.2,69,2024-04-24,PWHL,2023/2024,Regular Season
+55,5:26,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,3,event,5v5,19,Gigi Marvin,,,,,38,Emerance Maschmeyer,,,,,,,81.0,-3.7,69,2024-04-24,PWHL,2023/2024,Regular Season
+56,6:22,Block,Boston Fleet,Away,Ottawa Charge,Boston Fleet,3,event,5v5,77,Nicole Kosta,,,,,38,Emerance Maschmeyer,,,,,,,71.0,-21.5,69,2024-04-24,PWHL,2023/2024,Regular Season
+57,7:06,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,3,event,5v5,11,Alina Müller,,,,,38,Emerance Maschmeyer,,,,,,,71.0,-8.5,69,2024-04-24,PWHL,2023/2024,Regular Season
+58,9:11,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,3,event,5v5,7,Sidney Morin,,,,,38,Emerance Maschmeyer,,,,,,,17.0,0.3,69,2024-04-24,PWHL,2023/2024,Regular Season
+59,10:00,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,3,event,5v5,19,Gigi Marvin,,,,,38,Emerance Maschmeyer,,,,,,,-20.3,32.3,69,2024-04-24,PWHL,2023/2024,Regular Season
+60,11:14,Goal,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,3,event,5v5,17,Gabbie Hughes,26,Emily Clark,15,Savannah Harmon,31,Aerin Frankel,,14 15 17 24 26,Hayley Scamurra - Savannah Harmon - Gabbie Hughes - Emma Buckles - Emily Clark,,,,-85.3,3.1,69,2024-04-24,PWHL,2023/2024,Regular Season
+61,11:49,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,3,event,5v5,47,Jamie Lee Rattray,,,,,38,Emerance Maschmeyer,,,,,,,73.0,-20.7,69,2024-04-24,PWHL,2023/2024,Regular Season
+62,14:29,Block,Boston Fleet,Away,Ottawa Charge,Boston Fleet,3,event,5v5,97,Jess Healey,,,,,38,Emerance Maschmeyer,,,,,,,29.3,-9.9,69,2024-04-24,PWHL,2023/2024,Regular Season
+63,14:33,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,3,event,5v5,7,Sidney Morin,,,,,38,Emerance Maschmeyer,,,,,,,46.7,-21.2,69,2024-04-24,PWHL,2023/2024,Regular Season
+64,16:11,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,3,event,5v5,9,Sophie Shirley,,,,,38,Emerance Maschmeyer,,,,,,,68.7,-4.2,69,2024-04-24,PWHL,2023/2024,Regular Season
+65,16:56,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,3,event,5v5,22,Jessica DiGirolamo,,,,,38,Emerance Maschmeyer,,,,,,,63.3,-37.7,69,2024-04-24,PWHL,2023/2024,Regular Season
+66,17:51,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,3,event,5v5,9,Daryl Watts,,,,,31,Aerin Frankel,,,,,,,-77.0,37.1,69,2024-04-24,PWHL,2023/2024,Regular Season
+67,19:09,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,3,event,5v5,16,Kateřina Mrázová,,,,,31,Aerin Frankel,,,,,,,-75.0,-14.5,69,2024-04-24,PWHL,2023/2024,Regular Season
+68,0:48,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,OT1,event,3v3,7,Sidney Morin,,,,,38,Emerance Maschmeyer,,,,,,,70.0,19.0,69,2024-04-24,PWHL,2023/2024,Regular Season
+69,1:10,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,OT1,event,3v3,7,Sidney Morin,,,,,38,Emerance Maschmeyer,,,,,,,53.0,12.5,69,2024-04-24,PWHL,2023/2024,Regular Season
+70,2:16,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,OT1,event,3v3,2,Aneta Tejralová,,,,,31,Aerin Frankel,,,,,,,-84.7,-6.8,69,2024-04-24,PWHL,2023/2024,Regular Season
+71,2:17,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,OT1,event,3v3,14,Hayley Scamurra,,,,,31,Aerin Frankel,,,,,,,-62.3,6.8,69,2024-04-24,PWHL,2023/2024,Regular Season
+72,2:31,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,OT1,event,3v3,26,Emily Clark,,,,,31,Aerin Frankel,,,,,,,-75.0,0.6,69,2024-04-24,PWHL,2023/2024,Regular Season
+73,2:42,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,OT1,event,3v3,26,Emily Clark,,,,,31,Aerin Frankel,,,,,,,-67.0,-7.6,69,2024-04-24,PWHL,2023/2024,Regular Season
+74,2:47,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,OT1,event,3v3,2,Aneta Tejralová,,,,,31,Aerin Frankel,,,,,,,-79.7,-7.1,69,2024-04-24,PWHL,2023/2024,Regular Season
+75,2:59,Block,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,OT1,event,4v5,26,Emily Clark,,,,,31,Aerin Frankel,,,,,,,-43.7,-21.5,69,2024-04-24,PWHL,2023/2024,Regular Season
+76,3:15,Shot,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,OT1,event,3v3,9,Daryl Watts,,,,,31,Aerin Frankel,,,,,,,-83.7,5.1,69,2024-04-24,PWHL,2023/2024,Regular Season
+77,3:28,Shot,Boston Fleet,Away,Ottawa Charge,Boston Fleet,OT1,event,3v3,88,Susanna Tapani,,,,,38,Emerance Maschmeyer,,,,,,,78.0,0.3,69,2024-04-24,PWHL,2023/2024,Regular Season
+78,,SO Goal,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,SO,event,1v0,,,,,,,31,Aerin Frankel,,,,,,,,,69,2024-04-24,PWHL,2023/2024,Regular Season
+79,,SO Goal,Boston Fleet,Away,Ottawa Charge,Boston Fleet,SO,event,1v0,,,,,,,38,Emerance Maschmeyer,,,,,,,,,69,2024-04-24,PWHL,2023/2024,Regular Season
+80,,SO Miss,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,SO,event,1v0,71,Jincy Roese,,,,,31,Aerin Frankel,,,,,,,,,69,2024-04-24,PWHL,2023/2024,Regular Season
+81,,SO Miss,Boston Fleet,Away,Ottawa Charge,Boston Fleet,SO,event,1v0,20,Hannah Brandt,,,,,38,Emerance Maschmeyer,,,,,,,,,69,2024-04-24,PWHL,2023/2024,Regular Season
+82,,SO Miss,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,SO,event,1v0,9,Daryl Watts,,,,,31,Aerin Frankel,,,,,,,,,69,2024-04-24,PWHL,2023/2024,Regular Season
+83,,SO Miss,Boston Fleet,Away,Ottawa Charge,Boston Fleet,SO,event,1v0,21,Hilary Knight,,,,,38,Emerance Maschmeyer,,,,,,,,,69,2024-04-24,PWHL,2023/2024,Regular Season
+84,,SO Miss,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,SO,event,1v0,19,Brianne Jenner,,,,,31,Aerin Frankel,,,,,,,,,69,2024-04-24,PWHL,2023/2024,Regular Season
+85,,SO Miss,Boston Fleet,Away,Ottawa Charge,Boston Fleet,SO,event,1v0,47,Jamie Lee Rattray,,,,,38,Emerance Maschmeyer,,,,,,,,,69,2024-04-24,PWHL,2023/2024,Regular Season
+86,,SO Goal,Ottawa Charge,Home,Ottawa Charge,Boston Fleet,SO,event,1v0,,,,,,,31,Aerin Frankel,,,,,,,,,69,2024-04-24,PWHL,2023/2024,Regular Season
+87,,SO Miss,Boston Fleet,Away,Ottawa Charge,Boston Fleet,SO,event,1v0,21,Hilary Knight,,,,,38,Emerance Maschmeyer,,,,,,,,,69,2024-04-24,PWHL,2023/2024,Regular Season

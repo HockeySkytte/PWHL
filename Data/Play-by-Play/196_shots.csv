@@ -1,0 +1,76 @@
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
+1,2:55,Block,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,1,event,5v5,22,Natalie Buchbinder,,,,,50,Kristen Campbell,,,,,,,33.3,28.9,196,2025-05-09,PWHL,2024/2025,Playoffs
+2,4:17,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,1,event,5v5,9,Daryl Watts,,,,,35,Maddie Rooney,,,,,,,-67.0,16.4,196,2025-05-09,PWHL,2024/2025,Playoffs
+3,5:15,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,1,event,5v5,41,Denisa Křížová,,,,,50,Kristen Campbell,,,,,,,60.7,-0.6,196,2025-05-09,PWHL,2024/2025,Playoffs
+4,5:45,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,1,event,5v5,6,Kali Flanagan,,,,,35,Maddie Rooney,,,,,,,-61.0,0.6,196,2025-05-09,PWHL,2024/2025,Playoffs
+5,6:38,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,1,event,5v5,26,Kendall Coyne Schofield,,,,,50,Kristen Campbell,,,,,,,67.0,14.7,196,2025-05-09,PWHL,2024/2025,Playoffs
+6,7:11,Goal,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,1,event,5v5,16,Hayley Scamurra,67,Emma Woods,,,35,Maddie Rooney,,14 15 16 67 88,Renata Fast - Savannah Harmon - Hayley Scamurra - Emma Woods - Julia Gosling,,9 22 26 27 86,Mae Batherson - Natalie Buchbinder - Kendall Coyne Schofield - Taylor Heise - Michela Cava,-83.3,2.3,196,2025-05-09,PWHL,2024/2025,Playoffs
+7,7:47,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,1,event,5v5,12,Kelly Pannek,,,,,50,Kristen Campbell,,,,,,,33.0,-30.3,196,2025-05-09,PWHL,2024/2025,Playoffs
+8,9:45,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,1,event,5v5,21,Liz Schepers,,,,,50,Kristen Campbell,,,,,,,70.3,-6.5,196,2025-05-09,PWHL,2024/2025,Playoffs
+9,10:32,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,1,event,5v5,20,Sarah Nurse,,,,,35,Maddie Rooney,,,,,,,-83.0,25.8,196,2025-05-09,PWHL,2024/2025,Playoffs
+10,10:46,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,1,event,5v5,13,Grace Zumwinkle,,,,,50,Kristen Campbell,,,,,,,71.0,19.6,196,2025-05-09,PWHL,2024/2025,Playoffs
+11,11:19,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,1,event,5v5,23,Megan Carter,,,,,,,,,,,,,,,196,2025-05-09,PWHL,2024/2025,Playoffs
+12,12:02,Block,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,1,event,5v4,2,Lee Stecklein,,,,,50,Kristen Campbell,,,,,,,29.7,6.0,196,2025-05-09,PWHL,2024/2025,Playoffs
+13,12:19,Block,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,1,event,5v4,2,Lee Stecklein,,,,,50,Kristen Campbell,,,,,,,88.7,9.1,196,2025-05-09,PWHL,2024/2025,Playoffs
+14,13:33,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,1,event,5v5,42,Claire Thompson,,,,,50,Kristen Campbell,,,,,,,32.0,-19.8,196,2025-05-09,PWHL,2024/2025,Playoffs
+15,14:00,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,1,event,5v5,20,Sarah Nurse,,,,,35,Maddie Rooney,,,,,,,-75.3,17.3,196,2025-05-09,PWHL,2024/2025,Playoffs
+16,14:41,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,1,event,5v5,67,Emma Woods,,,,,35,Maddie Rooney,,,,,,,-70.7,-2.3,196,2025-05-09,PWHL,2024/2025,Playoffs
+17,14:53,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,1,event,5v5,34,Hannah Miller,,,,,35,Maddie Rooney,,,,,,,-61.0,2.8,196,2025-05-09,PWHL,2024/2025,Playoffs
+18,15:19,Block,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,1,event,5v5,12,Allie Munroe,,,,,35,Maddie Rooney,,,,,,,-31.3,29.7,196,2025-05-09,PWHL,2024/2025,Playoffs
+19,16:07,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,1,event,5v5,14,Renata Fast,,,,,35,Maddie Rooney,,,,,,,-51.0,-6.0,196,2025-05-09,PWHL,2024/2025,Playoffs
+20,16:30,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,1,event,5v5,3,Brooke McQuigge,,,,,50,Kristen Campbell,,,,,,,14.0,-30.9,196,2025-05-09,PWHL,2024/2025,Playoffs
+21,16:51,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,1,event,5v5,23,Megan Carter,,,,,35,Maddie Rooney,,,,,,,-41.3,18.7,196,2025-05-09,PWHL,2024/2025,Playoffs
+22,17:36,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,1,event,5v5,42,Claire Thompson,,,,,50,Kristen Campbell,,,,,,,42.3,0.0,196,2025-05-09,PWHL,2024/2025,Playoffs
+23,19:33,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,1,event,5v5,15,Savannah Harmon,,,,,35,Maddie Rooney,,,,,,,-32.3,15.3,196,2025-05-09,PWHL,2024/2025,Playoffs
+24,2:04,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,2,event,5v5,42,Claire Thompson,,,,,50,Kristen Campbell,,,,,,,32.0,-26.6,196,2025-05-09,PWHL,2024/2025,Playoffs
+25,2:27,Block,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,2,event,5v5,42,Claire Thompson,,,,,50,Kristen Campbell,,,,,,,41.0,-7.6,196,2025-05-09,PWHL,2024/2025,Playoffs
+26,2:37,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,2,event,5v5,86,Michela Cava,,,,,50,Kristen Campbell,,,,,,,33.3,1.7,196,2025-05-09,PWHL,2024/2025,Playoffs
+27,3:08,Block,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,2,event,5v5,16,Sophie Jaques,,,,,50,Kristen Campbell,,,,,,,35.0,-7.1,196,2025-05-09,PWHL,2024/2025,Playoffs
+28,3:44,Block,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,2,event,5v5,23,Mellissa Channell-Watkins,,,,,50,Kristen Campbell,,,,,,,60.0,5.4,196,2025-05-09,PWHL,2024/2025,Playoffs
+29,3:56,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,2,event,5v5,26,Kendall Coyne Schofield,,,,,50,Kristen Campbell,,,,,,,68.0,-9.9,196,2025-05-09,PWHL,2024/2025,Playoffs
+30,4:41,Goal,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,2,event,5v5,2,Lee Stecklein,12,Kelly Pannek,42,Claire Thompson,50,Kristen Campbell,,8 9 14 15 20,Izzy Daniel - Daryl Watts - Renata Fast - Savannah Harmon - Sarah Nurse,,2 3 12 13 42,Lee Stecklein - Brooke McQuigge - Kelly Pannek - Grace Zumwinkle - Claire Thompson,82.7,7.6,196,2025-05-09,PWHL,2024/2025,Playoffs
+31,6:39,Block,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,2,event,5v5,40,Blayre Turnbull,,,,,35,Maddie Rooney,,,,,,,-44.3,23.0,196,2025-05-09,PWHL,2024/2025,Playoffs
+32,7:08,Block,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,2,event,5v5,34,Hannah Miller,,,,,35,Maddie Rooney,,,,,,,-70.7,0.0,196,2025-05-09,PWHL,2024/2025,Playoffs
+33,8:30,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,2,event,5v5,9,Mae Batherson,,,,,50,Kristen Campbell,,,,,,,35.0,-13.0,196,2025-05-09,PWHL,2024/2025,Playoffs
+34,8:47,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,2,event,5v5,24,Natalie Spooner,,,,,35,Maddie Rooney,,,,,,,-83.3,-11.1,196,2025-05-09,PWHL,2024/2025,Playoffs
+35,9:46,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,2,event,5v5,14,Renata Fast,,,,,35,Maddie Rooney,,,,,,,-74.0,20.7,196,2025-05-09,PWHL,2024/2025,Playoffs
+36,10:19,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,2,event,5v5,26,Kendall Coyne Schofield,,,,,50,Kristen Campbell,,,,,,,54.3,0.6,196,2025-05-09,PWHL,2024/2025,Playoffs
+37,10:32,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,2,event,5v5,26,Kendall Coyne Schofield,,,,,50,Kristen Campbell,,,,,,,61.0,-2.0,196,2025-05-09,PWHL,2024/2025,Playoffs
+38,10:49,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,2,event,5v5,27,Taylor Heise,,,,,50,Kristen Campbell,,,,,,,68.7,7.6,196,2025-05-09,PWHL,2024/2025,Playoffs
+39,10:57,Goal,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,2,event,5v5,86,Michela Cava,2,Lee Stecklein,27,Taylor Heise,50,Kristen Campbell,,14 15 18 34 40,Renata Fast - Savannah Harmon - Jesse Compher - Hannah Miller - Blayre Turnbull,,2 26 27 42 86,Lee Stecklein - Kendall Coyne Schofield - Taylor Heise - Claire Thompson - Michela Cava,81.3,6.5,196,2025-05-09,PWHL,2024/2025,Playoffs
+40,11:59,Block,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,2,event,5v4,16,Sophie Jaques,,,,,50,Kristen Campbell,,,,,,,42.7,6.8,196,2025-05-09,PWHL,2024/2025,Playoffs
+41,11:59,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,2,event,5v5,55,Rylind MacKinnon,,,,,,,,,,,,,,,196,2025-05-09,PWHL,2024/2025,Playoffs
+42,12:29,Block,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,2,event,5v4,42,Claire Thompson,,,,,50,Kristen Campbell,,,,,,,74.7,-12.8,196,2025-05-09,PWHL,2024/2025,Playoffs
+43,12:59,Goal,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,2,event,5v4,2,Lee Stecklein,14,Dominique Petrie,,,50,Kristen Campbell,,14 15 20 27,Renata Fast - Savannah Harmon - Sarah Nurse - Emma Maltais,,2 14 27 42 86,Lee Stecklein - Dominique Petrie - Taylor Heise - Claire Thompson - Michela Cava,36.7,14.2,196,2025-05-09,PWHL,2024/2025,Playoffs
+44,13:09,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,2,event,5v5,23,Mellissa Channell-Watkins,,,,,50,Kristen Campbell,,,,,,,11.0,-15.3,196,2025-05-09,PWHL,2024/2025,Playoffs
+45,14:48,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,2,event,5v5,14,Renata Fast,,,,,35,Maddie Rooney,,,,,,,-30.3,-6.0,196,2025-05-09,PWHL,2024/2025,Playoffs
+46,15:01,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,2,event,5v5,13,Grace Zumwinkle,,,,,50,Kristen Campbell,,,,,,,39.0,8.8,196,2025-05-09,PWHL,2024/2025,Playoffs
+47,15:10,Penalty,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,2,event,5v5,27,Taylor Heise,,,,,,,,,,,,,,,196,2025-05-09,PWHL,2024/2025,Playoffs
+48,16:22,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,2,event,5v4,88,Julia Gosling,,,,,35,Maddie Rooney,,,,,,,-73.3,3.4,196,2025-05-09,PWHL,2024/2025,Playoffs
+49,16:37,Block,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,2,event,5v5,15,Savannah Harmon,,,,,35,Maddie Rooney,,,,,,,-72.0,-3.1,196,2025-05-09,PWHL,2024/2025,Playoffs
+50,16:56,Goal,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,2,event,5v4,15,Savannah Harmon,27,Emma Maltais,6,Kali Flanagan,35,Maddie Rooney,,6 15 20 24 27,Kali Flanagan - Savannah Harmon - Sarah Nurse - Natalie Spooner - Emma Maltais,,2 12 13 16,Lee Stecklein - Kelly Pannek - Grace Zumwinkle - Sophie Jaques,-57.7,3.1,196,2025-05-09,PWHL,2024/2025,Playoffs
+51,17:23,Goal,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,2,event,5v5,12,Allie Munroe,22,Maggie Connors,27,Emma Maltais,35,Maddie Rooney,,6 12 22 24 27,Kali Flanagan - Allie Munroe - Maggie Connors - Natalie Spooner - Emma Maltais,,2 9 16 22 71,Lee Stecklein - Mae Batherson - Sophie Jaques - Natalie Buchbinder - Klára Hymlárová,-81.0,-23.0,196,2025-05-09,PWHL,2024/2025,Playoffs
+52,18:14,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,2,event,5v5,13,Grace Zumwinkle,,,,,50,Kristen Campbell,,,,,,,55.0,19.0,196,2025-05-09,PWHL,2024/2025,Playoffs
+53,18:19,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,2,event,5v5,24,Natalie Spooner,,,,,35,Maddie Rooney,,,,,,,-79.3,15.6,196,2025-05-09,PWHL,2024/2025,Playoffs
+54,0:48,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,3,event,5v5,14,Renata Fast,,,,,35,Maddie Rooney,,,,,,,-71.3,2.5,196,2025-05-09,PWHL,2024/2025,Playoffs
+55,1:00,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,3,event,5v5,20,Sarah Nurse,,,,,35,Maddie Rooney,,,,,,,-70.7,-23.0,196,2025-05-09,PWHL,2024/2025,Playoffs
+56,3:00,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,3,event,5v5,23,Mellissa Channell-Watkins,,,,,50,Kristen Campbell,,,,,,,33.3,-17.0,196,2025-05-09,PWHL,2024/2025,Playoffs
+57,4:59,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,3,event,5v5,23,Megan Carter,,,,,35,Maddie Rooney,,,,,,,-39.0,-12.8,196,2025-05-09,PWHL,2024/2025,Playoffs
+58,5:14,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,3,event,5v5,6,Kali Flanagan,,,,,35,Maddie Rooney,,,,,,,-7.7,-6.2,196,2025-05-09,PWHL,2024/2025,Playoffs
+59,5:59,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,3,event,5v5,27,Emma Maltais,,,,,35,Maddie Rooney,,,,,,,-49.0,32.0,196,2025-05-09,PWHL,2024/2025,Playoffs
+60,6:33,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,3,event,5v5,34,Hannah Miller,,,,,35,Maddie Rooney,,,,,,,-56.3,-7.6,196,2025-05-09,PWHL,2024/2025,Playoffs
+61,7:04,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,3,event,5v5,9,Daryl Watts,,,,,35,Maddie Rooney,,,,,,,-76.7,-7.6,196,2025-05-09,PWHL,2024/2025,Playoffs
+62,7:04,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,3,event,5v5,9,Daryl Watts,,,,,35,Maddie Rooney,,,,,,,-74.3,-6.0,196,2025-05-09,PWHL,2024/2025,Playoffs
+63,8:06,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,3,event,5v5,88,Julia Gosling,,,,,35,Maddie Rooney,,,,,,,-56.7,-27.5,196,2025-05-09,PWHL,2024/2025,Playoffs
+64,10:59,Block,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,3,event,5v5,16,Hayley Scamurra,,,,,35,Maddie Rooney,,,,,,,-47.7,17.3,196,2025-05-09,PWHL,2024/2025,Playoffs
+65,11:16,Block,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,3,event,5v5,16,Sophie Jaques,,,,,50,Kristen Campbell,,,,,,,30.3,25.8,196,2025-05-09,PWHL,2024/2025,Playoffs
+66,11:55,Shot,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,3,event,5v5,6,Katy Knoll,,,,,50,Kristen Campbell,,,,,,,45.0,-11.1,196,2025-05-09,PWHL,2024/2025,Playoffs
+67,13:47,Goal,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,3,event,5v5,16,Sophie Jaques,27,Taylor Heise,,,50,Kristen Campbell,,6 8 9 20 23,Kali Flanagan - Izzy Daniel - Daryl Watts - Sarah Nurse - Megan Carter,,13 16 23 26 27,Grace Zumwinkle - Sophie Jaques - Mellissa Channell-Watkins - Kendall Coyne Schofield - Taylor Heise,75.0,12.5,196,2025-05-09,PWHL,2024/2025,Playoffs
+68,14:52,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,3,event,5v5,22,Maggie Connors,,,,,35,Maddie Rooney,,,,,,,-55.0,9.3,196,2025-05-09,PWHL,2024/2025,Playoffs
+69,15:10,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,3,event,5v5,14,Renata Fast,,,,,35,Maddie Rooney,,,,,,,-46.3,-29.7,196,2025-05-09,PWHL,2024/2025,Playoffs
+70,16:19,Block,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,3,event,5v5,14,Renata Fast,,,,,35,Maddie Rooney,,,,,,,-32.3,-7.6,196,2025-05-09,PWHL,2024/2025,Playoffs
+71,17:16,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,3,event,5v5,24,Natalie Spooner,,,,,,,,,,,,,,,196,2025-05-09,PWHL,2024/2025,Playoffs
+72,17:28,Block,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,3,event,5v5,42,Claire Thompson,,,,,50,Kristen Campbell,,,,,,,56.0,-10.2,196,2025-05-09,PWHL,2024/2025,Playoffs
+73,17:47,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,3,event,4v5,18,Jesse Compher,,,,,35,Maddie Rooney,,,,,,,-60.0,-26.1,196,2025-05-09,PWHL,2024/2025,Playoffs
+74,18:49,Goal,Minnesota Frost,Away,Toronto Sceptres,Minnesota Frost,3,event,5v4,23,Mellissa Channell-Watkins,16,Sophie Jaques,12,Kelly Pannek,50,Kristen Campbell,,9 12 15 27,Daryl Watts - Allie Munroe - Savannah Harmon - Emma Maltais,,3 12 13 16 23,Brooke McQuigge - Kelly Pannek - Grace Zumwinkle - Sophie Jaques - Mellissa Channell-Watkins,78.3,13.3,196,2025-05-09,PWHL,2024/2025,Playoffs
+75,19:37,Shot,Toronto Sceptres,Home,Toronto Sceptres,Minnesota Frost,3,event,5v5,9,Daryl Watts,,,,,35,Maddie Rooney,,,,,,,-86.3,-26.1,196,2025-05-09,PWHL,2024/2025,Playoffs

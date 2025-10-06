@@ -1,0 +1,94 @@
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
+1,1:52,Shot,New York Sirens,Away,Ottawa Charge,New York Sirens,1,event,5v5,29,Emmy Fecteau,,,,,38,Emerance Maschmeyer,,,,,,,52.0,-15.9,155,2025-02-26,PWHL,2024/2025,Regular Season
+2,3:00,Shot,New York Sirens,Away,Ottawa Charge,New York Sirens,1,event,5v5,17,Ella Shelton,,,,,38,Emerance Maschmeyer,,,,,,,83.3,9.3,155,2025-02-26,PWHL,2024/2025,Regular Season
+3,3:15,Goal,Ottawa Charge,Home,Ottawa Charge,New York Sirens,1,event,5v5,17,Gabbie Hughes,18,Mannon McMahon,26,Emily Clark,30,Corinne Schroeder,,17 18 23 26 71,Gabbie Hughes - Mannon McMahon - Jocelyne Larocque - Emily Clark - Jincy Roese,,9 11 13 14 17,Jessie Eldridge - Abby Roque - Elle Hartje - Jaime Bourbonnais - Ella Shelton,-83.7,4.5,155,2025-02-26,PWHL,2024/2025,Regular Season
+4,3:54,Shot,New York Sirens,Away,Ottawa Charge,New York Sirens,1,event,5v5,6,Brooke Hobson,,,,,38,Emerance Maschmeyer,,,,,,,33.0,-26.9,155,2025-02-26,PWHL,2024/2025,Regular Season
+5,4:15,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,1,event,5v5,2,Aneta Tejralová,,,,,30,Corinne Schroeder,,,,,,,-60.7,28.6,155,2025-02-26,PWHL,2024/2025,Regular Season
+6,5:02,Shot,New York Sirens,Away,Ottawa Charge,New York Sirens,1,event,5v5,14,Jaime Bourbonnais,,,,,38,Emerance Maschmeyer,,,,,,,73.0,-9.3,155,2025-02-26,PWHL,2024/2025,Regular Season
+7,5:15,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,1,event,5v5,18,Mannon McMahon,,,,,30,Corinne Schroeder,,,,,,,-68.7,7.9,155,2025-02-26,PWHL,2024/2025,Regular Season
+8,5:41,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,1,event,5v5,10,Alexa Vasko,,,,,30,Corinne Schroeder,,,,,,,-75.7,23.2,155,2025-02-26,PWHL,2024/2025,Regular Season
+9,5:54,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,1,event,5v5,23,Jocelyne Larocque,,,,,30,Corinne Schroeder,,,,,,,-35.0,2.8,155,2025-02-26,PWHL,2024/2025,Regular Season
+10,7:00,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,1,event,5v5,27,Shiann Darkangelo,,,,,30,Corinne Schroeder,,,,,,,-22.3,34.9,155,2025-02-26,PWHL,2024/2025,Regular Season
+11,7:46,Block,New York Sirens,Away,Ottawa Charge,New York Sirens,1,event,5v5,11,Abby Roque,,,,,38,Emerance Maschmeyer,,,,,,,73.0,-2.0,155,2025-02-26,PWHL,2024/2025,Regular Season
+12,9:12,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,1,event,5v5,27,Shiann Darkangelo,,,,,30,Corinne Schroeder,,,,,,,-78.0,-6.5,155,2025-02-26,PWHL,2024/2025,Regular Season
+13,9:19,Block,New York Sirens,Away,Ottawa Charge,New York Sirens,1,event,5v5,19,Paetyn Levis,,,,,38,Emerance Maschmeyer,,,,,,,58.0,-13.0,155,2025-02-26,PWHL,2024/2025,Regular Season
+14,9:25,Block,New York Sirens,Away,Ottawa Charge,New York Sirens,1,event,5v5,9,Jessie Eldridge,,,,,38,Emerance Maschmeyer,,,,,,,49.3,-4.2,155,2025-02-26,PWHL,2024/2025,Regular Season
+15,10:09,Shot,New York Sirens,Away,Ottawa Charge,New York Sirens,1,event,5v5,9,Jessie Eldridge,,,,,38,Emerance Maschmeyer,,,,,,,68.3,-3.4,155,2025-02-26,PWHL,2024/2025,Regular Season
+16,11:02,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,1,event,5v5,3,Zoe Boyd,,,,,30,Corinne Schroeder,,,,,,,-31.7,13.0,155,2025-02-26,PWHL,2024/2025,Regular Season
+17,11:18,Shot,New York Sirens,Away,Ottawa Charge,New York Sirens,1,event,5v5,25,Alex Carpenter,,,,,38,Emerance Maschmeyer,,,,,,,61.7,-2.3,155,2025-02-26,PWHL,2024/2025,Regular Season
+18,11:30,Shot,New York Sirens,Away,Ottawa Charge,New York Sirens,1,event,5v5,17,Ella Shelton,,,,,38,Emerance Maschmeyer,,,,,,,34.0,-21.5,155,2025-02-26,PWHL,2024/2025,Regular Season
+19,11:39,Shot,New York Sirens,Away,Ottawa Charge,New York Sirens,1,event,5v5,25,Alex Carpenter,,,,,38,Emerance Maschmeyer,,,,,,,76.7,0.8,155,2025-02-26,PWHL,2024/2025,Regular Season
+20,12:42,Block,New York Sirens,Away,Ottawa Charge,New York Sirens,1,event,5v5,28,Micah Zandee-Hart,,,,,38,Emerance Maschmeyer,,,,,,,38.3,-28.1,155,2025-02-26,PWHL,2024/2025,Regular Season
+21,13:48,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,1,event,5v5,21,Ashton Bell,,,,,30,Corinne Schroeder,,,,,,,-71.0,-3.1,155,2025-02-26,PWHL,2024/2025,Regular Season
+22,13:50,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,1,event,5v5,3,Zoe Boyd,,,,,30,Corinne Schroeder,,,,,,,-55.3,22.4,155,2025-02-26,PWHL,2024/2025,Regular Season
+23,14:40,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,1,event,5v5,12,Victoria Bach,,,,,30,Corinne Schroeder,,,,,,,-60.3,-7.4,155,2025-02-26,PWHL,2024/2025,Regular Season
+24,14:47,Penalty,Ottawa Charge,Home,Ottawa Charge,New York Sirens,1,event,5v5,10,Alexa Vasko,,,,,,,,,,,,,,,155,2025-02-26,PWHL,2024/2025,Regular Season
+25,16:44,Shot,New York Sirens,Away,Ottawa Charge,New York Sirens,1,event,5v4,8,Maja Nylen Persson,,,,,38,Emerance Maschmeyer,,,,,,,48.3,31.4,155,2025-02-26,PWHL,2024/2025,Regular Season
+26,17:39,Goal,New York Sirens,Away,Ottawa Charge,New York Sirens,1,event,5v5,17,Ella Shelton,27,Jade Downie-Landry,18,Élizabeth Giguère,38,Emerance Maschmeyer,,13 19 23 27 71,Tereza Vanišová - Brianne Jenner - Jocelyne Larocque - Shiann Darkangelo - Jincy Roese,,14 17 18 27 29,Jaime Bourbonnais - Ella Shelton - Élizabeth Giguère - Jade Downie-Landry - Emmy Fecteau,51.3,-35.1,155,2025-02-26,PWHL,2024/2025,Regular Season
+27,17:59,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,1,event,5v5,26,Emily Clark,,,,,30,Corinne Schroeder,,,,,,,-52.0,34.3,155,2025-02-26,PWHL,2024/2025,Regular Season
+28,19:15,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,1,event,5v5,18,Mannon McMahon,,,,,30,Corinne Schroeder,,,,,,,-43.3,-21.0,155,2025-02-26,PWHL,2024/2025,Regular Season
+29,0:26,Shot,New York Sirens,Away,Ottawa Charge,New York Sirens,2,event,5v5,28,Micah Zandee-Hart,,,,,38,Emerance Maschmeyer,,,,,,,35.0,-18.1,155,2025-02-26,PWHL,2024/2025,Regular Season
+30,1:18,Shot,New York Sirens,Away,Ottawa Charge,New York Sirens,2,event,5v5,25,Alex Carpenter,,,,,38,Emerance Maschmeyer,,,,,,,77.0,-6.0,155,2025-02-26,PWHL,2024/2025,Regular Season
+31,2:30,Goal,Ottawa Charge,Home,Ottawa Charge,New York Sirens,2,event,5v5,22,Taylor House,6,Stephanie Markowski,92,Danielle Serdachny,30,Corinne Schroeder,,6 21 22 92 94,Stephanie Markowski - Ashton Bell - Taylor House - Danielle Serdachny - Anna Meixner,,6 15 20 27 29,Brooke Hobson - Gabby Rosenthal - Allyson Simpson - Jade Downie-Landry - Emmy Fecteau,-39.7,7.9,155,2025-02-26,PWHL,2024/2025,Regular Season
+32,3:25,Block,Ottawa Charge,Home,Ottawa Charge,New York Sirens,2,event,5v5,2,Aneta Tejralová,,,,,30,Corinne Schroeder,,,,,,,-43.0,-23.0,155,2025-02-26,PWHL,2024/2025,Regular Season
+33,4:27,Shot,New York Sirens,Away,Ottawa Charge,New York Sirens,2,event,5v5,14,Jaime Bourbonnais,,,,,38,Emerance Maschmeyer,,,,,,,38.0,30.3,155,2025-02-26,PWHL,2024/2025,Regular Season
+34,6:32,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,2,event,5v5,19,Brianne Jenner,,,,,30,Corinne Schroeder,,,,,,,-79.7,-0.3,155,2025-02-26,PWHL,2024/2025,Regular Season
+35,7:21,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,2,event,5v5,6,Stephanie Markowski,,,,,30,Corinne Schroeder,,,,,,,-58.0,-22.1,155,2025-02-26,PWHL,2024/2025,Regular Season
+36,7:28,Penalty,New York Sirens,Away,Ottawa Charge,New York Sirens,2,event,5v5,9,Jessie Eldridge,,,,,,,,,,,,,,,155,2025-02-26,PWHL,2024/2025,Regular Season
+37,8:17,Block,Ottawa Charge,Home,Ottawa Charge,New York Sirens,2,event,5v5,19,Brianne Jenner,,,,,30,Corinne Schroeder,,,,,,,-56.0,15.6,155,2025-02-26,PWHL,2024/2025,Regular Season
+38,8:45,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,2,event,5v4,92,Danielle Serdachny,,,,,30,Corinne Schroeder,,,,,,,-62.0,16.4,155,2025-02-26,PWHL,2024/2025,Regular Season
+39,9:42,Goal,New York Sirens,Away,Ottawa Charge,New York Sirens,2,event,5v5,25,Alex Carpenter,9,Jessie Eldridge,,,38,Emerance Maschmeyer,,13 17 23 26 71,Tereza Vanišová - Gabbie Hughes - Jocelyne Larocque - Emily Clark - Jincy Roese,,9 10 17 20 25,Jessie Eldridge - Sarah Fillier - Ella Shelton - Allyson Simpson - Alex Carpenter,70.3,0.6,155,2025-02-26,PWHL,2024/2025,Regular Season
+40,11:16,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,2,event,5v5,94,Anna Meixner,,,,,30,Corinne Schroeder,,,,,,,-68.3,-15.6,155,2025-02-26,PWHL,2024/2025,Regular Season
+41,11:48,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,2,event,5v5,92,Danielle Serdachny,,,,,30,Corinne Schroeder,,,,,,,-55.0,13.0,155,2025-02-26,PWHL,2024/2025,Regular Season
+42,12:15,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,2,event,5v5,23,Jocelyne Larocque,,,,,30,Corinne Schroeder,,,,,,,-34.0,19.6,155,2025-02-26,PWHL,2024/2025,Regular Season
+43,12:21,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,2,event,5v5,3,Zoe Boyd,,,,,30,Corinne Schroeder,,,,,,,-57.0,32.0,155,2025-02-26,PWHL,2024/2025,Regular Season
+44,12:51,Shot,New York Sirens,Away,Ottawa Charge,New York Sirens,2,event,5v5,15,Gabby Rosenthal,,,,,38,Emerance Maschmeyer,,,,,,,71.7,14.5,155,2025-02-26,PWHL,2024/2025,Regular Season
+45,13:51,Block,Ottawa Charge,Home,Ottawa Charge,New York Sirens,2,event,5v5,17,Gabbie Hughes,,,,,30,Corinne Schroeder,,,,,,,-37.7,35.4,155,2025-02-26,PWHL,2024/2025,Regular Season
+46,14:08,Shot,New York Sirens,Away,Ottawa Charge,New York Sirens,2,event,5v5,25,Alex Carpenter,,,,,38,Emerance Maschmeyer,,,,,,,55.3,-35.1,155,2025-02-26,PWHL,2024/2025,Regular Season
+47,14:12,Goal,New York Sirens,Away,Ottawa Charge,New York Sirens,2,event,5v5,10,Sarah Fillier,,,,,38,Emerance Maschmeyer,,13 19 21 27 71,Tereza Vanišová - Brianne Jenner - Ashton Bell - Shiann Darkangelo - Jincy Roese,,10 14 17 19 25,Sarah Fillier - Jaime Bourbonnais - Ella Shelton - Paetyn Levis - Alex Carpenter,66.3,-14.7,155,2025-02-26,PWHL,2024/2025,Regular Season
+48,15:33,Shot,New York Sirens,Away,Ottawa Charge,New York Sirens,2,event,5v5,10,Sarah Fillier,,,,,38,Emerance Maschmeyer,,,,,,,79.0,17.3,155,2025-02-26,PWHL,2024/2025,Regular Season
+49,15:37,Shot,New York Sirens,Away,Ottawa Charge,New York Sirens,2,event,5v5,10,Sarah Fillier,,,,,38,Emerance Maschmeyer,,,,,,,51.0,5.7,155,2025-02-26,PWHL,2024/2025,Regular Season
+50,17:39,Block,Ottawa Charge,Home,Ottawa Charge,New York Sirens,2,event,5v5,21,Ashton Bell,,,,,30,Corinne Schroeder,,,,,,,-57.0,-28.1,155,2025-02-26,PWHL,2024/2025,Regular Season
+51,17:55,Block,Ottawa Charge,Home,Ottawa Charge,New York Sirens,2,event,5v5,19,Brianne Jenner,,,,,30,Corinne Schroeder,,,,,,,-64.3,-6.0,155,2025-02-26,PWHL,2024/2025,Regular Season
+52,17:58,Goal,Ottawa Charge,Home,Ottawa Charge,New York Sirens,2,event,5v5,27,Shiann Darkangelo,19,Brianne Jenner,2,Aneta Tejralová,30,Corinne Schroeder,,2 6 13 19 27,Aneta Tejralová - Stephanie Markowski - Tereza Vanišová - Brianne Jenner - Shiann Darkangelo,,8 10 19 20 25,Maja Nylen Persson - Sarah Fillier - Paetyn Levis - Allyson Simpson - Alex Carpenter,-64.3,1.4,155,2025-02-26,PWHL,2024/2025,Regular Season
+53,18:39,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,2,event,5v5,92,Danielle Serdachny,,,,,30,Corinne Schroeder,,,,,,,-76.0,-19.3,155,2025-02-26,PWHL,2024/2025,Regular Season
+54,18:50,Block,New York Sirens,Away,Ottawa Charge,New York Sirens,2,event,5v5,29,Emmy Fecteau,,,,,38,Emerance Maschmeyer,,,,,,,67.0,-19.8,155,2025-02-26,PWHL,2024/2025,Regular Season
+55,18:52,Shot,New York Sirens,Away,Ottawa Charge,New York Sirens,2,event,5v5,11,Abby Roque,,,,,38,Emerance Maschmeyer,,,,,,,83.3,-6.0,155,2025-02-26,PWHL,2024/2025,Regular Season
+56,19:53,Shot,New York Sirens,Away,Ottawa Charge,New York Sirens,2,event,5v5,14,Jaime Bourbonnais,,,,,38,Emerance Maschmeyer,,,,,,,42.3,24.6,155,2025-02-26,PWHL,2024/2025,Regular Season
+57,1:25,Shot,New York Sirens,Away,Ottawa Charge,New York Sirens,3,event,5v5,28,Micah Zandee-Hart,,,,,38,Emerance Maschmeyer,,,,,,,48.7,-13.9,155,2025-02-26,PWHL,2024/2025,Regular Season
+58,2:40,Block,New York Sirens,Away,Ottawa Charge,New York Sirens,3,event,5v5,20,Allyson Simpson,,,,,38,Emerance Maschmeyer,,,,,,,47.3,24.4,155,2025-02-26,PWHL,2024/2025,Regular Season
+59,3:03,Penalty,New York Sirens,Away,Ottawa Charge,New York Sirens,3,event,5v5,20,Allyson Simpson,,,,,,,,,,,,,,,155,2025-02-26,PWHL,2024/2025,Regular Season
+60,3:10,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,3,event,5v4,71,Jincy Roese,,,,,30,Corinne Schroeder,,,,,,,-62.7,14.2,155,2025-02-26,PWHL,2024/2025,Regular Season
+61,3:37,Block,Ottawa Charge,Home,Ottawa Charge,New York Sirens,3,event,5v5,26,Emily Clark,,,,,30,Corinne Schroeder,,,,,,,-37.0,2.3,155,2025-02-26,PWHL,2024/2025,Regular Season
+62,3:57,Block,Ottawa Charge,Home,Ottawa Charge,New York Sirens,3,event,5v5,23,Jocelyne Larocque,,,,,30,Corinne Schroeder,,,,,,,-38.7,26.4,155,2025-02-26,PWHL,2024/2025,Regular Season
+63,5:20,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,3,event,5v5,17,Gabbie Hughes,,,,,30,Corinne Schroeder,,,,,,,-85.3,9.1,155,2025-02-26,PWHL,2024/2025,Regular Season
+64,5:21,Goal,Ottawa Charge,Home,Ottawa Charge,New York Sirens,3,event,5v5,26,Emily Clark,17,Gabbie Hughes,18,Mannon McMahon,30,Corinne Schroeder,,6 17 18 21 26,Stephanie Markowski - Gabbie Hughes - Mannon McMahon - Ashton Bell - Emily Clark,,10 14 17 19 25,Sarah Fillier - Jaime Bourbonnais - Ella Shelton - Paetyn Levis - Alex Carpenter,-84.7,4.8,155,2025-02-26,PWHL,2024/2025,Regular Season
+65,5:51,Block,Ottawa Charge,Home,Ottawa Charge,New York Sirens,3,event,5v5,12,Victoria Bach,,,,,30,Corinne Schroeder,,,,,,,-57.0,2.5,155,2025-02-26,PWHL,2024/2025,Regular Season
+66,6:11,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,3,event,5v5,8,Natalie Snodgrass,,,,,30,Corinne Schroeder,,,,,,,-57.3,-18.1,155,2025-02-26,PWHL,2024/2025,Regular Season
+67,6:23,Shot,New York Sirens,Away,Ottawa Charge,New York Sirens,3,event,5v5,10,Sarah Fillier,,,,,38,Emerance Maschmeyer,,,,,,,73.7,14.5,155,2025-02-26,PWHL,2024/2025,Regular Season
+68,6:30,Block,New York Sirens,Away,Ottawa Charge,New York Sirens,3,event,5v5,17,Ella Shelton,,,,,38,Emerance Maschmeyer,,,,,,,73.3,2.8,155,2025-02-26,PWHL,2024/2025,Regular Season
+69,6:32,Block,New York Sirens,Away,Ottawa Charge,New York Sirens,3,event,5v5,17,Ella Shelton,,,,,38,Emerance Maschmeyer,,,,,,,76.0,2.5,155,2025-02-26,PWHL,2024/2025,Regular Season
+70,6:56,Block,New York Sirens,Away,Ottawa Charge,New York Sirens,3,event,5v5,9,Jessie Eldridge,,,,,38,Emerance Maschmeyer,,,,,,,61.3,4.2,155,2025-02-26,PWHL,2024/2025,Regular Season
+71,7:22,Shot,New York Sirens,Away,Ottawa Charge,New York Sirens,3,event,5v5,11,Abby Roque,,,,,38,Emerance Maschmeyer,,,,,,,82.3,-0.8,155,2025-02-26,PWHL,2024/2025,Regular Season
+72,7:22,Penalty,Ottawa Charge,Home,Ottawa Charge,New York Sirens,3,event,5v5,88,Ronja Savolainen,,,,,,,,,,,,,,,155,2025-02-26,PWHL,2024/2025,Regular Season
+73,7:42,Goal,New York Sirens,Away,Ottawa Charge,New York Sirens,3,event,5v4,11,Abby Roque,25,Alex Carpenter,10,Sarah Fillier,38,Emerance Maschmeyer,,17 21 23 26,Gabbie Hughes - Ashton Bell - Jocelyne Larocque - Emily Clark,,8 10 11 17 25,Maja Nylen Persson - Sarah Fillier - Abby Roque - Ella Shelton - Alex Carpenter,88.3,-6.2,155,2025-02-26,PWHL,2024/2025,Regular Season
+74,8:08,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,3,event,5v5,2,Aneta Tejralová,,,,,30,Corinne Schroeder,,,,,,,-29.3,21.0,155,2025-02-26,PWHL,2024/2025,Regular Season
+75,9:14,Penalty,Ottawa Charge,Home,Ottawa Charge,New York Sirens,3,event,5v5,94,Anna Meixner,,,,,,,,,,,,,,,155,2025-02-26,PWHL,2024/2025,Regular Season
+76,9:19,Block,New York Sirens,Away,Ottawa Charge,New York Sirens,3,event,5v5,10,Sarah Fillier,,,,,38,Emerance Maschmeyer,,,,,,,37.7,21.8,155,2025-02-26,PWHL,2024/2025,Regular Season
+77,9:48,Block,New York Sirens,Away,Ottawa Charge,New York Sirens,3,event,5v5,9,Jessie Eldridge,,,,,38,Emerance Maschmeyer,,,,,,,61.3,-17.8,155,2025-02-26,PWHL,2024/2025,Regular Season
+78,9:58,Shot,New York Sirens,Away,Ottawa Charge,New York Sirens,3,event,5v4,10,Sarah Fillier,,,,,38,Emerance Maschmeyer,,,,,,,58.3,30.9,155,2025-02-26,PWHL,2024/2025,Regular Season
+79,11:00,Block,New York Sirens,Away,Ottawa Charge,New York Sirens,3,event,5v5,8,Maja Nylen Persson,,,,,38,Emerance Maschmeyer,,,,,,,44.0,24.4,155,2025-02-26,PWHL,2024/2025,Regular Season
+80,11:56,Penalty,Ottawa Charge,Home,Ottawa Charge,New York Sirens,3,event,5v5,26,Emily Clark,,,,,,,,,,,,,,,155,2025-02-26,PWHL,2024/2025,Regular Season
+81,14:10,Penalty,New York Sirens,Away,Ottawa Charge,New York Sirens,3,event,5v5,20,Allyson Simpson,,,,,,,,,,,,,,,155,2025-02-26,PWHL,2024/2025,Regular Season
+82,14:47,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,3,event,5v4,27,Shiann Darkangelo,,,,,30,Corinne Schroeder,,,,,,,-69.0,25.5,155,2025-02-26,PWHL,2024/2025,Regular Season
+83,16:09,Block,Ottawa Charge,Home,Ottawa Charge,New York Sirens,3,event,4v5,19,Brianne Jenner,,,,,30,Corinne Schroeder,,,,,,,-60.7,26.9,155,2025-02-26,PWHL,2024/2025,Regular Season
+84,16:19,Shot,New York Sirens,Away,Ottawa Charge,New York Sirens,3,event,5v5,27,Jade Downie-Landry,,,,,38,Emerance Maschmeyer,,,,,,,67.7,-10.5,155,2025-02-26,PWHL,2024/2025,Regular Season
+85,18:01,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,3,event,5v5,19,Brianne Jenner,,,,,30,Corinne Schroeder,,,,,,,-71.7,0.3,155,2025-02-26,PWHL,2024/2025,Regular Season
+86,18:20,Block,New York Sirens,Away,Ottawa Charge,New York Sirens,3,event,5v5,27,Jade Downie-Landry,,,,,38,Emerance Maschmeyer,,,,,,,64.7,-4.2,155,2025-02-26,PWHL,2024/2025,Regular Season
+87,18:49,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,3,event,5v5,88,Ronja Savolainen,,,,,30,Corinne Schroeder,,,,,,,-57.7,-0.8,155,2025-02-26,PWHL,2024/2025,Regular Season
+88,18:58,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,3,event,5v5,17,Gabbie Hughes,,,,,30,Corinne Schroeder,,,,,,,-79.0,-12.2,155,2025-02-26,PWHL,2024/2025,Regular Season
+89,19:34,Shot,New York Sirens,Away,Ottawa Charge,New York Sirens,3,event,5v5,28,Micah Zandee-Hart,,,,,38,Emerance Maschmeyer,,,,,,,80.0,-21.2,155,2025-02-26,PWHL,2024/2025,Regular Season
+90,19:50,Shot,New York Sirens,Away,Ottawa Charge,New York Sirens,3,event,5v5,11,Abby Roque,,,,,38,Emerance Maschmeyer,,,,,,,68.0,-3.4,155,2025-02-26,PWHL,2024/2025,Regular Season
+91,19:52,Shot,New York Sirens,Away,Ottawa Charge,New York Sirens,3,event,5v5,11,Abby Roque,,,,,38,Emerance Maschmeyer,,,,,,,76.3,-2.3,155,2025-02-26,PWHL,2024/2025,Regular Season
+92,0:23,Shot,New York Sirens,Away,Ottawa Charge,New York Sirens,OT1,event,3v3,17,Ella Shelton,,,,,38,Emerance Maschmeyer,,,,,,,80.3,11.6,155,2025-02-26,PWHL,2024/2025,Regular Season
+93,0:36,Goal,Ottawa Charge,Home,Ottawa Charge,New York Sirens,OT1,event,3v3,17,Gabbie Hughes,88,Ronja Savolainen,38,Emerance Maschmeyer,30,Corinne Schroeder,,17 26 88,Gabbie Hughes - Emily Clark - Ronja Savolainen,,9 14 25,Jessie Eldridge - Jaime Bourbonnais - Alex Carpenter,-71.0,-7.6,155,2025-02-26,PWHL,2024/2025,Regular Season

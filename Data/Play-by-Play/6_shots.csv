@@ -1,0 +1,54 @@
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
+1,1:18,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,1,event,5v5,16,Sarah Lefort,,,,,35,Maddie Rooney,,,,,,,73.0,4.5,6,2024-01-06,PWHL,2023/2024,Regular Season
+2,2:50,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,1,event,5v5,26,Sarah Bujold,,,,,35,Maddie Rooney,,,,,,,90.7,-28.1,6,2024-01-06,PWHL,2023/2024,Regular Season
+3,4:34,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,1,event,5v5,16,Sarah Lefort,,,,,35,Maddie Rooney,,,,,,,51.7,-20.4,6,2024-01-06,PWHL,2023/2024,Regular Season
+4,5:20,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,1,event,5v5,21,Tereza Vanišová,,,,,35,Maddie Rooney,,,,,,,79.0,0.8,6,2024-01-06,PWHL,2023/2024,Regular Season
+5,5:33,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,1,event,5v5,23,Erin Ambrose,,,,,35,Maddie Rooney,,,,,,,50.7,-2.8,6,2024-01-06,PWHL,2023/2024,Regular Season
+6,6:55,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,18,Brittyn Fleming,,,,,35,Ann-Renée Desbiens,,,,,,,-48.7,25.8,6,2024-01-06,PWHL,2023/2024,Regular Season
+7,8:05,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,1,event,5v5,21,Tereza Vanišová,,,,,35,Maddie Rooney,,,,,,,79.0,3.1,6,2024-01-06,PWHL,2023/2024,Regular Season
+8,8:37,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,77,Susanna Tapani,,,,,35,Ann-Renée Desbiens,,,,,,,-35.0,18.1,6,2024-01-06,PWHL,2023/2024,Regular Season
+9,11:44,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,25,Emma Greco,,,,,35,Ann-Renée Desbiens,,,,,,,-53.0,17.8,6,2024-01-06,PWHL,2023/2024,Regular Season
+10,12:34,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,86,Michela Cava,,,,,35,Ann-Renée Desbiens,,,,,,,-65.0,36.5,6,2024-01-06,PWHL,2023/2024,Regular Season
+11,13:43,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,1,event,5v5,7,Laura Stacey,,,,,35,Maddie Rooney,,,,,,,84.7,-9.6,6,2024-01-06,PWHL,2023/2024,Regular Season
+12,13:47,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,1,event,5v5,29,Marie-Philip Poulin,,,,,35,Maddie Rooney,,,,,,,67.0,-35.7,6,2024-01-06,PWHL,2023/2024,Regular Season
+13,14:53,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,2,Lee Stecklein,,,,,35,Ann-Renée Desbiens,,,,,,,-84.3,-7.1,6,2024-01-06,PWHL,2023/2024,Regular Season
+14,17:21,Goal,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,13,Grace Zumwinkle,77,Susanna Tapani,12,Kelly Pannek,35,Ann-Renée Desbiens,,12 13 17 22 77,Kelly Pannek - Grace Zumwinkle - Brooke Bryant - Natalie Buchbinder - Susanna Tapani,,7 8 9 16 23,Laura Stacey - Gabrielle David - Kati Tabin - Sarah Lefort - Erin Ambrose,-86.0,6.0,6,2024-01-06,PWHL,2023/2024,Regular Season
+15,17:36,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,1,event,5v5,43,Kristin O'Neill,,,,,35,Maddie Rooney,,,,,,,55.0,-19.0,6,2024-01-06,PWHL,2023/2024,Regular Season
+16,18:55,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,12,Kelly Pannek,,,,,35,Ann-Renée Desbiens,,,,,,,-47.3,-0.8,6,2024-01-06,PWHL,2023/2024,Regular Season
+17,2:30,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v5,9,Kati Tabin,,,,,35,Maddie Rooney,,,,,,,53.7,-25.8,6,2024-01-06,PWHL,2023/2024,Regular Season
+18,3:08,Penalty,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,9,Abby Cook,,,,,,,,,,,,,,,6,2024-01-06,PWHL,2023/2024,Regular Season
+19,5:14,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v5,9,Kati Tabin,,,,,35,Maddie Rooney,,,,,,,59.0,0.3,6,2024-01-06,PWHL,2023/2024,Regular Season
+20,5:16,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v5,23,Erin Ambrose,,,,,35,Maddie Rooney,,,,,,,69.7,-0.6,6,2024-01-06,PWHL,2023/2024,Regular Season
+21,5:44,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,25,Emma Greco,,,,,35,Ann-Renée Desbiens,,,,,,,-32.7,33.7,6,2024-01-06,PWHL,2023/2024,Regular Season
+22,7:49,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,13,Grace Zumwinkle,,,,,35,Ann-Renée Desbiens,,,,,,,-87.3,4.5,6,2024-01-06,PWHL,2023/2024,Regular Season
+23,10:16,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,17,Brooke Bryant,,,,,35,Ann-Renée Desbiens,,,,,,,-80.7,-34.0,6,2024-01-06,PWHL,2023/2024,Regular Season
+24,10:24,Penalty,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,86,Michela Cava,,,,,,,,,,,,,,,6,2024-01-06,PWHL,2023/2024,Regular Season
+25,11:16,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v4,96,Dominika Lásková,,,,,35,Maddie Rooney,,,,,,,81.0,20.4,6,2024-01-06,PWHL,2023/2024,Regular Season
+26,12:59,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,86,Michela Cava,,,,,35,Ann-Renée Desbiens,,,,,,,-79.3,-6.0,6,2024-01-06,PWHL,2023/2024,Regular Season
+27,13:07,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,26,Kendall Coyne Schofield,,,,,35,Ann-Renée Desbiens,,,,,,,-76.0,21.8,6,2024-01-06,PWHL,2023/2024,Regular Season
+28,13:30,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v5,16,Sarah Lefort,,,,,35,Maddie Rooney,,,,,,,55.3,-32.9,6,2024-01-06,PWHL,2023/2024,Regular Season
+29,15:52,Penalty,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,11,Sophia Kunin,,,,,,,,,,,,,,,6,2024-01-06,PWHL,2023/2024,Regular Season
+30,16:25,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v4,23,Erin Ambrose,,,,,35,Maddie Rooney,,,,,,,35.3,-0.8,6,2024-01-06,PWHL,2023/2024,Regular Season
+31,16:45,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v4,21,Tereza Vanišová,,,,,35,Maddie Rooney,,,,,,,85.3,9.3,6,2024-01-06,PWHL,2023/2024,Regular Season
+32,17:11,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v4,15,Maureen Murphy,,,,,35,Maddie Rooney,,,,,,,79.0,-16.7,6,2024-01-06,PWHL,2023/2024,Regular Season
+33,17:42,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v4,42,Claire Dalton,,,,,35,Maddie Rooney,,,,,,,78.7,-4.8,6,2024-01-06,PWHL,2023/2024,Regular Season
+34,18:45,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v5,10,Brigitte Laganière,,,,,35,Maddie Rooney,,,,,,,-37.0,-36.5,6,2024-01-06,PWHL,2023/2024,Regular Season
+35,19:28,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v5,15,Maureen Murphy,,,,,35,Maddie Rooney,,,,,,,75.0,-4.8,6,2024-01-06,PWHL,2023/2024,Regular Season
+36,19:29,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v5,15,Maureen Murphy,,,,,35,Maddie Rooney,,,,,,,77.0,-4.0,6,2024-01-06,PWHL,2023/2024,Regular Season
+37,1:47,Goal,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v5,13,Grace Zumwinkle,77,Susanna Tapani,21,Liz Schepers,35,Ann-Renée Desbiens,,13 21 22 23 77,Grace Zumwinkle - Liz Schepers - Natalie Buchbinder - Mellissa Channell-Watkins - Susanna Tapani,,9 12 15 43 96,Kati Tabin - Leah Lum - Maureen Murphy - Kristin O'Neill - Dominika Lásková,-29.3,0.3,6,2024-01-06,PWHL,2023/2024,Regular Season
+38,1:58,Penalty,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,3,event,5v5,8,Gabrielle David,,,,,,,,,,,,,,,6,2024-01-06,PWHL,2023/2024,Regular Season
+39,4:46,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v5,11,Sophia Kunin,,,,,35,Ann-Renée Desbiens,,,,,,,-49.3,-6.0,6,2024-01-06,PWHL,2023/2024,Regular Season
+40,6:09,Penalty,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,3,event,5v5,16,Sarah Lefort,,,,,,,,,,,,,,,6,2024-01-06,PWHL,2023/2024,Regular Season
+41,6:45,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v4,77,Susanna Tapani,,,,,35,Ann-Renée Desbiens,,,,,,,-71.0,-8.2,6,2024-01-06,PWHL,2023/2024,Regular Season
+42,8:12,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v5,26,Kendall Coyne Schofield,,,,,35,Ann-Renée Desbiens,,,,,,,-41.7,7.9,6,2024-01-06,PWHL,2023/2024,Regular Season
+43,9:01,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v5,11,Sophia Kunin,,,,,35,Ann-Renée Desbiens,,,,,,,-52.7,26.6,6,2024-01-06,PWHL,2023/2024,Regular Season
+44,11:04,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,3,event,5v5,42,Claire Dalton,,,,,35,Maddie Rooney,,,,,,,55.0,26.4,6,2024-01-06,PWHL,2023/2024,Regular Season
+45,11:20,Penalty,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,3,event,5v5,12,Leah Lum,,,,,,,,,,,,,,,6,2024-01-06,PWHL,2023/2024,Regular Season
+46,12:50,Penalty,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,3,event,4v5,43,Kristin O'Neill,,,,,,,,,,,,,,,6,2024-01-06,PWHL,2023/2024,Regular Season
+47,13:08,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v3,22,Natalie Buchbinder,,,,,35,Ann-Renée Desbiens,,,,,,,-52.0,2.0,6,2024-01-06,PWHL,2023/2024,Regular Season
+48,13:26,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v4,27,Taylor Heise,,,,,35,Ann-Renée Desbiens,,,,,,,-53.0,-18.1,6,2024-01-06,PWHL,2023/2024,Regular Season
+49,14:18,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,3,event,4v5,43,Kristin O'Neill,,,,,35,Maddie Rooney,,,,,,,69.0,15.6,6,2024-01-06,PWHL,2023/2024,Regular Season
+50,14:54,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v5,22,Natalie Buchbinder,,,,,35,Ann-Renée Desbiens,,,,,,,-64.7,-19.6,6,2024-01-06,PWHL,2023/2024,Regular Season
+51,17:13,Goal,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v5,13,Grace Zumwinkle,2,Lee Stecklein,12,Kelly Pannek,35,Ann-Renée Desbiens,,2 9 12 13 25 77,Lee Stecklein - Abby Cook - Kelly Pannek - Grace Zumwinkle - Emma Greco - Susanna Tapani,,4 10 14 26,Catherine Daoust - Brigitte Laganière - Jillian Dempsey - Sarah Bujold,32.0,-13.6,6,2024-01-06,PWHL,2023/2024,Regular Season
+52,17:16,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,3,event,5v5,26,Sarah Bujold,,,,,35,Maddie Rooney,,,,,,,38.3,-32.6,6,2024-01-06,PWHL,2023/2024,Regular Season
+53,19:30,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v5,86,Michela Cava,,,,,35,Ann-Renée Desbiens,,,,,,,-59.3,17.6,6,2024-01-06,PWHL,2023/2024,Regular Season

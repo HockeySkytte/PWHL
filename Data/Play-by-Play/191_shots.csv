@@ -1,0 +1,80 @@
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
+1,0:34,Block,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,1,event,5v5,21,Ashton Bell,,,,,29,Nicole Hensley,,,,,,,-62.7,-7.9,191,2025-04-30,PWHL,2024/2025,Regular Season
+2,1:01,Block,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,1,event,5v5,42,Claire Thompson,,,,,33,Gwyneth Philips,,,,,,,58.3,-19.8,191,2025-04-30,PWHL,2024/2025,Regular Season
+3,1:57,Block,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,1,event,5v5,23,Jocelyne Larocque,,,,,29,Nicole Hensley,,,,,,,-37.7,24.6,191,2025-04-30,PWHL,2024/2025,Regular Season
+4,2:45,Block,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,1,event,5v5,12,Kelly Pannek,,,,,33,Gwyneth Philips,,,,,,,79.0,2.5,191,2025-04-30,PWHL,2024/2025,Regular Season
+5,3:39,Block,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,1,event,5v5,27,Taylor Heise,,,,,33,Gwyneth Philips,,,,,,,68.3,-30.0,191,2025-04-30,PWHL,2024/2025,Regular Season
+6,4:28,Shot,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,1,event,5v5,16,Kateřina Mrázová,,,,,29,Nicole Hensley,,,,,,,-59.0,14.5,191,2025-04-30,PWHL,2024/2025,Regular Season
+7,6:54,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,1,event,5v5,16,Sophie Jaques,,,,,33,Gwyneth Philips,,,,,,,67.7,14.2,191,2025-04-30,PWHL,2024/2025,Regular Season
+8,7:14,Shot,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,1,event,5v5,27,Shiann Darkangelo,,,,,29,Nicole Hensley,,,,,,,-41.0,12.8,191,2025-04-30,PWHL,2024/2025,Regular Season
+9,7:15,Shot,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,1,event,5v5,26,Emily Clark,,,,,29,Nicole Hensley,,,,,,,-67.0,-0.8,191,2025-04-30,PWHL,2024/2025,Regular Season
+10,8:07,Shot,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,1,event,5v5,92,Danielle Serdachny,,,,,29,Nicole Hensley,,,,,,,-11.7,-5.1,191,2025-04-30,PWHL,2024/2025,Regular Season
+11,8:16,Shot,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,1,event,5v5,37,Rebecca Leslie,,,,,29,Nicole Hensley,,,,,,,-49.7,7.9,191,2025-04-30,PWHL,2024/2025,Regular Season
+12,9:10,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,1,event,5v5,71,Klára Hymlárová,,,,,33,Gwyneth Philips,,,,,,,62.3,-22.4,191,2025-04-30,PWHL,2024/2025,Regular Season
+13,9:15,Block,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,1,event,5v5,6,Katy Knoll,,,,,33,Gwyneth Philips,,,,,,,51.7,-12.5,191,2025-04-30,PWHL,2024/2025,Regular Season
+14,10:01,Penalty,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,1,event,5v5,77,Britta Curl-Salemme,,,,,,,,,,,,,,,191,2025-04-30,PWHL,2024/2025,Regular Season
+15,10:21,Shot,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,1,event,5v4,71,Jincy Roese,,,,,29,Nicole Hensley,,,,,,,-49.3,-22.4,191,2025-04-30,PWHL,2024/2025,Regular Season
+16,11:28,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,1,event,4v5,71,Klára Hymlárová,,,,,33,Gwyneth Philips,,,,,,,45.0,25.2,191,2025-04-30,PWHL,2024/2025,Regular Season
+17,13:27,Shot,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,1,event,5v5,18,Mannon McMahon,,,,,29,Nicole Hensley,,,,,,,-36.3,-26.4,191,2025-04-30,PWHL,2024/2025,Regular Season
+18,14:29,Shot,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,1,event,5v5,26,Emily Clark,,,,,29,Nicole Hensley,,,,,,,-39.3,14.5,191,2025-04-30,PWHL,2024/2025,Regular Season
+19,15:30,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,1,event,5v5,6,Katy Knoll,,,,,33,Gwyneth Philips,,,,,,,32.3,-29.7,191,2025-04-30,PWHL,2024/2025,Regular Season
+20,16:20,Penalty,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,1,event,5v5,92,Danielle Serdachny,,,,,,,,,,,,,,,191,2025-04-30,PWHL,2024/2025,Regular Season
+21,16:37,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,1,event,5v4,3,Brooke McQuigge,,,,,33,Gwyneth Philips,,,,,,,79.0,-1.7,191,2025-04-30,PWHL,2024/2025,Regular Season
+22,16:54,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,1,event,5v4,12,Kelly Pannek,,,,,33,Gwyneth Philips,,,,,,,75.7,4.8,191,2025-04-30,PWHL,2024/2025,Regular Season
+23,18:10,Block,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,1,event,5v4,16,Sophie Jaques,,,,,33,Gwyneth Philips,,,,,,,30.7,0.6,191,2025-04-30,PWHL,2024/2025,Regular Season
+24,18:14,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,1,event,5v4,26,Kendall Coyne Schofield,,,,,33,Gwyneth Philips,,,,,,,71.0,-13.6,191,2025-04-30,PWHL,2024/2025,Regular Season
+25,18:14,Penalty,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,1,event,5v4,3,Brooke McQuigge,,,,,,,,,,,,,,,191,2025-04-30,PWHL,2024/2025,Regular Season
+26,20:00,Shot,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,1,event,5v4,13,Tereza Vanišová,,,,,29,Nicole Hensley,,,,,,,-47.0,-21.2,191,2025-04-30,PWHL,2024/2025,Regular Season
+27,0:41,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,2,event,5v5,13,Grace Zumwinkle,,,,,33,Gwyneth Philips,,,,,,,30.0,12.8,191,2025-04-30,PWHL,2024/2025,Regular Season
+28,1:12,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,2,event,5v5,77,Britta Curl-Salemme,,,,,33,Gwyneth Philips,,,,,,,54.0,8.5,191,2025-04-30,PWHL,2024/2025,Regular Season
+29,2:03,Shot,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,2,event,5v5,71,Jincy Roese,,,,,29,Nicole Hensley,,,,,,,-77.3,-8.5,191,2025-04-30,PWHL,2024/2025,Regular Season
+30,2:24,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,2,event,5v5,86,Michela Cava,,,,,33,Gwyneth Philips,,,,,,,33.7,-16.1,191,2025-04-30,PWHL,2024/2025,Regular Season
+31,3:43,Shot,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,2,event,5v5,27,Shiann Darkangelo,,,,,29,Nicole Hensley,,,,,,,-74.7,16.4,191,2025-04-30,PWHL,2024/2025,Regular Season
+32,3:58,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,2,event,5v5,86,Michela Cava,,,,,33,Gwyneth Philips,,,,,,,51.7,18.1,191,2025-04-30,PWHL,2024/2025,Regular Season
+33,5:24,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,2,event,5v5,14,Dominique Petrie,,,,,33,Gwyneth Philips,,,,,,,38.7,-19.3,191,2025-04-30,PWHL,2024/2025,Regular Season
+34,5:39,Block,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,2,event,5v5,13,Grace Zumwinkle,,,,,33,Gwyneth Philips,,,,,,,44.0,-11.1,191,2025-04-30,PWHL,2024/2025,Regular Season
+35,6:24,Block,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,2,event,5v5,23,Jocelyne Larocque,,,,,29,Nicole Hensley,,,,,,,-46.0,-0.3,191,2025-04-30,PWHL,2024/2025,Regular Season
+36,6:40,Block,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,2,event,5v5,23,Jocelyne Larocque,,,,,29,Nicole Hensley,,,,,,,-36.0,12.2,191,2025-04-30,PWHL,2024/2025,Regular Season
+37,6:57,Shot,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,2,event,5v5,19,Brianne Jenner,,,,,29,Nicole Hensley,,,,,,,-61.0,-29.7,191,2025-04-30,PWHL,2024/2025,Regular Season
+38,7:41,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,2,event,5v5,16,Sophie Jaques,,,,,33,Gwyneth Philips,,,,,,,36.7,19.6,191,2025-04-30,PWHL,2024/2025,Regular Season
+39,9:06,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,2,event,5v5,27,Taylor Heise,,,,,33,Gwyneth Philips,,,,,,,38.3,-28.9,191,2025-04-30,PWHL,2024/2025,Regular Season
+40,9:24,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,2,event,5v5,41,Denisa Křížová,,,,,33,Gwyneth Philips,,,,,,,70.3,2.0,191,2025-04-30,PWHL,2024/2025,Regular Season
+41,9:39,Shot,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,2,event,5v5,27,Shiann Darkangelo,,,,,29,Nicole Hensley,,,,,,,-69.7,-5.1,191,2025-04-30,PWHL,2024/2025,Regular Season
+42,10:22,Shot,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,2,event,5v5,3,Zoe Boyd,,,,,29,Nicole Hensley,,,,,,,-78.3,-25.2,191,2025-04-30,PWHL,2024/2025,Regular Season
+43,11:32,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,2,event,5v5,41,Denisa Křížová,,,,,33,Gwyneth Philips,,,,,,,81.0,5.1,191,2025-04-30,PWHL,2024/2025,Regular Season
+44,11:34,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,2,event,5v5,14,Dominique Petrie,,,,,33,Gwyneth Philips,,,,,,,69.3,-5.4,191,2025-04-30,PWHL,2024/2025,Regular Season
+45,11:48,Block,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,2,event,4v5,27,Taylor Heise,,,,,33,Gwyneth Philips,,,,,,,29.0,-28.9,191,2025-04-30,PWHL,2024/2025,Regular Season
+46,12:44,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,2,event,5v5,23,Mellissa Channell-Watkins,,,,,33,Gwyneth Philips,,,,,,,79.3,-4.2,191,2025-04-30,PWHL,2024/2025,Regular Season
+47,13:04,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,2,event,5v5,6,Katy Knoll,,,,,33,Gwyneth Philips,,,,,,,73.3,2.5,191,2025-04-30,PWHL,2024/2025,Regular Season
+48,13:16,Shot,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,2,event,5v5,19,Brianne Jenner,,,,,29,Nicole Hensley,,,,,,,-63.0,7.6,191,2025-04-30,PWHL,2024/2025,Regular Season
+49,14:34,Penalty,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,2,event,5v5,10,Alexa Vasko,,,,,,,,,,,,,,,191,2025-04-30,PWHL,2024/2025,Regular Season
+50,15:32,Penalty,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,2,event,5v4,77,Britta Curl-Salemme,,,,,,,,,,,,,,,191,2025-04-30,PWHL,2024/2025,Regular Season
+51,16:03,Shot,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,2,event,4v4,71,Jincy Roese,,,,,29,Nicole Hensley,,,,,,,-35.0,8.2,191,2025-04-30,PWHL,2024/2025,Regular Season
+52,16:08,Shot,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,2,event,4v4,2,Aneta Tejralová,,,,,29,Nicole Hensley,,,,,,,-73.3,-2.5,191,2025-04-30,PWHL,2024/2025,Regular Season
+53,16:08,Penalty,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,2,event,4v4,27,Shiann Darkangelo,,,,,,,,,,,,,,,191,2025-04-30,PWHL,2024/2025,Regular Season
+54,16:32,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,2,event,4v3,27,Taylor Heise,,,,,33,Gwyneth Philips,,,,,,,28.3,-30.3,191,2025-04-30,PWHL,2024/2025,Regular Season
+55,17:09,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,2,event,4v4,22,Natalie Buchbinder,,,,,33,Gwyneth Philips,,,,,,,84.3,17.3,191,2025-04-30,PWHL,2024/2025,Regular Season
+56,17:44,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,2,event,5v4,13,Grace Zumwinkle,,,,,33,Gwyneth Philips,,,,,,,62.7,-26.6,191,2025-04-30,PWHL,2024/2025,Regular Season
+57,18:15,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,2,event,5v5,13,Grace Zumwinkle,,,,,33,Gwyneth Philips,,,,,,,82.0,-11.9,191,2025-04-30,PWHL,2024/2025,Regular Season
+58,18:43,Goal,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,2,event,5v5,26,Kendall Coyne Schofield,86,Michela Cava,14,Dominique Petrie,33,Gwyneth Philips,,6 17 27 37 71,Stephanie Markowski - Gabbie Hughes - Shiann Darkangelo - Rebecca Leslie - Jincy Roese,,2 14 16 26 86,Lee Stecklein - Dominique Petrie - Sophie Jaques - Kendall Coyne Schofield - Michela Cava,56.0,0.8,191,2025-04-30,PWHL,2024/2025,Regular Season
+59,19:46,Shot,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,2,event,5v5,3,Zoe Boyd,,,,,29,Nicole Hensley,,,,,,,-65.0,-37.7,191,2025-04-30,PWHL,2024/2025,Regular Season
+60,1:47,Block,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,3,event,5v5,3,Zoe Boyd,,,,,29,Nicole Hensley,,,,,,,-36.3,-21.8,191,2025-04-30,PWHL,2024/2025,Regular Season
+61,2:34,Shot,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,3,event,5v5,71,Jincy Roese,,,,,29,Nicole Hensley,,,,,,,-33.3,28.6,191,2025-04-30,PWHL,2024/2025,Regular Season
+62,3:14,Block,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,3,event,5v5,2,Lee Stecklein,,,,,33,Gwyneth Philips,,,,,,,74.7,-10.8,191,2025-04-30,PWHL,2024/2025,Regular Season
+63,4:59,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,3,event,5v5,26,Kendall Coyne Schofield,,,,,33,Gwyneth Philips,,,,,,,75.0,4.2,191,2025-04-30,PWHL,2024/2025,Regular Season
+64,5:38,Goal,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,3,event,5v5,2,Lee Stecklein,14,Dominique Petrie,41,Denisa Křížová,33,Gwyneth Philips,,2 13 19 27 71,Aneta Tejralová - Tereza Vanišová - Brianne Jenner - Shiann Darkangelo - Jincy Roese,,2 14 41 42 77,Lee Stecklein - Dominique Petrie - Denisa Křížová - Claire Thompson - Britta Curl-Salemme,36.7,-18.1,191,2025-04-30,PWHL,2024/2025,Regular Season
+65,7:00,Shot,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,3,event,5v5,12,Victoria Bach,,,,,29,Nicole Hensley,,,,,,,-48.0,10.8,191,2025-04-30,PWHL,2024/2025,Regular Season
+66,7:37,Block,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,3,event,5v5,26,Kendall Coyne Schofield,,,,,33,Gwyneth Philips,,,,,,,63.0,6.0,191,2025-04-30,PWHL,2024/2025,Regular Season
+67,9:17,Penalty,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,3,event,5v5,18,Mannon McMahon,,,,,,,,,,,,,,,191,2025-04-30,PWHL,2024/2025,Regular Season
+68,10:15,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,3,event,5v4,77,Britta Curl-Salemme,,,,,33,Gwyneth Philips,,,,,,,84.3,6.8,191,2025-04-30,PWHL,2024/2025,Regular Season
+69,11:25,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,3,event,5v5,16,Sophie Jaques,,,,,33,Gwyneth Philips,,,,,,,83.7,7.1,191,2025-04-30,PWHL,2024/2025,Regular Season
+70,13:37,Block,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,3,event,5v5,23,Jocelyne Larocque,,,,,29,Nicole Hensley,,,,,,,-29.0,-24.6,191,2025-04-30,PWHL,2024/2025,Regular Season
+71,14:33,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,3,event,5v5,14,Dominique Petrie,,,,,33,Gwyneth Philips,,,,,,,74.3,24.6,191,2025-04-30,PWHL,2024/2025,Regular Season
+72,14:33,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,3,event,5v5,27,Taylor Heise,,,,,33,Gwyneth Philips,,,,,,,75.0,0.8,191,2025-04-30,PWHL,2024/2025,Regular Season
+73,15:22,Shot,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,3,event,5v5,16,Kateřina Mrázová,,,,,29,Nicole Hensley,,,,,,,-66.0,9.3,191,2025-04-30,PWHL,2024/2025,Regular Season
+74,16:07,Shot,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,3,event,5v5,23,Jocelyne Larocque,,,,,29,Nicole Hensley,,,,,,,-85.3,-9.6,191,2025-04-30,PWHL,2024/2025,Regular Season
+75,17:02,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,3,event,5v5,42,Claire Thompson,,,,,33,Gwyneth Philips,,,,,,,62.7,-9.6,191,2025-04-30,PWHL,2024/2025,Regular Season
+76,17:12,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,3,event,5v5,26,Kendall Coyne Schofield,,,,,33,Gwyneth Philips,,,,,,,77.0,12.8,191,2025-04-30,PWHL,2024/2025,Regular Season
+77,18:00,Shot,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,3,event,5v5,17,Gabbie Hughes,,,,,29,Nicole Hensley,,,,,,,-45.0,27.5,191,2025-04-30,PWHL,2024/2025,Regular Season
+78,18:09,Shot,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,3,event,5v5,17,Gabbie Hughes,,,,,29,Nicole Hensley,,,,,,,-29.0,-8.2,191,2025-04-30,PWHL,2024/2025,Regular Season
+79,19:26,Goal,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,3,event,5v5,2,Lee Stecklein,,,,,33,Gwyneth Philips,,13 16 17 19 26 88,Tereza Vanišová - Kateřina Mrázová - Gabbie Hughes - Brianne Jenner - Emily Clark - Ronja Savolainen,,2 12 13 26 42,Lee Stecklein - Kelly Pannek - Grace Zumwinkle - Kendall Coyne Schofield - Claire Thompson,-55.0,-15.6,191,2025-04-30,PWHL,2024/2025,Regular Season

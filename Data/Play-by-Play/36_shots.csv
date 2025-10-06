@@ -1,0 +1,105 @@
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
+1,0:27,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,27,Emma Maltais,,,,,30,Corinne Schroeder,,,,,,,-66.7,-15.6,36,2024-02-23,PWHL,2023/2024,Regular Season
+2,0:47,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,24,Natalie Spooner,,,,,30,Corinne Schroeder,,,,,,,-77.0,-4.2,36,2024-02-23,PWHL,2023/2024,Regular Season
+3,1:02,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,24,Natalie Spooner,,,,,30,Corinne Schroeder,,,,,,,-69.0,-2.3,36,2024-02-23,PWHL,2023/2024,Regular Season
+4,1:23,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,40,Blayre Turnbull,,,,,30,Corinne Schroeder,,,,,,,-63.0,2.3,36,2024-02-23,PWHL,2023/2024,Regular Season
+5,1:39,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,19,Paetyn Levis,,,,,50,Kristen Campbell,,,,,,,76.3,-0.8,36,2024-02-23,PWHL,2023/2024,Regular Season
+6,2:23,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,17,Samantha Cogan,,,,,30,Corinne Schroeder,,,,,,,-78.7,-0.6,36,2024-02-23,PWHL,2023/2024,Regular Season
+7,3:04,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,22,Maggie Connors,,,,,30,Corinne Schroeder,,,,,,,-71.7,15.3,36,2024-02-23,PWHL,2023/2024,Regular Season
+8,3:51,Penalty,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,11,Abby Roque,,,,,,,,,,,,,,,36,2024-02-23,PWHL,2023/2024,Regular Season
+9,4:34,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v4,10,Alexa Vasko,,,,,30,Corinne Schroeder,,,,,,,-43.0,-24.6,36,2024-02-23,PWHL,2023/2024,Regular Season
+10,6:03,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,11,Abby Roque,,,,,50,Kristen Campbell,,,,,,,48.7,29.5,36,2024-02-23,PWHL,2023/2024,Regular Season
+11,8:16,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,20,Sarah Nurse,,,,,30,Corinne Schroeder,,,,,,,-77.3,1.1,36,2024-02-23,PWHL,2023/2024,Regular Season
+12,10:27,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,19,Paetyn Levis,,,,,50,Kristen Campbell,,,,,,,64.0,-14.5,36,2024-02-23,PWHL,2023/2024,Regular Season
+13,10:34,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,17,Ella Shelton,,,,,50,Kristen Campbell,,,,,,,73.3,6.0,36,2024-02-23,PWHL,2023/2024,Regular Season
+14,11:03,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,4,Taylor Baker,,,,,50,Kristen Campbell,,,,,,,59.3,26.4,36,2024-02-23,PWHL,2023/2024,Regular Season
+15,11:26,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,27,Jade Downie-Landry,,,,,50,Kristen Campbell,,,,,,,58.0,11.3,36,2024-02-23,PWHL,2023/2024,Regular Season
+16,12:25,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,51,Victoria Bach,,,,,30,Corinne Schroeder,,,,,,,-62.7,-10.8,36,2024-02-23,PWHL,2023/2024,Regular Season
+17,13:03,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,24,Natalie Spooner,,,,,30,Corinne Schroeder,,,,,,,-51.0,-6.0,36,2024-02-23,PWHL,2023/2024,Regular Season
+18,13:46,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,17,Ella Shelton,,,,,50,Kristen Campbell,,,,,,,47.0,19.3,36,2024-02-23,PWHL,2023/2024,Regular Season
+19,14:14,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,17,Samantha Cogan,,,,,30,Corinne Schroeder,,,,,,,-86.0,-20.4,36,2024-02-23,PWHL,2023/2024,Regular Season
+20,14:40,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,12,Allie Munroe,,,,,30,Corinne Schroeder,,,,,,,-47.0,-1.4,36,2024-02-23,PWHL,2023/2024,Regular Season
+21,15:22,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,23,Madison Packer,,,,,50,Kristen Campbell,,,,,,,81.0,24.4,36,2024-02-23,PWHL,2023/2024,Regular Season
+22,15:43,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,22,Maggie Connors,,,,,30,Corinne Schroeder,,,,,,,-58.0,-22.7,36,2024-02-23,PWHL,2023/2024,Regular Season
+23,16:52,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,67,Emma Woods,,,,,50,Kristen Campbell,,,,,,,49.7,-1.7,36,2024-02-23,PWHL,2023/2024,Regular Season
+24,17:08,Penalty,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,41,Brittany Howard,,,,,,,,,,,,,,,36,2024-02-23,PWHL,2023/2024,Regular Season
+25,18:00,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v4,19,Paetyn Levis,,,,,50,Kristen Campbell,,,,,,,77.0,3.7,36,2024-02-23,PWHL,2023/2024,Regular Season
+26,19:21,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,28,Micah Zandee-Hart,,,,,50,Kristen Campbell,,,,,,,39.3,22.1,36,2024-02-23,PWHL,2023/2024,Regular Season
+27,0:41,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,27,Emma Maltais,,,,,30,Corinne Schroeder,,,,,,,-79.0,-2.8,36,2024-02-23,PWHL,2023/2024,Regular Season
+28,0:57,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,67,Emma Woods,,,,,50,Kristen Campbell,,,,,,,70.7,-2.0,36,2024-02-23,PWHL,2023/2024,Regular Season
+29,1:05,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,14,Jaime Bourbonnais,,,,,50,Kristen Campbell,,,,,,,60.0,13.6,36,2024-02-23,PWHL,2023/2024,Regular Season
+30,1:20,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,18,Jesse Compher,,,,,30,Corinne Schroeder,,,,,,,-61.0,-8.2,36,2024-02-23,PWHL,2023/2024,Regular Season
+31,1:56,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,9,Jessie Eldridge,,,,,50,Kristen Campbell,,,,,,,68.7,15.0,36,2024-02-23,PWHL,2023/2024,Regular Season
+32,2:15,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,51,Victoria Bach,,,,,30,Corinne Schroeder,,,,,,,-69.3,-11.1,36,2024-02-23,PWHL,2023/2024,Regular Season
+33,3:12,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,17,Ella Shelton,,,,,50,Kristen Campbell,,,,,,,83.0,-9.6,36,2024-02-23,PWHL,2023/2024,Regular Season
+34,3:53,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,4v5,14,Jaime Bourbonnais,,,,,50,Kristen Campbell,,,,,,,58.3,-1.4,36,2024-02-23,PWHL,2023/2024,Regular Season
+35,3:57,Penalty,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,27,Emma Maltais,,,,,,,,,,,,,,,36,2024-02-23,PWHL,2023/2024,Regular Season
+36,4:22,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,4v5,11,Abby Roque,,,,,50,Kristen Campbell,,,,,,,75.0,8.5,36,2024-02-23,PWHL,2023/2024,Regular Season
+37,4:40,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,4v5,11,Abby Roque,,,,,50,Kristen Campbell,,,,,,,46.7,26.6,36,2024-02-23,PWHL,2023/2024,Regular Season
+38,4:57,Penalty,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v4,17,Ella Shelton,,,,,,,,,,,,,,,36,2024-02-23,PWHL,2023/2024,Regular Season
+39,5:13,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v4,18,Jesse Compher,,,,,30,Corinne Schroeder,,,,,,,-77.0,7.6,36,2024-02-23,PWHL,2023/2024,Regular Season
+40,6:03,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,51,Victoria Bach,,,,,30,Corinne Schroeder,,,,,,,-53.0,18.7,36,2024-02-23,PWHL,2023/2024,Regular Season
+41,6:07,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v4,27,Emma Maltais,,,,,30,Corinne Schroeder,,,,,,,-72.3,2.5,36,2024-02-23,PWHL,2023/2024,Regular Season
+42,6:47,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,17,Samantha Cogan,,,,,30,Corinne Schroeder,,,,,,,-63.0,7.9,36,2024-02-23,PWHL,2023/2024,Regular Season
+43,8:09,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,22,Maggie Connors,,,,,30,Corinne Schroeder,,,,,,,-68.7,21.5,36,2024-02-23,PWHL,2023/2024,Regular Season
+44,9:01,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,25,Alex Carpenter,,,,,50,Kristen Campbell,,,,,,,76.7,-5.7,36,2024-02-23,PWHL,2023/2024,Regular Season
+45,9:25,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,9,Jessie Eldridge,,,,,50,Kristen Campbell,,,,,,,67.7,-10.8,36,2024-02-23,PWHL,2023/2024,Regular Season
+46,10:28,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,4,Taylor Baker,,,,,50,Kristen Campbell,,,,,,,70.0,7.1,36,2024-02-23,PWHL,2023/2024,Regular Season
+47,10:30,Penalty,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,10,Kayla Vespa,,,,,,,,,,,,,,,36,2024-02-23,PWHL,2023/2024,Regular Season
+48,10:42,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v4,24,Natalie Spooner,,,,,30,Corinne Schroeder,,,,,,,-73.0,-0.6,36,2024-02-23,PWHL,2023/2024,Regular Season
+49,11:18,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,3,Jocelyne Larocque,,,,,30,Corinne Schroeder,,,,,,,-47.7,-16.7,36,2024-02-23,PWHL,2023/2024,Regular Season
+50,11:31,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,3,Jocelyne Larocque,,,,,30,Corinne Schroeder,,,,,,,-64.0,-23.8,36,2024-02-23,PWHL,2023/2024,Regular Season
+51,11:47,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,3,Jocelyne Larocque,,,,,30,Corinne Schroeder,,,,,,,-38.3,5.1,36,2024-02-23,PWHL,2023/2024,Regular Season
+52,11:55,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,14,Renata Fast,,,,,30,Corinne Schroeder,,,,,,,-61.0,2.3,36,2024-02-23,PWHL,2023/2024,Regular Season
+53,12:05,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,5,Lauriane Rougeau,,,,,30,Corinne Schroeder,,,,,,,-52.0,11.9,36,2024-02-23,PWHL,2023/2024,Regular Season
+54,12:31,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,6,Kali Flanagan,,,,,30,Corinne Schroeder,,,,,,,-53.0,0.8,36,2024-02-23,PWHL,2023/2024,Regular Season
+55,12:49,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,40,Blayre Turnbull,,,,,30,Corinne Schroeder,,,,,,,-54.3,-7.1,36,2024-02-23,PWHL,2023/2024,Regular Season
+56,14:29,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,19,Rebecca Leslie,,,,,30,Corinne Schroeder,,,,,,,-43.7,-0.8,36,2024-02-23,PWHL,2023/2024,Regular Season
+57,14:36,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,6,Kali Flanagan,,,,,30,Corinne Schroeder,,,,,,,-75.7,-26.9,36,2024-02-23,PWHL,2023/2024,Regular Season
+58,14:51,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,34,Hannah Miller,,,,,30,Corinne Schroeder,,,,,,,-61.0,32.6,36,2024-02-23,PWHL,2023/2024,Regular Season
+59,15:19,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,6,Kali Flanagan,,,,,30,Corinne Schroeder,,,,,,,-65.7,-14.7,36,2024-02-23,PWHL,2023/2024,Regular Season
+60,15:47,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,17,Samantha Cogan,,,,,30,Corinne Schroeder,,,,,,,-65.0,-27.5,36,2024-02-23,PWHL,2023/2024,Regular Season
+61,16:08,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,27,Emma Maltais,,,,,30,Corinne Schroeder,,,,,,,-22.0,32.6,36,2024-02-23,PWHL,2023/2024,Regular Season
+62,16:11,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,3,Jocelyne Larocque,,,,,30,Corinne Schroeder,,,,,,,-33.0,34.6,36,2024-02-23,PWHL,2023/2024,Regular Season
+63,16:51,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,25,Alex Carpenter,,,,,50,Kristen Campbell,,,,,,,42.7,-31.4,36,2024-02-23,PWHL,2023/2024,Regular Season
+64,18:15,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,18,Jesse Compher,,,,,30,Corinne Schroeder,,,,,,,-45.3,22.4,36,2024-02-23,PWHL,2023/2024,Regular Season
+65,19:10,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,9,Jessie Eldridge,,,,,50,Kristen Campbell,,,,,,,76.3,19.6,36,2024-02-23,PWHL,2023/2024,Regular Season
+66,19:10,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,17,Ella Shelton,,,,,50,Kristen Campbell,,,,,,,39.0,10.8,36,2024-02-23,PWHL,2023/2024,Regular Season
+67,19:12,Penalty,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,20,Sarah Nurse,,,,,,,,,,,,,,,36,2024-02-23,PWHL,2023/2024,Regular Season
+68,19:42,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,27,Jade Downie-Landry,,,,,50,Kristen Campbell,,,,,,,40.0,-19.0,36,2024-02-23,PWHL,2023/2024,Regular Season
+69,19:54,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,40,Blayre Turnbull,,,,,30,Corinne Schroeder,,,,,,,-53.0,31.2,36,2024-02-23,PWHL,2023/2024,Regular Season
+70,1:29,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,27,Jade Downie-Landry,,,,,50,Kristen Campbell,,,,,,,33.7,28.1,36,2024-02-23,PWHL,2023/2024,Regular Season
+71,2:19,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,41,Brittany Howard,,,,,30,Corinne Schroeder,,,,,,,-62.0,-23.5,36,2024-02-23,PWHL,2023/2024,Regular Season
+72,2:37,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,40,Blayre Turnbull,,,,,30,Corinne Schroeder,,,,,,,-45.7,-21.0,36,2024-02-23,PWHL,2023/2024,Regular Season
+73,3:08,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,27,Emma Maltais,,,,,30,Corinne Schroeder,,,,,,,-73.0,12.2,36,2024-02-23,PWHL,2023/2024,Regular Season
+74,4:53,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,18,Jesse Compher,,,,,30,Corinne Schroeder,,,,,,,-86.7,6.8,36,2024-02-23,PWHL,2023/2024,Regular Season
+75,5:00,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,41,Brittany Howard,,,,,30,Corinne Schroeder,,,,,,,-43.0,18.1,36,2024-02-23,PWHL,2023/2024,Regular Season
+76,5:33,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,9,Jessie Eldridge,,,,,50,Kristen Campbell,,,,,,,84.0,-1.7,36,2024-02-23,PWHL,2023/2024,Regular Season
+77,5:41,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,12,Chloé Aurard,,,,,50,Kristen Campbell,,,,,,,77.7,4.0,36,2024-02-23,PWHL,2023/2024,Regular Season
+78,6:24,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,5,Lauriane Rougeau,,,,,30,Corinne Schroeder,,,,,,,-36.3,26.9,36,2024-02-23,PWHL,2023/2024,Regular Season
+79,7:14,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,24,Natalie Spooner,,,,,30,Corinne Schroeder,,,,,,,-61.7,-16.4,36,2024-02-23,PWHL,2023/2024,Regular Season
+80,7:22,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,24,Natalie Spooner,,,,,30,Corinne Schroeder,,,,,,,-85.0,-4.2,36,2024-02-23,PWHL,2023/2024,Regular Season
+81,7:48,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,25,Alex Carpenter,,,,,50,Kristen Campbell,,,,,,,85.0,-34.3,36,2024-02-23,PWHL,2023/2024,Regular Season
+82,9:45,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,27,Jade Downie-Landry,,,,,50,Kristen Campbell,,,,,,,82.7,-31.4,36,2024-02-23,PWHL,2023/2024,Regular Season
+83,9:51,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,9,Jessie Eldridge,,,,,50,Kristen Campbell,,,,,,,89.0,-19.3,36,2024-02-23,PWHL,2023/2024,Regular Season
+84,12:34,Goal,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,27,Emma Maltais,40,Blayre Turnbull,3,Jocelyne Larocque,30,Corinne Schroeder,,3 14 22 27 40,Jocelyne Larocque - Renata Fast - Maggie Connors - Emma Maltais - Blayre Turnbull,,4 10 17 23 27,Taylor Baker - Kayla Vespa - Ella Shelton - Madison Packer - Jade Downie-Landry,-71.7,-6.8,36,2024-02-23,PWHL,2023/2024,Regular Season
+85,14:44,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,9,Jessie Eldridge,,,,,50,Kristen Campbell,,,,,,,36.7,-23.2,36,2024-02-23,PWHL,2023/2024,Regular Season
+86,14:53,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,14,Renata Fast,,,,,30,Corinne Schroeder,,,,,,,-58.7,-11.1,36,2024-02-23,PWHL,2023/2024,Regular Season
+87,15:35,Penalty,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,27,Emma Maltais,,,,,,,,,,,,,,,36,2024-02-23,PWHL,2023/2024,Regular Season
+88,19:20,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,25,Alex Carpenter,,,,,50,Kristen Campbell,,,,,,,79.3,-9.3,36,2024-02-23,PWHL,2023/2024,Regular Season
+89,19:30,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,11,Abby Roque,,,,,50,Kristen Campbell,,,,,,,78.3,0.8,36,2024-02-23,PWHL,2023/2024,Regular Season
+90,19:52,Goal,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,17,Ella Shelton,67,Emma Woods,25,Alex Carpenter,50,Kristen Campbell,,3 14 20 24 34,Jocelyne Larocque - Renata Fast - Sarah Nurse - Natalie Spooner - Hannah Miller,,9 11 14 17 25 67,Jessie Eldridge - Abby Roque - Jaime Bourbonnais - Ella Shelton - Alex Carpenter - Emma Woods,81.0,2.5,36,2024-02-23,PWHL,2023/2024,Regular Season
+91,0:20,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,OT1,event,5v5,25,Alex Carpenter,,,,,50,Kristen Campbell,,,,,,,65.0,-10.2,36,2024-02-23,PWHL,2023/2024,Regular Season
+92,3:18,Penalty,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,OT1,event,3v3,20,Sarah Nurse,,,,,,,,,,,,,,,36,2024-02-23,PWHL,2023/2024,Regular Season
+93,3:48,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,OT1,event,5v5,9,Jessie Eldridge,,,,,50,Kristen Campbell,,,,,,,57.7,-14.5,36,2024-02-23,PWHL,2023/2024,Regular Season
+94,4:19,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,OT1,event,4v3,11,Abby Roque,,,,,50,Kristen Campbell,,,,,,,82.0,3.4,36,2024-02-23,PWHL,2023/2024,Regular Season
+95,4:58,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,OT1,event,3v4,40,Blayre Turnbull,,,,,30,Corinne Schroeder,,,,,,,-78.3,-11.1,36,2024-02-23,PWHL,2023/2024,Regular Season
+96,,SO Miss,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,SO,event,1v0,51,Victoria Bach,,,,,30,Corinne Schroeder,,,,,,,,,36,2024-02-23,PWHL,2023/2024,Regular Season
+97,,SO Miss,New York Sirens,Away,Toronto Sceptres,New York Sirens,SO,event,1v0,18,Élizabeth Giguère,,,,,50,Kristen Campbell,,,,,,,,,36,2024-02-23,PWHL,2023/2024,Regular Season
+98,,SO Goal,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,SO,event,1v0,,,,,,,30,Corinne Schroeder,,,,,,,,,36,2024-02-23,PWHL,2023/2024,Regular Season
+99,,SO Miss,New York Sirens,Away,Toronto Sceptres,New York Sirens,SO,event,1v0,25,Alex Carpenter,,,,,50,Kristen Campbell,,,,,,,,,36,2024-02-23,PWHL,2023/2024,Regular Season
+100,,SO Miss,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,SO,event,1v0,5,Lauriane Rougeau,,,,,30,Corinne Schroeder,,,,,,,,,36,2024-02-23,PWHL,2023/2024,Regular Season
+101,,SO Miss,New York Sirens,Away,Toronto Sceptres,New York Sirens,SO,event,1v0,11,Abby Roque,,,,,50,Kristen Campbell,,,,,,,,,36,2024-02-23,PWHL,2023/2024,Regular Season
+102,,SO Miss,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,SO,event,1v0,27,Emma Maltais,,,,,30,Corinne Schroeder,,,,,,,,,36,2024-02-23,PWHL,2023/2024,Regular Season
+103,,SO Miss,New York Sirens,Away,Toronto Sceptres,New York Sirens,SO,event,1v0,67,Emma Woods,,,,,50,Kristen Campbell,,,,,,,,,36,2024-02-23,PWHL,2023/2024,Regular Season
+104,,SO Goal,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,SO,event,1v0,,,,,,,30,Corinne Schroeder,,,,,,,,,36,2024-02-23,PWHL,2023/2024,Regular Season

@@ -1,0 +1,133 @@
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
+1,0:11,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,14,Renata Fast,,,,,20,Elaine Chuli,,,,,,,33.7,36.3,138,2025-01-30,PWHL,2024/2025,Regular Season
+2,0:31,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,15,Savannah Harmon,,,,,20,Elaine Chuli,,,,,,,35.0,-27.8,138,2025-01-30,PWHL,2024/2025,Regular Season
+3,0:42,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,18,Mikyla Grant-Mentis,,,,,50,Kristen Campbell,,,,,,,-39.7,-15.3,138,2025-01-30,PWHL,2024/2025,Regular Season
+4,1:36,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,6,Kali Flanagan,,,,,20,Elaine Chuli,,,,,,,40.0,32.6,138,2025-01-30,PWHL,2024/2025,Regular Season
+5,1:44,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,6,Kali Flanagan,,,,,20,Elaine Chuli,,,,,,,34.7,12.2,138,2025-01-30,PWHL,2024/2025,Regular Season
+6,3:16,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,7,Laura Stacey,,,,,50,Kristen Campbell,,,,,,,-77.0,-7.1,138,2025-01-30,PWHL,2024/2025,Regular Season
+7,3:18,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,7,Laura Stacey,,,,,50,Kristen Campbell,,,,,,,-80.0,-6.8,138,2025-01-30,PWHL,2024/2025,Regular Season
+8,3:26,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,5,Anna Wilgren,,,,,50,Kristen Campbell,,,,,,,-28.3,35.1,138,2025-01-30,PWHL,2024/2025,Regular Season
+9,3:41,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,5,Anna Wilgren,,,,,50,Kristen Campbell,,,,,,,-45.0,25.5,138,2025-01-30,PWHL,2024/2025,Regular Season
+10,4:03,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,8,Izzy Daniel,,,,,20,Elaine Chuli,,,,,,,81.0,-0.8,138,2025-01-30,PWHL,2024/2025,Regular Season
+11,5:14,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,24,Abby Boreen,,,,,50,Kristen Campbell,,,,,,,-66.7,-1.7,138,2025-01-30,PWHL,2024/2025,Regular Season
+12,5:17,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,29,Marie-Philip Poulin,,,,,50,Kristen Campbell,,,,,,,-76.7,6.8,138,2025-01-30,PWHL,2024/2025,Regular Season
+13,5:32,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,24,Abby Boreen,,,,,50,Kristen Campbell,,,,,,,-83.0,-5.4,138,2025-01-30,PWHL,2024/2025,Regular Season
+14,5:40,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,9,Daryl Watts,,,,,20,Elaine Chuli,,,,,,,48.3,13.9,138,2025-01-30,PWHL,2024/2025,Regular Season
+15,6:17,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,40,Blayre Turnbull,,,,,20,Elaine Chuli,,,,,,,51.0,-2.0,138,2025-01-30,PWHL,2024/2025,Regular Season
+16,7:43,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,14,Renata Fast,,,,,20,Elaine Chuli,,,,,,,35.0,18.4,138,2025-01-30,PWHL,2024/2025,Regular Season
+17,7:53,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,27,Emma Maltais,,,,,20,Elaine Chuli,,,,,,,75.7,32.0,138,2025-01-30,PWHL,2024/2025,Regular Season
+18,7:59,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,9,Daryl Watts,,,,,20,Elaine Chuli,,,,,,,81.0,22.1,138,2025-01-30,PWHL,2024/2025,Regular Season
+19,8:05,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,6,Kali Flanagan,,,,,20,Elaine Chuli,,,,,,,38.3,34.9,138,2025-01-30,PWHL,2024/2025,Regular Season
+20,8:10,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,12,Allie Munroe,,,,,20,Elaine Chuli,,,,,,,32.0,-23.0,138,2025-01-30,PWHL,2024/2025,Regular Season
+21,8:15,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,6,Kali Flanagan,,,,,20,Elaine Chuli,,,,,,,80.0,33.4,138,2025-01-30,PWHL,2024/2025,Regular Season
+22,8:34,Penalty,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,12,Allie Munroe,,,,,,,,,,,,,,,138,2025-01-30,PWHL,2024/2025,Regular Season
+23,9:36,Penalty,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v4,28,Catherine Dubois,,,,,,,,,,,,,,,138,2025-01-30,PWHL,2024/2025,Regular Season
+24,9:51,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,4v4,40,Blayre Turnbull,,,,,20,Elaine Chuli,,,,,,,81.3,4.0,138,2025-01-30,PWHL,2024/2025,Regular Season
+25,10:00,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,4v4,23,Megan Carter,,,,,20,Elaine Chuli,,,,,,,40.0,-24.9,138,2025-01-30,PWHL,2024/2025,Regular Season
+26,10:22,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,4v4,29,Marie-Philip Poulin,,,,,50,Kristen Campbell,,,,,,,-53.0,26.6,138,2025-01-30,PWHL,2024/2025,Regular Season
+27,11:12,Goal,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v4,18,Jesse Compher,34,Hannah Miller,14,Renata Fast,20,Elaine Chuli,,3 5 42 43,Cayla Barnes - Anna Wilgren - Claire Dalton - Kristin O'Neill,,9 14 18 20 34,Daryl Watts - Renata Fast - Jesse Compher - Sarah Nurse - Hannah Miller,86.0,-8.2,138,2025-01-30,PWHL,2024/2025,Regular Season
+28,12:14,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,15,Savannah Harmon,,,,,20,Elaine Chuli,,,,,,,37.0,-18.7,138,2025-01-30,PWHL,2024/2025,Regular Season
+29,12:23,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,15,Savannah Harmon,,,,,20,Elaine Chuli,,,,,,,38.7,-37.1,138,2025-01-30,PWHL,2024/2025,Regular Season
+30,13:36,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,23,Megan Carter,,,,,20,Elaine Chuli,,,,,,,42.7,-19.6,138,2025-01-30,PWHL,2024/2025,Regular Season
+31,14:28,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,23,Erin Ambrose,,,,,50,Kristen Campbell,,,,,,,-33.7,-28.6,138,2025-01-30,PWHL,2024/2025,Regular Season
+32,14:47,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,15,Savannah Harmon,,,,,20,Elaine Chuli,,,,,,,42.0,-24.6,138,2025-01-30,PWHL,2024/2025,Regular Season
+33,15:20,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,40,Blayre Turnbull,,,,,20,Elaine Chuli,,,,,,,73.7,-8.5,138,2025-01-30,PWHL,2024/2025,Regular Season
+34,15:34,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,40,Blayre Turnbull,,,,,20,Elaine Chuli,,,,,,,68.0,-13.3,138,2025-01-30,PWHL,2024/2025,Regular Season
+35,15:48,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,27,Emma Maltais,,,,,20,Elaine Chuli,,,,,,,65.7,17.6,138,2025-01-30,PWHL,2024/2025,Regular Season
+36,15:52,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,12,Allie Munroe,,,,,20,Elaine Chuli,,,,,,,39.0,-34.9,138,2025-01-30,PWHL,2024/2025,Regular Season
+37,16:10,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,6,Kali Flanagan,,,,,20,Elaine Chuli,,,,,,,58.0,31.4,138,2025-01-30,PWHL,2024/2025,Regular Season
+38,16:26,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,23,Megan Carter,,,,,20,Elaine Chuli,,,,,,,58.3,-16.1,138,2025-01-30,PWHL,2024/2025,Regular Season
+39,16:32,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,55,Rylind MacKinnon,,,,,20,Elaine Chuli,,,,,,,42.7,20.4,138,2025-01-30,PWHL,2024/2025,Regular Season
+40,16:41,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,5,Anna Wilgren,,,,,50,Kristen Campbell,,,,,,,-71.0,13.3,138,2025-01-30,PWHL,2024/2025,Regular Season
+41,17:04,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,25,Lina Ljungblom,,,,,50,Kristen Campbell,,,,,,,-78.7,-4.2,138,2025-01-30,PWHL,2024/2025,Regular Season
+42,17:06,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,7,Laura Stacey,,,,,50,Kristen Campbell,,,,,,,-52.0,-21.2,138,2025-01-30,PWHL,2024/2025,Regular Season
+43,17:07,Goal,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,2,Mariah Keopple,7,Laura Stacey,25,Lina Ljungblom,50,Kristen Campbell,,2 7 23 25 43,Mariah Keopple - Laura Stacey - Erin Ambrose - Lina Ljungblom - Kristin O'Neill,,8 14 22 34 55,Izzy Daniel - Renata Fast - Maggie Connors - Hannah Miller - Rylind MacKinnon,-84.7,2.0,138,2025-01-30,PWHL,2024/2025,Regular Season
+44,18:12,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,9,Kati Tabin,,,,,50,Kristen Campbell,,,,,,,-31.7,17.0,138,2025-01-30,PWHL,2024/2025,Regular Season
+45,18:33,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,12,Allie Munroe,,,,,20,Elaine Chuli,,,,,,,60.0,-27.8,138,2025-01-30,PWHL,2024/2025,Regular Season
+46,18:46,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,5,Anna Wilgren,,,,,50,Kristen Campbell,,,,,,,-36.3,26.9,138,2025-01-30,PWHL,2024/2025,Regular Season
+47,0:24,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5,5,Anna Wilgren,,,,,50,Kristen Campbell,,,,,,,-34.3,26.6,138,2025-01-30,PWHL,2024/2025,Regular Season
+48,0:36,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5,24,Abby Boreen,,,,,50,Kristen Campbell,,,,,,,-3.7,1.1,138,2025-01-30,PWHL,2024/2025,Regular Season
+49,2:26,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,23,Megan Carter,,,,,20,Elaine Chuli,,,,,,,47.7,10.5,138,2025-01-30,PWHL,2024/2025,Regular Season
+50,3:52,Penalty,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5,5,Anna Wilgren,,,,,,,,,,,,,,,138,2025-01-30,PWHL,2024/2025,Regular Season
+51,5:15,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v4,18,Jesse Compher,,,,,20,Elaine Chuli,,,,,,,65.0,15.3,138,2025-01-30,PWHL,2024/2025,Regular Season
+52,5:30,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v4,6,Kali Flanagan,,,,,20,Elaine Chuli,,,,,,,61.0,23.0,138,2025-01-30,PWHL,2024/2025,Regular Season
+53,5:32,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v4,18,Jesse Compher,,,,,20,Elaine Chuli,,,,,,,78.7,-1.1,138,2025-01-30,PWHL,2024/2025,Regular Season
+54,6:01,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,6,Kali Flanagan,,,,,20,Elaine Chuli,,,,,,,77.7,23.2,138,2025-01-30,PWHL,2024/2025,Regular Season
+55,6:35,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,34,Hannah Miller,,,,,20,Elaine Chuli,,,,,,,71.0,-7.6,138,2025-01-30,PWHL,2024/2025,Regular Season
+56,6:57,Goal,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5,21,Maureen Murphy,7,Laura Stacey,,,50,Kristen Campbell,,3 5 7 21 25,Cayla Barnes - Anna Wilgren - Laura Stacey - Maureen Murphy - Lina Ljungblom,,9 14 15 20 27,Daryl Watts - Renata Fast - Savannah Harmon - Sarah Nurse - Emma Maltais,-66.3,-2.8,138,2025-01-30,PWHL,2024/2025,Regular Season
+57,8:23,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5,28,Catherine Dubois,,,,,50,Kristen Campbell,,,,,,,-55.3,-25.8,138,2025-01-30,PWHL,2024/2025,Regular Season
+58,9:44,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,4v4,15,Savannah Harmon,,,,,20,Elaine Chuli,,,,,,,37.0,-26.1,138,2025-01-30,PWHL,2024/2025,Regular Season
+59,10:07,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5,29,Marie-Philip Poulin,,,,,50,Kristen Campbell,,,,,,,-52.0,20.4,138,2025-01-30,PWHL,2024/2025,Regular Season
+60,10:39,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v4,6,Kali Flanagan,,,,,20,Elaine Chuli,,,,,,,41.7,19.0,138,2025-01-30,PWHL,2024/2025,Regular Season
+61,11:48,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,23,Megan Carter,,,,,20,Elaine Chuli,,,,,,,36.7,-30.0,138,2025-01-30,PWHL,2024/2025,Regular Season
+62,12:12,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,88,Julia Gosling,,,,,20,Elaine Chuli,,,,,,,49.0,23.0,138,2025-01-30,PWHL,2024/2025,Regular Season
+63,12:22,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,15,Savannah Harmon,,,,,20,Elaine Chuli,,,,,,,80.0,22.4,138,2025-01-30,PWHL,2024/2025,Regular Season
+64,12:25,Penalty,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5,43,Kristin O'Neill,,,,,,,,,,,,,,,138,2025-01-30,PWHL,2024/2025,Regular Season
+65,13:13,Goal,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v4,34,Hannah Miller,27,Emma Maltais,9,Daryl Watts,20,Elaine Chuli,,2 13 23 29,Mariah Keopple - Alexandra Labelle - Erin Ambrose - Marie-Philip Poulin,,9 15 27 34 40,Daryl Watts - Savannah Harmon - Emma Maltais - Hannah Miller - Blayre Turnbull,64.3,13.3,138,2025-01-30,PWHL,2024/2025,Regular Season
+66,13:46,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,9,Daryl Watts,,,,,20,Elaine Chuli,,,,,,,69.3,-11.9,138,2025-01-30,PWHL,2024/2025,Regular Season
+67,13:54,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,27,Emma Maltais,,,,,20,Elaine Chuli,,,,,,,61.3,0.6,138,2025-01-30,PWHL,2024/2025,Regular Season
+68,14:29,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5,3,Cayla Barnes,,,,,50,Kristen Campbell,,,,,,,-44.7,-25.8,138,2025-01-30,PWHL,2024/2025,Regular Season
+69,14:49,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5,3,Cayla Barnes,,,,,50,Kristen Campbell,,,,,,,-42.0,-26.9,138,2025-01-30,PWHL,2024/2025,Regular Season
+70,15:00,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5,3,Cayla Barnes,,,,,50,Kristen Campbell,,,,,,,-71.0,-21.2,138,2025-01-30,PWHL,2024/2025,Regular Season
+71,15:03,Penalty,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,61,Noemi Neubauerová,,,,,,,,,,,,,,,138,2025-01-30,PWHL,2024/2025,Regular Season
+72,16:05,Penalty,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v4,7,Laura Stacey,,,,,,,,,,,,,,,138,2025-01-30,PWHL,2024/2025,Regular Season
+73,16:09,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,4v4,20,Sarah Nurse,,,,,20,Elaine Chuli,,,,,,,75.0,-10.5,138,2025-01-30,PWHL,2024/2025,Regular Season
+74,16:38,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,4v4,12,Jenn Gardiner,,,,,50,Kristen Campbell,,,,,,,-68.0,11.1,138,2025-01-30,PWHL,2024/2025,Regular Season
+75,17:53,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v4,20,Sarah Nurse,,,,,20,Elaine Chuli,,,,,,,73.7,23.5,138,2025-01-30,PWHL,2024/2025,Regular Season
+76,18:02,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,20,Sarah Nurse,,,,,20,Elaine Chuli,,,,,,,63.0,38.8,138,2025-01-30,PWHL,2024/2025,Regular Season
+77,18:55,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5,29,Marie-Philip Poulin,,,,,50,Kristen Campbell,,,,,,,-28.3,4.2,138,2025-01-30,PWHL,2024/2025,Regular Season
+78,19:57,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5,3,Cayla Barnes,,,,,50,Kristen Campbell,,,,,,,-37.7,-28.1,138,2025-01-30,PWHL,2024/2025,Regular Season
+79,19:59,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5,3,Cayla Barnes,,,,,50,Kristen Campbell,,,,,,,-81.0,-20.1,138,2025-01-30,PWHL,2024/2025,Regular Season
+80,0:10,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,20,Sarah Nurse,,,,,20,Elaine Chuli,,,,,,,61.0,-2.8,138,2025-01-30,PWHL,2024/2025,Regular Season
+81,0:11,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,20,Sarah Nurse,,,,,20,Elaine Chuli,,,,,,,67.3,1.4,138,2025-01-30,PWHL,2024/2025,Regular Season
+82,0:57,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,40,Blayre Turnbull,,,,,20,Elaine Chuli,,,,,,,63.3,-15.0,138,2025-01-30,PWHL,2024/2025,Regular Season
+83,1:56,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5,42,Claire Dalton,,,,,50,Kristen Campbell,,,,,,,-68.7,1.4,138,2025-01-30,PWHL,2024/2025,Regular Season
+84,2:05,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5,5,Anna Wilgren,,,,,50,Kristen Campbell,,,,,,,-31.0,0.8,138,2025-01-30,PWHL,2024/2025,Regular Season
+85,2:12,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5,43,Kristin O'Neill,,,,,50,Kristen Campbell,,,,,,,-83.0,-7.6,138,2025-01-30,PWHL,2024/2025,Regular Season
+86,2:15,Penalty,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,12,Allie Munroe,,,,,,,,,,,,,,,138,2025-01-30,PWHL,2024/2025,Regular Season
+87,2:27,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5,23,Erin Ambrose,,,,,50,Kristen Campbell,,,,,,,-45.0,-15.3,138,2025-01-30,PWHL,2024/2025,Regular Season
+88,3:49,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5,3,Cayla Barnes,,,,,50,Kristen Campbell,,,,,,,-36.7,21.2,138,2025-01-30,PWHL,2024/2025,Regular Season
+89,5:07,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5,18,Mikyla Grant-Mentis,,,,,50,Kristen Campbell,,,,,,,-62.0,14.7,138,2025-01-30,PWHL,2024/2025,Regular Season
+90,5:15,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5,9,Kati Tabin,,,,,50,Kristen Campbell,,,,,,,-36.3,26.6,138,2025-01-30,PWHL,2024/2025,Regular Season
+91,6:31,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,14,Renata Fast,,,,,20,Elaine Chuli,,,,,,,33.3,26.6,138,2025-01-30,PWHL,2024/2025,Regular Season
+92,7:29,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5,2,Mariah Keopple,,,,,50,Kristen Campbell,,,,,,,-59.7,28.1,138,2025-01-30,PWHL,2024/2025,Regular Season
+93,8:01,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,6,Kali Flanagan,,,,,20,Elaine Chuli,,,,,,,67.7,38.8,138,2025-01-30,PWHL,2024/2025,Regular Season
+94,8:12,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5,42,Claire Dalton,,,,,50,Kristen Campbell,,,,,,,-51.0,-37.1,138,2025-01-30,PWHL,2024/2025,Regular Season
+95,9:14,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v4,3,Cayla Barnes,,,,,50,Kristen Campbell,,,,,,,-49.0,-28.3,138,2025-01-30,PWHL,2024/2025,Regular Season
+96,10:13,Goal,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5,7,Laura Stacey,,,,,50,Kristen Campbell,,7 9 25 26 44,Laura Stacey - Kati Tabin - Lina Ljungblom - Clair DeGeorge - Amanda Boulier,,18 23 28 34 55,Jesse Compher - Megan Carter - Kaitlin Willoughby - Hannah Miller - Rylind MacKinnon,-51.7,10.8,138,2025-01-30,PWHL,2024/2025,Regular Season
+97,11:37,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5,24,Abby Boreen,,,,,50,Kristen Campbell,,,,,,,10.3,-36.3,138,2025-01-30,PWHL,2024/2025,Regular Season
+98,12:17,Penalty,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5,43,Kristin O'Neill,,,,,,,,,,,,,,,138,2025-01-30,PWHL,2024/2025,Regular Season
+99,12:38,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,34,Hannah Miller,,,,,20,Elaine Chuli,,,,,,,32.7,-23.0,138,2025-01-30,PWHL,2024/2025,Regular Season
+100,13:50,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v4,88,Julia Gosling,,,,,20,Elaine Chuli,,,,,,,32.3,-4.0,138,2025-01-30,PWHL,2024/2025,Regular Season
+101,14:22,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,14,Renata Fast,,,,,20,Elaine Chuli,,,,,,,38.3,1.4,138,2025-01-30,PWHL,2024/2025,Regular Season
+102,14:57,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5,29,Marie-Philip Poulin,,,,,50,Kristen Campbell,,,,,,,-70.0,11.1,138,2025-01-30,PWHL,2024/2025,Regular Season
+103,15:06,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,14,Renata Fast,,,,,20,Elaine Chuli,,,,,,,63.0,36.8,138,2025-01-30,PWHL,2024/2025,Regular Season
+104,15:34,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,40,Blayre Turnbull,,,,,20,Elaine Chuli,,,,,,,79.0,-14.7,138,2025-01-30,PWHL,2024/2025,Regular Season
+105,16:04,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,6,Kali Flanagan,,,,,20,Elaine Chuli,,,,,,,37.0,32.3,138,2025-01-30,PWHL,2024/2025,Regular Season
+106,16:27,Goal,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,9,Daryl Watts,20,Sarah Nurse,,,20,Elaine Chuli,,3 5 13 24 42,Cayla Barnes - Anna Wilgren - Alexandra Labelle - Abby Boreen - Claire Dalton,,6 9 20 23 27,Kali Flanagan - Daryl Watts - Sarah Nurse - Megan Carter - Emma Maltais,81.0,-3.4,138,2025-01-30,PWHL,2024/2025,Regular Season
+107,16:41,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,22,Maggie Connors,,,,,20,Elaine Chuli,,,,,,,55.0,-22.4,138,2025-01-30,PWHL,2024/2025,Regular Season
+108,17:10,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,14,Renata Fast,,,,,20,Elaine Chuli,,,,,,,52.7,23.5,138,2025-01-30,PWHL,2024/2025,Regular Season
+109,17:21,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,6,Kali Flanagan,,,,,20,Elaine Chuli,,,,,,,40.3,8.2,138,2025-01-30,PWHL,2024/2025,Regular Season
+110,18:26,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,40,Blayre Turnbull,,,,,20,Elaine Chuli,,,,,,,54.3,-7.4,138,2025-01-30,PWHL,2024/2025,Regular Season
+111,18:52,Penalty,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,88,Julia Gosling,,,,,,,,,,,,,,,138,2025-01-30,PWHL,2024/2025,Regular Season
+112,18:56,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,4v5,40,Blayre Turnbull,,,,,20,Elaine Chuli,,,,,,,-52.0,37.4,138,2025-01-30,PWHL,2024/2025,Regular Season
+113,0:53,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,OT1,event,3v3,24,Abby Boreen,,,,,50,Kristen Campbell,,,,,,,-85.7,7.6,138,2025-01-30,PWHL,2024/2025,Regular Season
+114,1:05,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,OT1,event,3v3,12,Jenn Gardiner,,,,,50,Kristen Campbell,,,,,,,-60.0,4.2,138,2025-01-30,PWHL,2024/2025,Regular Season
+115,1:08,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,OT1,event,5v5,7,Laura Stacey,,,,,50,Kristen Campbell,,,,,,,-53.0,-10.5,138,2025-01-30,PWHL,2024/2025,Regular Season
+116,1:56,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,OT1,event,3v3,9,Daryl Watts,,,,,20,Elaine Chuli,,,,,,,72.7,-15.9,138,2025-01-30,PWHL,2024/2025,Regular Season
+117,2:11,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,OT1,event,3v3,14,Renata Fast,,,,,20,Elaine Chuli,,,,,,,64.7,8.5,138,2025-01-30,PWHL,2024/2025,Regular Season
+118,2:43,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,OT1,event,3v3,5,Anna Wilgren,,,,,50,Kristen Campbell,,,,,,,-61.3,17.3,138,2025-01-30,PWHL,2024/2025,Regular Season
+119,3:15,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,OT1,event,5v5,27,Emma Maltais,,,,,20,Elaine Chuli,,,,,,,55.3,-15.0,138,2025-01-30,PWHL,2024/2025,Regular Season
+120,3:42,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,OT1,event,3v3,14,Renata Fast,,,,,20,Elaine Chuli,,,,,,,53.7,15.3,138,2025-01-30,PWHL,2024/2025,Regular Season
+121,3:46,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,OT1,event,5v5,15,Savannah Harmon,,,,,20,Elaine Chuli,,,,,,,52.0,-17.6,138,2025-01-30,PWHL,2024/2025,Regular Season
+122,4:42,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,OT1,event,3v3,12,Jenn Gardiner,,,,,50,Kristen Campbell,,,,,,,-49.3,14.5,138,2025-01-30,PWHL,2024/2025,Regular Season
+123,,SO Goal,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,SO,event,1v0,,,,,,,50,Kristen Campbell,,,,,,,,,138,2025-01-30,PWHL,2024/2025,Regular Season
+124,,SO Miss,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,SO,event,1v0,34,Hannah Miller,,,,,20,Elaine Chuli,,,,,,,,,138,2025-01-30,PWHL,2024/2025,Regular Season
+125,,SO Miss,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,SO,event,1v0,29,Marie-Philip Poulin,,,,,50,Kristen Campbell,,,,,,,,,138,2025-01-30,PWHL,2024/2025,Regular Season
+126,,SO Miss,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,SO,event,1v0,20,Sarah Nurse,,,,,20,Elaine Chuli,,,,,,,,,138,2025-01-30,PWHL,2024/2025,Regular Season
+127,,SO Miss,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,SO,event,1v0,21,Maureen Murphy,,,,,50,Kristen Campbell,,,,,,,,,138,2025-01-30,PWHL,2024/2025,Regular Season
+128,,SO Goal,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,SO,event,1v0,,,,,,,20,Elaine Chuli,,,,,,,,,138,2025-01-30,PWHL,2024/2025,Regular Season
+129,,SO Miss,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,SO,event,1v0,23,Erin Ambrose,,,,,50,Kristen Campbell,,,,,,,,,138,2025-01-30,PWHL,2024/2025,Regular Season
+130,,SO Miss,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,SO,event,1v0,9,Daryl Watts,,,,,20,Elaine Chuli,,,,,,,,,138,2025-01-30,PWHL,2024/2025,Regular Season
+131,,SO Goal,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,SO,event,1v0,,,,,,,50,Kristen Campbell,,,,,,,,,138,2025-01-30,PWHL,2024/2025,Regular Season
+132,,SO Miss,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,SO,event,1v0,8,Izzy Daniel,,,,,20,Elaine Chuli,,,,,,,,,138,2025-01-30,PWHL,2024/2025,Regular Season

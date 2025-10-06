@@ -1,0 +1,77 @@
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
+1,1:20,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,1,event,5v5,23,Mellissa Channell-Watkins,,,,,50,Kristen Campbell,,,,,,,-18.3,32.3,90,2024-05-15,PWHL,2023/2024,Playoffs
+2,2:15,Shot,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,1,event,5v5,18,Jesse Compher,,,,,35,Maddie Rooney,,,,,,,46.7,15.9,90,2024-05-15,PWHL,2023/2024,Playoffs
+3,2:55,Block,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,1,event,5v5,11,Sophia Kunin,,,,,50,Kristen Campbell,,,,,,,-78.7,21.0,90,2024-05-15,PWHL,2023/2024,Playoffs
+4,4:03,Block,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,1,event,5v5,25,Emma Greco,,,,,50,Kristen Campbell,,,,,,,-35.3,-2.3,90,2024-05-15,PWHL,2023/2024,Playoffs
+5,6:41,Block,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,1,event,5v5,11,Sophia Kunin,,,,,50,Kristen Campbell,,,,,,,-49.7,-4.5,90,2024-05-15,PWHL,2023/2024,Playoffs
+6,8:13,Block,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,1,event,5v5,41,Brittany Howard,,,,,35,Maddie Rooney,,,,,,,69.0,16.4,90,2024-05-15,PWHL,2023/2024,Playoffs
+7,11:40,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,1,event,5v5,13,Grace Zumwinkle,,,,,50,Kristen Campbell,,,,,,,-43.0,-3.4,90,2024-05-15,PWHL,2023/2024,Playoffs
+8,11:56,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,1,event,5v5,22,Natalie Buchbinder,,,,,50,Kristen Campbell,,,,,,,-33.0,-29.5,90,2024-05-15,PWHL,2023/2024,Playoffs
+9,13:02,Shot,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,1,event,5v5,22,Maggie Connors,,,,,35,Maddie Rooney,,,,,,,50.0,-15.6,90,2024-05-15,PWHL,2023/2024,Playoffs
+10,15:02,Block,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,1,event,5v5,12,Allie Munroe,,,,,35,Maddie Rooney,,,,,,,34.7,-13.6,90,2024-05-15,PWHL,2023/2024,Playoffs
+11,15:19,Block,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,1,event,5v5,6,Kali Flanagan,,,,,35,Maddie Rooney,,,,,,,45.0,24.1,90,2024-05-15,PWHL,2023/2024,Playoffs
+12,15:40,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,1,event,5v5,27,Taylor Heise,,,,,50,Kristen Campbell,,,,,,,18.7,23.0,90,2024-05-15,PWHL,2023/2024,Playoffs
+13,15:53,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,1,event,5v5,13,Grace Zumwinkle,,,,,50,Kristen Campbell,,,,,,,-78.3,6.2,90,2024-05-15,PWHL,2023/2024,Playoffs
+14,16:53,Block,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,1,event,5v5,86,Michela Cava,,,,,50,Kristen Campbell,,,,,,,-41.7,20.4,90,2024-05-15,PWHL,2023/2024,Playoffs
+15,18:36,Block,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,1,event,5v5,22,Natalie Buchbinder,,,,,50,Kristen Campbell,,,,,,,-40.7,-23.0,90,2024-05-15,PWHL,2023/2024,Playoffs
+16,20:00,Shot,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,1,event,5v5,28,Kaitlin Willoughby,,,,,35,Maddie Rooney,,,,,,,-5.0,23.8,90,2024-05-15,PWHL,2023/2024,Playoffs
+17,2:38,Shot,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,2,event,5v5,34,Hannah Miller,,,,,35,Maddie Rooney,,,,,,,78.7,-2.5,90,2024-05-15,PWHL,2023/2024,Playoffs
+18,2:45,Shot,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,2,event,5v5,14,Renata Fast,,,,,35,Maddie Rooney,,,,,,,75.0,-6.2,90,2024-05-15,PWHL,2023/2024,Playoffs
+19,2:50,Shot,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,2,event,5v5,18,Jesse Compher,,,,,35,Maddie Rooney,,,,,,,59.7,-9.9,90,2024-05-15,PWHL,2023/2024,Playoffs
+20,3:22,Penalty,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,2,event,5v5,12,Allie Munroe,,,,,,,,,,,,,,,90,2024-05-15,PWHL,2023/2024,Playoffs
+21,4:18,Penalty,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,2,event,5v4,41,Denisa Křížová,,,,,,,,,,,,,,,90,2024-05-15,PWHL,2023/2024,Playoffs
+22,4:40,Shot,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,2,event,4v4,40,Blayre Turnbull,,,,,35,Maddie Rooney,,,,,,,42.7,-18.4,90,2024-05-15,PWHL,2023/2024,Playoffs
+23,5:14,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,2,event,4v4,22,Natalie Buchbinder,,,,,50,Kristen Campbell,,,,,,,-48.3,16.7,90,2024-05-15,PWHL,2023/2024,Playoffs
+24,6:38,Shot,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,2,event,5v5,41,Brittany Howard,,,,,35,Maddie Rooney,,,,,,,60.7,-24.1,90,2024-05-15,PWHL,2023/2024,Playoffs
+25,7:50,Penalty,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,2,event,5v5,27,Emma Maltais,,,,,,,,,,,,,,,90,2024-05-15,PWHL,2023/2024,Playoffs
+26,10:42,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,2,event,5v5,13,Grace Zumwinkle,,,,,50,Kristen Campbell,,,,,,,-51.0,7.9,90,2024-05-15,PWHL,2023/2024,Playoffs
+27,12:06,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,2,event,5v5,11,Sophia Kunin,,,,,50,Kristen Campbell,,,,,,,-75.0,-22.7,90,2024-05-15,PWHL,2023/2024,Playoffs
+28,13:24,Block,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,2,event,5v5,14,Renata Fast,,,,,35,Maddie Rooney,,,,,,,31.0,8.2,90,2024-05-15,PWHL,2023/2024,Playoffs
+29,13:37,Penalty,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,2,event,5v5,21,Liz Schepers,,,,,,,,,,,,,,,90,2024-05-15,PWHL,2023/2024,Playoffs
+30,14:17,Block,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,2,event,5v5,6,Kali Flanagan,,,,,35,Maddie Rooney,,,,,,,38.7,-20.4,90,2024-05-15,PWHL,2023/2024,Playoffs
+31,16:35,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,2,event,5v5,27,Taylor Heise,,,,,50,Kristen Campbell,,,,,,,-59.3,11.9,90,2024-05-15,PWHL,2023/2024,Playoffs
+32,17:29,Block,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,2,event,5v5,18,Jesse Compher,,,,,35,Maddie Rooney,,,,,,,51.3,-23.2,90,2024-05-15,PWHL,2023/2024,Playoffs
+33,19:36,Shot,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,2,event,5v5,18,Jesse Compher,,,,,35,Maddie Rooney,,,,,,,66.7,16.4,90,2024-05-15,PWHL,2023/2024,Playoffs
+34,3:10,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,5v5,27,Taylor Heise,,,,,50,Kristen Campbell,,,,,,,-53.0,36.5,90,2024-05-15,PWHL,2023/2024,Playoffs
+35,6:57,Penalty,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,3,event,5v5,18,Jesse Compher,,,,,,,,,,,,,,,90,2024-05-15,PWHL,2023/2024,Playoffs
+36,7:54,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,5v4,21,Liz Schepers,,,,,50,Kristen Campbell,,,,,,,-82.7,6.5,90,2024-05-15,PWHL,2023/2024,Playoffs
+37,7:58,Block,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,5v5,13,Grace Zumwinkle,,,,,50,Kristen Campbell,,,,,,,-63.0,31.4,90,2024-05-15,PWHL,2023/2024,Playoffs
+38,8:21,Shot,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,3,event,4v5,28,Kaitlin Willoughby,,,,,35,Maddie Rooney,,,,,,,84.3,-0.8,90,2024-05-15,PWHL,2023/2024,Playoffs
+39,8:45,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,5v4,16,Sophie Jaques,,,,,50,Kristen Campbell,,,,,,,-31.7,6.5,90,2024-05-15,PWHL,2023/2024,Playoffs
+40,8:59,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,5v5,41,Denisa Křížová,,,,,50,Kristen Campbell,,,,,,,-81.3,7.1,90,2024-05-15,PWHL,2023/2024,Playoffs
+41,9:27,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,5v5,18,Brittyn Fleming,,,,,50,Kristen Campbell,,,,,,,-86.7,14.7,90,2024-05-15,PWHL,2023/2024,Playoffs
+42,9:49,Shot,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,3,event,5v5,17,Samantha Cogan,,,,,35,Maddie Rooney,,,,,,,80.3,1.7,90,2024-05-15,PWHL,2023/2024,Playoffs
+43,11:16,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,5v5,41,Denisa Křížová,,,,,50,Kristen Campbell,,,,,,,19.3,38.5,90,2024-05-15,PWHL,2023/2024,Playoffs
+44,13:31,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,5v5,11,Sophia Kunin,,,,,50,Kristen Campbell,,,,,,,-63.0,-39.7,90,2024-05-15,PWHL,2023/2024,Playoffs
+45,13:50,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,5v5,16,Sophie Jaques,,,,,50,Kristen Campbell,,,,,,,-62.0,-9.3,90,2024-05-15,PWHL,2023/2024,Playoffs
+46,13:57,Block,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,5v5,23,Mellissa Channell-Watkins,,,,,50,Kristen Campbell,,,,,,,-79.7,28.1,90,2024-05-15,PWHL,2023/2024,Playoffs
+47,14:28,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,5v5,23,Mellissa Channell-Watkins,,,,,50,Kristen Campbell,,,,,,,-50.0,24.6,90,2024-05-15,PWHL,2023/2024,Playoffs
+48,17:07,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,5v5,27,Taylor Heise,,,,,50,Kristen Campbell,,,,,,,-71.0,-4.8,90,2024-05-15,PWHL,2023/2024,Playoffs
+49,17:26,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,5v5,22,Natalie Buchbinder,,,,,50,Kristen Campbell,,,,,,,-74.3,8.5,90,2024-05-15,PWHL,2023/2024,Playoffs
+50,17:37,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,5v5,27,Taylor Heise,,,,,50,Kristen Campbell,,,,,,,-87.0,3.7,90,2024-05-15,PWHL,2023/2024,Playoffs
+51,17:37,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,5v5,13,Grace Zumwinkle,,,,,50,Kristen Campbell,,,,,,,-75.0,-17.0,90,2024-05-15,PWHL,2023/2024,Playoffs
+52,19:07,Block,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,5v5,86,Michela Cava,,,,,50,Kristen Campbell,,,,,,,-57.3,23.0,90,2024-05-15,PWHL,2023/2024,Playoffs
+53,19:10,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,5v5,16,Sophie Jaques,,,,,50,Kristen Campbell,,,,,,,-42.3,-33.7,90,2024-05-15,PWHL,2023/2024,Playoffs
+54,0:53,Block,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,OT1,event,5v5,2,Lee Stecklein,,,,,50,Kristen Campbell,,,,,,,-28.3,34.9,90,2024-05-15,PWHL,2023/2024,Playoffs
+55,1:15,Block,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,OT1,event,5v5,18,Jesse Compher,,,,,35,Maddie Rooney,,,,,,,57.0,33.4,90,2024-05-15,PWHL,2023/2024,Playoffs
+56,2:19,Shot,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,OT1,event,5v5,22,Maggie Connors,,,,,35,Maddie Rooney,,,,,,,41.3,27.8,90,2024-05-15,PWHL,2023/2024,Playoffs
+57,2:42,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,OT1,event,5v5,27,Taylor Heise,,,,,50,Kristen Campbell,,,,,,,-84.3,-11.3,90,2024-05-15,PWHL,2023/2024,Playoffs
+58,3:25,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,OT1,event,5v5,22,Natalie Buchbinder,,,,,50,Kristen Campbell,,,,,,,-43.7,29.7,90,2024-05-15,PWHL,2023/2024,Playoffs
+59,3:34,Block,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,OT1,event,5v5,16,Sophie Jaques,,,,,50,Kristen Campbell,,,,,,,-46.7,-24.6,90,2024-05-15,PWHL,2023/2024,Playoffs
+60,7:11,Block,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,OT1,event,5v5,41,Brittany Howard,,,,,35,Maddie Rooney,,,,,,,54.0,-24.6,90,2024-05-15,PWHL,2023/2024,Playoffs
+61,7:45,Shot,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,OT1,event,5v5,41,Brittany Howard,,,,,35,Maddie Rooney,,,,,,,57.3,-33.7,90,2024-05-15,PWHL,2023/2024,Playoffs
+62,8:06,Block,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,OT1,event,5v5,20,Sarah Nurse,,,,,35,Maddie Rooney,,,,,,,69.0,7.4,90,2024-05-15,PWHL,2023/2024,Playoffs
+63,8:08,Shot,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,OT1,event,5v5,28,Kaitlin Willoughby,,,,,35,Maddie Rooney,,,,,,,69.7,14.2,90,2024-05-15,PWHL,2023/2024,Playoffs
+64,9:31,Shot,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,OT1,event,5v5,22,Maggie Connors,,,,,35,Maddie Rooney,,,,,,,58.0,-15.0,90,2024-05-15,PWHL,2023/2024,Playoffs
+65,12:22,Block,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,OT1,event,5v5,25,Emma Greco,,,,,50,Kristen Campbell,,,,,,,-35.7,21.5,90,2024-05-15,PWHL,2023/2024,Playoffs
+66,12:47,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,OT1,event,5v5,19,Maggie Flaherty,,,,,50,Kristen Campbell,,,,,,,-30.3,-31.2,90,2024-05-15,PWHL,2023/2024,Playoffs
+67,14:25,Shot,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,OT1,event,5v5,40,Blayre Turnbull,,,,,35,Maddie Rooney,,,,,,,77.3,11.1,90,2024-05-15,PWHL,2023/2024,Playoffs
+68,16:49,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,OT1,event,5v5,21,Liz Schepers,,,,,50,Kristen Campbell,,,,,,,-67.7,33.1,90,2024-05-15,PWHL,2023/2024,Playoffs
+69,17:29,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,OT1,event,5v5,24,Abby Boreen,,,,,50,Kristen Campbell,,,,,,,-25.7,32.9,90,2024-05-15,PWHL,2023/2024,Playoffs
+70,17:34,Block,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,OT1,event,5v5,2,Lee Stecklein,,,,,50,Kristen Campbell,,,,,,,-31.3,17.8,90,2024-05-15,PWHL,2023/2024,Playoffs
+71,18:38,Block,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,OT1,event,5v5,14,Renata Fast,,,,,35,Maddie Rooney,,,,,,,33.0,0.8,90,2024-05-15,PWHL,2023/2024,Playoffs
+72,19:12,Shot,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,OT1,event,5v5,34,Hannah Miller,,,,,35,Maddie Rooney,,,,,,,58.3,-22.7,90,2024-05-15,PWHL,2023/2024,Playoffs
+73,2:06,Shot,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,OT2,event,5v5,20,Sarah Nurse,,,,,35,Maddie Rooney,,,,,,,63.0,0.3,90,2024-05-15,PWHL,2023/2024,Playoffs
+74,2:20,Shot,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,OT2,event,5v5,27,Emma Maltais,,,,,35,Maddie Rooney,,,,,,,76.7,2.3,90,2024-05-15,PWHL,2023/2024,Playoffs
+75,2:49,Block,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,OT2,event,5v5,7,Olivia Knowles,,,,,35,Maddie Rooney,,,,,,,30.0,30.3,90,2024-05-15,PWHL,2023/2024,Playoffs
+76,4:27,Goal,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,OT2,event,5v5,7,Claire Butorac,21,Liz Schepers,16,Sophie Jaques,50,Kristen Campbell,,7 16 21 23 41,Claire Butorac - Sophie Jaques - Liz Schepers - Mellissa Channell-Watkins - Denisa Křížová,,3 14 20 27 34,Jocelyne Larocque - Renata Fast - Sarah Nurse - Emma Maltais - Hannah Miller,-86.0,6.2,90,2024-05-15,PWHL,2023/2024,Playoffs

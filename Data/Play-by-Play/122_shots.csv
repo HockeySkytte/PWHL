@@ -1,0 +1,80 @@
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
+1,1:50,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,67,Emma Woods,,,,,38,Emerance Maschmeyer,,,,,,,-53.7,-25.8,122,2024-12-31,PWHL,2024/2025,Regular Season
+2,2:08,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,18,Jesse Compher,,,,,38,Emerance Maschmeyer,,,,,,,-76.0,6.0,122,2024-12-31,PWHL,2024/2025,Regular Season
+3,3:02,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,5,Savannah Harmon,,,,,38,Emerance Maschmeyer,,,,,,,-55.7,9.6,122,2024-12-31,PWHL,2024/2025,Regular Season
+4,7:35,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,19,Lauren Bernard,,,,,38,Emerance Maschmeyer,,,,,,,-42.7,-19.8,122,2024-12-31,PWHL,2024/2025,Regular Season
+5,9:53,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,16,Hayley Scamurra,,,,,38,Emerance Maschmeyer,,,,,,,-57.7,-11.1,122,2024-12-31,PWHL,2024/2025,Regular Season
+6,10:03,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,16,Hayley Scamurra,,,,,38,Emerance Maschmeyer,,,,,,,-46.3,-17.8,122,2024-12-31,PWHL,2024/2025,Regular Season
+7,11:45,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,34,Hannah Miller,,,,,38,Emerance Maschmeyer,,,,,,,-63.0,12.5,122,2024-12-31,PWHL,2024/2025,Regular Season
+8,12:19,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,9,Daryl Watts,,,,,38,Emerance Maschmeyer,,,,,,,-39.3,8.2,122,2024-12-31,PWHL,2024/2025,Regular Season
+9,12:42,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,34,Hannah Miller,,,,,38,Emerance Maschmeyer,,,,,,,-15.0,26.4,122,2024-12-31,PWHL,2024/2025,Regular Season
+10,13:06,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,16,Kateřina Mrázová,,,,,1,Raygan Kirk,,,,,,,65.0,-3.4,122,2024-12-31,PWHL,2024/2025,Regular Season
+11,13:15,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,88,Ronja Savolainen,,,,,1,Raygan Kirk,,,,,,,75.0,-12.5,122,2024-12-31,PWHL,2024/2025,Regular Season
+12,13:28,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,16,Hayley Scamurra,,,,,38,Emerance Maschmeyer,,,,,,,-67.3,13.3,122,2024-12-31,PWHL,2024/2025,Regular Season
+13,15:00,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,16,Kateřina Mrázová,,,,,1,Raygan Kirk,,,,,,,71.3,-0.3,122,2024-12-31,PWHL,2024/2025,Regular Season
+14,15:31,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,8,Natalie Snodgrass,,,,,1,Raygan Kirk,,,,,,,31.7,-35.1,122,2024-12-31,PWHL,2024/2025,Regular Season
+15,15:48,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,16,Kateřina Mrázová,,,,,1,Raygan Kirk,,,,,,,62.7,-30.3,122,2024-12-31,PWHL,2024/2025,Regular Season
+16,15:57,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,20,Sarah Nurse,,,,,38,Emerance Maschmeyer,,,,,,,-58.3,-0.8,122,2024-12-31,PWHL,2024/2025,Regular Season
+17,16:54,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,27,Emma Maltais,,,,,38,Emerance Maschmeyer,,,,,,,-68.0,8.2,122,2024-12-31,PWHL,2024/2025,Regular Season
+18,17:30,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,2,Aneta Tejralová,,,,,1,Raygan Kirk,,,,,,,47.0,-27.2,122,2024-12-31,PWHL,2024/2025,Regular Season
+19,17:59,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,37,Rebecca Leslie,,,,,1,Raygan Kirk,,,,,,,46.7,-1.4,122,2024-12-31,PWHL,2024/2025,Regular Season
+20,1:08,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,40,Blayre Turnbull,,,,,38,Emerance Maschmeyer,,,,,,,-52.3,27.8,122,2024-12-31,PWHL,2024/2025,Regular Season
+21,1:42,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,6,Kali Flanagan,,,,,,,,,,,,,,,122,2024-12-31,PWHL,2024/2025,Regular Season
+22,1:58,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,2,Aneta Tejralová,,,,,1,Raygan Kirk,,,,,,,35.3,7.4,122,2024-12-31,PWHL,2024/2025,Regular Season
+23,2:22,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v4,19,Brianne Jenner,,,,,1,Raygan Kirk,,,,,,,37.0,34.6,122,2024-12-31,PWHL,2024/2025,Regular Season
+24,4:02,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,18,Jesse Compher,,,,,38,Emerance Maschmeyer,,,,,,,-63.0,-18.7,122,2024-12-31,PWHL,2024/2025,Regular Season
+25,4:43,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,18,Mannon McMahon,,,,,1,Raygan Kirk,,,,,,,71.7,23.2,122,2024-12-31,PWHL,2024/2025,Regular Season
+26,5:11,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,12,Allie Munroe,,,,,38,Emerance Maschmeyer,,,,,,,-39.7,21.8,122,2024-12-31,PWHL,2024/2025,Regular Season
+27,5:36,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,12,Allie Munroe,,,,,38,Emerance Maschmeyer,,,,,,,-43.7,9.9,122,2024-12-31,PWHL,2024/2025,Regular Season
+28,5:45,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,9,Daryl Watts,,,,,38,Emerance Maschmeyer,,,,,,,-71.7,11.1,122,2024-12-31,PWHL,2024/2025,Regular Season
+29,6:20,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,40,Blayre Turnbull,,,,,38,Emerance Maschmeyer,,,,,,,-52.0,7.1,122,2024-12-31,PWHL,2024/2025,Regular Season
+30,7:12,Goal,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,88,Ronja Savolainen,,,,,1,Raygan Kirk,,6 12 18 67 88,Kali Flanagan - Allie Munroe - Jesse Compher - Emma Woods - Julia Gosling,,6 12 17 88 92,Stephanie Markowski - Victoria Bach - Gabbie Hughes - Ronja Savolainen - Danielle Serdachny,56.0,2.8,122,2024-12-31,PWHL,2024/2025,Regular Season
+31,7:34,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,20,Sarah Nurse,,,,,38,Emerance Maschmeyer,,,,,,,-61.3,-2.5,122,2024-12-31,PWHL,2024/2025,Regular Season
+32,7:40,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,20,Sarah Nurse,,,,,38,Emerance Maschmeyer,,,,,,,-72.0,-2.3,122,2024-12-31,PWHL,2024/2025,Regular Season
+33,8:12,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,5,Savannah Harmon,,,,,38,Emerance Maschmeyer,,,,,,,-44.0,-11.1,122,2024-12-31,PWHL,2024/2025,Regular Season
+34,8:55,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,40,Blayre Turnbull,,,,,38,Emerance Maschmeyer,,,,,,,-40.0,-19.6,122,2024-12-31,PWHL,2024/2025,Regular Season
+35,9:12,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,16,Hayley Scamurra,,,,,38,Emerance Maschmeyer,,,,,,,-52.0,-13.3,122,2024-12-31,PWHL,2024/2025,Regular Season
+36,9:31,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,88,Julia Gosling,,,,,38,Emerance Maschmeyer,,,,,,,-49.0,-24.4,122,2024-12-31,PWHL,2024/2025,Regular Season
+37,9:45,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,55,Rylind MacKinnon,,,,,38,Emerance Maschmeyer,,,,,,,-62.0,18.4,122,2024-12-31,PWHL,2024/2025,Regular Season
+38,9:58,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,55,Rylind MacKinnon,,,,,38,Emerance Maschmeyer,,,,,,,-32.0,18.1,122,2024-12-31,PWHL,2024/2025,Regular Season
+39,12:35,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,13,Tereza Vanišová,,,,,1,Raygan Kirk,,,,,,,69.0,-5.7,122,2024-12-31,PWHL,2024/2025,Regular Season
+40,13:38,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,9,Daryl Watts,,,,,38,Emerance Maschmeyer,,,,,,,-55.0,0.8,122,2024-12-31,PWHL,2024/2025,Regular Season
+41,14:31,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,27,Emma Maltais,,,,,38,Emerance Maschmeyer,,,,,,,-33.0,-6.2,122,2024-12-31,PWHL,2024/2025,Regular Season
+42,14:46,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,16,Hayley Scamurra,,,,,,,,,,,,,,,122,2024-12-31,PWHL,2024/2025,Regular Season
+43,15:11,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,4v5,14,Renata Fast,,,,,38,Emerance Maschmeyer,,,,,,,39.3,-13.0,122,2024-12-31,PWHL,2024/2025,Regular Season
+44,15:42,Penalty,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v4,,,,,,,,,,,,,,,,,122,2024-12-31,PWHL,2024/2025,Regular Season
+45,17:17,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v4,18,Jesse Compher,,,,,38,Emerance Maschmeyer,,,,,,,-72.0,-13.9,122,2024-12-31,PWHL,2024/2025,Regular Season
+46,17:33,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v4,9,Daryl Watts,,,,,38,Emerance Maschmeyer,,,,,,,-63.3,20.7,122,2024-12-31,PWHL,2024/2025,Regular Season
+47,18:02,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,9,Daryl Watts,,,,,38,Emerance Maschmeyer,,,,,,,-55.0,10.2,122,2024-12-31,PWHL,2024/2025,Regular Season
+48,19:32,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,12,Allie Munroe,,,,,38,Emerance Maschmeyer,,,,,,,27.7,6.0,122,2024-12-31,PWHL,2024/2025,Regular Season
+49,1:45,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,18,Mannon McMahon,,,,,1,Raygan Kirk,,,,,,,34.0,13.0,122,2024-12-31,PWHL,2024/2025,Regular Season
+50,2:44,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,94,Anna Meixner,,,,,1,Raygan Kirk,,,,,,,72.0,2.3,122,2024-12-31,PWHL,2024/2025,Regular Season
+51,3:01,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,16,Kateřina Mrázová,,,,,1,Raygan Kirk,,,,,,,74.7,13.6,122,2024-12-31,PWHL,2024/2025,Regular Season
+52,3:44,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,5,Savannah Harmon,,,,,38,Emerance Maschmeyer,,,,,,,-20.3,5.7,122,2024-12-31,PWHL,2024/2025,Regular Season
+53,5:44,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,9,Daryl Watts,,,,,38,Emerance Maschmeyer,,,,,,,-53.7,3.1,122,2024-12-31,PWHL,2024/2025,Regular Season
+54,5:54,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,5,Savannah Harmon,,,,,38,Emerance Maschmeyer,,,,,,,-47.0,15.9,122,2024-12-31,PWHL,2024/2025,Regular Season
+55,6:16,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,18,Jesse Compher,,,,,38,Emerance Maschmeyer,,,,,,,-63.3,-1.7,122,2024-12-31,PWHL,2024/2025,Regular Season
+56,6:23,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,12,Allie Munroe,,,,,38,Emerance Maschmeyer,,,,,,,-55.0,-13.3,122,2024-12-31,PWHL,2024/2025,Regular Season
+57,6:26,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,18,Jesse Compher,,,,,38,Emerance Maschmeyer,,,,,,,-71.0,-6.2,122,2024-12-31,PWHL,2024/2025,Regular Season
+58,6:53,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,71,Jincy Roese,,,,,1,Raygan Kirk,,,,,,,61.7,-23.8,122,2024-12-31,PWHL,2024/2025,Regular Season
+59,7:07,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,94,Anna Meixner,,,,,1,Raygan Kirk,,,,,,,70.3,6.0,122,2024-12-31,PWHL,2024/2025,Regular Season
+60,7:33,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,16,Hayley Scamurra,,,,,38,Emerance Maschmeyer,,,,,,,-71.0,17.8,122,2024-12-31,PWHL,2024/2025,Regular Season
+61,7:56,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,6,Kali Flanagan,,,,,38,Emerance Maschmeyer,,,,,,,-36.0,-26.4,122,2024-12-31,PWHL,2024/2025,Regular Season
+62,8:06,Penalty,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,2,Aneta Tejralová,,,,,,,,,,,,,,,122,2024-12-31,PWHL,2024/2025,Regular Season
+63,9:54,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v4,20,Sarah Nurse,,,,,38,Emerance Maschmeyer,,,,,,,-79.3,-24.1,122,2024-12-31,PWHL,2024/2025,Regular Season
+64,10:53,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,6,Kali Flanagan,,,,,38,Emerance Maschmeyer,,,,,,,-35.0,-22.4,122,2024-12-31,PWHL,2024/2025,Regular Season
+65,11:18,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,16,Hayley Scamurra,,,,,38,Emerance Maschmeyer,,,,,,,-80.3,-6.0,122,2024-12-31,PWHL,2024/2025,Regular Season
+66,11:51,Penalty,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,13,Tereza Vanišová,,,,,,,,,,,,,,,122,2024-12-31,PWHL,2024/2025,Regular Season
+67,11:51,Penalty,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,13,Tereza Vanišová,,,,,,,,,,,,,,,122,2024-12-31,PWHL,2024/2025,Regular Season
+68,12:06,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,20,Sarah Nurse,,,,,38,Emerance Maschmeyer,,,,,,,-74.3,4.8,122,2024-12-31,PWHL,2024/2025,Regular Season
+69,12:15,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v3,34,Hannah Miller,,,,,38,Emerance Maschmeyer,,,,,,,-60.0,11.1,122,2024-12-31,PWHL,2024/2025,Regular Season
+70,12:46,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,27,Emma Maltais,,,,,38,Emerance Maschmeyer,,,,,,,-42.3,20.4,122,2024-12-31,PWHL,2024/2025,Regular Season
+71,13:02,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,14,Renata Fast,,,,,38,Emerance Maschmeyer,,,,,,,-33.3,-19.6,122,2024-12-31,PWHL,2024/2025,Regular Season
+72,14:00,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,20,Sarah Nurse,,,,,38,Emerance Maschmeyer,,,,,,,-81.0,-11.6,122,2024-12-31,PWHL,2024/2025,Regular Season
+73,14:01,Goal,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,34,Hannah Miller,8,Izzy Daniel,20,Sarah Nurse,38,Emerance Maschmeyer,,5 8 9 20 34,Savannah Harmon - Izzy Daniel - Daryl Watts - Sarah Nurse - Hannah Miller,,6 16 19 21,Stephanie Markowski - Kateřina Mrázová - Brianne Jenner - Ashton Bell,-69.0,3.1,122,2024-12-31,PWHL,2024/2025,Regular Season
+74,15:15,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,88,Julia Gosling,,,,,38,Emerance Maschmeyer,,,,,,,-61.0,-17.0,122,2024-12-31,PWHL,2024/2025,Regular Season
+75,15:26,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,9,Daryl Watts,,,,,38,Emerance Maschmeyer,,,,,,,-63.3,-27.8,122,2024-12-31,PWHL,2024/2025,Regular Season
+76,16:52,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,16,Kateřina Mrázová,,,,,1,Raygan Kirk,,,,,,,52.0,-19.6,122,2024-12-31,PWHL,2024/2025,Regular Season
+77,17:10,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,27,Emma Maltais,,,,,38,Emerance Maschmeyer,,,,,,,-61.7,-17.8,122,2024-12-31,PWHL,2024/2025,Regular Season
+78,18:50,Goal,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,71,Jincy Roese,,,,,1,Raygan Kirk,,5 14 16 27 40,Savannah Harmon - Renata Fast - Hayley Scamurra - Emma Maltais - Blayre Turnbull,,8 18 23 37 71,Natalie Snodgrass - Mannon McMahon - Jocelyne Larocque - Rebecca Leslie - Jincy Roese,52.7,-15.0,122,2024-12-31,PWHL,2024/2025,Regular Season
+79,19:59,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,9,Daryl Watts,,,,,38,Emerance Maschmeyer,,,,,,,-75.3,32.3,122,2024-12-31,PWHL,2024/2025,Regular Season

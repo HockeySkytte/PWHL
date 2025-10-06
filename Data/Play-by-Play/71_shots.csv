@@ -1,0 +1,96 @@
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
+1,0:17,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,1,event,5v5,26,Emily Clark,,,,,30,Corinne Schroeder,,,,,,,-82.3,26.4,71,2024-04-30,PWHL,2023/2024,Regular Season
+2,1:29,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,1,event,5v5,19,Brianne Jenner,,,,,30,Corinne Schroeder,,,,,,,-75.3,-0.8,71,2024-04-30,PWHL,2023/2024,Regular Season
+3,2:10,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,1,event,5v5,8,Natalie Snodgrass,,,,,30,Corinne Schroeder,,,,,,,-87.0,11.1,71,2024-04-30,PWHL,2023/2024,Regular Season
+4,3:39,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,1,event,5v5,14,Hayley Scamurra,,,,,30,Corinne Schroeder,,,,,,,-87.0,25.8,71,2024-04-30,PWHL,2023/2024,Regular Season
+5,4:09,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,1,event,5v5,14,Hayley Scamurra,,,,,30,Corinne Schroeder,,,,,,,-29.0,3.4,71,2024-04-30,PWHL,2023/2024,Regular Season
+6,4:57,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,1,event,5v5,13,Alexandra Labelle,,,,,38,Emerance Maschmeyer,,,,,,,74.7,-3.7,71,2024-04-30,PWHL,2023/2024,Regular Season
+7,5:12,Goal,Ottawa Charge,Away,New York Sirens,Ottawa Charge,1,event,5v5,11,Akane Shiga,15,Savannah Harmon,8,Natalie Snodgrass,30,Corinne Schroeder,,10 14 18 28 44,Kayla Vespa - Jaime Bourbonnais - Élizabeth Giguère - Micah Zandee-Hart - Jill Saulnier,,8 10 11 15 71,Natalie Snodgrass - Becca Gilmore - Akane Shiga - Savannah Harmon - Jincy Roese,-87.3,13.3,71,2024-04-30,PWHL,2023/2024,Regular Season
+8,6:38,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,1,event,5v5,17,Ella Shelton,,,,,38,Emerance Maschmeyer,,,,,,,27.0,36.5,71,2024-04-30,PWHL,2023/2024,Regular Season
+9,7:14,Block,New York Sirens,Home,New York Sirens,Ottawa Charge,1,event,5v5,4,Taylor Baker,,,,,38,Emerance Maschmeyer,,,,,,,43.0,29.7,71,2024-04-30,PWHL,2023/2024,Regular Season
+10,7:19,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,1,event,5v5,9,Daryl Watts,,,,,30,Corinne Schroeder,,,,,,,-78.0,19.6,71,2024-04-30,PWHL,2023/2024,Regular Season
+11,7:50,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,1,event,5v5,18,Élizabeth Giguère,,,,,38,Emerance Maschmeyer,,,,,,,84.3,-4.2,71,2024-04-30,PWHL,2023/2024,Regular Season
+12,8:03,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,1,event,5v5,26,Emily Clark,,,,,30,Corinne Schroeder,,,,,,,-83.7,4.2,71,2024-04-30,PWHL,2023/2024,Regular Season
+13,9:11,Block,Ottawa Charge,Away,New York Sirens,Ottawa Charge,1,event,5v5,17,Gabbie Hughes,,,,,30,Corinne Schroeder,,,,,,,-53.0,-14.5,71,2024-04-30,PWHL,2023/2024,Regular Season
+14,9:11,Penalty,New York Sirens,Home,New York Sirens,Ottawa Charge,1,event,5v5,17,Ella Shelton,,,,,,,,,,,,,,,71,2024-04-30,PWHL,2023/2024,Regular Season
+15,10:50,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,1,event,5v4,14,Hayley Scamurra,,,,,30,Corinne Schroeder,,,,,,,-61.3,-19.6,71,2024-04-30,PWHL,2023/2024,Regular Season
+16,11:06,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,1,event,5v4,27,Shiann Darkangelo,,,,,30,Corinne Schroeder,,,,,,,-52.7,-24.4,71,2024-04-30,PWHL,2023/2024,Regular Season
+17,14:16,Block,Ottawa Charge,Away,New York Sirens,Ottawa Charge,1,event,5v5,14,Hayley Scamurra,,,,,30,Corinne Schroeder,,,,,,,-58.3,0.6,71,2024-04-30,PWHL,2023/2024,Regular Season
+18,14:20,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,1,event,5v5,14,Hayley Scamurra,,,,,30,Corinne Schroeder,,,,,,,-65.7,16.4,71,2024-04-30,PWHL,2023/2024,Regular Season
+19,14:24,Goal,Ottawa Charge,Away,New York Sirens,Ottawa Charge,1,event,5v5,14,Hayley Scamurra,21,Ashton Bell,17,Gabbie Hughes,30,Corinne Schroeder,,6 11 17 18 25,Brooke Hobson - Abby Roque - Ella Shelton - Élizabeth Giguère - Alex Carpenter,,14 17 21 24 26,Hayley Scamurra - Gabbie Hughes - Ashton Bell - Emma Buckles - Emily Clark,-65.0,-26.9,71,2024-04-30,PWHL,2023/2024,Regular Season
+20,14:25,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,1,event,5v5,8,Natalie Snodgrass,,,,,30,Corinne Schroeder,,,,,,,-65.0,-1.7,71,2024-04-30,PWHL,2023/2024,Regular Season
+21,14:54,Block,New York Sirens,Home,New York Sirens,Ottawa Charge,1,event,5v5,67,Emma Woods,,,,,38,Emerance Maschmeyer,,,,,,,59.7,-19.6,71,2024-04-30,PWHL,2023/2024,Regular Season
+22,15:26,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,1,event,5v5,19,Paetyn Levis,,,,,38,Emerance Maschmeyer,,,,,,,44.3,31.4,71,2024-04-30,PWHL,2023/2024,Regular Season
+23,15:32,Block,New York Sirens,Home,New York Sirens,Ottawa Charge,1,event,5v5,19,Paetyn Levis,,,,,38,Emerance Maschmeyer,,,,,,,51.0,28.3,71,2024-04-30,PWHL,2023/2024,Regular Season
+24,15:44,Block,Ottawa Charge,Away,New York Sirens,Ottawa Charge,1,event,5v5,17,Gabbie Hughes,,,,,30,Corinne Schroeder,,,,,,,-29.0,13.6,71,2024-04-30,PWHL,2023/2024,Regular Season
+25,15:50,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,1,event,5v5,17,Gabbie Hughes,,,,,30,Corinne Schroeder,,,,,,,-21.3,-6.2,71,2024-04-30,PWHL,2023/2024,Regular Season
+26,16:23,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,1,event,5v5,9,Jessie Eldridge,,,,,38,Emerance Maschmeyer,,,,,,,75.0,0.3,71,2024-04-30,PWHL,2023/2024,Regular Season
+27,16:35,Block,New York Sirens,Home,New York Sirens,Ottawa Charge,1,event,5v5,25,Alex Carpenter,,,,,38,Emerance Maschmeyer,,,,,,,53.3,-1.4,71,2024-04-30,PWHL,2023/2024,Regular Season
+28,17:26,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,1,event,5v5,9,Daryl Watts,,,,,30,Corinne Schroeder,,,,,,,-87.0,-8.8,71,2024-04-30,PWHL,2023/2024,Regular Season
+29,18:16,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,1,event,5v5,17,Ella Shelton,,,,,38,Emerance Maschmeyer,,,,,,,54.7,-29.7,71,2024-04-30,PWHL,2023/2024,Regular Season
+30,19:35,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,1,event,5v5,11,Abby Roque,,,,,38,Emerance Maschmeyer,,,,,,,71.3,-1.7,71,2024-04-30,PWHL,2023/2024,Regular Season
+31,19:54,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,1,event,5v5,16,Kateřina Mrázová,,,,,30,Corinne Schroeder,,,,,,,-78.3,3.7,71,2024-04-30,PWHL,2023/2024,Regular Season
+32,19:59,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,1,event,5v5,9,Daryl Watts,,,,,30,Corinne Schroeder,,,,,,,-82.3,-3.1,71,2024-04-30,PWHL,2023/2024,Regular Season
+33,0:26,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,2,event,5v5,67,Emma Woods,,,,,38,Emerance Maschmeyer,,,,,,,-82.3,-2.8,71,2024-04-30,PWHL,2023/2024,Regular Season
+34,0:50,Block,New York Sirens,Home,New York Sirens,Ottawa Charge,2,event,5v5,6,Brooke Hobson,,,,,38,Emerance Maschmeyer,,,,,,,-61.0,-15.3,71,2024-04-30,PWHL,2023/2024,Regular Season
+35,1:38,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,2,event,5v5,10,Becca Gilmore,,,,,30,Corinne Schroeder,,,,,,,74.0,2.3,71,2024-04-30,PWHL,2023/2024,Regular Season
+36,2:04,Block,Ottawa Charge,Away,New York Sirens,Ottawa Charge,2,event,5v5,2,Aneta Tejralová,,,,,30,Corinne Schroeder,,,,,,,41.3,18.1,71,2024-04-30,PWHL,2023/2024,Regular Season
+37,2:20,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,2,event,5v5,19,Paetyn Levis,,,,,38,Emerance Maschmeyer,,,,,,,-83.7,4.8,71,2024-04-30,PWHL,2023/2024,Regular Season
+38,3:20,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,2,event,5v5,9,Jessie Eldridge,,,,,38,Emerance Maschmeyer,,,,,,,-59.0,-33.1,71,2024-04-30,PWHL,2023/2024,Regular Season
+39,4:02,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,2,event,5v5,21,Ashton Bell,,,,,30,Corinne Schroeder,,,,,,,79.0,-1.1,71,2024-04-30,PWHL,2023/2024,Regular Season
+40,4:35,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,2,event,5v5,28,Micah Zandee-Hart,,,,,38,Emerance Maschmeyer,,,,,,,-80.0,36.3,71,2024-04-30,PWHL,2023/2024,Regular Season
+41,4:58,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,2,event,5v5,15,Savannah Harmon,,,,,30,Corinne Schroeder,,,,,,,50.3,16.1,71,2024-04-30,PWHL,2023/2024,Regular Season
+42,5:15,Block,Ottawa Charge,Away,New York Sirens,Ottawa Charge,2,event,5v5,5,Samantha Isbell,,,,,30,Corinne Schroeder,,,,,,,31.7,38.8,71,2024-04-30,PWHL,2023/2024,Regular Season
+43,5:54,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,2,event,5v5,25,Alex Carpenter,,,,,38,Emerance Maschmeyer,,,,,,,-68.7,1.7,71,2024-04-30,PWHL,2023/2024,Regular Season
+44,6:48,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,2,event,5v5,28,Micah Zandee-Hart,,,,,38,Emerance Maschmeyer,,,,,,,-30.7,30.0,71,2024-04-30,PWHL,2023/2024,Regular Season
+45,7:04,Block,New York Sirens,Home,New York Sirens,Ottawa Charge,2,event,5v5,9,Jessie Eldridge,,,,,38,Emerance Maschmeyer,,,,,,,-48.7,-24.6,71,2024-04-30,PWHL,2023/2024,Regular Season
+46,7:24,Goal,New York Sirens,Home,New York Sirens,Ottawa Charge,2,event,5v5,27,Jade Downie-Landry,6,Brooke Hobson,,,38,Emerance Maschmeyer,,6 9 13 14 27,Brooke Hobson - Jessie Eldridge - Alexandra Labelle - Jaime Bourbonnais - Jade Downie-Landry,,14 17 21 26 71,Hayley Scamurra - Gabbie Hughes - Ashton Bell - Emily Clark - Jincy Roese,-80.3,7.9,71,2024-04-30,PWHL,2023/2024,Regular Season
+47,7:36,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,2,event,5v5,17,Gabbie Hughes,,,,,30,Corinne Schroeder,,,,,,,59.0,1.7,71,2024-04-30,PWHL,2023/2024,Regular Season
+48,7:50,Block,Ottawa Charge,Away,New York Sirens,Ottawa Charge,2,event,5v5,26,Emily Clark,,,,,30,Corinne Schroeder,,,,,,,80.7,11.9,71,2024-04-30,PWHL,2023/2024,Regular Season
+49,7:50,Block,New York Sirens,Home,New York Sirens,Ottawa Charge,2,event,5v5,17,Ella Shelton,,,,,38,Emerance Maschmeyer,,,,,,,-37.3,33.1,71,2024-04-30,PWHL,2023/2024,Regular Season
+50,7:50,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,2,event,5v5,26,Emily Clark,,,,,30,Corinne Schroeder,,,,,,,83.3,11.3,71,2024-04-30,PWHL,2023/2024,Regular Season
+51,8:53,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,2,event,5v5,26,Emily Clark,,,,,30,Corinne Schroeder,,,,,,,80.7,0.6,71,2024-04-30,PWHL,2023/2024,Regular Season
+52,9:16,Goal,New York Sirens,Home,New York Sirens,Ottawa Charge,2,event,5v5,17,Ella Shelton,25,Alex Carpenter,6,Brooke Hobson,38,Emerance Maschmeyer,,6 11 17 23 25,Brooke Hobson - Abby Roque - Ella Shelton - Madison Packer - Alex Carpenter,,2 9 16 19 71,Aneta Tejralová - Daryl Watts - Kateřina Mrázová - Brianne Jenner - Jincy Roese,-73.7,-0.3,71,2024-04-30,PWHL,2023/2024,Regular Season
+53,9:39,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,2,event,5v5,14,Hayley Scamurra,,,,,30,Corinne Schroeder,,,,,,,67.3,-22.7,71,2024-04-30,PWHL,2023/2024,Regular Season
+54,10:00,Block,New York Sirens,Home,New York Sirens,Ottawa Charge,2,event,4v5,67,Emma Woods,,,,,38,Emerance Maschmeyer,,,,,,,-64.7,27.8,71,2024-04-30,PWHL,2023/2024,Regular Season
+55,12:08,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,2,event,5v5,59,Johanna Fällman,,,,,38,Emerance Maschmeyer,,,,,,,-64.3,0.3,71,2024-04-30,PWHL,2023/2024,Regular Season
+56,12:19,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,2,event,5v5,17,Ella Shelton,,,,,38,Emerance Maschmeyer,,,,,,,-70.7,-9.1,71,2024-04-30,PWHL,2023/2024,Regular Season
+57,12:20,Goal,New York Sirens,Home,New York Sirens,Ottawa Charge,2,event,5v5,10,Kayla Vespa,17,Ella Shelton,71,Savannah Norcross,38,Emerance Maschmeyer,,10 11 17 59 71,Kayla Vespa - Abby Roque - Ella Shelton - Johanna Fällman - Savannah Norcross,,5 8 10 11 15,Samantha Isbell - Natalie Snodgrass - Becca Gilmore - Akane Shiga - Savannah Harmon,-85.0,-10.8,71,2024-04-30,PWHL,2023/2024,Regular Season
+58,15:56,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,2,event,5v5,17,Ella Shelton,,,,,38,Emerance Maschmeyer,,,,,,,-37.0,22.4,71,2024-04-30,PWHL,2023/2024,Regular Season
+59,15:57,Goal,New York Sirens,Home,New York Sirens,Ottawa Charge,2,event,5v5,18,Élizabeth Giguère,17,Ella Shelton,,,38,Emerance Maschmeyer,,6 10 11 17 18,Brooke Hobson - Kayla Vespa - Abby Roque - Ella Shelton - Élizabeth Giguère,,2 14 17 26 71,Aneta Tejralová - Hayley Scamurra - Gabbie Hughes - Emily Clark - Jincy Roese,-83.7,7.4,71,2024-04-30,PWHL,2023/2024,Regular Season
+60,16:46,Block,Ottawa Charge,Away,New York Sirens,Ottawa Charge,2,event,5v5,21,Ashton Bell,,,,,30,Corinne Schroeder,,,,,,,50.7,30.9,71,2024-04-30,PWHL,2023/2024,Regular Season
+61,19:27,Block,Ottawa Charge,Away,New York Sirens,Ottawa Charge,2,event,5v5,26,Emily Clark,,,,,30,Corinne Schroeder,,,,,,,74.0,28.1,71,2024-04-30,PWHL,2023/2024,Regular Season
+62,1:17,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5,11,Abby Roque,,,,,38,Emerance Maschmeyer,,,,,,,80.0,-7.6,71,2024-04-30,PWHL,2023/2024,Regular Season
+63,1:50,Block,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,5v5,21,Ashton Bell,,,,,30,Corinne Schroeder,,,,,,,-33.3,-24.1,71,2024-04-30,PWHL,2023/2024,Regular Season
+64,2:03,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,5v5,21,Ashton Bell,,,,,30,Corinne Schroeder,,,,,,,-40.7,-10.2,71,2024-04-30,PWHL,2023/2024,Regular Season
+65,3:57,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5,27,Jade Downie-Landry,,,,,38,Emerance Maschmeyer,,,,,,,-87.3,-20.1,71,2024-04-30,PWHL,2023/2024,Regular Season
+66,4:23,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5,25,Alex Carpenter,,,,,38,Emerance Maschmeyer,,,,,,,61.0,-9.9,71,2024-04-30,PWHL,2023/2024,Regular Season
+67,4:45,Block,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,5v5,16,Kateřina Mrázová,,,,,30,Corinne Schroeder,,,,,,,-71.7,26.9,71,2024-04-30,PWHL,2023/2024,Regular Season
+68,5:35,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,5v5,15,Savannah Harmon,,,,,30,Corinne Schroeder,,,,,,,-20.0,29.7,71,2024-04-30,PWHL,2023/2024,Regular Season
+69,5:47,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,5v5,10,Becca Gilmore,,,,,30,Corinne Schroeder,,,,,,,21.0,1.4,71,2024-04-30,PWHL,2023/2024,Regular Season
+70,6:33,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5,11,Abby Roque,,,,,38,Emerance Maschmeyer,,,,,,,35.0,-21.0,71,2024-04-30,PWHL,2023/2024,Regular Season
+71,7:12,Block,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,5v5,15,Savannah Harmon,,,,,30,Corinne Schroeder,,,,,,,56.3,29.7,71,2024-04-30,PWHL,2023/2024,Regular Season
+72,7:29,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5,25,Alex Carpenter,,,,,38,Emerance Maschmeyer,,,,,,,47.3,-6.0,71,2024-04-30,PWHL,2023/2024,Regular Season
+73,8:12,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5,19,Paetyn Levis,,,,,38,Emerance Maschmeyer,,,,,,,69.0,30.0,71,2024-04-30,PWHL,2023/2024,Regular Season
+74,9:12,Block,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,5v4,14,Hayley Scamurra,,,,,30,Corinne Schroeder,,,,,,,-77.0,28.3,71,2024-04-30,PWHL,2023/2024,Regular Season
+75,9:36,Block,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,5v4,26,Emily Clark,,,,,30,Corinne Schroeder,,,,,,,-82.0,28.1,71,2024-04-30,PWHL,2023/2024,Regular Season
+76,10:35,Block,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,4v5,17,Ella Shelton,,,,,38,Emerance Maschmeyer,,,,,,,53.7,18.1,71,2024-04-30,PWHL,2023/2024,Regular Season
+77,10:48,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5,27,Jade Downie-Landry,,,,,38,Emerance Maschmeyer,,,,,,,78.3,2.5,71,2024-04-30,PWHL,2023/2024,Regular Season
+78,11:12,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,5v5,14,Hayley Scamurra,,,,,30,Corinne Schroeder,,,,,,,-83.3,7.9,71,2024-04-30,PWHL,2023/2024,Regular Season
+79,12:20,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5,14,Jaime Bourbonnais,,,,,38,Emerance Maschmeyer,,,,,,,4.3,31.7,71,2024-04-30,PWHL,2023/2024,Regular Season
+80,12:34,Block,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,5v5,19,Brianne Jenner,,,,,30,Corinne Schroeder,,,,,,,-53.0,30.6,71,2024-04-30,PWHL,2023/2024,Regular Season
+81,13:07,Penalty,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,5v5,16,Kateřina Mrázová,,,,,,,,,,,,,,,71,2024-04-30,PWHL,2023/2024,Regular Season
+82,13:07,Penalty,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5,6,Brooke Hobson,,,,,,,,,,,,,,,71,2024-04-30,PWHL,2023/2024,Regular Season
+83,13:42,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,5v5,26,Emily Clark,,,,,30,Corinne Schroeder,,,,,,,-87.0,-17.6,71,2024-04-30,PWHL,2023/2024,Regular Season
+84,13:58,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,5v5,15,Savannah Harmon,,,,,30,Corinne Schroeder,,,,,,,-31.0,18.7,71,2024-04-30,PWHL,2023/2024,Regular Season
+85,14:19,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,5v5,19,Brianne Jenner,,,,,30,Corinne Schroeder,,,,,,,-78.0,7.6,71,2024-04-30,PWHL,2023/2024,Regular Season
+86,15:08,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5,14,Jaime Bourbonnais,,,,,38,Emerance Maschmeyer,,,,,,,86.3,10.5,71,2024-04-30,PWHL,2023/2024,Regular Season
+87,15:43,Block,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5,27,Jade Downie-Landry,,,,,38,Emerance Maschmeyer,,,,,,,29.0,-2.5,71,2024-04-30,PWHL,2023/2024,Regular Season
+88,17:35,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,5v5,2,Aneta Tejralová,,,,,30,Corinne Schroeder,,,,,,,-32.7,-11.6,71,2024-04-30,PWHL,2023/2024,Regular Season
+89,18:03,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,5v5,27,Shiann Darkangelo,,,,,30,Corinne Schroeder,,,,,,,75.0,9.3,71,2024-04-30,PWHL,2023/2024,Regular Season
+90,18:16,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,5v5,27,Shiann Darkangelo,,,,,30,Corinne Schroeder,,,,,,,73.0,24.1,71,2024-04-30,PWHL,2023/2024,Regular Season
+91,18:33,Block,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,5v5,71,Jincy Roese,,,,,30,Corinne Schroeder,,,,,,,49.7,-31.7,71,2024-04-30,PWHL,2023/2024,Regular Season
+92,18:58,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,5v5,19,Brianne Jenner,,,,,30,Corinne Schroeder,,,,,,,76.7,17.3,71,2024-04-30,PWHL,2023/2024,Regular Season
+93,19:01,Goal,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,5v5,9,Daryl Watts,16,Kateřina Mrázová,15,Savannah Harmon,30,Corinne Schroeder,,14 18 25 28 67,Jaime Bourbonnais - Élizabeth Giguère - Alex Carpenter - Micah Zandee-Hart - Emma Woods,,8 9 15 16 19 21,Natalie Snodgrass - Daryl Watts - Savannah Harmon - Kateřina Mrázová - Brianne Jenner - Ashton Bell,74.7,-12.5,71,2024-04-30,PWHL,2023/2024,Regular Season
+94,19:14,Penalty,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,5v5,15,Savannah Harmon,,,,,,,,,,,,,,,71,2024-04-30,PWHL,2023/2024,Regular Season
+95,19:38,Block,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5,25,Alex Carpenter,,,,,38,Emerance Maschmeyer,,,,,,,-60.3,-33.7,71,2024-04-30,PWHL,2023/2024,Regular Season
