@@ -1,0 +1,7 @@
+# Development / analysis dependencies
+# Install with: pip install -r requirements_dev.txt
+matplotlib
+seaborn
+jupyter
+
+# (Optionally) any interactive tooling can go here

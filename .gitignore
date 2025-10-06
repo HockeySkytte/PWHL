@@ -14,6 +14,7 @@ pip-wheel-metadata/
 !static/**
 !.gitignore
 !requirements.txt
+!requirements_dev.txt
 !README.md
 !WEB_APP_README.md
 !start_app.ps1

@@ -624,6 +624,11 @@ def teams_csv_raw():
         return send_from_directory(app.root_path, 'Teams.csv', mimetype='text/csv')
     return jsonify({'error':'Teams.csv not found'}), 404
 
+@app.route('/health')
+def health():
+    """Simple health check for deployment platforms (returns 200 JSON)."""
+    return jsonify({'status':'ok'}), 200
+
 @app.route('/hockey-rink.png')
 def hockey_rink_image():
     """Serve the rink image from project root if present; otherwise fall back to logo.
