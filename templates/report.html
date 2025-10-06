@@ -78,6 +78,17 @@
     #statsTable thead th{position:sticky;top:0;background:rgba(25,28,48,.92);backdrop-filter:blur(4px);z-index:10;}
     #statsTable thead tr:after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:rgba(255,255,255,.08);}
     #statsTable tbody td{background:transparent;}
+  /* Video events table header & column sizing */
+  #videoEventsTable{width:100%;border-collapse:separate;border-spacing:0;}
+  #videoEventsTable thead tr{position:relative;}
+  #videoEventsTable thead th{position:sticky;top:0;background:rgba(25,28,48,.92);backdrop-filter:blur(4px);z-index:10;font-size:.75rem;letter-spacing:.03em;}
+  #videoEventsTable thead tr:after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:rgba(255,255,255,.08);}
+  #videoEventsTable td,#videoEventsTable th{padding:.45rem .55rem;text-align:left;}
+  #videoEventsTable .col-time{width:45px;white-space:nowrap;}
+  #videoEventsTable .col-event{width:65px;white-space:nowrap;}
+  #videoEventsTable .col-team{width:125px;}
+  #videoEventsTable .col-player{width:155px;}
+  #videoEventsTable tbody td{background:transparent;font-size:.8rem;}
   footer{padding:.4rem .9rem;font-size:.6rem;color:#8684a3;text-align:center;border-top:1px solid var(--pwhl-border);background:var(--pwhl-surface-strong);margin-top:.25rem;}
     @media (max-width:1400px){.rink-row{grid-template-columns:1fr;} .kpi-column{flex-direction:row;flex-wrap:wrap;} .kpi-card{width:calc(50% - .5rem);} }
     @media (max-width:900px){.kpi-card{width:100%;} }
@@ -114,6 +125,9 @@
     }
   </style>
   <script>
+  // Ensure YouTube iframe fills the container
+  const vpObserver=new MutationObserver(()=>{ const pc=document.getElementById('videoPlayerContainer'); if(pc){ const ifr=pc.querySelector('iframe'); if(ifr){ ifr.style.width='100%'; ifr.style.height='100%'; ifr.style.objectFit='cover'; } } });
+  vpObserver.observe(document.body,{childList:true,subtree:true});
     // Soft prompt users to rotate if in portrait on small devices
     function checkOrientation(){
       const warnId='rotateWarning';
@@ -255,7 +269,7 @@
         <button class="sub-tab" data-view="video">Video</button>
       </div>
       <!-- Video Tab Section -->
-      <div id="videoTabWrapper" style="display:none;">
+  <div id="videoTabWrapper" style="display:none;width:100%;">
         <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.7rem;">
           <button id="videoPrevBtn" class="metric-btn">← Prev</button>
           <button id="videoNextBtn" class="metric-btn">Next →</button>
@@ -263,19 +277,26 @@
           <label style="font-size:.9rem;">After <input id="videoAfter" type="number" value="3" min="0" style="width:2.5em;margin:0 .3em;" /></label>
           <label style="font-size:.9rem;display:flex;align-items:center;gap:.4em;margin-left:1.2rem;"><input id="videoPlayAll" type="checkbox" style="margin-right:.3em;" /> Play All</label>
         </div>
-        <div style="display:flex;gap:1.5rem;align-items:flex-start;">
-          <div style="flex:1;min-width:420px;max-width:700px;">
-            <div id="videoPlayerContainer" style="background:#222;border-radius:.7rem;min-height:340px;display:flex;align-items:center;justify-content:center;">
+        <div id="videoRow" style="display:flex;gap:1.2rem;align-items:flex-start;width:100%;">
+          <div style="flex:1.4;min-width:520px;display:flex;">
+            <div id="videoPlayerContainer" style="background:#222;border-radius:.7rem;flex:1;display:flex;align-items:center;justify-content:center;overflow:hidden;">
               <div id="videoPlayer"></div>
             </div>
           </div>
-          <div style="flex:1.2;">
-            <table id="videoEventsTable" style="width:100%;border-collapse:separate;border-spacing:0;font-size:.95rem;background:var(--pwhl-surface);border-radius:.7rem;overflow:hidden;">
-              <thead style="background:rgba(255,255,255,.05);">
-                <tr><th>Team</th><th>Event</th><th>Player</th></tr>
-              </thead>
-              <tbody></tbody>
-            </table>
+          <div style="flex:0.6;min-width:300px;max-width:420px;display:flex;flex-direction:column;">
+            <div id="videoTableScroll" style="flex:1;overflow:auto;border-radius:.7rem;position:relative;border:1px solid var(--pwhl-border);background:var(--pwhl-surface);scrollbar-gutter:stable both-edges;">
+              <table id="videoEventsTable" style="width:100%;border-collapse:separate;border-spacing:0;font-size:.85rem;table-layout:fixed;">
+                <thead style="background:rgba(255,255,255,.06);position:sticky;top:0;z-index:5;">
+                    <tr>
+                      <th class="col-time">Time</th>
+                      <th class="col-team">Team</th>
+                      <th class="col-event">Event</th>
+                      <th class="col-player">Player</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
@@ -423,18 +444,66 @@
     currentVideoIdx = 0;
   }
   async function fetchVideoEvents(){
-    const r = await fetch('/api/report/video_events');
-    const data = await r.json();
-    videoEvents = data.events || [];
-    renderVideoEventsTable();
-    if(videoEvents.length) playVideoIdx(0);
+    try {
+      const currentTimeKey = videoEvents[currentVideoIdx]?.video_time;
+      const team=document.getElementById('teamSelect').value || 'All';
+      const date_from=dateFrom.value||''; const date_to=dateTo.value||'';
+      const params=new URLSearchParams();
+      if(team) params.set('team', team);
+      if(date_from) params.set('date_from', date_from);
+      if(date_to) params.set('date_to', date_to);
+      multiIds.forEach(id=>{ getMultiValues(id).forEach(v=>params.append(id, v)); });
+      const r = await fetch('/api/report/video_events?'+params.toString());
+      if(!r.ok){ console.warn('Video events fetch failed', r.status); return; }
+      const data = await r.json();
+      console.log('Video events response', data);
+      videoEvents = (data.events || [])
+        .filter(ev => ev.video_time && ev.video_time > 0)
+        .sort((a,b)=> a.video_time - b.video_time);
+      renderVideoEventsTable();
+      layoutVideoRow();
+      if(videoEvents.length) {
+        let idx = videoEvents.findIndex(ev=>ev.video_time===currentTimeKey);
+        if(idx<0) idx=0;
+        playVideoIdx(idx);
+      } else {
+    const tbody = document.querySelector('#videoEventsTable tbody');
+  const tr = document.createElement('tr');
+        const td = document.createElement('td');
+        td.colSpan=4; td.style.padding='.6rem .8rem'; td.style.fontSize='.8rem';
+        td.textContent = 'No video-tagged events found for current filters.';
+        tr.appendChild(td); tbody.appendChild(tr);
+      }
+    } catch(err){
+      console.error('Video events error', err);
+    }
   }
+  function layoutVideoRow(){
+    const row=document.getElementById('videoRow');
+    const player=document.getElementById('videoPlayerContainer');
+    const tableScroll=document.getElementById('videoTableScroll');
+    if(!row||!player||!tableScroll) return;
+    // Use player container width for aspect ratio height to avoid table column shrinking issues
+    const w=player.parentElement ? player.parentElement.clientWidth : player.clientWidth;
+    if(!w) return;
+    let h=Math.round(w * 9/16);
+    const maxH=Math.round(window.innerHeight*0.75);
+    if(h>maxH) h=maxH;
+    player.style.height=h+'px';
+    player.style.minHeight=h+'px';
+    tableScroll.style.height=h+'px';
+    tableScroll.style.maxHeight=h+'px';
+  }
+  window.addEventListener('resize', ()=>{ if(currentView==='video'){ layoutVideoRow(); } });
   function renderVideoEventsTable(){
     const tbody = document.querySelector('#videoEventsTable tbody');
     tbody.innerHTML = '';
     videoEvents.forEach((ev, i) => {
-      const tr = document.createElement('tr');
-      tr.innerHTML = `<td>${ev.team}</td><td>${ev.event}</td><td>${ev.player}</td>`;
+  const tr = document.createElement('tr');
+      const t = ev.video_time || 0; // seconds
+      const mm = String(Math.floor(t/60)).padStart(2,'0');
+      const ss = String(t%60).padStart(2,'0');
+  tr.innerHTML = `<td class=\"col-time\">${mm}:${ss}</td><td class=\"col-team\">${ev.team}</td><td class=\"col-event\">${ev.event}</td><td class=\"col-player\">${ev.player}</td>`;
       tr.style.cursor = 'pointer';
       if(i === currentVideoIdx) tr.style.background = 'rgba(142,124,214,.18)';
       tr.addEventListener('click', () => { playVideoIdx(i); });
@@ -449,13 +518,21 @@
     const before = parseInt(document.getElementById('videoBefore').value) || 7;
     const after = parseInt(document.getElementById('videoAfter').value) || 3;
     const start = Math.max(ev.video_time - before, 0);
-    const end = ev.video_time + after;
+    // Extend end to include the pre-roll so total window = before + after
+    const end = ev.video_time + before + after;
     loadYouTubeVideo(ev.video_url, start, end);
   }
   function loadYouTubeVideo(url, start, end){
-    // Extract video ID from URL
-    const match = url.match(/v=([\w-]+)/);
-    const vid = match ? match[1] : null;
+    // Extract video ID from various YouTube URL forms
+    let vid=null;
+    try {
+      const u=new URL(url);
+      if(u.hostname.includes('youtu.be')) vid = u.pathname.slice(1);
+      else if(u.searchParams.get('v')) vid = u.searchParams.get('v');
+      else if(/embed\/(.+)/.test(u.pathname)) vid = u.pathname.split('/embed/')[1].split(/[?&]/)[0];
+    } catch(e){
+      const m=url.match(/v=([\w-]+)/); vid = m?m[1]:null;
+    }
     if(!vid) return;
     if(!window.YT){
       // Load YouTube IFrame API
@@ -471,8 +548,8 @@
     if(ytPlayer){ ytPlayer.loadVideoById({videoId: vid, startSeconds: start}); } 
     else {
       ytPlayer = new YT.Player('videoPlayer', {
-        height: '320', width: '100%', videoId: vid,
-        playerVars: { autoplay: 1, controls: 1, start: start },
+        height: '100%', width: '100%', videoId: vid,
+        playerVars: { autoplay: 1, controls: 1, start: start, rel:0, modestbranding:1 },
         events: {
           'onStateChange': (e) => {
             if(e.data === YT.PlayerState.PLAYING){
@@ -482,6 +559,9 @@
           }
         }
       });
+      // Ensure iframe fills container
+      const pc=document.getElementById('videoPlayerContainer');
+      if(pc){ pc.querySelector('iframe').style.cssText='width:100%;height:100%;object-fit:cover;'; }
     }
   }
   function playNextVideo(){
@@ -691,7 +771,14 @@
       attach(defC); attach(offC);
     }
     // Events
-  document.addEventListener('change', e=>{ if(['teamSelect','dateFrom','dateTo'].includes(e.target.id)){ saveState(getState()); fetchKPIs(); fetchShotMap(); if(currentView==='heat-map'){ computeAndDrawHeat(); } }});
+  document.addEventListener('change', e=>{
+    if(['teamSelect','dateFrom','dateTo'].includes(e.target.id)){
+      saveState(getState()); fetchKPIs(); fetchShotMap(); if(currentView==='heat-map'){ computeAndDrawHeat(); }
+    }
+    if(currentView==='video' && !['videoBefore','videoAfter','videoPlayAll'].includes(e.target.id)){
+      fetchVideoEvents();
+    }
+  });
     // Init
   (async()=>{ await populateTeams(); await populateFilters(); await drawZoneBases(); await drawLegend(); window.addEventListener('resize',()=>{drawZoneBases(); fetchShotMap();}); })();
   /** ---------------- Heat Map (Zones) ----------------- */
@@ -700,7 +787,7 @@
   const offHeatCanvas=document.getElementById('offHeatCanvas');
   function resizeHeatCanvases(){ [defHeatCanvas,offHeatCanvas].forEach(c=>{ if(!c) return; c.width=c.clientWidth; c.height=c.clientHeight; }); }
   window.addEventListener('resize',()=>{ if(currentView==='heat-map'){ resizeHeatCanvases(); computeAndDrawHeat(); } });
-  function toggleView(view){ currentView=view; const showHeat=(view==='heat-map'); const showShotMap=(view==='shot-map'); const showShotAim=(view==='shot-aim'); const showTables=(view==='tables'); const shotMapRow=document.getElementById('shotMapRow'); const shotAim=document.getElementById('shotAimPlaceholder'); const tablesWrap=document.getElementById('tablesWrapper');
+  function toggleView(view){ currentView=view; const showHeat=(view==='heat-map'); const showShotMap=(view==='shot-map'); const showShotAim=(view==='shot-aim'); const showTables=(view==='tables'); const showVideo=(view==='video'); const shotMapRow=document.getElementById('shotMapRow'); const shotAim=document.getElementById('shotAimPlaceholder'); const tablesWrap=document.getElementById('tablesWrapper'); const videoWrap=document.getElementById('videoTabWrapper');
     document.getElementById('heatControls').style.display= showHeat? 'flex':'none';
     defHeatCanvas.style.display= showHeat? 'block':'none';
     offHeatCanvas.style.display= showHeat? 'block':'none';
@@ -708,12 +795,14 @@
     document.getElementById('offShotCanvas').style.display= showHeat||showShotMap? (showHeat? 'none':'block'):'none';
     shotMapRow.style.display = (showHeat||showShotMap)? 'grid':'none';
     shotAim.style.display = showShotAim? 'block':'none';
-    tablesWrap.style.display = showTables? 'block':'none';
+  tablesWrap.style.display = showTables? 'block':'none';
+  if(videoWrap) videoWrap.style.display = showVideo? 'block':'none';
     const metricBar=document.getElementById('topMetricBar'); if(metricBar) metricBar.style.display= showHeat? 'flex':'none';
     const markerLegend=document.getElementById('markerLegend'); if(markerLegend) markerLegend.style.display= showShotMap? 'flex':'none';
     if(showHeat){ resizeHeatCanvases(); computeAndDrawHeat(); }
   else if(showTables){ fetchCurrentTable(); }
-    else { if(selectedZoneIds.size){ selectedZoneIds.clear(); } fetchKPIs(); if(showShotMap) fetchShotMap(); }
+    else if(showVideo){ fetchVideoEvents(); }
+    else { if(selectedZoneIds.size){ selectedZoneIds.clear(); } fetchKPIs(); if(showShotMap) fetchShotMap(); if(!showVideo && typeof ytPlayer==='object' && ytPlayer && ytPlayer.stopVideo){ try{ ytPlayer.stopVideo(); }catch(e){} } }
   }
   // Use existing sub-tabs
   (function wireSubTabs(){ const container=document.getElementById('subTabs'); if(!container) return; container.addEventListener('click',e=>{ const btn=e.target.closest('.sub-tab'); if(!btn) return; container.querySelectorAll('.sub-tab').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); toggleView(btn.dataset.view); }); })();
