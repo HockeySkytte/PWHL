@@ -88,6 +88,16 @@
         #defRinkWrap,#offRinkWrap{max-width:100%;}
         .kpi-column{grid-column:1 / -1;order:3;flex-direction:row;flex-wrap:wrap;justify-content:center;}
       }
+      /* Table responsiveness */
+      @media (max-width:1100px){
+        #tablesWrapper{padding:0.75rem 1rem!important;}
+        #tablesWrapper #tablesFlex{flex-direction:column;}
+        #tableFilterPanel{width:100%!important;flex:0 0 auto!important;order:0;}
+        #tablesWrapper .table-scroll{overflow:auto;max-height:60vh;}
+      }
+      @media (max-width:900px){
+        #statsTable{min-width:900px;}
+      }
     @media (max-width:820px){
       .rink-row{grid-template-columns:1fr 1fr;}
       .zone-wrap{max-width:100%;aspect-ratio:75/85;}
@@ -314,7 +324,7 @@
         <button type="button" class="metric-btn tbl-sub-btn" data-table="goalies">Goaltenders</button>
         <button type="button" class="metric-btn tbl-sub-btn" data-table="teams">Teams</button>
       </div>
-      <div style="display:flex;align-items:stretch;gap:1rem;">
+      <div id="tablesFlex" style="display:flex;align-items:stretch;gap:1rem;">
         <!-- Table Filters Side Panel -->
         <div id="tableFilterPanel" style="width:220px;flex:0 0 220px;display:flex;flex-direction:column;gap:.75rem;background:var(--pwhl-surface);border:1px solid var(--pwhl-border);border-radius:.75rem;padding:.75rem;">
           <div style="font-size:.65rem;font-weight:600;letter-spacing:.07em;color:#b7b3cf;text-transform:uppercase;">Table Filters</div>
