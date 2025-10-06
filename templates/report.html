@@ -145,8 +145,19 @@
       if(v<mid){ const t=(v-low)/(mid-low); const blended=blendColor(t,RED,WHITE); return {bg:blended.hex, fg:blended.fg}; }
       const t=(v-mid)/(high-mid); const blended=blendColor(t,WHITE,BLUE); return {bg:blended.hex, fg:blended.fg};
     }
-    function applyKpiColoring(){ const targets=[['metric-cfpct',[30,50,70]],['metric-ffpct',[30,50,70]],['metric-sfpct',[30,50,70]],['metric-gfpct',[30,50,70]],['metric-xgfpct',[30,50,70]],['metric-pdo',[90,100,110]]];
-      targets.forEach(([id,range])=>{ const el=document.getElementById(id); if(!el) return; const valEl=el.querySelector('.value'); if(!valEl) return; const raw=(valEl.textContent||'').replace(/[^0-9.\-]/g,''); if(!raw) return; const val=parseFloat(raw); if(isNaN(val)) return; const grad=pctGradient(val,range[0],range[1],range[2]); if(!grad) return; el.style.background=grad.bg; el.style.borderColor=grad.bg; valEl.style.color=grad.fg; const lbl=el.querySelector('.label'); if(lbl) lbl.style.color=grad.fg==='#ffffff'?'#1f2937':'#f0f4f9'; }); }
+    function applyKpiColoring(){
+      const targets=[['metric-cfpct',[30,50,70]],['metric-ffpct',[30,50,70]],['metric-sfpct',[30,50,70]],['metric-gfpct',[30,50,70]],['metric-xgfpct',[30,50,70]],['metric-pdo',[90,100,110]]];
+      targets.forEach(([id,range])=>{
+        const el=document.getElementById(id); if(!el) return;
+        const valEl=el.querySelector('.value'); if(!valEl) return;
+        const raw=(valEl.textContent||'').replace(/[^0-9.\-]/g,''); if(!raw) return;
+        const val=parseFloat(raw); if(isNaN(val)) return;
+        const grad=pctGradient(val,range[0],range[1],range[2]); if(!grad) return;
+        el.style.background=grad.bg; el.style.borderColor=grad.bg;
+        valEl.style.color=grad.fg;
+        const lbl=el.querySelector('.label'); if(lbl) lbl.style.color=grad.fg; // match value color
+      });
+    }
     window.applyKpiColoring=applyKpiColoring;
   const mo=new MutationObserver(()=>applyKpiColoring()); window.addEventListener('DOMContentLoaded',()=>{ const k=document.getElementById('kpiColumn'); if(k) mo.observe(k,{subtree:true,childList:true,characterData:true}); applyKpiColoring(); });
   </script>
