@@ -65,6 +65,8 @@ class ReportDataStore:
         self.rows.clear()
         self.game_team_stats.clear()
         self.game_meta.clear()
+        # Store video-capable events separately (populated below)
+        self.video_events: List[Dict[str, Any]] = []
         if not os.path.isdir(DATA_SHOTS_DIR):
             self.loaded = True
             return
@@ -86,7 +88,7 @@ class ReportDataStore:
                                 'home_team': row.get('team_home') or '',
                                 'away_team': row.get('team_away') or ''
                             }
-                        # Only process shot-attempt related events (Shot, Goal, Block, Miss) + Goals
+                        # Only process shot-attempt related events (Shot, Goal, Block, Miss) + Penalties (for filtering)
                         ev = (row.get('event') or '').strip()
                         # Include penalty for plotting (if coordinates exist later) & filtering, even if no coords
                         if ev not in ('Shot','Goal','Block','Miss','Penalty'):
@@ -136,7 +138,7 @@ class ReportDataStore:
                         is_corsi = ev in ('Shot','Goal','Miss','Block')
                         is_fenwick = ev in ('Shot','Goal','Miss')  # Unblocked attempts
                         # Build row
-                        self.rows.append({
+                        rec = {
                             'game_id': gid,
                             'date': self.game_meta[gid]['date'] if gid else '',
                             'season': self.game_meta[gid]['season'] if gid else '',
@@ -161,7 +163,28 @@ class ReportDataStore:
                             'on_ice_home': home_on,
                             'on_ice_away': away_on,
                             'on_ice_all': on_ice_all,
-                        })
+                        }
+                        # Always add video_url and video_time keys, even if missing in CSV
+                        rec['video_url'] = row.get('video_url') or row.get('Video URL') or ''
+                        rec['video_time'] = row.get('video_time') or row.get('Video Time') or ''
+                        self.rows.append(rec)
+                        # Capture video playable events (URL + numeric time)
+                        if rec['video_url'] and rec['video_time'] and rec['event'] in ('Shot','Goal','Block','Miss','Penalty'):
+                            try:
+                                vtime = int(float(rec['video_time']))
+                            except Exception:
+                                vtime = None
+                            if vtime is not None:
+                                self.video_events.append({
+                                    'game_id': rec['game_id'],
+                                    'season': rec['season'],
+                                    'state': rec['state'],
+                                    'team': rec['team_for'],
+                                    'event': rec['event'],
+                                    'player': rec['shooter'] or '',
+                                    'video_url': rec['video_url'],
+                                    'video_time': vtime,
+                                })
             except Exception:
                 continue
         # Aggregate per game/team
@@ -516,6 +539,38 @@ class ReportDataStore:
                 'state': r.get('state'),
             })
         return {'count': len(attempts), 'games': len(game_ids_ordered), 'attempts': attempts}
+
+    # ---------------- Video Events -----------------
+    def video_events_list(self, team: str='All', season: str='All', season_state: str='All', games=None) -> List[Dict[str, Any]]:
+        """Return flat list of events that have usable video clips.
+
+        Currently very light filtering: optional team (shooter team), season, season_state, games list.
+        """
+        self.load()
+        games = games or []
+        rows = self.video_events
+        if team != 'All':
+            rows = [r for r in rows if r['team'] == team]
+        if season != 'All':
+            rows = [r for r in rows if r['season'] == season]
+        if season_state != 'All':
+            rows = [r for r in rows if r['state'] == season_state]
+        if games:
+            rows = [r for r in rows if r['game_id'] in games]
+        # Sort by game then video_time
+        rows = sorted(rows, key=lambda r: (r['game_id'], r['video_time']))
+        # Normalize response shape for frontend
+        return [
+            {
+                'game_id': r['game_id'],
+                'team': r['team'],
+                'event': r['event'],
+                'player': r['player'],
+                'video_url': r['video_url'],
+                'video_time': r['video_time']
+            }
+            for r in rows
+        ]
 
     # ---------------- Table Aggregations -----------------
     def _apply_common_filters(self, rows, **kwargs):
