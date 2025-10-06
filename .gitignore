@@ -31,3 +31,6 @@ pip-wheel-metadata/
 !app/
 !app/__init__.py
 !report_data.py
+!export_utils.py
+!export_all_csvs.py
+!debug_api.py
