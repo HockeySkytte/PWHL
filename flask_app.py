@@ -1,17 +1,4 @@
-@app.route('/api/report/video_events')
-def report_video_events():
-    """Return all video events for the Video tab."""
-    # Accept optional filters for team, season, season_state, games
-    team = request.args.get('team', 'All')
-    season = request.args.get('season', 'All')
-    season_state = request.args.get('season_state', 'All')
-    games = request.args.getlist('games')
-    if len(games) == 1 and ',' in games[0]:
-        games = [g for g in games[0].split(',') if g]
-    if not games:
-        games = None
-    events = report_store.video_events_list(team=team, season=season, season_state=season_state, games=games)
-    return jsonify({'events': events})
+
 from flask import Flask, render_template, jsonify, request, send_from_directory, Response
 from flask_cors import CORS
 import requests
@@ -19,7 +6,6 @@ import json
 import pandas as pd
 from datetime import datetime
 import csv
-import os
 import os
 
 app = Flask(__name__)
@@ -411,6 +397,41 @@ data_api = PWHLDataAPI()
 from export_utils import generate_lineups_csv, generate_pbp_csv
 from report_data import report_store
 
+# Video events endpoint (moved here to ensure report_store is defined)
+@app.route('/api/report/video_events')
+def report_video_events():
+    """Return all video-tagged events for the Video tab.
+
+    Optional query params: team, season, season_state, games (comma or repeated), reload=1.
+    """
+    # Initial (lazy) load
+    report_store.load()
+    # Allow explicit reload or attempt forced if empty
+    if request.args.get('reload') == '1' or not getattr(report_store, 'video_events', []):
+        report_store.load(force=True)
+    team = request.args.get('team', 'All')
+    season = request.args.get('season', 'All')
+    season_state = request.args.get('season_state', 'All')
+    date_from = request.args.get('date_from','')
+    date_to = request.args.get('date_to','')
+    def _get_multi(name):
+        vals = request.args.getlist(name)
+        if len(vals)==1 and ',' in vals[0]:
+            vals=[v for v in vals[0].split(',') if v]
+        return [v for v in vals if v]
+    games = _get_multi('games') or None
+    periods = _get_multi('periods') or None
+    events_f = _get_multi('events') or None
+    strengths = _get_multi('strengths') or None
+    players = _get_multi('players') or None
+    opponents = _get_multi('opponents') or None
+    events = report_store.video_events_list(
+        team=team, season=season, season_state=season_state, games=games,
+        periods=periods, events=events_f, strengths=strengths, players=players,
+        opponents=opponents, date_from=date_from, date_to=date_to
+    )
+    return jsonify({'events': events, 'count': len(events)})
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -438,21 +459,24 @@ def report_kpis():
         if len(vals)==1 and ',' in vals[0]:
             vals = [v for v in vals[0].split(',') if v]
         return [v for v in vals if v]
-    params['games'] = _get_multi('games')
-    params['players'] = _get_multi('players')
-    params['opponents'] = _get_multi('opponents')
-    params['periods'] = _get_multi('periods')
-    params['events'] = _get_multi('events')
+    games = _get_multi('games')
+    if games: params['games'] = ','.join(games)
+    players = _get_multi('players')
+    if players: params['players'] = ','.join(players)
+    opponents = _get_multi('opponents')
+    if opponents: params['opponents'] = ','.join(opponents)
+    periods = _get_multi('periods')
+    if periods: params['periods'] = ','.join(periods)
+    events = _get_multi('events')
+    if events: params['events'] = ','.join(events)
     strengths_multi = _get_multi('strengths')
-    if strengths_multi:
-        params['strengths_multi'] = strengths_multi
-    params['goalies'] = _get_multi('goalies')
+    if strengths_multi: params['strengths_multi'] = ','.join(strengths_multi)
+    goalies = _get_multi('goalies')
+    if goalies: params['goalies'] = ','.join(goalies)
     onice_multi = _get_multi('onice')
-    if onice_multi:
-        params['onice'] = onice_multi
+    if onice_multi: params['onice'] = ','.join(onice_multi)
     seasons_multi = _get_multi('seasons')
-    if seasons_multi:
-        params['seasons_multi'] = seasons_multi
+    if seasons_multi: params['seasons_multi'] = ','.join(seasons_multi)
     data = report_store.compute_kpis(**params)
     return jsonify(data)
 
@@ -472,21 +496,24 @@ def report_shotmap():
         if len(vals)==1 and ',' in vals[0]:
             vals = [v for v in vals[0].split(',') if v]
         return [v for v in vals if v]
-    params['games'] = _get_multi('games')
-    params['players'] = _get_multi('players')
-    params['opponents'] = _get_multi('opponents')
-    params['periods'] = _get_multi('periods')
-    params['events'] = _get_multi('events')
+    games = _get_multi('games')
+    if games: params['games'] = ','.join(games)
+    players = _get_multi('players')
+    if players: params['players'] = ','.join(players)
+    opponents = _get_multi('opponents')
+    if opponents: params['opponents'] = ','.join(opponents)
+    periods = _get_multi('periods')
+    if periods: params['periods'] = ','.join(periods)
+    events = _get_multi('events')
+    if events: params['events'] = ','.join(events)
     strengths_multi = _get_multi('strengths')
-    if strengths_multi:
-        params['strengths_multi'] = strengths_multi
-    params['goalies'] = _get_multi('goalies')
+    if strengths_multi: params['strengths_multi'] = ','.join(strengths_multi)
+    goalies = _get_multi('goalies')
+    if goalies: params['goalies'] = ','.join(goalies)
     onice_multi = _get_multi('onice')
-    if onice_multi:
-        params['onice'] = onice_multi
+    if onice_multi: params['onice'] = ','.join(onice_multi)
     seasons_multi = _get_multi('seasons')
-    if seasons_multi:
-        params['seasons_multi'] = seasons_multi
+    if seasons_multi: params['seasons_multi'] = ','.join(seasons_multi)
     data = report_store.shotmap(**params)
     return jsonify(data)
 
@@ -507,18 +534,24 @@ def report_tables():
         if len(vals)==1 and ',' in vals[0]:
             vals = [v for v in vals[0].split(',') if v]
         return [v for v in vals if v]
-    params['games'] = _get_multi('games')
-    params['players'] = _get_multi('players')
-    params['opponents'] = _get_multi('opponents')
-    params['periods'] = _get_multi('periods')
-    params['events'] = _get_multi('events')
+    games = _get_multi('games')
+    if games: params['games'] = ','.join(games)
+    players = _get_multi('players')
+    if players: params['players'] = ','.join(players)
+    opponents = _get_multi('opponents')
+    if opponents: params['opponents'] = ','.join(opponents)
+    periods = _get_multi('periods')
+    if periods: params['periods'] = ','.join(periods)
+    events = _get_multi('events')
+    if events: params['events'] = ','.join(events)
     strengths_multi = _get_multi('strengths')
-    if strengths_multi: params['strengths_multi']=strengths_multi
-    params['goalies'] = _get_multi('goalies')
+    if strengths_multi: params['strengths_multi'] = ','.join(strengths_multi)
+    goalies = _get_multi('goalies')
+    if goalies: params['goalies'] = ','.join(goalies)
     onice_multi = _get_multi('onice')
-    if onice_multi: params['onice']=onice_multi
+    if onice_multi: params['onice'] = ','.join(onice_multi)
     seasons_multi = _get_multi('seasons')
-    if seasons_multi: params['seasons_multi']=seasons_multi
+    if seasons_multi: params['seasons_multi'] = ','.join(seasons_multi)
     if table_type in ('skaters','skaters_individual'):
         data=report_store.tables_skaters_individual(**params)
     elif table_type=='goalies':
