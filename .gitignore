@@ -35,3 +35,6 @@ pip-wheel-metadata/
 !export_utils.py
 !export_all_csvs.py
 !debug_api.py
+!hockey-rink.png
+!favicon.png
+!PWHL_logo.png
