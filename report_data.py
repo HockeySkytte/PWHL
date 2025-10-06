@@ -168,23 +168,30 @@ class ReportDataStore:
                         rec['video_url'] = row.get('video_url') or row.get('Video URL') or ''
                         rec['video_time'] = row.get('video_time') or row.get('Video Time') or ''
                         self.rows.append(rec)
-                        # Capture video playable events (URL + numeric time)
-                        if rec['video_url'] and rec['video_time'] and rec['event'] in ('Shot','Goal','Block','Miss','Penalty'):
-                            try:
-                                vtime = int(float(rec['video_time']))
-                            except Exception:
-                                vtime = None
-                            if vtime is not None:
-                                self.video_events.append({
-                                    'game_id': rec['game_id'],
-                                    'season': rec['season'],
-                                    'state': rec['state'],
-                                    'team': rec['team_for'],
-                                    'event': rec['event'],
-                                    'player': rec['shooter'] or '',
-                                    'video_url': rec['video_url'],
-                                    'video_time': vtime,
-                                })
+                        # Capture video-tagged events (any non-empty URL). If time missing or invalid, default to 0.
+                        if rec['video_url'] and rec['event'] in ('Shot','Goal','Block','Miss','Penalty'):
+                            raw_vtime = rec.get('video_time')
+                            vtime: int = 0
+                            if raw_vtime not in (None, '', 'NaN'):
+                                try:
+                                    vtime = int(float(raw_vtime))
+                                except Exception:
+                                    vtime = 0
+                            self.video_events.append({
+                                'game_id': rec['game_id'],
+                                'season': rec['season'],
+                                'state': rec['state'],
+                                'team': rec['team_for'],
+                                'opponent': rec.get('team_against',''),
+                                'event': rec['event'],
+                                'player': rec['shooter'] or '',
+                                'video_url': rec['video_url'],
+                                'video_time': vtime,
+                                'period': rec.get('period',''),
+                                'strength': rec.get('strength',''),
+                                'date': rec.get('date',''),
+                                'has_explicit_time': bool(raw_vtime not in (None, '', 'NaN'))
+                            })
             except Exception:
                 continue
         # Aggregate per game/team
@@ -541,22 +548,47 @@ class ReportDataStore:
         return {'count': len(attempts), 'games': len(game_ids_ordered), 'attempts': attempts}
 
     # ---------------- Video Events -----------------
-    def video_events_list(self, team: str='All', season: str='All', season_state: str='All', games=None) -> List[Dict[str, Any]]:
+    def video_events_list(self, team: str='All', season: str='All', season_state: str='All', games=None, periods=None, events=None, strengths=None, players=None, opponents=None, date_from: str='', date_to: str='') -> List[Dict[str, Any]]:
         """Return flat list of events that have usable video clips.
 
         Currently very light filtering: optional team (shooter team), season, season_state, games list.
         """
         self.load()
         games = games or []
+        periods = periods or []
+        events = events or []
+        strengths = strengths or []
+        players = players or []
+        opponents = opponents or []
         rows = self.video_events
         if team != 'All':
-            rows = [r for r in rows if r['team'] == team]
+            # Participation semantics: include events where selected team is shooter OR opponent
+            rows = [r for r in rows if r['team'] == team or r.get('opponent') == team]
         if season != 'All':
             rows = [r for r in rows if r['season'] == season]
         if season_state != 'All':
             rows = [r for r in rows if r['state'] == season_state]
         if games:
             rows = [r for r in rows if r['game_id'] in games]
+        if periods:
+            periods_set = {str(p) for p in periods}
+            rows = [r for r in rows if str(r.get('period')) in periods_set]
+        if events:
+            events_set = set(events)
+            rows = [r for r in rows if r.get('event') in events_set]
+        if strengths:
+            strengths_set = set(strengths)
+            rows = [r for r in rows if r.get('strength') in strengths_set]
+        if players:
+            players_set = set(players)
+            rows = [r for r in rows if r.get('player') in players_set]
+        if opponents:
+            opp_set = set(opponents)
+            rows = [r for r in rows if r.get('opponent') in opp_set]
+        if date_from:
+            rows = [r for r in rows if r.get('date','') >= date_from]
+        if date_to:
+            rows = [r for r in rows if r.get('date','') <= date_to]
         # Sort by game then video_time
         rows = sorted(rows, key=lambda r: (r['game_id'], r['video_time']))
         # Normalize response shape for frontend
@@ -567,7 +599,9 @@ class ReportDataStore:
                 'event': r['event'],
                 'player': r['player'],
                 'video_url': r['video_url'],
-                'video_time': r['video_time']
+                'video_time': r['video_time'],
+                'period': r.get('period'),
+                'strength': r.get('strength')
             }
             for r in rows
         ]
