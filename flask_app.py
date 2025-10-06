@@ -647,7 +647,10 @@ def report_reload():
 def report_teams():
     """Return the list of distinct teams present in the loaded report store."""
     report_store.load()
-    teams = sorted({r['team_for'] for r in report_store.rows if r['team_for']})
+    teams = sorted({r['team_for'] for r in report_store.rows if r.get('team_for')})
+    # Bootstrap: if no rows yet (e.g., Data not bundled on first deploy), fall back to Teams.csv list
+    if not teams and hasattr(data_api, 'teams') and data_api.teams:
+        teams = sorted(data_api.teams.keys())
     return jsonify({'teams': teams})
 
 @app.route('/api/report/strengths')
