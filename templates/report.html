@@ -254,6 +254,31 @@
         <button class="sub-tab" data-view="tables">Tables</button>
         <button class="sub-tab" data-view="video">Video</button>
       </div>
+      <!-- Video Tab Section -->
+      <div id="videoTabWrapper" style="display:none;">
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.7rem;">
+          <button id="videoPrevBtn" class="metric-btn">← Prev</button>
+          <button id="videoNextBtn" class="metric-btn">Next →</button>
+          <label style="font-size:.9rem;margin-left:1.2rem;">Before <input id="videoBefore" type="number" value="7" min="0" style="width:2.5em;margin:0 .3em;" /></label>
+          <label style="font-size:.9rem;">After <input id="videoAfter" type="number" value="3" min="0" style="width:2.5em;margin:0 .3em;" /></label>
+          <label style="font-size:.9rem;display:flex;align-items:center;gap:.4em;margin-left:1.2rem;"><input id="videoPlayAll" type="checkbox" style="margin-right:.3em;" /> Play All</label>
+        </div>
+        <div style="display:flex;gap:1.5rem;align-items:flex-start;">
+          <div style="flex:1;min-width:420px;max-width:700px;">
+            <div id="videoPlayerContainer" style="background:#222;border-radius:.7rem;min-height:340px;display:flex;align-items:center;justify-content:center;">
+              <div id="videoPlayer"></div>
+            </div>
+          </div>
+          <div style="flex:1.2;">
+            <table id="videoEventsTable" style="width:100%;border-collapse:separate;border-spacing:0;font-size:.95rem;background:var(--pwhl-surface);border-radius:.7rem;overflow:hidden;">
+              <thead style="background:rgba(255,255,255,.05);">
+                <tr><th>Team</th><th>Event</th><th>Player</th></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="rink-row" id="shotMapRow">
       <!-- Heat Map metric buttons (visible only in Heat Map view) -->
@@ -385,6 +410,111 @@
   </main>
   <footer></footer>
   <script>
+  // --- Video Tab Logic ---
+  let videoEvents = [], currentVideoIdx = 0, ytPlayer = null, playAllActive = false, stopTimeout = null;
+  function showVideoTab(){
+    document.getElementById('videoTabWrapper').style.display = '';
+    fetchVideoEvents();
+  }
+  function hideVideoTab(){
+    document.getElementById('videoTabWrapper').style.display = 'none';
+    if(ytPlayer) ytPlayer.stopVideo();
+    videoEvents = [];
+    currentVideoIdx = 0;
+  }
+  async function fetchVideoEvents(){
+    const r = await fetch('/api/report/video_events');
+    const data = await r.json();
+    videoEvents = data.events || [];
+    renderVideoEventsTable();
+    if(videoEvents.length) playVideoIdx(0);
+  }
+  function renderVideoEventsTable(){
+    const tbody = document.querySelector('#videoEventsTable tbody');
+    tbody.innerHTML = '';
+    videoEvents.forEach((ev, i) => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `<td>${ev.team}</td><td>${ev.event}</td><td>${ev.player}</td>`;
+      tr.style.cursor = 'pointer';
+      if(i === currentVideoIdx) tr.style.background = 'rgba(142,124,214,.18)';
+      tr.addEventListener('click', () => { playVideoIdx(i); });
+      tbody.appendChild(tr);
+    });
+  }
+  function playVideoIdx(idx){
+    if(idx < 0 || idx >= videoEvents.length) return;
+    currentVideoIdx = idx;
+    renderVideoEventsTable();
+    const ev = videoEvents[idx];
+    const before = parseInt(document.getElementById('videoBefore').value) || 7;
+    const after = parseInt(document.getElementById('videoAfter').value) || 3;
+    const start = Math.max(ev.video_time - before, 0);
+    const end = ev.video_time + after;
+    loadYouTubeVideo(ev.video_url, start, end);
+  }
+  function loadYouTubeVideo(url, start, end){
+    // Extract video ID from URL
+    const match = url.match(/v=([\w-]+)/);
+    const vid = match ? match[1] : null;
+    if(!vid) return;
+    if(!window.YT){
+      // Load YouTube IFrame API
+      const tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      window.onYouTubeIframeAPIReady = () => createYTPlayer(vid, start, end);
+      document.body.appendChild(tag);
+    }else{
+      createYTPlayer(vid, start, end);
+    }
+  }
+  function createYTPlayer(vid, start, end){
+    if(ytPlayer){ ytPlayer.loadVideoById({videoId: vid, startSeconds: start}); } 
+    else {
+      ytPlayer = new YT.Player('videoPlayer', {
+        height: '320', width: '100%', videoId: vid,
+        playerVars: { autoplay: 1, controls: 1, start: start },
+        events: {
+          'onStateChange': (e) => {
+            if(e.data === YT.PlayerState.PLAYING){
+              if(stopTimeout) clearTimeout(stopTimeout);
+              stopTimeout = setTimeout(() => { ytPlayer.pauseVideo(); if(playAllActive) playNextVideo(); }, (end-start)*1000);
+            }
+          }
+        }
+      });
+    }
+  }
+  function playNextVideo(){
+    if(currentVideoIdx < videoEvents.length-1) playVideoIdx(currentVideoIdx+1);
+    else if(playAllActive) playVideoIdx(0);
+  }
+  function playPrevVideo(){
+    if(currentVideoIdx > 0) playVideoIdx(currentVideoIdx-1);
+  }
+  document.getElementById('videoPrevBtn').addEventListener('click', playPrevVideo);
+  document.getElementById('videoNextBtn').addEventListener('click', playNextVideo);
+  document.getElementById('videoPlayAll').addEventListener('change', e => { playAllActive = e.target.checked; });
+  document.getElementById('videoBefore').addEventListener('change', () => { playVideoIdx(currentVideoIdx); });
+  document.getElementById('videoAfter').addEventListener('change', () => { playVideoIdx(currentVideoIdx); });
+  document.addEventListener('keydown', e => {
+    if(document.getElementById('videoTabWrapper').style.display !== 'none'){
+      if(e.key === 'ArrowRight') playNextVideo();
+      if(e.key === 'ArrowLeft') playPrevVideo();
+    }
+  });
+  // Tab switching logic
+  document.querySelector('[data-view="video"]').addEventListener('click', () => {
+    document.querySelectorAll('.sub-tab').forEach(b => b.classList.remove('active'));
+    document.querySelector('[data-view="video"]').classList.add('active');
+    hideAllTabs(); showVideoTab(); window.currentView = 'video';
+  });
+  function hideAllTabs(){
+    document.getElementById('shotMapRow').style.display = 'none';
+    document.getElementById('tablesWrapper').style.display = 'none';
+    document.getElementById('videoTabWrapper').style.display = 'none';
+    document.getElementById('heatControls').style.display = 'none';
+    document.getElementById('shotAimPlaceholder').style.display = 'none';
+  }
   /* ---------------- Embedded Zones GeoJSON (full half-rink zone set) ---------------- */
   window.HOCKEY_ZONES = { "type": "FeatureCollection", "features": [
     {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[89,-12.5],[100,-12.5],[100,-14],[99.9989034876783,-14.25],[99.99561369755,-14.5],[99.9901298698339,-14.75],[99.9824507372522,-15],[99.9725745235657,-15.25],[99.9604989415154,-15.5],[99.9462211901686,-15.75],[99.929737951659,-16],[99.9110453873137,-16.25],[99.8901391331568,-16.5],[99.8670142947755,-16.75],[99.8416654415368,-17],[99.814086600136,-17.25],[99.7842712474619,-17.5],[99.752212302756,-17.75],[99.7179021190449,-18],[99.6813324738203,-18.25],[99.6424945589406,-18.5],[99.6013789697232,-18.75],[99.5579756931964,-19],[99.5122740954747,-19.25],[99.4642629082191,-19.5],[99.4139302141422,-19.75],[99.3612634315101,-20],[99.306249297595,-20.25],[99.2488738510232,-20.5],[99.1891224129621,-20.75],[99.1269795670826,-21],[99.0624291382309,-21.25],[98.995454169735,-21.5],[98.9260368992678,-21.75],[98.8541587331799,-22],[98.7798002192098,-22.25],[98.7029410174709,-22.5],[98.6235598696041,-22.75],[98.5416345659799,-23],[98.4571419108184,-23.25],[98.3700576850888,-23.5],[98.2803566070357,-23.75],[98.188012290165,-24],[98.0929971985107,-24.25],[97.9952825989835,-24.5],[97.8948385105876,-24.75],[97.7916336502698,-25],[97.6856353751441,-25.25],[97.5768096208106,-25.5],[97.4651208354592,-25.75],[97.3505319094211,-26],[97.2330040997937,-26.25],[97.1124969497314,-26.5],[96.9889682019496,-26.75],[96.8623737059448,-27],[96.7326673183792,-27.25],[96.5998007960223,-27.5],[96.463723680573,-27.75],[96.3243831746128,-28],[96.1817240078565,-28.25],[96.0356882927706,-28.5],[95.8862153685233,-28.75],[95.7332416321053,-29],[95.5767003553228,-29.25],[95.4165214862028,-29.5],[95.2526314331697,-29.75],[95.0849528301415,-30],[94.9134042804544,-30.25],[94.7379000772445,-30.5],[94.5583498975967,-30.75],[94.3746584673957,-31],[94.1867251933813,-31.25],[93.994443758404,-31.5],[93.7977016752848,-31.75],[93.5963797939844,-32],[93.3903517559677,-32.25],[93.1794833886788,-32.5],[92.9636320318813,-32.75],[92.742645786248,-33],[92.516362672927,-33.25],[92.2846096908265,-33.5],[92.0472017559569,-33.75],[91.803940504247,-34],[91.5546129356814,-34.25],[91.2989898732233,-34.5],[91.036824204563,-34.75],[90.7678488679977,-35],[90.4917745353087,-35.25],[90.2082869338697,-35.5],[89.917043736713,-35.75],[89.6176709319934,-36],[89.3097585609688,-36.25],[89,-36.5],[89,-12.5]]]},"properties":{"id":"O01","ZONE":"O"},"id":"O01"},
