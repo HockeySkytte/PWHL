@@ -561,6 +561,7 @@ def report_games():
     """
     report_store.load()
     rows = report_store.rows
+    team_param = request.args.get('team','').strip()
     def _get_multi(name):
         vals = request.args.getlist(name)
         if len(vals)==1 and ',' in vals[0]:
@@ -598,6 +599,9 @@ def report_games():
         rows = [r for r in rows if r['date'] >= date_from]
     if date_to:
         rows = [r for r in rows if r['date'] <= date_to]
+    # If team perspective provided, restrict to games involving that team
+    if team_param:
+        rows = [r for r in rows if r['team_for']==team_param or r['team_against']==team_param]
     # Build and sort games newest first
     game_ids = {r['game_id'] for r in rows if r['game_id']}
     meta_list = []
