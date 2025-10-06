@@ -82,7 +82,14 @@
     @media (max-width:1400px){.rink-row{grid-template-columns:1fr;} .kpi-column{flex-direction:row;flex-wrap:wrap;} .kpi-card{width:calc(50% - .5rem);} }
     @media (max-width:900px){.kpi-card{width:100%;} }
     /* Compact mobile landscape layout: put both zones and KPIs in a single responsive grid */
-    @media (max-width:1100px){
+    /* Landscape narrow: force 3-column layout (def rink, KPIs, off rink) */
+    @media (max-width:1100px) and (orientation:landscape){
+      .rink-row{grid-template-columns:1fr 320px 1fr;align-items:stretch;}
+      .kpi-column{order:0;width:100%;}
+      #defRinkWrap,#offRinkWrap{max-width:100%;}
+    }
+    /* Portrait narrow: stack single column */
+    @media (max-width:1100px) and (orientation:portrait){
       .rink-row{grid-template-columns:1fr;gap:.75rem;padding:.6rem 1rem 0;}
       .kpi-column{order:3;flex-direction:row;flex-wrap:wrap;justify-content:center;}
       #defRinkWrap,#offRinkWrap{max-width:600px;margin:0 auto;}
@@ -126,9 +133,10 @@
       function rgbToHex([r,g,b]){ return '#'+[r,g,b].map(x=>x.toString(16).padStart(2,'0')).join(''); }
       const ar=hexToRgb(a), br=hexToRgb(b); const cr=[0,1,2].map(i=>Math.round(ar[i]*(1-t)+br[i]*t)); const light=(0.299*cr[0]+0.587*cr[1]+0.114*cr[2]); return {hex:rgbToHex(cr), fg: light>170?'#111827':'#ffffff'}; }
     function pctGradient(val, low, mid, high){ if(val==null||isNaN(val)) return null; const v=parseFloat(val); if(v<=low) return {bg:'#6d1b24',fg:'#fff'}; if(v>=high) return {bg:'#123d70',fg:'#fff'}; if(v===mid) return {bg:'#ffffff',fg:'#111827'}; if(v<mid){ const t=(v-low)/(mid-low); return blendColor(t,'#6d1b24','#ffffff'); } const t=(v-mid)/(high-mid); return blendColor(t,'#ffffff','#123d70'); }
-    function applyKpiColoring(){ const targets=[['metric-cfpct',[30,50,70]],['metric-ffpct',[30,50,70]],['metric-sfpct',[30,50,70]],['metric-gfpct',[30,50,70]],['metric-xgfpct',[30,50,70]],['metric-pdo',[90,100,110]]]; targets.forEach(([id,range])=>{ const el=document.getElementById(id); if(!el) return; const valEl=el.querySelector('.value'); if(!valEl) return; const raw=valEl.textContent.replace(/[^0-9.\-]/g,''); const val=parseFloat(raw); const grad=pctGradient(val,range[0],range[1],range[2]); if(!grad) return; el.style.background=grad.bg; el.style.borderColor=grad.bg; valEl.style.color=grad.fg; const lbl=el.querySelector('.label'); if(lbl) lbl.style.color=grad.fg==='\#ffffff'?'#f0f0f5':'#374151'; }); }
+    function applyKpiColoring(){ const targets=[['metric-cfpct',[30,50,70]],['metric-ffpct',[30,50,70]],['metric-sfpct',[30,50,70]],['metric-gfpct',[30,50,70]],['metric-xgfpct',[30,50,70]],['metric-pdo',[90,100,110]]];
+      targets.forEach(([id,range])=>{ const el=document.getElementById(id); if(!el) return; const valEl=el.querySelector('.value'); if(!valEl) return; const raw=(valEl.textContent||'').replace(/[^0-9.\-]/g,''); if(!raw) return; const val=parseFloat(raw); if(isNaN(val)) return; const grad=pctGradient(val,range[0],range[1],range[2]); if(!grad) return; el.style.background=grad.bg; el.style.borderColor=grad.bg; valEl.style.color=grad.fg; const lbl=el.querySelector('.label'); if(lbl) lbl.style.color=grad.fg==='#ffffff'?'#1f2937':'#f0f4f9'; }); }
     window.applyKpiColoring=applyKpiColoring;
-    const mo=new MutationObserver(()=>applyKpiColoring()); window.addEventListener('DOMContentLoaded',()=>{ const k=document.getElementById('kpiColumn'); if(k) mo.observe(k,{subtree:true,childList:true,characterData:true}); });
+  const mo=new MutationObserver(()=>applyKpiColoring()); window.addEventListener('DOMContentLoaded',()=>{ const k=document.getElementById('kpiColumn'); if(k) mo.observe(k,{subtree:true,childList:true,characterData:true}); applyKpiColoring(); });
   </script>
 </head>
 <body>
@@ -503,7 +511,7 @@
     async function drawZoneBases(){ const img=await loadRink(); const def=document.getElementById('defRinkBase'); const off=document.getElementById('offRinkBase'); if(!def||!off) return; const d=setupCanvas(def); const o=setupCanvas(off); d.clearRect(0,0,def.width,def.height); o.clearRect(0,0,off.width,off.height); const sw=img.naturalWidth, sh=img.naturalHeight; const zoneW=sw*0.375; d.drawImage(img,0,0,zoneW,sh,0,0,def.width,def.height); o.drawImage(img,sw-zoneW,0,zoneW,sh,0,0,off.width,off.height); }
   function normalizeZoneCoord(x,y,isFor){ return { zx: isFor ? (x-25)/75 : (x+100)/75, zy:(42.5 - y)/85 }; }
   async function fetchShotMap(){ const team=document.getElementById('teamSelect').value; if(!team) return; const date_from=dateFrom.value||''; const date_to=dateTo.value||''; const params=new URLSearchParams({team,perspective:'All',date_from,date_to}); multiIds.forEach(id=>{ getMultiValues(id).forEach(v=>params.append(id, v)); }); const r=await fetch(`/api/report/shotmap?${params.toString()}`); if(!r.ok) return; const data=await r.json(); drawShotMap(data.attempts||[], team); }
-  async function populateFilters(){ try{ const r=await fetch('/api/report/filters'); if(!r.ok) return; const data=await r.json(); buildMenu('seasons', data.seasons||[]); buildMenu('season_states', data.season_states||data.states||[]); buildMenu('games', data.games||[]); buildMenu('players', data.players||[]); buildMenu('opponents', data.opponents||[]); buildMenu('periods', data.periods||[]); buildMenu('events', data.events||[]); buildMenu('strengths', data.strengths||[]); buildMenu('goalies', data.goalies||[]); buildMenu('onice', data.onice||[]); setTimeout(()=>{ restoreState(); multiIds.forEach(id=>updateButtonLabel(id)); fetchKPIs(); fetchShotMap(); },0); }catch(e){} }
+  async function populateFilters(){ try{ const r=await fetch('/api/report/filters'); if(!r.ok) return; const data=await r.json(); buildMenu('seasons', data.seasons||[]); buildMenu('season_states', data.season_states||data.states||[]); buildMenu('games', []); buildMenu('players', data.players||[]); buildMenu('opponents', data.opponents||[]); buildMenu('periods', data.periods||[]); buildMenu('events', data.events||[]); buildMenu('strengths', data.strengths||[]); buildMenu('goalies', data.goalies||[]); buildMenu('onice', data.onice||[]); setTimeout(()=>{ restoreState(); multiIds.forEach(id=>updateButtonLabel(id)); refreshGames(); fetchKPIs(); fetchShotMap(); },0); }catch(e){} }
   async function refreshGames(){ const params=new URLSearchParams(); ['players','opponents','periods','events','strengths','goalies','seasons','season_states','onice'].forEach(id=>{ getMultiValues(id).forEach(v=>params.append(id,v)); }); const df=dateFrom.value||''; const dt=dateTo.value||''; if(df) params.set('date_from',df); if(dt) params.set('date_to',dt); const team=document.getElementById('teamSelect').value; if(team) params.set('team',team); const r=await fetch('/api/report/games?'+params.toString()); if(!r.ok) return; const data=await r.json(); buildMenu('games', data.games||[]); updateButtonLabel('games'); }
     // Team color lookup (quick parse of Teams.csv once)
     const teamColorCache = (function(){ let colors=null; return async function(team){ if(colors) return colors[team]||'#53b3ff'; try{ const resp=await fetch('/Teams.csv'); if(resp.ok){ colors={}; const txt=await resp.text(); const lines=txt.split(/\n/); const header=lines.shift(); lines.forEach(l=>{ const c=l.split(','); if(c.length>5){ colors[c[1]]=c[5]; }}); return colors[team]||'#53b3ff'; } }catch(e){} return '#53b3ff'; }; })();
