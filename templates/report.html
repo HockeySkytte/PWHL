@@ -19,11 +19,12 @@
     .tab.active{color:var(--pwhl-accent-strong);border-bottom-color:var(--pwhl-accent-strong);} 
     main{flex:1;display:flex;flex-direction:column;padding:0 0 2rem;}
     .slicers-wrapper{background:var(--pwhl-surface-strong);border-bottom:1px solid var(--pwhl-border);padding:.75rem 2rem;display:flex;flex-direction:column;gap:.6rem;}
-    .team-row{display:flex;align-items:flex-end;gap:1.25rem;}
-  .slicers{display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;}
-  .filter-group{display:flex;flex-direction:column;min-width:160px;position:relative;}
-    .filter-label{margin-bottom:.4rem;font-weight:600;color:#e2e8f0;font-size:.75rem;letter-spacing:.05em;text-transform:uppercase;}
-  .filter-select{width:160px;background:#4a5568;border:1px solid #718096;border-radius:.375rem;padding:.45rem .6rem;color:#fff;font-size:.7rem;}
+    .team-row{display:flex;align-items:flex-end;gap:1rem;flex-wrap:wrap;}
+    .slicers{display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;}
+    .filter-group{display:flex;flex-direction:column;min-width:170px;position:relative;}
+    .filter-label{margin-bottom:.4rem;font-weight:600;color:#e2e8f0;font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;}
+    .filter-select{width:170px;background:#4a5568;border:1px solid #718096;border-radius:.375rem;padding:.45rem .6rem;color:#fff;font-size:.7rem;}
+    .dropdown-toggle{width:170px;}
   .dropdown{position:relative;}
   .dropdown-toggle{position:relative;width:160px;background:#4a5568;border:1px solid #718096;border-radius:.375rem;padding:.45rem .85rem .45rem .6rem;color:#fff;font-size:.7rem;text-align:left;display:flex;justify-content:flex-start;align-items:center;cursor:pointer;-webkit-appearance:none;appearance:none;}
   .dropdown-toggle:after{content:"";position:absolute;right:.55rem;top:50%;width:0;height:0;pointer-events:none;border-left:5px solid transparent;border-right:5px solid transparent;border-top:6px solid #e5e7eb;opacity:.9;transform:translateY(-50%);transition:.18s ease;}
@@ -65,6 +66,11 @@
     .metric-btn:hover{background:#445273;}
     .metric-btn.active{background:var(--pwhl-accent-strong)!important;color:#111!important;border-color:var(--pwhl-accent-strong)!important;font-weight:600;}
     .tbl-sub-btn.active{background:var(--pwhl-accent-strong)!important;color:#111!important;border-color:var(--pwhl-accent-strong)!important;font-weight:600;}
+    /* Sticky table header fix */
+    .table-scroll{position:relative;}
+    #statsTable thead th{position:sticky;top:0;background:rgba(25,28,48,.92);backdrop-filter:blur(4px);z-index:10;}
+    #statsTable thead tr:after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:rgba(255,255,255,.08);}
+    #statsTable tbody td{background:transparent;}
   footer{padding:.4rem .9rem;font-size:.6rem;color:#8684a3;text-align:center;border-top:1px solid var(--pwhl-border);background:var(--pwhl-surface-strong);margin-top:.25rem;}
     @media (max-width:1400px){.rink-row{grid-template-columns:1fr;} .kpi-column{flex-direction:row;flex-wrap:wrap;} .kpi-card{width:calc(50% - .5rem);} }
     @media (max-width:900px){.kpi-card{width:100%;} }
@@ -80,24 +86,24 @@
   </div>
   <main>
     <div class="slicers-wrapper" id="slicersWrapper">
-      <div class="team-row" style="gap:1.25rem;flex-wrap:wrap;align-items:flex-end;">
-        <div class="filter-group" style="min-width:180px;">
+      <div class="team-row" style="align-items:flex-end;">
+        <div class="filter-group" style="min-width:170px;">
           <label class="filter-label" for="teamSelect">Team Perspective</label>
-          <select class="filter-select" id="teamSelect" style="width:180px;"></select>
+          <select class="filter-select" id="teamSelect"></select>
         </div>
-        <div class="filter-group" style="min-width:150px;">
+        <div class="filter-group">
           <label class="filter-label" for="dateFrom">Date From</label>
-          <input id="dateFrom" type="date" class="filter-select" style="width:150px;" />
+          <input id="dateFrom" type="date" class="filter-select" />
         </div>
-        <div class="filter-group" style="min-width:150px;">
+        <div class="filter-group">
           <label class="filter-label" for="dateTo">Date To</label>
-          <input id="dateTo" type="date" class="filter-select" style="width:150px;" />
+          <input id="dateTo" type="date" class="filter-select" />
         </div>
-        <div class="filter-group" data-filter="seasons" style="min-width:170px;">
+        <div class="filter-group" data-filter="seasons">
           <label class="filter-label">Season</label>
           <div class="dropdown" id="seasonsDropdown"><button class="dropdown-toggle" type="button">Select Seasons</button><div class="dropdown-menu" id="seasonsMenu"></div></div>
         </div>
-        <div class="filter-group" data-filter="season_states" style="min-width:170px;">
+        <div class="filter-group" data-filter="season_states">
           <label class="filter-label">Season State</label>
           <div class="dropdown" id="seasonStatesDropdown"><button class="dropdown-toggle" type="button">Select States</button><div class="dropdown-menu" id="seasonStatesMenu"></div></div>
         </div>
@@ -174,8 +180,8 @@
         <div class="kpi-card" data-group="corsi"><h3>Corsi</h3><div class="kpi-metrics"><div class="kpi-metric" id="metric-ca"><span class="label">CA</span><span class="value">—</span></div><div class="kpi-metric middle" id="metric-cfpct"><span class="label">CF%</span><span class="value">—</span></div><div class="kpi-metric" id="metric-cf"><span class="label">CF</span><span class="value">—</span></div></div></div>
         <div class="kpi-card" data-group="fenwick"><h3>Fenwick</h3><div class="kpi-metrics"><div class="kpi-metric" id="metric-fa"><span class="label">FA</span><span class="value">—</span></div><div class="kpi-metric middle" id="metric-ffpct"><span class="label">FF%</span><span class="value">—</span></div><div class="kpi-metric" id="metric-ff"><span class="label">FF</span><span class="value">—</span></div></div></div>
         <div class="kpi-card" data-group="shots"><h3>Shots</h3><div class="kpi-metrics"><div class="kpi-metric" id="metric-sa"><span class="label">SA</span><span class="value">—</span></div><div class="kpi-metric middle" id="metric-sfpct"><span class="label">SF%</span><span class="value">—</span></div><div class="kpi-metric" id="metric-sf"><span class="label">SF</span><span class="value">—</span></div></div></div>
-        <div class="kpi-card" data-group="xg"><h3>xG</h3><div class="kpi-metrics"><div class="kpi-metric" id="metric-xga"><span class="label">xGA</span><span class="value">—</span></div><div class="kpi-metric middle" id="metric-xgfpct"><span class="label">xGF%</span><span class="value">—</span></div><div class="kpi-metric" id="metric-xgf"><span class="label">xGF</span><span class="value">—</span></div></div></div>
-        <div class="kpi-card" data-group="goals"><h3>Goals</h3><div class="kpi-metrics"><div class="kpi-metric" id="metric-ga"><span class="label">GA</span><span class="value">—</span></div><div class="kpi-metric middle" id="metric-gfpct"><span class="label">GF%</span><span class="value">—</span></div><div class="kpi-metric" id="metric-gf"><span class="label">GF</span><span class="value">—</span></div></div></div>
+    <div class="kpi-card" data-group="xg"><h3>xG</h3><div class="kpi-metrics"><div class="kpi-metric" id="metric-xga"><span class="label">xGA</span><span class="value">—</span></div><div class="kpi-metric middle" id="metric-xgfpct"><span class="label">xGF%</span><span class="value">—</span></div><div class="kpi-metric" id="metric-xgf"><span class="label">xGF</span><span class="value">—</span></div></div></div>
+    <div class="kpi-card" data-group="goals"><h3>Goals</h3><div class="kpi-metrics"><div class="kpi-metric" id="metric-ga"><span class="label">GA</span><span class="value">—</span></div><div class="kpi-metric middle" id="metric-gfpct"><span class="label">GF%</span><span class="value">—</span></div><div class="kpi-metric" id="metric-gf"><span class="label">GF</span><span class="value">—</span></div></div></div>
         <div class="kpi-card" data-group="goaltending-shooting"><h3>Shooting / Goaltending</h3><div class="kpi-metrics"><div class="kpi-metric" id="metric-svpct"><span class="label">Sv%</span><span class="value">—</span></div><div class="kpi-metric middle" id="metric-pdo"><span class="label">PDO</span><span class="value">—</span></div><div class="kpi-metric" id="metric-shpct"><span class="label">Sh%</span><span class="value">—</span></div></div></div>
         <div id="markerLegend" style="margin-top:auto;display:flex;flex-direction:column;gap:.55rem;padding-top:.25rem;">
           <div style="font-size:.7rem;letter-spacing:.07em;font-weight:600;color:#b7b3cf;text-transform:uppercase;text-align:center;">Legend</div>
@@ -226,9 +232,17 @@
         <div id="tableFilterPanel" style="width:220px;flex:0 0 220px;display:flex;flex-direction:column;gap:.75rem;background:var(--pwhl-surface);border:1px solid var(--pwhl-border);border-radius:.75rem;padding:.75rem;">
           <div style="font-size:.65rem;font-weight:600;letter-spacing:.07em;color:#b7b3cf;text-transform:uppercase;">Table Filters</div>
           <div style="display:flex;gap:.5rem;">
-            <button id="tfModeTotals" type="button" class="metric-btn" style="flex:1;">Totals</button>
             <button id="tfModePerGame" type="button" class="metric-btn" style="flex:1;">Per Game</button>
+            <button id="tfModeTotals" type="button" class="metric-btn" style="flex:1;">Totals</button>
           </div>
+          <label style="display:flex;flex-direction:column;gap:.3rem;font-size:.6rem;">
+            <span style="font-weight:500;letter-spacing:.05em;">Search (Name)</span>
+            <input id="tfSearch" type="text" placeholder="Type to filter..." style="background:#394566;border:1px solid #566080;color:#fff;border-radius:.45rem;padding:.4rem .55rem;font-size:.65rem;" />
+          </label>
+          <label style="display:flex;flex-direction:column;gap:.25rem;font-size:.55rem;">
+            <span style="font-weight:500;letter-spacing:.05em;">Min GP</span>
+            <input id="tfMinGP" type="number" min="0" placeholder="0" style="background:#394566;border:1px solid #566080;color:#fff;border-radius:.4rem;padding:.35rem .45rem;font-size:.6rem;" />
+          </label>
           <label style="display:flex;flex-direction:column;gap:.3rem;font-size:.6rem;">
             <span style="font-weight:500;letter-spacing:.05em;">Season</span>
             <select id="tfSeason" style="background:#394566;border:1px solid #566080;color:#fff;border-radius:.45rem;padding:.4rem .55rem;font-size:.65rem;">
@@ -243,14 +257,6 @@
               <option value="Playoffs">Playoffs</option>
             </select>
           </label>
-          <label style="display:flex;flex-direction:column;gap:.3rem;font-size:.6rem;">
-            <span style="font-weight:500;letter-spacing:.05em;">Search (Name)</span>
-            <input id="tfSearch" type="text" placeholder="Type to filter..." style="background:#394566;border:1px solid #566080;color:#fff;border-radius:.45rem;padding:.4rem .55rem;font-size:.65rem;" />
-          </label>
-          <label style="display:flex;flex-direction:column;gap:.25rem;font-size:.55rem;">
-            <span style="font-weight:500;letter-spacing:.05em;">Min GP</span>
-            <input id="tfMinGP" type="number" min="0" placeholder="0" style="background:#394566;border:1px solid #566080;color:#fff;border-radius:.4rem;padding:.35rem .45rem;font-size:.6rem;" />
-          </label>
           <label style="display:flex;flex-direction:column;gap:.3rem;font-size:.55rem;">
             <span style="font-weight:500;letter-spacing:.05em;">Strength</span>
             <select id="tfStrength" style="background:#394566;border:1px solid #566080;color:#fff;border-radius:.45rem;padding:.4rem .55rem;font-size:.6rem;">
@@ -261,14 +267,14 @@
               <option value="SH">SH</option>
             </select>
           </label>
-          <div style="display:flex;gap:.5rem;">
+          <div style="display:flex;gap:.5rem;margin-top:.6rem;padding-top:.6rem;border-top:1px solid var(--pwhl-border);">
             <button id="tfReset" type="button" class="metric-btn" style="flex:1;">Reset</button>
           </div>
           <div id="tfSummary" style="font-size:.55rem;color:#b7b3cf;letter-spacing:.04em;margin-top:.25rem;">—</div>
         </div>
         <!-- Table Scrollable Area -->
         <div style="flex:1;display:flex;flex-direction:column;">
-          <div style="border:1px solid var(--pwhl-border);border-radius:.75rem;background:var(--pwhl-surface);max-height:62vh;overflow:auto;">
+          <div class="table-scroll" style="border:1px solid var(--pwhl-border);border-radius:.75rem;background:var(--pwhl-surface);max-height:62vh;overflow:auto;scrollbar-gutter:stable both-edges;">
             <table id="statsTable" style="width:100%;border-collapse:separate;border-spacing:0;font-size:.7rem;">
               <thead style="background:rgba(255,255,255,.05);position:sticky;top:0;z-index:5;">
                 <tr id="statsHeader"></tr>
@@ -350,9 +356,42 @@
   // multiIds includes 'onice' which uses AND semantics handled server-side
   const multiIds=['seasons','season_states','games','players','opponents','periods','events','strengths','goalies','onice'];
     function getMultiValues(id){ return Array.from(document.querySelectorAll(`#${id}Menu input:checked`)).map(i=>i.value); }
-    function getState(){ const st={team:document.getElementById('teamSelect').value,date_from:dateFrom.value||'',date_to:dateTo.value||''}; multiIds.forEach(id=>{st[id]=getMultiValues(id);}); return st; }
-    function restoreState(){ const st=loadState(); if(!st) return; if(st.team){ const sel=document.getElementById('teamSelect'); if(Array.from(sel.options).some(o=>o.value===st.team)) sel.value=st.team; }
-      if(st.date_from) dateFrom.value=st.date_from; if(st.date_to) dateTo.value=st.date_to; multiIds.forEach(id=>{ (st[id]||[]).forEach(v=>{ const cb=document.querySelector(`#${id}Menu input[value="${CSS.escape(v)}"]`); if(cb) cb.checked=true; }); updatePills(id); }); }
+    function getState(){
+      const st={
+        team:document.getElementById('teamSelect').value,
+        date_from:dateFrom.value||'',
+        date_to:dateTo.value||'',
+        // Table view state
+        activeTable: document.querySelector('.tbl-sub-btn.active')?.dataset.table || 'skaters',
+        tableMode: window._tableMode || 'totals',
+        tfSearch: document.getElementById('tfSearch')?.value || '',
+        tfMinGP: document.getElementById('tfMinGP')?.value || '',
+        tfSeason: document.getElementById('tfSeason')?.value || 'All',
+        tfSeasonState: document.getElementById('tfSeasonState')?.value || 'All',
+        tfStrength: document.getElementById('tfStrength')?.value || 'All'
+      };
+      multiIds.forEach(id=>{st[id]=getMultiValues(id);});
+      return st;
+    }
+    function restoreState(){ const st=loadState(); if(!st) return; if(st.team){ const sel=document.getElementById('teamSelect'); if(sel && Array.from(sel.options).some(o=>o.value===st.team)) sel.value=st.team; }
+      if(st.date_from) dateFrom.value=st.date_from; if(st.date_to) dateTo.value=st.date_to; multiIds.forEach(id=>{ (st[id]||[]).forEach(v=>{ const cb=document.querySelector(`#${id}Menu input[value="${CSS.escape(v)}"]`); if(cb) cb.checked=true; }); updatePills(id); });
+      // Defer table-specific state application until those controls exist
+      setTimeout(()=>{
+        if(st.activeTable){
+          const btn=document.querySelector(`.tbl-sub-btn[data-table="${st.activeTable}"]`);
+            if(btn){ document.querySelectorAll('.tbl-sub-btn').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); }
+        }
+        if(typeof st.tableMode==='string'){ window._tableMode = st.tableMode; }
+        const search=document.getElementById('tfSearch'); if(search && st.tfSearch!==undefined) search.value=st.tfSearch;
+        const minGP=document.getElementById('tfMinGP'); if(minGP && st.tfMinGP!==undefined) minGP.value=st.tfMinGP;
+        const seasonSel=document.getElementById('tfSeason'); if(seasonSel && st.tfSeason) seasonSel.value=st.tfSeason;
+        const seasonStateSel=document.getElementById('tfSeasonState'); if(seasonStateSel && st.tfSeasonState) seasonStateSel.value=st.tfSeasonState;
+        const strengthSel=document.getElementById('tfStrength'); if(strengthSel && st.tfStrength) strengthSel.value=st.tfStrength;
+        try{ if(typeof updateModeButtons==='function') updateModeButtons(); }catch(e){}
+        // Trigger table fetch/render after restoration
+        try{ fetchCurrentTable(); }catch(e){}
+      }, 0);
+    }
     function toggleDropdown(drop){ document.querySelectorAll('.dropdown').forEach(d=>{ if(d!==drop) d.classList.remove('open');}); drop.classList.toggle('open'); }
     document.addEventListener('click',e=>{ const dd=e.target.closest('.dropdown'); if(!dd) document.querySelectorAll('.dropdown').forEach(d=>d.classList.remove('open')); });
     function buildMenu(id, items){ const menu=document.getElementById(id+'Menu'); if(!menu) return; menu.innerHTML='';
@@ -387,7 +426,16 @@
   // external clear links removed
     async function fetchKPIs(){ const team=document.getElementById('teamSelect').value; if(!team) return; const date_from=dateFrom.value||''; const date_to=dateTo.value||''; const params=new URLSearchParams({team,perspective:'For',date_from,date_to}); multiIds.forEach(id=>{ getMultiValues(id).forEach(v=>params.append(id, v)); }); const r=await fetch(`/api/report/kpis?${params.toString()}`);
       if(!r.ok) return; const data=await r.json(); const m=data.metrics||{};
-      const map={ 'metric-ca':m['CA'],'metric-cfpct':m['CF%'],'metric-cf':m['CF'], 'metric-fa':m['FA'],'metric-ffpct':m['FF%'],'metric-ff':m['FF'], 'metric-sa':m['SA'],'metric-sfpct':m['SF%'],'metric-sf':m['SF'], 'metric-xga':m['xGA'],'metric-xgfpct':m['xGF%'],'metric-xgf':m['xGF'], 'metric-ga':m['GA'],'metric-gfpct':m['GF%'],'metric-gf':m['GF'], 'metric-svpct':m['Sv%'],'metric-pdo':m['PDO'],'metric-shpct':m['Sh%'] };
+      // Map KPI element ids to returned metric keys (adds Goals + Shooting/Goaltending cards)
+      const map={
+        'metric-ca':m['CA'],'metric-cfpct':m['CF%'],'metric-cf':m['CF'],
+        'metric-fa':m['FA'],'metric-ffpct':m['FF%'],'metric-ff':m['FF'],
+        'metric-sa':m['SA'],'metric-sfpct':m['SF%'],'metric-sf':m['SF'],
+        // Goals card
+        'metric-ga':m['GA'],'metric-gfpct':m['GF%'],'metric-gf':m['GF'],
+        // Shooting / Goaltending card
+        'metric-shpct':m['Sh%'],'metric-svpct':m['Sv%'],'metric-pdo':m['PDO']
+      };
       Object.entries(map).forEach(([id,val])=>{ const el=document.getElementById(id)?.querySelector('.value'); if(el) el.textContent=(val==null||val==='')?'—':val; });
     }
     // Strength & Team population
@@ -489,7 +537,7 @@
   }
   function aggregateZones(team){
     const stats={};
-    const ensure=id=>{ if(!stats[id]) stats[id]={CF:0,FF:0,SF:0,GF:0,CA:0,FA:0,SA:0,GA:0}; return stats[id]; };
+  const ensure=id=>{ if(!stats[id]) stats[id]={CF:0,FF:0,SF:0,CA:0,FA:0,SA:0}; return stats[id]; };
     for(const a of latestAttempts){
       if(a.forTeam!==team && a.againstTeam!==team) continue; // only events involving team
       const zid=pointZoneId(a, team); if(!zid) continue;
@@ -503,8 +551,8 @@
       if(['Shot','Goal','Miss','Block'].includes(a.event)) { if(forSide) s.CF++; else s.CA++; }
       if(['Shot','Goal','Miss'].includes(a.event)) { if(forSide) s.FF++; else s.FA++; }
       if(['Shot','Goal'].includes(a.event)) {
-        if(forSide){ s.SF++; if(a.event==='Goal') s.GF++; }
-        else { s.SA++; if(a.event==='Goal') s.GA++; }
+        if(forSide){ s.SF++; }
+        else { s.SA++; }
       }
     }
     return stats;
@@ -512,11 +560,11 @@
   function computeMetricValue(zoneId, stat, metric){ if(!stat) return 0; const defensive = zoneId.startsWith('D');
     if(defensive){
       switch(metric){
-        case 'corsi': return stat.CA; case 'fenwick': return stat.FA; case 'shots': return stat.SA; case 'goals': return stat.GA; case 'shpct': return stat.SA? (stat.GA/stat.SA*100):0; default: return 0;
+  case 'corsi': return stat.CA; case 'fenwick': return stat.FA; case 'shots': return stat.SA; case 'goals': return 0; case 'shpct': return 0; default: return 0;
       }
     } else { // offensive or neutral -> for team
       switch(metric){
-        case 'corsi': return stat.CF; case 'fenwick': return stat.FF; case 'shots': return stat.SF; case 'goals': return stat.GF; case 'shpct': return stat.SF? (stat.GF/stat.SF*100):0; default: return 0;
+  case 'corsi': return stat.CF; case 'fenwick': return stat.FF; case 'shots': return stat.SF; case 'goals': return 0; case 'shpct': return 0; default: return 0;
       }
     }
   }
@@ -533,24 +581,20 @@
     // Determine offensive and defensive ids from selection (pairing logic ensures <=1 pair)
     let offensiveId=null, defensiveId=null;
     selectedZoneIds.forEach(id=>{ if(id.startsWith('O')||id.startsWith('N')) offensiveId=id; else if(id.startsWith('D')) defensiveId=id; });
-    let CF=0,CA=0,FF=0,FA=0,SF=0,SA=0,GF=0,GA=0;
+  let CF=0,CA=0,FF=0,FA=0,SF=0,SA=0;
     for(const a of latestAttempts){ if(a.forTeam!==team && a.againstTeam!==team) continue; const zid=pointZoneId(a, team); if(!zid) continue; const isFor=a.forTeam===team; const isAgainst=a.againstTeam===team; // Only count team offense in offensiveId AND opponent offense in defensiveId
       if(isFor){ if(!offensiveId || zid!==offensiveId) continue; } else if(isAgainst){ if(!defensiveId || zid!==defensiveId) continue; } else continue;
       if(['Shot','Goal','Miss','Block'].includes(a.event)){ if(isFor) CF++; if(isAgainst) CA++; }
       if(['Shot','Goal','Miss'].includes(a.event)){ if(isFor) FF++; if(isAgainst) FA++; }
       if(['Shot','Goal'].includes(a.event)){
-        if(isFor){ SF++; if(a.event==='Goal') GF++; }
-        if(isAgainst){ SA++; if(a.event==='Goal') GA++; }
+        if(isFor){ SF++; }
+        if(isAgainst){ SA++; }
       }
     }
     const metrics={
       'CA':CA,'CF':CF,'CF%': (CF+CA)? (CF/(CF+CA)*100).toFixed(1):'—',
       'FA':FA,'FF':FF,'FF%': (FF+FA)? (FF/(FF+FA)*100).toFixed(1):'—',
-      'SA':SA,'SF':SF,'SF%': (SF+SA)? (SF/(SF+SA)*100).toFixed(1):'—',
-      'GA':GA,'GF':GF,'GF%': (GF+GA)? (GF/(GF+GA)*100).toFixed(1):'—',
-      'Sv%': (SA>0)? ((1-GA/SA)*100).toFixed(1):'—',
-      'PDO': ( (SF>0? (GF/SF*100):0) + (SA>0? (1-GA/SA)*100:0) ).toFixed(1),
-      'Sh%': (SF>0)? (GF/SF*100).toFixed(1):'—'
+  'SA':SA,'SF':SF,'SF%': (SF+SA)? (SF/(SF+SA)*100).toFixed(1):'—'
     };
     document.querySelectorAll('.kpi-metric').forEach(mEl=>{ const label=mEl.querySelector('.label')?.textContent; const valEl=mEl.querySelector('.value'); if(!label||!valEl) return; if(metrics[label]!==undefined) valEl.textContent=metrics[label]; });
   }
@@ -562,15 +606,17 @@
   function clearTable(){ tableHeader.innerHTML=''; tableBody.innerHTML=''; }
   const TABLE_COLUMNS={
     // Skaters (individual production focus first, then on-ice)
-    skaters:['Name','Team','Season','State','Strength','GP','TOI','G','A','P','Sh%','Shots','Misses','Shots in block','Blocks','GF','GA','GF%','PEN taken','PEN drawn'],
+  skaters:['Name','Team','Season','State','Strength','GP','TOI','G','A','P','5v5 GF','5v5 GA','5v5 G+/-','Sh%','Shots','Misses','Shots in block','Blocks','PEN taken','PEN drawn'],
     // Goalies (lean set – usage + shot faced results)
-    goalies:['Name','Team','Season','State','Strength','GP','TOI','SA','GA','Sv%'],
+  goalies:['Name','Team','Season','State','Strength','GP','TOI','SA','GA','Sv%'],
     // Teams (drive & results + discipline)
-    teams:['Team','Season','State','Strength','GP','CF','CA','CF%','FF','FA','FF%','SF','SA','SF%','GF','GA','GF%','PEN taken','PEN drawn','Sh%','Sv%','PDO']
+  teams:['Team','Season','State','Strength','GP','CF','CA','CF%','FF','FA','FF%','SF','SA','SF%','GF','GA','GF%','Sh%','Sv%','PDO']
   };
   function renderTable(type, rows){
     clearTable();
-    const cols=TABLE_COLUMNS[type]||[];
+    let cols=TABLE_COLUMNS[type]||[];
+    if(type==='goalies') cols=['Name','Team','Season','State','Strength','GP','TOI','SA','GA','Sv%'];
+    try{ console.debug('[PWHL] renderTable type=', type, 'cols=', cols); }catch(e){}
     // store current rows for export/sorting
     window._currentTableType=type;
     window._currentTableRows=rows.slice();
@@ -593,11 +639,17 @@
       tr.style.borderTop='1px solid rgba(255,255,255,0.05)';
       const values=cols.map(col=>{
         switch(col){
-          case 'Name': return r.player||r.team||'';
+          case 'Name': return r.player||r.name||r.goalie||r.team||'';
           case 'Team': return r.team||'';
           case 'Season': return r.Season || r.season || '';
           case 'State': return r.Season_State || r.state || '';
           case 'Strength': return r.Strength || r.strength_class || r.strength || '';
+          case 'GA': return r.GA ?? '';
+          case 'SA': return r.SA ?? '';
+          case 'Sv%': return (r['Sv%']!==undefined && r['Sv%']!==null)? r['Sv%'] : '—';
+          case '5v5 GF': return (r['5v5_GF']!==undefined?r['5v5_GF']:r['5v5 GF']) ?? '—';
+          case '5v5 GA': return (r['5v5_GA']!==undefined?r['5v5_GA']:r['5v5 GA']) ?? '—';
+          case '5v5 G+/-': return (r['5v5_G+/-']!==undefined? r['5v5_G+/-'] : r['5v5 G+/-']) ?? '—';
           case 'PEN taken': return r.PEN_taken||0;
           case 'PEN drawn': return r.PEN_drawn||0;
           case 'Shots in block': return r.Shots_in_block||0;
@@ -634,11 +686,14 @@
   }
   function extractValue(row,col){
     switch(col){
-      case 'Name': return row.player||row.team||'';
-  case 'Team': return row.team||'';
-  case 'Season': return row.Season || row.season || '';
-  case 'State': return row.Season_State || row.state || '';
-  case 'Strength': return row.Strength || row.strength_class || row.strength || '';
+      case 'Name': return row.player||row.name||row.goalie||row.team||'';
+      case 'Team': return row.team||'';
+      case 'Season': return row.Season || row.season || '';
+      case 'State': return row.Season_State || row.state || '';
+      case 'Strength': return row.Strength || row.strength_class || row.strength || '';
+      case 'GA': return row.GA ?? '';
+      case 'SA': return row.SA ?? '';
+      case 'Sv%': return (row['Sv%']!==undefined && row['Sv%']!==null)? row['Sv%'] : '';
       case 'PEN taken': return row.PEN_taken||0;
       case 'PEN drawn': return row.PEN_drawn||0;
       case 'Shots in block': return row.Shots_in_block||0;
@@ -646,7 +701,7 @@
     }
   }
   // CSV Export
-  function exportCurrentTable(){ const type=window._currentTableType; const rows=window._currentTableRows||[]; if(!type||!rows.length) return; const cols=TABLE_COLUMNS[type]; const lines=[]; lines.push(cols.join(',')); rows.forEach(r=>{ const line=cols.map(c=>{ let v=extractValue(r,c); if(typeof v==='string'){ if(v.includes('"')||v.includes(',')||v.includes('\n')) v='"'+v.replace(/"/g,'""')+'"'; } return v; }).join(','); lines.push(line); }); const blob=new Blob([lines.join('\n')],{type:'text/csv'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=`${type}_export.csv`; document.body.appendChild(a); a.click(); setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); },0); }
+  function exportCurrentTable(){ const type=window._currentTableType; const rows=window._currentTableRows||[]; if(!type||!rows.length) return; let cols=TABLE_COLUMNS[type]; if(type==='goalies'){ cols=['Name','Team','Season','State','Strength','GP','TOI','SA','GA','Sv%']; } if(type==='teams'){ cols=['Team','Season','State','Strength','GP','CF','CA','CF%','FF','FA','FF%','SF','SA','SF%','GF','GA','GF%','Sh%','Sv%','PDO']; } const lines=[]; lines.push(cols.join(',')); rows.forEach(r=>{ const line=cols.map(c=>{ let v=extractValue(r,c); if(typeof v==='string'){ if(v.includes('"')||v.includes(',')||v.includes('\n')) v='"'+v.replace(/"/g,'""')+'"'; } return v; }).join(','); lines.push(line); }); const blob=new Blob([lines.join('\n')],{type:'text/csv'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=`${type}_export.csv`; document.body.appendChild(a); a.click(); setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); },0); }
   // Inject export button next to table selector buttons
   (function addExportBtn(){ const wrap=document.querySelector('#tablesWrapper > div:first-child'); if(!wrap) return; const btn=document.createElement('button'); btn.type='button'; btn.textContent='Export CSV'; btn.className='metric-btn'; btn.style.marginLeft='auto'; btn.addEventListener('click',exportCurrentTable); wrap.appendChild(btn); })();
   async function fetchCurrentTable(){
@@ -659,6 +714,20 @@
     const r=await fetch('/api/report/tables?'+params.toString()); if(!r.ok) return; const data=await r.json();
     // Shallow copy raw rows
     window._baseTableRows = (data.rows||[]).map(o=>({...o}));
+    if(type==='goalies'){
+      window._baseTableRows = window._baseTableRows.map(r=>({
+        player: r.player||r.name||r.goalie||'',
+        team: r.team||'',
+        Season: r.Season||r.season||'All',
+        Season_State: r.Season_State||r.state||'All',
+        Strength: r.Strength||r.strength||'All',
+        GP: r.GP||0,
+        TOI: r.TOI||0,
+        SA: r.SA||0,
+        GA: r.GA||0,
+        'Sv%': r['Sv%']
+      }));
+    }
     if(type==='skaters'){
       // Recompute Points defensively to guarantee P == G + A (guard against any cached mutated value)
       window._baseTableRows.forEach(row=>{
@@ -672,11 +741,15 @@
         }
       });
     }
+    // IMPORTANT: set current table type BEFORE applying filters so header uses correct column schema
+    window._currentTableType = type;
+    try{ console.debug('[PWHL] fetchCurrentTable set _currentTableType =', type, 'rows=', window._baseTableRows.length); }catch(e){}
     applyTableFilters(true);
   }
 
   function applyTableFilters(initial=false){
-    const type=window._currentTableType || (document.querySelector('.tbl-sub-btn.active')?.dataset.table);
+    // Prefer active button (most up-to-date) then fall back to stored type
+    const type = (document.querySelector('.tbl-sub-btn.active')?.dataset.table) || window._currentTableType;
     if(!type) return;
     const base = window._baseTableRows || [];
     let search = document.getElementById('tfSearch')?.value.trim().toLowerCase() || '';
@@ -696,8 +769,9 @@
         // Recompute P again in case upstream changed
         if(typeof clone.G==='number' && typeof clone.A==='number') clone.P = clone.G + clone.A;
         Object.keys(clone).forEach(k=>{
-          if(['player','team','Name','Team','GP','season','Season','strength_class','Strength','Season_State'].includes(k)) return;
-          if(typeof clone[k]==='number' && !['GF%','Sv%','Sh%','PDO'].includes(k)){
+          // Do NOT rate-convert identifying fields or percentage / rate stats
+          if(['player','team','Name','Team','GP','season','Season','strength_class','Strength','Season_State','CF%','FF%','SF%','GF%','Sh%','Sv%','PDO'].includes(k)) return;
+          if(typeof clone[k]==='number'){
             clone[k] = +(clone[k]/gp).toFixed(2);
           }
         });
@@ -725,19 +799,19 @@
       [btnTotals,btnPerGame].forEach(b=>{ if(!b) return; b.classList.remove('active'); });
       if(window._tableMode==='per_game'){ btnPerGame?.classList.add('active'); } else { btnTotals?.classList.add('active'); }
     }
-    if(btnTotals) btnTotals.addEventListener('click',()=>{ window._tableMode='totals'; updateModeButtons(); applyTableFilters(); });
-  if(btnPerGame) btnPerGame.addEventListener('click',()=>{ window._tableMode='per_game'; updateModeButtons(); applyTableFilters(); });
-  if(resetBtn) resetBtn.addEventListener('click',()=>{ if(search) search.value=''; if(minGP) minGP.value=''; if(seasonSel) seasonSel.value='All'; if(seasonStateSel) seasonStateSel.value='All'; if(strengthSel) strengthSel.value='All'; window._tableMode='totals'; updateModeButtons(); fetchCurrentTable(); });
-    if(search) search.addEventListener('input',()=>applyTableFilters());
-  ;[minGP].forEach(inp=>{ if(inp) inp.addEventListener('change',()=>applyTableFilters()); });
-  if(seasonSel) seasonSel.addEventListener('change',()=>fetchCurrentTable());
-  if(seasonStateSel) seasonStateSel.addEventListener('change',()=>fetchCurrentTable());
-  if(strengthSel) strengthSel.addEventListener('change',()=>fetchCurrentTable());
+    if(btnTotals) btnTotals.addEventListener('click',()=>{ window._tableMode='totals'; updateModeButtons(); applyTableFilters(); saveState(getState()); });
+  if(btnPerGame) btnPerGame.addEventListener('click',()=>{ window._tableMode='per_game'; updateModeButtons(); applyTableFilters(); saveState(getState()); });
+  if(resetBtn) resetBtn.addEventListener('click',()=>{ if(search) search.value=''; if(minGP) minGP.value=''; if(seasonSel) seasonSel.value='All'; if(seasonStateSel) seasonStateSel.value='All'; if(strengthSel) strengthSel.value='All'; window._tableMode='totals'; updateModeButtons(); fetchCurrentTable(); saveState(getState()); });
+    if(search) search.addEventListener('input',()=>{ applyTableFilters(); saveState(getState()); });
+  ;[minGP].forEach(inp=>{ if(inp) inp.addEventListener('change',()=>{ applyTableFilters(); saveState(getState()); }); });
+  if(seasonSel) seasonSel.addEventListener('change',()=>{ fetchCurrentTable(); saveState(getState()); });
+  if(seasonStateSel) seasonStateSel.addEventListener('change',()=>{ fetchCurrentTable(); saveState(getState()); });
+  if(strengthSel) strengthSel.addEventListener('change',()=>{ fetchCurrentTable(); saveState(getState()); });
     updateModeButtons();
     // Populate season options dynamically from global filter menu (reuse filters data if loaded)
     fetch('/api/report/filters').then(r=>r.json()).then(data=>{ if(seasonSel && data.seasons){ const existing=new Set(Array.from(seasonSel.options).map(o=>o.value)); (data.seasons||[]).forEach(s=>{ if(!existing.has(s.value||s)){ const opt=document.createElement('option'); opt.value=s.value||s; opt.textContent=s.label||s; seasonSel.appendChild(opt); } }); }}).catch(()=>{});
   })();
-  document.querySelectorAll('.tbl-sub-btn').forEach(btn=>{ btn.addEventListener('click',()=>{ document.querySelectorAll('.tbl-sub-btn').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); fetchCurrentTable(); }); });
+  document.querySelectorAll('.tbl-sub-btn').forEach(btn=>{ btn.addEventListener('click',()=>{ document.querySelectorAll('.tbl-sub-btn').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); saveState(getState()); fetchCurrentTable(); }); });
   // Ensure a fresh fetch when leaving Per Game mode to reset any derived rounding drift
   document.getElementById('tfModeTotals')?.addEventListener('click',()=>{ fetchCurrentTable(); });
   </script>

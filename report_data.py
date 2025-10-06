@@ -268,7 +268,7 @@ class ReportDataStore:
         # Fallback to numeric comparison
         return 'PP' if for_n > against_n else 'SH'
 
-    def compute_kpis(self, team: str = 'All', strength: str = 'All', season: str = 'All', date_from: str = '', date_to: str = '', segment: str = 'all', perspective: str='For', games: List[str]=None, players: List[str]=None, opponents: List[str]=None, periods: List[str]=None, events: List[str]=None, strengths_multi: List[str]=None, goalies: List[str]=None, seasons_multi: List[str]=None, onice: List[str]=None) -> Dict[str, Any]:
+    def compute_kpis(self, team: str = 'All', strength: str = 'All', season: str = 'All', date_from: str = '', date_to: str = '', segment: str = 'all', perspective: str='For', games=None, players=None, opponents=None, periods=None, events=None, strengths_multi=None, goalies=None, seasons_multi=None, onice=None) -> Dict[str, Any]:
         """Compute KPI metrics.
 
         Added on-ice AND filter (onice list) – if provided, only retain rows where *all*
@@ -439,7 +439,7 @@ class ReportDataStore:
             }
         }
 
-    def shotmap(self, team: str='All', strength: str='All', season: str='All', date_from: str='', date_to: str='', segment: str='all', perspective: str='For', games: List[str]=None, players: List[str]=None, opponents: List[str]=None, periods: List[str]=None, events: List[str]=None, strengths_multi: List[str]=None, goalies: List[str]=None, seasons_multi: List[str]=None, onice: List[str]=None) -> Dict[str, Any]:
+    def shotmap(self, team: str='All', strength: str='All', season: str='All', date_from: str='', date_to: str='', segment: str='all', perspective: str='For', games=None, players=None, opponents=None, periods=None, events=None, strengths_multi=None, goalies=None, seasons_multi=None, onice=None) -> Dict[str, Any]:
         self.load()
         games = games or []
         players = players or []
@@ -610,100 +610,316 @@ class ReportDataStore:
         return rows
 
     def tables_skaters_individual(self, **kwargs):
+        """Minimal skaters table: correct individual G, A, P with basic shooting stats.
+
+        Intentionally ignores on-ice, strength splits, GF/GA, and complex filters
+        to eliminate sources of inflation. Only deduplicates goal events so a
+        duplicated goal row cannot inflate G/A.
+        """
         self.load()
-        rows=self.rows
-        rows=self._apply_common_filters(rows, row_strength_independent=True, **kwargs)
+        # Keep simple optional seasonal labels for UI consistency and now apply those filters
         season_filter = kwargs.get('season','All')
         season_state_filter = kwargs.get('season_state','All')
         strength_filter = kwargs.get('strength','All')
-        stats={}
+
+        rows = self.rows
+        if season_filter != 'All':
+            rows = [r for r in rows if r.get('season') == season_filter]
+        if season_state_filter != 'All':
+            rows = [r for r in rows if r.get('state') == season_state_filter]
+        if strength_filter != 'All':
+            tmp=[]
+            for r in rows:
+                s_class = self._classify_strength(r.get('strength',''), r.get('team_for',''), True)
+                if strength_filter == 'EV':
+                    if s_class in ('5v5','EV'): tmp.append(r)
+                elif strength_filter in ('PP','SH','5v5'):
+                    if s_class == strength_filter: tmp.append(r)
+                else:
+                    if r.get('strength') == strength_filter: tmp.append(r)
+            rows = tmp
+        stats: Dict[str, Any] = {}
         goalie_names = {r['goalie'] for r in rows if r.get('goalie')}
+
         def ensure_player(name: str, team: str):
             return stats.setdefault(name, {
                 'player': name,
                 'team': team,
                 'GP': set(),
                 'G':0,'A':0,'P':0,
+                'Shots':0,'Misses':0,'Shots_in_block':0,
                 'PEN_taken':0,'PEN_drawn':0,
-                'Shots':0,'Misses':0,'Shots_in_block':0,'Blocks':0,
-                'GF':0,'GA':0
             })
-        # First pass
+
+        goal_keys=set()
         for r in rows:
-            shooter=r.get('shooter')
-            if not shooter or shooter in goalie_names:
+            shooter = r.get('shooter')
+            team = r.get('team_for')
+            if not shooter or shooter in goalie_names or not team:
                 continue
-            team=r['team_for']
-            s=ensure_player(shooter, team)
-            s['GP'].add(r['game_id'])
-            self._load_lineups_for_game(r['game_id'])
+            gid = r['game_id']
+            # Load TOI lineup data lazily
+            self._load_lineups_for_game(gid)
+            # Shots / attempts
+            if r['is_shot']:
+                s = ensure_player(shooter, team)
+                s['GP'].add(gid)
+                s['Shots'] += 1
+            if r['is_miss']:
+                s = ensure_player(shooter, team); s['GP'].add(gid); s['Misses'] += 1
+            if r['is_block']:
+                s = ensure_player(shooter, team); s['GP'].add(gid); s['Shots_in_block'] += 1
+            # Goals (dedup)
             if r['is_goal']:
-                s['G']+=1
-                if r.get('assist1') and r['assist1'] not in goalie_names:
-                    ensure_player(r['assist1'], team)['GP'].add(r['game_id'])
-                if r.get('assist2') and r['assist2'] not in goalie_names:
-                    ensure_player(r['assist2'], team)['GP'].add(r['game_id'])
-            if r['is_shot']: s['Shots']+=1
-            if r['is_miss']: s['Misses']+=1
-            if r['is_block']: s['Shots_in_block']+=1
-        # Second pass assists & penalties
-        for r in rows:
-            if r['event']=='Goal':
+                gkey=(gid, r.get('period'), shooter, r.get('assist1'), r.get('assist2'), r.get('strength'), r.get('x'), r.get('y'))
+                if gkey in goal_keys:
+                    continue
+                goal_keys.add(gkey)
+                s = ensure_player(shooter, team); s['GP'].add(gid); s['G'] += 1
+                # Assists (only once per unique goal)
                 for a_field in ('assist1','assist2'):
-                    a=r.get(a_field)
+                    a = r.get(a_field)
                     if a and a not in goalie_names:
-                        s=ensure_player(a, r['team_for'])
-                        s['A']+=1
+                        ap = ensure_player(a, team)
+                        ap['GP'].add(gid)
+                        ap['A'] += 1
+                # On-ice 5v5 GF/GA attribution (basic plus/minus style): all skaters (non-goalies) on scoring side get GF, on opposing side GA
+                strength_class = self._classify_strength(r.get('strength',''), r.get('team_for',''), True)
+                if strength_class == '5v5':
+                    home_on = r.get('on_ice_home') or []
+                    away_on = r.get('on_ice_away') or []
+                    scoring_team = r.get('team_for')
+                    # Determine which list corresponds to scoring vs conceding
+                    # We infer home team by presence of shooter in which list; fallback to team_for comparison to home/away in meta not stored here, so rely on on_ice lists containing shooter
+                    shooter_in_home = shooter in home_on
+                    if shooter_in_home:
+                        gf_list, ga_list = home_on, away_on
+                        gf_team, ga_team = scoring_team, r.get('team_against')
+                    else:
+                        gf_list, ga_list = away_on, home_on
+                        gf_team, ga_team = scoring_team, r.get('team_against')
+                    gf_team_str = gf_team or scoring_team or team
+                    ga_team_str = ga_team or r.get('team_against') or ''
+                    for pname in gf_list:
+                        if pname and pname not in goalie_names and gf_team_str:
+                            ps = ensure_player(pname, gf_team_str)
+                            ps['5v5_GF_onice'] = ps.get('5v5_GF_onice',0) + 1
+                    for pname in ga_list:
+                        if pname and pname not in goalie_names and ga_team_str:
+                            ps = ensure_player(pname, ga_team_str)
+                            ps['5v5_GA_onice'] = ps.get('5v5_GA_onice',0) + 1
+            # Penalties (taken only, optional)
             if r['event']=='Penalty':
-                shooter=r.get('shooter')
-                if shooter and shooter not in goalie_names:
-                    ensure_player(shooter, r['team_for'])['PEN_taken']+=1
-        # On-ice goals
-        for r in rows:
-            if r['event']!='Goal': continue
-            gid=r['game_id']
-            meta=self.game_meta.get(gid, {})
-            home=meta.get('home_team')
-            shooting_team=r['team_for']
-            shooter=r.get('shooter')
-            if shooting_team==home:
-                for_players=r.get('on_ice_home') or []
-                against_players=r.get('on_ice_away') or []
-            else:
-                for_players=r.get('on_ice_away') or []
-                against_players=r.get('on_ice_home') or []
-            if shooter and shooter not in for_players and shooter not in goalie_names:
-                for_players=list(for_players)+[shooter]
-            for p in for_players:
-                if p in goalie_names: continue
-                s=ensure_player(p, shooting_team); s['GF']+=1; s['GP'].add(gid)
-            for p in against_players:
-                if p in goalie_names: continue
-                s=ensure_player(p, r['team_against']); s['GA']+=1; s['GP'].add(gid)
+                pen = r.get('shooter')
+                if pen and pen not in goalie_names:
+                    pstats = ensure_player(pen, team)
+                    pstats['GP'].add(gid)
+                    pstats['PEN_taken'] += 1
+
+        # Finalize output
         out=[]
-        for s in stats.values():
-            s['GP']=len(s['GP'])
-            s['P']=s['G']+s['A']
-            s['Sh%']=round(s['G']/s['Shots']*100,1) if s['Shots']>0 else 0
-            total_toi_secs=sum(secs for (gid,name),secs in self.toi_lookup.items() if name==s['player'])
-            s['TOI']=round(total_toi_secs/60,1) if total_toi_secs else 0.0
-            total_goals=s['GF']+s['GA']
-            s['GF%']=round(s['GF']/total_goals*100,1) if total_goals>0 else None
-            s['Season']=season_filter
-            s['Season_State']=season_state_filter
-            s['Strength']=strength_filter
-            out.append(s)
-        out.sort(key=lambda x:(-x['P'],-x['G'],x['player']))
+        for rec in stats.values():
+            rec['GP'] = len(rec['GP'])
+            rec['P'] = rec['G'] + rec['A']
+            rec['Sh%'] = round(rec['G']/rec['Shots']*100,1) if rec['Shots']>0 else 0
+            total_toi_secs = sum(secs for (gid,name),secs in self.toi_lookup.items() if name==rec['player'])
+            rec['TOI'] = round(total_toi_secs/60,1) if total_toi_secs else 0.0
+            # 5v5 on-ice derived: we compute GF_onice & GA_onice; present GF/GA as on-ice, and G+/- = GF_onice - GA_onice
+            gf_on = rec.get('5v5_GF_onice', 0)
+            ga_on = rec.get('5v5_GA_onice', 0)
+            rec['5v5_GF'] = gf_on
+            rec['5v5_GA'] = ga_on
+            rec['5v5_G+/-'] = gf_on - ga_on
+            # Add placeholder fields the frontend may expect (consistent schema)
+            rec['Season'] = season_filter
+            rec['Season_State'] = season_state_filter
+            rec['Strength'] = strength_filter
+            # Fill missing optional fields with defaults
+            rec.setdefault('PEN_drawn', 0)
+            out.append(rec)
+
+        out.sort(key=lambda x:(-x['P'], -x['G'], x['player']))
         return out
 
     def tables_skaters_onice(self, **kwargs):
         return []
 
     def tables_goalies(self, **kwargs):
-        return []
+        """Minimal goaltender table.
+
+        Columns: Name (goalie), Team, Season, State, Strength, GP, TOI, SA, GA, Sv%
+        SA: all shots on goal (is_shot) faced by goalie (includes goals)
+        GA: goals allowed (is_goal) faced by goalie
+        Sv% = (SA-GA)/SA * 100
+        """
+        self.load()
+        season_filter = kwargs.get('season','All')
+        season_state_filter = kwargs.get('season_state','All')
+        strength_filter = kwargs.get('strength','All')
+
+        rows = self.rows
+        if season_filter != 'All':
+            rows = [r for r in rows if r.get('season') == season_filter]
+        if season_state_filter != 'All':
+            rows = [r for r in rows if r.get('state') == season_state_filter]
+        if strength_filter != 'All':
+            tmp=[]
+            for r in rows:
+                s_class = self._classify_strength(r.get('strength',''), r.get('team_for',''), True)
+                if strength_filter == 'EV':
+                    if s_class in ('5v5','EV'): tmp.append(r)
+                elif strength_filter in ('PP','SH','5v5'):
+                    if s_class == strength_filter: tmp.append(r)
+                else:
+                    if r.get('strength') == strength_filter: tmp.append(r)
+            rows = tmp
+
+        stats: Dict[str, Any] = {}
+
+        def ensure_goalie(name: str, team: str):
+            return stats.setdefault(name, {
+                'player': name,
+                'team': team,
+                'GP': set(),
+                'SA': 0,
+                'GA': 0,
+            })
+
+        for r in rows:
+            g = r.get('goalie')
+            if not g:
+                continue
+            team_against = r.get('team_against')  # goalie belongs to defending team
+            if not team_against:
+                continue
+            rec = ensure_goalie(g, team_against)
+            rec['GP'].add(r['game_id'])
+            if r.get('is_shot'):
+                rec['SA'] += 1
+            if r.get('is_goal'):
+                rec['GA'] += 1
+
+        out=[]
+        for rec in stats.values():
+            rec['GP'] = len(rec['GP'])
+            sa = rec['SA']
+            ga = rec['GA']
+            rec['Sv%'] = round((sa-ga)/sa*100,1) if sa>0 else None
+            # TOI from lineup cache
+            total_toi_secs = sum(secs for (gid,name),secs in self.toi_lookup.items() if name==rec['player'])
+            rec['TOI'] = round(total_toi_secs/60,1) if total_toi_secs else 0.0
+            rec['Season'] = season_filter
+            rec['Season_State'] = season_state_filter
+            rec['Strength'] = strength_filter
+            out.append(rec)
+        # Sort: by Sv%, then GA ascending, then SA descending
+        out.sort(key=lambda r: (-(r['Sv%'] if r['Sv%'] is not None else -1), r['GA'], -r['SA'], r['player']))
+        return out
 
     def tables_teams(self, **kwargs):
-        return []
+        """Teams table aggregation.
+
+        Columns: Team, Season, State, Strength, GP, CF, CA, CF%, FF, FA, FF%, SF, SA, SF%, GF, GA, GF%, Sh%, Sv%, PDO
+
+        Strength filter semantics:
+          - season / season_state / strength passed in like other tables
+          - When strength == 'EV' treat 5v5 + other even states (EV bucket) combined
+          - When strength in ('PP','SH','5v5') use classified perspective from team POV
+          - Otherwise if raw (e.g., '4v5') try to match directly
+        """
+        self.load()
+        season_filter = kwargs.get('season','All')
+        season_state_filter = kwargs.get('season_state','All')
+        strength_filter = kwargs.get('strength','All')
+        # We'll build per-team stats iterating once through rows and applying season/state filters up front
+        rows = self.rows
+        if season_filter != 'All':
+            rows = [r for r in rows if r.get('season') == season_filter]
+        if season_state_filter != 'All':
+            rows = [r for r in rows if r.get('state') == season_state_filter]
+
+        teams: Dict[str, Dict[str, Any]] = {}
+
+        def ensure(team: str):
+            return teams.setdefault(team, {
+                'Team': team,
+                'Season': season_filter,
+                'Season_State': season_state_filter,
+                'Strength': strength_filter,
+                'games': set(),
+                'CF':0,'CA':0,'FF':0,'FA':0,'SF':0,'SA':0,'GF':0,'GA':0
+            })
+
+        for r in rows:
+            team_for = r['team_for']
+            team_against = r['team_against']
+            gid = r['game_id']
+            # Strength filtering per vantage team; we may need to know if row qualifies for team_for and team_against separately
+            def row_ok(v_team: str, is_for: bool) -> bool:
+                if strength_filter == 'All':
+                    return True
+                s_class = self._classify_strength(r.get('strength',''), v_team, is_for)
+                if strength_filter == 'EV':
+                    return s_class in ('5v5','EV')
+                if strength_filter in ('PP','SH','5v5'):
+                    return s_class == strength_filter
+                # Fallback raw match
+                return r.get('strength') == strength_filter
+            # Team for side accumulation
+            if team_for:
+                if row_ok(team_for, True):
+                    recf = ensure(team_for)
+                    recf['games'].add(gid)
+                    if r['is_corsi']:
+                        recf['CF'] += 1
+                    if r['is_fenwick']:
+                        recf['FF'] += 1
+                    if r['is_shot']:
+                        recf['SF'] += 1
+                    if r['is_goal']:
+                        recf['GF'] += 1
+            # Team against side accumulation (mirrored stats as Against for that team)
+            if team_against:
+                if row_ok(team_against, False):
+                    reca = ensure(team_against)
+                    reca['games'].add(gid)
+                    if r['is_corsi']:
+                        reca['CA'] += 1
+                    if r['is_fenwick']:
+                        reca['FA'] += 1
+                    if r['is_shot']:
+                        reca['SA'] += 1
+                    if r['is_goal']:
+                        reca['GA'] += 1
+
+        out=[]
+        for rec in teams.values():
+            CF,CA,FF,FA,SF,SA,GF,GA = rec['CF'],rec['CA'],rec['FF'],rec['FA'],rec['SF'],rec['SA'],rec['GF'],rec['GA']
+            cf_pct = self._pct(CF, CF+CA)
+            ff_pct = self._pct(FF, FF+FA)
+            sf_pct = self._pct(SF, SF+SA)
+            gf_pct = self._pct(GF, GF+GA)
+            sh_pct = round(GF/SF*100,1) if SF>0 else None
+            sv_pct = round((1 - GA/SA)*100,1) if SA>0 else None
+            pdo = round((sh_pct or 0)+(sv_pct or 0),1) if sh_pct is not None and sv_pct is not None else None
+            out.append({
+                'Team': rec['Team'],
+                'team': rec['Team'],  # duplicate lowercase key for frontend consistency
+                'Season': rec['Season'],
+                'Season_State': rec['Season_State'],
+                'Strength': rec['Strength'],
+                'GP': len(rec['games']),
+                'CF': CF,'CA': CA,'CF%': cf_pct,
+                'FF': FF,'FA': FA,'FF%': ff_pct,
+                'SF': SF,'SA': SA,'SF%': sf_pct,
+                'GF': GF,'GA': GA,'GF%': gf_pct,
+                'Sh%': sh_pct,
+                'Sv%': sv_pct,
+                'PDO': pdo
+            })
+        # Sort: CF% desc then GF% desc then Team name
+        out.sort(key=lambda r: (-(r['CF%'] if r['CF%'] is not None else -1), -(r['GF%'] if r['GF%'] is not None else -1), r['Team']))
+        return out
 
 
 report_store = ReportDataStore()
