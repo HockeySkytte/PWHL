@@ -449,6 +449,28 @@ def generate_pbp_csv(
             final_events.append({ **ev, '_computedTeamId': commit_id })
             continue
 
+        # Treat blocked shots like other shot attempts for strength orientation:
+        # use the SHOOTING team (typically details.againstTeam.id or shooterTeamId)
+        if etype in ('block', 'blocked-shot', 'blocked_shot'):
+            shooter_team_id = ''
+            at = d.get('againstTeam') or {}
+            if isinstance(at, dict):
+                shooter_team_id = str(at.get('id') or '')
+            if not shooter_team_id:
+                shooter_team_id = str(d.get('shooterTeamId') or '')
+            if not shooter_team_id:
+                # Try to infer via goalie team (opponent of shooter)
+                try:
+                    g_team = get_player_team_from_lineups(d.get('goalie')) if d.get('goalie') else ''
+                except Exception:
+                    g_team = ''
+                if g_team:
+                    home_id, away_id = get_team_ids()
+                    shooter_team_id = home_id if str(g_team) == str(away_id) else (away_id if str(g_team) == str(home_id) else '')
+            computed = shooter_team_id or str(d.get('teamId') or d.get('team_id') or (d.get('team') or {}).get('id') or '')
+            final_events.append({ **ev, '_computedTeamId': computed, '_x': d.get('xLocation'), '_y': d.get('yLocation') })
+            continue
+
         # Default: carry team id from details
         computed = str(d.get('teamId') or d.get('team_id') or d.get('shooterTeamId') or d.get('scorerTeamId') or (d.get('team') or {}).get('id') or '')
         final_events.append({ **ev, '_computedTeamId': computed })
