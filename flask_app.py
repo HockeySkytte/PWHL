@@ -11,6 +11,30 @@ import os
 app = Flask(__name__)
 CORS(app)
 
+# Allow embedding the app inside hockey-statistics.com/pwhl via iframe by setting
+# a permissive frame-ancestors policy for that domain and removing X-Frame-Options.
+# This keeps the app secure while enabling the desired WordPress integration.
+@app.after_request
+def _allow_wp_embed(resp: Response):
+    try:
+        allowed = "frame-ancestors 'self' https://hockey-statistics.com"
+        existing = resp.headers.get('Content-Security-Policy')
+        if existing and 'frame-ancestors' in existing:
+            # Respect existing CSP if it already defines frame-ancestors
+            pass
+        elif existing:
+            resp.headers['Content-Security-Policy'] = f"{existing}; {allowed}"
+        else:
+            resp.headers['Content-Security-Policy'] = allowed
+        # Remove X-Frame-Options to avoid blocking cross-origin iframes
+        try:
+            del resp.headers['X-Frame-Options']
+        except Exception:
+            pass
+    except Exception:
+        pass
+    return resp
+
 class PWHLDataAPI:
     def __init__(self):
         self.api_base_url = "https://lscluster.hockeytech.com/feed/index.php"
