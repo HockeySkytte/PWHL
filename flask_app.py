@@ -17,7 +17,8 @@ CORS(app)
 @app.after_request
 def _allow_wp_embed(resp: Response):
     try:
-        allowed = "frame-ancestors 'self' https://hockey-statistics.com"
+        # Allow both bare and www hostnames for WordPress page embedding
+        allowed = "frame-ancestors 'self' https://hockey-statistics.com https://www.hockey-statistics.com"
         existing = resp.headers.get('Content-Security-Policy')
         if existing and 'frame-ancestors' in existing:
             # Respect existing CSP if it already defines frame-ancestors
