@@ -286,7 +286,7 @@
             });
             event.target.classList.add('active');
 
-            // Update tab content
+            // Update tab content visibility FIRST
             document.querySelectorAll('.tab-panel').forEach(panel => {
                 panel.style.display = 'none';
             });
@@ -304,7 +304,7 @@
                 document.getElementById('export-playbyplay-btn').style.display = 'none';
             }
 
-            // Load content for the new tab
+            // Load content for the new tab (DOM is now visible)
             loadTabContent(tabName);
         }
 
