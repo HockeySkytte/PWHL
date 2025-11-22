@@ -262,6 +262,8 @@
                     // Clear loading, then call per-game report load
                     contentDiv.innerHTML = ''; // Clear loading state; containers are already in HTML
                     await ensureGameInfo();
+                    // Small delay to ensure DOM is painted after display:block
+                    await new Promise(resolve => setTimeout(resolve, 10));
                     await loadGameReport();
                     return; // skip generic formatter
                 }
