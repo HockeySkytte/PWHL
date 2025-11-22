@@ -309,43 +309,189 @@
         }
 
         function resetGameReportFilters(){
-            document.getElementById('grStrength').value='All';
-            document.getElementById('grPerspective').value='For';
-            document.getElementById('grTable').value='skaters';
-            Array.from(document.getElementById('grEvents').options).forEach(o=>o.selected=false);
+            const s=document.getElementById('grStrength'); if(s) s.value='All';
+            const p=document.getElementById('grPerspective'); if(p) p.value='For';
+            const t=document.getElementById('grTable'); if(t) t.value='skaters';
+            const evs=document.getElementById('grEvents'); if(evs) Array.from(evs.options).forEach(o=>o.selected=false);
             loadGameReport();
         }
 
         async function loadGameReport(){
-            const strength=document.getElementById('grStrength').value;
-            const perspective=document.getElementById('grPerspective').value;
-            const table=document.getElementById('grTable').value;
-            const eventsSel=Array.from(document.getElementById('grEvents').selectedOptions).map(o=>o.value);
-            const gamesParam=currentGameId?`&games=${encodeURIComponent(currentGameId)}`:'';
-            // KPIs
+            // Guard DOM lookups to avoid null errors if tab not yet in DOM
+            const strengthSel=document.getElementById('grStrength');
+            const perspSel=document.getElementById('grPerspective');
+            const tableSel=document.getElementById('grTable');
+            const eventsSelBox=document.getElementById('grEvents');
+            if(!strengthSel || !perspSel || !tableSel || !eventsSelBox){
+                console.warn('Game Report controls not found yet; skipping render');
+                return;
+            }
+            const strength=strengthSel.value || 'All';
+            const perspective=perspSel.value || 'For';
+            const table=tableSel.value || 'skaters';
+            const eventsSel=Array.from(eventsSelBox.selectedOptions||[]).map(o=>o.value);
+
             try{
-                const kpiUrl=`/api/report/kpis?team=All&strength=${encodeURIComponent(strength)}&segment=all&perspective=${encodeURIComponent(perspective)}${gamesParam}`;
-                const kr=await fetch(kpiUrl); const kjson= kr.ok? await kr.json(): null;
-                renderGameReportKPIs(kjson);
-            }catch(e){ renderGameReportKPIs(null); }
-            // Shotmap (strength & perspective apply; events filter passed if selected)
-            try{
-                const params=new URLSearchParams({team:'All',strength,strengths_multi:'',season:'All',segment:'all',perspective});
-                if(eventsSel.length){ eventsSel.forEach(ev=>params.append('events',ev)); }
-                if(currentGameId) params.append('games', currentGameId);
-                const smUrl=`/api/report/shotmap?${params.toString()}`;
-                const sr=await fetch(smUrl); const smj= sr.ok? await sr.json(): null;
-                renderGameReportShotmap(smj);
-            }catch(e){ renderGameReportShotmap(null); }
-            // Table
-            try{
-                const tParams=new URLSearchParams({type:table,team:'All',strength,strengths_multi:'',season:'All',season_state:'All'});
-                if(eventsSel.length){ eventsSel.forEach(ev=>tParams.append('events',ev)); }
-                if(currentGameId) tParams.append('games', currentGameId);
-                const tUrl=`/api/report/tables?${tParams.toString()}`;
-                const tr=await fetch(tUrl); const tj= tr.ok? await tr.json(): {rows:[]};
-                renderGameReportTable(tj.rows || []);
-            }catch(e){ renderGameReportTable([]); }
+                await ensureGameInfo();
+                // Ensure PBP is available
+                if(!window.currentPlayByPlayData){
+                    const r=await fetch(`/api/game/playbyplay/${currentGameId}`);
+                    const j=await r.json();
+                    if(r.ok) window.currentPlayByPlayData=j; else throw new Error('PBP unavailable');
+                }
+                // Build final events and strengths from in-memory data
+                const gameInfo=window.currentGameInfo || {};
+                const { finalEvents, strengths } = buildFinalEventsFromPBP(window.currentPlayByPlayData||[], window.currentGameSummaryData, gameInfo);
+
+                // Filter helper by selected strength
+                const passStrength=(s)=>{
+                    if(!s) return strength==='All';
+                    const m=s.match(/^(\d+)v(\d+)$/i);
+                    if(!m) return strength==='All';
+                    const a=parseInt(m[1],10), b=parseInt(m[2],10);
+                    if(strength==='All') return true;
+                    if(strength==='EV') return a===b;
+                    if(strength==='5v5') return a===5 && b===5;
+                    if(strength==='PP') return a>b; // from event team perspective
+                    if(strength==='SH') return a<b;
+                    return true;
+                };
+
+                // Selected events (default to common attempts if none selected)
+                const selectedEventsSet = new Set((eventsSel && eventsSel.length? eventsSel: ['Shot','Goal','Miss','Block']).map(e=>String(e).toLowerCase()));
+
+                // Perspective handling: relative to HOME team (clear and consistent for a single game)
+                const ids=getGameTeamIds(gameInfo);
+                const homeId=ids.homeId, awayId=ids.awayId;
+                const forTeamId = (perspective==='For')? homeId: awayId;
+                const againstTeamId = (perspective==='For')? awayId: homeId;
+
+                // Build attempts for shotmap and aggregates
+                const attempts=[]; // {period,event,team_for,strength,x,y,teamId}
+                finalEvents.forEach((ev,idx)=>{
+                    const lbl = prettifyEventLabel(getEventLabel(ev));
+                    const lblKey = String(lbl).toLowerCase();
+                    if(!selectedEventsSet.has(lblKey)) return;
+                    const s = strengths[idx]||'';
+                    if(!passStrength(s)) return;
+                    const tid = String(ev._computedTeamId||'');
+                    // Map period
+                    const d=ev.details||{};
+                    let period = d.period ? (d.period.shortName || d.period.id || '') : '';
+                    if (getEventLabel(ev)==='SO_goal' || getEventLabel(ev)==='SO_miss') period = 'SO';
+                    // Coords
+                    const x = (ev._x !== undefined) ? ev._x : (d.xLocation !== undefined ? d.xLocation : d.xCoord);
+                    const y = (ev._y !== undefined) ? ev._y : (d.yLocation !== undefined ? d.yLocation : d.yCoord);
+                    attempts.push({
+                        period,
+                        event: lbl,
+                        team_for: getTeamNameById(tid) || (tid===homeId?gameInfo.home_team: tid===awayId?gameInfo.away_team: ''),
+                        teamId: tid,
+                        strength: s,
+                        x: (x||x===0)?(((x-300)/300*100).toFixed(1)): '',
+                        y: (y||y===0)?(((y-150)/150*42.5).toFixed(1)): ''
+                    });
+                });
+
+                // KPIs by team (Home/Away), filtered by strength/events
+                const aggTeam = (tid)=>{
+                    const rows = attempts.filter(a=>a.teamId===tid);
+                    const countBy = (evName)=> rows.filter(r=>String(r.event).toLowerCase()===String(evName).toLowerCase()).length;
+                    const goals = countBy('Goal');
+                    const shotsOn = countBy('Shot');
+                    const misses = countBy('Miss');
+                    const blocks = countBy('Block');
+                    const attemptsTot = goals + shotsOn + misses + blocks;
+                    // Special teams splits from strength string
+                    let ppGoals=0, shGoals=0;
+                    rows.forEach(r=>{
+                        if(String(r.event).toLowerCase()!=='goal') return;
+                        const m=String(r.strength||'').match(/^(\d+)v(\d+)$/);
+                        if(m){ const a=parseInt(m[1],10), b=parseInt(m[2],10); if(a>b) ppGoals++; else if(a<b) shGoals++; }
+                    });
+                    return { attempts: attemptsTot, shots: shotsOn, goals, misses, blocks, ppGoals, shGoals };
+                };
+                const homeAgg = aggTeam(homeId);
+                const awayAgg = aggTeam(awayId);
+
+                const kpisOut = {};
+                kpisOut[`${gameInfo.home_team||'Home'} ATT`] = homeAgg.attempts;
+                kpisOut[`${gameInfo.away_team||'Away'} ATT`] = awayAgg.attempts;
+                kpisOut[`${gameInfo.home_team||'Home'} SOG`] = homeAgg.shots;
+                kpisOut[`${gameInfo.away_team||'Away'} SOG`] = awayAgg.shots;
+                kpisOut[`${gameInfo.home_team||'Home'} G`] = homeAgg.goals;
+                kpisOut[`${gameInfo.away_team||'Away'} G`] = awayAgg.goals;
+                kpisOut[`${gameInfo.home_team||'Home'} PP G`] = homeAgg.ppGoals;
+                kpisOut[`${gameInfo.away_team||'Away'} PP G`] = awayAgg.ppGoals;
+                kpisOut[`${gameInfo.home_team||'Home'} SH G`] = homeAgg.shGoals;
+                kpisOut[`${gameInfo.away_team||'Away'} SH G`] = awayAgg.shGoals;
+                renderGameReportKPIs(kpisOut);
+
+                // Shotmap: filter by perspective relative to home team
+                const smAttempts = attempts.filter(a=> (perspective==='For'? a.teamId===forTeamId : a.teamId===againstTeamId));
+                renderGameReportShotmap({attempts: smAttempts});
+
+                // Table rows
+                let tableRows=[];
+                if(table==='teams'){
+                    tableRows = [
+                        { Team: gameInfo.home_team||'Home', Attempts: homeAgg.attempts, Shots: homeAgg.shots, Goals: homeAgg.goals, Misses: homeAgg.misses, Blocks: homeAgg.blocks, 'PP G': homeAgg.ppGoals, 'SH G': homeAgg.shGoals },
+                        { Team: gameInfo.away_team||'Away', Attempts: awayAgg.attempts, Shots: awayAgg.shots, Goals: awayAgg.goals, Misses: awayAgg.misses, Blocks: awayAgg.blocks, 'PP G': awayAgg.ppGoals, 'SH G': awayAgg.shGoals }
+                    ];
+                } else if(table==='skaters'){
+                    // Aggregate by shooter/scorer
+                    const lineupIdx = buildLineupIndex(window.currentGameSummaryData, gameInfo);
+                    const skMap = new Map(); // key: name|tid -> stats
+                    finalEvents.forEach((ev,idx)=>{
+                        const lbl = prettifyEventLabel(getEventLabel(ev));
+                        const lblKey = String(lbl).toLowerCase();
+                        if(!selectedEventsSet.has(lblKey)) return;
+                        const s = strengths[idx]||''; if(!passStrength(s)) return;
+                        const d=ev.details||{}; const tid=String(ev._computedTeamId||'');
+                        let player = null; if(lblKey==='goal'){ player = ev._mergedScorer || d.scoredBy || d.scorer || d.player; } else { player = d.shooter || d.player; }
+                        if(!player) return; // skip if no shooter/scorer
+                        // name and jersey
+                        const name = player.name || player.fullName || `${player.firstName||''} ${player.lastName||''}`.trim() || 'Unknown';
+                        const key = `${name}|${tid}`;
+                        if(!skMap.has(key)) skMap.set(key, { Team:getTeamNameById(tid) || (tid===homeId?gameInfo.home_team: tid===awayId?gameInfo.away_team:''), Player:name, Goals:0, Shots:0, Misses:0, Blocks:0, Attempts:0 });
+                        const rec = skMap.get(key);
+                        if(lblKey==='goal'){ rec.Goals++; rec.Attempts++; }
+                        else if(lblKey==='shot'){ rec.Shots++; rec.Attempts++; }
+                        else if(lblKey==='miss'){ rec.Misses++; rec.Attempts++; }
+                        else if(lblKey==='block'){ rec.Blocks++; rec.Attempts++; }
+                    });
+                    tableRows = Array.from(skMap.values());
+                } else if(table==='goalies'){
+                    // Aggregate by goalie on shots and goals
+                    const gMap = new Map(); // key: name|tid -> stats
+                    finalEvents.forEach((ev,idx)=>{
+                        const lbl = prettifyEventLabel(getEventLabel(ev));
+                        const k=String(lbl).toLowerCase();
+                        if(!(k==='shot' || k==='goal')) return;
+                        const s=strengths[idx]||''; if(!passStrength(s)) return;
+                        const d=ev.details||{}; const goalie=d.goalie; if(!goalie) return;
+                        // Goalie team: try via lineups, else opposite of shooter team
+                        const shooterTid=String(ev._computedTeamId||'');
+                        let goalieTid = getPlayerTeamIdFromLineups(goalie, buildLineupIndex(window.currentGameSummaryData, gameInfo), gameInfo);
+                        if(!goalieTid){ goalieTid = (shooterTid===homeId?awayId:homeId); }
+                        const name = goalie.name || goalie.fullName || `${goalie.firstName||''} ${goalie.lastName||''}`.trim() || 'Unknown';
+                        const key = `${name}|${goalieTid}`;
+                        if(!gMap.has(key)) gMap.set(key, { Team:getTeamNameById(goalieTid) || (goalieTid===homeId?gameInfo.home_team:gameInfo.away_team), Goalie:name, SA:0, GA:0, SV:0, 'SV%':'' });
+                        const rec=gMap.get(key);
+                        rec.SA++;
+                        if(k==='goal') rec.GA++;
+                    });
+                    // finalize saves / sv%
+                    gMap.forEach(rec=>{ rec.SV = Math.max(0, rec.SA - rec.GA); rec['SV%'] = rec.SA>0 ? ( (rec.SV/rec.SA)*100 ).toFixed(1)+'%' : '—'; });
+                    tableRows = Array.from(gMap.values());
+                }
+                renderGameReportTable(tableRows);
+            }catch(e){
+                console.error('Failed to compute Game Report in-browser:', e);
+                renderGameReportKPIs(null);
+                renderGameReportShotmap(null);
+                renderGameReportTable([]);
+            }
         }
 
         function renderGameReportKPIs(data){
@@ -365,9 +511,10 @@
 
         function renderGameReportShotmap(data){
             const cont=document.getElementById('gamereport-shotmap');
-            if(!data||!data.attempts){ cont.innerHTML='<div style="opacity:0.6;font-size:12px;">Shot map unavailable.</div>'; return; }
+            const attemptsArr = Array.isArray(data) ? data : (data && data.attempts) ? data.attempts : null;
+            if(!attemptsArr){ cont.innerHTML='<div style="opacity:0.6;font-size:12px;">Shot map unavailable.</div>'; return; }
             // Simple textual shot list grouped by event for now; extend with canvas later
-            const attempts=data.attempts.slice(0,250);
+            const attempts=attemptsArr.slice(0,250);
             const rows=attempts.map(a=>`<tr><td>${a.period||''}</td><td>${a.event||''}</td><td>${a.team_for||''}</td><td>${a.strength||''}</td><td>${a.x||''}</td><td>${a.y||''}</td></tr>`).join('');
             cont.innerHTML=`<h4 style="margin:0 0 0.5rem;">Shot Attempts</h4><div style="max-height:260px;overflow:auto;border:1px solid #4a5568;border-radius:4px;">\n<table style="width:100%;font-size:11px;border-collapse:collapse;">\n<thead><tr><th>Per</th><th>Ev</th><th>Team</th><th>Str</th><th>X</th><th>Y</th></tr></thead><tbody>${rows}</tbody></table></div>`;
         }
@@ -764,6 +911,115 @@
 
             html += '</tbody></table></div></div>';
             return html;
+        }
+
+        // Build merged finalEvents and strengths from PBP + summary, for reuse in Game Report
+        function buildFinalEventsFromPBP(data, summaryData, gameInfo){
+            const lineupIndex = buildLineupIndex(summaryData, gameInfo);
+            const keyFor = (ev) => {
+                const d = ev.details || {};
+                const periodId = (d.period && (d.period.id || d.period.shortName)) || '';
+                const time = d.time || '';
+                return `${periodId}|${time}`;
+            };
+            const eventsByKey = new Map();
+            data.forEach(ev => {
+                const k = keyFor(ev);
+                if (!eventsByKey.has(k)) eventsByKey.set(k, []);
+                eventsByKey.get(k).push(ev);
+            });
+            const removedTypes = new Set(['goalie_change', 'goalie-change', 'hit', 'faceoff']);
+            const consumed = new Set();
+            const finalEvents = [];
+
+            data.forEach((ev, idx) => {
+                if (consumed.has(idx)) return;
+                const type = (ev.event || '').toLowerCase();
+                if (removedTypes.has(type)) return;
+                const d = ev.details || {};
+                const key = keyFor(ev);
+                if (type === 'goal') {
+                    const goalTeamId = String(d.team?.id || '');
+                    let shotEv = null;
+                    const group = eventsByKey.get(key) || [];
+                    for (const cand of group) {
+                        if ((cand.event || '').toLowerCase() !== 'shot') continue;
+                        const cd = cand.details || {};
+                        if (String(cd.shooterTeamId || '') === goalTeamId) { shotEv = cand; break; }
+                    }
+                    if (shotEv) {
+                        const shotIdx = data.indexOf(shotEv);
+                        if (shotIdx >= 0) consumed.add(shotIdx);
+                    }
+                    const shotD = shotEv ? (shotEv.details || {}) : {};
+                    finalEvents.push({
+                        ...ev,
+                        _computedTeamId: goalTeamId,
+                        _mergedScorer: shotD.shooter || d.scoredBy || d.scorer || d.player || null,
+                        _mergedAssists: Array.isArray(d.assists) ? d.assists.slice(0, 2) : [],
+                        _mergedGoalie: shotD.goalie || d.goalie || null,
+                        _x: (d.xLocation !== undefined ? d.xLocation : shotD.xLocation),
+                        _y: (d.yLocation !== undefined ? d.yLocation : shotD.yLocation)
+                    });
+                    return;
+                }
+                if (type === 'shot') {
+                    const shooterTeamId = String(d.shooterTeamId || d.teamId || d.team_id || '');
+                    const group = eventsByKey.get(key) || [];
+                    const hasMatchingGoal = group.some(g => {
+                        if ((g.event || '').toLowerCase() !== 'goal') return false;
+                        const gd = g.details || {};
+                        return String(gd.team?.id || '') === shooterTeamId;
+                    });
+                    if (hasMatchingGoal) return;
+                    finalEvents.push({ ...ev, _computedTeamId: shooterTeamId, _x: d.xLocation, _y: d.yLocation });
+                    return;
+                }
+                if (type === 'shootout') {
+                    const teamResolved = resolveShootoutTeamId(d, lineupIndex, gameInfo);
+                    const soIsGoal = boolish(d?.isGoal) || boolish(d?.properties?.isGoal);
+                    let teamIdForSO = teamResolved;
+                    if (soIsGoal && d.scoredBy) {
+                        const via = getPlayerTeamIdFromLineups(d.scoredBy, lineupIndex, gameInfo);
+                        if (via) teamIdForSO = via;
+                    }
+                    finalEvents.push({ ...ev, _computedTeamId: String(teamIdForSO||''), _overrideEvent: soIsGoal ? 'SO_goal' : 'SO_miss' });
+                    return;
+                }
+                if (type === 'penalty') {
+                    let commitId = String(d.againstTeam?.id || '');
+                    if (!commitId && d.againstTeam?.abbreviation) {
+                        commitId = getTeamIdByAbbrev(d.againstTeam.abbreviation);
+                    }
+                    if (!commitId) {
+                        const candidates = [d.team?.id, d.committingTeam?.id, d.penaltyTeam?.id, d.penalizedTeam?.id, d.offendingTeam?.id, d.teamId, d.team_id];
+                        commitId = String(candidates.find(v => v !== undefined && v !== null && String(v) !== '') || '');
+                    }
+                    finalEvents.push({ ...ev, _computedTeamId: commitId });
+                    return;
+                }
+                if (type === 'blocked-shot' || type === 'blocked_shot' || type === 'block') {
+                    // Orient by SHOOTING team
+                    let shooterTid = String(d.againstTeam?.id || d.shooterTeamId || '');
+                    if (!shooterTid && d.againstTeam?.abbreviation) shooterTid = getTeamIdByAbbrev(d.againstTeam.abbreviation);
+                    if (!shooterTid && d.goalie) {
+                        const goalieTid = getPlayerTeamIdFromLineups(d.goalie, lineupIndex, gameInfo);
+                        if (goalieTid) {
+                            const ids = getGameTeamIds(gameInfo);
+                            shooterTid = goalieTid === ids.homeId ? ids.awayId : ids.homeId;
+                        }
+                    }
+                    finalEvents.push({ ...ev, _computedTeamId: String(shooterTid||''), _x: d.xLocation, _y: d.yLocation });
+                    return;
+                }
+                const computed = String(d.teamId || d.team_id || d.shooterTeamId || d.scorerTeamId || (d.team && d.team.id) || '');
+                finalEvents.push({ ...ev, _computedTeamId: computed });
+            });
+
+            // Ensure shootout teams are filled/alternated
+            fixShootoutTeams(finalEvents, gameInfo);
+            const strengths = computeStrengths(finalEvents, gameInfo);
+            return { finalEvents, strengths };
         }
 
         async function exportLineups() {
