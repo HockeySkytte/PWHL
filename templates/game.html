@@ -90,6 +90,7 @@
                 <div>
                     <button class="tab active" onclick="switchTab('lineups')">📋 Lineups</button>
                     <button class="tab" onclick="switchTab('playbyplay')">⚡ Play-by-Play</button>
+                    <button class="tab" onclick="switchTab('gamereport')">📊 Game Report</button>
                 </div>
                 <div>
                     <button id="export-lineups-btn" class="csv-btn" onclick="exportLineups()">Export CSV</button>
@@ -102,6 +103,48 @@
                 </div>
                 <div id="playbyplay-content" class="tab-panel" style="display: none;">
                     <div class="loading">Loading play-by-play data...</div>
+                </div>
+                <div id="gamereport-content" class="tab-panel" style="display:none;">
+                    <div id="gamereport-filters" style="margin-bottom:1rem; display:flex; flex-wrap:wrap; gap:1rem; align-items:flex-end;">
+                        <div>
+                            <label style="display:block;font-size:12px;opacity:0.75;">Strength</label>
+                            <select id="grStrength" onchange="loadGameReport()" style="background:#1a202c;color:#e2e8f0;border:1px solid #4a5568;padding:4px 8px;border-radius:4px;">
+                                <option value="All">All</option>
+                                <option value="EV">EV</option>
+                                <option value="5v5">5v5</option>
+                                <option value="PP">PP</option>
+                                <option value="SH">SH</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label style="display:block;font-size:12px;opacity:0.75;">Perspective</label>
+                            <select id="grPerspective" onchange="loadGameReport()" style="background:#1a202c;color:#e2e8f0;border:1px solid #4a5568;padding:4px 8px;border-radius:4px;">
+                                <option value="For">For</option>
+                                <option value="Against">Against</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label style="display:block;font-size:12px;opacity:0.75;">Table</label>
+                            <select id="grTable" onchange="loadGameReport()" style="background:#1a202c;color:#e2e8f0;border:1px solid #4a5568;padding:4px 8px;border-radius:4px;">
+                                <option value="skaters">Skaters</option>
+                                <option value="goalies">Goalies</option>
+                                <option value="teams">Teams</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label style="display:block;font-size:12px;opacity:0.75;">Events</label>
+                            <select id="grEvents" multiple size="4" onchange="loadGameReport()" style="background:#1a202c;color:#e2e8f0;border:1px solid #4a5568;padding:4px 8px;border-radius:4px; min-width:120px;">
+                                <option value="Shot">Shot</option>
+                                <option value="Goal">Goal</option>
+                                <option value="Miss">Miss</option>
+                                <option value="Block">Block</option>
+                            </select>
+                        </div>
+                        <button onclick="resetGameReportFilters()" style="background:#2d3748;color:#e2e8f0;border:1px solid #4a5568;padding:6px 12px;border-radius:4px;">Reset</button>
+                    </div>
+                    <div id="gamereport-kpis" style="margin-bottom:1.25rem; display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:0.75rem;"></div>
+                    <div id="gamereport-shotmap" style="margin-bottom:2rem;"></div>
+                    <div id="gamereport-table" style="overflow-x:auto;"></div>
                 </div>
             </div>
         </div>
@@ -209,6 +252,12 @@
                         const j = await r.json();
                         if (r.ok) { window.currentPlayByPlayData = j; data = j; }
                     }
+                } else if (tabName === 'gamereport') {
+                    // Initial per-game report load
+                    await ensureGameInfo();
+                    await loadGameReport();
+                    // Replace loading state with containers already populated
+                    return; // skip generic formatter
                 }
                 if (data) {
                     contentDiv.innerHTML = formatFunction(data);
@@ -244,10 +293,94 @@
             } else if (tabName === 'playbyplay') {
                 document.getElementById('export-lineups-btn').style.display = 'none';
                 document.getElementById('export-playbyplay-btn').style.display = 'inline-block';
+            } else if (tabName === 'gamereport') {
+                document.getElementById('export-lineups-btn').style.display = 'none';
+                document.getElementById('export-playbyplay-btn').style.display = 'none';
             }
 
             // Load content for the new tab
             loadTabContent(tabName);
+        }
+
+        async function ensureGameInfo(){
+            if(!window.currentGameInfo){
+                try{ const r=await fetch(`/api/game/info/${currentGameId}`); const j=await r.json(); if(r.ok) window.currentGameInfo=j; }catch(e){}
+            }
+        }
+
+        function resetGameReportFilters(){
+            document.getElementById('grStrength').value='All';
+            document.getElementById('grPerspective').value='For';
+            document.getElementById('grTable').value='skaters';
+            Array.from(document.getElementById('grEvents').options).forEach(o=>o.selected=false);
+            loadGameReport();
+        }
+
+        async function loadGameReport(){
+            const strength=document.getElementById('grStrength').value;
+            const perspective=document.getElementById('grPerspective').value;
+            const table=document.getElementById('grTable').value;
+            const eventsSel=Array.from(document.getElementById('grEvents').selectedOptions).map(o=>o.value);
+            const gamesParam=currentGameId?`&games=${encodeURIComponent(currentGameId)}`:'';
+            // KPIs
+            try{
+                const kpiUrl=`/api/report/kpis?team=All&strength=${encodeURIComponent(strength)}&segment=all&perspective=${encodeURIComponent(perspective)}${gamesParam}`;
+                const kr=await fetch(kpiUrl); const kjson= kr.ok? await kr.json(): null;
+                renderGameReportKPIs(kjson);
+            }catch(e){ renderGameReportKPIs(null); }
+            // Shotmap (strength & perspective apply; events filter passed if selected)
+            try{
+                const params=new URLSearchParams({team:'All',strength,strengths_multi:'',season:'All',segment:'all',perspective});
+                if(eventsSel.length){ eventsSel.forEach(ev=>params.append('events',ev)); }
+                if(currentGameId) params.append('games', currentGameId);
+                const smUrl=`/api/report/shotmap?${params.toString()}`;
+                const sr=await fetch(smUrl); const smj= sr.ok? await sr.json(): null;
+                renderGameReportShotmap(smj);
+            }catch(e){ renderGameReportShotmap(null); }
+            // Table
+            try{
+                const tParams=new URLSearchParams({type:table,team:'All',strength,strengths_multi:'',season:'All',season_state:'All'});
+                if(eventsSel.length){ eventsSel.forEach(ev=>tParams.append('events',ev)); }
+                if(currentGameId) tParams.append('games', currentGameId);
+                const tUrl=`/api/report/tables?${tParams.toString()}`;
+                const tr=await fetch(tUrl); const tj= tr.ok? await tr.json(): {rows:[]};
+                renderGameReportTable(tj.rows || []);
+            }catch(e){ renderGameReportTable([]); }
+        }
+
+        function renderGameReportKPIs(data){
+            const cont=document.getElementById('gamereport-kpis');
+            if(!data){ cont.innerHTML='<div class="error">KPIs unavailable</div>'; return; }
+            const items=[];
+            for(const [k,v] of Object.entries(data)){
+                if(typeof v==='object' || Array.isArray(v)) continue;
+                items.push(`<div style="background:#1a202c;border:1px solid #4a5568;padding:0.5rem;border-radius:6px;text-align:center;">
+                    <div style="font-size:11px;opacity:0.6;">${k}</div>
+                    <div style="font-size:15px;font-weight:600;">${v===null||v===undefined?'—':v}</div>
+                </div>`);
+                if(items.length>=14) break; // cap for brevity
+            }
+            cont.innerHTML=items.join('');
+        }
+
+        function renderGameReportShotmap(data){
+            const cont=document.getElementById('gamereport-shotmap');
+            if(!data||!data.attempts){ cont.innerHTML='<div style="opacity:0.6;font-size:12px;">Shot map unavailable.</div>'; return; }
+            // Simple textual shot list grouped by event for now; extend with canvas later
+            const attempts=data.attempts.slice(0,250);
+            const rows=attempts.map(a=>`<tr><td>${a.period||''}</td><td>${a.event||''}</td><td>${a.team_for||''}</td><td>${a.strength||''}</td><td>${a.x||''}</td><td>${a.y||''}</td></tr>`).join('');
+            cont.innerHTML=`<h4 style="margin:0 0 0.5rem;">Shot Attempts</h4><div style="max-height:260px;overflow:auto;border:1px solid #4a5568;border-radius:4px;">\n<table style="width:100%;font-size:11px;border-collapse:collapse;">\n<thead><tr><th>Per</th><th>Ev</th><th>Team</th><th>Str</th><th>X</th><th>Y</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+        }
+
+        function renderGameReportTable(rows){
+            const cont=document.getElementById('gamereport-table');
+            if(!rows||!rows.length){ cont.innerHTML='<div style="opacity:0.6;font-size:12px;">No table rows for this game.</div>'; return; }
+            // Determine columns from first row
+            const first=rows[0];
+            const cols=Object.keys(first);
+            const header=cols.map(c=>`<th>${c}</th>`).join('');
+            const body=rows.map(r=>`<tr>${cols.map(c=>`<td>${r[c]===null||r[c]===undefined?'':r[c]}</td>`).join('')}</tr>`).join('');
+            cont.innerHTML=`<h4 style="margin:0 0 0.5rem;">${document.getElementById('grTable').value} table</h4><div style="max-height:400px;overflow:auto;border:1px solid #4a5568;border-radius:4px;">\n<table style="width:100%;font-size:11px;border-collapse:collapse;">\n<thead><tr>${header}</tr></thead><tbody>${body}</tbody></table></div>`;
         }
 
         function formatGameSummary(data) {
