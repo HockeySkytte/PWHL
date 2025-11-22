@@ -809,8 +809,10 @@
                     `<div style="display: flex; align-items: center; justify-content: center;"><img src="${game.home_team_logo}" alt="${game.home_team}" style="width: 32px; height: 32px;" title="${game.home_team}"></div>` : 
                     game.home_team;
                 
+                // Make any game with a valid game_id clickable (including live / in-progress / upcoming)
+                const isClickable = !!game.game_id; // allow navigation even before Final for live tracking
                 return `
-                    <tr class="game-row ${game.status.includes('Final') ? 'clickable' : ''}" onclick="${game.status.includes('Final') ? `goToGamePage('${game.game_id}')` : ''}" style="${game.status.includes('Final') ? 'cursor: pointer;' : 'cursor: default;'}">
+                    <tr class="game-row ${isClickable ? 'clickable' : ''}" onclick="${isClickable ? `goToGamePage('${game.game_id}')` : ''}" style="${isClickable ? 'cursor: pointer;' : 'cursor: default;'}">
                         <td>${game.date}</td>
                         <td>${game.season_year}</td>
                         <td>${game.season_state}</td>
