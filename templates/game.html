@@ -2038,8 +2038,8 @@
                 '4': 'New York Sirens',
                 '5': 'Ottawa Charge',
                 '6': 'Toronto Sceptres',
-                '7': 'PWHL Seattle',
-                '8': 'PWHL Vancouver'
+                '8': 'Seattle Torrent',
+                '9': 'Vancouver Goldeneyes'
             };
             return teamMap[teamId] || '';
         }
@@ -2055,8 +2055,10 @@
                 'new york sirens':'4',
                 'ottawa charge':'5',
                 'toronto sceptres':'6',
-                'pwhl seattle':'7',
-                'pwhl vancouver':'8'
+                'seattle torrent':'8',
+                'pwhl seattle':'8',
+                'vancouver goldeneyes':'9',
+                'pwhl vancouver':'9'
             };
             return map[normalized] || '';
         }
@@ -2064,7 +2066,7 @@
         function getTeamIdByAbbrev(abbrev) {
             if (!abbrev) return '';
             const a = String(abbrev).toUpperCase();
-            const map = { BOS:'1', MIN:'2', MTL:'3', NY:'4', OTT:'5', TOR:'6', SEA:'7', VAN:'8' };
+            const map = { BOS:'1', MIN:'2', MTL:'3', NY:'4', OTT:'5', TOR:'6', SEA:'8', VAN:'9' };
             return map[a] || '';
         }
 
