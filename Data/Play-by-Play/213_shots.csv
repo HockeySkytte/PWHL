@@ -1,32 +1,82 @@
 id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
-1,1:13,Goal,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,77,Susanna Tapani,47,Jamie Lee Rattray,9,Sophie Shirley,35,Ann-Renée Desbiens,,6 9 47 53 77,Hadley Hartmetz - Sophie Shirley - Jamie Lee Rattray - Rylind MacKinnon - Susanna Tapani,,9 21 27 91 96,Kati Tabin - Maureen Murphy - Shiann Darkangelo - Maggie Flaherty - Natálie Mlýnková,79.0,1.7,213,2025-11-23,PWHL,2025/2026,Regular Season
-2,2:21,Block,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,51,Kelly-Ann Nadeau,,,,,31,Aerin Frankel,,,,,,,-42.7,9.1,213,2025-11-23,PWHL,2025/2026,Regular Season
-3,2:41,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,91,Maggie Flaherty,,,,,31,Aerin Frankel,,,,,,,-12.3,20.7,213,2025-11-23,PWHL,2025/2026,Regular Season
-4,3:30,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,5,Megan Keller,,,,,35,Ann-Renée Desbiens,,,,,,,35.0,17.0,213,2025-11-23,PWHL,2025/2026,Regular Season
-5,4:03,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,23,Erin Ambrose,,,,,31,Aerin Frankel,,,,,,,-59.0,12.5,213,2025-11-23,PWHL,2025/2026,Regular Season
-6,4:16,Block,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,23,Erin Ambrose,,,,,31,Aerin Frankel,,,,,,,-32.3,-9.1,213,2025-11-23,PWHL,2025/2026,Regular Season
-7,6:46,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,77,Susanna Tapani,,,,,35,Ann-Renée Desbiens,,,,,,,80.7,0.3,213,2025-11-23,PWHL,2025/2026,Regular Season
-8,6:46,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,5,Megan Keller,,,,,35,Ann-Renée Desbiens,,,,,,,40.0,-15.3,213,2025-11-23,PWHL,2025/2026,Regular Season
-9,7:30,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,27,Shay Maloney,,,,,35,Ann-Renée Desbiens,,,,,,,9.3,14.7,213,2025-11-23,PWHL,2025/2026,Regular Season
-10,8:23,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,16,Riley Brengman,,,,,35,Ann-Renée Desbiens,,,,,,,40.0,29.2,213,2025-11-23,PWHL,2025/2026,Regular Season
-11,8:44,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,13,Liz Schepers,,,,,35,Ann-Renée Desbiens,,,,,,,69.3,2.5,213,2025-11-23,PWHL,2025/2026,Regular Season
-12,8:46,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,13,Liz Schepers,,,,,35,Ann-Renée Desbiens,,,,,,,78.3,-1.1,213,2025-11-23,PWHL,2025/2026,Regular Season
-13,8:56,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,21,Maureen Murphy,,,,,31,Aerin Frankel,,,,,,,-74.0,-6.8,213,2025-11-23,PWHL,2025/2026,Regular Season
-14,10:11,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,51,Kelly-Ann Nadeau,,,,,31,Aerin Frankel,,,,,,,-35.3,-32.9,213,2025-11-23,PWHL,2025/2026,Regular Season
-15,10:20,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,88,Skylar Irving,,,,,31,Aerin Frankel,,,,,,,-72.0,8.8,213,2025-11-23,PWHL,2025/2026,Regular Season
-16,11:32,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,17,Theresa Schafzahl,,,,,35,Ann-Renée Desbiens,,,,,,,84.0,-4.5,213,2025-11-23,PWHL,2025/2026,Regular Season
-17,11:45,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,8,Haley Winn,,,,,35,Ann-Renée Desbiens,,,,,,,56.7,13.0,213,2025-11-23,PWHL,2025/2026,Regular Season
-18,11:57,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,29,Marie-Philip Poulin,,,,,31,Aerin Frankel,,,,,,,-80.0,10.8,213,2025-11-23,PWHL,2025/2026,Regular Season
-19,13:00,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,27,Shay Maloney,,,,,35,Ann-Renée Desbiens,,,,,,,63.3,3.4,213,2025-11-23,PWHL,2025/2026,Regular Season
-20,14:50,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,77,Susanna Tapani,,,,,35,Ann-Renée Desbiens,,,,,,,27.0,33.1,213,2025-11-23,PWHL,2025/2026,Regular Season
-21,17:47,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,73,Olivia Zafuto,,,,,35,Ann-Renée Desbiens,,,,,,,67.0,14.5,213,2025-11-23,PWHL,2025/2026,Regular Season
-22,19:04,Block,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,23,Erin Ambrose,,,,,31,Aerin Frankel,,,,,,,-33.7,19.3,213,2025-11-23,PWHL,2025/2026,Regular Season
-23,19:46,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,21,Maureen Murphy,,,,,31,Aerin Frankel,,,,,,,-67.0,9.6,213,2025-11-23,PWHL,2025/2026,Regular Season
-24,19:57,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,44,Amanda Boulier,,,,,31,Aerin Frankel,,,,,,,-47.0,-11.6,213,2025-11-23,PWHL,2025/2026,Regular Season
-25,20:00,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,29,Marie-Philip Poulin,,,,,31,Aerin Frankel,,,,,,,-64.7,-22.4,213,2025-11-23,PWHL,2025/2026,Regular Season
-26,0:12,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,7,Laura Stacey,,,,,31,Aerin Frankel,,,,,,,-33.0,-27.8,213,2025-11-23,PWHL,2025/2026,Regular Season
-27,0:25,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,2,event,5v5,8,Haley Winn,,,,,35,Ann-Renée Desbiens,,,,,,,42.3,19.8,213,2025-11-23,PWHL,2025/2026,Regular Season
-28,1:16,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,91,Maggie Flaherty,,,,,31,Aerin Frankel,,,,,,,-85.0,-9.1,213,2025-11-23,PWHL,2025/2026,Regular Season
-29,1:46,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,27,Shiann Darkangelo,,,,,31,Aerin Frankel,,,,,,,-71.0,-11.1,213,2025-11-23,PWHL,2025/2026,Regular Season
-30,1:57,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,13,Alexandra Labelle,,,,,31,Aerin Frankel,,,,,,,-75.7,11.3,213,2025-11-23,PWHL,2025/2026,Regular Season
-31,3:46,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,2,event,5v5,8,Haley Winn,,,,,,,,,,,,,70.7,9.1,213,2025-11-23,PWHL,2025/2026,Regular Season
+1,1:13,Goal,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,77,Susanna Tapani,47,Jamie Lee Rattray,9,Sophie Shirley,35,Ann-Renée Desbiens,,6 9 47 53 77,Hadley Hartmetz - Sophie Shirley - Jamie Lee Rattray - Rylind MacKinnon - Susanna Tapani,,9 21 27 91 96,Kati Tabin - Maureen Murphy - Shiann Darkangelo - Maggie Flaherty - Natálie Mlýnková,-79.0,-1.7,213,2025-11-23,PWHL,2025/2026,Regular Season
+2,2:21,Block,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,275,,,,,,31,Aerin Frankel,,,,,,,42.7,-9.1,213,2025-11-23,PWHL,2025/2026,Regular Season
+3,2:41,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,91,Maggie Flaherty,,,,,31,Aerin Frankel,,,,,,,12.3,-20.7,213,2025-11-23,PWHL,2025/2026,Regular Season
+4,3:30,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,5,Megan Keller,,,,,35,Ann-Renée Desbiens,,,,,,,-35.0,-17.0,213,2025-11-23,PWHL,2025/2026,Regular Season
+5,4:03,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,23,Erin Ambrose,,,,,31,Aerin Frankel,,,,,,,59.0,-12.5,213,2025-11-23,PWHL,2025/2026,Regular Season
+6,4:16,Block,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,23,Erin Ambrose,,,,,31,Aerin Frankel,,,,,,,32.3,9.1,213,2025-11-23,PWHL,2025/2026,Regular Season
+7,6:46,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,5,Megan Keller,,,,,35,Ann-Renée Desbiens,,,,,,,-40.0,15.3,213,2025-11-23,PWHL,2025/2026,Regular Season
+8,6:46,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,77,Susanna Tapani,,,,,35,Ann-Renée Desbiens,,,,,,,-80.7,-0.3,213,2025-11-23,PWHL,2025/2026,Regular Season
+9,7:30,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,27,Shay Maloney,,,,,35,Ann-Renée Desbiens,,,,,,,-9.3,-14.7,213,2025-11-23,PWHL,2025/2026,Regular Season
+10,8:23,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,16,Riley Brengman,,,,,35,Ann-Renée Desbiens,,,,,,,-40.0,-29.2,213,2025-11-23,PWHL,2025/2026,Regular Season
+11,8:44,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,13,Liz Schepers,,,,,35,Ann-Renée Desbiens,,,,,,,-69.3,-2.5,213,2025-11-23,PWHL,2025/2026,Regular Season
+12,8:46,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,13,Liz Schepers,,,,,35,Ann-Renée Desbiens,,,,,,,-78.3,1.1,213,2025-11-23,PWHL,2025/2026,Regular Season
+13,8:56,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,21,Maureen Murphy,,,,,31,Aerin Frankel,,,,,,,74.0,6.8,213,2025-11-23,PWHL,2025/2026,Regular Season
+14,10:11,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,51,Kelly Ann Nadeau,,,,,31,Aerin Frankel,,,,,,,35.3,32.9,213,2025-11-23,PWHL,2025/2026,Regular Season
+15,10:20,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,88,Skylar Irving,,,,,31,Aerin Frankel,,,,,,,72.0,-8.8,213,2025-11-23,PWHL,2025/2026,Regular Season
+16,11:32,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,17,Theresa Schafzahl,,,,,35,Ann-Renée Desbiens,,,,,,,-84.0,4.5,213,2025-11-23,PWHL,2025/2026,Regular Season
+17,11:45,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,8,Haley Winn,,,,,35,Ann-Renée Desbiens,,,,,,,-56.7,-13.0,213,2025-11-23,PWHL,2025/2026,Regular Season
+18,11:57,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,29,Marie-Philip Poulin,,,,,31,Aerin Frankel,,,,,,,80.0,-10.8,213,2025-11-23,PWHL,2025/2026,Regular Season
+19,13:00,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,27,Shay Maloney,,,,,35,Ann-Renée Desbiens,,,,,,,-63.3,-3.4,213,2025-11-23,PWHL,2025/2026,Regular Season
+20,14:50,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,77,Susanna Tapani,,,,,35,Ann-Renée Desbiens,,,,,,,-27.0,-33.1,213,2025-11-23,PWHL,2025/2026,Regular Season
+21,17:47,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,73,Olivia Zafuto,,,,,35,Ann-Renée Desbiens,,,,,,,-67.0,-14.5,213,2025-11-23,PWHL,2025/2026,Regular Season
+22,19:04,Block,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,23,Erin Ambrose,,,,,31,Aerin Frankel,,,,,,,33.7,-19.3,213,2025-11-23,PWHL,2025/2026,Regular Season
+23,19:46,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,21,Maureen Murphy,,,,,31,Aerin Frankel,,,,,,,67.0,-9.6,213,2025-11-23,PWHL,2025/2026,Regular Season
+24,19:57,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,44,Amanda Boulier,,,,,31,Aerin Frankel,,,,,,,47.0,11.6,213,2025-11-23,PWHL,2025/2026,Regular Season
+25,20:00,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,29,Marie-Philip Poulin,,,,,31,Aerin Frankel,,,,,,,64.7,22.4,213,2025-11-23,PWHL,2025/2026,Regular Season
+26,0:12,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,7,Laura Stacey,,,,,31,Aerin Frankel,,,,,,,33.0,27.8,213,2025-11-23,PWHL,2025/2026,Regular Season
+27,0:25,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,2,event,5v5,8,Haley Winn,,,,,35,Ann-Renée Desbiens,,,,,,,-42.3,-19.8,213,2025-11-23,PWHL,2025/2026,Regular Season
+28,1:16,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,91,Maggie Flaherty,,,,,31,Aerin Frankel,,,,,,,85.0,9.1,213,2025-11-23,PWHL,2025/2026,Regular Season
+29,1:46,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,27,Shiann Darkangelo,,,,,31,Aerin Frankel,,,,,,,71.0,11.1,213,2025-11-23,PWHL,2025/2026,Regular Season
+30,1:57,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,13,Alexandra Labelle,,,,,31,Aerin Frankel,,,,,,,75.7,-11.3,213,2025-11-23,PWHL,2025/2026,Regular Season
+31,2:55,Penalty,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,88,Skylar Irving,,,,,,,,,,,,,,,213,2025-11-23,PWHL,2025/2026,Regular Season
+32,3:46,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,2,event,5v4,8,Haley Winn,,,,,35,Ann-Renée Desbiens,,,,,,,-70.7,-9.1,213,2025-11-23,PWHL,2025/2026,Regular Season
+33,4:05,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,2,event,5v4,27,Shay Maloney,,,,,35,Ann-Renée Desbiens,,,,,,,-83.0,4.2,213,2025-11-23,PWHL,2025/2026,Regular Season
+34,4:22,Block,Boston Fleet,Home,Boston Fleet,Montréal Victoire,2,event,5v5,20,Hannah Brandt,,,,,35,Ann-Renée Desbiens,,,,,,,-37.7,26.4,213,2025-11-23,PWHL,2025/2026,Regular Season
+35,4:43,Block,Boston Fleet,Home,Boston Fleet,Montréal Victoire,2,event,5v5,20,Hannah Brandt,,,,,35,Ann-Renée Desbiens,,,,,,,-39.0,13.0,213,2025-11-23,PWHL,2025/2026,Regular Season
+36,6:14,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,29,Marie-Philip Poulin,,,,,31,Aerin Frankel,,,,,,,45.0,21.5,213,2025-11-23,PWHL,2025/2026,Regular Season
+37,6:29,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,23,Erin Ambrose,,,,,31,Aerin Frankel,,,,,,,33.0,14.5,213,2025-11-23,PWHL,2025/2026,Regular Season
+38,6:45,Block,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,23,Erin Ambrose,,,,,31,Aerin Frankel,,,,,,,36.3,-4.2,213,2025-11-23,PWHL,2025/2026,Regular Season
+39,7:31,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,88,Skylar Irving,,,,,31,Aerin Frankel,,,,,,,57.0,18.4,213,2025-11-23,PWHL,2025/2026,Regular Season
+40,7:40,Block,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,9,Kati Tabin,,,,,31,Aerin Frankel,,,,,,,49.3,-17.3,213,2025-11-23,PWHL,2025/2026,Regular Season
+41,8:13,Block,Boston Fleet,Home,Boston Fleet,Montréal Victoire,2,event,5v5,27,Shay Maloney,,,,,35,Ann-Renée Desbiens,,,,,,,-42.0,-6.8,213,2025-11-23,PWHL,2025/2026,Regular Season
+42,9:23,Block,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,7,Laura Stacey,,,,,31,Aerin Frankel,,,,,,,46.0,14.7,213,2025-11-23,PWHL,2025/2026,Regular Season
+43,9:28,Block,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,28,Catherine Dubois,,,,,31,Aerin Frankel,,,,,,,51.0,12.5,213,2025-11-23,PWHL,2025/2026,Regular Season
+44,10:20,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,28,Catherine Dubois,,,,,31,Aerin Frankel,,,,,,,73.7,-26.1,213,2025-11-23,PWHL,2025/2026,Regular Season
+45,12:01,Block,Boston Fleet,Home,Boston Fleet,Montréal Victoire,2,event,5v5,77,Susanna Tapani,,,,,35,Ann-Renée Desbiens,,,,,,,-50.3,17.0,213,2025-11-23,PWHL,2025/2026,Regular Season
+46,12:28,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,29,Marie-Philip Poulin,,,,,31,Aerin Frankel,,,,,,,72.3,2.5,213,2025-11-23,PWHL,2025/2026,Regular Season
+47,13:03,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,17,Dara Greig,,,,,31,Aerin Frankel,,,,,,,43.7,1.4,213,2025-11-23,PWHL,2025/2026,Regular Season
+48,15:38,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,2,event,5v5,8,Haley Winn,,,,,35,Ann-Renée Desbiens,,,,,,,-48.0,-24.1,213,2025-11-23,PWHL,2025/2026,Regular Season
+49,15:45,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,2,event,5v5,9,Sophie Shirley,,,,,35,Ann-Renée Desbiens,,,,,,,-68.0,6.0,213,2025-11-23,PWHL,2025/2026,Regular Season
+50,15:48,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,2,event,5v5,9,Sophie Shirley,,,,,35,Ann-Renée Desbiens,,,,,,,-73.3,13.6,213,2025-11-23,PWHL,2025/2026,Regular Season
+51,16:50,Penalty,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,29,Marie-Philip Poulin,,,,,,,,,,,,,,,213,2025-11-23,PWHL,2025/2026,Regular Season
+52,16:50,Penalty,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,29,Marie-Philip Poulin,,,,,,,,,,,,,,,213,2025-11-23,PWHL,2025/2026,Regular Season
+53,19:20,Block,Boston Fleet,Home,Boston Fleet,Montréal Victoire,2,event,5v5,20,Hannah Brandt,,,,,35,Ann-Renée Desbiens,,,,,,,-59.3,12.2,213,2025-11-23,PWHL,2025/2026,Regular Season
+54,0:44,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,11,Alina Müller,,,,,35,Ann-Renée Desbiens,,,,,,,-66.0,-7.4,213,2025-11-23,PWHL,2025/2026,Regular Season
+55,1:07,Block,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,5,Megan Keller,,,,,35,Ann-Renée Desbiens,,,,,,,-35.0,19.8,213,2025-11-23,PWHL,2025/2026,Regular Season
+56,1:24,Penalty,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,29,Marie-Philip Poulin,,,,,,,,,,,,,,,213,2025-11-23,PWHL,2025/2026,Regular Season
+57,1:24,Penalty,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,7,Laura Stacey,,,,,,,,,,,,,,,213,2025-11-23,PWHL,2025/2026,Regular Season
+58,1:24,Penalty,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,44,Jill Saulnier,,,,,,,,,,,,,,,213,2025-11-23,PWHL,2025/2026,Regular Season
+59,1:40,Block,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,5,Megan Keller,,,,,35,Ann-Renée Desbiens,,,,,,,-72.3,-7.9,213,2025-11-23,PWHL,2025/2026,Regular Season
+60,1:41,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,4v3,77,Susanna Tapani,,,,,35,Ann-Renée Desbiens,,,,,,,-66.3,14.5,213,2025-11-23,PWHL,2025/2026,Regular Season
+61,1:42,Goal,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,4v3,5,Megan Keller,11,Alina Müller,77,Susanna Tapani,35,Ann-Renée Desbiens,,5 8 11 27 77,Megan Keller - Haley Winn - Alina Müller - Shay Maloney - Susanna Tapani,,11 19 23 61,Abby Roque - Kaitlin Willoughby - Erin Ambrose - Nicole Gosling,-53.7,-12.8,213,2025-11-23,PWHL,2025/2026,Regular Season
+62,1:59,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,4v4,88,Skylar Irving,,,,,31,Aerin Frankel,,,,,,,62.0,15.0,213,2025-11-23,PWHL,2025/2026,Regular Season
+63,2:26,Penalty,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,4v4,44,Amanda Boulier,,,,,,,,,,,,,,,213,2025-11-23,PWHL,2025/2026,Regular Season
+64,2:55,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,4v3,8,Haley Winn,,,,,35,Ann-Renée Desbiens,,,,,,,-63.3,-17.8,213,2025-11-23,PWHL,2025/2026,Regular Season
+65,3:06,Block,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,5,Megan Keller,,,,,35,Ann-Renée Desbiens,,,,,,,-49.0,-26.4,213,2025-11-23,PWHL,2025/2026,Regular Season
+66,3:17,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,4v3,8,Haley Winn,,,,,35,Ann-Renée Desbiens,,,,,,,-51.0,18.7,213,2025-11-23,PWHL,2025/2026,Regular Season
+67,4:23,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,4v5,29,Marie-Philip Poulin,,,,,31,Aerin Frankel,,,,,,,61.3,-12.5,213,2025-11-23,PWHL,2025/2026,Regular Season
+68,4:56,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,21,Maureen Murphy,,,,,31,Aerin Frankel,,,,,,,51.3,24.4,213,2025-11-23,PWHL,2025/2026,Regular Season
+69,5:17,Penalty,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,44,Amanda Boulier,,,,,,,,,,,,,,,213,2025-11-23,PWHL,2025/2026,Regular Season
+70,6:05,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v4,11,Alina Müller,,,,,35,Ann-Renée Desbiens,,,,,,,-69.3,-3.1,213,2025-11-23,PWHL,2025/2026,Regular Season
+71,8:24,Block,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,96,Natálie Mlýnková,,,,,31,Aerin Frankel,,,,,,,61.3,0.8,213,2025-11-23,PWHL,2025/2026,Regular Season
+72,9:02,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,55,Daniela Pejšová,,,,,35,Ann-Renée Desbiens,,,,,,,-49.3,31.4,213,2025-11-23,PWHL,2025/2026,Regular Season
+73,10:53,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,13,Liz Schepers,,,,,35,Ann-Renée Desbiens,,,,,,,-54.3,-0.3,213,2025-11-23,PWHL,2025/2026,Regular Season
+74,11:00,Block,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,55,Daniela Pejšová,,,,,35,Ann-Renée Desbiens,,,,,,,-59.3,7.6,213,2025-11-23,PWHL,2025/2026,Regular Season
+75,11:20,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,55,Daniela Pejšová,,,,,35,Ann-Renée Desbiens,,,,,,,-38.0,-0.6,213,2025-11-23,PWHL,2025/2026,Regular Season
+76,11:48,Block,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,19,Abby Newhook,,,,,35,Ann-Renée Desbiens,,,,,,,-48.3,7.6,213,2025-11-23,PWHL,2025/2026,Regular Season
+77,13:26,Block,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,9,Kati Tabin,,,,,31,Aerin Frankel,,,,,,,54.0,26.9,213,2025-11-23,PWHL,2025/2026,Regular Season
+78,13:52,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,96,Natálie Mlýnková,,,,,31,Aerin Frankel,,,,,,,41.3,-26.4,213,2025-11-23,PWHL,2025/2026,Regular Season
+79,17:09,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,21,Maureen Murphy,,,,,31,Aerin Frankel,,,,,,,46.7,29.7,213,2025-11-23,PWHL,2025/2026,Regular Season
+80,17:16,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,27,Shiann Darkangelo,,,,,31,Aerin Frankel,,,,,,,82.7,5.4,213,2025-11-23,PWHL,2025/2026,Regular Season
+81,18:15,Block,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,23,Erin Ambrose,,,,,31,Aerin Frankel,,,,,,,51.0,-18.7,213,2025-11-23,PWHL,2025/2026,Regular Season

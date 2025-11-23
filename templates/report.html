@@ -733,6 +733,7 @@
   // external clear links removed
     async function fetchKPIs(){ const team=document.getElementById('teamSelect').value; if(!team) return; const date_from=dateFrom.value||''; const date_to=dateTo.value||''; const params=new URLSearchParams({team,perspective:'For',date_from,date_to}); multiIds.forEach(id=>{ getMultiValues(id).forEach(v=>params.append(id, v)); }); const r=await fetch(`/api/report/kpis?${params.toString()}`);
       if(!r.ok) return; const data=await r.json(); const m=data.metrics||{};
+      console.log('API Response:', m); // DEBUG
       // Map KPI element ids to returned metric keys (adds Goals + Shooting/Goaltending cards)
       const map={
         'metric-ca':m['CA'],'metric-cfpct':m['CF%'],'metric-cf':m['CF'],
@@ -743,6 +744,7 @@
         // Shooting / Goaltending card
         'metric-shpct':m['Sh%'],'metric-svpct':m['Sv%'],'metric-pdo':m['PDO']
       };
+      console.log('Setting CF to:', map['metric-cf'], 'CA to:', map['metric-ca']); // DEBUG
       Object.entries(map).forEach(([id,val])=>{ const el=document.getElementById(id)?.querySelector('.value'); if(el) el.textContent=(val==null||val==='')?'—':val; });
       if(window.applyKpiColoring) window.applyKpiColoring();
     }

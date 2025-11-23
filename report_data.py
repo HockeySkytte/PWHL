@@ -304,18 +304,21 @@ class ReportDataStore:
         Added on-ice AND filter (onice list) – if provided, only retain rows where *all*
         selected players are on the ice for that event (either side). This differs from
         the existing shooter 'players' filter which is OR against shooter only.
+        
+        VERSION: Fixed string-to-list conversion for filter parameters (2025-11-23)
         """
         self.load()
-        games = games or []
-        players = players or []
-        opponents = opponents or []
-        periods = periods or []
-        events = events or []
-        strengths_multi = strengths_multi or []
-        goalies = goalies or []
-        seasons_multi = seasons_multi or []
+        # Convert comma-separated strings to lists (from Flask API)
+        games = games.split(',') if isinstance(games, str) and games else (games or [])
+        players = players.split(',') if isinstance(players, str) and players else (players or [])
+        opponents = opponents.split(',') if isinstance(opponents, str) and opponents else (opponents or [])
+        periods = periods.split(',') if isinstance(periods, str) and periods else (periods or [])
+        events = events.split(',') if isinstance(events, str) and events else (events or [])
+        strengths_multi = strengths_multi.split(',') if isinstance(strengths_multi, str) and strengths_multi else (strengths_multi or [])
+        goalies = goalies.split(',') if isinstance(goalies, str) and goalies else (goalies or [])
+        seasons_multi = seasons_multi.split(',') if isinstance(seasons_multi, str) and seasons_multi else (seasons_multi or [])
         # Support optional on-ice AND list (attribute injected by flask layer if present)
-        onice = onice or []
+        onice = onice.split(',') if isinstance(onice, str) and onice else (onice or [])
         # When no specific team chosen we treat league aggregate (percentages become 50 by construction)
         if team == 'All':
             rows = [r for r in self.rows]
@@ -471,15 +474,16 @@ class ReportDataStore:
 
     def shotmap(self, team: str='All', strength: str='All', season: str='All', date_from: str='', date_to: str='', segment: str='all', perspective: str='For', games=None, players=None, opponents=None, periods=None, events=None, strengths_multi=None, goalies=None, seasons_multi=None, onice=None) -> Dict[str, Any]:
         self.load()
-        games = games or []
-        players = players or []
-        opponents = opponents or []
-        periods = periods or []
-        events = events or []
-        strengths_multi = strengths_multi or []
-        goalies = goalies or []
-        seasons_multi = seasons_multi or []
-        onice = onice or []
+        # Convert comma-separated strings to lists (from Flask API)
+        games = games.split(',') if isinstance(games, str) and games else (games or [])
+        players = players.split(',') if isinstance(players, str) and players else (players or [])
+        opponents = opponents.split(',') if isinstance(opponents, str) and opponents else (opponents or [])
+        periods = periods.split(',') if isinstance(periods, str) and periods else (periods or [])
+        events = events.split(',') if isinstance(events, str) and events else (events or [])
+        strengths_multi = strengths_multi.split(',') if isinstance(strengths_multi, str) and strengths_multi else (strengths_multi or [])
+        goalies = goalies.split(',') if isinstance(goalies, str) and goalies else (goalies or [])
+        seasons_multi = seasons_multi.split(',') if isinstance(seasons_multi, str) and seasons_multi else (seasons_multi or [])
+        onice = onice.split(',') if isinstance(onice, str) and onice else (onice or [])
         rows = self.rows
         if team != 'All':
             if perspective.lower() == 'against':
