@@ -120,13 +120,13 @@
                             <div class="filter-group" style="display:flex;flex-direction:column;min-width:170px;">
                                 <label class="filter-label" style="margin-bottom:.4rem;font-weight:600;color:#e2e8f0;font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;">Perspective</label>
                                 <select class="filter-select" id="grPerspective" onchange="loadGameReport()" style="width:170px;background:#4a5568;border:1px solid #718096;border-radius:.375rem;padding:.45rem .6rem;color:#fff;font-size:.7rem;">
-                                    <option value="For">For (Home)</option>
-                                    <option value="Against">Against (Away)</option>
+                                    <!-- Options populated dynamically with team names -->
                                 </select>
                             </div>
                             <div class="filter-group" style="display:flex;flex-direction:column;min-width:170px;">
                                 <label class="filter-label" style="margin-bottom:.4rem;font-weight:600;color:#e2e8f0;font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;">Event</label>
-                                <select class="filter-select" id="grEvents" multiple size="4" onchange="loadGameReport()" style="width:170px;background:#4a5568;border:1px solid #718096;border-radius:.375rem;padding:.45rem .6rem;color:#fff;font-size:.7rem;min-height:80px;">
+                                <select class="filter-select" id="grEvents" onchange="loadGameReport()" style="width:170px;background:#4a5568;border:1px solid #718096;border-radius:.375rem;padding:.45rem .6rem;color:#fff;font-size:.7rem;">
+                                    <option value="All">All</option>
                                     <option value="Shot">Shot</option>
                                     <option value="Goal">Goal</option>
                                     <option value="Miss">Miss</option>
@@ -146,9 +146,24 @@
                             </div>
                         </div>
                     </div>
-                    <div style="padding:1.5rem 2rem;">
-                        <div id="gamereport-kpis" style="margin-bottom:1.5rem; display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:0.75rem;"></div>
-                        <div id="gamereport-shotmap" style="margin-bottom:2rem;"></div>
+                    <div style="padding:.5rem .5rem;">
+                        <div id="gamereport-shotmap-wrapper" style="display:flex;gap:1rem;align-items:flex-start;margin-bottom:2rem;margin-top:.75rem;">
+                            <div class="rink defensive-zone" style="flex:1;display:flex;flex-direction:column;max-width:450px;">
+                                <h3 style="margin:0 0 1rem;font-size:1.1rem;font-weight:600;color:#b9a7ff;text-align:center;">Defensive Zone</h3>
+                                <div class="zone-wrap" style="position:relative;width:100%;aspect-ratio:75/85;background:rgba(19,13,46,.75);border:1px solid rgba(142,124,214,.25);border-radius:.65rem;">
+                                    <canvas id="defRinkBase" class="rink-base" style="position:absolute;top:0;left:0;width:100%;height:100%;"></canvas>
+                                    <canvas id="defShotCanvas" class="zone-canvas" style="position:absolute;top:0;left:0;width:100%;height:100%;"></canvas>
+                                </div>
+                            </div>
+                            <div id="gamereport-kpis" style="flex:0 0 240px;display:flex;flex-direction:column;gap:.75rem;"></div>
+                            <div class="rink offensive-zone" style="flex:1;display:flex;flex-direction:column;max-width:450px;">
+                                <h3 style="margin:0 0 1rem;font-size:1.1rem;font-weight:600;color:#b9a7ff;text-align:center;">Offensive Zone</h3>
+                                <div class="zone-wrap" style="position:relative;width:100%;aspect-ratio:75/85;background:rgba(19,13,46,.75);border:1px solid rgba(142,124,214,.25);border-radius:.65rem;">
+                                    <canvas id="offRinkBase" class="rink-base" style="position:absolute;top:0;left:0;width:100%;height:100%;"></canvas>
+                                    <canvas id="offShotCanvas" class="zone-canvas" style="position:absolute;top:0;left:0;width:100%;height:100%;"></canvas>
+                                </div>
+                            </div>
+                        </div>
                         <div id="gamereport-table" style="overflow-x:auto;"></div>
                     </div>
                 </div>
@@ -231,8 +246,10 @@
             
             if (!contentDiv) return;
 
-            // Show loading state
-            contentDiv.innerHTML = '<div class="loading">Loading...</div>';
+            // Show loading state (but skip for gamereport to preserve static controls)
+            if (tabName !== 'gamereport') {
+                contentDiv.innerHTML = '<div class="loading">Loading...</div>';
+            }
 
             try {
                 let data = null; let formatFunction = null;
@@ -259,8 +276,9 @@
                         if (r.ok) { window.currentPlayByPlayData = j; data = j; }
                     }
                 } else if (tabName === 'gamereport') {
-                    // Clear loading, then call per-game report load
-                    contentDiv.innerHTML = ''; // Clear loading state; containers are already in HTML
+                    // Remove only the loading spinner to preserve Game Report controls
+                    const loadingEl = contentDiv.querySelector('.loading');
+                    if (loadingEl) loadingEl.remove();
                     await ensureGameInfo();
                     // Small delay to ensure DOM is painted after display:block
                     await new Promise(resolve => setTimeout(resolve, 10));
@@ -318,10 +336,19 @@
 
         function resetGameReportFilters(){
             const s=document.getElementById('grStrength'); if(s) s.value='All';
-            const p=document.getElementById('grPerspective'); if(p) p.value='For';
+            const p=document.getElementById('grPerspective'); if(p && p.options.length>0) p.selectedIndex=0;
             const t=document.getElementById('grTable'); if(t) t.value='skaters';
-            const evs=document.getElementById('grEvents'); if(evs) Array.from(evs.options).forEach(o=>o.selected=false);
+            const evs=document.getElementById('grEvents'); if(evs) evs.value='All';
             loadGameReport();
+        }
+
+        function populateGameReportPerspective(){
+            const perspSel=document.getElementById('grPerspective');
+            if(!perspSel || perspSel.options.length>0) return; // already populated
+            const gameInfo=window.currentGameInfo || {};
+            const home=gameInfo.home_team || 'Home Team';
+            const away=gameInfo.away_team || 'Away Team';
+            perspSel.innerHTML=`<option value="${home}">${home}</option><option value="${away}">${away}</option>`;
         }
 
         async function loadGameReport(){
@@ -334,13 +361,16 @@
                 console.warn('Game Report controls not found yet; skipping render');
                 return;
             }
+            
+            await ensureGameInfo();
+            populateGameReportPerspective();
+            
             const strength=strengthSel.value || 'All';
             const perspective=perspSel.value || 'For';
             const table=tableSel.value || 'skaters';
-            const eventsSel=Array.from(eventsSelBox.selectedOptions||[]).map(o=>o.value);
+            const eventFilter=eventsSelBox.value || 'All'; // Single value now
 
             try{
-                await ensureGameInfo();
                 // Ensure PBP is available
                 if(!window.currentPlayByPlayData){
                     const r=await fetch(`/api/game/playbyplay/${currentGameId}`);
@@ -360,105 +390,121 @@
                     if(strength==='All') return true;
                     if(strength==='EV') return a===b;
                     if(strength==='5v5') return a===5 && b===5;
-                    if(strength==='PP') return a>b; // from event team perspective
+                    if(strength==='PP') return a>b;
                     if(strength==='SH') return a<b;
                     return true;
                 };
 
-                // Selected events (default to common attempts if none selected)
-                const selectedEventsSet = new Set((eventsSel && eventsSel.length? eventsSel: ['Shot','Goal','Miss','Block']).map(e=>String(e).toLowerCase()));
-
-                // Perspective handling: relative to HOME team (clear and consistent for a single game)
+                // Perspective handling: relative to HOME team
                 const ids=getGameTeamIds(gameInfo);
                 const homeId=ids.homeId, awayId=ids.awayId;
                 const forTeamId = (perspective==='For')? homeId: awayId;
                 const againstTeamId = (perspective==='For')? awayId: homeId;
 
-                // Build attempts for shotmap and aggregates
-                const attempts=[]; // {period,event,team_for,strength,x,y,teamId}
+                // Build attempts for shotmap and KPIs (with event filter for shotmap only)
+                const allAttempts=[]; // All shot attempts for KPI calculations (ignores Event filter)
+                const filteredAttempts=[]; // Filtered by Event for shotmap display
+                
                 finalEvents.forEach((ev,idx)=>{
                     const lbl = prettifyEventLabel(getEventLabel(ev));
                     const lblKey = String(lbl).toLowerCase();
-                    if(!selectedEventsSet.has(lblKey)) return;
+                    // Only include shot attempts: shot, goal, miss, block
+                    if(!['shot','goal','miss','block'].includes(lblKey)) return;
+                    
                     const s = strengths[idx]||'';
                     if(!passStrength(s)) return;
+                    
                     const tid = String(ev._computedTeamId||'');
-                    // Map period
                     const d=ev.details||{};
                     let period = d.period ? (d.period.shortName || d.period.id || '') : '';
                     if (getEventLabel(ev)==='SO_goal' || getEventLabel(ev)==='SO_miss') period = 'SO';
-                    // Coords
+                    
                     const x = (ev._x !== undefined) ? ev._x : (d.xLocation !== undefined ? d.xLocation : d.xCoord);
                     const y = (ev._y !== undefined) ? ev._y : (d.yLocation !== undefined ? d.yLocation : d.yCoord);
-                    attempts.push({
+                    
+                    // Determine team names
+                    const eventTeamName = getTeamNameById(tid) || (tid===homeId?gameInfo.home_team: tid===awayId?gameInfo.away_team: '');
+                    const opposingTeamName = (tid===homeId) ? gameInfo.away_team : gameInfo.home_team;
+                    
+                    const attempt = {
                         period,
                         event: lbl,
-                        team_for: getTeamNameById(tid) || (tid===homeId?gameInfo.home_team: tid===awayId?gameInfo.away_team: ''),
+                        eventKey: lblKey,
+                        team_for: eventTeamName,
+                        team_against: opposingTeamName,
                         teamId: tid,
                         strength: s,
-                        x: (x||x===0)?(((x-300)/300*100).toFixed(1)): '',
-                        y: (y||y===0)?(((y-150)/150*42.5).toFixed(1)): ''
-                    });
+                        x: x,
+                        y: y,
+                        adj_x: (x||x===0)?(((x-300)/300*100).toFixed(1)): null,
+                        adj_y: (y||y===0)?(((y-150)/150*42.5).toFixed(1)): null
+                    };
+                    
+                    allAttempts.push(attempt);
+                    
+                    // Apply event filter for shotmap display
+                    if(eventFilter==='All' || lblKey===eventFilter.toLowerCase()){
+                        filteredAttempts.push(attempt);
+                    }
                 });
 
-                // KPIs by team (Home/Away), filtered by strength/events
+                // KPIs by team (Home/Away), using ALL attempts (ignoring Event filter)
                 const aggTeam = (tid)=>{
-                    const rows = attempts.filter(a=>a.teamId===tid);
-                    const countBy = (evName)=> rows.filter(r=>String(r.event).toLowerCase()===String(evName).toLowerCase()).length;
-                    const goals = countBy('Goal');
-                    const shotsOn = countBy('Shot');
-                    const misses = countBy('Miss');
-                    const blocks = countBy('Block');
+                    const rows = allAttempts.filter(a=>a.teamId===tid);
+                    const countBy = (evName)=> rows.filter(r=>r.eventKey===evName.toLowerCase()).length;
+                    const goals = countBy('goal');
+                    const shotsOn = countBy('shot');
+                    const misses = countBy('miss');
+                    const blocks = countBy('block');
                     const attemptsTot = goals + shotsOn + misses + blocks;
-                    // Special teams splits from strength string
-                    let ppGoals=0, shGoals=0;
-                    rows.forEach(r=>{
-                        if(String(r.event).toLowerCase()!=='goal') return;
-                        const m=String(r.strength||'').match(/^(\d+)v(\d+)$/);
-                        if(m){ const a=parseInt(m[1],10), b=parseInt(m[2],10); if(a>b) ppGoals++; else if(a<b) shGoals++; }
-                    });
-                    return { attempts: attemptsTot, shots: shotsOn, goals, misses, blocks, ppGoals, shGoals };
+                    return { attempts: attemptsTot, shots: shotsOn, goals, misses, blocks };
                 };
                 const homeAgg = aggTeam(homeId);
                 const awayAgg = aggTeam(awayId);
 
-                const kpisOut = {};
-                kpisOut[`${gameInfo.home_team||'Home'} ATT`] = homeAgg.attempts;
-                kpisOut[`${gameInfo.away_team||'Away'} ATT`] = awayAgg.attempts;
-                kpisOut[`${gameInfo.home_team||'Home'} SOG`] = homeAgg.shots;
-                kpisOut[`${gameInfo.away_team||'Away'} SOG`] = awayAgg.shots;
-                kpisOut[`${gameInfo.home_team||'Home'} G`] = homeAgg.goals;
-                kpisOut[`${gameInfo.away_team||'Away'} G`] = awayAgg.goals;
-                kpisOut[`${gameInfo.home_team||'Home'} PP G`] = homeAgg.ppGoals;
-                kpisOut[`${gameInfo.away_team||'Away'} PP G`] = awayAgg.ppGoals;
-                kpisOut[`${gameInfo.home_team||'Home'} SH G`] = homeAgg.shGoals;
-                kpisOut[`${gameInfo.away_team||'Away'} SH G`] = awayAgg.shGoals;
-                renderGameReportKPIs(kpisOut);
+                // Calculate KPIs with proper formulas
+                const CA = homeAgg.attempts; // Corsi Against (home perspective)
+                const CF = awayAgg.attempts; // Corsi For
+                const CFpct = (CF+CA)>0 ? ((CF/(CF+CA))*100).toFixed(1) : '—';
+                
+                const SA = homeAgg.shots;
+                const SF = awayAgg.shots;
+                const SFpct = (SF+SA)>0 ? ((SF/(SF+SA))*100).toFixed(1) : '—';
+                
+                const GA = homeAgg.goals;
+                const GF = awayAgg.goals;
+                const GFpct = (GF+GA)>0 ? ((GF/(GF+GA))*100).toFixed(1) : '—';
+                
+                // Goaltending/Shooting metrics
+                const SvPct = SA>0 ? (((SA-GA)/SA)*100).toFixed(1) : '—';
+                const ShPct = SF>0 ? ((GF/SF)*100).toFixed(1) : '—';
+                const PDO = (SvPct!=='—' && ShPct!=='—') ? (parseFloat(SvPct)+parseFloat(ShPct)).toFixed(1) : '—';
 
-                // Shotmap: filter by perspective relative to home team
-                const smAttempts = attempts.filter(a=> (perspective==='For'? a.teamId===forTeamId : a.teamId===againstTeamId));
-                renderGameReportShotmap({attempts: smAttempts});
+                // Render KPIs (pass attempts array for recalculation)
+                renderGameReportKPIs({ attempts: allAttempts });
 
-                // Table rows
+                // Shotmap: use filtered attempts
+                renderGameReportShotmap({ attempts: filteredAttempts });
+
+                // Table rows - use ALL attempts (ignore Event filter), only filter by strength
                 let tableRows=[];
                 if(table==='teams'){
                     tableRows = [
-                        { Team: gameInfo.home_team||'Home', Attempts: homeAgg.attempts, Shots: homeAgg.shots, Goals: homeAgg.goals, Misses: homeAgg.misses, Blocks: homeAgg.blocks, 'PP G': homeAgg.ppGoals, 'SH G': homeAgg.shGoals },
-                        { Team: gameInfo.away_team||'Away', Attempts: awayAgg.attempts, Shots: awayAgg.shots, Goals: awayAgg.goals, Misses: awayAgg.misses, Blocks: awayAgg.blocks, 'PP G': awayAgg.ppGoals, 'SH G': awayAgg.shGoals }
+                        { Team: gameInfo.home_team||'Home', Attempts: homeAgg.attempts, Shots: homeAgg.shots, Goals: homeAgg.goals, Misses: homeAgg.misses, Blocks: homeAgg.blocks },
+                        { Team: gameInfo.away_team||'Away', Attempts: awayAgg.attempts, Shots: awayAgg.shots, Goals: awayAgg.goals, Misses: awayAgg.misses, Blocks: awayAgg.blocks }
                     ];
                 } else if(table==='skaters'){
-                    // Aggregate by shooter/scorer
+                    // Aggregate by shooter/scorer using ALL attempts
                     const lineupIdx = buildLineupIndex(window.currentGameSummaryData, gameInfo);
-                    const skMap = new Map(); // key: name|tid -> stats
+                    const skMap = new Map();
                     finalEvents.forEach((ev,idx)=>{
                         const lbl = prettifyEventLabel(getEventLabel(ev));
                         const lblKey = String(lbl).toLowerCase();
-                        if(!selectedEventsSet.has(lblKey)) return;
+                        if(!['shot','goal','miss','block'].includes(lblKey)) return;
                         const s = strengths[idx]||''; if(!passStrength(s)) return;
                         const d=ev.details||{}; const tid=String(ev._computedTeamId||'');
                         let player = null; if(lblKey==='goal'){ player = ev._mergedScorer || d.scoredBy || d.scorer || d.player; } else { player = d.shooter || d.player; }
-                        if(!player) return; // skip if no shooter/scorer
-                        // name and jersey
+                        if(!player) return;
                         const name = player.name || player.fullName || `${player.firstName||''} ${player.lastName||''}`.trim() || 'Unknown';
                         const key = `${name}|${tid}`;
                         if(!skMap.has(key)) skMap.set(key, { Team:getTeamNameById(tid) || (tid===homeId?gameInfo.home_team: tid===awayId?gameInfo.away_team:''), Player:name, Goals:0, Shots:0, Misses:0, Blocks:0, Attempts:0 });
@@ -470,15 +516,14 @@
                     });
                     tableRows = Array.from(skMap.values());
                 } else if(table==='goalies'){
-                    // Aggregate by goalie on shots and goals
-                    const gMap = new Map(); // key: name|tid -> stats
+                    // Aggregate by goalie using ALL shots/goals
+                    const gMap = new Map();
                     finalEvents.forEach((ev,idx)=>{
                         const lbl = prettifyEventLabel(getEventLabel(ev));
                         const k=String(lbl).toLowerCase();
                         if(!(k==='shot' || k==='goal')) return;
                         const s=strengths[idx]||''; if(!passStrength(s)) return;
                         const d=ev.details||{}; const goalie=d.goalie; if(!goalie) return;
-                        // Goalie team: try via lineups, else opposite of shooter team
                         const shooterTid=String(ev._computedTeamId||'');
                         let goalieTid = getPlayerTeamIdFromLineups(goalie, buildLineupIndex(window.currentGameSummaryData, gameInfo), gameInfo);
                         if(!goalieTid){ goalieTid = (shooterTid===homeId?awayId:homeId); }
@@ -489,7 +534,6 @@
                         rec.SA++;
                         if(k==='goal') rec.GA++;
                     });
-                    // finalize saves / sv%
                     gMap.forEach(rec=>{ rec.SV = Math.max(0, rec.SA - rec.GA); rec['SV%'] = rec.SA>0 ? ( (rec.SV/rec.SA)*100 ).toFixed(1)+'%' : '—'; });
                     tableRows = Array.from(gMap.values());
                 }
@@ -503,27 +547,128 @@
         }
 
         function renderGameReportKPIs(data){
-            const cont=document.getElementById('gamereport-kpis');
-            if(!data){ cont.innerHTML='<div style="color:#e15d64;font-size:.9rem;padding:1rem;text-align:center;">KPIs unavailable</div>'; return; }
-            const items=[];
-            for(const [k,v] of Object.entries(data)){
-                if(typeof v==='object' || Array.isArray(v)) continue;
-                items.push(`<div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:.55rem;padding:.5rem .45rem;display:flex;flex-direction:column;align-items:center;gap:.3rem;min-height:60px;justify-content:center;">
-                    <div style="font-size:.55rem;letter-spacing:.05em;font-weight:600;color:#b7b3cf;text-transform:uppercase;text-align:center;">${k}</div>
-                    <div style="font-size:1.05rem;font-weight:600;line-height:1;color:#fff;">${v===null||v===undefined?'—':v}</div>
-                </div>`);
-                if(items.length>=20) break;
+            const cont = document.getElementById('gamereport-kpis');
+            if(!cont) return;
+            if(!data || !data.attempts || data.attempts.length === 0){
+                cont.innerHTML = '<div style="opacity:0.6;font-size:.85rem;padding:1rem;text-align:center;color:#b7b3cf;">No data for selected filters.</div>';
+                return;
             }
-            cont.innerHTML=items.join('');
+            
+            // Get selected team from Perspective slicer
+            const perspectiveSelect = document.getElementById('grPerspective');
+            const forTeam = perspectiveSelect ? perspectiveSelect.value : '';
+            
+            const attempts = data.attempts;
+            
+            // Calculate KPIs based on selected perspective team
+            let CA = 0, CF = 0, SA = 0, SF = 0, GA = 0, GF = 0;
+            
+            attempts.forEach(a => {
+                const evt = a.event || '';
+                // CF = attempts FOR the selected team, CA = attempts AGAINST the selected team
+                const isFor = a.team_for === forTeam;
+                
+                // Corsi: Shot, Goal, Miss, Block
+                if(['Shot', 'Goal', 'Miss', 'Block'].includes(evt)){
+                    if(isFor) CF++; else CA++;
+                }
+                
+                // Shots: Shot, Goal
+                if(['Shot', 'Goal'].includes(evt)){
+                    if(isFor) SF++; else SA++;
+                }
+                
+                // Goals
+                if(evt === 'Goal'){
+                    if(isFor) GF++; else GA++;
+                }
+            });
+            
+            // Calculate percentages
+            const CF_pct = (CF + CA) > 0 ? ((CF / (CF + CA)) * 100).toFixed(1) : '0.0';
+            const SF_pct = (SF + SA) > 0 ? ((SF / (SF + SA)) * 100).toFixed(1) : '0.0';
+            const GF_pct = (GF + GA) > 0 ? ((GF / (GF + GA)) * 100).toFixed(1) : '0.0';
+            const Sv_pct = SA > 0 ? (((SA - GA) / SA) * 100).toFixed(1) : '0.0';
+            const Sh_pct = SF > 0 ? ((GF / SF) * 100).toFixed(1) : '0.0';
+            const PDO = (parseFloat(Sv_pct) + parseFloat(Sh_pct)).toFixed(1);
+            
+            cont.innerHTML = `
+                <div style="display:flex;flex-direction:column;gap:1rem;">
+                    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:.55rem;padding:.75rem;">
+                        <div style="font-size:.65rem;letter-spacing:.05em;font-weight:600;color:#b7b3cf;text-transform:uppercase;margin-bottom:.5rem;text-align:center;">Corsi</div>
+                        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.5rem;text-align:center;">
+                            <div><div style="font-size:.55rem;color:#999;">CA</div><div style="font-size:1.1rem;font-weight:600;color:#fff;">${CA}</div></div>
+                            <div style="border-left:1px solid rgba(255,255,255,.1);border-right:1px solid rgba(255,255,255,.1);"><div style="font-size:.55rem;color:#999;">CF%</div><div style="font-size:1.1rem;font-weight:600;color:#fff;">${CF_pct}%</div></div>
+                            <div><div style="font-size:.55rem;color:#999;">CF</div><div style="font-size:1.1rem;font-weight:600;color:#fff;">${CF}</div></div>
+                        </div>
+                    </div>
+                    
+                    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:.55rem;padding:.75rem;">
+                        <div style="font-size:.65rem;letter-spacing:.05em;font-weight:600;color:#b7b3cf;text-transform:uppercase;margin-bottom:.5rem;text-align:center;">Shots</div>
+                        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.5rem;text-align:center;">
+                            <div><div style="font-size:.55rem;color:#999;">SA</div><div style="font-size:1.1rem;font-weight:600;color:#fff;">${SA}</div></div>
+                            <div style="border-left:1px solid rgba(255,255,255,.1);border-right:1px solid rgba(255,255,255,.1);"><div style="font-size:.55rem;color:#999;">SF%</div><div style="font-size:1.1rem;font-weight:600;color:#fff;">${SF_pct}%</div></div>
+                            <div><div style="font-size:.55rem;color:#999;">SF</div><div style="font-size:1.1rem;font-weight:600;color:#fff;">${SF}</div></div>
+                        </div>
+                    </div>
+                    
+                    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:.55rem;padding:.75rem;">
+                        <div style="font-size:.65rem;letter-spacing:.05em;font-weight:600;color:#b7b3cf;text-transform:uppercase;margin-bottom:.5rem;text-align:center;">Goals</div>
+                        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.5rem;text-align:center;">
+                            <div><div style="font-size:.55rem;color:#999;">GA</div><div style="font-size:1.1rem;font-weight:600;color:#fff;">${GA}</div></div>
+                            <div style="border-left:1px solid rgba(255,255,255,.1);border-right:1px solid rgba(255,255,255,.1);"><div style="font-size:.55rem;color:#999;">GF%</div><div style="font-size:1.1rem;font-weight:600;color:#fff;">${GF_pct}%</div></div>
+                            <div><div style="font-size:.55rem;color:#999;">GF</div><div style="font-size:1.1rem;font-weight:600;color:#fff;">${GF}</div></div>
+                        </div>
+                    </div>
+                    
+                    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:.55rem;padding:.75rem;">
+                        <div style="font-size:.65rem;letter-spacing:.05em;font-weight:600;color:#b7b3cf;text-transform:uppercase;margin-bottom:.5rem;text-align:center;">Expected Goals</div>
+                        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.5rem;text-align:center;">
+                            <div><div style="font-size:.55rem;color:#999;">xGA</div><div style="font-size:1.1rem;font-weight:600;color:#fff;">—</div></div>
+                            <div style="border-left:1px solid rgba(255,255,255,.1);border-right:1px solid rgba(255,255,255,.1);"><div style="font-size:.55rem;color:#999;">xGF%</div><div style="font-size:1.1rem;font-weight:600;color:#fff;">—</div></div>
+                            <div><div style="font-size:.55rem;color:#999;">xGF</div><div style="font-size:1.1rem;font-weight:600;color:#fff;">—</div></div>
+                        </div>
+                    </div>
+                    
+                    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:.55rem;padding:.75rem;">
+                        <div style="font-size:.65rem;letter-spacing:.05em;font-weight:600;color:#b7b3cf;text-transform:uppercase;margin-bottom:.5rem;text-align:center;">Goaltending / Shooting</div>
+                        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.5rem;text-align:center;">
+                            <div><div style="font-size:.55rem;color:#999;">Sv%</div><div style="font-size:1.1rem;font-weight:600;color:#fff;">${Sv_pct}%</div></div>
+                            <div style="border-left:1px solid rgba(255,255,255,.1);border-right:1px solid rgba(255,255,255,.1);"><div style="font-size:.55rem;color:#999;">PDO</div><div style="font-size:1.1rem;font-weight:600;color:#fff;">${PDO}</div></div>
+                            <div><div style="font-size:.55rem;color:#999;">Sh%</div><div style="font-size:1.1rem;font-weight:600;color:#fff;">${Sh_pct}%</div></div>
+                        </div>
+                    </div>
+                </div>
+            `;
         }
 
-        function renderGameReportShotmap(data){
-            const cont=document.getElementById('gamereport-shotmap');
+        async function renderGameReportShotmap(data){
             const attemptsArr = Array.isArray(data) ? data : (data && data.attempts) ? data.attempts : null;
-            if(!attemptsArr || attemptsArr.length===0){ cont.innerHTML='<div style="opacity:0.6;font-size:.85rem;padding:1rem;text-align:center;color:#b7b3cf;">No shot attempts for selected filters.</div>'; return; }
-            const attempts=attemptsArr.slice(0,250);
-            const rows=attempts.map(a=>`<tr style="border-bottom:1px solid rgba(255,255,255,.05);"><td style="padding:.4rem .5rem;font-size:.75rem;">${a.period||''}</td><td style="padding:.4rem .5rem;font-size:.75rem;">${a.event||''}</td><td style="padding:.4rem .5rem;font-size:.75rem;">${a.team_for||''}</td><td style="padding:.4rem .5rem;font-size:.75rem;">${a.strength||''}</td><td style="padding:.4rem .5rem;font-size:.75rem;text-align:right;">${a.x||''}</td><td style="padding:.4rem .5rem;font-size:.75rem;text-align:right;">${a.y||''}</td></tr>`).join('');
-            cont.innerHTML=`<h4 style="margin:0 0 .75rem;font-size:1rem;font-weight:600;letter-spacing:.03em;color:#b9a7ff;">Shot Attempts (${attempts.length}${attemptsArr.length>250?' of '+attemptsArr.length:''})</h4><div style="max-height:320px;overflow:auto;border:1px solid rgba(142,124,214,.25);border-radius:.65rem;background:rgba(19,13,46,.75);">\n<table style="width:100%;border-collapse:collapse;">\n<thead style="position:sticky;top:0;background:rgba(25,28,48,.92);backdrop-filter:blur(4px);z-index:10;"><tr style="border-bottom:1px solid rgba(255,255,255,.08);"><th style="padding:.5rem .5rem;text-align:left;font-size:.75rem;letter-spacing:.03em;font-weight:600;">Per</th><th style="padding:.5rem .5rem;text-align:left;font-size:.75rem;letter-spacing:.03em;font-weight:600;">Event</th><th style="padding:.5rem .5rem;text-align:left;font-size:.75rem;letter-spacing:.03em;font-weight:600;">Team</th><th style="padding:.5rem .5rem;text-align:left;font-size:.75rem;letter-spacing:.03em;font-weight:600;">Strength</th><th style="padding:.5rem .5rem;text-align:right;font-size:.75rem;letter-spacing:.03em;font-weight:600;">X</th><th style="padding:.5rem .5rem;text-align:right;font-size:.75rem;letter-spacing:.03em;font-weight:600;">Y</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+            
+            // Clear canvases if no data
+            if(!attemptsArr || attemptsArr.length===0){
+                const canvasDef = document.getElementById('defShotCanvas');
+                const canvasOff = document.getElementById('offShotCanvas');
+                if(canvasDef){
+                    const ctx = setupCanvas(canvasDef);
+                    ctx.clearRect(0, 0, canvasDef.width, canvasDef.height);
+                }
+                if(canvasOff){
+                    const ctx = setupCanvas(canvasOff);
+                    ctx.clearRect(0, 0, canvasOff.width, canvasOff.height);
+                }
+                return;
+            }
+            
+            // Draw rink bases
+            await drawRinkBases();
+            
+            // Get selected team from Perspective slicer
+            const perspectiveSelect = document.getElementById('grPerspective');
+            const forTeam = perspectiveSelect ? perspectiveSelect.value : '';
+            
+            // Draw shot markers
+            await drawShotMarkers(attemptsArr, forTeam);
         }
 
         function renderGameReportTable(rows){
@@ -535,6 +680,201 @@
             const body=rows.map(r=>`<tr style="border-bottom:1px solid rgba(255,255,255,.05);">${cols.map(c=>`<td style="padding:.45rem .55rem;font-size:.8rem;">${r[c]===null||r[c]===undefined?'':r[c]}</td>`).join('')}</tr>`).join('');
             const tableType = document.getElementById('grTable')?.value || 'data';
             cont.innerHTML=`<h4 style="margin:0 0 .75rem;font-size:1rem;font-weight:600;letter-spacing:.03em;color:#b9a7ff;text-transform:capitalize;">${tableType} Table</h4><div style="max-height:420px;overflow:auto;border:1px solid rgba(142,124,214,.25);border-radius:.65rem;background:rgba(19,13,46,.75);">\n<table style="width:100%;border-collapse:collapse;">\n<thead style="position:sticky;top:0;background:rgba(25,28,48,.92);backdrop-filter:blur(4px);z-index:10;"><tr style="border-bottom:1px solid rgba(255,255,255,.08);">${header}</tr></thead><tbody>${body}</tbody></table></div>`;
+        }
+        
+        // Helper functions for drawing shot maps on canvas
+        // Rink image helpers (matching report.html approach)
+        function setupCanvas(c){ c.width=c.clientWidth; c.height=c.clientHeight; return c.getContext('2d'); }
+        
+        // Team color cache
+        const teamColorCache = (function(){
+            let colors = null;
+            return async function(team){
+                if(colors) return colors[team] || '#53b3ff';
+                try{
+                    const resp = await fetch('/Teams.csv');
+                    if(resp.ok){
+                        colors = {};
+                        const txt = await resp.text();
+                        const lines = txt.split(/\n/);
+                        const header = lines.shift();
+                        lines.forEach(l => {
+                            const c = l.split(',');
+                            if(c.length > 5){
+                                colors[c[1]] = c[5];
+                            }
+                        });
+                        return colors[team] || '#53b3ff';
+                    }
+                } catch(e) {}
+                return '#53b3ff';
+            };
+        })();
+        const RINK_SRC='/static/hockey-rink.png';
+        let rinkImgPromise=null;
+        function loadRink(){
+            if(rinkImgPromise) return rinkImgPromise;
+            rinkImgPromise=new Promise(res=>{
+                const i=new Image();
+                i.onload=()=>res(i);
+                i.onerror=()=>{ console.error('Failed to load rink image'); res(null); };
+                i.src=RINK_SRC;
+            });
+            return rinkImgPromise;
+        }
+
+        async function drawRinkBases(){
+            const img = await loadRink();
+            if(!img) return;
+            
+            const def = document.getElementById('defRinkBase');
+            const off = document.getElementById('offRinkBase');
+            if(!def || !off) return;
+            
+            const d = setupCanvas(def);
+            const o = setupCanvas(off);
+            
+            d.clearRect(0, 0, def.width, def.height);
+            o.clearRect(0, 0, off.width, off.height);
+            
+            const sw = img.naturalWidth;
+            const sh = img.naturalHeight;
+            const zoneW = sw * 0.375; // 37.5% of rink width for each zone
+            
+            // Draw defensive zone (left portion of rink)
+            d.drawImage(img, 0, 0, zoneW, sh, 0, 0, def.width, def.height);
+            
+            // Draw offensive zone (right portion of rink)
+            o.drawImage(img, sw - zoneW, 0, zoneW, sh, 0, 0, off.width, off.height);
+        }
+        
+        async function drawShotMarkers(attempts, forTeam){
+            const canvasDef = document.getElementById('defShotCanvas');
+            const canvasOff = document.getElementById('offShotCanvas');
+            
+            if(!canvasDef || !canvasOff) return;
+            
+            // Setup canvases
+            const ctxDef = setupCanvas(canvasDef);
+            const ctxOff = setupCanvas(canvasOff);
+            
+            ctxDef.clearRect(0, 0, canvasDef.width, canvasDef.height);
+            ctxOff.clearRect(0, 0, canvasOff.width, canvasOff.height);
+            
+            console.log('Drawing shots for team:', forTeam);
+            console.log('Total attempts:', attempts.length);
+            
+            // Get team colors
+            const teamColors = {};
+            const uniqueTeams = [...new Set(attempts.map(a => a.team_for))];
+            for(const team of uniqueTeams){
+                teamColors[team] = await teamColorCache(team);
+            }
+            console.log('Team colors:', teamColors);
+            
+            let defCount = 0, offCount = 0;
+            
+            attempts.forEach(a => {
+                if(a.adj_x == null || a.adj_y == null) return;
+                
+                const origX = parseFloat(a.adj_x);
+                const origY = parseFloat(a.adj_y);
+                
+                // Determine if this is a shot FOR the selected team or AGAINST
+                const isFor = a.team_for === forTeam;
+                
+                // Determine if the shot was in offensive zone for the shooting team
+                // A shot is offensive if |x| > 25 (far from center)
+                const isOffensiveShot = Math.abs(origX) > 25;
+                
+                // Transform coordinates relative to selected team
+                // If it's for our team, keep sign; if against, flip sign
+                const rawX = isFor ? origX : -origX;
+                const rawY = isFor ? origY : -origY;
+                
+                // Debug first few shots
+                if(defCount + offCount < 5){
+                    console.log(`Shot ${defCount + offCount}:`, {
+                        team_for: a.team_for,
+                        isFor,
+                        origX,
+                        rawX,
+                        isOffensiveShot,
+                        willShowIn: (isOffensiveShot ? 'offensive' : 'defensive')
+                    });
+                }
+                
+                // Skip neutral zone (|x| < 25)
+                if(!isOffensiveShot) return;
+                
+                // Determine which canvas based on whose shot it is
+                // Selected team's shots → offensive zone (right)
+                // Opponent's shots → defensive zone (left)
+                let ctx, canvas, zx;
+                if(isFor){
+                    // Our team's shot - show in offensive zone
+                    ctx = ctxOff;
+                    canvas = canvasOff;
+                    // Normalize to [0,1] using absolute coordinates
+                    zx = (Math.abs(rawX) - 25) / 75;
+                    offCount++;
+                } else {
+                    // Opponent's shot - show in defensive zone (flip x-axis)
+                    ctx = ctxDef;
+                    canvas = canvasDef;
+                    // Flip x-axis for defensive zone by subtracting from 1
+                    zx = 1 - ((Math.abs(rawX) - 25) / 75);
+                    defCount++;
+                }
+                
+                const zy = (42.5 - rawY) / 85;
+                
+                const px = zx * canvas.width;
+                const py = zy * canvas.height;
+                
+                // Get team color
+                const teamColor = teamColors[a.team_for] || '#53b3ff';
+                
+                // Determine marker type
+                const event = a.event || '';
+                
+                ctx.save();
+                ctx.fillStyle = teamColor;
+                ctx.strokeStyle = teamColor;
+                ctx.lineWidth = 1.5;
+                
+                if(event === 'Goal') {
+                    // Star for goals in team color
+                    ctx.beginPath();
+                    ctx.moveTo(px, py - 5);
+                    ctx.lineTo(px + 4.5, py + 5);
+                    ctx.lineTo(px - 4.5, py + 1.5);
+                    ctx.lineTo(px + 4.5, py + 1.5);
+                    ctx.lineTo(px - 4.5, py + 5);
+                    ctx.closePath();
+                    ctx.fill();
+                } else if(event === 'Shot') {
+                    // Filled circle for shots
+                    ctx.beginPath();
+                    ctx.arc(px, py, 4, 0, Math.PI * 2);
+                    ctx.fill();
+                } else if(event === 'Miss') {
+                    // Filled triangle for misses
+                    ctx.beginPath();
+                    ctx.moveTo(px, py - 5);
+                    ctx.lineTo(px + 5, py + 5);
+                    ctx.lineTo(px - 5, py + 5);
+                    ctx.closePath();
+                    ctx.fill();
+                } else if(event === 'Block') {
+                    // Filled square for blocks
+                    ctx.fillRect(px - 4, py - 4, 8, 8);
+                }
+                
+                ctx.restore();
+            });
+            
+            console.log(`Defensive zone: ${defCount} shots, Offensive zone: ${offCount} shots`);
         }
 
         function formatGameSummary(data) {
@@ -558,9 +898,9 @@
                     html += '<h4>🥅 Goalies</h4><div class="roster-grid">';
                     data.homeTeam.goalies.forEach(player => {
                         const stats = player.stats || {};
-                        const playerImage = player.playerImageURL || '';
+                        const playerImage = player.playerImageURL || 'https://lscluster.hockeytech.com/statview-1.4.1/img/headshot-default.jpg';
                         html += `<div class="player-card" style="display: flex; align-items: flex-start; gap: 1rem;">
-                            ${playerImage ? `<img src="${playerImage}" alt="${player.name}" style="width: 80px; height: 80px; border-radius: 0.375rem; flex-shrink: 0;">` : '<div style="width: 80px; height: 80px; background-color: #4a5568; border-radius: 0.375rem; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 2.5rem;">🥅</div>'}
+                            <img src="${playerImage}" alt="${player.name}" onerror="this.onerror=null;this.src='https://lscluster.hockeytech.com/statview-1.4.1/img/headshot-default.jpg';" style="width: 80px; height: 80px; border-radius: 0.375rem; flex-shrink: 0;">
                             <div style="flex: 1;">
                                 <strong>#${player.jersey || 'N/A'} ${player.name || 'Unknown'}</strong><br>
                                 <small>${player.position || 'G'}${stats.timeOnIce ? ` | TOI: ${stats.timeOnIce}` : ''}</small><br>
@@ -577,9 +917,9 @@
                     html += '<h4>🏒 Skaters</h4><div class="roster-grid">';
                     data.homeTeam.skaters.forEach(player => {
                         const stats = player.stats || {};
-                        const playerImage = player.playerImageURL || '';
+                        const playerImage = player.playerImageURL || 'https://lscluster.hockeytech.com/statview-1.4.1/img/headshot-default.jpg';
                         html += `<div class="player-card" style="display: flex; align-items: flex-start; gap: 1rem;">
-                            ${playerImage ? `<img src="${playerImage}" alt="${player.name}" style="width: 80px; height: 80px; border-radius: 0.375rem; flex-shrink: 0;">` : '<div style="width: 80px; height: 80px; background-color: #4a5568; border-radius: 0.375rem; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 2.5rem;">🏒</div>'}
+                            <img src="${playerImage}" alt="${player.name}" onerror="this.onerror=null;this.src='https://lscluster.hockeytech.com/statview-1.4.1/img/headshot-default.jpg';" style="width: 80px; height: 80px; border-radius: 0.375rem; flex-shrink: 0;">
                             <div style="flex: 1;">
                                 <strong>#${player.jersey || 'N/A'} ${player.name || 'Unknown'}</strong><br>
                                 <small>${player.position || 'Skater'}${stats.toi ? ` | TOI: ${stats.toi}` : ''}</small><br>
@@ -605,9 +945,9 @@
                     html += '<h4>🥅 Goalies</h4><div class="roster-grid">';
                     data.visitingTeam.goalies.forEach(player => {
                         const stats = player.stats || {};
-                        const playerImage = player.playerImageURL || '';
+                        const playerImage = player.playerImageURL || 'https://lscluster.hockeytech.com/statview-1.4.1/img/headshot-default.jpg';
                         html += `<div class="player-card" style="display: flex; align-items: flex-start; gap: 1rem;">
-                            ${playerImage ? `<img src="${playerImage}" alt="${player.name}" style="width: 80px; height: 80px; border-radius: 0.375rem; flex-shrink: 0;">` : '<div style="width: 80px; height: 80px; background-color: #4a5568; border-radius: 0.375rem; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 2.5rem;">🥅</div>'}
+                            <img src="${playerImage}" alt="${player.name}" onerror="this.onerror=null;this.src='https://lscluster.hockeytech.com/statview-1.4.1/img/headshot-default.jpg';" style="width: 80px; height: 80px; border-radius: 0.375rem; flex-shrink: 0;">
                             <div style="flex: 1;">
                                 <strong>#${player.jersey || 'N/A'} ${player.name || 'Unknown'}</strong><br>
                                 <small>${player.position || 'G'}${stats.timeOnIce ? ` | TOI: ${stats.timeOnIce}` : ''}</small><br>
@@ -624,9 +964,9 @@
                     html += '<h4>🏒 Skaters</h4><div class="roster-grid">';
                     data.visitingTeam.skaters.forEach(player => {
                         const stats = player.stats || {};
-                        const playerImage = player.playerImageURL || '';
+                        const playerImage = player.playerImageURL || 'https://lscluster.hockeytech.com/statview-1.4.1/img/headshot-default.jpg';
                         html += `<div class="player-card" style="display: flex; align-items: flex-start; gap: 1rem;">
-                            ${playerImage ? `<img src="${playerImage}" alt="${player.name}" style="width: 80px; height: 80px; border-radius: 0.375rem; flex-shrink: 0;">` : '<div style="width: 80px; height: 80px; background-color: #4a5568; border-radius: 0.375rem; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 2.5rem;">🏒</div>'}
+                            <img src="${playerImage}" alt="${player.name}" onerror="this.onerror=null;this.src='https://lscluster.hockeytech.com/statview-1.4.1/img/headshot-default.jpg';" style="width: 80px; height: 80px; border-radius: 0.375rem; flex-shrink: 0;">
                             <div style="flex: 1;">
                                 <strong>#${player.jersey || 'N/A'} ${player.name || 'Unknown'}</strong><br>
                                 <small>${player.position || 'Skater'}${stats.toi ? ` | TOI: ${stats.toi}` : ''}</small><br>
