@@ -395,7 +395,7 @@ class ReportDataStore:
                 rows_against = [r for r in rows_against if r['strength'] in strengths_multi]
             if goalies:
                 rows_against = [r for r in rows_against if r.get('goalie') in goalies]  # goalie belongs to against rows perspective
-                rows_for = [r for r in rows_for if r.get('goalie') in goalies]
+                # Do NOT filter rows_for by goalie - those are shots BY the team, not shots the goalie faced
             if onice:
                 rows_for = [r for r in rows_for if all(p in (r.get('on_ice_all') or []) for p in onice)]
                 rows_against = [r for r in rows_against if all(p in (r.get('on_ice_all') or []) for p in onice)]
