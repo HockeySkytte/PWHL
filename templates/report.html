@@ -126,8 +126,10 @@
   </style>
   <script>
   // Ensure YouTube iframe fills the container
-  const vpObserver=new MutationObserver(()=>{ const pc=document.getElementById('videoPlayerContainer'); if(pc){ const ifr=pc.querySelector('iframe'); if(ifr){ ifr.style.width='100%'; ifr.style.height='100%'; ifr.style.objectFit='cover'; } } });
-  vpObserver.observe(document.body,{childList:true,subtree:true});
+  document.addEventListener('DOMContentLoaded', ()=>{
+    const vpObserver=new MutationObserver(()=>{ const pc=document.getElementById('videoPlayerContainer'); if(pc){ const ifr=pc.querySelector('iframe'); if(ifr){ ifr.style.width='100%'; ifr.style.height='100%'; ifr.style.objectFit='cover'; } } });
+    vpObserver.observe(document.body,{childList:true,subtree:true});
+  });
     // Soft prompt users to rotate if in portrait on small devices
     function checkOrientation(){
       const warnId='rotateWarning';
@@ -419,7 +421,7 @@
           <div id="tfSummary" style="font-size:.7rem;color:#b7b3cf;letter-spacing:.04em;margin-top:.25rem;">—</div>
         </div>
         <!-- Table Scrollable Area -->
-        <div style="flex:1;display:flex;flex-direction:column;">
+        <div style="flex:1;display:flex;flex-direction:column;min-width:0;">
           <div class="table-scroll" style="border:1px solid var(--pwhl-border);border-radius:.75rem;background:var(--pwhl-surface);max-height:62vh;overflow:auto;scrollbar-gutter:stable both-edges;">
             <table id="statsTable" style="width:max-content;min-width:100%;border-collapse:separate;border-spacing:0;font-size:.7rem;">
               <thead style="background:rgba(255,255,255,.05);position:sticky;top:0;z-index:10;">
@@ -987,7 +989,7 @@
       if(c==='Name'){
         th.style.position='sticky';
         th.style.left='0';
-        th.style.background='rgba(255,255,255,.05)';
+        th.style.background='#2a1f3d';
         th.style.zIndex='20';
         th.style.minWidth='150px';
       }
@@ -1037,7 +1039,7 @@
         if(col==='Name'){
           td.style.position='sticky';
           td.style.left='0';
-          td.style.background='var(--pwhl-surface)';
+          td.style.background='#1a1330';
           td.style.zIndex='5';
           td.style.minWidth='150px';
         }

@@ -782,6 +782,15 @@ class ReportDataStore:
             # Track games where each player has TOI
             for (gid, player_name), toi_secs in self.toi_lookup.items():
                 if toi_secs > 0 and player_name not in goalie_names:
+                    # Filter by Season and State
+                    meta = self.game_meta.get(gid, {})
+                    game_season = meta.get('season', '')
+                    game_state = meta.get('state', '')
+                    if season_filter != 'All' and game_season != season_filter:
+                        continue
+                    if season_state_filter != 'All' and game_state != season_state_filter:
+                        continue
+                    
                     # Need to determine the player's team from lineup CSV
                     lineups_dir = os.path.join(os.path.dirname(DATA_SHOTS_DIR), 'Lineups')
                     lineup_file = os.path.join(lineups_dir, f"{gid}_teams.csv")
