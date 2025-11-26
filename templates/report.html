@@ -50,7 +50,7 @@
   .clear-link{color:var(--pwhl-accent-strong);font-size:.55rem;margin-top:.3rem;cursor:pointer;text-decoration:underline;align-self:flex-start;}
     .filter-select:focus{outline:none;border-color:var(--pwhl-accent);box-shadow:0 0 0 2px rgba(142,124,214,.25);} input[type=date].filter-select{color-scheme:dark;}
     .sub-tabs{display:flex;gap:.25rem;margin-top:.25rem;}
-    .sub-tab{background:transparent;color:#d6d3e9;border:none;padding:.65rem 1.15rem;font-size:.8rem;cursor:pointer;border-bottom:3px solid transparent;transition:.2s;border-radius:.25rem .25rem 0 0;}
+    .sub-tab{background:transparent;color:#d6d3e9;border:none;padding:.65rem 1.15rem;font-size:1.1rem;cursor:pointer;border-bottom:3px solid transparent;transition:.2s;border-radius:.25rem .25rem 0 0;}
     .sub-tab.active{color:var(--pwhl-accent-strong);border-bottom-color:var(--pwhl-accent-strong);background:rgba(255,255,255,.02);} 
   .rink-row{display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;padding:.4rem 2rem 0;align-items:stretch;}
   .rink{background:var(--pwhl-surface);border:1px solid var(--pwhl-border);border-radius:.9rem;padding:.55rem;display:flex;flex-direction:column;}
@@ -373,36 +373,39 @@
       <div id="tablesFlex" style="display:flex;align-items:stretch;gap:1rem;">
         <!-- Table Filters Side Panel -->
         <div id="tableFilterPanel" style="width:220px;flex:0 0 220px;display:flex;flex-direction:column;gap:.75rem;background:var(--pwhl-surface);border:1px solid var(--pwhl-border);border-radius:.75rem;padding:.75rem;">
-          <div style="font-size:.65rem;font-weight:600;letter-spacing:.07em;color:#b7b3cf;text-transform:uppercase;">Table Filters</div>
+          <div style="font-size:.75rem;font-weight:600;letter-spacing:.07em;color:#b7b3cf;text-transform:uppercase;">Table Filters</div>
           <div style="display:flex;gap:.5rem;">
             <button id="tfModePerGame" type="button" class="metric-btn" style="flex:1;">Per Game</button>
             <button id="tfModeTotals" type="button" class="metric-btn" style="flex:1;">Totals</button>
           </div>
-          <label style="display:flex;flex-direction:column;gap:.3rem;font-size:.6rem;">
+          <div style="display:flex;gap:.5rem;">
+            <button id="tfModeByGame" type="button" class="metric-btn" style="flex:1;">By Game</button>
+          </div>
+          <label style="display:flex;flex-direction:column;gap:.3rem;font-size:.7rem;">
             <span style="font-weight:500;letter-spacing:.05em;">Search (Name)</span>
-            <input id="tfSearch" type="text" placeholder="Type to filter..." style="background:#394566;border:1px solid #566080;color:#fff;border-radius:.45rem;padding:.4rem .55rem;font-size:.65rem;" />
+            <input id="tfSearch" type="text" placeholder="Type to filter..." style="background:#394566;border:1px solid #566080;color:#fff;border-radius:.45rem;padding:.4rem .55rem;font-size:.75rem;" />
           </label>
-          <label style="display:flex;flex-direction:column;gap:.25rem;font-size:.55rem;">
+          <label style="display:flex;flex-direction:column;gap:.25rem;font-size:.7rem;">
             <span style="font-weight:500;letter-spacing:.05em;">Min GP</span>
-            <input id="tfMinGP" type="number" min="0" placeholder="0" style="background:#394566;border:1px solid #566080;color:#fff;border-radius:.4rem;padding:.35rem .45rem;font-size:.6rem;" />
+            <input id="tfMinGP" type="number" min="0" placeholder="0" style="background:#394566;border:1px solid #566080;color:#fff;border-radius:.4rem;padding:.35rem .45rem;font-size:.75rem;" />
           </label>
-          <label style="display:flex;flex-direction:column;gap:.3rem;font-size:.6rem;">
+          <label style="display:flex;flex-direction:column;gap:.3rem;font-size:.7rem;">
             <span style="font-weight:500;letter-spacing:.05em;">Season</span>
-            <select id="tfSeason" style="background:#394566;border:1px solid #566080;color:#fff;border-radius:.45rem;padding:.4rem .55rem;font-size:.65rem;">
+            <select id="tfSeason" style="background:#394566;border:1px solid #566080;color:#fff;border-radius:.45rem;padding:.4rem .55rem;font-size:.75rem;">
               <option value="All">All</option>
             </select>
           </label>
-          <label style="display:flex;flex-direction:column;gap:.3rem;font-size:.6rem;">
+          <label style="display:flex;flex-direction:column;gap:.3rem;font-size:.7rem;">
             <span style="font-weight:500;letter-spacing:.05em;">Season State</span>
-            <select id="tfSeasonState" style="background:#394566;border:1px solid #566080;color:#fff;border-radius:.45rem;padding:.4rem .55rem;font-size:.65rem;">
+            <select id="tfSeasonState" style="background:#394566;border:1px solid #566080;color:#fff;border-radius:.45rem;padding:.4rem .55rem;font-size:.75rem;">
               <option value="All">All</option>
               <option value="Regular Season">Regular Season</option>
               <option value="Playoffs">Playoffs</option>
             </select>
           </label>
-          <label style="display:flex;flex-direction:column;gap:.3rem;font-size:.55rem;">
+          <label style="display:flex;flex-direction:column;gap:.3rem;font-size:.7rem;">
             <span style="font-weight:500;letter-spacing:.05em;">Strength</span>
-            <select id="tfStrength" style="background:#394566;border:1px solid #566080;color:#fff;border-radius:.45rem;padding:.4rem .55rem;font-size:.6rem;">
+            <select id="tfStrength" style="background:#394566;border:1px solid #566080;color:#fff;border-radius:.45rem;padding:.4rem .55rem;font-size:.75rem;">
               <option value="All">All</option>
               <option value="5v5">5v5</option>
               <option value="EV">EV</option>
@@ -413,7 +416,7 @@
           <div style="display:flex;gap:.5rem;margin-top:.6rem;padding-top:.6rem;border-top:1px solid var(--pwhl-border);">
             <button id="tfReset" type="button" class="metric-btn" style="flex:1;">Reset</button>
           </div>
-          <div id="tfSummary" style="font-size:.55rem;color:#b7b3cf;letter-spacing:.04em;margin-top:.25rem;">—</div>
+          <div id="tfSummary" style="font-size:.7rem;color:#b7b3cf;letter-spacing:.04em;margin-top:.25rem;">—</div>
         </div>
         <!-- Table Scrollable Area -->
         <div style="flex:1;display:flex;flex-direction:column;">
@@ -949,16 +952,24 @@
   const TABLE_COLUMNS={
     // Skaters (individual production focus first, then on-ice)
   skaters:['Name','Team','Season','State','Strength','GP','TOI','G','A','P','5v5 GF','5v5 GA','5v5 G+/-','Sh%','Shots','Misses','Shots in block','Blocks','PEN taken','PEN drawn'],
+    // Skaters by game
+  skaters_by_game:['Name','Team','Opponent','Season','State','Strength','Date','Venue','GameID','TOI','G','A','P','5v5 GF','5v5 GA','5v5 G+/-','Sh%','Shots','Misses','Shots in block','Blocks','PEN taken','PEN drawn'],
     // Goalies (lean set – usage + shot faced results)
   goalies:['Name','Team','Season','State','Strength','GP','TOI','SA','GA','Sv%'],
+    // Goalies by game
+  goalies_by_game:['Name','Team','Opponent','Season','State','Strength','Date','Venue','GameID','TOI','SA','GA','Sv%'],
     // Teams (drive & results + discipline)
   teams:['Team','Season','State','Strength','GP','CF','CA','CF%','FF','FA','FF%','SF','SA','SF%','GF','GA','GF%','Sh%','Sv%','PDO']
   };
   function renderTable(type, rows){
     clearTable();
+    const byGameMode = window._tableByGameMode === true;
     let cols=TABLE_COLUMNS[type]||[];
-    if(type==='goalies') cols=['Name','Team','Season','State','Strength','GP','TOI','SA','GA','Sv%'];
-    try{ console.debug('[PWHL] renderTable type=', type, 'cols=', cols); }catch(e){}
+    // Override columns based on type and by_game mode
+    if(type==='goalies' && !byGameMode) cols=['Name','Team','Season','State','Strength','GP','TOI','SA','GA','Sv%'];
+    if(type==='goalies' && byGameMode) cols=TABLE_COLUMNS['goalies_by_game'];
+    if(type==='skaters' && byGameMode) cols=TABLE_COLUMNS['skaters_by_game'];
+    try{ console.debug('[PWHL] renderTable type=', type, 'byGame=', byGameMode, 'cols=', cols); }catch(e){}
     // store current rows for export/sorting
     window._currentTableType=type;
     window._currentTableRows=rows.slice();
@@ -966,12 +977,18 @@
       const th=document.createElement('th');
       th.textContent=c;
       th.style.padding='.5rem .6rem';
-      th.style.textAlign=(c==='Name'||c==='Team')?'left':'center';
+      th.style.textAlign=(c==='Name'||c==='Team'||c==='Opponent'||c==='Date'||c==='Venue')?'left':'center';
       th.style.fontWeight='600';
-      th.style.fontSize='.6rem';
+      th.style.fontSize='.75rem';
       th.style.letterSpacing='.05em';
       th.style.whiteSpace='nowrap';
       th.style.cursor='pointer';
+      // Set minimum widths for text-heavy columns
+      if(c==='Name') th.style.minWidth='150px';
+      if(c==='Team') th.style.minWidth='140px';
+      if(c==='Opponent') th.style.minWidth='140px';
+      if(c==='State') th.style.minWidth='120px';
+      if(c==='Date') th.style.minWidth='100px';
       th.dataset.col=c;
       th.addEventListener('click',()=>sortTableBy(c));
       tableHeader.appendChild(th);
@@ -983,9 +1000,13 @@
         switch(col){
           case 'Name': return r.player||r.name||r.goalie||r.team||'';
           case 'Team': return r.team||'';
+          case 'Opponent': return r.opponent||'';
           case 'Season': return r.Season || r.season || '';
           case 'State': return r.Season_State || r.state || '';
           case 'Strength': return r.Strength || r.strength_class || r.strength || '';
+          case 'Date': return r.date||'';
+          case 'Venue': return r.venue||'';
+          case 'GameID': return r.game_id||'';
           case 'GA': return r.GA ?? '';
           case 'SA': return r.SA ?? '';
           case 'Sv%': return (r['Sv%']!==undefined && r['Sv%']!==null)? r['Sv%'] : '—';
@@ -1003,8 +1024,14 @@
         const td=document.createElement('td');
         td.textContent=val===undefined?'':val;
         td.style.padding='.45rem .6rem';
-        td.style.textAlign=(col==='Name'||col==='Team')?'left':'center';
-        td.style.fontSize='.6rem';
+        td.style.textAlign=(col==='Name'||col==='Team'||col==='Opponent'||col==='Date'||col==='Venue')?'left':'center';
+        td.style.fontSize='.75rem';
+        // Set minimum widths for text-heavy columns
+        if(col==='Name') td.style.minWidth='150px';
+        if(col==='Team') td.style.minWidth='140px';
+        if(col==='Opponent') td.style.minWidth='140px';
+        if(col==='State') td.style.minWidth='120px';
+        if(col==='Date') td.style.minWidth='100px';
         tr.appendChild(td);
       });
       tableBody.appendChild(tr);
@@ -1030,9 +1057,13 @@
     switch(col){
       case 'Name': return row.player||row.name||row.goalie||row.team||'';
       case 'Team': return row.team||'';
+      case 'Opponent': return row.opponent||'';
       case 'Season': return row.Season || row.season || '';
       case 'State': return row.Season_State || row.state || '';
       case 'Strength': return row.Strength || row.strength_class || row.strength || '';
+      case 'Date': return row.date||'';
+      case 'Venue': return row.venue||'';
+      case 'GameID': return row.game_id||'';
       case 'GA': return row.GA ?? '';
       case 'SA': return row.SA ?? '';
       case 'Sv%': return (row['Sv%']!==undefined && row['Sv%']!==null)? row['Sv%'] : '';
@@ -1043,12 +1074,45 @@
     }
   }
   // CSV Export
-  function exportCurrentTable(){ const type=window._currentTableType; const rows=window._currentTableRows||[]; if(!type||!rows.length) return; let cols=TABLE_COLUMNS[type]; if(type==='goalies'){ cols=['Name','Team','Season','State','Strength','GP','TOI','SA','GA','Sv%']; } if(type==='teams'){ cols=['Team','Season','State','Strength','GP','CF','CA','CF%','FF','FA','FF%','SF','SA','SF%','GF','GA','GF%','Sh%','Sv%','PDO']; } const lines=[]; lines.push(cols.join(',')); rows.forEach(r=>{ const line=cols.map(c=>{ let v=extractValue(r,c); if(typeof v==='string'){ if(v.includes('"')||v.includes(',')||v.includes('\n')) v='"'+v.replace(/"/g,'""')+'"'; } return v; }).join(','); lines.push(line); }); const blob=new Blob([lines.join('\n')],{type:'text/csv'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=`${type}_export.csv`; document.body.appendChild(a); a.click(); setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); },0); }
+  function exportCurrentTable(){ 
+    const type=window._currentTableType; 
+    const rows=window._currentTableRows||[]; 
+    if(!type||!rows.length) return; 
+    const byGameMode = window._tableByGameMode === true;
+    let cols=TABLE_COLUMNS[type]; 
+    // Use appropriate columns based on mode
+    if(type==='goalies' && !byGameMode){ cols=['Name','Team','Season','State','Strength','GP','TOI','SA','GA','Sv%']; } 
+    if(type==='goalies' && byGameMode){ cols=TABLE_COLUMNS['goalies_by_game']; }
+    if(type==='skaters' && byGameMode){ cols=TABLE_COLUMNS['skaters_by_game']; }
+    if(type==='teams'){ cols=['Team','Season','State','Strength','GP','CF','CA','CF%','FF','FA','FF%','SF','SA','SF%','GF','GA','GF%','Sh%','Sv%','PDO']; } 
+    const lines=[]; 
+    lines.push(cols.join(',')); 
+    rows.forEach(r=>{ 
+      const line=cols.map(c=>{ 
+        let v=extractValue(r,c); 
+        if(typeof v==='string'){ 
+          if(v.includes('"')||v.includes(',')||v.includes('\n')) v='"'+v.replace(/"/g,'""')+'"'; 
+        } 
+        return v; 
+      }).join(','); 
+      lines.push(line); 
+    }); 
+    const blob=new Blob([lines.join('\n')],{type:'text/csv'}); 
+    const a=document.createElement('a'); 
+    a.href=URL.createObjectURL(blob); 
+    const modeLabel = byGameMode ? '_by_game' : '';
+    a.download=`${type}${modeLabel}_export.csv`; 
+    document.body.appendChild(a); 
+    a.click(); 
+    setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); },0); 
+  }
   // Inject export button next to table selector buttons
   (function addExportBtn(){ const wrap=document.querySelector('#tablesWrapper > div:first-child'); if(!wrap) return; const btn=document.createElement('button'); btn.type='button'; btn.textContent='Export CSV'; btn.className='metric-btn'; btn.style.marginLeft='auto'; btn.addEventListener('click',exportCurrentTable); wrap.appendChild(btn); })();
   async function fetchCurrentTable(){
     const active=document.querySelector('.tbl-sub-btn.active'); if(!active) return; const type=active.dataset.table; const team=document.getElementById('teamSelect').value||'All';
-  const params=new URLSearchParams({type,team}); const date_from=dateFrom.value||''; const date_to=dateTo.value||''; if(date_from) params.set('date_from',date_from); if(date_to) params.set('date_to',date_to);
+  const byGameMode = window._tableByGameMode === true;
+  const params=new URLSearchParams({type,team});
+  if(byGameMode) params.set('by_game', 'true'); const date_from=dateFrom.value||''; const date_to=dateTo.value||''; if(date_from) params.set('date_from',date_from); if(date_to) params.set('date_to',date_to);
   const seasonOverride=document.getElementById('tfSeason')?.value; if(seasonOverride && seasonOverride!=='All') params.set('season', seasonOverride);
   const seasonStateOverride=document.getElementById('tfSeasonState')?.value; if(seasonStateOverride && seasonStateOverride!=='All') params.set('season_state', seasonStateOverride);
   const strengthOverride=document.getElementById('tfStrength')?.value; if(strengthOverride && strengthOverride!=='All') params.set('strength', strengthOverride);
@@ -1098,37 +1162,47 @@
     const minGP = parseFloat(document.getElementById('tfMinGP')?.value || '');
   // Season & Strength handled via backend refetch; not filtered client-side
     const perGameMode = window._tableMode === 'per_game';
+    const byGameMode = window._tableByGameMode === true;
     let rows = base.filter(r=>{
       let ok = true;
       if(search){ const name=(r.player||r.team||'').toLowerCase(); ok = ok && name.includes(search); }
-      if(!isNaN(minGP)) ok = ok && (r.GP||0) >= minGP;
+      // Don't filter by minGP in by_game mode (each row is 1 game)
+      if(!isNaN(minGP) && !byGameMode) ok = ok && (r.GP||0) >= minGP;
       return ok;
     });
-    if(perGameMode){
+    // Only apply per-game calculations if not in by_game mode
+    if(perGameMode && !byGameMode){
       rows = rows.map(r=>{
         const gp = r.GP || 1;
         const clone = {...r};
         // Recompute P again in case upstream changed
         if(typeof clone.G==='number' && typeof clone.A==='number') clone.P = clone.G + clone.A;
         Object.keys(clone).forEach(k=>{
-          // Do NOT rate-convert identifying fields or percentage / rate stats
-          if(['player','team','Name','Team','GP','season','Season','strength_class','Strength','Season_State','CF%','FF%','SF%','GF%','Sh%','Sv%','PDO'].includes(k)) return;
+          // Do NOT rate-convert identifying fields or percentage / rate stats or TOI (handled separately)
+          if(['player','team','Name','Team','GP','season','Season','strength_class','Strength','Season_State','CF%','FF%','SF%','GF%','Sh%','Sv%','PDO','TOI'].includes(k)) return;
           if(typeof clone[k]==='number'){
             clone[k] = +(clone[k]/gp).toFixed(2);
           }
         });
+        // TOI should also be converted to per-game (minutes per game)
+        if(typeof clone.TOI==='number' && gp > 0){
+          clone.TOI = +(clone.TOI/gp).toFixed(1);
+        }
         return clone;
       });
     }
     renderTable(type, rows);
     const summary=document.getElementById('tfSummary');
-    if(summary){ summary.textContent = base.length? `${rows.length} / ${base.length} rows` + (perGameMode?' (Per Game)':'') : '—'; }
-    if(initial){ if(summary && !search && isNaN(minGP)) summary.textContent = `${rows.length} rows` + (perGameMode?' (Per Game)':''); }
+    const isInByGameMode = window._tableByGameMode === true;
+    let modeLabel = isInByGameMode ? ' (By Game)' : (perGameMode ? ' (Per Game)' : '');
+    if(summary){ summary.textContent = base.length? `${rows.length} / ${base.length} rows` + modeLabel : '—'; }
+    if(initial){ if(summary && !search && isNaN(minGP)) summary.textContent = `${rows.length} rows` + modeLabel; }
   }
 
   // Wire filter panel events
   (function wireTableFilters(){
     window._tableMode='totals';
+    window._tableByGameMode=false;
     const search=document.getElementById('tfSearch');
     const minGP=document.getElementById('tfMinGP');
   const seasonSel=document.getElementById('tfSeason');
@@ -1137,13 +1211,18 @@
     const resetBtn=document.getElementById('tfReset');
     const btnTotals=document.getElementById('tfModeTotals');
     const btnPerGame=document.getElementById('tfModePerGame');
+    const btnByGame=document.getElementById('tfModeByGame');
     function updateModeButtons(){
       [btnTotals,btnPerGame].forEach(b=>{ if(!b) return; b.classList.remove('active'); });
-      if(window._tableMode==='per_game'){ btnPerGame?.classList.add('active'); } else { btnTotals?.classList.add('active'); }
+      if(btnByGame) btnByGame.classList.remove('active');
+      if(window._tableByGameMode){ btnByGame?.classList.add('active'); }
+      else if(window._tableMode==='per_game'){ btnPerGame?.classList.add('active'); } 
+      else { btnTotals?.classList.add('active'); }
     }
-    if(btnTotals) btnTotals.addEventListener('click',()=>{ window._tableMode='totals'; updateModeButtons(); applyTableFilters(); saveState(getState()); });
-  if(btnPerGame) btnPerGame.addEventListener('click',()=>{ window._tableMode='per_game'; updateModeButtons(); applyTableFilters(); saveState(getState()); });
-  if(resetBtn) resetBtn.addEventListener('click',()=>{ if(search) search.value=''; if(minGP) minGP.value=''; if(seasonSel) seasonSel.value='All'; if(seasonStateSel) seasonStateSel.value='All'; if(strengthSel) strengthSel.value='All'; window._tableMode='totals'; updateModeButtons(); fetchCurrentTable(); saveState(getState()); });
+    if(btnTotals) btnTotals.addEventListener('click',()=>{ window._tableMode='totals'; window._tableByGameMode=false; updateModeButtons(); applyTableFilters(); saveState(getState()); });
+  if(btnPerGame) btnPerGame.addEventListener('click',()=>{ window._tableMode='per_game'; window._tableByGameMode=false; updateModeButtons(); applyTableFilters(); saveState(getState()); });
+  if(btnByGame) btnByGame.addEventListener('click',()=>{ window._tableByGameMode=true; updateModeButtons(); fetchCurrentTable(); saveState(getState()); });
+  if(resetBtn) resetBtn.addEventListener('click',()=>{ if(search) search.value=''; if(minGP) minGP.value=''; if(seasonSel) seasonSel.value='All'; if(seasonStateSel) seasonStateSel.value='All'; if(strengthSel) strengthSel.value='All'; window._tableMode='totals'; window._tableByGameMode=false; updateModeButtons(); fetchCurrentTable(); saveState(getState()); });
     if(search) search.addEventListener('input',()=>{ applyTableFilters(); saveState(getState()); });
   ;[minGP].forEach(inp=>{ if(inp) inp.addEventListener('change',()=>{ applyTableFilters(); saveState(getState()); }); });
   if(seasonSel) seasonSel.addEventListener('change',()=>{ fetchCurrentTable(); saveState(getState()); });

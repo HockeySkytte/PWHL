@@ -545,6 +545,7 @@ def report_shotmap():
 @app.route('/api/report/tables')
 def report_tables():
     table_type = request.args.get('type','skaters')
+    by_game = request.args.get('by_game','').lower() == 'true'
     params = {
         'team': request.args.get('team','All'),
         'strength': request.args.get('strength','All'),
@@ -553,6 +554,7 @@ def report_tables():
         'date_from': request.args.get('date_from',''),
         'date_to': request.args.get('date_to',''),
         'segment': request.args.get('segment','all'),
+        'by_game': by_game,
     }
     def _get_multi(name):
         vals = request.args.getlist(name)

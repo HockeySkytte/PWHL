@@ -708,12 +708,15 @@ class ReportDataStore:
         Intentionally ignores on-ice, strength splits, GF/GA, and complex filters
         to eliminate sources of inflation. Only deduplicates goal events so a
         duplicated goal row cannot inflate G/A.
+        
+        If by_game=True, returns one row per player per game with game details.
         """
         self.load()
         # Keep simple optional seasonal labels for UI consistency and now apply those filters
         season_filter = kwargs.get('season','All')
         season_state_filter = kwargs.get('season_state','All')
         strength_filter = kwargs.get('strength','All')
+        by_game = kwargs.get('by_game', False)
 
         rows = self.rows
         if season_filter != 'All':
@@ -731,20 +734,124 @@ class ReportDataStore:
                 else:
                     if r.get('strength') == strength_filter: tmp.append(r)
             rows = tmp
-        stats: Dict[str, Any] = {}
+        
+        # Initialize stats dictionaries based on mode
+        stats_by_game: Dict[Tuple[str, str], Dict[str, Any]] = {}
+        stats_agg: Dict[str, Any] = {}
+        
         goalie_names = {r['goalie'] for r in rows if r.get('goalie')}
 
-        def ensure_player(name: str, team: str):
-            return stats.setdefault(name, {
-                'player': name,
-                'team': team,
-                'GP': set(),
-                'G':0,'A':0,'P':0,
-                'Shots':0,'Misses':0,'Shots_in_block':0,
-                'PEN_taken':0,'PEN_drawn':0,
-            })
+        def ensure_player(name: str, team: str, game_id = None):
+            if by_game:
+                key = (name, game_id)
+                if key not in stats_by_game:
+                    stats_by_game[key] = {
+                        'player': name,
+                        'team': team,
+                        'game_id': game_id,
+                        'opponent': '',
+                        'date': '',
+                        'venue': '',
+                        'G':0,'A':0,'P':0,
+                        'Shots':0,'Misses':0,'Shots_in_block':0,
+                        'PEN_taken':0,'PEN_drawn':0,
+                    }
+                return stats_by_game[key]
+            else:
+                return stats_agg.setdefault(name, {
+                    'player': name,
+                    'team': team,
+                    'GP': set(),
+                    'G':0,'A':0,'P':0,
+                    'Shots':0,'Misses':0,'Shots_in_block':0,
+                    'PEN_taken':0,'PEN_drawn':0,
+                })
 
         goal_keys=set()
+        
+        # Pre-populate all players from lineup CSVs to ensure players with no shot events are included
+        # For aggregated mode, we need to track which games each player participated in based on TOI
+        if by_game or not by_game:
+            # Get all unique game IDs from filtered rows
+            game_ids = {r['game_id'] for r in rows}
+            for gid in game_ids:
+                self._load_lineups_for_game(gid)
+        
+        # For aggregated mode, pre-populate GP from TOI data
+        if not by_game:
+            # Track games where each player has TOI
+            for (gid, player_name), toi_secs in self.toi_lookup.items():
+                if toi_secs > 0 and player_name not in goalie_names:
+                    # Need to determine the player's team from lineup CSV
+                    lineups_dir = os.path.join(os.path.dirname(DATA_SHOTS_DIR), 'Lineups')
+                    lineup_file = os.path.join(lineups_dir, f"{gid}_teams.csv")
+                    if os.path.exists(lineup_file):
+                        try:
+                            with open(lineup_file, 'r', encoding='utf-8') as f:
+                                reader = csv.DictReader(f)
+                                for row in reader:
+                                    if row.get('Name', '').strip() == player_name:
+                                        player_team = row.get('Team', '')
+                                        # Ensure player exists in stats_agg
+                                        p = ensure_player(player_name, player_team, None)
+                                        # Add this game to their GP
+                                        p['GP'].add(gid)
+                                        break
+                        except:
+                            pass
+        
+        # For by_game mode, pre-populate all players from lineup CSVs to ensure players with no shot events are included
+        if by_game:
+            # Get all unique game IDs from filtered rows
+            game_ids = {r['game_id'] for r in rows}
+            for gid in game_ids:
+                self._load_lineups_for_game(gid)
+                # Get game metadata
+                meta = self.game_meta.get(gid, {})
+                home_team = meta.get('home_team', '')
+                away_team = meta.get('away_team', '')
+                date = meta.get('date', '')
+                season = meta.get('season', '')
+                state = meta.get('state', '')
+                
+                # Pre-populate all players from this game's lineup
+                for (lineup_gid, player_name), toi_secs in self.toi_lookup.items():
+                    if lineup_gid != gid:
+                        continue
+                    if player_name in goalie_names:
+                        continue
+                    
+                    # Determine team and venue from lineup data
+                    # We need to scan the lineup CSV again to get team/venue info
+                    lineups_dir = os.path.join(os.path.dirname(DATA_SHOTS_DIR), 'Lineups')
+                    lineup_file = os.path.join(lineups_dir, f"{gid}_teams.csv")
+                    if os.path.exists(lineup_file):
+                        try:
+                            with open(lineup_file, 'r', encoding='utf-8') as f:
+                                reader = csv.DictReader(f)
+                                for row in reader:
+                                    if row.get('Name', '').strip() == player_name:
+                                        player_team = row.get('Team', '')
+                                        venue_str = row.get('Venue', '')
+                                        
+                                        # Create player entry if not exists
+                                        p = ensure_player(player_name, player_team, gid)
+                                        if not p.get('date'):
+                                            p['date'] = date
+                                            p['Season'] = season
+                                            p['Season_State'] = state
+                                            p['Strength'] = strength_filter
+                                            p['venue'] = venue_str
+                                            
+                                            # Determine opponent
+                                            if player_team == home_team:
+                                                p['opponent'] = away_team
+                                            elif player_team == away_team:
+                                                p['opponent'] = home_team
+                                        break
+                        except Exception:
+                            pass
+        
         for r in rows:
             shooter = r.get('shooter')
             team = r.get('team_for')
@@ -753,28 +860,60 @@ class ReportDataStore:
             gid = r['game_id']
             # Load TOI lineup data lazily
             self._load_lineups_for_game(gid)
+            
+            # For by_game mode, populate game metadata
+            if by_game:
+                s = ensure_player(shooter, team, gid)
+                if not s.get('date'):
+                    meta = self.game_meta.get(gid, {})
+                    s['date'] = meta.get('date', '')
+                    s['Season'] = meta.get('season', '') or r.get('season', '')
+                    s['Season_State'] = meta.get('state', '') or r.get('state', '')
+                    s['Strength'] = strength_filter
+                    # Determine opponent and venue
+                    home_team = meta.get('home_team', '')
+                    away_team = meta.get('away_team', '')
+                    if team == home_team:
+                        s['opponent'] = away_team
+                        s['venue'] = 'Home'
+                    elif team == away_team:
+                        s['opponent'] = home_team
+                        s['venue'] = 'Away'
+                    else:
+                        s['opponent'] = ''
+                        s['venue'] = ''
+            
             # Shots / attempts
             if r['is_shot']:
-                s = ensure_player(shooter, team)
-                s['GP'].add(gid)
+                s = ensure_player(shooter, team, gid if by_game else None)
+                if not by_game:
+                    s['GP'].add(gid)
                 s['Shots'] += 1
             if r['is_miss']:
-                s = ensure_player(shooter, team); s['GP'].add(gid); s['Misses'] += 1
+                s = ensure_player(shooter, team, gid if by_game else None)
+                if not by_game:
+                    s['GP'].add(gid)
+                s['Misses'] += 1
             if r['is_block']:
-                s = ensure_player(shooter, team); s['GP'].add(gid); s['Shots_in_block'] += 1
+                s = ensure_player(shooter, team, gid if by_game else None)
+                s['Shots_in_block'] += 1
             # Goals (dedup)
             if r['is_goal']:
                 gkey=(gid, r.get('period'), shooter, r.get('assist1'), r.get('assist2'), r.get('strength'), r.get('x'), r.get('y'))
                 if gkey in goal_keys:
                     continue
                 goal_keys.add(gkey)
-                s = ensure_player(shooter, team); s['GP'].add(gid); s['G'] += 1
+                s = ensure_player(shooter, team, gid if by_game else None)
+                if not by_game:
+                    s['GP'].add(gid)
+                s['G'] += 1
                 # Assists (only once per unique goal)
                 for a_field in ('assist1','assist2'):
                     a = r.get(a_field)
                     if a and a not in goalie_names:
-                        ap = ensure_player(a, team)
-                        ap['GP'].add(gid)
+                        ap = ensure_player(a, team, gid if by_game else None)
+                        if not by_game:
+                            ap['GP'].add(gid)
                         ap['A'] += 1
                 # On-ice 5v5 GF/GA attribution (basic plus/minus style): all skaters (non-goalies) on scoring side get GF, on opposing side GA
                 strength_class = self._classify_strength(r.get('strength',''), r.get('team_for',''), True)
@@ -795,28 +934,43 @@ class ReportDataStore:
                     ga_team_str = ga_team or r.get('team_against') or ''
                     for pname in gf_list:
                         if pname and pname not in goalie_names and gf_team_str:
-                            ps = ensure_player(pname, gf_team_str)
+                            ps = ensure_player(pname, gf_team_str, gid if by_game else None)
                             ps['5v5_GF_onice'] = ps.get('5v5_GF_onice',0) + 1
                     for pname in ga_list:
                         if pname and pname not in goalie_names and ga_team_str:
-                            ps = ensure_player(pname, ga_team_str)
+                            ps = ensure_player(pname, ga_team_str, gid if by_game else None)
                             ps['5v5_GA_onice'] = ps.get('5v5_GA_onice',0) + 1
             # Penalties (taken only, optional)
             if r['event']=='Penalty':
                 pen = r.get('shooter')
                 if pen and pen not in goalie_names:
-                    pstats = ensure_player(pen, team)
-                    pstats['GP'].add(gid)
+                    pstats = ensure_player(pen, team, gid if by_game else None)
+                    if not by_game:
+                        pstats['GP'].add(gid)
                     pstats['PEN_taken'] += 1
 
         # Finalize output
         out=[]
-        for rec in stats.values():
-            rec['GP'] = len(rec['GP'])
+        stats_to_iterate = stats_by_game if by_game else stats_agg
+        for rec in stats_to_iterate.values():
+            if by_game:
+                # For by_game mode, calculate TOI for this specific game
+                gid = rec['game_id']
+                toi_secs = self.toi_lookup.get((gid, rec['player']), 0)
+                rec['TOI'] = round(toi_secs/60,1) if toi_secs else 0.0
+            else:
+                # Save the game set before converting GP to count
+                filtered_games = rec['GP'] if isinstance(rec['GP'], set) else set()
+                rec['GP'] = len(rec['GP'])
+                # Filter TOI by games where player actually played (in GP set)
+                total_toi_secs = sum(
+                    secs for (gid, name), secs in self.toi_lookup.items()
+                    if name == rec['player'] and gid in filtered_games
+                )
+                rec['TOI'] = round(total_toi_secs/60,1) if total_toi_secs else 0.0
+            
             rec['P'] = rec['G'] + rec['A']
             rec['Sh%'] = round(rec['G']/rec['Shots']*100,1) if rec['Shots']>0 else 0
-            total_toi_secs = sum(secs for (gid,name),secs in self.toi_lookup.items() if name==rec['player'])
-            rec['TOI'] = round(total_toi_secs/60,1) if total_toi_secs else 0.0
             # 5v5 on-ice derived: we compute GF_onice & GA_onice; present GF/GA as on-ice, and G+/- = GF_onice - GA_onice
             gf_on = rec.get('5v5_GF_onice', 0)
             ga_on = rec.get('5v5_GA_onice', 0)
@@ -824,11 +978,15 @@ class ReportDataStore:
             rec['5v5_GA'] = ga_on
             rec['5v5_G+/-'] = gf_on - ga_on
             # Add placeholder fields the frontend may expect (consistent schema)
-            rec['Season'] = season_filter
-            rec['Season_State'] = season_state_filter
-            rec['Strength'] = strength_filter
+            if not by_game:
+                rec['Season'] = season_filter
+                rec['Season_State'] = season_state_filter
+                rec['Strength'] = strength_filter
             # Fill missing optional fields with defaults
             rec.setdefault('PEN_drawn', 0)
+            # Skip players with 0 TOI in by_game mode
+            if by_game and rec.get('TOI', 0) == 0:
+                continue
             out.append(rec)
 
         out.sort(key=lambda x:(-x['P'], -x['G'], x['player']))
@@ -844,11 +1002,14 @@ class ReportDataStore:
         SA: all shots on goal (is_shot) faced by goalie (includes goals)
         GA: goals allowed (is_goal) faced by goalie
         Sv% = (SA-GA)/SA * 100
+        
+        If by_game=True, returns one row per goalie per game with game details.
         """
         self.load()
         season_filter = kwargs.get('season','All')
         season_state_filter = kwargs.get('season_state','All')
         strength_filter = kwargs.get('strength','All')
+        by_game = kwargs.get('by_game', False)
 
         rows = self.rows
         if season_filter != 'All':
@@ -867,16 +1028,79 @@ class ReportDataStore:
                     if r.get('strength') == strength_filter: tmp.append(r)
             rows = tmp
 
-        stats: Dict[str, Any] = {}
+        # Initialize stats dictionaries based on mode
+        stats_by_game: Dict[Tuple[str, str], Dict[str, Any]] = {}
+        stats_agg: Dict[str, Any] = {}
 
-        def ensure_goalie(name: str, team: str):
-            return stats.setdefault(name, {
-                'player': name,
-                'team': team,
-                'GP': set(),
-                'SA': 0,
-                'GA': 0,
-            })
+        def ensure_goalie(name: str, team: str, game_id = None):
+            if by_game:
+                key = (name, game_id)
+                if key not in stats_by_game:
+                    stats_by_game[key] = {
+                        'player': name,
+                        'team': team,
+                        'game_id': game_id,
+                        'opponent': '',
+                        'date': '',
+                        'venue': '',
+                        'SA': 0,
+                        'GA': 0,
+                    }
+                return stats_by_game[key]
+            else:
+                return stats_agg.setdefault(name, {
+                    'player': name,
+                    'team': team,
+                    'GP': set(),
+                    'SA': 0,
+                    'GA': 0,
+                })
+
+        # For by_game mode, pre-populate all goalies from lineup CSVs
+        if by_game:
+            # Get all unique game IDs from filtered rows
+            game_ids = {r['game_id'] for r in rows}
+            for gid in game_ids:
+                self._load_lineups_for_game(gid)
+                # Get game metadata
+                meta = self.game_meta.get(gid, {})
+                home_team = meta.get('home_team', '')
+                away_team = meta.get('away_team', '')
+                date = meta.get('date', '')
+                season = meta.get('season', '')
+                state = meta.get('state', '')
+                
+                # Pre-populate all goalies from this game's lineup
+                lineups_dir = os.path.join(os.path.dirname(DATA_SHOTS_DIR), 'Lineups')
+                lineup_file = os.path.join(lineups_dir, f"{gid}_teams.csv")
+                if os.path.exists(lineup_file):
+                    try:
+                        with open(lineup_file, 'r', encoding='utf-8') as f:
+                            reader = csv.DictReader(f)
+                            for row in reader:
+                                player_name = row.get('Name', '').strip()
+                                line = row.get('Line', '')
+                                # Check if this is a goalie (Line = 'G')
+                                if line == 'G' and player_name:
+                                    goalie_team = row.get('Team', '')
+                                    venue_str = row.get('Venue', '')
+                                    
+                                    # Create goalie entry if not exists
+                                    g = ensure_goalie(player_name, goalie_team, gid)
+                                    if not g.get('date'):
+                                        g['date'] = date
+                                        g['Season'] = season
+                                        g['Season_State'] = state
+                                        g['Strength'] = strength_filter
+                                        g['venue'] = venue_str
+                                        
+                                        # Determine opponent
+                                        if goalie_team == home_team:
+                                            g['opponent'] = away_team
+                                        elif goalie_team == away_team:
+                                            g['opponent'] = home_team
+                    except Exception:
+                        pass
 
         for r in rows:
             g = r.get('goalie')
@@ -885,25 +1109,69 @@ class ReportDataStore:
             team_against = r.get('team_against')  # goalie belongs to defending team
             if not team_against:
                 continue
-            rec = ensure_goalie(g, team_against)
-            rec['GP'].add(r['game_id'])
+            gid = r['game_id']
+            self._load_lineups_for_game(gid)
+            
+            rec = ensure_goalie(g, team_against, gid if by_game else None)
+            
+            # For by_game mode, populate game metadata
+            if by_game and not rec.get('date'):
+                meta = self.game_meta.get(gid, {})
+                rec['date'] = meta.get('date', '')
+                rec['Season'] = meta.get('season', '') or r.get('season', '')
+                rec['Season_State'] = meta.get('state', '') or r.get('state', '')
+                rec['Strength'] = strength_filter
+                # Determine opponent and venue
+                home_team = meta.get('home_team', '')
+                away_team = meta.get('away_team', '')
+                if team_against == home_team:
+                    rec['opponent'] = away_team
+                    rec['venue'] = 'Home'
+                elif team_against == away_team:
+                    rec['opponent'] = home_team
+                    rec['venue'] = 'Away'
+                else:
+                    rec['opponent'] = ''
+                    rec['venue'] = ''
+            
+            if not by_game:
+                rec['GP'].add(r['game_id'])
             if r.get('is_shot'):
                 rec['SA'] += 1
             if r.get('is_goal'):
                 rec['GA'] += 1
 
         out=[]
-        for rec in stats.values():
-            rec['GP'] = len(rec['GP'])
+        stats_to_iterate = stats_by_game if by_game else stats_agg
+        for rec in stats_to_iterate.values():
+            if by_game:
+                # For by_game mode, calculate TOI for this specific game
+                gid = rec['game_id']
+                toi_secs = self.toi_lookup.get((gid, rec['player']), 0)
+                rec['TOI'] = round(toi_secs/60,1) if toi_secs else 0.0
+            else:
+                # Save the game set before converting GP to count
+                filtered_games = rec['GP'] if isinstance(rec['GP'], set) else set()
+                rec['GP'] = len(rec['GP'])
+                # Filter TOI by games where goalie actually played (in GP set)
+                total_toi_secs = sum(
+                    secs for (gid, name), secs in self.toi_lookup.items()
+                    if name == rec['player'] and gid in filtered_games
+                )
+                rec['TOI'] = round(total_toi_secs/60,1) if total_toi_secs else 0.0
+            
             sa = rec['SA']
             ga = rec['GA']
             rec['Sv%'] = round((sa-ga)/sa*100,1) if sa>0 else None
-            # TOI from lineup cache
-            total_toi_secs = sum(secs for (gid,name),secs in self.toi_lookup.items() if name==rec['player'])
-            rec['TOI'] = round(total_toi_secs/60,1) if total_toi_secs else 0.0
-            rec['Season'] = season_filter
-            rec['Season_State'] = season_state_filter
-            rec['Strength'] = strength_filter
+            
+            # Add placeholder fields the frontend may expect (consistent schema)
+            if not by_game:
+                rec['Season'] = season_filter
+                rec['Season_State'] = season_state_filter
+                rec['Strength'] = strength_filter
+            # Skip goalies with 0 TOI in by_game mode
+            if by_game and rec.get('TOI', 0) == 0:
+                continue
             out.append(rec)
         # Sort: by Sv%, then GA ascending, then SA descending
         out.sort(key=lambda r: (-(r['Sv%'] if r['Sv%'] is not None else -1), r['GA'], -r['SA'], r['player']))
