@@ -421,8 +421,8 @@
         <!-- Table Scrollable Area -->
         <div style="flex:1;display:flex;flex-direction:column;">
           <div class="table-scroll" style="border:1px solid var(--pwhl-border);border-radius:.75rem;background:var(--pwhl-surface);max-height:62vh;overflow:auto;scrollbar-gutter:stable both-edges;">
-            <table id="statsTable" style="width:100%;border-collapse:separate;border-spacing:0;font-size:.7rem;">
-              <thead style="background:rgba(255,255,255,.05);position:sticky;top:0;z-index:5;">
+            <table id="statsTable" style="width:max-content;min-width:100%;border-collapse:separate;border-spacing:0;font-size:.7rem;">
+              <thead style="background:rgba(255,255,255,.05);position:sticky;top:0;z-index:10;">
                 <tr id="statsHeader"></tr>
               </thead>
               <tbody id="statsBody"></tbody>
@@ -983,8 +983,15 @@
       th.style.letterSpacing='.05em';
       th.style.whiteSpace='nowrap';
       th.style.cursor='pointer';
+      // Make Name column sticky
+      if(c==='Name'){
+        th.style.position='sticky';
+        th.style.left='0';
+        th.style.background='rgba(255,255,255,.05)';
+        th.style.zIndex='20';
+        th.style.minWidth='150px';
+      }
       // Set minimum widths for text-heavy columns
-      if(c==='Name') th.style.minWidth='150px';
       if(c==='Team') th.style.minWidth='140px';
       if(c==='Opponent') th.style.minWidth='140px';
       if(c==='State') th.style.minWidth='120px';
@@ -1026,8 +1033,15 @@
         td.style.padding='.45rem .6rem';
         td.style.textAlign=(col==='Name'||col==='Team'||col==='Opponent'||col==='Date'||col==='Venue')?'left':'center';
         td.style.fontSize='.75rem';
+        // Make Name column sticky
+        if(col==='Name'){
+          td.style.position='sticky';
+          td.style.left='0';
+          td.style.background='var(--pwhl-surface)';
+          td.style.zIndex='5';
+          td.style.minWidth='150px';
+        }
         // Set minimum widths for text-heavy columns
-        if(col==='Name') td.style.minWidth='150px';
         if(col==='Team') td.style.minWidth='140px';
         if(col==='Opponent') td.style.minWidth='140px';
         if(col==='State') td.style.minWidth='120px';
