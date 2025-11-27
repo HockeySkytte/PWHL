@@ -21,6 +21,16 @@
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://pwhl.onrender.com/static/Thumbnail.png">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LQY14MGCDV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LQY14MGCDV');
+    </script>
+    
     <style>
         :root {
             --pwhl-bg-1: #160A3A; /* deep purple */
@@ -142,6 +152,36 @@
 
         .filter-group {
             margin-bottom: 1.5rem;
+        }
+
+        .logo-section {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--pwhl-border);
+            text-align: center;
+        }
+
+        .logo-link {
+            display: inline-block;
+            transition: opacity 0.2s;
+        }
+
+        .logo-link:hover {
+            opacity: 0.8;
+        }
+
+        .logo-link img {
+            width: 120px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .logo-attribution {
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.7);
+            letter-spacing: 0.05em;
         }
 
         .filter-label {
@@ -527,6 +567,13 @@
                 <select class="filter-select" id="statusFilter" onchange="applyFilters({preferCache: true})">
                     <option value="All">All Statuses</option>
                 </select>
+            </div>
+
+            <div class="logo-section">
+                <a href="https://hockey-statistics.com/" target="_blank" rel="noopener noreferrer" class="logo-link">
+                    <img src="{{ url_for('static', filename='Logo.png') }}" alt="Hockey Statistics Logo">
+                </a>
+                <div class="logo-attribution">App by HockeySkytte</div>
             </div>
         </div>
 
