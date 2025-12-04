@@ -1,1 +1,95 @@
 id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
+1,0:19,Penalty,Seattle Torrent,Home,Seattle Torrent,New York Sirens,1,event,5v5,11,Emily Brown,,,,,,,,,,,,,,,221,2025-12-03,PWHL,2025/2026,Regular Season
+2,0:34,Shot,New York Sirens,Away,Seattle Torrent,New York Sirens,1,event,5v4,98,Kristýna Kaltounková,,,,,83,Hannah Murphy,,,,,,,47.0,24.9,221,2025-12-03,PWHL,2025/2026,Regular Season
+3,1:17,Shot,New York Sirens,Away,Seattle Torrent,New York Sirens,1,event,5v4,24,Anne Cherkowski,,,,,83,Hannah Murphy,,,,,,,50.3,16.1,221,2025-12-03,PWHL,2025/2026,Regular Season
+4,2:16,Block,New York Sirens,Away,Seattle Torrent,New York Sirens,1,event,5v4,29,Emmy Fecteau,,,,,83,Hannah Murphy,,,,,,,48.3,-23.0,221,2025-12-03,PWHL,2025/2026,Regular Season
+5,3:10,Shot,New York Sirens,Away,Seattle Torrent,New York Sirens,1,event,5v5,16,Lauren Bernard,,,,,83,Hannah Murphy,,,,,,,47.7,9.3,221,2025-12-03,PWHL,2025/2026,Regular Season
+6,3:15,Goal,New York Sirens,Away,Seattle Torrent,New York Sirens,1,event,5v5,19,Paetyn Levis,71,Jincy Roese,16,Lauren Bernard,83,Hannah Murphy,,5 8 13 20 78 88,Anna Wilgren - Natalie Snodgrass - Mikyla Grant-Mentis - Mariah Keopple - Lexie Adzija - Julia Gosling,,16 18 19 43 71 98,Lauren Bernard - Maddi Wheeler - Paetyn Levis - Kristin O'Neill - Jincy Roese - Kristýna Kaltounková,76.7,2.0,221,2025-12-03,PWHL,2025/2026,Regular Season
+7,3:44,Shot,Seattle Torrent,Home,Seattle Torrent,New York Sirens,1,event,5v5,21,Hilary Knight,,,,,82,Kayle Osborne,,,,,,,-30.7,-25.2,221,2025-12-03,PWHL,2025/2026,Regular Season
+8,4:04,Block,Seattle Torrent,Home,Seattle Torrent,New York Sirens,1,event,5v5,19,Hannah Bilka,,,,,82,Kayle Osborne,,,,,,,-45.0,14.5,221,2025-12-03,PWHL,2025/2026,Regular Season
+9,4:13,Block,Seattle Torrent,Home,Seattle Torrent,New York Sirens,1,event,5v5,24,Lyndie Lobdell,,,,,82,Kayle Osborne,,,,,,,-81.7,14.5,221,2025-12-03,PWHL,2025/2026,Regular Season
+10,4:26,Block,Seattle Torrent,Home,Seattle Torrent,New York Sirens,1,event,5v5,17,Brooke Bryant,,,,,82,Kayle Osborne,,,,,,,-48.0,-15.9,221,2025-12-03,PWHL,2025/2026,Regular Season
+11,4:49,Shot,New York Sirens,Away,Seattle Torrent,New York Sirens,1,event,5v5,71,Jincy Roese,,,,,83,Hannah Murphy,,,,,,,49.7,-12.2,221,2025-12-03,PWHL,2025/2026,Regular Season
+12,4:53,Block,New York Sirens,Away,Seattle Torrent,New York Sirens,1,event,5v5,29,Emmy Fecteau,,,,,83,Hannah Murphy,,,,,,,59.0,13.3,221,2025-12-03,PWHL,2025/2026,Regular Season
+13,6:14,Shot,Seattle Torrent,Home,Seattle Torrent,New York Sirens,1,event,5v5,66,Marah Wagner,,,,,82,Kayle Osborne,,,,,,,-65.0,20.7,221,2025-12-03,PWHL,2025/2026,Regular Season
+14,7:05,Penalty,New York Sirens,Away,Seattle Torrent,New York Sirens,1,event,5v5,24,Anne Cherkowski,,,,,,,,,,,,,,,221,2025-12-03,PWHL,2025/2026,Regular Season
+15,10:32,Block,Seattle Torrent,Home,Seattle Torrent,New York Sirens,1,event,5v5,25,Alex Carpenter,,,,,82,Kayle Osborne,,,,,,,-77.0,0.3,221,2025-12-03,PWHL,2025/2026,Regular Season
+16,10:49,Shot,New York Sirens,Away,Seattle Torrent,New York Sirens,1,event,5v5,81,Kayla Vespa,,,,,83,Hannah Murphy,,,,,,,65.0,19.6,221,2025-12-03,PWHL,2025/2026,Regular Season
+17,13:46,Block,Seattle Torrent,Home,Seattle Torrent,New York Sirens,1,event,5v5,21,Hilary Knight,,,,,82,Kayle Osborne,,,,,,,-51.0,13.0,221,2025-12-03,PWHL,2025/2026,Regular Season
+18,14:29,Shot,Seattle Torrent,Home,Seattle Torrent,New York Sirens,1,event,5v5,5,Anna Wilgren,,,,,82,Kayle Osborne,,,,,,,-30.3,-29.7,221,2025-12-03,PWHL,2025/2026,Regular Season
+19,14:41,Block,Seattle Torrent,Home,Seattle Torrent,New York Sirens,1,event,5v5,88,Julia Gosling,,,,,82,Kayle Osborne,,,,,,,-53.0,-7.1,221,2025-12-03,PWHL,2025/2026,Regular Season
+20,15:21,Block,Seattle Torrent,Home,Seattle Torrent,New York Sirens,1,event,5v5,92,Danielle Serdachny,,,,,82,Kayle Osborne,,,,,,,-40.0,-6.0,221,2025-12-03,PWHL,2025/2026,Regular Season
+21,16:42,Penalty,Seattle Torrent,Home,Seattle Torrent,New York Sirens,1,event,5v5,13,Mikyla Grant-Mentis,,,,,,,,,,,,,,,221,2025-12-03,PWHL,2025/2026,Regular Season
+22,17:05,Block,New York Sirens,Away,Seattle Torrent,New York Sirens,1,event,5v4,98,Kristýna Kaltounková,,,,,83,Hannah Murphy,,,,,,,44.3,-12.2,221,2025-12-03,PWHL,2025/2026,Regular Season
+23,17:14,Shot,New York Sirens,Away,Seattle Torrent,New York Sirens,1,event,5v4,10,Sarah Fillier,,,,,83,Hannah Murphy,,,,,,,74.0,-21.2,221,2025-12-03,PWHL,2025/2026,Regular Season
+24,17:31,Shot,New York Sirens,Away,Seattle Torrent,New York Sirens,1,event,5v4,24,Anne Cherkowski,,,,,83,Hannah Murphy,,,,,,,79.3,-9.3,221,2025-12-03,PWHL,2025/2026,Regular Season
+25,19:25,Block,Seattle Torrent,Home,Seattle Torrent,New York Sirens,1,event,5v5,11,Emily Brown,,,,,82,Kayle Osborne,,,,,,,-32.3,29.5,221,2025-12-03,PWHL,2025/2026,Regular Season
+26,19:40,Penalty,New York Sirens,Away,Seattle Torrent,New York Sirens,1,event,5v5,4,Elle Hartje,,,,,,,,,,,,,,,221,2025-12-03,PWHL,2025/2026,Regular Season
+27,0:46,Block,Seattle Torrent,Home,Seattle Torrent,New York Sirens,2,event,4v5,3,Cayla Barnes,,,,,82,Kayle Osborne,,,,,,,-38.7,9.1,221,2025-12-03,PWHL,2025/2026,Regular Season
+28,1:43,Block,Seattle Torrent,Home,Seattle Torrent,New York Sirens,2,event,4v5,92,Danielle Serdachny,,,,,82,Kayle Osborne,,,,,,,-63.7,10.2,221,2025-12-03,PWHL,2025/2026,Regular Season
+29,3:34,Block,Seattle Torrent,Home,Seattle Torrent,New York Sirens,2,event,5v5,21,Hilary Knight,,,,,82,Kayle Osborne,,,,,,,-55.0,16.1,221,2025-12-03,PWHL,2025/2026,Regular Season
+30,3:46,Block,Seattle Torrent,Home,Seattle Torrent,New York Sirens,2,event,5v5,25,Alex Carpenter,,,,,82,Kayle Osborne,,,,,,,-52.3,-9.1,221,2025-12-03,PWHL,2025/2026,Regular Season
+31,3:48,Shot,Seattle Torrent,Home,Seattle Torrent,New York Sirens,2,event,5v5,25,Alex Carpenter,,,,,82,Kayle Osborne,,,,,,,-73.3,8.2,221,2025-12-03,PWHL,2025/2026,Regular Season
+32,3:49,Shot,Seattle Torrent,Home,Seattle Torrent,New York Sirens,2,event,5v5,25,Alex Carpenter,,,,,82,Kayle Osborne,,,,,,,-77.0,6.8,221,2025-12-03,PWHL,2025/2026,Regular Season
+33,4:13,Block,Seattle Torrent,Home,Seattle Torrent,New York Sirens,2,event,5v5,5,Anna Wilgren,,,,,82,Kayle Osborne,,,,,,,-39.0,19.3,221,2025-12-03,PWHL,2025/2026,Regular Season
+34,4:33,Penalty,Seattle Torrent,Home,Seattle Torrent,New York Sirens,2,event,5v5,9,Jessie Eldridge,,,,,,,,,,,,,,,221,2025-12-03,PWHL,2025/2026,Regular Season
+35,5:00,Shot,New York Sirens,Away,Seattle Torrent,New York Sirens,2,event,5v4,98,Kristýna Kaltounková,,,,,83,Hannah Murphy,,,,,,,60.7,20.1,221,2025-12-03,PWHL,2025/2026,Regular Season
+36,6:06,Block,New York Sirens,Away,Seattle Torrent,New York Sirens,2,event,5v5,20,Allyson Simpson,,,,,83,Hannah Murphy,,,,,,,83.0,-9.1,221,2025-12-03,PWHL,2025/2026,Regular Season
+37,6:22,Block,New York Sirens,Away,Seattle Torrent,New York Sirens,2,event,5v5,18,Maddi Wheeler,,,,,83,Hannah Murphy,,,,,,,79.7,7.4,221,2025-12-03,PWHL,2025/2026,Regular Season
+38,6:42,Shot,Seattle Torrent,Home,Seattle Torrent,New York Sirens,2,event,5v5,9,Jessie Eldridge,,,,,82,Kayle Osborne,,,,,,,-86.3,-15.9,221,2025-12-03,PWHL,2025/2026,Regular Season
+39,7:58,Block,New York Sirens,Away,Seattle Torrent,New York Sirens,2,event,4v5,10,Sarah Fillier,,,,,83,Hannah Murphy,,,,,,,61.3,-19.8,221,2025-12-03,PWHL,2025/2026,Regular Season
+40,8:00,Shot,New York Sirens,Away,Seattle Torrent,New York Sirens,2,event,5v5,10,Sarah Fillier,,,,,83,Hannah Murphy,,,,,,,67.3,-19.3,221,2025-12-03,PWHL,2025/2026,Regular Season
+41,8:06,Shot,New York Sirens,Away,Seattle Torrent,New York Sirens,2,event,5v5,20,Allyson Simpson,,,,,83,Hannah Murphy,,,,,,,74.3,22.1,221,2025-12-03,PWHL,2025/2026,Regular Season
+42,8:54,Shot,New York Sirens,Away,Seattle Torrent,New York Sirens,2,event,5v5,24,Anne Cherkowski,,,,,83,Hannah Murphy,,,,,,,52.3,0.0,221,2025-12-03,PWHL,2025/2026,Regular Season
+43,12:17,Shot,Seattle Torrent,Home,Seattle Torrent,New York Sirens,2,event,5v5,78,Lexie Adzija,,,,,82,Kayle Osborne,,,,,,,-54.3,21.5,221,2025-12-03,PWHL,2025/2026,Regular Season
+44,14:02,Shot,New York Sirens,Away,Seattle Torrent,New York Sirens,2,event,5v5,98,Kristýna Kaltounková,,,,,83,Hannah Murphy,,,,,,,51.0,-0.8,221,2025-12-03,PWHL,2025/2026,Regular Season
+45,14:09,Shot,New York Sirens,Away,Seattle Torrent,New York Sirens,2,event,5v5,10,Sarah Fillier,,,,,83,Hannah Murphy,,,,,,,27.0,-4.2,221,2025-12-03,PWHL,2025/2026,Regular Season
+46,14:11,Shot,New York Sirens,Away,Seattle Torrent,New York Sirens,2,event,5v5,26,Casey O'Brien,,,,,83,Hannah Murphy,,,,,,,78.0,-2.8,221,2025-12-03,PWHL,2025/2026,Regular Season
+47,14:25,Shot,Seattle Torrent,Home,Seattle Torrent,New York Sirens,2,event,5v5,92,Danielle Serdachny,,,,,82,Kayle Osborne,,,,,,,-86.0,5.1,221,2025-12-03,PWHL,2025/2026,Regular Season
+48,15:21,Shot,Seattle Torrent,Home,Seattle Torrent,New York Sirens,2,event,5v5,21,Hilary Knight,,,,,82,Kayle Osborne,,,,,,,-69.3,-17.6,221,2025-12-03,PWHL,2025/2026,Regular Season
+49,15:22,Block,Seattle Torrent,Home,Seattle Torrent,New York Sirens,2,event,5v5,24,Lyndie Lobdell,,,,,82,Kayle Osborne,,,,,,,-67.7,0.8,221,2025-12-03,PWHL,2025/2026,Regular Season
+50,15:32,Shot,Seattle Torrent,Home,Seattle Torrent,New York Sirens,2,event,5v5,25,Alex Carpenter,,,,,82,Kayle Osborne,,,,,,,-61.0,9.3,221,2025-12-03,PWHL,2025/2026,Regular Season
+51,16:20,Shot,New York Sirens,Away,Seattle Torrent,New York Sirens,2,event,5v5,20,Allyson Simpson,,,,,83,Hannah Murphy,,,,,,,52.3,3.7,221,2025-12-03,PWHL,2025/2026,Regular Season
+52,16:22,Shot,New York Sirens,Away,Seattle Torrent,New York Sirens,2,event,5v5,98,Kristýna Kaltounková,,,,,83,Hannah Murphy,,,,,,,73.0,2.0,221,2025-12-03,PWHL,2025/2026,Regular Season
+53,17:19,Block,Seattle Torrent,Home,Seattle Torrent,New York Sirens,2,event,4v5,8,Natalie Snodgrass,,,,,82,Kayle Osborne,,,,,,,-55.0,-1.7,221,2025-12-03,PWHL,2025/2026,Regular Season
+54,17:26,Penalty,Seattle Torrent,Home,Seattle Torrent,New York Sirens,2,event,5v5,11,Emily Brown,,,,,,,,,,,,,,,221,2025-12-03,PWHL,2025/2026,Regular Season
+55,17:43,Shot,New York Sirens,Away,Seattle Torrent,New York Sirens,2,event,5v4,98,Kristýna Kaltounková,,,,,83,Hannah Murphy,,,,,,,54.7,23.5,221,2025-12-03,PWHL,2025/2026,Regular Season
+56,18:01,Shot,New York Sirens,Away,Seattle Torrent,New York Sirens,2,event,5v4,24,Anne Cherkowski,,,,,83,Hannah Murphy,,,,,,,79.3,0.8,221,2025-12-03,PWHL,2025/2026,Regular Season
+57,18:04,Block,New York Sirens,Away,Seattle Torrent,New York Sirens,2,event,5v4,10,Sarah Fillier,,,,,83,Hannah Murphy,,,,,,,74.3,-29.5,221,2025-12-03,PWHL,2025/2026,Regular Season
+58,18:06,Block,New York Sirens,Away,Seattle Torrent,New York Sirens,2,event,5v4,98,Kristýna Kaltounková,,,,,83,Hannah Murphy,,,,,,,79.7,9.3,221,2025-12-03,PWHL,2025/2026,Regular Season
+59,18:18,Shot,New York Sirens,Away,Seattle Torrent,New York Sirens,2,event,5v4,10,Sarah Fillier,,,,,83,Hannah Murphy,,,,,,,65.3,15.3,221,2025-12-03,PWHL,2025/2026,Regular Season
+60,18:47,Block,Seattle Torrent,Home,Seattle Torrent,New York Sirens,2,event,5v5,66,Marah Wagner,,,,,82,Kayle Osborne,,,,,,,-47.0,17.8,221,2025-12-03,PWHL,2025/2026,Regular Season
+61,19:48,Block,New York Sirens,Away,Seattle Torrent,New York Sirens,2,event,4v5,17,Taylor Girard,,,,,83,Hannah Murphy,,,,,,,67.0,1.7,221,2025-12-03,PWHL,2025/2026,Regular Season
+62,0:14,Shot,Seattle Torrent,Home,Seattle Torrent,New York Sirens,3,event,5v5,5,Anna Wilgren,,,,,82,Kayle Osborne,,,,,,,-39.7,23.2,221,2025-12-03,PWHL,2025/2026,Regular Season
+63,0:28,Block,Seattle Torrent,Home,Seattle Torrent,New York Sirens,3,event,4v5,3,Cayla Barnes,,,,,82,Kayle Osborne,,,,,,,-43.3,-22.7,221,2025-12-03,PWHL,2025/2026,Regular Season
+64,0:58,Block,Seattle Torrent,Home,Seattle Torrent,New York Sirens,3,event,4v5,21,Hilary Knight,,,,,82,Kayle Osborne,,,,,,,-58.0,23.0,221,2025-12-03,PWHL,2025/2026,Regular Season
+65,1:47,Shot,New York Sirens,Away,Seattle Torrent,New York Sirens,3,event,5v5,16,Lauren Bernard,,,,,83,Hannah Murphy,,,,,,,54.3,20.4,221,2025-12-03,PWHL,2025/2026,Regular Season
+66,3:41,Block,Seattle Torrent,Home,Seattle Torrent,New York Sirens,3,event,5v5,20,Mariah Keopple,,,,,82,Kayle Osborne,,,,,,,-65.0,6.5,221,2025-12-03,PWHL,2025/2026,Regular Season
+67,3:48,Shot,Seattle Torrent,Home,Seattle Torrent,New York Sirens,3,event,5v5,88,Julia Gosling,,,,,82,Kayle Osborne,,,,,,,-55.0,11.6,221,2025-12-03,PWHL,2025/2026,Regular Season
+68,3:58,Block,Seattle Torrent,Home,Seattle Torrent,New York Sirens,3,event,5v5,88,Julia Gosling,,,,,82,Kayle Osborne,,,,,,,-51.7,22.1,221,2025-12-03,PWHL,2025/2026,Regular Season
+69,5:23,Penalty,New York Sirens,Away,Seattle Torrent,New York Sirens,3,event,5v5,28,Micah Zandee-Hart,,,,,,,,,,,,,,,221,2025-12-03,PWHL,2025/2026,Regular Season
+70,5:23,Penalty,Seattle Torrent,Home,Seattle Torrent,New York Sirens,3,event,5v5,19,Hannah Bilka,,,,,,,,,,,,,,,221,2025-12-03,PWHL,2025/2026,Regular Season
+71,5:53,Penalty,New York Sirens,Away,Seattle Torrent,New York Sirens,3,event,5v5,4,Elle Hartje,,,,,,,,,,,,,,,221,2025-12-03,PWHL,2025/2026,Regular Season
+72,6:08,Shot,Seattle Torrent,Home,Seattle Torrent,New York Sirens,3,event,5v4,21,Hilary Knight,,,,,82,Kayle Osborne,,,,,,,-61.0,23.0,221,2025-12-03,PWHL,2025/2026,Regular Season
+73,6:41,Block,Seattle Torrent,Home,Seattle Torrent,New York Sirens,3,event,5v5,88,Julia Gosling,,,,,82,Kayle Osborne,,,,,,,-49.0,4.5,221,2025-12-03,PWHL,2025/2026,Regular Season
+74,6:47,Shot,Seattle Torrent,Home,Seattle Torrent,New York Sirens,3,event,5v4,21,Hilary Knight,,,,,82,Kayle Osborne,,,,,,,-73.7,-9.3,221,2025-12-03,PWHL,2025/2026,Regular Season
+75,6:54,Block,Seattle Torrent,Home,Seattle Torrent,New York Sirens,3,event,5v5,3,Cayla Barnes,,,,,82,Kayle Osborne,,,,,,,-63.7,-5.1,221,2025-12-03,PWHL,2025/2026,Regular Season
+76,6:58,Block,Seattle Torrent,Home,Seattle Torrent,New York Sirens,3,event,5v5,21,Hilary Knight,,,,,82,Kayle Osborne,,,,,,,-78.0,6.2,221,2025-12-03,PWHL,2025/2026,Regular Season
+77,7:29,Shot,Seattle Torrent,Home,Seattle Torrent,New York Sirens,3,event,5v4,92,Danielle Serdachny,,,,,82,Kayle Osborne,,,,,,,-83.3,15.6,221,2025-12-03,PWHL,2025/2026,Regular Season
+78,8:13,Block,New York Sirens,Away,Seattle Torrent,New York Sirens,3,event,4v5,26,Casey O'Brien,,,,,83,Hannah Murphy,,,,,,,75.3,-9.1,221,2025-12-03,PWHL,2025/2026,Regular Season
+79,8:36,Block,Seattle Torrent,Home,Seattle Torrent,New York Sirens,3,event,5v4,9,Jessie Eldridge,,,,,82,Kayle Osborne,,,,,,,-55.0,-20.1,221,2025-12-03,PWHL,2025/2026,Regular Season
+80,9:05,Shot,New York Sirens,Away,Seattle Torrent,New York Sirens,3,event,5v5,24,Anne Cherkowski,,,,,83,Hannah Murphy,,,,,,,28.7,-4.2,221,2025-12-03,PWHL,2025/2026,Regular Season
+81,11:16,Shot,Seattle Torrent,Home,Seattle Torrent,New York Sirens,3,event,5v5,17,Brooke Bryant,,,,,82,Kayle Osborne,,,,,,,-65.0,-33.7,221,2025-12-03,PWHL,2025/2026,Regular Season
+82,12:49,Shot,New York Sirens,Away,Seattle Torrent,New York Sirens,3,event,5v5,98,Kristýna Kaltounková,,,,,83,Hannah Murphy,,,,,,,78.0,-2.0,221,2025-12-03,PWHL,2025/2026,Regular Season
+83,14:15,Shot,Seattle Torrent,Home,Seattle Torrent,New York Sirens,3,event,5v5,78,Lexie Adzija,,,,,82,Kayle Osborne,,,,,,,-80.3,0.8,221,2025-12-03,PWHL,2025/2026,Regular Season
+84,14:26,Block,Seattle Torrent,Home,Seattle Torrent,New York Sirens,3,event,5v5,27,Megan Carter,,,,,82,Kayle Osborne,,,,,,,-28.7,38.0,221,2025-12-03,PWHL,2025/2026,Regular Season
+85,14:58,Shot,New York Sirens,Away,Seattle Torrent,New York Sirens,3,event,5v5,24,Anne Cherkowski,,,,,83,Hannah Murphy,,,,,,,53.3,-21.8,221,2025-12-03,PWHL,2025/2026,Regular Season
+86,15:24,Block,New York Sirens,Away,Seattle Torrent,New York Sirens,3,event,5v5,98,Kristýna Kaltounková,,,,,83,Hannah Murphy,,,,,,,63.0,6.0,221,2025-12-03,PWHL,2025/2026,Regular Season
+87,16:01,Penalty,New York Sirens,Away,Seattle Torrent,New York Sirens,3,event,5v5,98,Kristýna Kaltounková,,,,,,,,,,,,,,,221,2025-12-03,PWHL,2025/2026,Regular Season
+88,16:01,Penalty,New York Sirens,Away,Seattle Torrent,New York Sirens,3,event,5v5,98,Kristýna Kaltounková,,,,,,,,,,,,,,,221,2025-12-03,PWHL,2025/2026,Regular Season
+89,16:53,Shot,Seattle Torrent,Home,Seattle Torrent,New York Sirens,3,event,5v3,25,Alex Carpenter,,,,,82,Kayle Osborne,,,,,,,-80.3,-0.8,221,2025-12-03,PWHL,2025/2026,Regular Season
+90,17:15,Block,Seattle Torrent,Home,Seattle Torrent,New York Sirens,3,event,4v5,88,Julia Gosling,,,,,82,Kayle Osborne,,,,,,,-52.7,12.8,221,2025-12-03,PWHL,2025/2026,Regular Season
+91,17:27,Block,Seattle Torrent,Home,Seattle Torrent,New York Sirens,3,event,4v5,21,Hilary Knight,,,,,82,Kayle Osborne,,,,,,,-59.0,22.1,221,2025-12-03,PWHL,2025/2026,Regular Season
+92,17:44,Block,Seattle Torrent,Home,Seattle Torrent,New York Sirens,3,event,4v5,88,Julia Gosling,,,,,82,Kayle Osborne,,,,,,,-69.3,18.7,221,2025-12-03,PWHL,2025/2026,Regular Season
+93,18:36,Goal,Seattle Torrent,Home,Seattle Torrent,New York Sirens,3,event,5v5,25,Alex Carpenter,21,Hilary Knight,19,Hannah Bilka,82,Kayle Osborne,,3 19 21 25 88,Cayla Barnes - Hannah Bilka - Hilary Knight - Alex Carpenter - Julia Gosling,,8 19 28 43,Maja Nylen Persson - Paetyn Levis - Micah Zandee-Hart - Kristin O'Neill,-81.0,11.1,221,2025-12-03,PWHL,2025/2026,Regular Season
+94,18:58,Goal,Seattle Torrent,Home,Seattle Torrent,New York Sirens,3,event,5v5,21,Hilary Knight,19,Hannah Bilka,88,Julia Gosling,82,Kayle Osborne,,3 19 21 25 88,Cayla Barnes - Hannah Bilka - Hilary Knight - Alex Carpenter - Julia Gosling,,10 20 24 71,Sarah Fillier - Allyson Simpson - Anne Cherkowski - Jincy Roese,-86.7,1.4,221,2025-12-03,PWHL,2025/2026,Regular Season
