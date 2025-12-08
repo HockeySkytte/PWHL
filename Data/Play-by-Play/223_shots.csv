@@ -1,1 +1,70 @@
 id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
+1,0:09,Shot,Vancouver Goldeneyes,Home,Vancouver Goldeneyes,New York Sirens,1,event,5v5,86,Michela Cava,,,,,82,Kayle Osborne,,,,,,,-51.3,-12.5,223,2025-12-06,PWHL,2025/2026,Regular Season
+2,2:49,Block,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,1,event,5v5,4,Elle Hartje,,,,,38,Emerance Maschmeyer,,,,,,,28.7,26.4,223,2025-12-06,PWHL,2025/2026,Regular Season
+3,4:00,Shot,Vancouver Goldeneyes,Home,Vancouver Goldeneyes,New York Sirens,1,event,5v5,11,Sydney Bard,,,,,82,Kayle Osborne,,,,,,,-32.3,-21.2,223,2025-12-06,PWHL,2025/2026,Regular Season
+4,4:40,Shot,Vancouver Goldeneyes,Home,Vancouver Goldeneyes,New York Sirens,1,event,5v5,22,Abby Boreen,,,,,82,Kayle Osborne,,,,,,,-85.0,6.5,223,2025-12-06,PWHL,2025/2026,Regular Season
+5,4:42,Goal,Vancouver Goldeneyes,Home,Vancouver Goldeneyes,New York Sirens,1,event,5v5,22,Abby Boreen,13,Tereza Vanišová,,,82,Kayle Osborne,,7 13 21 22 72,Madison Samoskevich - Tereza Vanišová - Ashton Bell - Abby Boreen - Darcie Lappan,,10 16 24 26 71,Sarah Fillier - Lauren Bernard - Anne Cherkowski - Casey O'Brien - Jincy Roese,-83.0,4.2,223,2025-12-06,PWHL,2025/2026,Regular Season
+6,5:36,Shot,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,1,event,5v5,14,Jaime Bourbonnais,,,,,38,Emerance Maschmeyer,,,,,,,31.3,-28.1,223,2025-12-06,PWHL,2025/2026,Regular Season
+7,5:58,Shot,Vancouver Goldeneyes,Home,Vancouver Goldeneyes,New York Sirens,1,event,5v5,33,Michelle Karvinen,,,,,82,Kayle Osborne,,,,,,,-63.0,1.7,223,2025-12-06,PWHL,2025/2026,Regular Season
+8,8:06,Shot,Vancouver Goldeneyes,Home,Vancouver Goldeneyes,New York Sirens,1,event,5v5,51,Anna Segedi,,,,,82,Kayle Osborne,,,,,,,-79.7,-2.3,223,2025-12-06,PWHL,2025/2026,Regular Season
+9,8:20,Shot,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,1,event,5v5,10,Sarah Fillier,,,,,38,Emerance Maschmeyer,,,,,,,83.0,-4.0,223,2025-12-06,PWHL,2025/2026,Regular Season
+10,8:42,Shot,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,1,event,5v5,43,Kristin O'Neill,,,,,38,Emerance Maschmeyer,,,,,,,64.0,-0.3,223,2025-12-06,PWHL,2025/2026,Regular Season
+11,8:51,Penalty,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,1,event,5v5,18,Maddi Wheeler,,,,,,,,,,,,,,,223,2025-12-06,PWHL,2025/2026,Regular Season
+12,11:53,Shot,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,1,event,5v5,14,Jaime Bourbonnais,,,,,38,Emerance Maschmeyer,,,,,,,31.7,19.8,223,2025-12-06,PWHL,2025/2026,Regular Season
+13,12:53,Block,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,1,event,5v5,18,Maddi Wheeler,,,,,38,Emerance Maschmeyer,,,,,,,77.0,-18.7,223,2025-12-06,PWHL,2025/2026,Regular Season
+14,13:03,Block,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,1,event,5v5,17,Taylor Girard,,,,,38,Emerance Maschmeyer,,,,,,,27.7,17.6,223,2025-12-06,PWHL,2025/2026,Regular Season
+15,13:13,Shot,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,1,event,5v5,4,Elle Hartje,,,,,38,Emerance Maschmeyer,,,,,,,33.3,15.3,223,2025-12-06,PWHL,2025/2026,Regular Season
+16,14:46,Shot,Vancouver Goldeneyes,Home,Vancouver Goldeneyes,New York Sirens,1,event,5v5,13,Tereza Vanišová,,,,,82,Kayle Osborne,,,,,,,-66.0,16.7,223,2025-12-06,PWHL,2025/2026,Regular Season
+17,15:28,Block,Vancouver Goldeneyes,Home,Vancouver Goldeneyes,New York Sirens,1,event,5v5,22,Abby Boreen,,,,,82,Kayle Osborne,,,,,,,-38.3,2.5,223,2025-12-06,PWHL,2025/2026,Regular Season
+18,16:36,Goal,Vancouver Goldeneyes,Home,Vancouver Goldeneyes,New York Sirens,1,event,5v5,21,Ashton Bell,86,Michela Cava,16,Sophie Jaques,82,Kayle Osborne,,16 21 33 51 86,Sophie Jaques - Ashton Bell - Michelle Karvinen - Anna Segedi - Michela Cava,,4 7 10 16 24,Elle Hartje - Savannah Norcross - Sarah Fillier - Lauren Bernard - Anne Cherkowski,-60.0,-24.6,223,2025-12-06,PWHL,2025/2026,Regular Season
+19,17:22,Penalty,Vancouver Goldeneyes,Home,Vancouver Goldeneyes,New York Sirens,1,event,5v5,33,Michelle Karvinen,,,,,,,,,,,,,,,223,2025-12-06,PWHL,2025/2026,Regular Season
+20,17:29,Shot,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,1,event,5v4,8,Maja Nylen Persson,,,,,38,Emerance Maschmeyer,,,,,,,29.3,11.1,223,2025-12-06,PWHL,2025/2026,Regular Season
+21,17:39,Goal,Vancouver Goldeneyes,Home,Vancouver Goldeneyes,New York Sirens,1,event,4v5,12,Jenn Gardiner,42,Claire Thompson,15,Gabby Rosenthal,82,Kayle Osborne,,11 12 15 42,Sydney Bard - Jenn Gardiner - Gabby Rosenthal - Claire Thompson,,8 10 24 43 98,Maja Nylen Persson - Sarah Fillier - Anne Cherkowski - Kristin O'Neill - Kristýna Kaltounková,-63.7,-14.7,223,2025-12-06,PWHL,2025/2026,Regular Season
+22,18:44,Shot,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,1,event,5v4,98,Kristýna Kaltounková,,,,,38,Emerance Maschmeyer,,,,,,,47.7,18.1,223,2025-12-06,PWHL,2025/2026,Regular Season
+23,1:35,Shot,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,2,event,5v5,4,Elle Hartje,,,,,38,Emerance Maschmeyer,,,,,,,63.7,15.3,223,2025-12-06,PWHL,2025/2026,Regular Season
+24,1:48,Shot,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,2,event,5v5,18,Maddi Wheeler,,,,,38,Emerance Maschmeyer,,,,,,,88.3,-13.0,223,2025-12-06,PWHL,2025/2026,Regular Season
+25,1:54,Shot,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,2,event,5v5,18,Maddi Wheeler,,,,,38,Emerance Maschmeyer,,,,,,,80.7,4.5,223,2025-12-06,PWHL,2025/2026,Regular Season
+26,2:15,Penalty,Vancouver Goldeneyes,Home,Vancouver Goldeneyes,New York Sirens,2,event,5v5,13,Tereza Vanišová,,,,,,,,,,,,,,,223,2025-12-06,PWHL,2025/2026,Regular Season
+27,2:30,Shot,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,2,event,5v4,43,Kristin O'Neill,,,,,38,Emerance Maschmeyer,,,,,,,73.0,2.8,223,2025-12-06,PWHL,2025/2026,Regular Season
+28,2:52,Shot,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,2,event,5v4,43,Kristin O'Neill,,,,,38,Emerance Maschmeyer,,,,,,,56.0,-6.8,223,2025-12-06,PWHL,2025/2026,Regular Season
+29,4:28,Block,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,2,event,5v5,71,Jincy Roese,,,,,38,Emerance Maschmeyer,,,,,,,57.0,5.7,223,2025-12-06,PWHL,2025/2026,Regular Season
+30,4:53,Penalty,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,2,event,5v5,29,Emmy Fecteau,,,,,,,,,,,,,,,223,2025-12-06,PWHL,2025/2026,Regular Season
+31,5:35,Shot,Vancouver Goldeneyes,Home,Vancouver Goldeneyes,New York Sirens,2,event,5v4,12,Jenn Gardiner,,,,,82,Kayle Osborne,,,,,,,-57.3,20.7,223,2025-12-06,PWHL,2025/2026,Regular Season
+32,6:33,Block,Vancouver Goldeneyes,Home,Vancouver Goldeneyes,New York Sirens,2,event,5v5,42,Claire Thompson,,,,,82,Kayle Osborne,,,,,,,-37.0,17.8,223,2025-12-06,PWHL,2025/2026,Regular Season
+33,8:12,Block,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,2,event,5v5,16,Lauren Bernard,,,,,38,Emerance Maschmeyer,,,,,,,34.7,-10.2,223,2025-12-06,PWHL,2025/2026,Regular Season
+34,8:39,Block,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,2,event,5v5,24,Anne Cherkowski,,,,,38,Emerance Maschmeyer,,,,,,,53.0,7.1,223,2025-12-06,PWHL,2025/2026,Regular Season
+35,9:01,Shot,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,2,event,5v5,19,Paetyn Levis,,,,,38,Emerance Maschmeyer,,,,,,,79.0,24.4,223,2025-12-06,PWHL,2025/2026,Regular Season
+36,9:49,Block,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,2,event,4v5,14,Jaime Bourbonnais,,,,,38,Emerance Maschmeyer,,,,,,,46.3,6.0,223,2025-12-06,PWHL,2025/2026,Regular Season
+37,9:59,Block,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,2,event,4v5,19,Paetyn Levis,,,,,38,Emerance Maschmeyer,,,,,,,54.0,22.7,223,2025-12-06,PWHL,2025/2026,Regular Season
+38,10:40,Shot,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,2,event,5v5,26,Casey O'Brien,,,,,38,Emerance Maschmeyer,,,,,,,77.7,-8.5,223,2025-12-06,PWHL,2025/2026,Regular Season
+39,12:04,Shot,Vancouver Goldeneyes,Home,Vancouver Goldeneyes,New York Sirens,2,event,5v5,15,Gabby Rosenthal,,,,,82,Kayle Osborne,,,,,,,-50.7,-6.0,223,2025-12-06,PWHL,2025/2026,Regular Season
+40,12:20,Shot,Vancouver Goldeneyes,Home,Vancouver Goldeneyes,New York Sirens,2,event,5v5,23,Mellissa Channell-Watkins,,,,,82,Kayle Osborne,,,,,,,-27.0,9.3,223,2025-12-06,PWHL,2025/2026,Regular Season
+41,12:39,Shot,Vancouver Goldeneyes,Home,Vancouver Goldeneyes,New York Sirens,2,event,5v5,26,Brooke McQuigge,,,,,82,Kayle Osborne,,,,,,,-72.0,-4.2,223,2025-12-06,PWHL,2025/2026,Regular Season
+42,14:03,Penalty,Vancouver Goldeneyes,Home,Vancouver Goldeneyes,New York Sirens,2,event,5v5,51,Anna Segedi,,,,,,,,,,,,,,,223,2025-12-06,PWHL,2025/2026,Regular Season
+43,16:04,Shot,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,2,event,5v5,18,Maddi Wheeler,,,,,38,Emerance Maschmeyer,,,,,,,64.0,28.6,223,2025-12-06,PWHL,2025/2026,Regular Season
+44,17:05,Shot,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,2,event,5v5,18,Maddi Wheeler,,,,,38,Emerance Maschmeyer,,,,,,,88.7,-18.7,223,2025-12-06,PWHL,2025/2026,Regular Season
+45,17:11,Shot,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,2,event,5v5,7,Savannah Norcross,,,,,38,Emerance Maschmeyer,,,,,,,54.3,20.4,223,2025-12-06,PWHL,2025/2026,Regular Season
+46,1:11,Shot,Vancouver Goldeneyes,Home,Vancouver Goldeneyes,New York Sirens,3,event,5v5,15,Gabby Rosenthal,,,,,82,Kayle Osborne,,,,,,,-74.7,-3.7,223,2025-12-06,PWHL,2025/2026,Regular Season
+47,2:41,Block,Vancouver Goldeneyes,Home,Vancouver Goldeneyes,New York Sirens,3,event,5v5,33,Michelle Karvinen,,,,,82,Kayle Osborne,,,,,,,-45.0,4.2,223,2025-12-06,PWHL,2025/2026,Regular Season
+48,3:09,Shot,Vancouver Goldeneyes,Home,Vancouver Goldeneyes,New York Sirens,3,event,5v5,33,Michelle Karvinen,,,,,82,Kayle Osborne,,,,,,,-72.3,7.9,223,2025-12-06,PWHL,2025/2026,Regular Season
+49,4:01,Shot,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,3,event,5v5,24,Anne Cherkowski,,,,,38,Emerance Maschmeyer,,,,,,,75.3,-22.1,223,2025-12-06,PWHL,2025/2026,Regular Season
+50,4:38,Penalty,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,3,event,5v5,28,Micah Zandee-Hart,,,,,,,,,,,,,,,223,2025-12-06,PWHL,2025/2026,Regular Season
+51,5:44,Shot,Vancouver Goldeneyes,Home,Vancouver Goldeneyes,New York Sirens,3,event,5v4,16,Sophie Jaques,,,,,82,Kayle Osborne,,,,,,,-63.0,-6.8,223,2025-12-06,PWHL,2025/2026,Regular Season
+52,5:47,Goal,Vancouver Goldeneyes,Home,Vancouver Goldeneyes,New York Sirens,3,event,5v4,22,Abby Boreen,16,Sophie Jaques,12,Jenn Gardiner,82,Kayle Osborne,,12 15 16 22 23,Jenn Gardiner - Gabby Rosenthal - Sophie Jaques - Abby Boreen - Mellissa Channell-Watkins,,4 18 20 71,Elle Hartje - Maddi Wheeler - Allyson Simpson - Jincy Roese,-87.0,3.4,223,2025-12-06,PWHL,2025/2026,Regular Season
+53,6:52,Shot,Vancouver Goldeneyes,Home,Vancouver Goldeneyes,New York Sirens,3,event,5v5,86,Michela Cava,,,,,82,Kayle Osborne,,,,,,,-75.3,8.2,223,2025-12-06,PWHL,2025/2026,Regular Season
+54,7:02,Shot,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,3,event,5v5,18,Maddi Wheeler,,,,,38,Emerance Maschmeyer,,,,,,,52.3,-21.2,223,2025-12-06,PWHL,2025/2026,Regular Season
+55,8:43,Shot,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,3,event,5v5,24,Anne Cherkowski,,,,,38,Emerance Maschmeyer,,,,,,,61.7,-3.7,223,2025-12-06,PWHL,2025/2026,Regular Season
+56,10:01,Penalty,Vancouver Goldeneyes,Home,Vancouver Goldeneyes,New York Sirens,3,event,5v5,25,Emma Greco,,,,,,,,,,,,,,,223,2025-12-06,PWHL,2025/2026,Regular Season
+57,10:35,Shot,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,3,event,5v4,10,Sarah Fillier,,,,,38,Emerance Maschmeyer,,,,,,,62.3,-27.8,223,2025-12-06,PWHL,2025/2026,Regular Season
+58,10:52,Block,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,3,event,5v5,98,Kristýna Kaltounková,,,,,38,Emerance Maschmeyer,,,,,,,67.0,10.5,223,2025-12-06,PWHL,2025/2026,Regular Season
+59,12:33,Block,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,3,event,5v5,81,Kayla Vespa,,,,,38,Emerance Maschmeyer,,,,,,,44.7,-5.7,223,2025-12-06,PWHL,2025/2026,Regular Season
+60,12:34,Shot,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,3,event,5v5,28,Micah Zandee-Hart,,,,,38,Emerance Maschmeyer,,,,,,,73.3,11.1,223,2025-12-06,PWHL,2025/2026,Regular Season
+61,12:35,Shot,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,3,event,5v5,28,Micah Zandee-Hart,,,,,38,Emerance Maschmeyer,,,,,,,80.3,13.0,223,2025-12-06,PWHL,2025/2026,Regular Season
+62,13:37,Shot,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,3,event,5v5,10,Sarah Fillier,,,,,38,Emerance Maschmeyer,,,,,,,81.0,3.4,223,2025-12-06,PWHL,2025/2026,Regular Season
+63,14:16,Shot,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,3,event,5v5,43,Kristin O'Neill,,,,,38,Emerance Maschmeyer,,,,,,,85.7,6.2,223,2025-12-06,PWHL,2025/2026,Regular Season
+64,14:19,Shot,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,3,event,5v5,43,Kristin O'Neill,,,,,38,Emerance Maschmeyer,,,,,,,88.7,10.8,223,2025-12-06,PWHL,2025/2026,Regular Season
+65,15:02,Shot,Vancouver Goldeneyes,Home,Vancouver Goldeneyes,New York Sirens,3,event,5v5,21,Ashton Bell,,,,,82,Kayle Osborne,,,,,,,-35.3,17.8,223,2025-12-06,PWHL,2025/2026,Regular Season
+66,16:49,Shot,Vancouver Goldeneyes,Home,Vancouver Goldeneyes,New York Sirens,3,event,5v5,21,Ashton Bell,,,,,82,Kayle Osborne,,,,,,,-52.3,34.6,223,2025-12-06,PWHL,2025/2026,Regular Season
+67,17:11,Shot,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,3,event,5v5,26,Casey O'Brien,,,,,38,Emerance Maschmeyer,,,,,,,80.0,-21.8,223,2025-12-06,PWHL,2025/2026,Regular Season
+68,18:48,Penalty,Vancouver Goldeneyes,Home,Vancouver Goldeneyes,New York Sirens,3,event,5v5,7,Madison Samoskevich,,,,,,,,,,,,,,,223,2025-12-06,PWHL,2025/2026,Regular Season
+69,19:15,Shot,New York Sirens,Away,Vancouver Goldeneyes,New York Sirens,3,event,5v4,24,Anne Cherkowski,,,,,38,Emerance Maschmeyer,,,,,,,83.3,-6.2,223,2025-12-06,PWHL,2025/2026,Regular Season

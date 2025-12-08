@@ -1,1 +1,88 @@
 id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
+1,1:33,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,42,Claire Dalton,,,,,33,Gwyneth Philips,,,,,,,-70.7,-11.9,222,2025-12-04,PWHL,2025/2026,Regular Season
+2,1:33,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,11,Kiara Zanon,,,,,33,Gwyneth Philips,,,,,,,-53.3,10.5,222,2025-12-04,PWHL,2025/2026,Regular Season
+3,1:45,Goal,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,71,Fanuza Kadirova,55,Samantha Isbell,97,Anna Shokhina,29,Elaine Chuli,,11 14 15 20 42,Kiara Zanon - Renata Fast - Savannah Harmon - Emma Gentry - Claire Dalton,,11 16 55 71 97,Brooke Hobson - Kateřina Mrázová - Samantha Isbell - Fanuza Kadirova - Anna Shokhina,69.3,1.4,222,2025-12-04,PWHL,2025/2026,Regular Season
+4,2:46,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,27,Emma Maltais,,,,,33,Gwyneth Philips,,,,,,,-67.7,-4.2,222,2025-12-04,PWHL,2025/2026,Regular Season
+5,2:59,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,18,Mannon McMahon,,,,,29,Elaine Chuli,,,,,,,78.3,-0.8,222,2025-12-04,PWHL,2025/2026,Regular Season
+6,3:59,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,19,Brianne Jenner,,,,,29,Elaine Chuli,,,,,,,78.0,-1.1,222,2025-12-04,PWHL,2025/2026,Regular Season
+7,4:00,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,5,Rory Guilday,,,,,29,Elaine Chuli,,,,,,,76.3,4.8,222,2025-12-04,PWHL,2025/2026,Regular Season
+8,4:36,Penalty,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,23,Sarah Wozniewicz,,,,,,,,,,,,,,,222,2025-12-04,PWHL,2025/2026,Regular Season
+9,5:17,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v4,24,Natalie Spooner,,,,,33,Gwyneth Philips,,,,,,,-54.0,-13.3,222,2025-12-04,PWHL,2025/2026,Regular Season
+10,6:03,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v4,11,Kiara Zanon,,,,,33,Gwyneth Philips,,,,,,,-62.7,7.1,222,2025-12-04,PWHL,2025/2026,Regular Season
+11,7:41,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,9,Daryl Watts,,,,,33,Gwyneth Philips,,,,,,,-42.3,-30.3,222,2025-12-04,PWHL,2025/2026,Regular Season
+12,8:23,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,24,Natalie Spooner,,,,,33,Gwyneth Philips,,,,,,,-60.3,-10.8,222,2025-12-04,PWHL,2025/2026,Regular Season
+13,9:56,Penalty,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,29,Peyton Hemp,,,,,,,,,,,,,,,222,2025-12-04,PWHL,2025/2026,Regular Season
+14,11:09,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v4,24,Natalie Spooner,,,,,33,Gwyneth Philips,,,,,,,-77.7,-9.1,222,2025-12-04,PWHL,2025/2026,Regular Season
+15,11:10,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v4,14,Renata Fast,,,,,33,Gwyneth Philips,,,,,,,-53.0,17.8,222,2025-12-04,PWHL,2025/2026,Regular Season
+16,11:11,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v4,27,Emma Maltais,,,,,33,Gwyneth Philips,,,,,,,-79.3,1.1,222,2025-12-04,PWHL,2025/2026,Regular Season
+17,12:31,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,22,Maggie Connors,,,,,33,Gwyneth Philips,,,,,,,-78.7,4.2,222,2025-12-04,PWHL,2025/2026,Regular Season
+18,12:32,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,40,Blayre Turnbull,,,,,33,Gwyneth Philips,,,,,,,-74.0,-9.3,222,2025-12-04,PWHL,2025/2026,Regular Season
+19,14:09,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,42,Claire Dalton,,,,,33,Gwyneth Philips,,,,,,,33.0,-35.1,222,2025-12-04,PWHL,2025/2026,Regular Season
+20,14:19,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,12,Allie Munroe,,,,,33,Gwyneth Philips,,,,,,,-32.0,37.1,222,2025-12-04,PWHL,2025/2026,Regular Season
+21,15:01,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,15,Savannah Harmon,,,,,33,Gwyneth Philips,,,,,,,-35.0,18.4,222,2025-12-04,PWHL,2025/2026,Regular Season
+22,15:33,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,9,Daryl Watts,,,,,33,Gwyneth Philips,,,,,,,-76.0,9.3,222,2025-12-04,PWHL,2025/2026,Regular Season
+23,15:40,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,24,Natalie Spooner,,,,,33,Gwyneth Philips,,,,,,,-65.0,-25.2,222,2025-12-04,PWHL,2025/2026,Regular Season
+24,15:41,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,27,Emma Maltais,,,,,33,Gwyneth Philips,,,,,,,-74.3,-4.5,222,2025-12-04,PWHL,2025/2026,Regular Season
+25,15:42,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,6,Kali Flanagan,,,,,33,Gwyneth Philips,,,,,,,-49.0,-13.6,222,2025-12-04,PWHL,2025/2026,Regular Season
+26,17:06,Penalty,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,3,Jocelyne Larocque,,,,,,,,,,,,,,,222,2025-12-04,PWHL,2025/2026,Regular Season
+27,17:48,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v4,14,Renata Fast,,,,,33,Gwyneth Philips,,,,,,,-43.7,-21.5,222,2025-12-04,PWHL,2025/2026,Regular Season
+28,17:51,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v4,27,Emma Maltais,,,,,33,Gwyneth Philips,,,,,,,-69.7,-0.8,222,2025-12-04,PWHL,2025/2026,Regular Season
+29,18:00,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v4,27,Emma Maltais,,,,,33,Gwyneth Philips,,,,,,,-45.7,-1.4,222,2025-12-04,PWHL,2025/2026,Regular Season
+30,18:31,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v4,40,Blayre Turnbull,,,,,33,Gwyneth Philips,,,,,,,-85.7,4.2,222,2025-12-04,PWHL,2025/2026,Regular Season
+31,18:58,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v4,6,Kali Flanagan,,,,,33,Gwyneth Philips,,,,,,,-31.0,5.7,222,2025-12-04,PWHL,2025/2026,Regular Season
+32,19:10,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,17,Gabbie Hughes,,,,,29,Elaine Chuli,,,,,,,-42.3,7.4,222,2025-12-04,PWHL,2025/2026,Regular Season
+33,19:11,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,6,Kali Flanagan,,,,,33,Gwyneth Philips,,,,,,,-41.0,-7.6,222,2025-12-04,PWHL,2025/2026,Regular Season
+34,0:22,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,5,Rory Guilday,,,,,29,Elaine Chuli,,,,,,,30.3,4.8,222,2025-12-04,PWHL,2025/2026,Regular Season
+35,0:34,Penalty,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,3,Jocelyne Larocque,,,,,,,,,,,,,,,222,2025-12-04,PWHL,2025/2026,Regular Season
+36,0:51,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v4,14,Renata Fast,,,,,33,Gwyneth Philips,,,,,,,-33.3,-8.2,222,2025-12-04,PWHL,2025/2026,Regular Season
+37,1:01,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,17,Ella Shelton,,,,,33,Gwyneth Philips,,,,,,,-72.3,-17.0,222,2025-12-04,PWHL,2025/2026,Regular Season
+38,1:27,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,6,Kali Flanagan,,,,,33,Gwyneth Philips,,,,,,,-59.0,7.6,222,2025-12-04,PWHL,2025/2026,Regular Season
+39,1:49,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v4,19,Sara Hjalmarsson,,,,,33,Gwyneth Philips,,,,,,,-40.0,19.3,222,2025-12-04,PWHL,2025/2026,Regular Season
+40,2:04,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,19,Sara Hjalmarsson,,,,,33,Gwyneth Philips,,,,,,,-49.7,8.8,222,2025-12-04,PWHL,2025/2026,Regular Season
+41,2:11,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v4,18,Jesse Compher,,,,,33,Gwyneth Philips,,,,,,,-80.7,0.8,222,2025-12-04,PWHL,2025/2026,Regular Season
+42,2:22,Goal,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v4,9,Daryl Watts,12,Allie Munroe,71,Anna Kjellbin,33,Gwyneth Philips,,9 12 24 27 71,Daryl Watts - Allie Munroe - Natalie Spooner - Emma Maltais - Anna Kjellbin,,11 19 37 55,Brooke Hobson - Brianne Jenner - Rebecca Leslie - Samantha Isbell,-52.3,6.5,222,2025-12-04,PWHL,2025/2026,Regular Season
+43,3:37,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,94,Anna Meixner,,,,,29,Elaine Chuli,,,,,,,57.3,-11.6,222,2025-12-04,PWHL,2025/2026,Regular Season
+44,4:34,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,17,Gabbie Hughes,,,,,29,Elaine Chuli,,,,,,,68.3,3.7,222,2025-12-04,PWHL,2025/2026,Regular Season
+45,4:35,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,6,Stephanie Markowski,,,,,29,Elaine Chuli,,,,,,,69.0,0.0,222,2025-12-04,PWHL,2025/2026,Regular Season
+46,6:27,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,4v5,6,Stephanie Markowski,,,,,29,Elaine Chuli,,,,,,,33.3,-1.1,222,2025-12-04,PWHL,2025/2026,Regular Season
+47,8:04,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,40,Blayre Turnbull,,,,,33,Gwyneth Philips,,,,,,,-81.7,-2.5,222,2025-12-04,PWHL,2025/2026,Regular Season
+48,8:30,Penalty,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,3,Jocelyne Larocque,,,,,,,,,,,,,,,222,2025-12-04,PWHL,2025/2026,Regular Season
+49,8:43,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v4,9,Daryl Watts,,,,,33,Gwyneth Philips,,,,,,,-55.3,21.5,222,2025-12-04,PWHL,2025/2026,Regular Season
+50,9:11,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v4,17,Ella Shelton,,,,,33,Gwyneth Philips,,,,,,,-67.0,-12.2,222,2025-12-04,PWHL,2025/2026,Regular Season
+51,9:47,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,4v5,26,Emily Clark,,,,,29,Elaine Chuli,,,,,,,83.0,-2.8,222,2025-12-04,PWHL,2025/2026,Regular Season
+52,10:32,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,20,Emma Gentry,,,,,33,Gwyneth Philips,,,,,,,-56.3,35.1,222,2025-12-04,PWHL,2025/2026,Regular Season
+53,12:09,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,10,Alexa Vasko,,,,,29,Elaine Chuli,,,,,,,59.0,-2.8,222,2025-12-04,PWHL,2025/2026,Regular Season
+54,12:59,Goal,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,24,Natalie Spooner,9,Daryl Watts,27,Emma Maltais,33,Gwyneth Philips,,9 14 15 24 27,Daryl Watts - Renata Fast - Savannah Harmon - Natalie Spooner - Emma Maltais,,10 11 23 29 55,Alexa Vasko - Brooke Hobson - Sarah Wozniewicz - Peyton Hemp - Samantha Isbell,-75.3,2.3,222,2025-12-04,PWHL,2025/2026,Regular Season
+55,13:52,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,26,Emily Clark,,,,,29,Elaine Chuli,,,,,,,61.3,14.5,222,2025-12-04,PWHL,2025/2026,Regular Season
+56,15:09,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,22,Taylor House,,,,,29,Elaine Chuli,,,,,,,66.0,16.1,222,2025-12-04,PWHL,2025/2026,Regular Season
+57,16:20,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,18,Mannon McMahon,,,,,29,Elaine Chuli,,,,,,,63.0,28.3,222,2025-12-04,PWHL,2025/2026,Regular Season
+58,16:25,Penalty,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,26,Emily Clark,,,,,,,,,,,,,,,222,2025-12-04,PWHL,2025/2026,Regular Season
+59,16:54,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,9,Daryl Watts,,,,,33,Gwyneth Philips,,,,,,,-40.3,2.5,222,2025-12-04,PWHL,2025/2026,Regular Season
+60,18:07,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v4,18,Jesse Compher,,,,,,,,,,,,,,,222,2025-12-04,PWHL,2025/2026,Regular Season
+61,19:08,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v4,26,Emily Clark,,,,,29,Elaine Chuli,,,,,,,82.0,-4.2,222,2025-12-04,PWHL,2025/2026,Regular Season
+62,19:26,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,37,Rebecca Leslie,,,,,29,Elaine Chuli,,,,,,,47.0,-19.3,222,2025-12-04,PWHL,2025/2026,Regular Season
+63,19:35,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,18,Mannon McMahon,,,,,29,Elaine Chuli,,,,,,,66.7,-8.2,222,2025-12-04,PWHL,2025/2026,Regular Season
+64,19:58,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v4,16,Kateřina Mrázová,,,,,29,Elaine Chuli,,,,,,,38.0,-16.1,222,2025-12-04,PWHL,2025/2026,Regular Season
+65,0:50,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,18,Jesse Compher,,,,,33,Gwyneth Philips,,,,,,,-83.7,-9.1,222,2025-12-04,PWHL,2025/2026,Regular Season
+66,1:01,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,9,Daryl Watts,,,,,33,Gwyneth Philips,,,,,,,-81.3,-0.8,222,2025-12-04,PWHL,2025/2026,Regular Season
+67,1:33,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,55,Samantha Isbell,,,,,29,Elaine Chuli,,,,,,,31.3,21.5,222,2025-12-04,PWHL,2025/2026,Regular Season
+68,2:49,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,29,Peyton Hemp,,,,,29,Elaine Chuli,,,,,,,55.0,2.0,222,2025-12-04,PWHL,2025/2026,Regular Season
+69,3:07,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,18,Jesse Compher,,,,,33,Gwyneth Philips,,,,,,,-77.0,9.3,222,2025-12-04,PWHL,2025/2026,Regular Season
+70,3:57,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,67,Emma Woods,,,,,33,Gwyneth Philips,,,,,,,-36.0,-21.0,222,2025-12-04,PWHL,2025/2026,Regular Season
+71,6:04,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,11,Brooke Hobson,,,,,29,Elaine Chuli,,,,,,,75.3,-10.8,222,2025-12-04,PWHL,2025/2026,Regular Season
+72,6:36,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,37,Rebecca Leslie,,,,,29,Elaine Chuli,,,,,,,75.7,-2.0,222,2025-12-04,PWHL,2025/2026,Regular Season
+73,8:57,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,88,Ronja Savolainen,,,,,29,Elaine Chuli,,,,,,,51.3,19.6,222,2025-12-04,PWHL,2025/2026,Regular Season
+74,9:15,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,37,Rebecca Leslie,,,,,29,Elaine Chuli,,,,,,,69.7,0.8,222,2025-12-04,PWHL,2025/2026,Regular Season
+75,10:12,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,4v5,11,Brooke Hobson,,,,,29,Elaine Chuli,,,,,,,66.3,4.2,222,2025-12-04,PWHL,2025/2026,Regular Season
+76,10:23,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,71,Anna Kjellbin,,,,,33,Gwyneth Philips,,,,,,,-50.7,4.0,222,2025-12-04,PWHL,2025/2026,Regular Season
+77,12:22,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,18,Jesse Compher,,,,,33,Gwyneth Philips,,,,,,,-58.0,-4.5,222,2025-12-04,PWHL,2025/2026,Regular Season
+78,12:23,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,71,Anna Kjellbin,,,,,33,Gwyneth Philips,,,,,,,-74.0,-1.7,222,2025-12-04,PWHL,2025/2026,Regular Season
+79,12:25,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,40,Blayre Turnbull,,,,,33,Gwyneth Philips,,,,,,,-68.0,4.0,222,2025-12-04,PWHL,2025/2026,Regular Season
+80,13:32,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,24,Natalie Spooner,,,,,33,Gwyneth Philips,,,,,,,-78.0,-4.0,222,2025-12-04,PWHL,2025/2026,Regular Season
+81,14:01,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,9,Daryl Watts,,,,,33,Gwyneth Philips,,,,,,,-68.3,12.2,222,2025-12-04,PWHL,2025/2026,Regular Season
+82,15:31,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,15,Savannah Harmon,,,,,33,Gwyneth Philips,,,,,,,-38.3,26.9,222,2025-12-04,PWHL,2025/2026,Regular Season
+83,15:59,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,94,Anna Meixner,,,,,29,Elaine Chuli,,,,,,,32.7,8.8,222,2025-12-04,PWHL,2025/2026,Regular Season
+84,16:45,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,5,Rory Guilday,,,,,29,Elaine Chuli,,,,,,,59.7,-16.1,222,2025-12-04,PWHL,2025/2026,Regular Season
+85,17:58,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,40,Blayre Turnbull,,,,,33,Gwyneth Philips,,,,,,,-48.0,18.4,222,2025-12-04,PWHL,2025/2026,Regular Season
+86,18:13,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,4v5,17,Gabbie Hughes,,,,,29,Elaine Chuli,,,,,,,72.0,10.5,222,2025-12-04,PWHL,2025/2026,Regular Season
+87,19:20,Goal,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,40,Blayre Turnbull,42,Claire Dalton,,,33,Gwyneth Philips,,14 15 18 40 42,Renata Fast - Savannah Harmon - Jesse Compher - Blayre Turnbull - Claire Dalton,,16 17 19 26 37 88,Kateřina Mrázová - Gabbie Hughes - Brianne Jenner - Emily Clark - Rebecca Leslie - Ronja Savolainen,44.7,26.1,222,2025-12-04,PWHL,2025/2026,Regular Season
