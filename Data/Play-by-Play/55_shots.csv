@@ -1,98 +1,98 @@
-id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
-1,0:20,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,1,event,5v5,7,Laura Stacey,,,,,29,Nicole Hensley,,,,,,,80.0,2.8,55,2024-03-24,PWHL,2023/2024,Regular Season
-2,2:34,Block,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,1,event,5v5,15,Maureen Murphy,,,,,29,Nicole Hensley,,,,,,,54.3,-0.3,55,2024-03-24,PWHL,2023/2024,Regular Season
-3,2:35,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,1,event,5v5,8,Gabrielle David,,,,,29,Nicole Hensley,,,,,,,82.0,5.1,55,2024-03-24,PWHL,2023/2024,Regular Season
-4,2:36,Goal,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,1,event,5v5,9,Kati Tabin,8,Gabrielle David,15,Maureen Murphy,29,Nicole Hensley,,2 10 11 16 21,Lee Stecklein - Sydney Brodt - Sophia Kunin - Sophie Jaques - Liz Schepers,,8 9 15 18 23,Gabrielle David - Kati Tabin - Maureen Murphy - Mikyla Grant-Mentis - Erin Ambrose,75.3,2.3,55,2024-03-24,PWHL,2023/2024,Regular Season
-5,3:24,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,1,event,5v5,23,Erin Ambrose,,,,,29,Nicole Hensley,,,,,,,29.3,24.6,55,2024-03-24,PWHL,2023/2024,Regular Season
-6,3:52,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,41,Denisa Křížová,,,,,20,Elaine Chuli,,,,,,,-76.0,-0.8,55,2024-03-24,PWHL,2023/2024,Regular Season
-7,5:43,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,22,Natalie Buchbinder,,,,,20,Elaine Chuli,,,,,,,-35.3,-26.6,55,2024-03-24,PWHL,2023/2024,Regular Season
-8,5:53,Goal,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,1,event,5v5,15,Maureen Murphy,8,Gabrielle David,,,29,Nicole Hensley,,10 11 19 21 22,Sydney Brodt - Sophia Kunin - Maggie Flaherty - Liz Schepers - Natalie Buchbinder,,6 8 10 15 18,Madison Bizal - Gabrielle David - Brigitte Laganière - Maureen Murphy - Mikyla Grant-Mentis,78.3,3.7,55,2024-03-24,PWHL,2023/2024,Regular Season
-9,7:08,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,25,Emma Greco,,,,,20,Elaine Chuli,,,,,,,-20.3,38.2,55,2024-03-24,PWHL,2023/2024,Regular Season
-10,7:42,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,-42.0,-39.1,55,2024-03-24,PWHL,2023/2024,Regular Season
-11,7:51,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,-31.7,-1.1,55,2024-03-24,PWHL,2023/2024,Regular Season
-12,8:11,Penalty,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,1,event,5v5,43,Kristin O'Neill,,,,,,,,,,,,,,,55,2024-03-24,PWHL,2023/2024,Regular Season
-13,8:13,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v4,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,-75.3,12.8,55,2024-03-24,PWHL,2023/2024,Regular Season
-14,8:38,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v4,27,Taylor Heise,,,,,20,Elaine Chuli,,,,,,,-51.0,26.4,55,2024-03-24,PWHL,2023/2024,Regular Season
-15,8:56,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v4,27,Taylor Heise,,,,,20,Elaine Chuli,,,,,,,-58.7,24.1,55,2024-03-24,PWHL,2023/2024,Regular Season
-16,9:38,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v4,13,Grace Zumwinkle,,,,,20,Elaine Chuli,,,,,,,-58.7,26.1,55,2024-03-24,PWHL,2023/2024,Regular Season
-17,9:48,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v4,19,Maggie Flaherty,,,,,20,Elaine Chuli,,,,,,,-80.7,-7.1,55,2024-03-24,PWHL,2023/2024,Regular Season
-18,11:20,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,19,Maggie Flaherty,,,,,20,Elaine Chuli,,,,,,,-34.0,20.7,55,2024-03-24,PWHL,2023/2024,Regular Season
-19,12:59,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,13,Grace Zumwinkle,,,,,20,Elaine Chuli,,,,,,,-74.0,-36.5,55,2024-03-24,PWHL,2023/2024,Regular Season
-20,13:23,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,13,Grace Zumwinkle,,,,,20,Elaine Chuli,,,,,,,-62.3,1.1,55,2024-03-24,PWHL,2023/2024,Regular Season
-21,13:32,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,41,Denisa Křížová,,,,,20,Elaine Chuli,,,,,,,-71.0,4.0,55,2024-03-24,PWHL,2023/2024,Regular Season
-22,14:34,Penalty,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,17,Brooke Bryant,,,,,,,,,,,,,,,55,2024-03-24,PWHL,2023/2024,Regular Season
-23,16:02,Penalty,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,1,event,5v4,6,Madison Bizal,,,,,,,,,,,,,,,55,2024-03-24,PWHL,2023/2024,Regular Season
-24,16:53,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v4,27,Taylor Heise,,,,,20,Elaine Chuli,,,,,,,-47.7,-18.7,55,2024-03-24,PWHL,2023/2024,Regular Season
-25,16:54,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v4,12,Kelly Pannek,,,,,20,Elaine Chuli,,,,,,,-76.7,-2.3,55,2024-03-24,PWHL,2023/2024,Regular Season
-26,18:28,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,2,Lee Stecklein,,,,,20,Elaine Chuli,,,,,,,-31.0,38.8,55,2024-03-24,PWHL,2023/2024,Regular Season
-27,18:34,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,2,Lee Stecklein,,,,,20,Elaine Chuli,,,,,,,-33.3,28.6,55,2024-03-24,PWHL,2023/2024,Regular Season
-28,19:20,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,25,Emma Greco,,,,,20,Elaine Chuli,,,,,,,-34.3,-21.8,55,2024-03-24,PWHL,2023/2024,Regular Season
-29,19:21,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,25,Emma Greco,,,,,20,Elaine Chuli,,,,,,,-50.0,28.3,55,2024-03-24,PWHL,2023/2024,Regular Season
-30,19:51,Block,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,1,event,5v5,23,Erin Ambrose,,,,,29,Nicole Hensley,,,,,,,57.0,18.1,55,2024-03-24,PWHL,2023/2024,Regular Season
-31,2:22,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v5,6,Madison Bizal,,,,,29,Nicole Hensley,,,,,,,70.3,-11.6,55,2024-03-24,PWHL,2023/2024,Regular Season
-32,2:26,Penalty,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,10,Sydney Brodt,,,,,,,,,,,,,,,55,2024-03-24,PWHL,2023/2024,Regular Season
-33,2:55,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v4,18,Mikyla Grant-Mentis,,,,,29,Nicole Hensley,,,,,,,66.7,0.3,55,2024-03-24,PWHL,2023/2024,Regular Season
-34,3:37,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,4v5,13,Grace Zumwinkle,,,,,20,Elaine Chuli,,,,,,,-77.3,-7.9,55,2024-03-24,PWHL,2023/2024,Regular Season
-35,5:02,Block,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v5,43,Kristin O'Neill,,,,,29,Nicole Hensley,,,,,,,76.3,26.1,55,2024-03-24,PWHL,2023/2024,Regular Season
-36,5:15,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v5,7,Laura Stacey,,,,,29,Nicole Hensley,,,,,,,85.0,6.0,55,2024-03-24,PWHL,2023/2024,Regular Season
-37,5:26,Block,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v5,2,Mariah Keopple,,,,,29,Nicole Hensley,,,,,,,81.0,-8.2,55,2024-03-24,PWHL,2023/2024,Regular Season
-38,5:40,Goal,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,22,Natalie Buchbinder,19,Maggie Flaherty,14,Clair DeGeorge,20,Elaine Chuli,,7 14 18 19 22,Claire Butorac - Clair DeGeorge - Brittyn Fleming - Maggie Flaherty - Natalie Buchbinder,,2 7 42 43 44,Mariah Keopple - Laura Stacey - Claire Dalton - Kristin O'Neill - Amanda Boulier,-26.0,10.2,55,2024-03-24,PWHL,2023/2024,Regular Season
-39,6:04,Goal,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,2,Lee Stecklein,16,Sophie Jaques,26,Kendall Coyne Schofield,20,Elaine Chuli,,2 16 26 27 86,Lee Stecklein - Sophie Jaques - Kendall Coyne Schofield - Taylor Heise - Michela Cava,,8 9 15 18 23,Gabrielle David - Kati Tabin - Maureen Murphy - Mikyla Grant-Mentis - Erin Ambrose,-55.0,17.6,55,2024-03-24,PWHL,2023/2024,Regular Season
-40,6:50,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,18,Brittyn Fleming,,,,,20,Elaine Chuli,,,,,,,-53.0,0.6,55,2024-03-24,PWHL,2023/2024,Regular Season
-41,9:26,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v4,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,-51.7,-23.0,55,2024-03-24,PWHL,2023/2024,Regular Season
-42,11:12,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,17,Brooke Bryant,,,,,20,Elaine Chuli,,,,,,,-69.7,0.6,55,2024-03-24,PWHL,2023/2024,Regular Season
-43,12:45,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v5,43,Kristin O'Neill,,,,,29,Nicole Hensley,,,,,,,67.0,20.1,55,2024-03-24,PWHL,2023/2024,Regular Season
-44,13:07,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,12,Kelly Pannek,,,,,20,Elaine Chuli,,,,,,,-85.3,-20.7,55,2024-03-24,PWHL,2023/2024,Regular Season
-45,13:17,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,-51.7,-26.4,55,2024-03-24,PWHL,2023/2024,Regular Season
-46,14:14,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v5,43,Kristin O'Neill,,,,,29,Nicole Hensley,,,,,,,69.0,17.8,55,2024-03-24,PWHL,2023/2024,Regular Season
-47,15:32,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v5,26,Sarah Bujold,,,,,29,Nicole Hensley,,,,,,,80.7,16.4,55,2024-03-24,PWHL,2023/2024,Regular Season
-48,16:28,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,27,Taylor Heise,,,,,20,Elaine Chuli,,,,,,,-47.7,0.6,55,2024-03-24,PWHL,2023/2024,Regular Season
-49,16:51,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v4,86,Michela Cava,,,,,20,Elaine Chuli,,,,,,,-78.7,-10.2,55,2024-03-24,PWHL,2023/2024,Regular Season
-50,17:11,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v4,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,-53.7,-7.6,55,2024-03-24,PWHL,2023/2024,Regular Season
-51,17:23,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,-49.3,-27.8,55,2024-03-24,PWHL,2023/2024,Regular Season
-52,17:37,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v5,17,Alexandra Poznikoff,,,,,29,Nicole Hensley,,,,,,,80.7,-7.9,55,2024-03-24,PWHL,2023/2024,Regular Season
-53,18:03,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,18,Brittyn Fleming,,,,,20,Elaine Chuli,,,,,,,-58.0,14.5,55,2024-03-24,PWHL,2023/2024,Regular Season
-54,19:11,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,22,Natalie Buchbinder,,,,,20,Elaine Chuli,,,,,,,-73.0,-15.0,55,2024-03-24,PWHL,2023/2024,Regular Season
-55,19:29,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,22,Natalie Buchbinder,,,,,20,Elaine Chuli,,,,,,,-47.3,-2.3,55,2024-03-24,PWHL,2023/2024,Regular Season
-56,19:30,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,22,Natalie Buchbinder,,,,,20,Elaine Chuli,,,,,,,-72.3,-2.5,55,2024-03-24,PWHL,2023/2024,Regular Season
-57,19:57,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,-45.0,-2.5,55,2024-03-24,PWHL,2023/2024,Regular Season
-58,1:01,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,3,event,5v5,16,Sarah Lefort,,,,,29,Nicole Hensley,,,,,,,46.7,2.3,55,2024-03-24,PWHL,2023/2024,Regular Season
-59,2:55,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v5,17,Brooke Bryant,,,,,20,Elaine Chuli,,,,,,,-63.0,14.2,55,2024-03-24,PWHL,2023/2024,Regular Season
-60,3:14,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v5,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,-47.0,-12.8,55,2024-03-24,PWHL,2023/2024,Regular Season
-61,6:12,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v5,7,Claire Butorac,,,,,20,Elaine Chuli,,,,,,,-72.7,21.8,55,2024-03-24,PWHL,2023/2024,Regular Season
-62,6:17,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v5,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,-31.3,-17.6,55,2024-03-24,PWHL,2023/2024,Regular Season
-63,7:25,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v5,13,Grace Zumwinkle,,,,,20,Elaine Chuli,,,,,,,-68.0,-19.6,55,2024-03-24,PWHL,2023/2024,Regular Season
-64,7:27,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v5,13,Grace Zumwinkle,,,,,20,Elaine Chuli,,,,,,,-75.0,3.4,55,2024-03-24,PWHL,2023/2024,Regular Season
-65,7:47,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v5,19,Maggie Flaherty,,,,,20,Elaine Chuli,,,,,,,-28.3,-1.1,55,2024-03-24,PWHL,2023/2024,Regular Season
-66,8:44,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,3,event,5v5,15,Maureen Murphy,,,,,29,Nicole Hensley,,,,,,,50.0,4.5,55,2024-03-24,PWHL,2023/2024,Regular Season
-67,9:12,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,3,event,5v5,16,Sarah Lefort,,,,,29,Nicole Hensley,,,,,,,38.0,-24.1,55,2024-03-24,PWHL,2023/2024,Regular Season
-68,9:42,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,3,event,5v5,8,Gabrielle David,,,,,29,Nicole Hensley,,,,,,,77.0,4.5,55,2024-03-24,PWHL,2023/2024,Regular Season
-69,10:59,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v5,12,Kelly Pannek,,,,,20,Elaine Chuli,,,,,,,-82.0,8.5,55,2024-03-24,PWHL,2023/2024,Regular Season
-70,11:15,Block,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,3,event,5v5,9,Kati Tabin,,,,,29,Nicole Hensley,,,,,,,35.0,-15.3,55,2024-03-24,PWHL,2023/2024,Regular Season
-71,12:40,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v5,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,-18.3,37.7,55,2024-03-24,PWHL,2023/2024,Regular Season
-72,13:09,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v5,27,Taylor Heise,,,,,20,Elaine Chuli,,,,,,,-67.7,-15.3,55,2024-03-24,PWHL,2023/2024,Regular Season
-73,13:38,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,3,event,5v5,23,Erin Ambrose,,,,,29,Nicole Hensley,,,,,,,34.3,23.2,55,2024-03-24,PWHL,2023/2024,Regular Season
-74,15:13,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,3,event,5v5,16,Sarah Lefort,,,,,29,Nicole Hensley,,,,,,,51.0,-12.2,55,2024-03-24,PWHL,2023/2024,Regular Season
-75,16:32,Block,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,3,event,4v4,4,Catherine Daoust,,,,,29,Nicole Hensley,,,,,,,70.7,-0.6,55,2024-03-24,PWHL,2023/2024,Regular Season
-76,16:44,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v5,41,Denisa Křížová,,,,,20,Elaine Chuli,,,,,,,-78.0,14.5,55,2024-03-24,PWHL,2023/2024,Regular Season
-77,16:54,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v4,23,Mellissa Channell-Watkins,,,,,20,Elaine Chuli,,,,,,,-35.3,-16.1,55,2024-03-24,PWHL,2023/2024,Regular Season
-78,18:13,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,3,event,5v5,15,Maureen Murphy,,,,,29,Nicole Hensley,,,,,,,58.3,-0.6,55,2024-03-24,PWHL,2023/2024,Regular Season
-79,18:17,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,3,event,5v5,9,Kati Tabin,,,,,29,Nicole Hensley,,,,,,,75.0,-20.7,55,2024-03-24,PWHL,2023/2024,Regular Season
-80,2:03,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,OT1,event,3v3,27,Taylor Heise,,,,,20,Elaine Chuli,,,,,,,-72.7,-2.5,55,2024-03-24,PWHL,2023/2024,Regular Season
-81,2:20,Block,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,OT1,event,5v5,7,Laura Stacey,,,,,29,Nicole Hensley,,,,,,,54.3,13.3,55,2024-03-24,PWHL,2023/2024,Regular Season
-82,2:58,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,OT1,event,3v3,16,Sarah Lefort,,,,,29,Nicole Hensley,,,,,,,59.3,-8.5,55,2024-03-24,PWHL,2023/2024,Regular Season
-83,3:16,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,OT1,event,3v3,7,Laura Stacey,,,,,29,Nicole Hensley,,,,,,,86.7,-5.1,55,2024-03-24,PWHL,2023/2024,Regular Season
-84,3:23,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,OT1,event,3v3,27,Taylor Heise,,,,,20,Elaine Chuli,,,,,,,-65.3,-0.3,55,2024-03-24,PWHL,2023/2024,Regular Season
-85,3:40,Block,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,OT1,event,5v5,23,Erin Ambrose,,,,,29,Nicole Hensley,,,,,,,58.7,-31.4,55,2024-03-24,PWHL,2023/2024,Regular Season
-86,4:19,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,OT1,event,3v3,13,Grace Zumwinkle,,,,,20,Elaine Chuli,,,,,,,-83.0,4.8,55,2024-03-24,PWHL,2023/2024,Regular Season
-87,4:49,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,OT1,event,3v3,15,Maureen Murphy,,,,,29,Nicole Hensley,,,,,,,75.3,-7.9,55,2024-03-24,PWHL,2023/2024,Regular Season
-88,4:52,Block,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,OT1,event,5v5,9,Kati Tabin,,,,,29,Nicole Hensley,,,,,,,50.7,-26.4,55,2024-03-24,PWHL,2023/2024,Regular Season
-89,,SO Miss,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,SO,event,1v0,41,Denisa Křížová,,,,,20,Elaine Chuli,,,,,,,,,55,2024-03-24,PWHL,2023/2024,Regular Season
-90,,SO Miss,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,SO,event,1v0,15,Maureen Murphy,,,,,29,Nicole Hensley,,,,,,,,,55,2024-03-24,PWHL,2023/2024,Regular Season
-91,,SO Miss,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,SO,event,1v0,86,Michela Cava,,,,,20,Elaine Chuli,,,,,,,,,55,2024-03-24,PWHL,2023/2024,Regular Season
-92,,SO Miss,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,SO,event,1v0,7,Laura Stacey,,,,,29,Nicole Hensley,,,,,,,,,55,2024-03-24,PWHL,2023/2024,Regular Season
-93,,SO Goal,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,SO,event,1v0,,,,,,,20,Elaine Chuli,,,,,,,,,55,2024-03-24,PWHL,2023/2024,Regular Season
-94,,SO Goal,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,SO,event,1v0,,,,,,,29,Nicole Hensley,,,,,,,,,55,2024-03-24,PWHL,2023/2024,Regular Season
-95,,SO Goal,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,SO,event,1v0,,,,,,,20,Elaine Chuli,,,,,,,,,55,2024-03-24,PWHL,2023/2024,Regular Season
-96,,SO Miss,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,SO,event,1v0,23,Erin Ambrose,,,,,29,Nicole Hensley,,,,,,,,,55,2024-03-24,PWHL,2023/2024,Regular Season
-97,,SO Goal,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,SO,event,1v0,,,,,,,20,Elaine Chuli,,,,,,,,,55,2024-03-24,PWHL,2023/2024,Regular Season
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,xG,ScoreState,BoxID,game_id,game_date,competition,season,state
+1,0:20,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,1,event,5v5,7,Laura Stacey,,,,,29,Nicole Hensley,,,,,,,80.0,2.8,0.1248,0,O11,55,2024-03-24,PWHL,2023/2024,Regular Season
+2,2:34,Block,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,1,event,5v5,15,Maureen Murphy,,,,,29,Nicole Hensley,,,,,,,54.3,-0.3,,0,O21,55,2024-03-24,PWHL,2023/2024,Regular Season
+3,2:35,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,1,event,5v5,8,Gabrielle David,,,,,29,Nicole Hensley,,,,,,,82.0,5.1,0.1248,0,O11,55,2024-03-24,PWHL,2023/2024,Regular Season
+4,2:36,Goal,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,1,event,5v5,9,Kati Tabin,8,Gabrielle David,15,Maureen Murphy,29,Nicole Hensley,,2 10 11 16 21,Lee Stecklein - Sydney Brodt - Sophia Kunin - Sophie Jaques - Liz Schepers,,8 9 15 18 23,Gabrielle David - Kati Tabin - Maureen Murphy - Mikyla Grant-Mentis - Erin Ambrose,75.3,2.3,0.1248,0,O11,55,2024-03-24,PWHL,2023/2024,Regular Season
+5,3:24,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,1,event,5v5,23,Erin Ambrose,,,,,29,Nicole Hensley,,,,,,,29.3,24.6,0.0309,1,O26,55,2024-03-24,PWHL,2023/2024,Regular Season
+6,3:52,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,41,Denisa Křížová,,,,,20,Elaine Chuli,,,,,,,76.0,0.8,0.1328,-1,O11,55,2024-03-24,PWHL,2023/2024,Regular Season
+7,5:43,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,22,Natalie Buchbinder,,,,,20,Elaine Chuli,,,,,,,35.3,26.6,,-1,O26,55,2024-03-24,PWHL,2023/2024,Regular Season
+8,5:53,Goal,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,1,event,5v5,15,Maureen Murphy,8,Gabrielle David,,,29,Nicole Hensley,,10 11 19 21 22,Sydney Brodt - Sophia Kunin - Maggie Flaherty - Liz Schepers - Natalie Buchbinder,,6 8 10 15 18,Madison Bizal - Gabrielle David - Brigitte Laganière - Maureen Murphy - Mikyla Grant-Mentis,78.3,3.7,0.1463,1,O11,55,2024-03-24,PWHL,2023/2024,Regular Season
+9,7:08,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,25,Emma Greco,,,,,20,Elaine Chuli,,,,,,,20.3,-38.2,0.0597,-2,N01,55,2024-03-24,PWHL,2023/2024,Regular Season
+10,7:42,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,42.0,39.1,0.0164,-2,O23,55,2024-03-24,PWHL,2023/2024,Regular Season
+11,7:51,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,31.7,1.1,,-2,O25,55,2024-03-24,PWHL,2023/2024,Regular Season
+12,8:11,Penalty,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,1,event,5v5,43,Kristin O'Neill,,,,,,,,,,,,,,,,2,,55,2024-03-24,PWHL,2023/2024,Regular Season
+13,8:13,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v4,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,75.3,-12.8,,-2,O06,55,2024-03-24,PWHL,2023/2024,Regular Season
+14,8:38,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v4,27,Taylor Heise,,,,,20,Elaine Chuli,,,,,,,51.0,-26.4,0.0546,-2,O19,55,2024-03-24,PWHL,2023/2024,Regular Season
+15,8:56,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v4,27,Taylor Heise,,,,,20,Elaine Chuli,,,,,,,58.7,-24.1,0.0634,-2,O13,55,2024-03-24,PWHL,2023/2024,Regular Season
+16,9:38,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v4,13,Grace Zumwinkle,,,,,20,Elaine Chuli,,,,,,,58.7,-26.1,0.0634,-2,O13,55,2024-03-24,PWHL,2023/2024,Regular Season
+17,9:48,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v4,19,Maggie Flaherty,,,,,20,Elaine Chuli,,,,,,,80.7,7.1,0.2002,-2,O11,55,2024-03-24,PWHL,2023/2024,Regular Season
+18,11:20,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,19,Maggie Flaherty,,,,,20,Elaine Chuli,,,,,,,34.0,-20.7,0.0433,-2,O24,55,2024-03-24,PWHL,2023/2024,Regular Season
+19,12:59,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,13,Grace Zumwinkle,,,,,20,Elaine Chuli,,,,,,,74.0,36.5,0.0243,-2,O10,55,2024-03-24,PWHL,2023/2024,Regular Season
+20,13:23,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,13,Grace Zumwinkle,,,,,20,Elaine Chuli,,,,,,,62.3,-1.1,0.1120,-2,O15,55,2024-03-24,PWHL,2023/2024,Regular Season
+21,13:32,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,41,Denisa Křížová,,,,,20,Elaine Chuli,,,,,,,71.0,-4.0,0.0847,-2,O14,55,2024-03-24,PWHL,2023/2024,Regular Season
+22,14:34,Penalty,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,17,Brooke Bryant,,,,,,,,,,,,,,,,-2,,55,2024-03-24,PWHL,2023/2024,Regular Season
+23,16:02,Penalty,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,1,event,5v4,6,Madison Bizal,,,,,,,,,,,,,,,,2,,55,2024-03-24,PWHL,2023/2024,Regular Season
+24,16:53,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v4,27,Taylor Heise,,,,,20,Elaine Chuli,,,,,,,47.7,18.7,0.0659,-2,O22,55,2024-03-24,PWHL,2023/2024,Regular Season
+25,16:54,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v4,12,Kelly Pannek,,,,,20,Elaine Chuli,,,,,,,76.7,2.3,0.2002,-2,O11,55,2024-03-24,PWHL,2023/2024,Regular Season
+26,18:28,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,2,Lee Stecklein,,,,,20,Elaine Chuli,,,,,,,31.0,-38.8,,-2,O24,55,2024-03-24,PWHL,2023/2024,Regular Season
+27,18:34,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,2,Lee Stecklein,,,,,20,Elaine Chuli,,,,,,,33.3,-28.6,0.0433,-2,O24,55,2024-03-24,PWHL,2023/2024,Regular Season
+28,19:20,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,25,Emma Greco,,,,,20,Elaine Chuli,,,,,,,34.3,21.8,,-2,O26,55,2024-03-24,PWHL,2023/2024,Regular Season
+29,19:21,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,25,Emma Greco,,,,,20,Elaine Chuli,,,,,,,50.0,-28.3,0.0345,-2,O19,55,2024-03-24,PWHL,2023/2024,Regular Season
+30,19:51,Block,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,1,event,5v5,23,Erin Ambrose,,,,,29,Nicole Hensley,,,,,,,57.0,18.1,,2,O16,55,2024-03-24,PWHL,2023/2024,Regular Season
+31,2:22,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v5,6,Madison Bizal,,,,,29,Nicole Hensley,,,,,,,70.3,-11.6,0.1161,2,O14,55,2024-03-24,PWHL,2023/2024,Regular Season
+32,2:26,Penalty,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,10,Sydney Brodt,,,,,,,,,,,,,,,,-2,,55,2024-03-24,PWHL,2023/2024,Regular Season
+33,2:55,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v4,18,Mikyla Grant-Mentis,,,,,29,Nicole Hensley,,,,,,,66.7,0.3,0.2247,2,O15,55,2024-03-24,PWHL,2023/2024,Regular Season
+34,3:37,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,4v5,13,Grace Zumwinkle,,,,,20,Elaine Chuli,,,,,,,77.3,7.9,0.2143,-2,O11,55,2024-03-24,PWHL,2023/2024,Regular Season
+35,5:02,Block,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v5,43,Kristin O'Neill,,,,,29,Nicole Hensley,,,,,,,76.3,26.1,,2,O09,55,2024-03-24,PWHL,2023/2024,Regular Season
+36,5:15,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v5,7,Laura Stacey,,,,,29,Nicole Hensley,,,,,,,85.0,6.0,0.2924,2,O07,55,2024-03-24,PWHL,2023/2024,Regular Season
+37,5:26,Block,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v5,2,Mariah Keopple,,,,,29,Nicole Hensley,,,,,,,81.0,-8.2,,2,O06,55,2024-03-24,PWHL,2023/2024,Regular Season
+38,5:40,Goal,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,22,Natalie Buchbinder,19,Maggie Flaherty,14,Clair DeGeorge,20,Elaine Chuli,,7 14 18 19 22,Claire Butorac - Clair DeGeorge - Brittyn Fleming - Maggie Flaherty - Natalie Buchbinder,,2 7 42 43 44,Mariah Keopple - Laura Stacey - Claire Dalton - Kristin O'Neill - Amanda Boulier,26.0,-10.2,0.0454,-2,O25,55,2024-03-24,PWHL,2023/2024,Regular Season
+39,6:04,Goal,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,2,Lee Stecklein,16,Sophie Jaques,26,Kendall Coyne Schofield,20,Elaine Chuli,,2 16 26 27 86,Lee Stecklein - Sophie Jaques - Kendall Coyne Schofield - Taylor Heise - Michela Cava,,8 9 15 18 23,Gabrielle David - Kati Tabin - Maureen Murphy - Mikyla Grant-Mentis - Erin Ambrose,55.0,-17.6,0.0491,-1,O20,55,2024-03-24,PWHL,2023/2024,Regular Season
+40,6:50,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,18,Brittyn Fleming,,,,,20,Elaine Chuli,,,,,,,53.0,-0.6,0.0573,0,O21,55,2024-03-24,PWHL,2023/2024,Regular Season
+41,9:26,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v4,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,51.7,23.0,,0,O23,55,2024-03-24,PWHL,2023/2024,Regular Season
+42,11:12,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,17,Brooke Bryant,,,,,20,Elaine Chuli,,,,,,,69.7,-0.6,0.1041,0,O15,55,2024-03-24,PWHL,2023/2024,Regular Season
+43,12:45,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v5,43,Kristin O'Neill,,,,,29,Nicole Hensley,,,,,,,67.0,20.1,0.0409,0,O17,55,2024-03-24,PWHL,2023/2024,Regular Season
+44,13:07,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,12,Kelly Pannek,,,,,20,Elaine Chuli,,,,,,,85.3,20.7,0.0296,0,O09,55,2024-03-24,PWHL,2023/2024,Regular Season
+45,13:17,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,51.7,26.4,,0,O23,55,2024-03-24,PWHL,2023/2024,Regular Season
+46,14:14,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v5,43,Kristin O'Neill,,,,,29,Nicole Hensley,,,,,,,69.0,17.8,0.0409,0,O17,55,2024-03-24,PWHL,2023/2024,Regular Season
+47,15:32,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v5,26,Sarah Bujold,,,,,29,Nicole Hensley,,,,,,,80.7,16.4,0.0709,0,O08,55,2024-03-24,PWHL,2023/2024,Regular Season
+48,16:28,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,27,Taylor Heise,,,,,20,Elaine Chuli,,,,,,,47.7,-0.6,0.0573,0,O21,55,2024-03-24,PWHL,2023/2024,Regular Season
+49,16:51,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v4,86,Michela Cava,,,,,20,Elaine Chuli,,,,,,,78.7,10.2,,0,O08,55,2024-03-24,PWHL,2023/2024,Regular Season
+50,17:11,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v4,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,53.7,7.6,,0,O21,55,2024-03-24,PWHL,2023/2024,Regular Season
+51,17:23,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,49.3,27.8,0.0152,0,O23,55,2024-03-24,PWHL,2023/2024,Regular Season
+52,17:37,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v5,17,Alexandra Poznikoff,,,,,29,Nicole Hensley,,,,,,,80.7,-7.9,0.1248,0,O11,55,2024-03-24,PWHL,2023/2024,Regular Season
+53,18:03,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,18,Brittyn Fleming,,,,,20,Elaine Chuli,,,,,,,58.0,-14.5,0.0785,0,O14,55,2024-03-24,PWHL,2023/2024,Regular Season
+54,19:11,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,22,Natalie Buchbinder,,,,,20,Elaine Chuli,,,,,,,73.0,15.0,,0,O08,55,2024-03-24,PWHL,2023/2024,Regular Season
+55,19:29,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,22,Natalie Buchbinder,,,,,20,Elaine Chuli,,,,,,,47.3,2.3,0.0573,0,O21,55,2024-03-24,PWHL,2023/2024,Regular Season
+56,19:30,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,22,Natalie Buchbinder,,,,,20,Elaine Chuli,,,,,,,72.3,2.5,0.0899,0,O16,55,2024-03-24,PWHL,2023/2024,Regular Season
+57,19:57,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,45.0,2.5,,0,O21,55,2024-03-24,PWHL,2023/2024,Regular Season
+58,1:01,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,3,event,5v5,16,Sarah Lefort,,,,,29,Nicole Hensley,,,,,,,46.7,2.3,0.0573,0,O21,55,2024-03-24,PWHL,2023/2024,Regular Season
+59,2:55,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v5,17,Brooke Bryant,,,,,20,Elaine Chuli,,,,,,,63.0,-14.2,,0,O14,55,2024-03-24,PWHL,2023/2024,Regular Season
+60,3:14,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v5,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,47.0,12.8,,0,O21,55,2024-03-24,PWHL,2023/2024,Regular Season
+61,6:12,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v5,7,Claire Butorac,,,,,20,Elaine Chuli,,,,,,,72.7,-21.8,,0,O13,55,2024-03-24,PWHL,2023/2024,Regular Season
+62,6:17,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v5,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,31.3,17.6,,0,O25,55,2024-03-24,PWHL,2023/2024,Regular Season
+63,7:25,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v5,13,Grace Zumwinkle,,,,,20,Elaine Chuli,,,,,,,68.0,19.6,0.0409,0,O17,55,2024-03-24,PWHL,2023/2024,Regular Season
+64,7:27,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v5,13,Grace Zumwinkle,,,,,20,Elaine Chuli,,,,,,,75.0,-3.4,0.1248,0,O11,55,2024-03-24,PWHL,2023/2024,Regular Season
+65,7:47,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v5,19,Maggie Flaherty,,,,,20,Elaine Chuli,,,,,,,28.3,1.1,,0,O25,55,2024-03-24,PWHL,2023/2024,Regular Season
+66,8:44,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,3,event,5v5,15,Maureen Murphy,,,,,29,Nicole Hensley,,,,,,,50.0,4.5,0.0573,0,O21,55,2024-03-24,PWHL,2023/2024,Regular Season
+67,9:12,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,3,event,5v5,16,Sarah Lefort,,,,,29,Nicole Hensley,,,,,,,38.0,-24.1,0.0400,0,O24,55,2024-03-24,PWHL,2023/2024,Regular Season
+68,9:42,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,3,event,5v5,8,Gabrielle David,,,,,29,Nicole Hensley,,,,,,,77.0,4.5,0.1248,0,O11,55,2024-03-24,PWHL,2023/2024,Regular Season
+69,10:59,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v5,12,Kelly Pannek,,,,,20,Elaine Chuli,,,,,,,82.0,-8.5,0.0659,0,O06,55,2024-03-24,PWHL,2023/2024,Regular Season
+70,11:15,Block,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,3,event,5v5,9,Kati Tabin,,,,,29,Nicole Hensley,,,,,,,35.0,-15.3,,0,O25,55,2024-03-24,PWHL,2023/2024,Regular Season
+71,12:40,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v5,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,18.3,-37.7,0.0553,0,N01,55,2024-03-24,PWHL,2023/2024,Regular Season
+72,13:09,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v5,27,Taylor Heise,,,,,20,Elaine Chuli,,,,,,,67.7,15.3,0.0409,0,O17,55,2024-03-24,PWHL,2023/2024,Regular Season
+73,13:38,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,3,event,5v5,23,Erin Ambrose,,,,,29,Nicole Hensley,,,,,,,34.3,23.2,0.0258,0,O26,55,2024-03-24,PWHL,2023/2024,Regular Season
+74,15:13,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,3,event,5v5,16,Sarah Lefort,,,,,29,Nicole Hensley,,,,,,,51.0,-12.2,0.0458,0,O20,55,2024-03-24,PWHL,2023/2024,Regular Season
+75,16:32,Block,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,3,event,4v4,4,Catherine Daoust,,,,,29,Nicole Hensley,,,,,,,70.7,-0.6,,0,O15,55,2024-03-24,PWHL,2023/2024,Regular Season
+76,16:44,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v5,41,Denisa Křížová,,,,,20,Elaine Chuli,,,,,,,78.0,-14.5,0.0659,0,O06,55,2024-03-24,PWHL,2023/2024,Regular Season
+77,16:54,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,3,event,5v4,23,Mellissa Channell-Watkins,,,,,20,Elaine Chuli,,,,,,,35.3,16.1,,0,O25,55,2024-03-24,PWHL,2023/2024,Regular Season
+78,18:13,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,3,event,5v5,15,Maureen Murphy,,,,,29,Nicole Hensley,,,,,,,58.3,-0.6,0.1041,0,O15,55,2024-03-24,PWHL,2023/2024,Regular Season
+79,18:17,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,3,event,5v5,9,Kati Tabin,,,,,29,Nicole Hensley,,,,,,,75.0,-20.7,0.0659,0,O06,55,2024-03-24,PWHL,2023/2024,Regular Season
+80,2:03,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,OT1,event,3v3,27,Taylor Heise,,,,,20,Elaine Chuli,,,,,,,72.7,2.5,0.0899,0,O16,55,2024-03-24,PWHL,2023/2024,Regular Season
+81,2:20,Block,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,OT1,event,5v5,7,Laura Stacey,,,,,29,Nicole Hensley,,,,,,,54.3,13.3,,0,O22,55,2024-03-24,PWHL,2023/2024,Regular Season
+82,2:58,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,OT1,event,3v3,16,Sarah Lefort,,,,,29,Nicole Hensley,,,,,,,59.3,-8.5,0.0785,0,O14,55,2024-03-24,PWHL,2023/2024,Regular Season
+83,3:16,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,OT1,event,3v3,7,Laura Stacey,,,,,29,Nicole Hensley,,,,,,,86.7,-5.1,0.2112,0,O07,55,2024-03-24,PWHL,2023/2024,Regular Season
+84,3:23,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,OT1,event,3v3,27,Taylor Heise,,,,,20,Elaine Chuli,,,,,,,65.3,0.3,0.1041,0,O15,55,2024-03-24,PWHL,2023/2024,Regular Season
+85,3:40,Block,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,OT1,event,5v5,23,Erin Ambrose,,,,,29,Nicole Hensley,,,,,,,58.7,-31.4,,0,O12,55,2024-03-24,PWHL,2023/2024,Regular Season
+86,4:19,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,OT1,event,3v3,13,Grace Zumwinkle,,,,,20,Elaine Chuli,,,,,,,83.0,-4.8,0.2112,0,O07,55,2024-03-24,PWHL,2023/2024,Regular Season
+87,4:49,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,OT1,event,3v3,15,Maureen Murphy,,,,,29,Nicole Hensley,,,,,,,75.3,-7.9,0.1248,0,O11,55,2024-03-24,PWHL,2023/2024,Regular Season
+88,4:52,Block,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,OT1,event,5v5,9,Kati Tabin,,,,,29,Nicole Hensley,,,,,,,50.7,-26.4,,0,O19,55,2024-03-24,PWHL,2023/2024,Regular Season
+89,,SO Miss,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,SO,event,1v0,41,Denisa Křížová,,,,,20,Elaine Chuli,,,,,,,,,,0,,55,2024-03-24,PWHL,2023/2024,Regular Season
+90,,SO Miss,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,SO,event,1v0,15,Maureen Murphy,,,,,29,Nicole Hensley,,,,,,,,,,0,,55,2024-03-24,PWHL,2023/2024,Regular Season
+91,,SO Miss,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,SO,event,1v0,86,Michela Cava,,,,,20,Elaine Chuli,,,,,,,,,,0,,55,2024-03-24,PWHL,2023/2024,Regular Season
+92,,SO Miss,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,SO,event,1v0,7,Laura Stacey,,,,,29,Nicole Hensley,,,,,,,,,,0,,55,2024-03-24,PWHL,2023/2024,Regular Season
+93,,SO Goal,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,SO,event,1v0,,,,,,,20,Elaine Chuli,,,,,,,,,,0,,55,2024-03-24,PWHL,2023/2024,Regular Season
+94,,SO Goal,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,SO,event,1v0,,,,,,,29,Nicole Hensley,,,,,,,,,,0,,55,2024-03-24,PWHL,2023/2024,Regular Season
+95,,SO Goal,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,SO,event,1v0,,,,,,,20,Elaine Chuli,,,,,,,,,,0,,55,2024-03-24,PWHL,2023/2024,Regular Season
+96,,SO Miss,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,SO,event,1v0,23,Erin Ambrose,,,,,29,Nicole Hensley,,,,,,,,,,0,,55,2024-03-24,PWHL,2023/2024,Regular Season
+97,,SO Goal,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,SO,event,1v0,,,,,,,20,Elaine Chuli,,,,,,,,,,0,,55,2024-03-24,PWHL,2023/2024,Regular Season

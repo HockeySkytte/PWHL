@@ -1,90 +1,90 @@
-id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
-1,0:15,Block,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,1,event,5v5,21,Mae Batherson,,,,,31,Aerin Frankel,,,,,,,37.0,-25.5,225,2025-12-07,PWHL,2025/2026,Regular Season
-2,0:17,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,1,event,5v5,12,Kelly Pannek,,,,,31,Aerin Frankel,,,,,,,71.0,11.1,225,2025-12-07,PWHL,2025/2026,Regular Season
-3,1:50,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,1,event,5v5,27,Taylor Heise,,,,,31,Aerin Frankel,,,,,,,77.0,0.3,225,2025-12-07,PWHL,2025/2026,Regular Season
-4,2:19,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,17,Theresa Schafzahl,,,,,35,Maddie Rooney,,,,,,,-68.3,-10.5,225,2025-12-07,PWHL,2025/2026,Regular Season
-5,2:29,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,5,Megan Keller,,,,,35,Maddie Rooney,,,,,,,-52.7,20.1,225,2025-12-07,PWHL,2025/2026,Regular Season
-6,2:50,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,1,event,5v5,77,Britta Curl-Salemme,,,,,31,Aerin Frankel,,,,,,,81.7,3.4,225,2025-12-07,PWHL,2025/2026,Regular Season
-7,2:51,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,1,event,5v5,77,Britta Curl-Salemme,,,,,31,Aerin Frankel,,,,,,,82.3,5.4,225,2025-12-07,PWHL,2025/2026,Regular Season
-8,3:58,Block,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,9,Sophie Shirley,,,,,35,Maddie Rooney,,,,,,,-77.3,-4.8,225,2025-12-07,PWHL,2025/2026,Regular Season
-9,4:01,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,9,Sophie Shirley,,,,,35,Maddie Rooney,,,,,,,-76.3,-2.0,225,2025-12-07,PWHL,2025/2026,Regular Season
-10,4:09,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,27,Shay Maloney,,,,,35,Maddie Rooney,,,,,,,-83.0,0.8,225,2025-12-07,PWHL,2025/2026,Regular Season
-11,4:10,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,8,Haley Winn,,,,,35,Maddie Rooney,,,,,,,-82.0,-6.8,225,2025-12-07,PWHL,2025/2026,Regular Season
-12,4:24,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,20,Hannah Brandt,,,,,35,Maddie Rooney,,,,,,,-82.3,-3.7,225,2025-12-07,PWHL,2025/2026,Regular Season
-13,4:49,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,44,Jill Saulnier,,,,,35,Maddie Rooney,,,,,,,-85.0,7.6,225,2025-12-07,PWHL,2025/2026,Regular Season
-14,5:42,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,3,Zoe Boyd,,,,,35,Maddie Rooney,,,,,,,-79.3,4.2,225,2025-12-07,PWHL,2025/2026,Regular Season
-15,5:57,Block,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,26,Ella Huber,,,,,35,Maddie Rooney,,,,,,,-65.3,0.3,225,2025-12-07,PWHL,2025/2026,Regular Season
-16,6:44,Penalty,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,9,Sophie Shirley,,,,,,,,,,,,,,,225,2025-12-07,PWHL,2025/2026,Regular Season
-17,6:50,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,1,event,5v4,74,Abby Hustler,,,,,31,Aerin Frankel,,,,,,,43.0,24.6,225,2025-12-07,PWHL,2025/2026,Regular Season
-18,8:04,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,1,event,5v4,5,Sidney Morin,,,,,31,Aerin Frankel,,,,,,,64.0,25.8,225,2025-12-07,PWHL,2025/2026,Regular Season
-19,8:49,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,44,Jill Saulnier,,,,,35,Maddie Rooney,,,,,,,-71.3,6.5,225,2025-12-07,PWHL,2025/2026,Regular Season
-20,9:08,Block,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,55,Daniela Pejšová,,,,,35,Maddie Rooney,,,,,,,-49.0,4.2,225,2025-12-07,PWHL,2025/2026,Regular Season
-21,9:35,Block,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,5,Megan Keller,,,,,35,Maddie Rooney,,,,,,,-39.0,12.5,225,2025-12-07,PWHL,2025/2026,Regular Season
-22,9:48,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,26,Ella Huber,,,,,35,Maddie Rooney,,,,,,,-62.0,-13.6,225,2025-12-07,PWHL,2025/2026,Regular Season
-23,10:03,Block,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,8,Haley Winn,,,,,35,Maddie Rooney,,,,,,,-42.3,-25.5,225,2025-12-07,PWHL,2025/2026,Regular Season
-24,10:05,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,8,Haley Winn,,,,,35,Maddie Rooney,,,,,,,-46.3,-19.3,225,2025-12-07,PWHL,2025/2026,Regular Season
-25,10:27,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,5,Megan Keller,,,,,35,Maddie Rooney,,,,,,,-31.7,1.1,225,2025-12-07,PWHL,2025/2026,Regular Season
-26,12:15,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,26,Ella Huber,,,,,35,Maddie Rooney,,,,,,,-53.0,30.3,225,2025-12-07,PWHL,2025/2026,Regular Season
-27,13:18,Block,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,1,event,5v5,26,Kendall Coyne Schofield,,,,,31,Aerin Frankel,,,,,,,68.7,-6.5,225,2025-12-07,PWHL,2025/2026,Regular Season
-28,13:20,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,1,event,5v5,77,Britta Curl-Salemme,,,,,31,Aerin Frankel,,,,,,,65.0,11.1,225,2025-12-07,PWHL,2025/2026,Regular Season
-29,15:27,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,1,event,5v5,15,Brooke Becker,,,,,31,Aerin Frankel,,,,,,,52.0,7.9,225,2025-12-07,PWHL,2025/2026,Regular Season
-30,15:30,Block,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,1,event,5v5,15,Brooke Becker,,,,,31,Aerin Frankel,,,,,,,57.3,14.2,225,2025-12-07,PWHL,2025/2026,Regular Season
-31,15:59,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,1,event,5v5,26,Kendall Coyne Schofield,,,,,31,Aerin Frankel,,,,,,,57.3,-11.3,225,2025-12-07,PWHL,2025/2026,Regular Season
-32,15:59,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,1,event,5v5,13,Grace Zumwinkle,,,,,31,Aerin Frankel,,,,,,,46.3,-3.4,225,2025-12-07,PWHL,2025/2026,Regular Season
-33,16:35,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,1,event,5v5,26,Kendall Coyne Schofield,,,,,31,Aerin Frankel,,,,,,,71.0,-2.3,225,2025-12-07,PWHL,2025/2026,Regular Season
-34,17:03,Goal,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,27,Shay Maloney,,,,,35,Maddie Rooney,,3 20 27 44 53,Zoe Boyd - Hannah Brandt - Shay Maloney - Jill Saulnier - Rylind MacKinnon,,5 6 14 21 41,Sidney Morin - Katy Knoll - Dominique Petrie - Mae Batherson - Denisa Křížová,-62.0,-10.2,225,2025-12-07,PWHL,2025/2026,Regular Season
-35,17:51,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,26,Ella Huber,,,,,35,Maddie Rooney,,,,,,,-61.0,-26.4,225,2025-12-07,PWHL,2025/2026,Regular Season
-36,18:09,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,8,Haley Winn,,,,,35,Maddie Rooney,,,,,,,-33.0,-28.3,225,2025-12-07,PWHL,2025/2026,Regular Season
-37,18:17,Goal,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,5,Megan Keller,11,Alina Müller,8,Haley Winn,35,Maddie Rooney,,5 8 11 17 19,Megan Keller - Haley Winn - Alina Müller - Theresa Schafzahl - Abby Newhook,,5 13 21 27 74,Sidney Morin - Grace Zumwinkle - Mae Batherson - Taylor Heise - Abby Hustler,-37.0,30.0,225,2025-12-07,PWHL,2025/2026,Regular Season
-38,19:56,Block,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,5,Megan Keller,,,,,35,Maddie Rooney,,,,,,,-40.0,31.7,225,2025-12-07,PWHL,2025/2026,Regular Season
-39,2:47,Block,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v5,26,Kendall Coyne Schofield,,,,,31,Aerin Frankel,,,,,,,65.7,2.3,225,2025-12-07,PWHL,2025/2026,Regular Season
-40,3:12,Goal,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v5,71,Klára Hymlárová,7,Claire Butorac,91,Peyton Anderson,31,Aerin Frankel,,6 13 25 26 55,Hadley Hartmetz - Liz Schepers - Laura Kluge - Ella Huber - Daniela Pejšová,,2 7 22 71 91,Lee Stecklein - Claire Butorac - Natalie Buchbinder - Klára Hymlárová - Peyton Anderson,72.3,-3.1,225,2025-12-07,PWHL,2025/2026,Regular Season
-41,3:40,Penalty,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v5,14,Dominique Petrie,,,,,,,,,,,,,,,225,2025-12-07,PWHL,2025/2026,Regular Season
-42,3:59,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,2,event,5v4,5,Megan Keller,,,,,35,Maddie Rooney,,,,,,,-65.0,-7.9,225,2025-12-07,PWHL,2025/2026,Regular Season
-43,4:01,Goal,Boston Fleet,Home,Boston Fleet,Minnesota Frost,2,event,5v4,19,Abby Newhook,5,Megan Keller,8,Haley Winn,35,Maddie Rooney,,5 8 11 19 77,Megan Keller - Haley Winn - Alina Müller - Abby Newhook - Susanna Tapani,,2 6 22 41,Lee Stecklein - Katy Knoll - Natalie Buchbinder - Denisa Křížová,-75.0,-2.0,225,2025-12-07,PWHL,2025/2026,Regular Season
-44,4:19,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v5,15,Brooke Becker,,,,,31,Aerin Frankel,,,,,,,33.0,27.8,225,2025-12-07,PWHL,2025/2026,Regular Season
-45,5:24,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,2,event,5v5,26,Ella Huber,,,,,35,Maddie Rooney,,,,,,,-41.0,29.5,225,2025-12-07,PWHL,2025/2026,Regular Season
-46,5:32,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,2,event,5v5,13,Liz Schepers,,,,,35,Maddie Rooney,,,,,,,-81.7,7.6,225,2025-12-07,PWHL,2025/2026,Regular Season
-47,7:21,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,2,event,5v5,8,Haley Winn,,,,,35,Maddie Rooney,,,,,,,-29.7,-4.5,225,2025-12-07,PWHL,2025/2026,Regular Season
-48,7:28,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,2,event,5v5,27,Shay Maloney,,,,,35,Maddie Rooney,,,,,,,-63.3,-16.4,225,2025-12-07,PWHL,2025/2026,Regular Season
-49,7:46,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v5,41,Denisa Křížová,,,,,31,Aerin Frankel,,,,,,,17.7,-4.8,225,2025-12-07,PWHL,2025/2026,Regular Season
-50,9:30,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v5,77,Britta Curl-Salemme,,,,,31,Aerin Frankel,,,,,,,78.3,-13.0,225,2025-12-07,PWHL,2025/2026,Regular Season
-51,10:04,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,2,event,5v5,27,Shay Maloney,,,,,35,Maddie Rooney,,,,,,,-53.0,-23.0,225,2025-12-07,PWHL,2025/2026,Regular Season
-52,10:38,Penalty,Boston Fleet,Home,Boston Fleet,Minnesota Frost,2,event,5v5,55,Daniela Pejšová,,,,,,,,,,,,,,,225,2025-12-07,PWHL,2025/2026,Regular Season
-53,11:07,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v4,77,Britta Curl-Salemme,,,,,31,Aerin Frankel,,,,,,,69.0,-26.4,225,2025-12-07,PWHL,2025/2026,Regular Season
-54,11:28,Block,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v5,2,Lee Stecklein,,,,,31,Aerin Frankel,,,,,,,44.3,-7.6,225,2025-12-07,PWHL,2025/2026,Regular Season
-55,12:01,Block,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v5,4,Kendall Cooper,,,,,31,Aerin Frankel,,,,,,,31.7,-13.9,225,2025-12-07,PWHL,2025/2026,Regular Season
-56,13:37,Block,Boston Fleet,Home,Boston Fleet,Minnesota Frost,2,event,5v5,77,Susanna Tapani,,,,,35,Maddie Rooney,,,,,,,-31.0,-11.1,225,2025-12-07,PWHL,2025/2026,Regular Season
-57,14:05,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v5,21,Mae Batherson,,,,,31,Aerin Frankel,,,,,,,19.7,-36.3,225,2025-12-07,PWHL,2025/2026,Regular Season
-58,14:09,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v5,77,Britta Curl-Salemme,,,,,31,Aerin Frankel,,,,,,,62.0,-9.9,225,2025-12-07,PWHL,2025/2026,Regular Season
-59,14:40,Block,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v5,21,Mae Batherson,,,,,31,Aerin Frankel,,,,,,,63.0,-30.0,225,2025-12-07,PWHL,2025/2026,Regular Season
-60,16:27,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,2,event,5v5,8,Haley Winn,,,,,35,Maddie Rooney,,,,,,,-46.7,-7.6,225,2025-12-07,PWHL,2025/2026,Regular Season
-61,16:43,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v5,13,Grace Zumwinkle,,,,,31,Aerin Frankel,,,,,,,78.7,18.4,225,2025-12-07,PWHL,2025/2026,Regular Season
-62,16:47,Penalty,Boston Fleet,Home,Boston Fleet,Minnesota Frost,2,event,5v5,20,Hannah Brandt,,,,,,,,,,,,,,,225,2025-12-07,PWHL,2025/2026,Regular Season
-63,17:40,Block,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v5,5,Sidney Morin,,,,,31,Aerin Frankel,,,,,,,51.0,-9.9,225,2025-12-07,PWHL,2025/2026,Regular Season
-64,17:52,Block,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v5,5,Sidney Morin,,,,,31,Aerin Frankel,,,,,,,54.3,0.8,225,2025-12-07,PWHL,2025/2026,Regular Season
-65,17:58,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v4,77,Britta Curl-Salemme,,,,,31,Aerin Frankel,,,,,,,68.3,-11.1,225,2025-12-07,PWHL,2025/2026,Regular Season
-66,18:32,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v4,27,Taylor Heise,,,,,31,Aerin Frankel,,,,,,,76.7,7.9,225,2025-12-07,PWHL,2025/2026,Regular Season
-67,19:56,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v5,12,Kelly Pannek,,,,,31,Aerin Frankel,,,,,,,60.3,11.3,225,2025-12-07,PWHL,2025/2026,Regular Season
-68,2:20,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v5,44,Jill Saulnier,,,,,35,Maddie Rooney,,,,,,,-83.0,6.8,225,2025-12-07,PWHL,2025/2026,Regular Season
-69,2:20,Penalty,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,3,event,5v5,91,Peyton Anderson,,,,,,,,,,,,,,,225,2025-12-07,PWHL,2025/2026,Regular Season
-70,3:00,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v4,47,Jamie Lee Rattray,,,,,35,Maddie Rooney,,,,,,,-78.0,-4.0,225,2025-12-07,PWHL,2025/2026,Regular Season
-71,3:01,Goal,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v4,17,Theresa Schafzahl,47,Jamie Lee Rattray,16,Riley Brengman,35,Maddie Rooney,,9 16 17 26 47,Sophie Shirley - Riley Brengman - Theresa Schafzahl - Ella Huber - Jamie Lee Rattray,,5 12 21 77,Sidney Morin - Kelly Pannek - Mae Batherson - Britta Curl-Salemme,-77.7,7.1,225,2025-12-07,PWHL,2025/2026,Regular Season
-72,3:54,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v5,44,Jill Saulnier,,,,,35,Maddie Rooney,,,,,,,-73.7,-7.9,225,2025-12-07,PWHL,2025/2026,Regular Season
-73,5:19,Block,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,3,event,5v5,5,Sidney Morin,,,,,31,Aerin Frankel,,,,,,,35.0,11.9,225,2025-12-07,PWHL,2025/2026,Regular Season
-74,5:58,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v5,47,Jamie Lee Rattray,,,,,35,Maddie Rooney,,,,,,,-80.3,9.3,225,2025-12-07,PWHL,2025/2026,Regular Season
-75,6:11,Block,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,3,event,5v5,15,Brooke Becker,,,,,31,Aerin Frankel,,,,,,,54.0,19.8,225,2025-12-07,PWHL,2025/2026,Regular Season
-76,9:03,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,3,event,5v5,91,Peyton Anderson,,,,,31,Aerin Frankel,,,,,,,61.7,-11.9,225,2025-12-07,PWHL,2025/2026,Regular Season
-77,13:00,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v5,47,Jamie Lee Rattray,,,,,35,Maddie Rooney,,,,,,,-65.3,0.3,225,2025-12-07,PWHL,2025/2026,Regular Season
-78,13:35,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v5,26,Ella Huber,,,,,35,Maddie Rooney,,,,,,,-64.0,-24.6,225,2025-12-07,PWHL,2025/2026,Regular Season
-79,15:34,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v5,20,Hannah Brandt,,,,,35,Maddie Rooney,,,,,,,-71.3,15.3,225,2025-12-07,PWHL,2025/2026,Regular Season
-80,16:15,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,3,event,5v5,13,Grace Zumwinkle,,,,,31,Aerin Frankel,,,,,,,45.0,32.9,225,2025-12-07,PWHL,2025/2026,Regular Season
-81,16:47,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,3,event,5v5,4,Kendall Cooper,,,,,31,Aerin Frankel,,,,,,,64.7,23.5,225,2025-12-07,PWHL,2025/2026,Regular Season
-82,16:59,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v5,26,Ella Huber,,,,,35,Maddie Rooney,,,,,,,-76.0,17.8,225,2025-12-07,PWHL,2025/2026,Regular Season
-83,17:15,Block,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v5,5,Megan Keller,,,,,35,Maddie Rooney,,,,,,,-68.7,10.5,225,2025-12-07,PWHL,2025/2026,Regular Season
-84,18:29,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v5,16,Riley Brengman,,,,,35,Maddie Rooney,,,,,,,-39.3,-10.5,225,2025-12-07,PWHL,2025/2026,Regular Season
-85,19:49,Penalty,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v5,25,Laura Kluge,,,,,,,,,,,,,,,225,2025-12-07,PWHL,2025/2026,Regular Season
-86,19:49,Penalty,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v5,25,Laura Kluge,,,,,,,,,,,,,,,225,2025-12-07,PWHL,2025/2026,Regular Season
-87,19:49,Penalty,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,3,event,5v5,77,Britta Curl-Salemme,,,,,,,,,,,,,,,225,2025-12-07,PWHL,2025/2026,Regular Season
-88,19:55,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,3,event,4v3,5,Sidney Morin,,,,,31,Aerin Frankel,,,,,,,36.0,-16.4,225,2025-12-07,PWHL,2025/2026,Regular Season
-89,19:59,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,3,event,4v3,12,Kelly Pannek,,,,,31,Aerin Frankel,,,,,,,71.7,-5.7,225,2025-12-07,PWHL,2025/2026,Regular Season
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,xG,ScoreState,BoxID,game_id,game_date,competition,season,state
+1,0:15,Block,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,1,event,5v5,21,Mae Batherson,,,,,31,Aerin Frankel,,,,,,,37.0,-25.5,,0,O24,225,2025-12-07,PWHL,2025/2026,Regular Season
+2,0:17,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,1,event,5v5,12,Kelly Pannek,,,,,31,Aerin Frankel,,,,,,,71.0,11.1,0.0899,0,O16,225,2025-12-07,PWHL,2025/2026,Regular Season
+3,1:50,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,1,event,5v5,27,Taylor Heise,,,,,31,Aerin Frankel,,,,,,,77.0,0.3,0.1248,0,O11,225,2025-12-07,PWHL,2025/2026,Regular Season
+4,2:19,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,17,Theresa Schafzahl,,,,,35,Maddie Rooney,,,,,,,68.3,10.5,0.0899,0,O16,225,2025-12-07,PWHL,2025/2026,Regular Season
+5,2:29,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,5,Megan Keller,,,,,35,Maddie Rooney,,,,,,,52.7,-20.1,0.0458,0,O20,225,2025-12-07,PWHL,2025/2026,Regular Season
+6,2:50,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,1,event,5v5,77,Britta Curl-Salemme,,,,,31,Aerin Frankel,,,,,,,81.7,3.4,0.1248,0,O11,225,2025-12-07,PWHL,2025/2026,Regular Season
+7,2:51,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,1,event,5v5,77,Britta Curl-Salemme,,,,,31,Aerin Frankel,,,,,,,82.3,5.4,0.1248,0,O11,225,2025-12-07,PWHL,2025/2026,Regular Season
+8,3:58,Block,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,9,Sophie Shirley,,,,,35,Maddie Rooney,,,,,,,77.3,4.8,,0,O11,225,2025-12-07,PWHL,2025/2026,Regular Season
+9,4:01,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,9,Sophie Shirley,,,,,35,Maddie Rooney,,,,,,,76.3,2.0,0.1248,0,O11,225,2025-12-07,PWHL,2025/2026,Regular Season
+10,4:09,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,27,Shay Maloney,,,,,35,Maddie Rooney,,,,,,,83.0,-0.8,0.2112,0,O07,225,2025-12-07,PWHL,2025/2026,Regular Season
+11,4:10,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,8,Haley Winn,,,,,35,Maddie Rooney,,,,,,,82.0,6.8,0.1248,0,O11,225,2025-12-07,PWHL,2025/2026,Regular Season
+12,4:24,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,20,Hannah Brandt,,,,,35,Maddie Rooney,,,,,,,82.3,3.7,0.1248,0,O11,225,2025-12-07,PWHL,2025/2026,Regular Season
+13,4:49,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,44,Jill Saulnier,,,,,35,Maddie Rooney,,,,,,,85.0,-7.6,0.0659,0,O06,225,2025-12-07,PWHL,2025/2026,Regular Season
+14,5:42,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,3,Zoe Boyd,,,,,35,Maddie Rooney,,,,,,,79.3,-4.2,0.1248,0,O11,225,2025-12-07,PWHL,2025/2026,Regular Season
+15,5:57,Block,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,26,Ella Huber,,,,,35,Maddie Rooney,,,,,,,65.3,-0.3,,0,O15,225,2025-12-07,PWHL,2025/2026,Regular Season
+16,6:44,Penalty,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,9,Sophie Shirley,,,,,,,,,,,,,,,,0,,225,2025-12-07,PWHL,2025/2026,Regular Season
+17,6:50,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,1,event,5v4,74,Abby Hustler,,,,,31,Aerin Frankel,,,,,,,43.0,24.6,0.0610,0,O22,225,2025-12-07,PWHL,2025/2026,Regular Season
+18,8:04,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,1,event,5v4,5,Sidney Morin,,,,,31,Aerin Frankel,,,,,,,64.0,25.8,0.0645,0,O17,225,2025-12-07,PWHL,2025/2026,Regular Season
+19,8:49,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,44,Jill Saulnier,,,,,35,Maddie Rooney,,,,,,,71.3,-6.5,0.0785,0,O14,225,2025-12-07,PWHL,2025/2026,Regular Season
+20,9:08,Block,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,55,Daniela Pejšová,,,,,35,Maddie Rooney,,,,,,,49.0,-4.2,,0,O21,225,2025-12-07,PWHL,2025/2026,Regular Season
+21,9:35,Block,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,5,Megan Keller,,,,,35,Maddie Rooney,,,,,,,39.0,-12.5,,0,O25,225,2025-12-07,PWHL,2025/2026,Regular Season
+22,9:48,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,26,Ella Huber,,,,,35,Maddie Rooney,,,,,,,62.0,13.6,0.0899,0,O16,225,2025-12-07,PWHL,2025/2026,Regular Season
+23,10:03,Block,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,8,Haley Winn,,,,,35,Maddie Rooney,,,,,,,42.3,25.5,,0,O22,225,2025-12-07,PWHL,2025/2026,Regular Season
+24,10:05,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,8,Haley Winn,,,,,35,Maddie Rooney,,,,,,,46.3,19.3,0.0386,0,O22,225,2025-12-07,PWHL,2025/2026,Regular Season
+25,10:27,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,5,Megan Keller,,,,,35,Maddie Rooney,,,,,,,31.7,-1.1,0.0420,0,O25,225,2025-12-07,PWHL,2025/2026,Regular Season
+26,12:15,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,26,Ella Huber,,,,,35,Maddie Rooney,,,,,,,53.0,-30.3,0.0318,0,O19,225,2025-12-07,PWHL,2025/2026,Regular Season
+27,13:18,Block,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,1,event,5v5,26,Kendall Coyne Schofield,,,,,31,Aerin Frankel,,,,,,,68.7,-6.5,,0,O14,225,2025-12-07,PWHL,2025/2026,Regular Season
+28,13:20,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,1,event,5v5,77,Britta Curl-Salemme,,,,,31,Aerin Frankel,,,,,,,65.0,11.1,0.0899,0,O16,225,2025-12-07,PWHL,2025/2026,Regular Season
+29,15:27,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,1,event,5v5,15,Brooke Becker,,,,,31,Aerin Frankel,,,,,,,52.0,7.9,0.0573,0,O21,225,2025-12-07,PWHL,2025/2026,Regular Season
+30,15:30,Block,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,1,event,5v5,15,Brooke Becker,,,,,31,Aerin Frankel,,,,,,,57.3,14.2,,0,O16,225,2025-12-07,PWHL,2025/2026,Regular Season
+31,15:59,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,1,event,5v5,26,Kendall Coyne Schofield,,,,,31,Aerin Frankel,,,,,,,57.3,-11.3,0.0785,0,O14,225,2025-12-07,PWHL,2025/2026,Regular Season
+32,15:59,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,1,event,5v5,13,Grace Zumwinkle,,,,,31,Aerin Frankel,,,,,,,46.3,-3.4,0.0573,0,O21,225,2025-12-07,PWHL,2025/2026,Regular Season
+33,16:35,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,1,event,5v5,26,Kendall Coyne Schofield,,,,,31,Aerin Frankel,,,,,,,71.0,-2.3,0.0785,0,O14,225,2025-12-07,PWHL,2025/2026,Regular Season
+34,17:03,Goal,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,27,Shay Maloney,,,,,35,Maddie Rooney,,3 20 27 44 53,Zoe Boyd - Hannah Brandt - Shay Maloney - Jill Saulnier - Rylind MacKinnon,,5 6 14 21 41,Sidney Morin - Katy Knoll - Dominique Petrie - Mae Batherson - Denisa Křížová,62.0,10.2,0.0899,0,O16,225,2025-12-07,PWHL,2025/2026,Regular Season
+35,17:51,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,26,Ella Huber,,,,,35,Maddie Rooney,,,,,,,61.0,26.4,0.0488,1,O17,225,2025-12-07,PWHL,2025/2026,Regular Season
+36,18:09,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,8,Haley Winn,,,,,35,Maddie Rooney,,,,,,,33.0,28.3,0.0309,1,O26,225,2025-12-07,PWHL,2025/2026,Regular Season
+37,18:17,Goal,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,5,Megan Keller,11,Alina Müller,8,Haley Winn,35,Maddie Rooney,,5 8 11 17 19,Megan Keller - Haley Winn - Alina Müller - Theresa Schafzahl - Abby Newhook,,5 13 21 27 74,Sidney Morin - Grace Zumwinkle - Mae Batherson - Taylor Heise - Abby Hustler,37.0,-30.0,0.0477,1,O24,225,2025-12-07,PWHL,2025/2026,Regular Season
+38,19:56,Block,Boston Fleet,Home,Boston Fleet,Minnesota Frost,1,event,5v5,5,Megan Keller,,,,,35,Maddie Rooney,,,,,,,40.0,-31.7,,2,O24,225,2025-12-07,PWHL,2025/2026,Regular Season
+39,2:47,Block,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v5,26,Kendall Coyne Schofield,,,,,31,Aerin Frankel,,,,,,,65.7,2.3,,-2,O15,225,2025-12-07,PWHL,2025/2026,Regular Season
+40,3:12,Goal,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v5,71,Klára Hymlárová,7,Claire Butorac,91,Peyton Anderson,31,Aerin Frankel,,6 13 25 26 55,Hadley Hartmetz - Liz Schepers - Laura Kluge - Ella Huber - Daniela Pejšová,,2 7 22 71 91,Lee Stecklein - Claire Butorac - Natalie Buchbinder - Klára Hymlárová - Peyton Anderson,72.3,-3.1,0.0847,-2,O14,225,2025-12-07,PWHL,2025/2026,Regular Season
+41,3:40,Penalty,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v5,14,Dominique Petrie,,,,,,,,,,,,,,,,-1,,225,2025-12-07,PWHL,2025/2026,Regular Season
+42,3:59,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,2,event,5v4,5,Megan Keller,,,,,35,Maddie Rooney,,,,,,,65.0,7.9,0.1610,1,O16,225,2025-12-07,PWHL,2025/2026,Regular Season
+43,4:01,Goal,Boston Fleet,Home,Boston Fleet,Minnesota Frost,2,event,5v4,19,Abby Newhook,5,Megan Keller,8,Haley Winn,35,Maddie Rooney,,5 8 11 19 77,Megan Keller - Haley Winn - Alina Müller - Abby Newhook - Susanna Tapani,,2 6 22 41,Lee Stecklein - Katy Knoll - Natalie Buchbinder - Denisa Křížová,75.0,2.0,0.2170,1,O11,225,2025-12-07,PWHL,2025/2026,Regular Season
+44,4:19,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v5,15,Brooke Becker,,,,,31,Aerin Frankel,,,,,,,33.0,27.8,0.0280,-2,O26,225,2025-12-07,PWHL,2025/2026,Regular Season
+45,5:24,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,2,event,5v5,26,Ella Huber,,,,,35,Maddie Rooney,,,,,,,41.0,-29.5,0.0483,2,O19,225,2025-12-07,PWHL,2025/2026,Regular Season
+46,5:32,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,2,event,5v5,13,Liz Schepers,,,,,35,Maddie Rooney,,,,,,,81.7,-7.6,0.1803,2,O11,225,2025-12-07,PWHL,2025/2026,Regular Season
+47,7:21,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,2,event,5v5,8,Haley Winn,,,,,35,Maddie Rooney,,,,,,,29.7,4.5,0.0633,2,O25,225,2025-12-07,PWHL,2025/2026,Regular Season
+48,7:28,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,2,event,5v5,27,Shay Maloney,,,,,35,Maddie Rooney,,,,,,,63.3,16.4,0.1322,2,O16,225,2025-12-07,PWHL,2025/2026,Regular Season
+49,7:46,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v5,41,Denisa Křížová,,,,,31,Aerin Frankel,,,,,,,17.7,-4.8,0.0597,-2,N02,225,2025-12-07,PWHL,2025/2026,Regular Season
+50,9:30,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v5,77,Britta Curl-Salemme,,,,,31,Aerin Frankel,,,,,,,78.3,-13.0,0.0712,-2,O06,225,2025-12-07,PWHL,2025/2026,Regular Season
+51,10:04,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,2,event,5v5,27,Shay Maloney,,,,,35,Maddie Rooney,,,,,,,53.0,23.0,0.0232,2,O23,225,2025-12-07,PWHL,2025/2026,Regular Season
+52,10:38,Penalty,Boston Fleet,Home,Boston Fleet,Minnesota Frost,2,event,5v5,55,Daniela Pejšová,,,,,,,,,,,,,,,,2,,225,2025-12-07,PWHL,2025/2026,Regular Season
+53,11:07,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v4,77,Britta Curl-Salemme,,,,,31,Aerin Frankel,,,,,,,69.0,-26.4,0.0240,-2,O12,225,2025-12-07,PWHL,2025/2026,Regular Season
+54,11:28,Block,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v5,2,Lee Stecklein,,,,,31,Aerin Frankel,,,,,,,44.3,-7.6,,-2,O21,225,2025-12-07,PWHL,2025/2026,Regular Season
+55,12:01,Block,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v5,4,Kendall Cooper,,,,,31,Aerin Frankel,,,,,,,31.7,-13.9,,-2,O25,225,2025-12-07,PWHL,2025/2026,Regular Season
+56,13:37,Block,Boston Fleet,Home,Boston Fleet,Minnesota Frost,2,event,5v5,77,Susanna Tapani,,,,,35,Maddie Rooney,,,,,,,31.0,11.1,,2,O25,225,2025-12-07,PWHL,2025/2026,Regular Season
+57,14:05,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v5,21,Mae Batherson,,,,,31,Aerin Frankel,,,,,,,19.7,-36.3,0.0597,-2,N01,225,2025-12-07,PWHL,2025/2026,Regular Season
+58,14:09,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v5,77,Britta Curl-Salemme,,,,,31,Aerin Frankel,,,,,,,62.0,-9.9,0.0847,-2,O14,225,2025-12-07,PWHL,2025/2026,Regular Season
+59,14:40,Block,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v5,21,Mae Batherson,,,,,31,Aerin Frankel,,,,,,,63.0,-30.0,,-2,O12,225,2025-12-07,PWHL,2025/2026,Regular Season
+60,16:27,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,2,event,5v5,8,Haley Winn,,,,,35,Maddie Rooney,,,,,,,46.7,7.6,0.0858,2,O21,225,2025-12-07,PWHL,2025/2026,Regular Season
+61,16:43,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v5,13,Grace Zumwinkle,,,,,31,Aerin Frankel,,,,,,,78.7,18.4,0.0766,-2,O08,225,2025-12-07,PWHL,2025/2026,Regular Season
+62,16:47,Penalty,Boston Fleet,Home,Boston Fleet,Minnesota Frost,2,event,5v5,20,Hannah Brandt,,,,,,,,,,,,,,,,2,,225,2025-12-07,PWHL,2025/2026,Regular Season
+63,17:40,Block,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v5,5,Sidney Morin,,,,,31,Aerin Frankel,,,,,,,51.0,-9.9,,-2,O21,225,2025-12-07,PWHL,2025/2026,Regular Season
+64,17:52,Block,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v5,5,Sidney Morin,,,,,31,Aerin Frankel,,,,,,,54.3,0.8,,-2,O21,225,2025-12-07,PWHL,2025/2026,Regular Season
+65,17:58,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v4,77,Britta Curl-Salemme,,,,,31,Aerin Frankel,,,,,,,68.3,-11.1,0.1301,-2,O14,225,2025-12-07,PWHL,2025/2026,Regular Season
+66,18:32,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v4,27,Taylor Heise,,,,,31,Aerin Frankel,,,,,,,76.7,7.9,0.2002,-2,O11,225,2025-12-07,PWHL,2025/2026,Regular Season
+67,19:56,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,2,event,5v5,12,Kelly Pannek,,,,,31,Aerin Frankel,,,,,,,60.3,11.3,0.0969,-2,O16,225,2025-12-07,PWHL,2025/2026,Regular Season
+68,2:20,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v5,44,Jill Saulnier,,,,,35,Maddie Rooney,,,,,,,83.0,-6.8,0.2924,2,O07,225,2025-12-07,PWHL,2025/2026,Regular Season
+69,2:20,Penalty,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,3,event,5v5,91,Peyton Anderson,,,,,,,,,,,,,,,,-2,,225,2025-12-07,PWHL,2025/2026,Regular Season
+70,3:00,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v4,47,Jamie Lee Rattray,,,,,35,Maddie Rooney,,,,,,,78.0,4.0,0.2623,2,O11,225,2025-12-07,PWHL,2025/2026,Regular Season
+71,3:01,Goal,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v4,17,Theresa Schafzahl,9,Sophie Shirley,47,Jamie Lee Rattray,35,Maddie Rooney,,9 16 17 26 47,Sophie Shirley - Riley Brengman - Theresa Schafzahl - Ella Huber - Jamie Lee Rattray,,5 12 21 77,Sidney Morin - Kelly Pannek - Mae Batherson - Britta Curl-Salemme,77.7,-7.1,0.2623,2,O11,225,2025-12-07,PWHL,2025/2026,Regular Season
+72,3:54,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v5,44,Jill Saulnier,,,,,35,Maddie Rooney,,,,,,,73.7,7.9,0.1803,3,O11,225,2025-12-07,PWHL,2025/2026,Regular Season
+73,5:19,Block,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,3,event,5v5,5,Sidney Morin,,,,,31,Aerin Frankel,,,,,,,35.0,11.9,,-3,O25,225,2025-12-07,PWHL,2025/2026,Regular Season
+74,5:58,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v5,47,Jamie Lee Rattray,,,,,35,Maddie Rooney,,,,,,,80.3,-9.3,0.0982,3,O06,225,2025-12-07,PWHL,2025/2026,Regular Season
+75,6:11,Block,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,3,event,5v5,15,Brooke Becker,,,,,31,Aerin Frankel,,,,,,,54.0,19.8,,-3,O22,225,2025-12-07,PWHL,2025/2026,Regular Season
+76,9:03,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,3,event,5v5,91,Peyton Anderson,,,,,31,Aerin Frankel,,,,,,,61.7,-11.9,0.0847,-3,O14,225,2025-12-07,PWHL,2025/2026,Regular Season
+77,13:00,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v5,47,Jamie Lee Rattray,,,,,35,Maddie Rooney,,,,,,,65.3,-0.3,0.1520,3,O15,225,2025-12-07,PWHL,2025/2026,Regular Season
+78,13:35,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v5,26,Ella Huber,,,,,35,Maddie Rooney,,,,,,,64.0,24.6,0.0618,3,O17,225,2025-12-07,PWHL,2025/2026,Regular Season
+79,15:34,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v5,20,Hannah Brandt,,,,,35,Maddie Rooney,,,,,,,71.3,-15.3,0.0561,3,O13,225,2025-12-07,PWHL,2025/2026,Regular Season
+80,16:15,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,3,event,5v5,13,Grace Zumwinkle,,,,,31,Aerin Frankel,,,,,,,45.0,32.9,0.0164,-3,O23,225,2025-12-07,PWHL,2025/2026,Regular Season
+81,16:47,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,3,event,5v5,4,Kendall Cooper,,,,,31,Aerin Frankel,,,,,,,64.7,23.5,0.0443,-3,O17,225,2025-12-07,PWHL,2025/2026,Regular Season
+82,16:59,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v5,26,Ella Huber,,,,,35,Maddie Rooney,,,,,,,76.0,-17.8,0.0982,3,O06,225,2025-12-07,PWHL,2025/2026,Regular Season
+83,17:15,Block,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v5,5,Megan Keller,,,,,35,Maddie Rooney,,,,,,,68.7,-10.5,,3,O14,225,2025-12-07,PWHL,2025/2026,Regular Season
+84,18:29,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v5,16,Riley Brengman,,,,,35,Maddie Rooney,,,,,,,39.3,10.5,0.0633,3,O25,225,2025-12-07,PWHL,2025/2026,Regular Season
+85,19:49,Penalty,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v5,25,Laura Kluge,,,,,,,,,,,,,,,,3,,225,2025-12-07,PWHL,2025/2026,Regular Season
+86,19:49,Penalty,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v5,25,Laura Kluge,,,,,,,,,,,,,,,,3,,225,2025-12-07,PWHL,2025/2026,Regular Season
+87,19:49,Penalty,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,3,event,5v5,77,Britta Curl-Salemme,,,,,,,,,,,,,,,,-3,,225,2025-12-07,PWHL,2025/2026,Regular Season
+88,19:55,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,3,event,4v3,5,Sidney Morin,,,,,31,Aerin Frankel,,,,,,,36.0,-16.4,0.0714,-3,O25,225,2025-12-07,PWHL,2025/2026,Regular Season
+89,19:59,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,3,event,4v3,12,Kelly Pannek,,,,,31,Aerin Frankel,,,,,,,71.7,-5.7,0.1301,-3,O14,225,2025-12-07,PWHL,2025/2026,Regular Season

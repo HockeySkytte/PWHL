@@ -1,88 +1,88 @@
-id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
-1,2:25,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,11,Abby Roque,,,,,31,Aerin Frankel,,,,,,,-90.0,10.2,56,2024-03-25,PWHL,2023/2024,Regular Season
-2,6:00,Block,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,9,Jessie Eldridge,,,,,31,Aerin Frankel,,,,,,,-68.0,12.5,56,2024-03-25,PWHL,2023/2024,Regular Season
-3,7:05,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,17,Taylor Girard,,,,,30,Corinne Schroeder,,,,,,,33.0,-28.1,56,2024-03-25,PWHL,2023/2024,Regular Season
-4,7:18,Penalty,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,19,Gigi Marvin,,,,,,,,,,,,,,,56,2024-03-25,PWHL,2023/2024,Regular Season
-5,8:03,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v4,17,Ella Shelton,,,,,31,Aerin Frankel,,,,,,,-34.7,13.3,56,2024-03-25,PWHL,2023/2024,Regular Season
-6,8:40,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v4,25,Alex Carpenter,,,,,31,Aerin Frankel,,,,,,,-79.0,2.0,56,2024-03-25,PWHL,2023/2024,Regular Season
-7,8:42,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v4,25,Alex Carpenter,,,,,31,Aerin Frankel,,,,,,,-75.3,1.1,56,2024-03-25,PWHL,2023/2024,Regular Season
-8,8:42,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v4,25,Alex Carpenter,,,,,31,Aerin Frankel,,,,,,,-82.0,-9.1,56,2024-03-25,PWHL,2023/2024,Regular Season
-9,8:45,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,4v5,47,Jamie Lee Rattray,,,,,30,Corinne Schroeder,,,,,,,49.3,15.0,56,2024-03-25,PWHL,2023/2024,Regular Season
-10,8:51,Block,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v4,14,Jaime Bourbonnais,,,,,31,Aerin Frankel,,,,,,,-53.0,-6.0,56,2024-03-25,PWHL,2023/2024,Regular Season
-11,10:25,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,4,Taylor Baker,,,,,31,Aerin Frankel,,,,,,,-65.0,24.6,56,2024-03-25,PWHL,2023/2024,Regular Season
-12,11:23,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,20,Hannah Brandt,,,,,30,Corinne Schroeder,,,,,,,43.0,14.2,56,2024-03-25,PWHL,2023/2024,Regular Season
-13,11:35,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,20,Hannah Brandt,,,,,30,Corinne Schroeder,,,,,,,75.7,-20.4,56,2024-03-25,PWHL,2023/2024,Regular Season
-14,11:57,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,17,Ella Shelton,,,,,31,Aerin Frankel,,,,,,,-29.7,28.6,56,2024-03-25,PWHL,2023/2024,Regular Season
-15,12:01,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,21,Hilary Knight,,,,,30,Corinne Schroeder,,,,,,,51.3,-20.7,56,2024-03-25,PWHL,2023/2024,Regular Season
-16,13:01,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,17,Taylor Girard,,,,,30,Corinne Schroeder,,,,,,,31.7,-21.8,56,2024-03-25,PWHL,2023/2024,Regular Season
-17,14:15,Block,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,7,Sidney Morin,,,,,30,Corinne Schroeder,,,,,,,54.3,28.1,56,2024-03-25,PWHL,2023/2024,Regular Season
-18,14:21,Block,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,9,Jessie Eldridge,,,,,31,Aerin Frankel,,,,,,,-59.3,30.3,56,2024-03-25,PWHL,2023/2024,Regular Season
-19,14:30,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,9,Sophie Shirley,,,,,30,Corinne Schroeder,,,,,,,60.3,6.8,56,2024-03-25,PWHL,2023/2024,Regular Season
-20,15:03,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,27,Jade Downie-Landry,,,,,31,Aerin Frankel,,,,,,,-74.3,-29.7,56,2024-03-25,PWHL,2023/2024,Regular Season
-21,16:50,Block,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,18,Élizabeth Giguère,,,,,31,Aerin Frankel,,,,,,,-60.3,-28.9,56,2024-03-25,PWHL,2023/2024,Regular Season
-22,18:08,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,7,Sidney Morin,,,,,30,Corinne Schroeder,,,,,,,50.7,-6.0,56,2024-03-25,PWHL,2023/2024,Regular Season
-23,18:10,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,19,Gigi Marvin,,,,,30,Corinne Schroeder,,,,,,,68.0,-0.3,56,2024-03-25,PWHL,2023/2024,Regular Season
-24,18:19,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,47,Jamie Lee Rattray,,,,,30,Corinne Schroeder,,,,,,,64.7,-13.3,56,2024-03-25,PWHL,2023/2024,Regular Season
-25,18:45,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,7,Sidney Morin,,,,,30,Corinne Schroeder,,,,,,,73.3,8.2,56,2024-03-25,PWHL,2023/2024,Regular Season
-26,19:06,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,21,Hilary Knight,,,,,30,Corinne Schroeder,,,,,,,59.0,11.9,56,2024-03-25,PWHL,2023/2024,Regular Season
-27,19:29,Block,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,20,Hannah Brandt,,,,,30,Corinne Schroeder,,,,,,,-63.0,-0.6,56,2024-03-25,PWHL,2023/2024,Regular Season
-28,19:30,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,9,Jessie Eldridge,,,,,31,Aerin Frankel,,,,,,,-30.3,-34.9,56,2024-03-25,PWHL,2023/2024,Regular Season
-29,19:57,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,14,Jaime Bourbonnais,,,,,31,Aerin Frankel,,,,,,,-81.0,24.6,56,2024-03-25,PWHL,2023/2024,Regular Season
-30,0:37,Penalty,Boston Fleet,Away,New York Sirens,Boston Fleet,2,event,5v5,5,Megan Keller,,,,,,,,,,,,,,,56,2024-03-25,PWHL,2023/2024,Regular Season
-31,1:10,Block,Boston Fleet,Away,New York Sirens,Boston Fleet,2,event,5v5,17,Taylor Girard,,,,,30,Corinne Schroeder,,,,,,,45.7,-22.7,56,2024-03-25,PWHL,2023/2024,Regular Season
-32,2:12,Goal,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v4,27,Jade Downie-Landry,28,Micah Zandee-Hart,12,Chloé Aurard,31,Aerin Frankel,,12 18 27 28 67,Chloé Aurard - Élizabeth Giguère - Jade Downie-Landry - Micah Zandee-Hart - Emma Woods,,8 13 16 18,Lexie Adzija - Kaleigh Fratkin - Amanda Pelkey - Abby Cook,-79.7,0.3,56,2024-03-25,PWHL,2023/2024,Regular Season
-33,2:43,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,2,event,5v5,7,Sidney Morin,,,,,30,Corinne Schroeder,,,,,,,33.0,36.5,56,2024-03-25,PWHL,2023/2024,Regular Season
-34,3:50,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,44,Jill Saulnier,,,,,31,Aerin Frankel,,,,,,,-44.3,19.6,56,2024-03-25,PWHL,2023/2024,Regular Season
-35,4:25,Penalty,Boston Fleet,Away,New York Sirens,Boston Fleet,2,event,5v5,16,Amanda Pelkey,,,,,,,,,,,,,,,56,2024-03-25,PWHL,2023/2024,Regular Season
-36,5:29,Goal,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v4,18,Élizabeth Giguère,27,Jade Downie-Landry,25,Alex Carpenter,31,Aerin Frankel,,17 18 25 27 67,Ella Shelton - Élizabeth Giguère - Alex Carpenter - Jade Downie-Landry - Emma Woods,,5 13 17 20,Megan Keller - Kaleigh Fratkin - Taylor Girard - Hannah Brandt,-80.7,7.1,56,2024-03-25,PWHL,2023/2024,Regular Season
-37,6:27,Goal,Boston Fleet,Away,New York Sirens,Boston Fleet,2,event,5v5,11,Alina Müller,21,Hilary Knight,2,Emily Brown,30,Corinne Schroeder,,10 13 14 17 23,Kayla Vespa - Alexandra Labelle - Jaime Bourbonnais - Ella Shelton - Madison Packer,,2 11 21 22 47,Emily Brown - Alina Müller - Hilary Knight - Jessica DiGirolamo - Jamie Lee Rattray,83.0,-14.2,56,2024-03-25,PWHL,2023/2024,Regular Season
-38,8:40,Block,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v4,18,Élizabeth Giguère,,,,,31,Aerin Frankel,,,,,,,-52.0,21.2,56,2024-03-25,PWHL,2023/2024,Regular Season
-39,9:43,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,23,Madison Packer,,,,,31,Aerin Frankel,,,,,,,-70.0,-9.6,56,2024-03-25,PWHL,2023/2024,Regular Season
-40,10:21,Block,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,67,Emma Woods,,,,,31,Aerin Frankel,,,,,,,-64.0,-14.5,56,2024-03-25,PWHL,2023/2024,Regular Season
-41,10:58,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,25,Alex Carpenter,,,,,31,Aerin Frankel,,,,,,,-79.7,3.7,56,2024-03-25,PWHL,2023/2024,Regular Season
-42,11:22,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,19,Paetyn Levis,,,,,31,Aerin Frankel,,,,,,,-46.7,12.5,56,2024-03-25,PWHL,2023/2024,Regular Season
-43,11:50,Penalty,Boston Fleet,Away,New York Sirens,Boston Fleet,2,event,5v5,11,Alina Müller,,,,,,,,,,,,,,,56,2024-03-25,PWHL,2023/2024,Regular Season
-44,12:06,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v4,25,Alex Carpenter,,,,,31,Aerin Frankel,,,,,,,-65.3,-20.7,56,2024-03-25,PWHL,2023/2024,Regular Season
-45,13:05,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v4,14,Jaime Bourbonnais,,,,,31,Aerin Frankel,,,,,,,-77.7,-11.3,56,2024-03-25,PWHL,2023/2024,Regular Season
-46,14:39,Block,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,17,Ella Shelton,,,,,31,Aerin Frankel,,,,,,,-43.7,30.6,56,2024-03-25,PWHL,2023/2024,Regular Season
-47,14:55,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,9,Jessie Eldridge,,,,,31,Aerin Frankel,,,,,,,-49.0,28.1,56,2024-03-25,PWHL,2023/2024,Regular Season
-48,15:05,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,2,event,5v5,21,Hilary Knight,,,,,30,Corinne Schroeder,,,,,,,72.0,-17.6,56,2024-03-25,PWHL,2023/2024,Regular Season
-49,16:50,Block,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,10,Kayla Vespa,,,,,31,Aerin Frankel,,,,,,,-58.0,18.7,56,2024-03-25,PWHL,2023/2024,Regular Season
-50,18:02,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,25,Alex Carpenter,,,,,31,Aerin Frankel,,,,,,,-84.7,-12.8,56,2024-03-25,PWHL,2023/2024,Regular Season
-51,18:24,Block,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,11,Abby Roque,,,,,31,Aerin Frankel,,,,,,,-73.0,-30.6,56,2024-03-25,PWHL,2023/2024,Regular Season
-52,19:21,Penalty,Boston Fleet,Away,New York Sirens,Boston Fleet,2,event,5v5,,,,,,,,,,,,,,,,,56,2024-03-25,PWHL,2023/2024,Regular Season
-53,19:56,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v4,11,Abby Roque,,,,,31,Aerin Frankel,,,,,,,-52.0,26.9,56,2024-03-25,PWHL,2023/2024,Regular Season
-54,0:45,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,4v5,17,Taylor Girard,,,,,30,Corinne Schroeder,,,,,,,66.0,21.5,56,2024-03-25,PWHL,2023/2024,Regular Season
-55,1:13,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v4,27,Jade Downie-Landry,,,,,31,Aerin Frankel,,,,,,,-76.0,-2.5,56,2024-03-25,PWHL,2023/2024,Regular Season
-56,1:23,Block,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,27,Jade Downie-Landry,,,,,31,Aerin Frankel,,,,,,,-41.0,-26.1,56,2024-03-25,PWHL,2023/2024,Regular Season
-57,1:48,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,44,Jill Saulnier,,,,,31,Aerin Frankel,,,,,,,-91.0,-7.9,56,2024-03-25,PWHL,2023/2024,Regular Season
-58,2:01,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,9,Sophie Shirley,,,,,30,Corinne Schroeder,,,,,,,87.3,11.1,56,2024-03-25,PWHL,2023/2024,Regular Season
-59,2:40,Block,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,6,Brooke Hobson,,,,,31,Aerin Frankel,,,,,,,-53.0,-21.2,56,2024-03-25,PWHL,2023/2024,Regular Season
-60,2:40,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,11,Abby Roque,,,,,31,Aerin Frankel,,,,,,,-68.7,-17.0,56,2024-03-25,PWHL,2023/2024,Regular Season
-61,2:42,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,28,Micah Zandee-Hart,,,,,31,Aerin Frankel,,,,,,,-31.3,5.7,56,2024-03-25,PWHL,2023/2024,Regular Season
-62,4:46,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,14,Jaime Bourbonnais,,,,,31,Aerin Frankel,,,,,,,-32.0,-29.7,56,2024-03-25,PWHL,2023/2024,Regular Season
-63,5:17,Penalty,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,19,Gigi Marvin,,,,,,,,,,,,,,,56,2024-03-25,PWHL,2023/2024,Regular Season
-64,5:33,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v4,17,Ella Shelton,,,,,31,Aerin Frankel,,,,,,,-41.0,18.4,56,2024-03-25,PWHL,2023/2024,Regular Season
-65,5:59,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v4,9,Jessie Eldridge,,,,,31,Aerin Frankel,,,,,,,-68.3,-4.0,56,2024-03-25,PWHL,2023/2024,Regular Season
-66,6:23,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v4,14,Jaime Bourbonnais,,,,,31,Aerin Frankel,,,,,,,-71.3,-16.1,56,2024-03-25,PWHL,2023/2024,Regular Season
-67,6:35,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v4,28,Micah Zandee-Hart,,,,,31,Aerin Frankel,,,,,,,-27.7,-5.4,56,2024-03-25,PWHL,2023/2024,Regular Season
-68,7:14,Goal,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v4,27,Jade Downie-Landry,18,Élizabeth Giguère,12,Chloé Aurard,31,Aerin Frankel,,12 18 27 28 67,Chloé Aurard - Élizabeth Giguère - Jade Downie-Landry - Micah Zandee-Hart - Emma Woods,,5 13 20 21,Megan Keller - Kaleigh Fratkin - Hannah Brandt - Hilary Knight,-83.7,6.2,56,2024-03-25,PWHL,2023/2024,Regular Season
-69,7:36,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,7,Sidney Morin,,,,,30,Corinne Schroeder,,,,,,,39.3,31.4,56,2024-03-25,PWHL,2023/2024,Regular Season
-70,7:57,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,9,Sophie Shirley,,,,,30,Corinne Schroeder,,,,,,,78.3,1.4,56,2024-03-25,PWHL,2023/2024,Regular Season
-71,8:10,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,11,Abby Roque,,,,,31,Aerin Frankel,,,,,,,-1.7,-33.7,56,2024-03-25,PWHL,2023/2024,Regular Season
-72,8:26,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,7,Sidney Morin,,,,,30,Corinne Schroeder,,,,,,,41.3,15.0,56,2024-03-25,PWHL,2023/2024,Regular Season
-73,10:06,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,12,Chloé Aurard,,,,,31,Aerin Frankel,,,,,,,-67.3,19.0,56,2024-03-25,PWHL,2023/2024,Regular Season
-74,10:15,Goal,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,9,Sophie Shirley,8,Lexie Adzija,5,Megan Keller,30,Corinne Schroeder,,4 12 18 27 28,Taylor Baker - Chloé Aurard - Élizabeth Giguère - Jade Downie-Landry - Micah Zandee-Hart,,5 8 9 13 88,Megan Keller - Lexie Adzija - Sophie Shirley - Kaleigh Fratkin - Susanna Tapani,63.3,-6.2,56,2024-03-25,PWHL,2023/2024,Regular Season
-75,10:36,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,47,Jamie Lee Rattray,,,,,30,Corinne Schroeder,,,,,,,88.3,-3.1,56,2024-03-25,PWHL,2023/2024,Regular Season
-76,10:40,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,20,Hannah Brandt,,,,,30,Corinne Schroeder,,,,,,,86.3,-4.8,56,2024-03-25,PWHL,2023/2024,Regular Season
-77,11:07,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,22,Jessica DiGirolamo,,,,,30,Corinne Schroeder,,,,,,,36.3,-28.1,56,2024-03-25,PWHL,2023/2024,Regular Season
-78,14:43,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,21,Hilary Knight,,,,,30,Corinne Schroeder,,,,,,,83.0,-9.1,56,2024-03-25,PWHL,2023/2024,Regular Season
-79,14:45,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,20,Hannah Brandt,,,,,30,Corinne Schroeder,,,,,,,79.0,-10.8,56,2024-03-25,PWHL,2023/2024,Regular Season
-80,14:45,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,21,Hilary Knight,,,,,30,Corinne Schroeder,,,,,,,85.3,-0.3,56,2024-03-25,PWHL,2023/2024,Regular Season
-81,14:45,Penalty,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,11,Abby Roque,,,,,,,,,,,,,,,56,2024-03-25,PWHL,2023/2024,Regular Season
-82,14:55,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v4,11,Alina Müller,,,,,30,Corinne Schroeder,,,,,,,33.7,-17.8,56,2024-03-25,PWHL,2023/2024,Regular Season
-83,17:00,Block,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,47,Jamie Lee Rattray,,,,,30,Corinne Schroeder,,,,,,,51.0,21.5,56,2024-03-25,PWHL,2023/2024,Regular Season
-84,17:21,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,18,Élizabeth Giguère,,,,,31,Aerin Frankel,,,,,,,-34.0,-4.8,56,2024-03-25,PWHL,2023/2024,Regular Season
-85,18:52,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,20,Hannah Brandt,,,,,30,Corinne Schroeder,,,,,,,85.3,-21.0,56,2024-03-25,PWHL,2023/2024,Regular Season
-86,19:04,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,11,Alina Müller,,,,,30,Corinne Schroeder,,,,,,,44.3,-22.4,56,2024-03-25,PWHL,2023/2024,Regular Season
-87,19:34,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,47,Jamie Lee Rattray,,,,,30,Corinne Schroeder,,,,,,,82.3,-21.5,56,2024-03-25,PWHL,2023/2024,Regular Season
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,xG,ScoreState,BoxID,game_id,game_date,competition,season,state
+1,2:25,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,11,Abby Roque,,,,,31,Aerin Frankel,,,,,,,90.0,-10.2,0.1500,0,O02,56,2024-03-25,PWHL,2023/2024,Regular Season
+2,6:00,Block,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,9,Jessie Eldridge,,,,,31,Aerin Frankel,,,,,,,68.0,-12.5,,0,O14,56,2024-03-25,PWHL,2023/2024,Regular Season
+3,7:05,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,17,Taylor Girard,,,,,30,Corinne Schroeder,,,,,,,33.0,-28.1,0.0400,0,O24,56,2024-03-25,PWHL,2023/2024,Regular Season
+4,7:18,Penalty,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,19,Gigi Marvin,,,,,,,,,,,,,,,,0,,56,2024-03-25,PWHL,2023/2024,Regular Season
+5,8:03,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v4,17,Ella Shelton,,,,,31,Aerin Frankel,,,,,,,34.7,-13.3,0.0661,0,O25,56,2024-03-25,PWHL,2023/2024,Regular Season
+6,8:40,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v4,25,Alex Carpenter,,,,,31,Aerin Frankel,,,,,,,79.0,-2.0,0.1873,0,O11,56,2024-03-25,PWHL,2023/2024,Regular Season
+7,8:42,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v4,25,Alex Carpenter,,,,,31,Aerin Frankel,,,,,,,75.3,-1.1,0.1873,0,O11,56,2024-03-25,PWHL,2023/2024,Regular Season
+8,8:42,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v4,25,Alex Carpenter,,,,,31,Aerin Frankel,,,,,,,82.0,9.1,0.1099,0,O08,56,2024-03-25,PWHL,2023/2024,Regular Season
+9,8:45,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,4v5,47,Jamie Lee Rattray,,,,,30,Corinne Schroeder,,,,,,,49.3,15.0,0.0661,0,O22,56,2024-03-25,PWHL,2023/2024,Regular Season
+10,8:51,Block,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v4,14,Jaime Bourbonnais,,,,,31,Aerin Frankel,,,,,,,53.0,6.0,,0,O21,56,2024-03-25,PWHL,2023/2024,Regular Season
+11,10:25,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,4,Taylor Baker,,,,,31,Aerin Frankel,,,,,,,65.0,-24.6,0.0371,0,O13,56,2024-03-25,PWHL,2023/2024,Regular Season
+12,11:23,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,20,Hannah Brandt,,,,,30,Corinne Schroeder,,,,,,,43.0,14.2,0.0573,0,O21,56,2024-03-25,PWHL,2023/2024,Regular Season
+13,11:35,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,20,Hannah Brandt,,,,,30,Corinne Schroeder,,,,,,,75.7,-20.4,0.0659,0,O06,56,2024-03-25,PWHL,2023/2024,Regular Season
+14,11:57,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,17,Ella Shelton,,,,,31,Aerin Frankel,,,,,,,29.7,-28.6,0.0400,0,O24,56,2024-03-25,PWHL,2023/2024,Regular Season
+15,12:01,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,21,Hilary Knight,,,,,30,Corinne Schroeder,,,,,,,51.3,-20.7,0.0458,0,O20,56,2024-03-25,PWHL,2023/2024,Regular Season
+16,13:01,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,17,Taylor Girard,,,,,30,Corinne Schroeder,,,,,,,31.7,-21.8,0.0400,0,O24,56,2024-03-25,PWHL,2023/2024,Regular Season
+17,14:15,Block,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,7,Sidney Morin,,,,,30,Corinne Schroeder,,,,,,,54.3,28.1,,0,O23,56,2024-03-25,PWHL,2023/2024,Regular Season
+18,14:21,Block,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,9,Jessie Eldridge,,,,,31,Aerin Frankel,,,,,,,59.3,-30.3,,0,O13,56,2024-03-25,PWHL,2023/2024,Regular Season
+19,14:30,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,9,Sophie Shirley,,,,,30,Corinne Schroeder,,,,,,,60.3,6.8,0.0899,0,O16,56,2024-03-25,PWHL,2023/2024,Regular Season
+20,15:03,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,27,Jade Downie-Landry,,,,,31,Aerin Frankel,,,,,,,74.3,29.7,0.0296,0,O09,56,2024-03-25,PWHL,2023/2024,Regular Season
+21,16:50,Block,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,18,Élizabeth Giguère,,,,,31,Aerin Frankel,,,,,,,60.3,28.9,,0,O17,56,2024-03-25,PWHL,2023/2024,Regular Season
+22,18:08,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,7,Sidney Morin,,,,,30,Corinne Schroeder,,,,,,,50.7,-6.0,0.0573,0,O21,56,2024-03-25,PWHL,2023/2024,Regular Season
+23,18:10,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,19,Gigi Marvin,,,,,30,Corinne Schroeder,,,,,,,68.0,-0.3,0.1041,0,O15,56,2024-03-25,PWHL,2023/2024,Regular Season
+24,18:19,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,47,Jamie Lee Rattray,,,,,30,Corinne Schroeder,,,,,,,64.7,-13.3,0.0785,0,O14,56,2024-03-25,PWHL,2023/2024,Regular Season
+25,18:45,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,7,Sidney Morin,,,,,30,Corinne Schroeder,,,,,,,73.3,8.2,0.1248,0,O11,56,2024-03-25,PWHL,2023/2024,Regular Season
+26,19:06,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,21,Hilary Knight,,,,,30,Corinne Schroeder,,,,,,,59.0,11.9,0.0899,0,O16,56,2024-03-25,PWHL,2023/2024,Regular Season
+27,19:29,Block,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,20,Hannah Brandt,,,,,30,Corinne Schroeder,,,,,,,-63.0,-0.6,,0,D15,56,2024-03-25,PWHL,2023/2024,Regular Season
+28,19:30,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,9,Jessie Eldridge,,,,,31,Aerin Frankel,,,,,,,30.3,34.9,0.0258,0,O26,56,2024-03-25,PWHL,2023/2024,Regular Season
+29,19:57,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,14,Jaime Bourbonnais,,,,,31,Aerin Frankel,,,,,,,81.0,-24.6,0.0177,0,O05,56,2024-03-25,PWHL,2023/2024,Regular Season
+30,0:37,Penalty,Boston Fleet,Away,New York Sirens,Boston Fleet,2,event,5v5,5,Megan Keller,,,,,,,,,,,,,,,,0,,56,2024-03-25,PWHL,2023/2024,Regular Season
+31,1:10,Block,Boston Fleet,Away,New York Sirens,Boston Fleet,2,event,5v5,17,Taylor Girard,,,,,30,Corinne Schroeder,,,,,,,45.7,-22.7,,0,O20,56,2024-03-25,PWHL,2023/2024,Regular Season
+32,2:12,Goal,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v4,27,Jade Downie-Landry,28,Micah Zandee-Hart,12,Chloé Aurard-Bushee,31,Aerin Frankel,,12 18 27 28 67,Chloé Aurard-Bushee - Élizabeth Giguère - Jade Downie-Landry - Micah Zandee-Hart - Emma Woods,,8 13 16 18,Lexie Adzija - Kaleigh Fratkin - Amanda Pelkey - Abby Cook,79.7,-0.3,0.1873,0,O11,56,2024-03-25,PWHL,2023/2024,Regular Season
+33,2:43,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,2,event,5v5,7,Sidney Morin,,,,,30,Corinne Schroeder,,,,,,,33.0,36.5,0.0277,-1,O26,56,2024-03-25,PWHL,2023/2024,Regular Season
+34,3:50,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,44,Jill Saulnier,,,,,31,Aerin Frankel,,,,,,,44.3,-19.6,0.0546,1,O20,56,2024-03-25,PWHL,2023/2024,Regular Season
+35,4:25,Penalty,Boston Fleet,Away,New York Sirens,Boston Fleet,2,event,5v5,16,Amanda Pelkey,,,,,,,,,,,,,,,,-1,,56,2024-03-25,PWHL,2023/2024,Regular Season
+36,5:29,Goal,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v4,18,Élizabeth Giguère,27,Jade Downie-Landry,25,Alex Carpenter,31,Aerin Frankel,,17 18 25 27 67,Ella Shelton - Élizabeth Giguère - Alex Carpenter - Jade Downie-Landry - Emma Woods,,5 13 17 20,Megan Keller - Kaleigh Fratkin - Taylor Girard - Hannah Brandt,80.7,-7.1,0.2170,1,O11,56,2024-03-25,PWHL,2023/2024,Regular Season
+37,6:27,Goal,Boston Fleet,Away,New York Sirens,Boston Fleet,2,event,5v5,11,Alina Müller,21,Hilary Knight,2,Emily Brown,30,Corinne Schroeder,,10 13 14 17 23,Kayla Vespa - Alexandra Labelle - Jaime Bourbonnais - Ella Shelton - Madison Packer,,2 11 21 22 47,Emily Brown - Alina Müller - Hilary Knight - Jessica DiGirolamo - Jamie Lee Rattray,83.0,-14.2,0.0712,-2,O06,56,2024-03-25,PWHL,2023/2024,Regular Season
+38,8:40,Block,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v4,18,Élizabeth Giguère,,,,,31,Aerin Frankel,,,,,,,52.0,-21.2,,1,O20,56,2024-03-25,PWHL,2023/2024,Regular Season
+39,9:43,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,23,Madison Packer,,,,,31,Aerin Frankel,,,,,,,70.0,9.6,0.1061,1,O16,56,2024-03-25,PWHL,2023/2024,Regular Season
+40,10:21,Block,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,67,Emma Woods,,,,,31,Aerin Frankel,,,,,,,64.0,14.5,,1,O16,56,2024-03-25,PWHL,2023/2024,Regular Season
+41,10:58,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,25,Alex Carpenter,,,,,31,Aerin Frankel,,,,,,,79.7,-3.7,0.1463,1,O11,56,2024-03-25,PWHL,2023/2024,Regular Season
+42,11:22,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,19,Paetyn Levis,,,,,31,Aerin Frankel,,,,,,,46.7,-12.5,0.0682,1,O21,56,2024-03-25,PWHL,2023/2024,Regular Season
+43,11:50,Penalty,Boston Fleet,Away,New York Sirens,Boston Fleet,2,event,5v5,11,Alina Müller,,,,,,,,,,,,,,,,-1,,56,2024-03-25,PWHL,2023/2024,Regular Season
+44,12:06,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v4,25,Alex Carpenter,,,,,31,Aerin Frankel,,,,,,,65.3,20.7,0.0766,1,O17,56,2024-03-25,PWHL,2023/2024,Regular Season
+45,13:05,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v4,14,Jaime Bourbonnais,,,,,31,Aerin Frankel,,,,,,,77.7,11.3,0.1292,1,O08,56,2024-03-25,PWHL,2023/2024,Regular Season
+46,14:39,Block,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,17,Ella Shelton,,,,,31,Aerin Frankel,,,,,,,43.7,-30.6,,1,O19,56,2024-03-25,PWHL,2023/2024,Regular Season
+47,14:55,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,9,Jessie Eldridge,,,,,31,Aerin Frankel,,,,,,,49.0,-28.1,0.0380,1,O19,56,2024-03-25,PWHL,2023/2024,Regular Season
+48,15:05,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,2,event,5v5,21,Hilary Knight,,,,,30,Corinne Schroeder,,,,,,,72.0,-17.6,0.0398,-1,O13,56,2024-03-25,PWHL,2023/2024,Regular Season
+49,16:50,Block,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,10,Kayla Vespa,,,,,31,Aerin Frankel,,,,,,,58.0,-18.7,,1,O14,56,2024-03-25,PWHL,2023/2024,Regular Season
+50,18:02,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,25,Alex Carpenter,,,,,31,Aerin Frankel,,,,,,,84.7,12.8,0.0841,1,O08,56,2024-03-25,PWHL,2023/2024,Regular Season
+51,18:24,Block,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,11,Abby Roque,,,,,31,Aerin Frankel,,,,,,,73.0,30.6,,1,O09,56,2024-03-25,PWHL,2023/2024,Regular Season
+52,19:21,Penalty,Boston Fleet,Away,New York Sirens,Boston Fleet,2,event,5v5,,,,,,,,,,,,,,,,,,-1,,56,2024-03-25,PWHL,2023/2024,Regular Season
+53,19:56,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v4,11,Abby Roque,,,,,31,Aerin Frankel,,,,,,,52.0,-26.9,0.0601,1,O19,56,2024-03-25,PWHL,2023/2024,Regular Season
+54,0:45,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,4v5,17,Taylor Girard,,,,,30,Corinne Schroeder,,,,,,,66.0,21.5,0.0747,-1,O17,56,2024-03-25,PWHL,2023/2024,Regular Season
+55,1:13,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v4,27,Jade Downie-Landry,,,,,31,Aerin Frankel,,,,,,,76.0,2.5,0.2170,1,O11,56,2024-03-25,PWHL,2023/2024,Regular Season
+56,1:23,Block,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,27,Jade Downie-Landry,,,,,31,Aerin Frankel,,,,,,,41.0,26.1,,1,O22,56,2024-03-25,PWHL,2023/2024,Regular Season
+57,1:48,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,44,Jill Saulnier,,,,,31,Aerin Frankel,,,,,,,91.0,7.9,0.1751,1,O02,56,2024-03-25,PWHL,2023/2024,Regular Season
+58,2:01,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,9,Sophie Shirley,,,,,30,Corinne Schroeder,,,,,,,87.3,11.1,0.0758,-1,O08,56,2024-03-25,PWHL,2023/2024,Regular Season
+59,2:40,Block,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,6,Brooke Hobson,,,,,31,Aerin Frankel,,,,,,,53.0,21.2,,1,O22,56,2024-03-25,PWHL,2023/2024,Regular Season
+60,2:40,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,11,Abby Roque,,,,,31,Aerin Frankel,,,,,,,68.7,17.0,0.0488,1,O17,56,2024-03-25,PWHL,2023/2024,Regular Season
+61,2:42,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,28,Micah Zandee-Hart,,,,,31,Aerin Frankel,,,,,,,31.3,-5.7,0.0500,1,O25,56,2024-03-25,PWHL,2023/2024,Regular Season
+62,4:46,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,14,Jaime Bourbonnais,,,,,31,Aerin Frankel,,,,,,,32.0,29.7,0.0309,1,O26,56,2024-03-25,PWHL,2023/2024,Regular Season
+63,5:17,Penalty,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,19,Gigi Marvin,,,,,,,,,,,,,,,,-1,,56,2024-03-25,PWHL,2023/2024,Regular Season
+64,5:33,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v4,17,Ella Shelton,,,,,31,Aerin Frankel,,,,,,,41.0,-18.4,0.0854,1,O20,56,2024-03-25,PWHL,2023/2024,Regular Season
+65,5:59,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v4,9,Jessie Eldridge,,,,,31,Aerin Frankel,,,,,,,68.3,4.0,0.1610,1,O16,56,2024-03-25,PWHL,2023/2024,Regular Season
+66,6:23,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v4,14,Jaime Bourbonnais,,,,,31,Aerin Frankel,,,,,,,71.3,16.1,0.0766,1,O17,56,2024-03-25,PWHL,2023/2024,Regular Season
+67,6:35,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v4,28,Micah Zandee-Hart,,,,,31,Aerin Frankel,,,,,,,27.7,5.4,0.0785,1,O25,56,2024-03-25,PWHL,2023/2024,Regular Season
+68,7:14,Goal,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v4,27,Jade Downie-Landry,18,Élizabeth Giguère,12,Chloé Aurard-Bushee,31,Aerin Frankel,,12 18 27 28 67,Chloé Aurard-Bushee - Élizabeth Giguère - Jade Downie-Landry - Micah Zandee-Hart - Emma Woods,,5 13 20 21,Megan Keller - Kaleigh Fratkin - Hannah Brandt - Hilary Knight,83.7,-6.2,0.3423,1,O07,56,2024-03-25,PWHL,2023/2024,Regular Season
+69,7:36,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,7,Sidney Morin,,,,,30,Corinne Schroeder,,,,,,,39.3,31.4,0.0280,-2,O26,56,2024-03-25,PWHL,2023/2024,Regular Season
+70,7:57,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,9,Sophie Shirley,,,,,30,Corinne Schroeder,,,,,,,78.3,1.4,0.1341,-2,O11,56,2024-03-25,PWHL,2023/2024,Regular Season
+71,8:10,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,11,Abby Roque,,,,,31,Aerin Frankel,,,,,,,1.7,33.7,0.0828,2,N03,56,2024-03-25,PWHL,2023/2024,Regular Season
+72,8:26,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,7,Sidney Morin,,,,,30,Corinne Schroeder,,,,,,,41.3,15.0,0.0620,-2,O21,56,2024-03-25,PWHL,2023/2024,Regular Season
+73,10:06,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,12,Chloé Aurard-Bushee,,,,,31,Aerin Frankel,,,,,,,67.3,-19.0,0.0561,2,O13,56,2024-03-25,PWHL,2023/2024,Regular Season
+74,10:15,Goal,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,9,Sophie Shirley,8,Lexie Adzija,5,Megan Keller,30,Corinne Schroeder,,4 12 18 27 28,Taylor Baker - Chloé Aurard-Bushee - Élizabeth Giguère - Jade Downie-Landry - Micah Zandee-Hart,,5 8 9 13 88,Megan Keller - Lexie Adzija - Sophie Shirley - Kaleigh Fratkin - Susanna Tapani,63.3,-6.2,0.0847,-2,O14,56,2024-03-25,PWHL,2023/2024,Regular Season
+75,10:36,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,47,Jamie Lee Rattray,,,,,30,Corinne Schroeder,,,,,,,88.3,-3.1,0.2235,-1,O07,56,2024-03-25,PWHL,2023/2024,Regular Season
+76,10:40,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,20,Hannah Brandt,,,,,30,Corinne Schroeder,,,,,,,86.3,-4.8,0.2235,-1,O07,56,2024-03-25,PWHL,2023/2024,Regular Season
+77,11:07,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,22,Jessica DiGirolamo,,,,,30,Corinne Schroeder,,,,,,,36.3,-28.1,0.0429,-1,O24,56,2024-03-25,PWHL,2023/2024,Regular Season
+78,14:43,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,21,Hilary Knight,,,,,30,Corinne Schroeder,,,,,,,83.0,-9.1,0.0705,-1,O06,56,2024-03-25,PWHL,2023/2024,Regular Season
+79,14:45,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,20,Hannah Brandt,,,,,30,Corinne Schroeder,,,,,,,79.0,-10.8,0.0705,-1,O06,56,2024-03-25,PWHL,2023/2024,Regular Season
+80,14:45,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,21,Hilary Knight,,,,,30,Corinne Schroeder,,,,,,,85.3,-0.3,0.2235,-1,O07,56,2024-03-25,PWHL,2023/2024,Regular Season
+81,14:45,Penalty,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,11,Abby Roque,,,,,,,,,,,,,,,,1,,56,2024-03-25,PWHL,2023/2024,Regular Season
+82,14:55,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v4,11,Alina Müller,,,,,30,Corinne Schroeder,,,,,,,33.7,-17.8,0.0707,-1,O25,56,2024-03-25,PWHL,2023/2024,Regular Season
+83,17:00,Block,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,47,Jamie Lee Rattray,,,,,30,Corinne Schroeder,,,,,,,51.0,21.5,,-1,O22,56,2024-03-25,PWHL,2023/2024,Regular Season
+84,17:21,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,18,Élizabeth Giguère,,,,,31,Aerin Frankel,,,,,,,34.0,4.8,0.0500,1,O25,56,2024-03-25,PWHL,2023/2024,Regular Season
+85,18:52,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,20,Hannah Brandt,,,,,30,Corinne Schroeder,,,,,,,85.3,-21.0,0.0190,-1,O05,56,2024-03-25,PWHL,2023/2024,Regular Season
+86,19:04,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,11,Alina Müller,,,,,30,Corinne Schroeder,,,,,,,44.3,-22.4,0.0491,-1,O20,56,2024-03-25,PWHL,2023/2024,Regular Season
+87,19:34,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,47,Jamie Lee Rattray,,,,,30,Corinne Schroeder,,,,,,,82.3,-21.5,0.0190,-1,O05,56,2024-03-25,PWHL,2023/2024,Regular Season

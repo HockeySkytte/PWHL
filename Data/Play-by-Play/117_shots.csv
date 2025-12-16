@@ -1,96 +1,96 @@
-id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
-1,0:02,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,10,Sarah Fillier,,,,,29,Nicole Hensley,,,,,,,-51.0,-21.5,117,2024-12-22,PWHL,2024/2025,Regular Season
-2,1:32,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,8,Maja Nylen Persson,,,,,29,Nicole Hensley,,,,,,,-32.3,-24.9,117,2024-12-22,PWHL,2024/2025,Regular Season
-3,2:09,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,29,Emmy Fecteau,,,,,29,Nicole Hensley,,,,,,,-48.3,-5.1,117,2024-12-22,PWHL,2024/2025,Regular Season
-4,4:47,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,14,Jaime Bourbonnais,,,,,29,Nicole Hensley,,,,,,,-26.7,-11.1,117,2024-12-22,PWHL,2024/2025,Regular Season
-5,5:09,Goal,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,26,Kendall Coyne Schofield,12,Kelly Pannek,86,Michela Cava,39,Abigail Levy,,9 11 14 19 20,Jessie Eldridge - Abby Roque - Jaime Bourbonnais - Paetyn Levis - Allyson Simpson,,12 19 23 26 86,Kelly Pannek - Maggie Flaherty - Mellissa Channell-Watkins - Kendall Coyne Schofield - Michela Cava,51.0,-21.5,117,2024-12-22,PWHL,2024/2025,Regular Season
-6,6:39,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,27,Taylor Heise,,,,,39,Abigail Levy,,,,,,,63.0,-21.8,117,2024-12-22,PWHL,2024/2025,Regular Season
-7,10:35,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,11,Abby Roque,,,,,29,Nicole Hensley,,,,,,,-73.0,-9.1,117,2024-12-22,PWHL,2024/2025,Regular Season
-8,11:21,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,81,Kayla Vespa,,,,,29,Nicole Hensley,,,,,,,-77.3,6.5,117,2024-12-22,PWHL,2024/2025,Regular Season
-9,12:47,Block,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,26,Kendall Coyne Schofield,,,,,39,Abigail Levy,,,,,,,65.0,6.0,117,2024-12-22,PWHL,2024/2025,Regular Season
-10,13:19,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,13,Elle Hartje,,,,,29,Nicole Hensley,,,,,,,-78.7,-7.9,117,2024-12-22,PWHL,2024/2025,Regular Season
-11,15:28,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,8,Maja Nylen Persson,,,,,29,Nicole Hensley,,,,,,,-39.7,-24.4,117,2024-12-22,PWHL,2024/2025,Regular Season
-12,15:42,Goal,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,26,Kendall Coyne Schofield,,,,,39,Abigail Levy,,10 14 20 25 40,Sarah Fillier - Jaime Bourbonnais - Allyson Simpson - Alex Carpenter - Noora Tulus,,2 9 21 26 86,Lee Stecklein - Mae Batherson - Liz Schepers - Kendall Coyne Schofield - Michela Cava,67.3,-15.0,117,2024-12-22,PWHL,2024/2025,Regular Season
-13,17:51,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,9,Jessie Eldridge,,,,,29,Nicole Hensley,,,,,,,-64.3,-16.1,117,2024-12-22,PWHL,2024/2025,Regular Season
-14,19:22,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,21,Liz Schepers,,,,,39,Abigail Levy,,,,,,,50.7,-28.1,117,2024-12-22,PWHL,2024/2025,Regular Season
-15,19:38,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,19,Paetyn Levis,,,,,29,Nicole Hensley,,,,,,,-59.3,5.4,117,2024-12-22,PWHL,2024/2025,Regular Season
-16,19:55,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,19,Maggie Flaherty,,,,,39,Abigail Levy,,,,,,,31.7,-1.4,117,2024-12-22,PWHL,2024/2025,Regular Season
-17,0:36,Penalty,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,9,Jessie Eldridge,,,,,,,,,,,,,,,117,2024-12-22,PWHL,2024/2025,Regular Season
-18,1:11,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v4,19,Maggie Flaherty,,,,,82,Kayle Osborne,,,,,,,32.0,-28.3,117,2024-12-22,PWHL,2024/2025,Regular Season
-19,2:15,Goal,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v4,27,Taylor Heise,42,Claire Thompson,13,Grace Zumwinkle,82,Kayle Osborne,,11 14 19 20,Abby Roque - Jaime Bourbonnais - Paetyn Levis - Allyson Simpson,,3 13 27 42 77,Brooke McQuigge - Grace Zumwinkle - Taylor Heise - Claire Thompson - Britta Curl-Salemme,66.0,16.1,117,2024-12-22,PWHL,2024/2025,Regular Season
-20,2:33,Block,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,3,Brooke McQuigge,,,,,39,Abigail Levy,,,,,,,39.0,21.0,117,2024-12-22,PWHL,2024/2025,Regular Season
-21,2:57,Goal,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,6,Brooke Hobson,13,Elle Hartje,8,Maja Nylen Persson,29,Nicole Hensley,,6 8 13 15 18,Brooke Hobson - Maja Nylen Persson - Elle Hartje - Gabby Rosenthal - Élizabeth Giguère,,7 19 21 23 41,Claire Butorac - Maggie Flaherty - Liz Schepers - Mellissa Channell-Watkins - Denisa Křížová,-52.7,-5.7,117,2024-12-22,PWHL,2024/2025,Regular Season
-22,3:49,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,27,Taylor Heise,,,,,82,Kayle Osborne,,,,,,,60.3,-4.5,117,2024-12-22,PWHL,2024/2025,Regular Season
-23,3:55,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,40,Noora Tulus,,,,,29,Nicole Hensley,,,,,,,-42.3,-17.0,117,2024-12-22,PWHL,2024/2025,Regular Season
-24,3:58,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,40,Noora Tulus,,,,,29,Nicole Hensley,,,,,,,-64.7,-4.8,117,2024-12-22,PWHL,2024/2025,Regular Season
-25,4:53,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,22,Natalie Buchbinder,,,,,82,Kayle Osborne,,,,,,,55.3,-16.1,117,2024-12-22,PWHL,2024/2025,Regular Season
-26,4:54,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,22,Natalie Buchbinder,,,,,82,Kayle Osborne,,,,,,,61.3,-11.6,117,2024-12-22,PWHL,2024/2025,Regular Season
-27,6:38,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,20,Allyson Simpson,,,,,29,Nicole Hensley,,,,,,,-31.0,28.3,117,2024-12-22,PWHL,2024/2025,Regular Season
-28,7:53,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,20,Allyson Simpson,,,,,29,Nicole Hensley,,,,,,,-34.3,-4.8,117,2024-12-22,PWHL,2024/2025,Regular Season
-29,8:31,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,28,Micah Zandee-Hart,,,,,29,Nicole Hensley,,,,,,,-26.0,23.8,117,2024-12-22,PWHL,2024/2025,Regular Season
-30,8:59,Goal,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,18,Élizabeth Giguère,20,Allyson Simpson,13,Elle Hartje,29,Nicole Hensley,,8 13 14 15 18,Maja Nylen Persson - Elle Hartje - Jaime Bourbonnais - Gabby Rosenthal - Élizabeth Giguère,,2 3 9 13 27,Lee Stecklein - Brooke McQuigge - Mae Batherson - Grace Zumwinkle - Taylor Heise,-67.0,-13.9,117,2024-12-22,PWHL,2024/2025,Regular Season
-31,9:40,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,10,Sarah Fillier,,,,,29,Nicole Hensley,,,,,,,-39.7,5.1,117,2024-12-22,PWHL,2024/2025,Regular Season
-32,9:44,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,10,Sarah Fillier,,,,,29,Nicole Hensley,,,,,,,-44.0,17.0,117,2024-12-22,PWHL,2024/2025,Regular Season
-33,10:12,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,42,Claire Thompson,,,,,82,Kayle Osborne,,,,,,,42.0,-27.2,117,2024-12-22,PWHL,2024/2025,Regular Season
-34,12:04,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,27,Taylor Heise,,,,,82,Kayle Osborne,,,,,,,72.3,17.8,117,2024-12-22,PWHL,2024/2025,Regular Season
-35,12:26,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,27,Jade Downie-Landry,,,,,29,Nicole Hensley,,,,,,,-81.3,-5.7,117,2024-12-22,PWHL,2024/2025,Regular Season
-36,12:32,Penalty,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,27,Jade Downie-Landry,,,,,,,,,,,,,,,117,2024-12-22,PWHL,2024/2025,Regular Season
-37,13:40,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v4,13,Grace Zumwinkle,,,,,82,Kayle Osborne,,,,,,,50.0,15.0,117,2024-12-22,PWHL,2024/2025,Regular Season
-38,13:50,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v4,3,Brooke McQuigge,,,,,82,Kayle Osborne,,,,,,,58.7,15.0,117,2024-12-22,PWHL,2024/2025,Regular Season
-39,15:12,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,28,Micah Zandee-Hart,,,,,29,Nicole Hensley,,,,,,,-48.7,-20.4,117,2024-12-22,PWHL,2024/2025,Regular Season
-40,15:51,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,21,Liz Schepers,,,,,82,Kayle Osborne,,,,,,,77.7,14.7,117,2024-12-22,PWHL,2024/2025,Regular Season
-41,16:25,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,3,Brooke McQuigge,,,,,82,Kayle Osborne,,,,,,,75.3,-20.1,117,2024-12-22,PWHL,2024/2025,Regular Season
-42,17:26,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,20,Allyson Simpson,,,,,29,Nicole Hensley,,,,,,,-27.3,-5.7,117,2024-12-22,PWHL,2024/2025,Regular Season
-43,18:28,Penalty,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,28,Micah Zandee-Hart,,,,,,,,,,,,,,,117,2024-12-22,PWHL,2024/2025,Regular Season
-44,19:52,Block,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,42,Claire Thompson,,,,,39,Abigail Levy,,,,,,,26.3,-2.5,117,2024-12-22,PWHL,2024/2025,Regular Season
-45,0:06,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,28,Micah Zandee-Hart,,,,,29,Nicole Hensley,,,,,,,-31.0,5.4,117,2024-12-22,PWHL,2024/2025,Regular Season
-46,0:10,Penalty,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v4,77,Britta Curl-Salemme,,,,,,,,,,,,,,,117,2024-12-22,PWHL,2024/2025,Regular Season
-47,1:39,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,10,Sarah Fillier,,,,,29,Nicole Hensley,,,,,,,-58.7,18.4,117,2024-12-22,PWHL,2024/2025,Regular Season
-48,1:47,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,10,Sarah Fillier,,,,,29,Nicole Hensley,,,,,,,-69.3,14.5,117,2024-12-22,PWHL,2024/2025,Regular Season
-49,2:51,Penalty,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,41,Denisa Křížová,,,,,,,,,,,,,,,117,2024-12-22,PWHL,2024/2025,Regular Season
-50,4:34,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,8,Maja Nylen Persson,,,,,29,Nicole Hensley,,,,,,,-34.3,4.8,117,2024-12-22,PWHL,2024/2025,Regular Season
-51,4:48,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v4,20,Allyson Simpson,,,,,29,Nicole Hensley,,,,,,,-25.0,-33.1,117,2024-12-22,PWHL,2024/2025,Regular Season
-52,5:28,Block,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,42,Claire Thompson,,,,,82,Kayle Osborne,,,,,,,39.7,-29.7,117,2024-12-22,PWHL,2024/2025,Regular Season
-53,6:36,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,40,Noora Tulus,,,,,29,Nicole Hensley,,,,,,,-57.0,-31.2,117,2024-12-22,PWHL,2024/2025,Regular Season
-54,7:14,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,71,Klára Hymlárová,,,,,82,Kayle Osborne,,,,,,,71.0,13.9,117,2024-12-22,PWHL,2024/2025,Regular Season
-55,7:46,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,9,Mae Batherson,,,,,82,Kayle Osborne,,,,,,,41.3,10.5,117,2024-12-22,PWHL,2024/2025,Regular Season
-56,8:16,Block,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,22,Natalie Buchbinder,,,,,82,Kayle Osborne,,,,,,,36.7,17.3,117,2024-12-22,PWHL,2024/2025,Regular Season
-57,8:24,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,19,Paetyn Levis,,,,,29,Nicole Hensley,,,,,,,-53.3,15.3,117,2024-12-22,PWHL,2024/2025,Regular Season
-58,8:36,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,10,Sarah Fillier,,,,,29,Nicole Hensley,,,,,,,-51.7,-6.0,117,2024-12-22,PWHL,2024/2025,Regular Season
-59,8:55,Goal,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,25,Alex Carpenter,,,,,29,Nicole Hensley,,10 14 20 25 40,Sarah Fillier - Jaime Bourbonnais - Allyson Simpson - Alex Carpenter - Noora Tulus,,12 22 26 42 86,Kelly Pannek - Natalie Buchbinder - Kendall Coyne Schofield - Claire Thompson - Michela Cava,-85.0,16.7,117,2024-12-22,PWHL,2024/2025,Regular Season
-60,9:33,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,18,Élizabeth Giguère,,,,,29,Nicole Hensley,,,,,,,-83.3,-8.5,117,2024-12-22,PWHL,2024/2025,Regular Season
-61,10:04,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,9,Jessie Eldridge,,,,,29,Nicole Hensley,,,,,,,-81.3,5.1,117,2024-12-22,PWHL,2024/2025,Regular Season
-62,10:04,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,12,Chloé Aurard,,,,,29,Nicole Hensley,,,,,,,-84.0,-7.9,117,2024-12-22,PWHL,2024/2025,Regular Season
-63,10:13,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,9,Jessie Eldridge,,,,,29,Nicole Hensley,,,,,,,-84.0,2.5,117,2024-12-22,PWHL,2024/2025,Regular Season
-64,10:48,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,10,Sarah Fillier,,,,,29,Nicole Hensley,,,,,,,-85.0,11.1,117,2024-12-22,PWHL,2024/2025,Regular Season
-65,12:52,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,29,Emmy Fecteau,,,,,29,Nicole Hensley,,,,,,,-63.3,17.6,117,2024-12-22,PWHL,2024/2025,Regular Season
-66,13:22,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,29,Emmy Fecteau,,,,,29,Nicole Hensley,,,,,,,-53.3,-34.0,117,2024-12-22,PWHL,2024/2025,Regular Season
-67,13:28,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,20,Allyson Simpson,,,,,29,Nicole Hensley,,,,,,,-35.3,-29.7,117,2024-12-22,PWHL,2024/2025,Regular Season
-68,14:42,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,15,Gabby Rosenthal,,,,,29,Nicole Hensley,,,,,,,-75.3,-11.6,117,2024-12-22,PWHL,2024/2025,Regular Season
-69,15:17,Block,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,17,Brooke Bryant,,,,,82,Kayle Osborne,,,,,,,49.7,25.5,117,2024-12-22,PWHL,2024/2025,Regular Season
-70,16:08,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,10,Sarah Fillier,,,,,29,Nicole Hensley,,,,,,,-70.0,-12.5,117,2024-12-22,PWHL,2024/2025,Regular Season
-71,16:59,Block,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,3,Brooke McQuigge,,,,,82,Kayle Osborne,,,,,,,34.0,-15.6,117,2024-12-22,PWHL,2024/2025,Regular Season
-72,17:10,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,2,Lee Stecklein,,,,,82,Kayle Osborne,,,,,,,26.7,25.2,117,2024-12-22,PWHL,2024/2025,Regular Season
-73,17:14,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,13,Grace Zumwinkle,,,,,82,Kayle Osborne,,,,,,,35.0,31.4,117,2024-12-22,PWHL,2024/2025,Regular Season
-74,18:17,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,25,Alex Carpenter,,,,,29,Nicole Hensley,,,,,,,-51.0,-24.6,117,2024-12-22,PWHL,2024/2025,Regular Season
-75,18:52,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,77,Britta Curl-Salemme,,,,,82,Kayle Osborne,,,,,,,67.0,-17.8,117,2024-12-22,PWHL,2024/2025,Regular Season
-76,18:57,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,10,Sarah Fillier,,,,,29,Nicole Hensley,,,,,,,-65.0,30.3,117,2024-12-22,PWHL,2024/2025,Regular Season
-77,19:08,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,9,Jessie Eldridge,,,,,29,Nicole Hensley,,,,,,,-72.7,37.1,117,2024-12-22,PWHL,2024/2025,Regular Season
-78,19:22,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,28,Micah Zandee-Hart,,,,,29,Nicole Hensley,,,,,,,-53.0,9.3,117,2024-12-22,PWHL,2024/2025,Regular Season
-79,19:50,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,26,Kendall Coyne Schofield,,,,,82,Kayle Osborne,,,,,,,57.7,-16.7,117,2024-12-22,PWHL,2024/2025,Regular Season
-80,19:56,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,42,Claire Thompson,,,,,82,Kayle Osborne,,,,,,,36.7,-18.4,117,2024-12-22,PWHL,2024/2025,Regular Season
-81,1:42,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,OT1,event,3v3,28,Micah Zandee-Hart,,,,,29,Nicole Hensley,,,,,,,-48.3,22.7,117,2024-12-22,PWHL,2024/2025,Regular Season
-82,2:23,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,OT1,event,3v3,9,Jessie Eldridge,,,,,29,Nicole Hensley,,,,,,,-61.3,-4.5,117,2024-12-22,PWHL,2024/2025,Regular Season
-83,3:30,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,OT1,event,3v3,11,Abby Roque,,,,,29,Nicole Hensley,,,,,,,-72.0,0.8,117,2024-12-22,PWHL,2024/2025,Regular Season
-84,3:42,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,OT1,event,3v3,27,Taylor Heise,,,,,82,Kayle Osborne,,,,,,,77.0,-8.8,117,2024-12-22,PWHL,2024/2025,Regular Season
-85,4:13,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,OT1,event,3v3,9,Jessie Eldridge,,,,,29,Nicole Hensley,,,,,,,-72.3,3.7,117,2024-12-22,PWHL,2024/2025,Regular Season
-86,4:53,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,OT1,event,3v3,10,Sarah Fillier,,,,,29,Nicole Hensley,,,,,,,-57.0,22.4,117,2024-12-22,PWHL,2024/2025,Regular Season
-87,,SO Goal,New York Sirens,Home,New York Sirens,Minnesota Frost,SO,event,1v0,,,,,,,29,Nicole Hensley,,,,,,,,,117,2024-12-22,PWHL,2024/2025,Regular Season
-88,,SO Goal,Minnesota Frost,Away,New York Sirens,Minnesota Frost,SO,event,1v0,,,,,,,82,Kayle Osborne,,,,,,,,,117,2024-12-22,PWHL,2024/2025,Regular Season
-89,,SO Miss,New York Sirens,Home,New York Sirens,Minnesota Frost,SO,event,1v0,10,Sarah Fillier,,,,,29,Nicole Hensley,,,,,,,,,117,2024-12-22,PWHL,2024/2025,Regular Season
-90,,SO Goal,Minnesota Frost,Away,New York Sirens,Minnesota Frost,SO,event,1v0,,,,,,,82,Kayle Osborne,,,,,,,,,117,2024-12-22,PWHL,2024/2025,Regular Season
-91,,SO Goal,New York Sirens,Home,New York Sirens,Minnesota Frost,SO,event,1v0,,,,,,,29,Nicole Hensley,,,,,,,,,117,2024-12-22,PWHL,2024/2025,Regular Season
-92,,SO Miss,Minnesota Frost,Away,New York Sirens,Minnesota Frost,SO,event,1v0,86,Michela Cava,,,,,82,Kayle Osborne,,,,,,,,,117,2024-12-22,PWHL,2024/2025,Regular Season
-93,,SO Miss,New York Sirens,Home,New York Sirens,Minnesota Frost,SO,event,1v0,18,Élizabeth Giguère,,,,,29,Nicole Hensley,,,,,,,,,117,2024-12-22,PWHL,2024/2025,Regular Season
-94,,SO Goal,Minnesota Frost,Away,New York Sirens,Minnesota Frost,SO,event,1v0,,,,,,,82,Kayle Osborne,,,,,,,,,117,2024-12-22,PWHL,2024/2025,Regular Season
-95,,SO Miss,New York Sirens,Home,New York Sirens,Minnesota Frost,SO,event,1v0,11,Abby Roque,,,,,29,Nicole Hensley,,,,,,,,,117,2024-12-22,PWHL,2024/2025,Regular Season
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,xG,ScoreState,BoxID,game_id,game_date,competition,season,state
+1,0:02,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,10,Sarah Fillier,,,,,29,Nicole Hensley,,,,,,,51.0,21.5,0.0386,0,O22,117,2024-12-22,PWHL,2024/2025,Regular Season
+2,1:32,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,8,Maja Nylen Persson,,,,,29,Nicole Hensley,,,,,,,32.3,24.9,0.0258,0,O26,117,2024-12-22,PWHL,2024/2025,Regular Season
+3,2:09,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,29,Emmy Fecteau,,,,,29,Nicole Hensley,,,,,,,48.3,5.1,0.0573,0,O21,117,2024-12-22,PWHL,2024/2025,Regular Season
+4,4:47,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,14,Jaime Bourbonnais,,,,,29,Nicole Hensley,,,,,,,26.7,11.1,0.0420,0,O25,117,2024-12-22,PWHL,2024/2025,Regular Season
+5,5:09,Goal,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,26,Kendall Coyne Schofield,12,Kelly Pannek,86,Michela Cava,39,Abbey Levy,,9 11 14 19 20,Jessie Eldridge - Abby Roque - Jaime Bourbonnais - Paetyn Levis - Allyson Simpson,,12 19 23 26 86,Kelly Pannek - Maggie Flaherty - Mellissa Channell-Watkins - Kendall Coyne Schofield - Michela Cava,51.0,-21.5,0.0458,0,O20,117,2024-12-22,PWHL,2024/2025,Regular Season
+6,6:39,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,27,Taylor Heise,,,,,39,Abbey Levy,,,,,,,63.0,-21.8,0.0443,1,O13,117,2024-12-22,PWHL,2024/2025,Regular Season
+7,10:35,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,11,Abby Roque,,,,,29,Nicole Hensley,,,,,,,73.0,9.1,0.1328,-1,O11,117,2024-12-22,PWHL,2024/2025,Regular Season
+8,11:21,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,81,Kayla Vespa,,,,,29,Nicole Hensley,,,,,,,77.3,-6.5,0.1328,-1,O11,117,2024-12-22,PWHL,2024/2025,Regular Season
+9,12:47,Block,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,26,Kendall Coyne Schofield,,,,,39,Abbey Levy,,,,,,,65.0,6.0,,1,O16,117,2024-12-22,PWHL,2024/2025,Regular Season
+10,13:19,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,13,Elle Hartje,,,,,29,Nicole Hensley,,,,,,,78.7,7.9,,-1,O11,117,2024-12-22,PWHL,2024/2025,Regular Season
+11,15:28,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,8,Maja Nylen Persson,,,,,29,Nicole Hensley,,,,,,,39.7,24.4,,-1,O26,117,2024-12-22,PWHL,2024/2025,Regular Season
+12,15:42,Goal,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,26,Kendall Coyne Schofield,,,,,39,Abbey Levy,,10 14 20 25 40,Sarah Fillier - Jaime Bourbonnais - Allyson Simpson - Alex Carpenter - Noora Tulus,,2 9 21 26 86,Lee Stecklein - Mae Batherson - Liz Schepers - Kendall Coyne Schofield - Michela Cava,67.3,-15.0,0.0443,1,O13,117,2024-12-22,PWHL,2024/2025,Regular Season
+13,17:51,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,9,Jessie Eldridge,,,,,29,Nicole Hensley,,,,,,,64.3,16.1,0.0969,-2,O16,117,2024-12-22,PWHL,2024/2025,Regular Season
+14,19:22,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,21,Liz Schepers,,,,,39,Abbey Levy,,,,,,,50.7,-28.1,0.0483,2,O19,117,2024-12-22,PWHL,2024/2025,Regular Season
+15,19:38,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,19,Paetyn Levis,,,,,29,Nicole Hensley,,,,,,,59.3,-5.4,,-2,O15,117,2024-12-22,PWHL,2024/2025,Regular Season
+16,19:55,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,19,Maggie Flaherty,,,,,39,Abbey Levy,,,,,,,31.7,-1.4,0.0633,2,O25,117,2024-12-22,PWHL,2024/2025,Regular Season
+17,0:36,Penalty,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,9,Jessie Eldridge,,,,,,,,,,,,,,,,-2,,117,2024-12-22,PWHL,2024/2025,Regular Season
+18,1:11,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v4,19,Maggie Flaherty,,,,,82,Kayle Osborne,,,,,,,32.0,-28.3,0.0942,2,O24,117,2024-12-22,PWHL,2024/2025,Regular Season
+19,2:15,Goal,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v4,27,Taylor Heise,42,Claire Thompson,13,Grace Zumwinkle,82,Kayle Osborne,,11 14 19 20,Abby Roque - Jaime Bourbonnais - Paetyn Levis - Allyson Simpson,,3 13 27 42 77,Brooke McQuigge - Grace Zumwinkle - Taylor Heise - Claire Thompson - Britta Curl-Salemme,66.0,16.1,0.0962,2,O17,117,2024-12-22,PWHL,2024/2025,Regular Season
+20,2:33,Block,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,3,Brooke McQuigge,,,,,39,Abbey Levy,,,,,,,39.0,21.0,,3,O26,117,2024-12-22,PWHL,2024/2025,Regular Season
+21,2:57,Goal,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,6,Brooke Hobson,13,Elle Hartje,8,Maja Nylen Persson,29,Nicole Hensley,,6 8 13 15 18,Brooke Hobson - Maja Nylen Persson - Elle Hartje - Gabby Rosenthal - Élizabeth Giguère,,7 19 21 23 41,Claire Butorac - Maggie Flaherty - Liz Schepers - Mellissa Channell-Watkins - Denisa Křížová,52.7,5.7,0.0620,-3,O21,117,2024-12-22,PWHL,2024/2025,Regular Season
+22,3:49,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,27,Taylor Heise,,,,,82,Kayle Osborne,,,,,,,60.3,-4.5,0.1520,2,O15,117,2024-12-22,PWHL,2024/2025,Regular Season
+23,3:55,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,40,Noora Tulus,,,,,29,Nicole Hensley,,,,,,,42.3,17.0,0.0418,-2,O22,117,2024-12-22,PWHL,2024/2025,Regular Season
+24,3:58,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,40,Noora Tulus,,,,,29,Nicole Hensley,,,,,,,64.7,4.8,0.0969,-2,O16,117,2024-12-22,PWHL,2024/2025,Regular Season
+25,4:53,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,22,Natalie Buchbinder,,,,,82,Kayle Osborne,,,,,,,55.3,-16.1,0.0690,2,O20,117,2024-12-22,PWHL,2024/2025,Regular Season
+26,4:54,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,22,Natalie Buchbinder,,,,,82,Kayle Osborne,,,,,,,61.3,-11.6,0.1161,2,O14,117,2024-12-22,PWHL,2024/2025,Regular Season
+27,6:38,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,20,Allyson Simpson,,,,,29,Nicole Hensley,,,,,,,31.0,-28.3,0.0433,-2,O24,117,2024-12-22,PWHL,2024/2025,Regular Season
+28,7:53,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,20,Allyson Simpson,,,,,29,Nicole Hensley,,,,,,,34.3,4.8,0.0454,-2,O25,117,2024-12-22,PWHL,2024/2025,Regular Season
+29,8:31,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,28,Micah Zandee-Hart,,,,,29,Nicole Hensley,,,,,,,26.0,-23.8,,-2,O24,117,2024-12-22,PWHL,2024/2025,Regular Season
+30,8:59,Goal,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,18,Élizabeth Giguère,20,Allyson Simpson,13,Elle Hartje,29,Nicole Hensley,,8 13 14 15 18,Maja Nylen Persson - Elle Hartje - Jaime Bourbonnais - Gabby Rosenthal - Élizabeth Giguère,,2 3 9 13 27,Lee Stecklein - Brooke McQuigge - Mae Batherson - Grace Zumwinkle - Taylor Heise,67.0,13.9,0.0969,-2,O16,117,2024-12-22,PWHL,2024/2025,Regular Season
+31,9:40,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,10,Sarah Fillier,,,,,29,Nicole Hensley,,,,,,,39.7,-5.1,,-1,O25,117,2024-12-22,PWHL,2024/2025,Regular Season
+32,9:44,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,10,Sarah Fillier,,,,,29,Nicole Hensley,,,,,,,44.0,-17.0,,-1,O20,117,2024-12-22,PWHL,2024/2025,Regular Season
+33,10:12,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,42,Claire Thompson,,,,,82,Kayle Osborne,,,,,,,42.0,-27.2,0.0546,1,O20,117,2024-12-22,PWHL,2024/2025,Regular Season
+34,12:04,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,27,Taylor Heise,,,,,82,Kayle Osborne,,,,,,,72.3,17.8,0.0488,1,O17,117,2024-12-22,PWHL,2024/2025,Regular Season
+35,12:26,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,27,Jade Downie-Landry,,,,,29,Nicole Hensley,,,,,,,81.3,5.7,0.1328,-1,O11,117,2024-12-22,PWHL,2024/2025,Regular Season
+36,12:32,Penalty,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,27,Jade Downie-Landry,,,,,,,,,,,,,,,,-1,,117,2024-12-22,PWHL,2024/2025,Regular Season
+37,13:40,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v4,13,Grace Zumwinkle,,,,,82,Kayle Osborne,,,,,,,50.0,15.0,0.0724,1,O22,117,2024-12-22,PWHL,2024/2025,Regular Season
+38,13:50,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v4,3,Brooke McQuigge,,,,,82,Kayle Osborne,,,,,,,58.7,15.0,0.1610,1,O16,117,2024-12-22,PWHL,2024/2025,Regular Season
+39,15:12,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,28,Micah Zandee-Hart,,,,,29,Nicole Hensley,,,,,,,48.7,20.4,0.0414,-1,O22,117,2024-12-22,PWHL,2024/2025,Regular Season
+40,15:51,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,21,Liz Schepers,,,,,82,Kayle Osborne,,,,,,,77.7,14.7,0.0841,1,O08,117,2024-12-22,PWHL,2024/2025,Regular Season
+41,16:25,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,3,Brooke McQuigge,,,,,82,Kayle Osborne,,,,,,,75.3,-20.1,0.0782,1,O06,117,2024-12-22,PWHL,2024/2025,Regular Season
+42,17:26,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,20,Allyson Simpson,,,,,29,Nicole Hensley,,,,,,,27.3,5.7,,-1,O25,117,2024-12-22,PWHL,2024/2025,Regular Season
+43,18:28,Penalty,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,28,Micah Zandee-Hart,,,,,,,,,,,,,,,,-1,,117,2024-12-22,PWHL,2024/2025,Regular Season
+44,19:52,Block,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,42,Claire Thompson,,,,,39,Abbey Levy,,,,,,,26.3,-2.5,,1,O25,117,2024-12-22,PWHL,2024/2025,Regular Season
+45,0:06,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,28,Micah Zandee-Hart,,,,,29,Nicole Hensley,,,,,,,31.0,-5.4,,-1,O25,117,2024-12-22,PWHL,2024/2025,Regular Season
+46,0:10,Penalty,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v4,77,Britta Curl-Salemme,,,,,,,,,,,,,,,,1,,117,2024-12-22,PWHL,2024/2025,Regular Season
+47,1:39,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,10,Sarah Fillier,,,,,29,Nicole Hensley,,,,,,,58.7,-18.4,,-1,O14,117,2024-12-22,PWHL,2024/2025,Regular Season
+48,1:47,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,10,Sarah Fillier,,,,,29,Nicole Hensley,,,,,,,69.3,-14.5,,-1,O13,117,2024-12-22,PWHL,2024/2025,Regular Season
+49,2:51,Penalty,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,41,Denisa Křížová,,,,,,,,,,,,,,,,1,,117,2024-12-22,PWHL,2024/2025,Regular Season
+50,4:34,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,8,Maja Nylen Persson,,,,,29,Nicole Hensley,,,,,,,34.3,-4.8,,-1,O25,117,2024-12-22,PWHL,2024/2025,Regular Season
+51,4:48,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v4,20,Allyson Simpson,,,,,29,Nicole Hensley,,,,,,,25.0,33.1,0.0441,-1,O26,117,2024-12-22,PWHL,2024/2025,Regular Season
+52,5:28,Block,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,42,Claire Thompson,,,,,82,Kayle Osborne,,,,,,,39.7,-29.7,,1,O24,117,2024-12-22,PWHL,2024/2025,Regular Season
+53,6:36,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,40,Noora Tulus,,,,,29,Nicole Hensley,,,,,,,57.0,31.2,0.0438,-1,O17,117,2024-12-22,PWHL,2024/2025,Regular Season
+54,7:14,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,71,Klára Hymlárová,,,,,82,Kayle Osborne,,,,,,,71.0,13.9,0.0488,1,O17,117,2024-12-22,PWHL,2024/2025,Regular Season
+55,7:46,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,9,Mae Batherson,,,,,82,Kayle Osborne,,,,,,,41.3,10.5,0.0682,1,O21,117,2024-12-22,PWHL,2024/2025,Regular Season
+56,8:16,Block,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,22,Natalie Buchbinder,,,,,82,Kayle Osborne,,,,,,,36.7,17.3,,1,O25,117,2024-12-22,PWHL,2024/2025,Regular Season
+57,8:24,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,19,Paetyn Levis,,,,,29,Nicole Hensley,,,,,,,53.3,-15.3,,-1,O20,117,2024-12-22,PWHL,2024/2025,Regular Season
+58,8:36,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,10,Sarah Fillier,,,,,29,Nicole Hensley,,,,,,,51.7,6.0,0.0614,-1,O21,117,2024-12-22,PWHL,2024/2025,Regular Season
+59,8:55,Goal,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,25,Alex Carpenter,,,,,29,Nicole Hensley,,10 14 20 25 40,Sarah Fillier - Jaime Bourbonnais - Allyson Simpson - Alex Carpenter - Noora Tulus,,12 22 26 42 86,Kelly Pannek - Natalie Buchbinder - Kendall Coyne Schofield - Claire Thompson - Michela Cava,85.0,-16.7,0.0705,-1,O06,117,2024-12-22,PWHL,2024/2025,Regular Season
+60,9:33,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,18,Élizabeth Giguère,,,,,29,Nicole Hensley,,,,,,,83.3,8.5,0.0709,0,O08,117,2024-12-22,PWHL,2024/2025,Regular Season
+61,10:04,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,9,Jessie Eldridge,,,,,29,Nicole Hensley,,,,,,,81.3,-5.1,0.1248,0,O11,117,2024-12-22,PWHL,2024/2025,Regular Season
+62,10:04,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,12,Chloé Aurard-Bushee,,,,,29,Nicole Hensley,,,,,,,84.0,7.9,0.0709,0,O08,117,2024-12-22,PWHL,2024/2025,Regular Season
+63,10:13,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,9,Jessie Eldridge,,,,,29,Nicole Hensley,,,,,,,84.0,-2.5,0.2112,0,O07,117,2024-12-22,PWHL,2024/2025,Regular Season
+64,10:48,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,10,Sarah Fillier,,,,,29,Nicole Hensley,,,,,,,85.0,-11.1,0.0659,0,O06,117,2024-12-22,PWHL,2024/2025,Regular Season
+65,12:52,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,29,Emmy Fecteau,,,,,29,Nicole Hensley,,,,,,,63.3,-17.6,,0,O13,117,2024-12-22,PWHL,2024/2025,Regular Season
+66,13:22,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,29,Emmy Fecteau,,,,,29,Nicole Hensley,,,,,,,53.3,34.0,0.0152,0,O23,117,2024-12-22,PWHL,2024/2025,Regular Season
+67,13:28,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,20,Allyson Simpson,,,,,29,Nicole Hensley,,,,,,,35.3,29.7,0.0258,0,O26,117,2024-12-22,PWHL,2024/2025,Regular Season
+68,14:42,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,15,Gabby Rosenthal,,,,,29,Nicole Hensley,,,,,,,75.3,11.6,0.0709,0,O08,117,2024-12-22,PWHL,2024/2025,Regular Season
+69,15:17,Block,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,17,Brooke Bryant,,,,,82,Kayle Osborne,,,,,,,49.7,25.5,,0,O23,117,2024-12-22,PWHL,2024/2025,Regular Season
+70,16:08,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,10,Sarah Fillier,,,,,29,Nicole Hensley,,,,,,,70.0,12.5,0.0899,0,O16,117,2024-12-22,PWHL,2024/2025,Regular Season
+71,16:59,Block,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,3,Brooke McQuigge,,,,,82,Kayle Osborne,,,,,,,34.0,-15.6,,0,O25,117,2024-12-22,PWHL,2024/2025,Regular Season
+72,17:10,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,2,Lee Stecklein,,,,,82,Kayle Osborne,,,,,,,26.7,25.2,0.0258,0,O26,117,2024-12-22,PWHL,2024/2025,Regular Season
+73,17:14,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,13,Grace Zumwinkle,,,,,82,Kayle Osborne,,,,,,,35.0,31.4,0.0258,0,O26,117,2024-12-22,PWHL,2024/2025,Regular Season
+74,18:17,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,25,Alex Carpenter,,,,,29,Nicole Hensley,,,,,,,51.0,24.6,,0,O23,117,2024-12-22,PWHL,2024/2025,Regular Season
+75,18:52,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,77,Britta Curl-Salemme,,,,,82,Kayle Osborne,,,,,,,67.0,-17.8,0.0371,0,O13,117,2024-12-22,PWHL,2024/2025,Regular Season
+76,18:57,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,10,Sarah Fillier,,,,,29,Nicole Hensley,,,,,,,65.0,-30.3,0.0138,0,O12,117,2024-12-22,PWHL,2024/2025,Regular Season
+77,19:08,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,9,Jessie Eldridge,,,,,29,Nicole Hensley,,,,,,,72.7,-37.1,0.0191,0,O04,117,2024-12-22,PWHL,2024/2025,Regular Season
+78,19:22,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,28,Micah Zandee-Hart,,,,,29,Nicole Hensley,,,,,,,53.0,-9.3,0.0573,0,O21,117,2024-12-22,PWHL,2024/2025,Regular Season
+79,19:50,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,26,Kendall Coyne Schofield,,,,,82,Kayle Osborne,,,,,,,57.7,-16.7,0.0785,0,O14,117,2024-12-22,PWHL,2024/2025,Regular Season
+80,19:56,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,42,Claire Thompson,,,,,82,Kayle Osborne,,,,,,,36.7,-18.4,0.0400,0,O24,117,2024-12-22,PWHL,2024/2025,Regular Season
+81,1:42,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,OT1,event,3v3,28,Micah Zandee-Hart,,,,,29,Nicole Hensley,,,,,,,48.3,-22.7,0.0458,0,O20,117,2024-12-22,PWHL,2024/2025,Regular Season
+82,2:23,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,OT1,event,3v3,9,Jessie Eldridge,,,,,29,Nicole Hensley,,,,,,,61.3,4.5,0.1041,0,O15,117,2024-12-22,PWHL,2024/2025,Regular Season
+83,3:30,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,OT1,event,3v3,11,Abby Roque,,,,,29,Nicole Hensley,,,,,,,72.0,-0.8,0.0785,0,O14,117,2024-12-22,PWHL,2024/2025,Regular Season
+84,3:42,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,OT1,event,3v3,27,Taylor Heise,,,,,82,Kayle Osborne,,,,,,,77.0,-8.8,0.1248,0,O11,117,2024-12-22,PWHL,2024/2025,Regular Season
+85,4:13,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,OT1,event,3v3,9,Jessie Eldridge,,,,,29,Nicole Hensley,,,,,,,72.3,-3.7,0.0785,0,O14,117,2024-12-22,PWHL,2024/2025,Regular Season
+86,4:53,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,OT1,event,3v3,10,Sarah Fillier,,,,,29,Nicole Hensley,,,,,,,57.0,-22.4,0.0371,0,O13,117,2024-12-22,PWHL,2024/2025,Regular Season
+87,,SO Goal,New York Sirens,Home,New York Sirens,Minnesota Frost,SO,event,1v0,,,,,,,29,Nicole Hensley,,,,,,,,,,0,,117,2024-12-22,PWHL,2024/2025,Regular Season
+88,,SO Goal,Minnesota Frost,Away,New York Sirens,Minnesota Frost,SO,event,1v0,,,,,,,82,Kayle Osborne,,,,,,,,,,0,,117,2024-12-22,PWHL,2024/2025,Regular Season
+89,,SO Miss,New York Sirens,Home,New York Sirens,Minnesota Frost,SO,event,1v0,10,Sarah Fillier,,,,,29,Nicole Hensley,,,,,,,,,,0,,117,2024-12-22,PWHL,2024/2025,Regular Season
+90,,SO Goal,Minnesota Frost,Away,New York Sirens,Minnesota Frost,SO,event,1v0,,,,,,,82,Kayle Osborne,,,,,,,,,,0,,117,2024-12-22,PWHL,2024/2025,Regular Season
+91,,SO Goal,New York Sirens,Home,New York Sirens,Minnesota Frost,SO,event,1v0,,,,,,,29,Nicole Hensley,,,,,,,,,,0,,117,2024-12-22,PWHL,2024/2025,Regular Season
+92,,SO Miss,Minnesota Frost,Away,New York Sirens,Minnesota Frost,SO,event,1v0,86,Michela Cava,,,,,82,Kayle Osborne,,,,,,,,,,0,,117,2024-12-22,PWHL,2024/2025,Regular Season
+93,,SO Miss,New York Sirens,Home,New York Sirens,Minnesota Frost,SO,event,1v0,18,Élizabeth Giguère,,,,,29,Nicole Hensley,,,,,,,,,,0,,117,2024-12-22,PWHL,2024/2025,Regular Season
+94,,SO Goal,Minnesota Frost,Away,New York Sirens,Minnesota Frost,SO,event,1v0,,,,,,,82,Kayle Osborne,,,,,,,,,,0,,117,2024-12-22,PWHL,2024/2025,Regular Season
+95,,SO Miss,New York Sirens,Home,New York Sirens,Minnesota Frost,SO,event,1v0,11,Abby Roque,,,,,29,Nicole Hensley,,,,,,,,,,0,,117,2024-12-22,PWHL,2024/2025,Regular Season

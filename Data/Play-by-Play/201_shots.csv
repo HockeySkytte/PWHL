@@ -1,59 +1,59 @@
-id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
-1,0:16,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v5,3,Cayla Barnes,,,,,33,Gwyneth Philips,,,,,,,71.0,34.3,201,2025-05-16,PWHL,2024/2025,Playoffs
-2,1:59,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,37,Rebecca Leslie,,,,,35,Ann-Renée Desbiens,,,,,,,-84.7,7.1,201,2025-05-16,PWHL,2024/2025,Playoffs
-3,2:00,Goal,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,37,Rebecca Leslie,94,Anna Meixner,,,35,Ann-Renée Desbiens,,3 27 37 88 94,Zoe Boyd - Shiann Darkangelo - Rebecca Leslie - Ronja Savolainen - Anna Meixner,,9 12 21 24 44,Kati Tabin - Jenn Gardiner - Maureen Murphy - Abby Boreen - Amanda Boulier,-80.0,-4.2,201,2025-05-16,PWHL,2024/2025,Playoffs
-4,3:28,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,10,Alexa Vasko,,,,,35,Ann-Renée Desbiens,,,,,,,-63.0,20.4,201,2025-05-16,PWHL,2024/2025,Playoffs
-5,6:55,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,12,Victoria Bach,,,,,35,Ann-Renée Desbiens,,,,,,,-59.0,23.8,201,2025-05-16,PWHL,2024/2025,Playoffs
-6,7:33,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,94,Anna Meixner,,,,,35,Ann-Renée Desbiens,,,,,,,-79.0,5.7,201,2025-05-16,PWHL,2024/2025,Playoffs
-7,9:15,Block,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v5,44,Amanda Boulier,,,,,33,Gwyneth Philips,,,,,,,51.7,26.4,201,2025-05-16,PWHL,2024/2025,Playoffs
-8,10:29,Block,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v5,24,Abby Boreen,,,,,33,Gwyneth Philips,,,,,,,81.7,11.1,201,2025-05-16,PWHL,2024/2025,Playoffs
-9,10:40,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,94,Anna Meixner,,,,,35,Ann-Renée Desbiens,,,,,,,-77.3,17.6,201,2025-05-16,PWHL,2024/2025,Playoffs
-10,12:05,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,26,Emily Clark,,,,,35,Ann-Renée Desbiens,,,,,,,-61.3,9.3,201,2025-05-16,PWHL,2024/2025,Playoffs
-11,14:38,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v5,25,Lina Ljungblom,,,,,33,Gwyneth Philips,,,,,,,81.0,0.6,201,2025-05-16,PWHL,2024/2025,Playoffs
-12,14:55,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v5,29,Marie-Philip Poulin,,,,,33,Gwyneth Philips,,,,,,,75.0,20.7,201,2025-05-16,PWHL,2024/2025,Playoffs
-13,15:26,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,26,Emily Clark,,,,,35,Ann-Renée Desbiens,,,,,,,-73.3,23.0,201,2025-05-16,PWHL,2024/2025,Playoffs
-14,15:55,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,6,Stephanie Markowski,,,,,35,Ann-Renée Desbiens,,,,,,,-59.7,-17.8,201,2025-05-16,PWHL,2024/2025,Playoffs
-15,16:58,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v5,25,Lina Ljungblom,,,,,33,Gwyneth Philips,,,,,,,79.0,5.1,201,2025-05-16,PWHL,2024/2025,Playoffs
-16,17:42,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v5,5,Anna Wilgren,,,,,33,Gwyneth Philips,,,,,,,9.3,-33.1,201,2025-05-16,PWHL,2024/2025,Playoffs
-17,18:45,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,27,Shiann Darkangelo,,,,,35,Ann-Renée Desbiens,,,,,,,-40.0,-24.9,201,2025-05-16,PWHL,2024/2025,Playoffs
-18,19:08,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,88,Ronja Savolainen,,,,,35,Ann-Renée Desbiens,,,,,,,-39.3,16.7,201,2025-05-16,PWHL,2024/2025,Playoffs
-19,19:56,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v5,23,Erin Ambrose,,,,,33,Gwyneth Philips,,,,,,,49.3,31.4,201,2025-05-16,PWHL,2024/2025,Playoffs
-20,20:00,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v5,7,Laura Stacey,,,,,33,Gwyneth Philips,,,,,,,84.7,34.9,201,2025-05-16,PWHL,2024/2025,Playoffs
-21,0:28,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,28,Catherine Dubois,,,,,33,Gwyneth Philips,,,,,,,73.0,14.2,201,2025-05-16,PWHL,2024/2025,Playoffs
-22,0:41,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,25,Lina Ljungblom,,,,,33,Gwyneth Philips,,,,,,,69.3,-31.7,201,2025-05-16,PWHL,2024/2025,Playoffs
-23,0:55,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,43,Kristin O'Neill,,,,,33,Gwyneth Philips,,,,,,,56.0,3.1,201,2025-05-16,PWHL,2024/2025,Playoffs
-24,1:30,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,27,Shiann Darkangelo,,,,,35,Ann-Renée Desbiens,,,,,,,-47.0,-18.7,201,2025-05-16,PWHL,2024/2025,Playoffs
-25,3:06,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,13,Alexandra Labelle,,,,,33,Gwyneth Philips,,,,,,,55.0,22.4,201,2025-05-16,PWHL,2024/2025,Playoffs
-26,4:05,Penalty,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,43,Kristin O'Neill,,,,,,,,,,,,,,,201,2025-05-16,PWHL,2024/2025,Playoffs
-27,4:35,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,26,Emily Clark,,,,,35,Ann-Renée Desbiens,,,,,,,-46.3,-0.8,201,2025-05-16,PWHL,2024/2025,Playoffs
-28,5:51,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v4,13,Tereza Vanišová,,,,,35,Ann-Renée Desbiens,,,,,,,-51.7,-28.3,201,2025-05-16,PWHL,2024/2025,Playoffs
-29,6:11,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,27,Shiann Darkangelo,,,,,35,Ann-Renée Desbiens,,,,,,,-81.0,4.2,201,2025-05-16,PWHL,2024/2025,Playoffs
-30,9:22,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,2,Aneta Tejralová,,,,,35,Ann-Renée Desbiens,,,,,,,-37.0,6.0,201,2025-05-16,PWHL,2024/2025,Playoffs
-31,9:38,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,29,Marie-Philip Poulin,,,,,33,Gwyneth Philips,,,,,,,29.0,-17.8,201,2025-05-16,PWHL,2024/2025,Playoffs
-32,9:55,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,21,Ashton Bell,,,,,35,Ann-Renée Desbiens,,,,,,,-79.0,-6.8,201,2025-05-16,PWHL,2024/2025,Playoffs
-33,10:27,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,26,Emily Clark,,,,,35,Ann-Renée Desbiens,,,,,,,-75.0,-5.7,201,2025-05-16,PWHL,2024/2025,Playoffs
-34,11:34,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,13,Tereza Vanišová,,,,,35,Ann-Renée Desbiens,,,,,,,-76.3,-2.0,201,2025-05-16,PWHL,2024/2025,Playoffs
-35,11:40,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,19,Brianne Jenner,,,,,35,Ann-Renée Desbiens,,,,,,,-78.3,2.5,201,2025-05-16,PWHL,2024/2025,Playoffs
-36,11:57,Block,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,7,Laura Stacey,,,,,33,Gwyneth Philips,,,,,,,61.3,-24.4,201,2025-05-16,PWHL,2024/2025,Playoffs
-37,14:34,Penalty,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,26,Emily Clark,,,,,,,,,,,,,,,201,2025-05-16,PWHL,2024/2025,Playoffs
-38,14:50,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v4,7,Laura Stacey,,,,,33,Gwyneth Philips,,,,,,,57.0,-25.8,201,2025-05-16,PWHL,2024/2025,Playoffs
-39,15:43,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v4,28,Catherine Dubois,,,,,33,Gwyneth Philips,,,,,,,48.3,6.8,201,2025-05-16,PWHL,2024/2025,Playoffs
-40,16:03,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v4,29,Marie-Philip Poulin,,,,,33,Gwyneth Philips,,,,,,,61.0,-2.8,201,2025-05-16,PWHL,2024/2025,Playoffs
-41,17:25,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,27,Shiann Darkangelo,,,,,35,Ann-Renée Desbiens,,,,,,,-73.3,-8.5,201,2025-05-16,PWHL,2024/2025,Playoffs
-42,18:09,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,94,Anna Meixner,,,,,35,Ann-Renée Desbiens,,,,,,,-83.0,-9.6,201,2025-05-16,PWHL,2024/2025,Playoffs
-43,19:08,Block,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,12,Jenn Gardiner,,,,,33,Gwyneth Philips,,,,,,,61.3,7.9,201,2025-05-16,PWHL,2024/2025,Playoffs
-44,0:27,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,23,Jocelyne Larocque,,,,,35,Ann-Renée Desbiens,,,,,,,-32.3,24.9,201,2025-05-16,PWHL,2024/2025,Playoffs
-45,0:31,Penalty,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v5,,,,,,,,,,,,,,,,,201,2025-05-16,PWHL,2024/2025,Playoffs
-46,0:31,Goal,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,26,Emily Clark,17,Gabbie Hughes,,,35,Ann-Renée Desbiens,,17 18 21 23 26,Gabbie Hughes - Mannon McMahon - Ashton Bell - Jocelyne Larocque - Emily Clark,,3 5 7 25 29,Cayla Barnes - Anna Wilgren - Laura Stacey - Lina Ljungblom - Marie-Philip Poulin,-85.0,-2.5,201,2025-05-16,PWHL,2024/2025,Playoffs
-47,1:26,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v4,27,Shiann Darkangelo,,,,,35,Ann-Renée Desbiens,,,,,,,-77.0,6.0,201,2025-05-16,PWHL,2024/2025,Playoffs
-48,2:15,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,4v5,29,Marie-Philip Poulin,,,,,33,Gwyneth Philips,,,,,,,80.7,11.6,201,2025-05-16,PWHL,2024/2025,Playoffs
-49,3:41,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,92,Danielle Serdachny,,,,,35,Ann-Renée Desbiens,,,,,,,-57.0,29.7,201,2025-05-16,PWHL,2024/2025,Playoffs
-50,8:12,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v5,7,Laura Stacey,,,,,33,Gwyneth Philips,,,,,,,80.0,-14.5,201,2025-05-16,PWHL,2024/2025,Playoffs
-51,12:48,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,92,Danielle Serdachny,,,,,35,Ann-Renée Desbiens,,,,,,,-16.3,32.0,201,2025-05-16,PWHL,2024/2025,Playoffs
-52,13:35,Block,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v5,3,Cayla Barnes,,,,,33,Gwyneth Philips,,,,,,,41.0,-29.5,201,2025-05-16,PWHL,2024/2025,Playoffs
-53,14:44,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,18,Mannon McMahon,,,,,35,Ann-Renée Desbiens,,,,,,,-70.0,2.8,201,2025-05-16,PWHL,2024/2025,Playoffs
-54,14:51,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,3,Zoe Boyd,,,,,35,Ann-Renée Desbiens,,,,,,,-51.3,-15.9,201,2025-05-16,PWHL,2024/2025,Playoffs
-55,14:58,Goal,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v5,21,Maureen Murphy,12,Jenn Gardiner,29,Marie-Philip Poulin,33,Gwyneth Philips,,3 13 17 18 88,Zoe Boyd - Tereza Vanišová - Gabbie Hughes - Mannon McMahon - Ronja Savolainen,,9 12 21 23 29,Kati Tabin - Jenn Gardiner - Maureen Murphy - Erin Ambrose - Marie-Philip Poulin,84.7,-2.5,201,2025-05-16,PWHL,2024/2025,Playoffs
-56,15:26,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v5,3,Cayla Barnes,,,,,33,Gwyneth Philips,,,,,,,35.0,-28.1,201,2025-05-16,PWHL,2024/2025,Playoffs
-57,16:10,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v5,7,Laura Stacey,,,,,33,Gwyneth Philips,,,,,,,83.0,-12.2,201,2025-05-16,PWHL,2024/2025,Playoffs
-58,17:59,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,13,Tereza Vanišová,,,,,35,Ann-Renée Desbiens,,,,,,,-73.0,-23.8,201,2025-05-16,PWHL,2024/2025,Playoffs
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,xG,ScoreState,BoxID,game_id,game_date,competition,season,state
+1,0:16,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v5,3,Cayla Barnes,,,,,33,Gwyneth Philips,,,,,,,71.0,34.3,0.0150,0,O18,201,2025-05-16,PWHL,2024/2025,Playoffs
+2,1:59,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,37,Rebecca Leslie,,,,,35,Ann-Renée Desbiens,,,,,,,84.7,-7.1,0.0659,0,O06,201,2025-05-16,PWHL,2024/2025,Playoffs
+3,2:00,Goal,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,37,Rebecca Leslie,94,Anna Meixner,,,35,Ann-Renée Desbiens,,3 27 37 88 94,Zoe Boyd - Shiann Darkangelo - Rebecca Leslie - Ronja Savolainen - Anna Meixner,,9 12 21 24 44,Kati Tabin - Jenn Gardiner - Maureen Murphy - Abby Boreen - Amanda Boulier,80.0,4.2,0.1248,0,O11,201,2025-05-16,PWHL,2024/2025,Playoffs
+4,3:28,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,10,Alexa Vasko,,,,,35,Ann-Renée Desbiens,,,,,,,63.0,-20.4,,1,O13,201,2025-05-16,PWHL,2024/2025,Playoffs
+5,6:55,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,12,Victoria Bach,,,,,35,Ann-Renée Desbiens,,,,,,,59.0,-23.8,,1,O13,201,2025-05-16,PWHL,2024/2025,Playoffs
+6,7:33,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,94,Anna Meixner,,,,,35,Ann-Renée Desbiens,,,,,,,79.0,-5.7,,1,O11,201,2025-05-16,PWHL,2024/2025,Playoffs
+7,9:15,Block,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v5,44,Amanda Boulier,,,,,33,Gwyneth Philips,,,,,,,51.7,26.4,,-1,O23,201,2025-05-16,PWHL,2024/2025,Playoffs
+8,10:29,Block,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v5,24,Abby Boreen,,,,,33,Gwyneth Philips,,,,,,,81.7,11.1,,-1,O08,201,2025-05-16,PWHL,2024/2025,Playoffs
+9,10:40,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,94,Anna Meixner,,,,,35,Ann-Renée Desbiens,,,,,,,77.3,-17.6,0.0782,1,O06,201,2025-05-16,PWHL,2024/2025,Playoffs
+10,12:05,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,26,Emily Clark,,,,,35,Ann-Renée Desbiens,,,,,,,61.3,-9.3,0.0929,1,O14,201,2025-05-16,PWHL,2024/2025,Playoffs
+11,14:38,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v5,25,Lina Ljungblom,,,,,33,Gwyneth Philips,,,,,,,81.0,0.6,0.1328,-1,O11,201,2025-05-16,PWHL,2024/2025,Playoffs
+12,14:55,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v5,29,Marie-Philip Poulin,,,,,33,Gwyneth Philips,,,,,,,75.0,20.7,0.0758,-1,O08,201,2025-05-16,PWHL,2024/2025,Playoffs
+13,15:26,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,26,Emily Clark,,,,,35,Ann-Renée Desbiens,,,,,,,73.3,-23.0,0.0782,1,O06,201,2025-05-16,PWHL,2024/2025,Playoffs
+14,15:55,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,6,Stephanie Markowski,,,,,35,Ann-Renée Desbiens,,,,,,,59.7,17.8,,1,O16,201,2025-05-16,PWHL,2024/2025,Playoffs
+15,16:58,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v5,25,Lina Ljungblom,,,,,33,Gwyneth Philips,,,,,,,79.0,5.1,0.1328,-1,O11,201,2025-05-16,PWHL,2024/2025,Playoffs
+16,17:42,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v5,5,Anna Wilgren,,,,,33,Gwyneth Philips,,,,,,,9.3,-33.1,0.0591,-1,N01,201,2025-05-16,PWHL,2024/2025,Playoffs
+17,18:45,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,27,Shiann Darkangelo,,,,,35,Ann-Renée Desbiens,,,,,,,40.0,24.9,,1,O26,201,2025-05-16,PWHL,2024/2025,Playoffs
+18,19:08,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,88,Ronja Savolainen,,,,,35,Ann-Renée Desbiens,,,,,,,39.3,-16.7,0.0500,1,O25,201,2025-05-16,PWHL,2024/2025,Playoffs
+19,19:56,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v5,23,Erin Ambrose,,,,,33,Gwyneth Philips,,,,,,,49.3,31.4,0.0163,-1,O23,201,2025-05-16,PWHL,2024/2025,Playoffs
+20,20:00,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v5,7,Laura Stacey,,,,,33,Gwyneth Philips,,,,,,,84.7,34.9,0.0240,-1,O10,201,2025-05-16,PWHL,2024/2025,Playoffs
+21,0:28,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,28,Catherine Dubois,,,,,33,Gwyneth Philips,,,,,,,73.0,14.2,0.0758,-1,O08,201,2025-05-16,PWHL,2024/2025,Playoffs
+22,0:41,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,25,Lina Ljungblom,,,,,33,Gwyneth Philips,,,,,,,69.3,-31.7,0.0148,-1,O12,201,2025-05-16,PWHL,2024/2025,Playoffs
+23,0:55,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,43,Kristin O'Neill,,,,,33,Gwyneth Philips,,,,,,,56.0,3.1,0.0614,-1,O21,201,2025-05-16,PWHL,2024/2025,Playoffs
+24,1:30,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,27,Shiann Darkangelo,,,,,35,Ann-Renée Desbiens,,,,,,,47.0,18.7,0.0461,1,O22,201,2025-05-16,PWHL,2024/2025,Playoffs
+25,3:06,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,13,Alexandra Labelle,,,,,33,Gwyneth Philips,,,,,,,55.0,22.4,0.0163,-1,O23,201,2025-05-16,PWHL,2024/2025,Playoffs
+26,4:05,Penalty,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,43,Kristin O'Neill,,,,,,,,,,,,,,,,-1,,201,2025-05-16,PWHL,2024/2025,Playoffs
+27,4:35,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,26,Emily Clark,,,,,35,Ann-Renée Desbiens,,,,,,,46.3,0.8,,1,O21,201,2025-05-16,PWHL,2024/2025,Playoffs
+28,5:51,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v4,13,Tereza Vanišová,,,,,35,Ann-Renée Desbiens,,,,,,,51.7,28.3,0.0291,1,O23,201,2025-05-16,PWHL,2024/2025,Playoffs
+29,6:11,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,27,Shiann Darkangelo,,,,,35,Ann-Renée Desbiens,,,,,,,81.0,-4.2,0.1463,1,O11,201,2025-05-16,PWHL,2024/2025,Playoffs
+30,9:22,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,2,Aneta Tejralová,,,,,35,Ann-Renée Desbiens,,,,,,,37.0,-6.0,0.0500,1,O25,201,2025-05-16,PWHL,2024/2025,Playoffs
+31,9:38,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,29,Marie-Philip Poulin,,,,,33,Gwyneth Philips,,,,,,,29.0,-17.8,0.0450,-1,O25,201,2025-05-16,PWHL,2024/2025,Playoffs
+32,9:55,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,21,Ashton Bell,,,,,35,Ann-Renée Desbiens,,,,,,,79.0,6.8,0.1463,1,O11,201,2025-05-16,PWHL,2024/2025,Playoffs
+33,10:27,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,26,Emily Clark,,,,,35,Ann-Renée Desbiens,,,,,,,75.0,5.7,0.1463,1,O11,201,2025-05-16,PWHL,2024/2025,Playoffs
+34,11:34,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,13,Tereza Vanišová,,,,,35,Ann-Renée Desbiens,,,,,,,76.3,2.0,0.1463,1,O11,201,2025-05-16,PWHL,2024/2025,Playoffs
+35,11:40,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,19,Brianne Jenner,,,,,35,Ann-Renée Desbiens,,,,,,,78.3,-2.5,0.1463,1,O11,201,2025-05-16,PWHL,2024/2025,Playoffs
+36,11:57,Block,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,7,Laura Stacey,,,,,33,Gwyneth Philips,,,,,,,61.3,-24.4,,-1,O13,201,2025-05-16,PWHL,2024/2025,Playoffs
+37,14:34,Penalty,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,26,Emily Clark,,,,,,,,,,,,,,,,1,,201,2025-05-16,PWHL,2024/2025,Playoffs
+38,14:50,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v4,7,Laura Stacey,,,,,33,Gwyneth Philips,,,,,,,57.0,-25.8,0.0627,-1,O13,201,2025-05-16,PWHL,2024/2025,Playoffs
+39,15:43,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v4,28,Catherine Dubois,,,,,33,Gwyneth Philips,,,,,,,48.3,6.8,0.0956,-1,O21,201,2025-05-16,PWHL,2024/2025,Playoffs
+40,16:03,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v4,29,Marie-Philip Poulin,,,,,33,Gwyneth Philips,,,,,,,61.0,-2.8,0.1679,-1,O15,201,2025-05-16,PWHL,2024/2025,Playoffs
+41,17:25,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,27,Shiann Darkangelo,,,,,35,Ann-Renée Desbiens,,,,,,,73.3,8.5,0.1463,1,O11,201,2025-05-16,PWHL,2024/2025,Playoffs
+42,18:09,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,94,Anna Meixner,,,,,35,Ann-Renée Desbiens,,,,,,,83.0,9.6,0.0841,1,O08,201,2025-05-16,PWHL,2024/2025,Playoffs
+43,19:08,Block,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,12,Jenn Gardiner,,,,,33,Gwyneth Philips,,,,,,,61.3,7.9,,-1,O16,201,2025-05-16,PWHL,2024/2025,Playoffs
+44,0:27,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,23,Jocelyne Larocque,,,,,35,Ann-Renée Desbiens,,,,,,,32.3,-24.9,0.0477,1,O24,201,2025-05-16,PWHL,2024/2025,Playoffs
+45,0:31,Penalty,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v5,,,,,,,,,,,,,,,,,,-1,,201,2025-05-16,PWHL,2024/2025,Playoffs
+46,0:31,Goal,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,26,Emily Clark,17,Gabbie Hughes,,,35,Ann-Renée Desbiens,,17 18 21 23 26,Gabbie Hughes - Mannon McMahon - Ashton Bell - Jocelyne Larocque - Emily Clark,,3 5 7 25 29,Cayla Barnes - Anna Wilgren - Laura Stacey - Lina Ljungblom - Marie-Philip Poulin,85.0,2.5,0.2435,1,O07,201,2025-05-16,PWHL,2024/2025,Playoffs
+47,1:26,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v4,27,Shiann Darkangelo,,,,,35,Ann-Renée Desbiens,,,,,,,77.0,-6.0,0.2623,2,O11,201,2025-05-16,PWHL,2024/2025,Playoffs
+48,2:15,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,4v5,29,Marie-Philip Poulin,,,,,33,Gwyneth Philips,,,,,,,80.7,11.6,0.1275,-2,O08,201,2025-05-16,PWHL,2024/2025,Playoffs
+49,3:41,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,92,Danielle Serdachny,,,,,35,Ann-Renée Desbiens,,,,,,,57.0,-29.7,0.0561,2,O13,201,2025-05-16,PWHL,2024/2025,Playoffs
+50,8:12,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v5,7,Laura Stacey,,,,,33,Gwyneth Philips,,,,,,,80.0,-14.5,0.0712,-2,O06,201,2025-05-16,PWHL,2024/2025,Playoffs
+51,12:48,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,92,Danielle Serdachny,,,,,35,Ann-Renée Desbiens,,,,,,,16.3,-32.0,0.0828,2,N01,201,2025-05-16,PWHL,2024/2025,Playoffs
+52,13:35,Block,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v5,3,Cayla Barnes,,,,,33,Gwyneth Philips,,,,,,,41.0,-29.5,,-2,O19,201,2025-05-16,PWHL,2024/2025,Playoffs
+53,14:44,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,18,Mannon McMahon,,,,,35,Ann-Renée Desbiens,,,,,,,70.0,-2.8,0.1161,2,O14,201,2025-05-16,PWHL,2024/2025,Playoffs
+54,14:51,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,3,Zoe Boyd,,,,,35,Ann-Renée Desbiens,,,,,,,51.3,15.9,,2,O22,201,2025-05-16,PWHL,2024/2025,Playoffs
+55,14:58,Goal,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v5,21,Maureen Murphy,12,Jenn Gardiner,29,Marie-Philip Poulin,33,Gwyneth Philips,,3 13 17 18 88,Zoe Boyd - Tereza Vanišová - Gabbie Hughes - Mannon McMahon - Ronja Savolainen,,9 12 21 23 29,Kati Tabin - Jenn Gardiner - Maureen Murphy - Erin Ambrose - Marie-Philip Poulin,84.7,-2.5,0.2253,-2,O07,201,2025-05-16,PWHL,2024/2025,Playoffs
+56,15:26,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v5,3,Cayla Barnes,,,,,33,Gwyneth Philips,,,,,,,35.0,-28.1,0.0429,-1,O24,201,2025-05-16,PWHL,2024/2025,Playoffs
+57,16:10,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v5,7,Laura Stacey,,,,,33,Gwyneth Philips,,,,,,,83.0,-12.2,0.0705,-1,O06,201,2025-05-16,PWHL,2024/2025,Playoffs
+58,17:59,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,13,Tereza Vanišová,,,,,35,Ann-Renée Desbiens,,,,,,,73.0,23.8,0.0841,1,O08,201,2025-05-16,PWHL,2024/2025,Playoffs

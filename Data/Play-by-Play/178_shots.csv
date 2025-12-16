@@ -1,108 +1,108 @@
-id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
-1,2:48,Penalty,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,1,event,5v5,18,Jesse Compher,,,,,,,,,,,,,,,178,2025-02-16,PWHL,2024/2025,Regular Season
-2,3:48,Goal,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v4,17,Gabbie Hughes,71,Jincy Roese,23,Jocelyne Larocque,1,Raygan Kirk,,13 17 23 26 71,Tereza Vanišová - Gabbie Hughes - Jocelyne Larocque - Emily Clark - Jincy Roese,,14 27 28 34,Renata Fast - Emma Maltais - Kaitlin Willoughby - Hannah Miller,-86.0,6.5,178,2025-02-16,PWHL,2024/2025,Regular Season
-3,4:40,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,12,Victoria Bach,,,,,1,Raygan Kirk,,,,,,,-61.3,24.1,178,2025-02-16,PWHL,2024/2025,Regular Season
-4,4:46,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,19,Brianne Jenner,,,,,1,Raygan Kirk,,,,,,,-53.0,13.6,178,2025-02-16,PWHL,2024/2025,Regular Season
-5,5:33,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,23,Jocelyne Larocque,,,,,1,Raygan Kirk,,,,,,,-39.0,17.8,178,2025-02-16,PWHL,2024/2025,Regular Season
-6,5:58,Block,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,71,Jincy Roese,,,,,1,Raygan Kirk,,,,,,,-53.0,-29.7,178,2025-02-16,PWHL,2024/2025,Regular Season
-7,6:58,Block,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,92,Danielle Serdachny,,,,,1,Raygan Kirk,,,,,,,-56.0,-11.1,178,2025-02-16,PWHL,2024/2025,Regular Season
-8,7:48,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,27,Shiann Darkangelo,,,,,1,Raygan Kirk,,,,,,,-71.7,-22.7,178,2025-02-16,PWHL,2024/2025,Regular Season
-9,8:05,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,37,Rebecca Leslie,,,,,1,Raygan Kirk,,,,,,,-64.3,-15.6,178,2025-02-16,PWHL,2024/2025,Regular Season
-10,9:46,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,92,Danielle Serdachny,,,,,1,Raygan Kirk,,,,,,,-67.3,11.3,178,2025-02-16,PWHL,2024/2025,Regular Season
-11,10:04,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,19,Brianne Jenner,,,,,1,Raygan Kirk,,,,,,,-42.7,-31.2,178,2025-02-16,PWHL,2024/2025,Regular Season
-12,10:06,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,1,event,5v5,18,Jesse Compher,,,,,38,Emerance Maschmeyer,,,,,,,47.0,-1.1,178,2025-02-16,PWHL,2024/2025,Regular Season
-13,12:56,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,23,Jocelyne Larocque,,,,,1,Raygan Kirk,,,,,,,-53.7,28.1,178,2025-02-16,PWHL,2024/2025,Regular Season
-14,13:07,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,27,Shiann Darkangelo,,,,,1,Raygan Kirk,,,,,,,-80.0,-2.5,178,2025-02-16,PWHL,2024/2025,Regular Season
-15,13:25,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,71,Jincy Roese,,,,,1,Raygan Kirk,,,,,,,-48.7,2.8,178,2025-02-16,PWHL,2024/2025,Regular Season
-16,13:39,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,13,Tereza Vanišová,,,,,1,Raygan Kirk,,,,,,,-59.7,-7.6,178,2025-02-16,PWHL,2024/2025,Regular Season
-17,13:59,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,1,event,5v5,23,Megan Carter,,,,,38,Emerance Maschmeyer,,,,,,,4.7,38.2,178,2025-02-16,PWHL,2024/2025,Regular Season
-18,15:41,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,19,Brianne Jenner,,,,,1,Raygan Kirk,,,,,,,-76.0,8.2,178,2025-02-16,PWHL,2024/2025,Regular Season
-19,16:25,Block,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,23,Jocelyne Larocque,,,,,1,Raygan Kirk,,,,,,,-59.0,-27.5,178,2025-02-16,PWHL,2024/2025,Regular Season
-20,17:01,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,18,Mannon McMahon,,,,,1,Raygan Kirk,,,,,,,-54.7,-16.7,178,2025-02-16,PWHL,2024/2025,Regular Season
-21,17:56,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,12,Victoria Bach,,,,,1,Raygan Kirk,,,,,,,-76.3,1.4,178,2025-02-16,PWHL,2024/2025,Regular Season
-22,17:57,Penalty,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,1,event,5v5,14,Renata Fast,,,,,,,,,,,,,,,178,2025-02-16,PWHL,2024/2025,Regular Season
-23,18:47,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v4,27,Shiann Darkangelo,,,,,1,Raygan Kirk,,,,,,,-61.3,-2.8,178,2025-02-16,PWHL,2024/2025,Regular Season
-24,19:24,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v4,26,Emily Clark,,,,,1,Raygan Kirk,,,,,,,-81.7,9.3,178,2025-02-16,PWHL,2024/2025,Regular Season
-25,0:47,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,22,Maggie Connors,,,,,38,Emerance Maschmeyer,,,,,,,70.0,38.2,178,2025-02-16,PWHL,2024/2025,Regular Season
-26,1:04,Block,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,12,Allie Munroe,,,,,38,Emerance Maschmeyer,,,,,,,45.0,26.1,178,2025-02-16,PWHL,2024/2025,Regular Season
-27,1:40,Block,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,2,event,5v5,12,Victoria Bach,,,,,1,Raygan Kirk,,,,,,,-45.0,24.1,178,2025-02-16,PWHL,2024/2025,Regular Season
-28,3:07,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,16,Hayley Scamurra,,,,,38,Emerance Maschmeyer,,,,,,,49.7,-22.1,178,2025-02-16,PWHL,2024/2025,Regular Season
-29,3:53,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,34,Hannah Miller,,,,,38,Emerance Maschmeyer,,,,,,,68.3,20.4,178,2025-02-16,PWHL,2024/2025,Regular Season
-30,4:36,Penalty,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,2,event,5v5,23,Jocelyne Larocque,,,,,,,,,,,,,,,178,2025-02-16,PWHL,2024/2025,Regular Season
-31,4:44,Block,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,9,Daryl Watts,,,,,38,Emerance Maschmeyer,,,,,,,35.0,-21.8,178,2025-02-16,PWHL,2024/2025,Regular Season
-32,5:14,Block,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,34,Hannah Miller,,,,,38,Emerance Maschmeyer,,,,,,,51.3,-11.3,178,2025-02-16,PWHL,2024/2025,Regular Season
-33,5:42,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v4,40,Blayre Turnbull,,,,,38,Emerance Maschmeyer,,,,,,,66.3,-17.6,178,2025-02-16,PWHL,2024/2025,Regular Season
-34,8:00,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,14,Renata Fast,,,,,38,Emerance Maschmeyer,,,,,,,50.3,33.1,178,2025-02-16,PWHL,2024/2025,Regular Season
-35,8:52,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,2,event,5v5,3,Zoe Boyd,,,,,1,Raygan Kirk,,,,,,,-51.0,32.3,178,2025-02-16,PWHL,2024/2025,Regular Season
-36,9:36,Block,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,23,Megan Carter,,,,,38,Emerance Maschmeyer,,,,,,,47.0,33.1,178,2025-02-16,PWHL,2024/2025,Regular Season
-37,9:50,Block,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,9,Daryl Watts,,,,,38,Emerance Maschmeyer,,,,,,,57.7,22.4,178,2025-02-16,PWHL,2024/2025,Regular Season
-38,9:52,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,9,Daryl Watts,,,,,38,Emerance Maschmeyer,,,,,,,55.3,28.9,178,2025-02-16,PWHL,2024/2025,Regular Season
-39,10:28,Block,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,2,event,5v5,13,Tereza Vanišová,,,,,1,Raygan Kirk,,,,,,,-41.0,22.1,178,2025-02-16,PWHL,2024/2025,Regular Season
-40,11:36,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,9,Daryl Watts,,,,,38,Emerance Maschmeyer,,,,,,,87.0,6.0,178,2025-02-16,PWHL,2024/2025,Regular Season
-41,11:53,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,23,Megan Carter,,,,,38,Emerance Maschmeyer,,,,,,,47.7,-34.9,178,2025-02-16,PWHL,2024/2025,Regular Season
-42,12:44,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,2,event,5v5,88,Ronja Savolainen,,,,,1,Raygan Kirk,,,,,,,-48.7,22.1,178,2025-02-16,PWHL,2024/2025,Regular Season
-43,13:11,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,15,Savannah Harmon,,,,,38,Emerance Maschmeyer,,,,,,,80.7,-0.8,178,2025-02-16,PWHL,2024/2025,Regular Season
-44,13:25,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,14,Renata Fast,,,,,38,Emerance Maschmeyer,,,,,,,67.7,18.1,178,2025-02-16,PWHL,2024/2025,Regular Season
-45,13:40,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,14,Renata Fast,,,,,38,Emerance Maschmeyer,,,,,,,70.3,-5.4,178,2025-02-16,PWHL,2024/2025,Regular Season
-46,14:13,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,18,Jesse Compher,,,,,38,Emerance Maschmeyer,,,,,,,77.7,-2.8,178,2025-02-16,PWHL,2024/2025,Regular Season
-47,14:25,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,2,event,5v5,26,Emily Clark,,,,,1,Raygan Kirk,,,,,,,-66.7,-8.8,178,2025-02-16,PWHL,2024/2025,Regular Season
-48,14:44,Penalty,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,2,event,5v5,23,Jocelyne Larocque,,,,,,,,,,,,,,,178,2025-02-16,PWHL,2024/2025,Regular Season
-49,15:19,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v4,18,Jesse Compher,,,,,38,Emerance Maschmeyer,,,,,,,87.7,5.4,178,2025-02-16,PWHL,2024/2025,Regular Season
-50,15:20,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v4,88,Julia Gosling,,,,,38,Emerance Maschmeyer,,,,,,,82.7,1.4,178,2025-02-16,PWHL,2024/2025,Regular Season
-51,15:54,Goal,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v4,9,Daryl Watts,34,Hannah Miller,14,Renata Fast,38,Emerance Maschmeyer,,17 18 26 71,Gabbie Hughes - Mannon McMahon - Emily Clark - Jincy Roese,,9 14 18 34 88,Daryl Watts - Renata Fast - Jesse Compher - Hannah Miller - Julia Gosling,56.3,0.3,178,2025-02-16,PWHL,2024/2025,Regular Season
-52,16:08,Block,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,12,Allie Munroe,,,,,38,Emerance Maschmeyer,,,,,,,64.7,-3.1,178,2025-02-16,PWHL,2024/2025,Regular Season
-53,17:04,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,2,event,5v5,26,Emily Clark,,,,,1,Raygan Kirk,,,,,,,-81.0,3.7,178,2025-02-16,PWHL,2024/2025,Regular Season
-54,17:05,Penalty,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,14,Renata Fast,,,,,,,,,,,,,,,178,2025-02-16,PWHL,2024/2025,Regular Season
-55,17:17,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,2,event,5v4,13,Tereza Vanišová,,,,,1,Raygan Kirk,,,,,,,-66.7,-9.6,178,2025-02-16,PWHL,2024/2025,Regular Season
-56,17:39,Block,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,2,event,5v5,23,Jocelyne Larocque,,,,,1,Raygan Kirk,,,,,,,-37.3,-1.7,178,2025-02-16,PWHL,2024/2025,Regular Season
-57,17:56,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,4v5,40,Blayre Turnbull,,,,,38,Emerance Maschmeyer,,,,,,,64.0,6.8,178,2025-02-16,PWHL,2024/2025,Regular Season
-58,19:03,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,4v5,18,Jesse Compher,,,,,38,Emerance Maschmeyer,,,,,,,79.0,-4.0,178,2025-02-16,PWHL,2024/2025,Regular Season
-59,19:05,Block,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,4v5,23,Megan Carter,,,,,38,Emerance Maschmeyer,,,,,,,71.7,4.2,178,2025-02-16,PWHL,2024/2025,Regular Season
-60,19:08,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,18,Jesse Compher,,,,,38,Emerance Maschmeyer,,,,,,,71.7,0.8,178,2025-02-16,PWHL,2024/2025,Regular Season
-61,19:08,Penalty,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,2,event,5v5,2,Aneta Tejralová,,,,,,,,,,,,,,,178,2025-02-16,PWHL,2024/2025,Regular Season
-62,19:36,Goal,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v4,88,Julia Gosling,18,Jesse Compher,34,Hannah Miller,38,Emerance Maschmeyer,,18 23 27 92,Mannon McMahon - Jocelyne Larocque - Shiann Darkangelo - Danielle Serdachny,,9 14 18 34 88,Daryl Watts - Renata Fast - Jesse Compher - Hannah Miller - Julia Gosling,68.0,-16.1,178,2025-02-16,PWHL,2024/2025,Regular Season
-63,19:55,Block,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,2,event,5v4,18,Mannon McMahon,,,,,1,Raygan Kirk,,,,,,,-34.0,-11.3,178,2025-02-16,PWHL,2024/2025,Regular Season
-64,0:21,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5,18,Jesse Compher,,,,,38,Emerance Maschmeyer,,,,,,,49.0,21.2,178,2025-02-16,PWHL,2024/2025,Regular Season
-65,1:43,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,2,Aneta Tejralová,,,,,1,Raygan Kirk,,,,,,,-47.0,-34.3,178,2025-02-16,PWHL,2024/2025,Regular Season
-66,1:47,Block,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,6,Stephanie Markowski,,,,,1,Raygan Kirk,,,,,,,-50.7,1.4,178,2025-02-16,PWHL,2024/2025,Regular Season
-67,2:56,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,17,Gabbie Hughes,,,,,1,Raygan Kirk,,,,,,,-31.0,-32.9,178,2025-02-16,PWHL,2024/2025,Regular Season
-68,2:59,Penalty,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5,22,Maggie Connors,,,,,,,,,,,,,,,178,2025-02-16,PWHL,2024/2025,Regular Season
-69,4:10,Goal,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v4,13,Tereza Vanišová,26,Emily Clark,17,Gabbie Hughes,1,Raygan Kirk,,13 17 23 26 71,Tereza Vanišová - Gabbie Hughes - Jocelyne Larocque - Emily Clark - Jincy Roese,,6 12 18 40,Kali Flanagan - Allie Munroe - Jesse Compher - Blayre Turnbull,-61.0,-13.0,178,2025-02-16,PWHL,2024/2025,Regular Season
-70,5:13,Penalty,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5,67,Emma Woods,,,,,,,,,,,,,,,178,2025-02-16,PWHL,2024/2025,Regular Season
-71,5:13,Penalty,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5,67,Emma Woods,,,,,,,,,,,,,,,178,2025-02-16,PWHL,2024/2025,Regular Season
-72,5:13,Penalty,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,88,Ronja Savolainen,,,,,,,,,,,,,,,178,2025-02-16,PWHL,2024/2025,Regular Season
-73,6:23,Block,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5,34,Hannah Miller,,,,,38,Emerance Maschmeyer,,,,,,,59.0,0.0,178,2025-02-16,PWHL,2024/2025,Regular Season
-74,6:24,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,3v4,34,Hannah Miller,,,,,38,Emerance Maschmeyer,,,,,,,74.3,-2.0,178,2025-02-16,PWHL,2024/2025,Regular Season
-75,7:21,Penalty,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,19,Brianne Jenner,,,,,,,,,,,,,,,178,2025-02-16,PWHL,2024/2025,Regular Season
-76,7:43,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v4,9,Daryl Watts,,,,,38,Emerance Maschmeyer,,,,,,,64.7,-14.5,178,2025-02-16,PWHL,2024/2025,Regular Season
-77,7:56,Block,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5,34,Hannah Miller,,,,,38,Emerance Maschmeyer,,,,,,,35.7,-20.4,178,2025-02-16,PWHL,2024/2025,Regular Season
-78,8:13,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v4,9,Daryl Watts,,,,,38,Emerance Maschmeyer,,,,,,,85.3,16.1,178,2025-02-16,PWHL,2024/2025,Regular Season
-79,8:46,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v4,88,Julia Gosling,,,,,38,Emerance Maschmeyer,,,,,,,71.3,-0.6,178,2025-02-16,PWHL,2024/2025,Regular Season
-80,8:48,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v4,14,Renata Fast,,,,,38,Emerance Maschmeyer,,,,,,,86.7,6.5,178,2025-02-16,PWHL,2024/2025,Regular Season
-81,9:13,Block,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5,15,Savannah Harmon,,,,,38,Emerance Maschmeyer,,,,,,,37.3,-6.2,178,2025-02-16,PWHL,2024/2025,Regular Season
-82,9:25,Block,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5,8,Izzy Daniel,,,,,38,Emerance Maschmeyer,,,,,,,57.0,-3.1,178,2025-02-16,PWHL,2024/2025,Regular Season
-83,9:46,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5,22,Maggie Connors,,,,,38,Emerance Maschmeyer,,,,,,,78.7,14.5,178,2025-02-16,PWHL,2024/2025,Regular Season
-84,10:52,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5,67,Emma Woods,,,,,38,Emerance Maschmeyer,,,,,,,32.7,33.7,178,2025-02-16,PWHL,2024/2025,Regular Season
-85,12:45,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,13,Tereza Vanišová,,,,,1,Raygan Kirk,,,,,,,-63.0,11.6,178,2025-02-16,PWHL,2024/2025,Regular Season
-86,13:21,Block,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,88,Ronja Savolainen,,,,,1,Raygan Kirk,,,,,,,-35.0,32.9,178,2025-02-16,PWHL,2024/2025,Regular Season
-87,14:11,Block,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,18,Mannon McMahon,,,,,1,Raygan Kirk,,,,,,,-59.7,21.8,178,2025-02-16,PWHL,2024/2025,Regular Season
-88,14:29,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,3,Zoe Boyd,,,,,1,Raygan Kirk,,,,,,,-77.0,11.9,178,2025-02-16,PWHL,2024/2025,Regular Season
-89,14:34,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,26,Emily Clark,,,,,1,Raygan Kirk,,,,,,,-88.0,5.4,178,2025-02-16,PWHL,2024/2025,Regular Season
-90,14:37,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,26,Emily Clark,,,,,1,Raygan Kirk,,,,,,,-87.7,9.6,178,2025-02-16,PWHL,2024/2025,Regular Season
-91,14:40,Block,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,71,Jincy Roese,,,,,1,Raygan Kirk,,,,,,,-69.0,3.7,178,2025-02-16,PWHL,2024/2025,Regular Season
-92,15:01,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,13,Tereza Vanišová,,,,,1,Raygan Kirk,,,,,,,-84.7,-8.2,178,2025-02-16,PWHL,2024/2025,Regular Season
-93,15:01,Penalty,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5,55,Rylind MacKinnon,,,,,,,,,,,,,,,178,2025-02-16,PWHL,2024/2025,Regular Season
-94,15:17,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v4,18,Mannon McMahon,,,,,1,Raygan Kirk,,,,,,,-84.3,36.3,178,2025-02-16,PWHL,2024/2025,Regular Season
-95,15:42,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v4,19,Brianne Jenner,,,,,1,Raygan Kirk,,,,,,,-75.0,12.8,178,2025-02-16,PWHL,2024/2025,Regular Season
-96,15:56,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v4,23,Jocelyne Larocque,,,,,1,Raygan Kirk,,,,,,,-69.0,19.3,178,2025-02-16,PWHL,2024/2025,Regular Season
-97,16:05,Block,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,13,Tereza Vanišová,,,,,1,Raygan Kirk,,,,,,,-63.7,-20.4,178,2025-02-16,PWHL,2024/2025,Regular Season
-98,16:12,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v4,13,Tereza Vanišová,,,,,1,Raygan Kirk,,,,,,,-62.3,-19.6,178,2025-02-16,PWHL,2024/2025,Regular Season
-99,16:14,Block,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,13,Tereza Vanišová,,,,,1,Raygan Kirk,,,,,,,-62.0,-0.8,178,2025-02-16,PWHL,2024/2025,Regular Season
-100,16:20,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v4,26,Emily Clark,,,,,1,Raygan Kirk,,,,,,,-49.3,-0.6,178,2025-02-16,PWHL,2024/2025,Regular Season
-101,16:34,Penalty,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v4,27,Shiann Darkangelo,,,,,,,,,,,,,,,178,2025-02-16,PWHL,2024/2025,Regular Season
-102,17:27,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v4,9,Daryl Watts,,,,,38,Emerance Maschmeyer,,,,,,,77.3,-17.6,178,2025-02-16,PWHL,2024/2025,Regular Season
-103,18:25,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v4,9,Daryl Watts,,,,,38,Emerance Maschmeyer,,,,,,,84.0,4.2,178,2025-02-16,PWHL,2024/2025,Regular Season
-104,18:26,Block,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v4,2,Aneta Tejralová,,,,,1,Raygan Kirk,,,,,,,76.3,11.6,178,2025-02-16,PWHL,2024/2025,Regular Season
-105,18:39,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5,15,Savannah Harmon,,,,,38,Emerance Maschmeyer,,,,,,,52.3,6.2,178,2025-02-16,PWHL,2024/2025,Regular Season
-106,19:20,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5,16,Hayley Scamurra,,,,,38,Emerance Maschmeyer,,,,,,,70.7,-5.7,178,2025-02-16,PWHL,2024/2025,Regular Season
-107,0:51,Goal,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,OT1,event,3v3,9,Daryl Watts,34,Hannah Miller,14,Renata Fast,38,Emerance Maschmeyer,,17 26 71,Gabbie Hughes - Emily Clark - Jincy Roese,,9 14 34,Daryl Watts - Renata Fast - Hannah Miller,88.0,2.5,178,2025-02-16,PWHL,2024/2025,Regular Season
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,xG,ScoreState,BoxID,game_id,game_date,competition,season,state
+1,2:48,Penalty,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,1,event,5v5,18,Jesse Compher,,,,,,,,,,,,,,,,0,,178,2025-02-16,PWHL,2024/2025,Regular Season
+2,3:48,Goal,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v4,17,Gabbie Hughes,71,Jincy Roese,23,Jocelyne Larocque,1,Raygan Kirk,,13 17 23 26 71,Tereza Vanišová - Gabbie Hughes - Jocelyne Larocque - Emily Clark - Jincy Roese,,14 27 28 34,Renata Fast - Emma Maltais - Kaitlin Willoughby - Hannah Miller,86.0,-6.5,0.1024,0,O06,178,2025-02-16,PWHL,2024/2025,Regular Season
+3,4:40,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,12,Victoria Bach,,,,,1,Raygan Kirk,,,,,,,61.3,-24.1,0.0443,1,O13,178,2025-02-16,PWHL,2024/2025,Regular Season
+4,4:46,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,19,Brianne Jenner,,,,,1,Raygan Kirk,,,,,,,53.0,-13.6,0.0546,1,O20,178,2025-02-16,PWHL,2024/2025,Regular Season
+5,5:33,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,23,Jocelyne Larocque,,,,,1,Raygan Kirk,,,,,,,39.0,-17.8,0.0477,1,O24,178,2025-02-16,PWHL,2024/2025,Regular Season
+6,5:58,Block,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,71,Jincy Roese,,,,,1,Raygan Kirk,,,,,,,53.0,29.7,,1,O23,178,2025-02-16,PWHL,2024/2025,Regular Season
+7,6:58,Block,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,92,Danielle Serdachny,,,,,1,Raygan Kirk,,,,,,,56.0,11.1,,1,O22,178,2025-02-16,PWHL,2024/2025,Regular Season
+8,7:48,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,27,Shiann Darkangelo,,,,,1,Raygan Kirk,,,,,,,71.7,22.7,0.0488,1,O17,178,2025-02-16,PWHL,2024/2025,Regular Season
+9,8:05,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,37,Rebecca Leslie,,,,,1,Raygan Kirk,,,,,,,64.3,15.6,0.1061,1,O16,178,2025-02-16,PWHL,2024/2025,Regular Season
+10,9:46,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,92,Danielle Serdachny,,,,,1,Raygan Kirk,,,,,,,67.3,-11.3,0.0929,1,O14,178,2025-02-16,PWHL,2024/2025,Regular Season
+11,10:04,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,19,Brianne Jenner,,,,,1,Raygan Kirk,,,,,,,42.7,31.2,0.0182,1,O23,178,2025-02-16,PWHL,2024/2025,Regular Season
+12,10:06,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,1,event,5v5,18,Jesse Compher,,,,,38,Emerance Maschmeyer,,,,,,,47.0,-1.1,0.0614,-1,O21,178,2025-02-16,PWHL,2024/2025,Regular Season
+13,12:56,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,23,Jocelyne Larocque,,,,,1,Raygan Kirk,,,,,,,53.7,-28.1,0.0380,1,O19,178,2025-02-16,PWHL,2024/2025,Regular Season
+14,13:07,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,27,Shiann Darkangelo,,,,,1,Raygan Kirk,,,,,,,80.0,2.5,0.1463,1,O11,178,2025-02-16,PWHL,2024/2025,Regular Season
+15,13:25,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,71,Jincy Roese,,,,,1,Raygan Kirk,,,,,,,48.7,-2.8,0.0682,1,O21,178,2025-02-16,PWHL,2024/2025,Regular Season
+16,13:39,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,13,Tereza Vanišová,,,,,1,Raygan Kirk,,,,,,,59.7,7.6,0.1061,1,O16,178,2025-02-16,PWHL,2024/2025,Regular Season
+17,13:59,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,1,event,5v5,23,Megan Carter,,,,,38,Emerance Maschmeyer,,,,,,,4.7,38.2,0.0591,-1,N03,178,2025-02-16,PWHL,2024/2025,Regular Season
+18,15:41,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,19,Brianne Jenner,,,,,1,Raygan Kirk,,,,,,,76.0,-8.2,0.1463,1,O11,178,2025-02-16,PWHL,2024/2025,Regular Season
+19,16:25,Block,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,23,Jocelyne Larocque,,,,,1,Raygan Kirk,,,,,,,59.0,27.5,,1,O17,178,2025-02-16,PWHL,2024/2025,Regular Season
+20,17:01,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,18,Mannon McMahon,,,,,1,Raygan Kirk,,,,,,,54.7,16.7,0.0461,1,O22,178,2025-02-16,PWHL,2024/2025,Regular Season
+21,17:56,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v5,12,Victoria Bach,,,,,1,Raygan Kirk,,,,,,,76.3,-1.4,0.1463,1,O11,178,2025-02-16,PWHL,2024/2025,Regular Season
+22,17:57,Penalty,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,1,event,5v5,14,Renata Fast,,,,,,,,,,,,,,,,-1,,178,2025-02-16,PWHL,2024/2025,Regular Season
+23,18:47,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v4,27,Shiann Darkangelo,,,,,1,Raygan Kirk,,,,,,,61.3,2.8,0.1842,1,O15,178,2025-02-16,PWHL,2024/2025,Regular Season
+24,19:24,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,1,event,5v4,26,Emily Clark,,,,,1,Raygan Kirk,,,,,,,81.7,-9.3,0.1207,1,O06,178,2025-02-16,PWHL,2024/2025,Regular Season
+25,0:47,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,22,Maggie Connors,,,,,38,Emerance Maschmeyer,,,,,,,70.0,38.2,0.0240,-1,O10,178,2025-02-16,PWHL,2024/2025,Regular Season
+26,1:04,Block,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,12,Allie Munroe,,,,,38,Emerance Maschmeyer,,,,,,,45.0,26.1,,-1,O23,178,2025-02-16,PWHL,2024/2025,Regular Season
+27,1:40,Block,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,2,event,5v5,12,Victoria Bach,,,,,1,Raygan Kirk,,,,,,,45.0,-24.1,,1,O20,178,2025-02-16,PWHL,2024/2025,Regular Season
+28,3:07,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,16,Hayley Scamurra,,,,,38,Emerance Maschmeyer,,,,,,,49.7,-22.1,0.0491,-1,O20,178,2025-02-16,PWHL,2024/2025,Regular Season
+29,3:53,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,34,Hannah Miller,,,,,38,Emerance Maschmeyer,,,,,,,68.3,20.4,0.0438,-1,O17,178,2025-02-16,PWHL,2024/2025,Regular Season
+30,4:36,Penalty,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,2,event,5v5,23,Jocelyne Larocque,,,,,,,,,,,,,,,,1,,178,2025-02-16,PWHL,2024/2025,Regular Season
+31,4:44,Block,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,9,Daryl Watts,,,,,38,Emerance Maschmeyer,,,,,,,35.0,-21.8,,-1,O24,178,2025-02-16,PWHL,2024/2025,Regular Season
+32,5:14,Block,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,34,Hannah Miller,,,,,38,Emerance Maschmeyer,,,,,,,51.3,-11.3,,-1,O20,178,2025-02-16,PWHL,2024/2025,Regular Season
+33,5:42,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v4,40,Blayre Turnbull,,,,,38,Emerance Maschmeyer,,,,,,,66.3,-17.6,0.0627,-1,O13,178,2025-02-16,PWHL,2024/2025,Regular Season
+34,8:00,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,14,Renata Fast,,,,,38,Emerance Maschmeyer,,,,,,,50.3,33.1,0.0163,-1,O23,178,2025-02-16,PWHL,2024/2025,Regular Season
+35,8:52,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,2,event,5v5,3,Zoe Boyd,,,,,1,Raygan Kirk,,,,,,,51.0,-32.3,0.0380,1,O19,178,2025-02-16,PWHL,2024/2025,Regular Season
+36,9:36,Block,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,23,Megan Carter,,,,,38,Emerance Maschmeyer,,,,,,,47.0,33.1,,-1,O23,178,2025-02-16,PWHL,2024/2025,Regular Season
+37,9:50,Block,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,9,Daryl Watts,,,,,38,Emerance Maschmeyer,,,,,,,57.7,22.4,,-1,O17,178,2025-02-16,PWHL,2024/2025,Regular Season
+38,9:52,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,9,Daryl Watts,,,,,38,Emerance Maschmeyer,,,,,,,55.3,28.9,0.0163,-1,O23,178,2025-02-16,PWHL,2024/2025,Regular Season
+39,10:28,Block,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,2,event,5v5,13,Tereza Vanišová,,,,,1,Raygan Kirk,,,,,,,41.0,-22.1,,1,O20,178,2025-02-16,PWHL,2024/2025,Regular Season
+40,11:36,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,9,Daryl Watts,,,,,38,Emerance Maschmeyer,,,,,,,87.0,6.0,0.0758,-1,O08,178,2025-02-16,PWHL,2024/2025,Regular Season
+41,11:53,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,23,Megan Carter,,,,,38,Emerance Maschmeyer,,,,,,,47.7,-34.9,0.0341,-1,O19,178,2025-02-16,PWHL,2024/2025,Regular Season
+42,12:44,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,2,event,5v5,88,Ronja Savolainen,,,,,1,Raygan Kirk,,,,,,,48.7,-22.1,0.0546,1,O20,178,2025-02-16,PWHL,2024/2025,Regular Season
+43,13:11,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,15,Savannah Harmon,,,,,38,Emerance Maschmeyer,,,,,,,80.7,-0.8,0.1328,-1,O11,178,2025-02-16,PWHL,2024/2025,Regular Season
+44,13:25,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,14,Renata Fast,,,,,38,Emerance Maschmeyer,,,,,,,67.7,18.1,0.0438,-1,O17,178,2025-02-16,PWHL,2024/2025,Regular Season
+45,13:40,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,14,Renata Fast,,,,,38,Emerance Maschmeyer,,,,,,,70.3,-5.4,0.0838,-1,O14,178,2025-02-16,PWHL,2024/2025,Regular Season
+46,14:13,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,18,Jesse Compher,,,,,38,Emerance Maschmeyer,,,,,,,77.7,-2.8,0.1328,-1,O11,178,2025-02-16,PWHL,2024/2025,Regular Season
+47,14:25,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,2,event,5v5,26,Emily Clark,,,,,1,Raygan Kirk,,,,,,,66.7,8.8,0.1061,1,O16,178,2025-02-16,PWHL,2024/2025,Regular Season
+48,14:44,Penalty,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,2,event,5v5,23,Jocelyne Larocque,,,,,,,,,,,,,,,,1,,178,2025-02-16,PWHL,2024/2025,Regular Season
+49,15:19,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v4,18,Jesse Compher,,,,,38,Emerance Maschmeyer,,,,,,,87.7,5.4,0.1171,-1,O08,178,2025-02-16,PWHL,2024/2025,Regular Season
+50,15:20,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v4,88,Julia Gosling,,,,,38,Emerance Maschmeyer,,,,,,,82.7,1.4,0.1985,-1,O11,178,2025-02-16,PWHL,2024/2025,Regular Season
+51,15:54,Goal,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v4,9,Daryl Watts,34,Hannah Miller,14,Renata Fast,38,Emerance Maschmeyer,,17 18 26 71,Gabbie Hughes - Mannon McMahon - Emily Clark - Jincy Roese,,9 14 18 34 88,Daryl Watts - Renata Fast - Jesse Compher - Hannah Miller - Julia Gosling,56.3,0.3,0.0956,-1,O21,178,2025-02-16,PWHL,2024/2025,Regular Season
+52,16:08,Block,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,12,Allie Munroe,,,,,38,Emerance Maschmeyer,,,,,,,64.7,-3.1,,0,O15,178,2025-02-16,PWHL,2024/2025,Regular Season
+53,17:04,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,2,event,5v5,26,Emily Clark,,,,,1,Raygan Kirk,,,,,,,81.0,-3.7,0.1248,0,O11,178,2025-02-16,PWHL,2024/2025,Regular Season
+54,17:05,Penalty,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,14,Renata Fast,,,,,,,,,,,,,,,,0,,178,2025-02-16,PWHL,2024/2025,Regular Season
+55,17:17,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,2,event,5v4,13,Tereza Vanišová,,,,,1,Raygan Kirk,,,,,,,66.7,9.6,0.1377,0,O16,178,2025-02-16,PWHL,2024/2025,Regular Season
+56,17:39,Block,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,2,event,5v5,23,Jocelyne Larocque,,,,,1,Raygan Kirk,,,,,,,37.3,1.7,,0,O25,178,2025-02-16,PWHL,2024/2025,Regular Season
+57,17:56,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,4v5,40,Blayre Turnbull,,,,,38,Emerance Maschmeyer,,,,,,,64.0,6.8,0.1482,0,O16,178,2025-02-16,PWHL,2024/2025,Regular Season
+58,19:03,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,4v5,18,Jesse Compher,,,,,38,Emerance Maschmeyer,,,,,,,79.0,-4.0,0.2007,0,O11,178,2025-02-16,PWHL,2024/2025,Regular Season
+59,19:05,Block,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,4v5,23,Megan Carter,,,,,38,Emerance Maschmeyer,,,,,,,71.7,4.2,,0,O16,178,2025-02-16,PWHL,2024/2025,Regular Season
+60,19:08,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v5,18,Jesse Compher,,,,,38,Emerance Maschmeyer,,,,,,,71.7,0.8,0.0899,0,O16,178,2025-02-16,PWHL,2024/2025,Regular Season
+61,19:08,Penalty,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,2,event,5v5,2,Aneta Tejralová,,,,,,,,,,,,,,,,0,,178,2025-02-16,PWHL,2024/2025,Regular Season
+62,19:36,Goal,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,2,event,5v4,88,Julia Gosling,18,Jesse Compher,34,Hannah Miller,38,Emerance Maschmeyer,,18 23 27 92,Mannon McMahon - Jocelyne Larocque - Shiann Darkangelo - Danielle Serdachny,,9 14 18 34 88,Daryl Watts - Renata Fast - Jesse Compher - Hannah Miller - Julia Gosling,68.0,-16.1,0.0586,0,O13,178,2025-02-16,PWHL,2024/2025,Regular Season
+63,19:55,Block,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,2,event,5v4,18,Mannon McMahon,,,,,1,Raygan Kirk,,,,,,,34.0,11.3,,-1,O25,178,2025-02-16,PWHL,2024/2025,Regular Season
+64,0:21,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5,18,Jesse Compher,,,,,38,Emerance Maschmeyer,,,,,,,49.0,21.2,0.0461,1,O22,178,2025-02-16,PWHL,2024/2025,Regular Season
+65,1:43,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,2,Aneta Tejralová,,,,,1,Raygan Kirk,,,,,,,47.0,34.3,0.0163,-1,O23,178,2025-02-16,PWHL,2024/2025,Regular Season
+66,1:47,Block,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,6,Stephanie Markowski,,,,,1,Raygan Kirk,,,,,,,50.7,-1.4,,-1,O21,178,2025-02-16,PWHL,2024/2025,Regular Season
+67,2:56,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,17,Gabbie Hughes,,,,,1,Raygan Kirk,,,,,,,31.0,32.9,0.0277,-1,O26,178,2025-02-16,PWHL,2024/2025,Regular Season
+68,2:59,Penalty,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5,22,Maggie Connors,,,,,,,,,,,,,,,,1,,178,2025-02-16,PWHL,2024/2025,Regular Season
+69,4:10,Goal,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v4,13,Tereza Vanišová,26,Emily Clark,17,Gabbie Hughes,1,Raygan Kirk,,13 17 23 26 71,Tereza Vanišová - Gabbie Hughes - Jocelyne Larocque - Emily Clark - Jincy Roese,,6 12 18 40,Kali Flanagan - Allie Munroe - Jesse Compher - Blayre Turnbull,61.0,13.0,0.1464,-1,O16,178,2025-02-16,PWHL,2024/2025,Regular Season
+70,5:13,Penalty,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5,67,Emma Woods,,,,,,,,,,,,,,,,0,,178,2025-02-16,PWHL,2024/2025,Regular Season
+71,5:13,Penalty,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5,67,Emma Woods,,,,,,,,,,,,,,,,0,,178,2025-02-16,PWHL,2024/2025,Regular Season
+72,5:13,Penalty,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,88,Ronja Savolainen,,,,,,,,,,,,,,,,0,,178,2025-02-16,PWHL,2024/2025,Regular Season
+73,6:23,Block,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5,34,Hannah Miller,,,,,38,Emerance Maschmeyer,,,,,,,59.0,0.0,,0,O15,178,2025-02-16,PWHL,2024/2025,Regular Season
+74,6:24,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,3v4,34,Hannah Miller,,,,,38,Emerance Maschmeyer,,,,,,,74.3,-2.0,0.2007,0,O11,178,2025-02-16,PWHL,2024/2025,Regular Season
+75,7:21,Penalty,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,19,Brianne Jenner,,,,,,,,,,,,,,,,0,,178,2025-02-16,PWHL,2024/2025,Regular Season
+76,7:43,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v4,9,Daryl Watts,,,,,38,Emerance Maschmeyer,,,,,,,64.7,-14.5,0.1210,0,O14,178,2025-02-16,PWHL,2024/2025,Regular Season
+77,7:56,Block,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5,34,Hannah Miller,,,,,38,Emerance Maschmeyer,,,,,,,35.7,-20.4,,0,O24,178,2025-02-16,PWHL,2024/2025,Regular Season
+78,8:13,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v4,9,Daryl Watts,,,,,38,Emerance Maschmeyer,,,,,,,85.3,16.1,0.1099,0,O08,178,2025-02-16,PWHL,2024/2025,Regular Season
+79,8:46,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v4,88,Julia Gosling,,,,,38,Emerance Maschmeyer,,,,,,,71.3,-0.6,0.1581,0,O15,178,2025-02-16,PWHL,2024/2025,Regular Season
+80,8:48,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v4,14,Renata Fast,,,,,38,Emerance Maschmeyer,,,,,,,86.7,6.5,0.1099,0,O08,178,2025-02-16,PWHL,2024/2025,Regular Season
+81,9:13,Block,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5,15,Savannah Harmon,,,,,38,Emerance Maschmeyer,,,,,,,37.3,-6.2,,0,O25,178,2025-02-16,PWHL,2024/2025,Regular Season
+82,9:25,Block,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5,8,Izzy Daniel,,,,,38,Emerance Maschmeyer,,,,,,,57.0,-3.1,,0,O15,178,2025-02-16,PWHL,2024/2025,Regular Season
+83,9:46,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5,22,Maggie Connors,,,,,38,Emerance Maschmeyer,,,,,,,78.7,14.5,0.0709,0,O08,178,2025-02-16,PWHL,2024/2025,Regular Season
+84,10:52,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5,67,Emma Woods,,,,,38,Emerance Maschmeyer,,,,,,,32.7,33.7,0.0258,0,O26,178,2025-02-16,PWHL,2024/2025,Regular Season
+85,12:45,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,13,Tereza Vanišová,,,,,1,Raygan Kirk,,,,,,,63.0,-11.6,0.0785,0,O14,178,2025-02-16,PWHL,2024/2025,Regular Season
+86,13:21,Block,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,88,Ronja Savolainen,,,,,1,Raygan Kirk,,,,,,,35.0,-32.9,,0,O24,178,2025-02-16,PWHL,2024/2025,Regular Season
+87,14:11,Block,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,18,Mannon McMahon,,,,,1,Raygan Kirk,,,,,,,59.7,-21.8,,0,O13,178,2025-02-16,PWHL,2024/2025,Regular Season
+88,14:29,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,3,Zoe Boyd,,,,,1,Raygan Kirk,,,,,,,77.0,-11.9,0.0659,0,O06,178,2025-02-16,PWHL,2024/2025,Regular Season
+89,14:34,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,26,Emily Clark,,,,,1,Raygan Kirk,,,,,,,88.0,-5.4,0.0659,0,O06,178,2025-02-16,PWHL,2024/2025,Regular Season
+90,14:37,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,26,Emily Clark,,,,,1,Raygan Kirk,,,,,,,87.7,-9.6,0.0659,0,O06,178,2025-02-16,PWHL,2024/2025,Regular Season
+91,14:40,Block,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,71,Jincy Roese,,,,,1,Raygan Kirk,,,,,,,69.0,-3.7,,0,O14,178,2025-02-16,PWHL,2024/2025,Regular Season
+92,15:01,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,13,Tereza Vanišová,,,,,1,Raygan Kirk,,,,,,,84.7,8.2,0.0709,0,O08,178,2025-02-16,PWHL,2024/2025,Regular Season
+93,15:01,Penalty,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5,55,Rylind MacKinnon,,,,,,,,,,,,,,,,0,,178,2025-02-16,PWHL,2024/2025,Regular Season
+94,15:17,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v4,18,Mannon McMahon,,,,,1,Raygan Kirk,,,,,,,84.3,-36.3,0.0305,0,O04,178,2025-02-16,PWHL,2024/2025,Regular Season
+95,15:42,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v4,19,Brianne Jenner,,,,,1,Raygan Kirk,,,,,,,75.0,-12.8,0.1024,0,O06,178,2025-02-16,PWHL,2024/2025,Regular Season
+96,15:56,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v4,23,Jocelyne Larocque,,,,,1,Raygan Kirk,,,,,,,69.0,-19.3,0.0586,0,O13,178,2025-02-16,PWHL,2024/2025,Regular Season
+97,16:05,Block,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,13,Tereza Vanišová,,,,,1,Raygan Kirk,,,,,,,63.7,20.4,,0,O17,178,2025-02-16,PWHL,2024/2025,Regular Season
+98,16:12,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v4,13,Tereza Vanišová,,,,,1,Raygan Kirk,,,,,,,62.3,19.6,0.0645,0,O17,178,2025-02-16,PWHL,2024/2025,Regular Season
+99,16:14,Block,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,13,Tereza Vanišová,,,,,1,Raygan Kirk,,,,,,,62.0,0.8,,0,O15,178,2025-02-16,PWHL,2024/2025,Regular Season
+100,16:20,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v4,26,Emily Clark,,,,,1,Raygan Kirk,,,,,,,49.3,0.6,0.0895,0,O21,178,2025-02-16,PWHL,2024/2025,Regular Season
+101,16:34,Penalty,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v4,27,Shiann Darkangelo,,,,,,,,,,,,,,,,0,,178,2025-02-16,PWHL,2024/2025,Regular Season
+102,17:27,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v4,9,Daryl Watts,,,,,38,Emerance Maschmeyer,,,,,,,77.3,-17.6,0.1024,0,O06,178,2025-02-16,PWHL,2024/2025,Regular Season
+103,18:25,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v4,9,Daryl Watts,,,,,38,Emerance Maschmeyer,,,,,,,84.0,4.2,0.3021,0,O07,178,2025-02-16,PWHL,2024/2025,Regular Season
+104,18:26,Block,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v4,2,Aneta Tejralová,,,,,1,Raygan Kirk,,,,,,,-76.3,-11.6,,0,D08,178,2025-02-16,PWHL,2024/2025,Regular Season
+105,18:39,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5,15,Savannah Harmon,,,,,38,Emerance Maschmeyer,,,,,,,52.3,6.2,0.0573,0,O21,178,2025-02-16,PWHL,2024/2025,Regular Season
+106,19:20,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5,16,Hayley Scamurra,,,,,38,Emerance Maschmeyer,,,,,,,70.7,-5.7,0.0785,0,O14,178,2025-02-16,PWHL,2024/2025,Regular Season
+107,0:51,Goal,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,OT1,event,3v3,9,Daryl Watts,34,Hannah Miller,14,Renata Fast,38,Emerance Maschmeyer,,17 26 71,Gabbie Hughes - Emily Clark - Jincy Roese,,9 14 34,Daryl Watts - Renata Fast - Hannah Miller,88.0,2.5,0.2112,0,O07,178,2025-02-16,PWHL,2024/2025,Regular Season

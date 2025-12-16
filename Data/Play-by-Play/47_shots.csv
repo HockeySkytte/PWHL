@@ -1,81 +1,81 @@
-id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
-1,0:53,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,1,event,5v5,7,Laura Stacey,,,,,50,Kristen Campbell,,,,,,,88.7,22.1,47,2024-03-08,PWHL,2023/2024,Regular Season
-2,1:20,Goal,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,1,event,5v5,24,Natalie Spooner,24,Natalie Spooner,20,Sarah Nurse,20,Elaine Chuli,,6 12 20 24 34,Kali Flanagan - Allie Munroe - Sarah Nurse - Natalie Spooner - Hannah Miller,,4 9 15 21 43,Catherine Daoust - Kati Tabin - Maureen Murphy - Tereza Vanišová - Kristin O'Neill,-79.0,-4.0,47,2024-03-08,PWHL,2023/2024,Regular Season
-3,1:26,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,1,event,5v5,6,Kali Flanagan,,,,,20,Elaine Chuli,,,,,,,-70.3,4.2,47,2024-03-08,PWHL,2023/2024,Regular Season
-4,1:49,Block,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,1,event,5v5,2,Mariah Keopple,,,,,50,Kristen Campbell,,,,,,,34.7,-23.0,47,2024-03-08,PWHL,2023/2024,Regular Season
-5,2:06,Block,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,1,event,5v5,7,Olivia Knowles,,,,,20,Elaine Chuli,,,,,,,-36.7,-21.5,47,2024-03-08,PWHL,2023/2024,Regular Season
-6,3:56,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,1,event,5v5,41,Brittany Howard,,,,,20,Elaine Chuli,,,,,,,-49.7,15.0,47,2024-03-08,PWHL,2023/2024,Regular Season
-7,5:40,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,1,event,5v5,23,Erin Ambrose,,,,,50,Kristen Campbell,,,,,,,3.3,7.4,47,2024-03-08,PWHL,2023/2024,Regular Season
-8,6:22,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,1,event,5v5,4,Catherine Daoust,,,,,50,Kristen Campbell,,,,,,,42.0,32.9,47,2024-03-08,PWHL,2023/2024,Regular Season
-9,7:38,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,1,event,5v5,5,Lauriane Rougeau,,,,,20,Elaine Chuli,,,,,,,7.3,-8.8,47,2024-03-08,PWHL,2023/2024,Regular Season
-10,7:59,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,1,event,5v5,51,Victoria Bach,,,,,20,Elaine Chuli,,,,,,,-56.3,-10.2,47,2024-03-08,PWHL,2023/2024,Regular Season
-11,8:16,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,1,event,5v5,22,Maggie Connors,,,,,20,Elaine Chuli,,,,,,,-76.3,36.3,47,2024-03-08,PWHL,2023/2024,Regular Season
-12,8:32,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,1,event,5v5,29,Marie-Philip Poulin,,,,,50,Kristen Campbell,,,,,,,76.0,12.5,47,2024-03-08,PWHL,2023/2024,Regular Season
-13,8:48,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,1,event,5v5,7,Laura Stacey,,,,,50,Kristen Campbell,,,,,,,77.3,23.0,47,2024-03-08,PWHL,2023/2024,Regular Season
-14,9:30,Block,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,1,event,5v5,9,Kati Tabin,,,,,50,Kristen Campbell,,,,,,,40.0,-19.0,47,2024-03-08,PWHL,2023/2024,Regular Season
-15,9:39,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,1,event,5v5,15,Maureen Murphy,,,,,50,Kristen Campbell,,,,,,,47.0,-14.2,47,2024-03-08,PWHL,2023/2024,Regular Season
-16,10:24,Block,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,1,event,5v5,23,Erin Ambrose,,,,,50,Kristen Campbell,,,,,,,40.0,15.0,47,2024-03-08,PWHL,2023/2024,Regular Season
-17,11:57,Block,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,1,event,5v5,41,Brittany Howard,,,,,20,Elaine Chuli,,,,,,,-39.0,11.1,47,2024-03-08,PWHL,2023/2024,Regular Season
-18,12:57,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,1,event,5v5,7,Laura Stacey,,,,,50,Kristen Campbell,,,,,,,31.0,-7.4,47,2024-03-08,PWHL,2023/2024,Regular Season
-19,13:57,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,1,event,5v5,6,Kali Flanagan,,,,,20,Elaine Chuli,,,,,,,-27.0,-29.2,47,2024-03-08,PWHL,2023/2024,Regular Season
-20,15:33,Block,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,1,event,5v5,6,Kali Flanagan,,,,,20,Elaine Chuli,,,,,,,-61.0,-4.8,47,2024-03-08,PWHL,2023/2024,Regular Season
-21,16:45,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,1,event,5v5,27,Emma Maltais,,,,,20,Elaine Chuli,,,,,,,-81.0,3.4,47,2024-03-08,PWHL,2023/2024,Regular Season
-22,17:12,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,1,event,5v5,29,Marie-Philip Poulin,,,,,50,Kristen Campbell,,,,,,,42.0,-6.0,47,2024-03-08,PWHL,2023/2024,Regular Season
-23,17:44,Penalty,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,1,event,5v5,29,Marie-Philip Poulin,,,,,,,,,,,,,,,47,2024-03-08,PWHL,2023/2024,Regular Season
-24,18:11,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,1,event,5v4,34,Hannah Miller,,,,,20,Elaine Chuli,,,,,,,-41.0,16.1,47,2024-03-08,PWHL,2023/2024,Regular Season
-25,19:00,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,1,event,5v4,3,Jocelyne Larocque,,,,,20,Elaine Chuli,,,,,,,-43.3,-24.6,47,2024-03-08,PWHL,2023/2024,Regular Season
-26,19:13,Block,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,1,event,5v4,34,Hannah Miller,,,,,20,Elaine Chuli,,,,,,,-60.7,26.1,47,2024-03-08,PWHL,2023/2024,Regular Season
-27,0:19,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,2,event,5v5,2,Mariah Keopple,,,,,50,Kristen Campbell,,,,,,,42.3,-10.8,47,2024-03-08,PWHL,2023/2024,Regular Season
-28,1:14,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,2,event,5v5,9,Kati Tabin,,,,,50,Kristen Campbell,,,,,,,-33.0,17.3,47,2024-03-08,PWHL,2023/2024,Regular Season
-29,1:30,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,18,Jesse Compher,,,,,20,Elaine Chuli,,,,,,,77.3,-12.8,47,2024-03-08,PWHL,2023/2024,Regular Season
-30,3:08,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,12,Allie Munroe,,,,,20,Elaine Chuli,,,,,,,-11.0,-28.3,47,2024-03-08,PWHL,2023/2024,Regular Season
-31,5:41,Block,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,51,Victoria Bach,,,,,20,Elaine Chuli,,,,,,,-84.3,-6.8,47,2024-03-08,PWHL,2023/2024,Regular Season
-32,6:02,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,10,Alexa Vasko,,,,,20,Elaine Chuli,,,,,,,-85.7,6.8,47,2024-03-08,PWHL,2023/2024,Regular Season
-33,7:31,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,2,event,5v5,16,Sarah Lefort,,,,,50,Kristen Campbell,,,,,,,85.3,19.6,47,2024-03-08,PWHL,2023/2024,Regular Season
-34,7:42,Block,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,2,event,5v5,9,Kati Tabin,,,,,50,Kristen Campbell,,,,,,,61.0,17.6,47,2024-03-08,PWHL,2023/2024,Regular Season
-35,8:06,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,41,Brittany Howard,,,,,,,,,,,,,,,47,2024-03-08,PWHL,2023/2024,Regular Season
-36,8:06,Penalty,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,2,event,5v5,16,Sarah Lefort,,,,,,,,,,,,,,,47,2024-03-08,PWHL,2023/2024,Regular Season
-37,8:06,Penalty,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,2,event,5v5,28,Catherine Dubois,,,,,,,,,,,,,,,47,2024-03-08,PWHL,2023/2024,Regular Season
-38,8:06,Penalty,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,2,event,5v5,26,Sarah Bujold,,,,,,,,,,,,,,,47,2024-03-08,PWHL,2023/2024,Regular Season
-39,8:06,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,10,Alexa Vasko,,,,,,,,,,,,,,,47,2024-03-08,PWHL,2023/2024,Regular Season
-40,8:06,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,19,Rebecca Leslie,,,,,,,,,,,,,,,47,2024-03-08,PWHL,2023/2024,Regular Season
-41,8:23,Block,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,14,Renata Fast,,,,,20,Elaine Chuli,,,,,,,-60.3,-19.6,47,2024-03-08,PWHL,2023/2024,Regular Season
-42,9:10,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,2,event,5v5,25,Mélodie Daoust,,,,,50,Kristen Campbell,,,,,,,47.7,3.1,47,2024-03-08,PWHL,2023/2024,Regular Season
-43,9:56,Penalty,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,2,event,5v5,21,Tereza Vanišová,,,,,,,,,,,,,,,47,2024-03-08,PWHL,2023/2024,Regular Season
-44,10:03,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v4,3,Jocelyne Larocque,,,,,20,Elaine Chuli,,,,,,,-45.7,28.9,47,2024-03-08,PWHL,2023/2024,Regular Season
-45,10:08,Block,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,14,Renata Fast,,,,,20,Elaine Chuli,,,,,,,-45.7,0.3,47,2024-03-08,PWHL,2023/2024,Regular Season
-46,13:44,Block,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,2,event,5v5,17,Alexandra Poznikoff,,,,,50,Kristen Campbell,,,,,,,37.7,17.3,47,2024-03-08,PWHL,2023/2024,Regular Season
-47,13:53,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,17,Samantha Cogan,,,,,20,Elaine Chuli,,,,,,,-69.0,16.7,47,2024-03-08,PWHL,2023/2024,Regular Season
-48,14:38,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,24,Natalie Spooner,,,,,20,Elaine Chuli,,,,,,,-39.0,-11.9,47,2024-03-08,PWHL,2023/2024,Regular Season
-49,14:53,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,40,Blayre Turnbull,,,,,20,Elaine Chuli,,,,,,,-88.3,-6.0,47,2024-03-08,PWHL,2023/2024,Regular Season
-50,16:31,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,51,Victoria Bach,,,,,20,Elaine Chuli,,,,,,,-79.7,-0.8,47,2024-03-08,PWHL,2023/2024,Regular Season
-51,16:55,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,17,Samantha Cogan,,,,,20,Elaine Chuli,,,,,,,-63.0,6.0,47,2024-03-08,PWHL,2023/2024,Regular Season
-52,17:07,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,2,event,5v5,21,Tereza Vanišová,,,,,50,Kristen Campbell,,,,,,,69.3,-24.1,47,2024-03-08,PWHL,2023/2024,Regular Season
-53,17:57,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,2,event,5v5,23,Erin Ambrose,,,,,50,Kristen Campbell,,,,,,,36.7,34.3,47,2024-03-08,PWHL,2023/2024,Regular Season
-54,18:13,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,14,Renata Fast,,,,,20,Elaine Chuli,,,,,,,-79.3,-34.0,47,2024-03-08,PWHL,2023/2024,Regular Season
-55,18:17,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,20,Sarah Nurse,,,,,,,,,,,,,,,47,2024-03-08,PWHL,2023/2024,Regular Season
-56,19:00,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,2,event,5v4,23,Erin Ambrose,,,,,50,Kristen Campbell,,,,,,,47.0,38.0,47,2024-03-08,PWHL,2023/2024,Regular Season
-57,19:50,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,2,event,5v4,25,Mélodie Daoust,,,,,50,Kristen Campbell,,,,,,,71.3,10.5,47,2024-03-08,PWHL,2023/2024,Regular Season
-58,0:40,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,3,event,5v5,51,Victoria Bach,,,,,20,Elaine Chuli,,,,,,,-79.0,-4.2,47,2024-03-08,PWHL,2023/2024,Regular Season
-59,1:10,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,3,event,5v5,17,Samantha Cogan,,,,,20,Elaine Chuli,,,,,,,-83.3,-4.2,47,2024-03-08,PWHL,2023/2024,Regular Season
-60,3:47,Goal,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,3,event,5v5,19,Rebecca Leslie,7,Olivia Knowles,41,Brittany Howard,20,Elaine Chuli,,5 7 10 19 41,Lauriane Rougeau - Olivia Knowles - Alexa Vasko - Rebecca Leslie - Brittany Howard,,6 12 24 26 28,Madison Bizal - Leah Lum - Ann-Sophie Bettez - Sarah Bujold - Catherine Dubois,-46.0,-28.1,47,2024-03-08,PWHL,2023/2024,Regular Season
-61,4:02,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,3,event,5v5,9,Kati Tabin,,,,,50,Kristen Campbell,,,,,,,35.0,-23.0,47,2024-03-08,PWHL,2023/2024,Regular Season
-62,4:06,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,3,event,5v5,7,Laura Stacey,,,,,50,Kristen Campbell,,,,,,,48.7,-14.5,47,2024-03-08,PWHL,2023/2024,Regular Season
-63,4:48,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,3,event,5v5,22,Maggie Connors,,,,,20,Elaine Chuli,,,,,,,-62.0,14.2,47,2024-03-08,PWHL,2023/2024,Regular Season
-64,8:56,Block,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,3,event,5v5,4,Catherine Daoust,,,,,50,Kristen Campbell,,,,,,,67.0,0.3,47,2024-03-08,PWHL,2023/2024,Regular Season
-65,10:03,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,3,event,5v5,19,Rebecca Leslie,,,,,20,Elaine Chuli,,,,,,,-17.0,-34.3,47,2024-03-08,PWHL,2023/2024,Regular Season
-66,11:16,Block,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,3,event,5v5,25,Mélodie Daoust,,,,,50,Kristen Campbell,,,,,,,60.0,-16.4,47,2024-03-08,PWHL,2023/2024,Regular Season
-67,11:42,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,3,event,5v5,3,Jocelyne Larocque,,,,,20,Elaine Chuli,,,,,,,-52.0,-25.8,47,2024-03-08,PWHL,2023/2024,Regular Season
-68,12:02,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,3,event,5v5,5,Lauriane Rougeau,,,,,20,Elaine Chuli,,,,,,,-37.7,-31.4,47,2024-03-08,PWHL,2023/2024,Regular Season
-69,12:05,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,3,event,5v5,23,Erin Ambrose,,,,,50,Kristen Campbell,,,,,,,46.7,-5.1,47,2024-03-08,PWHL,2023/2024,Regular Season
-70,12:38,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,3,event,5v5,51,Victoria Bach,,,,,20,Elaine Chuli,,,,,,,-73.0,24.9,47,2024-03-08,PWHL,2023/2024,Regular Season
-71,12:48,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,3,event,5v5,20,Sarah Nurse,,,,,20,Elaine Chuli,,,,,,,-63.7,-15.6,47,2024-03-08,PWHL,2023/2024,Regular Season
-72,12:49,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,3,event,5v5,34,Hannah Miller,,,,,20,Elaine Chuli,,,,,,,-43.7,11.6,47,2024-03-08,PWHL,2023/2024,Regular Season
-73,14:18,Block,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,3,event,5v5,24,Natalie Spooner,,,,,20,Elaine Chuli,,,,,,,-52.3,-39.9,47,2024-03-08,PWHL,2023/2024,Regular Season
-74,15:18,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,3,event,5v5,18,Jesse Compher,,,,,20,Elaine Chuli,,,,,,,-82.3,-1.1,47,2024-03-08,PWHL,2023/2024,Regular Season
-75,17:18,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,3,event,5v5,7,Laura Stacey,,,,,50,Kristen Campbell,,,,,,,82.0,1.7,47,2024-03-08,PWHL,2023/2024,Regular Season
-76,17:30,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,3,event,5v5,7,Laura Stacey,,,,,50,Kristen Campbell,,,,,,,76.3,-20.4,47,2024-03-08,PWHL,2023/2024,Regular Season
-77,17:41,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,3,event,5v5,29,Marie-Philip Poulin,,,,,50,Kristen Campbell,,,,,,,57.0,-9.9,47,2024-03-08,PWHL,2023/2024,Regular Season
-78,18:43,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,3,event,5v5,3,Jocelyne Larocque,,,,,,,,,,,,,,,47,2024-03-08,PWHL,2023/2024,Regular Season
-79,18:54,Goal,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,3,event,4v5,27,Emma Maltais,40,Blayre Turnbull,12,Allie Munroe,20,Elaine Chuli,,12 14 27 40,Allie Munroe - Renata Fast - Emma Maltais - Blayre Turnbull,,7 15 23 25 26 29,Laura Stacey - Maureen Murphy - Erin Ambrose - Mélodie Daoust - Sarah Bujold - Marie-Philip Poulin,-67.3,-4.0,47,2024-03-08,PWHL,2023/2024,Regular Season
-80,19:55,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,3,event,5v4,12,Leah Lum,,,,,50,Kristen Campbell,,,,,,,31.3,-19.6,47,2024-03-08,PWHL,2023/2024,Regular Season
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,xG,ScoreState,BoxID,game_id,game_date,competition,season,state
+1,0:53,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,1,event,5v5,7,Laura Stacey,,,,,50,Kristen Campbell,,,,,,,88.7,22.1,0.0296,0,O09,47,2024-03-08,PWHL,2023/2024,Regular Season
+2,1:20,Goal,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,1,event,5v5,24,Natalie Spooner,24,Natalie Spooner,20,Sarah Nurse,20,Elaine Chuli,,6 12 20 24 34,Kali Flanagan - Allie Munroe - Sarah Nurse - Natalie Spooner - Hannah Miller,,4 9 15 21 43,Catherine Daoust - Kati Tabin - Maureen Murphy - Tereza Vanišová - Kristin O'Neill,79.0,4.0,0.1248,0,O11,47,2024-03-08,PWHL,2023/2024,Regular Season
+3,1:26,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,1,event,5v5,6,Kali Flanagan,,,,,20,Elaine Chuli,,,,,,,70.3,-4.2,0.0929,1,O14,47,2024-03-08,PWHL,2023/2024,Regular Season
+4,1:49,Block,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,1,event,5v5,2,Mariah Keopple,,,,,50,Kristen Campbell,,,,,,,34.7,-23.0,,-1,O24,47,2024-03-08,PWHL,2023/2024,Regular Season
+5,2:06,Block,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,1,event,5v5,7,Olivia Knowles,,,,,20,Elaine Chuli,,,,,,,36.7,21.5,,1,O26,47,2024-03-08,PWHL,2023/2024,Regular Season
+6,3:56,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,1,event,5v5,41,Brittany Howard,,,,,20,Elaine Chuli,,,,,,,49.7,-15.0,0.0546,1,O20,47,2024-03-08,PWHL,2023/2024,Regular Season
+7,5:40,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,1,event,5v5,23,Erin Ambrose,,,,,50,Kristen Campbell,,,,,,,3.3,7.4,0.0591,-1,N02,47,2024-03-08,PWHL,2023/2024,Regular Season
+8,6:22,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,1,event,5v5,4,Catherine Daoust,,,,,50,Kristen Campbell,,,,,,,42.0,32.9,0.0163,-1,O23,47,2024-03-08,PWHL,2023/2024,Regular Season
+9,7:38,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,1,event,5v5,5,Lauriane Rougeau,,,,,20,Elaine Chuli,,,,,,,-7.3,8.8,0.0657,1,N05,47,2024-03-08,PWHL,2023/2024,Regular Season
+10,7:59,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,1,event,5v5,51,Victoria Bach,,,,,20,Elaine Chuli,,,,,,,56.3,10.2,0.0461,1,O22,47,2024-03-08,PWHL,2023/2024,Regular Season
+11,8:16,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,1,event,5v5,22,Maggie Connors,,,,,20,Elaine Chuli,,,,,,,76.3,-36.3,0.0229,1,O04,47,2024-03-08,PWHL,2023/2024,Regular Season
+12,8:32,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,1,event,5v5,29,Marie-Philip Poulin,,,,,50,Kristen Campbell,,,,,,,76.0,12.5,0.0758,-1,O08,47,2024-03-08,PWHL,2023/2024,Regular Season
+13,8:48,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,1,event,5v5,7,Laura Stacey,,,,,50,Kristen Campbell,,,,,,,77.3,23.0,0.0318,-1,O09,47,2024-03-08,PWHL,2023/2024,Regular Season
+14,9:30,Block,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,1,event,5v5,9,Kati Tabin,,,,,50,Kristen Campbell,,,,,,,40.0,-19.0,,-1,O24,47,2024-03-08,PWHL,2023/2024,Regular Season
+15,9:39,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,1,event,5v5,15,Maureen Murphy,,,,,50,Kristen Campbell,,,,,,,47.0,-14.2,0.0491,-1,O20,47,2024-03-08,PWHL,2023/2024,Regular Season
+16,10:24,Block,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,1,event,5v5,23,Erin Ambrose,,,,,50,Kristen Campbell,,,,,,,40.0,15.0,,-1,O25,47,2024-03-08,PWHL,2023/2024,Regular Season
+17,11:57,Block,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,1,event,5v5,41,Brittany Howard,,,,,20,Elaine Chuli,,,,,,,39.0,-11.1,,1,O25,47,2024-03-08,PWHL,2023/2024,Regular Season
+18,12:57,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,1,event,5v5,7,Laura Stacey,,,,,50,Kristen Campbell,,,,,,,31.0,-7.4,0.0450,-1,O25,47,2024-03-08,PWHL,2023/2024,Regular Season
+19,13:57,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,1,event,5v5,6,Kali Flanagan,,,,,20,Elaine Chuli,,,,,,,27.0,29.2,0.0309,1,O26,47,2024-03-08,PWHL,2023/2024,Regular Season
+20,15:33,Block,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,1,event,5v5,6,Kali Flanagan,,,,,20,Elaine Chuli,,,,,,,61.0,4.8,,1,O15,47,2024-03-08,PWHL,2023/2024,Regular Season
+21,16:45,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,1,event,5v5,27,Emma Maltais,,,,,20,Elaine Chuli,,,,,,,81.0,-3.4,0.1463,1,O11,47,2024-03-08,PWHL,2023/2024,Regular Season
+22,17:12,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,1,event,5v5,29,Marie-Philip Poulin,,,,,50,Kristen Campbell,,,,,,,42.0,-6.0,0.0614,-1,O21,47,2024-03-08,PWHL,2023/2024,Regular Season
+23,17:44,Penalty,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,1,event,5v5,29,Marie-Philip Poulin,,,,,,,,,,,,,,,,-1,,47,2024-03-08,PWHL,2023/2024,Regular Season
+24,18:11,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,1,event,5v4,34,Hannah Miller,,,,,20,Elaine Chuli,,,,,,,41.0,-16.1,0.0854,1,O20,47,2024-03-08,PWHL,2023/2024,Regular Season
+25,19:00,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,1,event,5v4,3,Jocelyne Larocque,,,,,20,Elaine Chuli,,,,,,,43.3,24.6,0.0724,1,O22,47,2024-03-08,PWHL,2023/2024,Regular Season
+26,19:13,Block,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,1,event,5v4,34,Hannah Miller,,,,,20,Elaine Chuli,,,,,,,60.7,-26.1,,1,O13,47,2024-03-08,PWHL,2023/2024,Regular Season
+27,0:19,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,2,event,5v5,2,Mariah Keopple,,,,,50,Kristen Campbell,,,,,,,42.3,-10.8,0.0614,-1,O21,47,2024-03-08,PWHL,2023/2024,Regular Season
+28,1:14,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,2,event,5v5,9,Kati Tabin,,,,,50,Kristen Campbell,,,,,,,-33.0,17.3,0.0591,-1,D25,47,2024-03-08,PWHL,2023/2024,Regular Season
+29,1:30,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,18,Jesse Compher,,,,,20,Elaine Chuli,,,,,,,-77.3,12.8,0.0657,1,D06,47,2024-03-08,PWHL,2023/2024,Regular Season
+30,3:08,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,12,Allie Munroe,,,,,20,Elaine Chuli,,,,,,,11.0,28.3,0.0657,1,N03,47,2024-03-08,PWHL,2023/2024,Regular Season
+31,5:41,Block,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,51,Victoria Bach,,,,,20,Elaine Chuli,,,,,,,84.3,6.8,,1,O08,47,2024-03-08,PWHL,2023/2024,Regular Season
+32,6:02,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,10,Alexa Vasko,,,,,20,Elaine Chuli,,,,,,,85.7,-6.8,0.0782,1,O06,47,2024-03-08,PWHL,2023/2024,Regular Season
+33,7:31,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,2,event,5v5,16,Sarah Lefort,,,,,50,Kristen Campbell,,,,,,,85.3,19.6,0.0318,-1,O09,47,2024-03-08,PWHL,2023/2024,Regular Season
+34,7:42,Block,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,2,event,5v5,9,Kati Tabin,,,,,50,Kristen Campbell,,,,,,,61.0,17.6,,-1,O16,47,2024-03-08,PWHL,2023/2024,Regular Season
+35,8:06,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,41,Brittany Howard,,,,,,,,,,,,,,,,1,,47,2024-03-08,PWHL,2023/2024,Regular Season
+36,8:06,Penalty,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,2,event,5v5,16,Sarah Lefort,,,,,,,,,,,,,,,,-1,,47,2024-03-08,PWHL,2023/2024,Regular Season
+37,8:06,Penalty,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,2,event,5v5,28,Catherine Dubois,,,,,,,,,,,,,,,,-1,,47,2024-03-08,PWHL,2023/2024,Regular Season
+38,8:06,Penalty,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,2,event,5v5,26,Sarah Bujold,,,,,,,,,,,,,,,,-1,,47,2024-03-08,PWHL,2023/2024,Regular Season
+39,8:06,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,10,Alexa Vasko,,,,,,,,,,,,,,,,1,,47,2024-03-08,PWHL,2023/2024,Regular Season
+40,8:06,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,19,Rebecca Leslie,,,,,,,,,,,,,,,,1,,47,2024-03-08,PWHL,2023/2024,Regular Season
+41,8:23,Block,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,14,Renata Fast,,,,,20,Elaine Chuli,,,,,,,60.3,19.6,,1,O17,47,2024-03-08,PWHL,2023/2024,Regular Season
+42,9:10,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,2,event,5v5,25,Mélodie Daoust,,,,,50,Kristen Campbell,,,,,,,47.7,3.1,0.0614,-1,O21,47,2024-03-08,PWHL,2023/2024,Regular Season
+43,9:56,Penalty,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,2,event,5v5,21,Tereza Vanišová,,,,,,,,,,,,,,,,-1,,47,2024-03-08,PWHL,2023/2024,Regular Season
+44,10:03,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v4,3,Jocelyne Larocque,,,,,20,Elaine Chuli,,,,,,,45.7,-28.9,0.0601,1,O19,47,2024-03-08,PWHL,2023/2024,Regular Season
+45,10:08,Block,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,14,Renata Fast,,,,,20,Elaine Chuli,,,,,,,45.7,-0.3,,1,O21,47,2024-03-08,PWHL,2023/2024,Regular Season
+46,13:44,Block,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,2,event,5v5,17,Alexandra Poznikoff,,,,,50,Kristen Campbell,,,,,,,37.7,17.3,,-1,O25,47,2024-03-08,PWHL,2023/2024,Regular Season
+47,13:53,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,17,Samantha Cogan,,,,,20,Elaine Chuli,,,,,,,69.0,-16.7,0.0443,1,O13,47,2024-03-08,PWHL,2023/2024,Regular Season
+48,14:38,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,24,Natalie Spooner,,,,,20,Elaine Chuli,,,,,,,39.0,11.9,0.0500,1,O25,47,2024-03-08,PWHL,2023/2024,Regular Season
+49,14:53,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,40,Blayre Turnbull,,,,,20,Elaine Chuli,,,,,,,88.3,6.0,0.0841,1,O08,47,2024-03-08,PWHL,2023/2024,Regular Season
+50,16:31,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,51,Victoria Bach,,,,,20,Elaine Chuli,,,,,,,79.7,0.8,0.1463,1,O11,47,2024-03-08,PWHL,2023/2024,Regular Season
+51,16:55,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,17,Samantha Cogan,,,,,20,Elaine Chuli,,,,,,,63.0,-6.0,0.0929,1,O14,47,2024-03-08,PWHL,2023/2024,Regular Season
+52,17:07,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,2,event,5v5,21,Tereza Vanišová,,,,,50,Kristen Campbell,,,,,,,69.3,-24.1,0.0398,-1,O13,47,2024-03-08,PWHL,2023/2024,Regular Season
+53,17:57,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,2,event,5v5,23,Erin Ambrose,,,,,50,Kristen Campbell,,,,,,,36.7,34.3,0.0277,-1,O26,47,2024-03-08,PWHL,2023/2024,Regular Season
+54,18:13,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,14,Renata Fast,,,,,20,Elaine Chuli,,,,,,,79.3,34.0,0.0268,1,O10,47,2024-03-08,PWHL,2023/2024,Regular Season
+55,18:17,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,2,event,5v5,20,Sarah Nurse,,,,,,,,,,,,,,,,1,,47,2024-03-08,PWHL,2023/2024,Regular Season
+56,19:00,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,2,event,5v4,23,Erin Ambrose,,,,,50,Kristen Campbell,,,,,,,47.0,38.0,0.0261,-1,O23,47,2024-03-08,PWHL,2023/2024,Regular Season
+57,19:50,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,2,event,5v4,25,Mélodie Daoust,,,,,50,Kristen Campbell,,,,,,,71.3,10.5,0.1464,-1,O16,47,2024-03-08,PWHL,2023/2024,Regular Season
+58,0:40,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,3,event,5v5,51,Victoria Bach,,,,,20,Elaine Chuli,,,,,,,79.0,4.2,0.1463,1,O11,47,2024-03-08,PWHL,2023/2024,Regular Season
+59,1:10,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,3,event,5v5,17,Samantha Cogan,,,,,20,Elaine Chuli,,,,,,,83.3,4.2,0.2435,1,O07,47,2024-03-08,PWHL,2023/2024,Regular Season
+60,3:47,Goal,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,3,event,5v5,19,Rebecca Leslie,7,Olivia Knowles,41,Brittany Howard,20,Elaine Chuli,,5 7 10 19 41,Lauriane Rougeau - Olivia Knowles - Alexa Vasko - Rebecca Leslie - Brittany Howard,,6 12 24 26 28,Madison Bizal - Leah Lum - Ann-Sophie Bettez - Sarah Bujold - Catherine Dubois,46.0,28.1,0.0182,1,O23,47,2024-03-08,PWHL,2023/2024,Regular Season
+61,4:02,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,3,event,5v5,9,Kati Tabin,,,,,50,Kristen Campbell,,,,,,,35.0,-23.0,0.0433,-2,O24,47,2024-03-08,PWHL,2023/2024,Regular Season
+62,4:06,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,3,event,5v5,7,Laura Stacey,,,,,50,Kristen Campbell,,,,,,,48.7,-14.5,0.0496,-2,O20,47,2024-03-08,PWHL,2023/2024,Regular Season
+63,4:48,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,3,event,5v5,22,Maggie Connors,,,,,20,Elaine Chuli,,,,,,,62.0,-14.2,0.1161,2,O14,47,2024-03-08,PWHL,2023/2024,Regular Season
+64,8:56,Block,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,3,event,5v5,4,Catherine Daoust,,,,,50,Kristen Campbell,,,,,,,67.0,0.3,,-2,O15,47,2024-03-08,PWHL,2023/2024,Regular Season
+65,10:03,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,3,event,5v5,19,Rebecca Leslie,,,,,20,Elaine Chuli,,,,,,,17.0,34.3,0.0828,2,N03,47,2024-03-08,PWHL,2023/2024,Regular Season
+66,11:16,Block,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,3,event,5v5,25,Mélodie Daoust,,,,,50,Kristen Campbell,,,,,,,60.0,-16.4,,-2,O14,47,2024-03-08,PWHL,2023/2024,Regular Season
+67,11:42,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,3,event,5v5,3,Jocelyne Larocque,,,,,20,Elaine Chuli,,,,,,,52.0,25.8,0.0232,2,O23,47,2024-03-08,PWHL,2023/2024,Regular Season
+68,12:02,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,3,event,5v5,5,Lauriane Rougeau,,,,,20,Elaine Chuli,,,,,,,37.7,31.4,0.0393,2,O26,47,2024-03-08,PWHL,2023/2024,Regular Season
+69,12:05,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,3,event,5v5,23,Erin Ambrose,,,,,50,Kristen Campbell,,,,,,,46.7,-5.1,0.0620,-2,O21,47,2024-03-08,PWHL,2023/2024,Regular Season
+70,12:38,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,3,event,5v5,51,Victoria Bach,,,,,20,Elaine Chuli,,,,,,,73.0,-24.9,0.0271,2,O05,47,2024-03-08,PWHL,2023/2024,Regular Season
+71,12:48,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,3,event,5v5,20,Sarah Nurse,,,,,20,Elaine Chuli,,,,,,,63.7,15.6,0.1322,2,O16,47,2024-03-08,PWHL,2023/2024,Regular Season
+72,12:49,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,3,event,5v5,34,Hannah Miller,,,,,20,Elaine Chuli,,,,,,,43.7,-11.6,0.0858,2,O21,47,2024-03-08,PWHL,2023/2024,Regular Season
+73,14:18,Block,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,3,event,5v5,24,Natalie Spooner,,,,,20,Elaine Chuli,,,,,,,52.3,39.9,,2,O23,47,2024-03-08,PWHL,2023/2024,Regular Season
+74,15:18,Shot,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,3,event,5v5,18,Jesse Compher,,,,,20,Elaine Chuli,,,,,,,82.3,1.1,0.1803,2,O11,47,2024-03-08,PWHL,2023/2024,Regular Season
+75,17:18,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,3,event,5v5,7,Laura Stacey,,,,,50,Kristen Campbell,,,,,,,82.0,1.7,0.1341,-2,O11,47,2024-03-08,PWHL,2023/2024,Regular Season
+76,17:30,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,3,event,5v5,7,Laura Stacey,,,,,50,Kristen Campbell,,,,,,,76.3,-20.4,0.0712,-2,O06,47,2024-03-08,PWHL,2023/2024,Regular Season
+77,17:41,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,3,event,5v5,29,Marie-Philip Poulin,,,,,50,Kristen Campbell,,,,,,,57.0,-9.9,0.0847,-2,O14,47,2024-03-08,PWHL,2023/2024,Regular Season
+78,18:43,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,3,event,5v5,3,Jocelyne Larocque,,,,,,,,,,,,,,,,2,,47,2024-03-08,PWHL,2023/2024,Regular Season
+79,18:54,Goal,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,3,event,4v5,27,Emma Maltais,40,Blayre Turnbull,12,Allie Munroe,20,Elaine Chuli,,12 14 27 40,Allie Munroe - Renata Fast - Emma Maltais - Blayre Turnbull,,7 15 23 25 26 29,Laura Stacey - Maureen Murphy - Erin Ambrose - Mélodie Daoust - Sarah Bujold - Marie-Philip Poulin,67.3,4.0,0.2116,2,O16,47,2024-03-08,PWHL,2023/2024,Regular Season
+80,19:55,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,3,event,5v4,12,Leah Lum,,,,,50,Kristen Campbell,,,,,,,31.3,-19.6,0.0714,-3,O25,47,2024-03-08,PWHL,2023/2024,Regular Season

@@ -1,72 +1,72 @@
-id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
-1,0:20,Block,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,7,Laura Stacey,,,,,31,Aerin Frankel,,,,,,,60.3,11.1,89,2024-05-14,PWHL,2023/2024,Playoffs
-2,4:16,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,16,Sarah Lefort,,,,,31,Aerin Frankel,,,,,,,47.7,-24.1,89,2024-05-14,PWHL,2023/2024,Playoffs
-3,4:41,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,23,Erin Ambrose,,,,,31,Aerin Frankel,,,,,,,36.3,24.1,89,2024-05-14,PWHL,2023/2024,Playoffs
-4,4:56,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,47,Jamie Lee Rattray,,,,,35,Ann-Renée Desbiens,,,,,,,-33.0,-11.6,89,2024-05-14,PWHL,2023/2024,Playoffs
-5,5:31,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,9,Kati Tabin,,,,,31,Aerin Frankel,,,,,,,58.3,6.5,89,2024-05-14,PWHL,2023/2024,Playoffs
-6,5:52,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,9,Kati Tabin,,,,,31,Aerin Frankel,,,,,,,67.7,-2.0,89,2024-05-14,PWHL,2023/2024,Playoffs
-7,6:04,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,42,Claire Dalton,,,,,31,Aerin Frankel,,,,,,,61.7,12.8,89,2024-05-14,PWHL,2023/2024,Playoffs
-8,6:18,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,7,Laura Stacey,,,,,31,Aerin Frankel,,,,,,,45.7,15.9,89,2024-05-14,PWHL,2023/2024,Playoffs
-9,8:12,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,23,Erin Ambrose,,,,,31,Aerin Frankel,,,,,,,37.0,8.8,89,2024-05-14,PWHL,2023/2024,Playoffs
-10,8:59,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,8,Gabrielle David,,,,,31,Aerin Frankel,,,,,,,75.3,2.8,89,2024-05-14,PWHL,2023/2024,Playoffs
-11,10:01,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,5,Megan Keller,,,,,35,Ann-Renée Desbiens,,,,,,,-65.0,-11.9,89,2024-05-14,PWHL,2023/2024,Playoffs
-12,11:03,Block,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,7,Laura Stacey,,,,,31,Aerin Frankel,,,,,,,39.3,-26.1,89,2024-05-14,PWHL,2023/2024,Playoffs
-13,11:25,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,16,Amanda Pelkey,,,,,35,Ann-Renée Desbiens,,,,,,,-61.0,-4.0,89,2024-05-14,PWHL,2023/2024,Playoffs
-14,11:54,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,16,Sarah Lefort,,,,,31,Aerin Frankel,,,,,,,37.0,-17.3,89,2024-05-14,PWHL,2023/2024,Playoffs
-15,13:26,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,7,Sidney Morin,,,,,35,Ann-Renée Desbiens,,,,,,,-41.3,-20.7,89,2024-05-14,PWHL,2023/2024,Playoffs
-16,13:57,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,2,Mariah Keopple,,,,,31,Aerin Frankel,,,,,,,44.0,-16.4,89,2024-05-14,PWHL,2023/2024,Playoffs
-17,14:35,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,25,Mélodie Daoust,,,,,31,Aerin Frankel,,,,,,,61.0,-8.5,89,2024-05-14,PWHL,2023/2024,Playoffs
-18,14:48,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,25,Mélodie Daoust,,,,,31,Aerin Frankel,,,,,,,67.0,-16.1,89,2024-05-14,PWHL,2023/2024,Playoffs
-19,15:31,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,6,Madison Bizal,,,,,31,Aerin Frankel,,,,,,,44.3,-2.0,89,2024-05-14,PWHL,2023/2024,Playoffs
-20,15:39,Goal,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,29,Marie-Philip Poulin,18,Mikyla Grant-Mentis,6,Madison Bizal,31,Aerin Frankel,,12 13 16 19 22,Taylor Wenczkowski - Kaleigh Fratkin - Amanda Pelkey - Gigi Marvin - Jessica DiGirolamo,,6 7 18 29 44,Madison Bizal - Laura Stacey - Mikyla Grant-Mentis - Marie-Philip Poulin - Amanda Boulier,73.0,7.1,89,2024-05-14,PWHL,2023/2024,Playoffs
-21,16:15,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,9,Kati Tabin,,,,,31,Aerin Frankel,,,,,,,30.0,11.1,89,2024-05-14,PWHL,2023/2024,Playoffs
-22,16:29,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,16,Sarah Lefort,,,,,31,Aerin Frankel,,,,,,,53.0,-9.6,89,2024-05-14,PWHL,2023/2024,Playoffs
-23,17:29,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,4,Catherine Daoust,,,,,31,Aerin Frankel,,,,,,,59.7,22.1,89,2024-05-14,PWHL,2023/2024,Playoffs
-24,19:23,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,29,Marie-Philip Poulin,,,,,31,Aerin Frankel,,,,,,,70.0,12.2,89,2024-05-14,PWHL,2023/2024,Playoffs
-25,0:08,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,2,event,5v5,21,Hilary Knight,,,,,35,Ann-Renée Desbiens,,,,,,,-61.0,-6.8,89,2024-05-14,PWHL,2023/2024,Playoffs
-26,3:06,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,2,event,5v5,21,Hilary Knight,,,,,35,Ann-Renée Desbiens,,,,,,,-72.0,-9.9,89,2024-05-14,PWHL,2023/2024,Playoffs
-27,4:00,Penalty,Boston Fleet,Home,Boston Fleet,Montréal Victoire,2,event,5v5,13,Kaleigh Fratkin,,,,,,,,,,,,,,,89,2024-05-14,PWHL,2023/2024,Playoffs
-28,4:18,Block,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,7,Laura Stacey,,,,,31,Aerin Frankel,,,,,,,51.3,9.6,89,2024-05-14,PWHL,2023/2024,Playoffs
-29,4:25,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v4,29,Marie-Philip Poulin,,,,,31,Aerin Frankel,,,,,,,59.0,11.6,89,2024-05-14,PWHL,2023/2024,Playoffs
-30,5:17,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v4,44,Amanda Boulier,,,,,31,Aerin Frankel,,,,,,,35.3,15.0,89,2024-05-14,PWHL,2023/2024,Playoffs
-31,5:29,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v4,9,Kati Tabin,,,,,31,Aerin Frankel,,,,,,,49.7,19.8,89,2024-05-14,PWHL,2023/2024,Playoffs
-32,6:19,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,2,event,5v5,55,Kelly Babstock,,,,,35,Ann-Renée Desbiens,,,,,,,-37.7,-20.7,89,2024-05-14,PWHL,2023/2024,Playoffs
-33,8:05,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,29,Marie-Philip Poulin,,,,,31,Aerin Frankel,,,,,,,49.3,13.9,89,2024-05-14,PWHL,2023/2024,Playoffs
-34,8:08,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,9,Kati Tabin,,,,,31,Aerin Frankel,,,,,,,71.7,15.0,89,2024-05-14,PWHL,2023/2024,Playoffs
-35,8:25,Penalty,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,43,Kristin O'Neill,,,,,,,,,,,,,,,89,2024-05-14,PWHL,2023/2024,Playoffs
-36,8:58,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,2,event,5v4,88,Susanna Tapani,,,,,35,Ann-Renée Desbiens,,,,,,,-67.3,-11.3,89,2024-05-14,PWHL,2023/2024,Playoffs
-37,10:41,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,2,event,5v5,13,Kaleigh Fratkin,,,,,35,Ann-Renée Desbiens,,,,,,,-47.7,-20.7,89,2024-05-14,PWHL,2023/2024,Playoffs
-38,12:19,Penalty,Boston Fleet,Home,Boston Fleet,Montréal Victoire,2,event,5v5,97,Jess Healey,,,,,,,,,,,,,,,89,2024-05-14,PWHL,2023/2024,Playoffs
-39,12:50,Block,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,7,Laura Stacey,,,,,31,Aerin Frankel,,,,,,,64.7,12.8,89,2024-05-14,PWHL,2023/2024,Playoffs
-40,13:16,Block,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,15,Maureen Murphy,,,,,31,Aerin Frankel,,,,,,,58.0,3.1,89,2024-05-14,PWHL,2023/2024,Playoffs
-41,13:35,Goal,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v4,15,Maureen Murphy,29,Marie-Philip Poulin,23,Erin Ambrose,31,Aerin Frankel,,5 21 22 88,Megan Keller - Hilary Knight - Jessica DiGirolamo - Susanna Tapani,,7 15 23 29 43,Laura Stacey - Maureen Murphy - Erin Ambrose - Marie-Philip Poulin - Kristin O'Neill,32.7,1.7,89,2024-05-14,PWHL,2023/2024,Playoffs
-42,15:15,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,2,event,5v5,88,Susanna Tapani,,,,,35,Ann-Renée Desbiens,,,,,,,-51.3,16.1,89,2024-05-14,PWHL,2023/2024,Playoffs
-43,19:32,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,16,Sarah Lefort,,,,,31,Aerin Frankel,,,,,,,45.7,13.9,89,2024-05-14,PWHL,2023/2024,Playoffs
-44,19:46,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,2,event,5v5,88,Susanna Tapani,,,,,35,Ann-Renée Desbiens,,,,,,,-61.0,24.1,89,2024-05-14,PWHL,2023/2024,Playoffs
-45,2:17,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,25,Mélodie Daoust,,,,,31,Aerin Frankel,,,,,,,62.3,9.9,89,2024-05-14,PWHL,2023/2024,Playoffs
-46,2:53,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,12,Leah Lum,,,,,31,Aerin Frankel,,,,,,,10.7,-6.2,89,2024-05-14,PWHL,2023/2024,Playoffs
-47,3:05,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,14,Jillian Dempsey,,,,,31,Aerin Frankel,,,,,,,72.3,9.9,89,2024-05-14,PWHL,2023/2024,Playoffs
-48,3:28,Block,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,47,Jamie Lee Rattray,,,,,35,Ann-Renée Desbiens,,,,,,,-54.3,-8.5,89,2024-05-14,PWHL,2023/2024,Playoffs
-49,3:34,Penalty,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,2,Mariah Keopple,,,,,,,,,,,,,,,89,2024-05-14,PWHL,2023/2024,Playoffs
-50,3:48,Block,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,7,Sidney Morin,,,,,35,Ann-Renée Desbiens,,,,,,,-51.7,-3.1,89,2024-05-14,PWHL,2023/2024,Playoffs
-51,3:51,Block,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,7,Sidney Morin,,,,,35,Ann-Renée Desbiens,,,,,,,-36.0,9.3,89,2024-05-14,PWHL,2023/2024,Playoffs
-52,4:21,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v4,11,Alina Müller,,,,,35,Ann-Renée Desbiens,,,,,,,-51.0,17.3,89,2024-05-14,PWHL,2023/2024,Playoffs
-53,6:15,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,21,Hilary Knight,,,,,35,Ann-Renée Desbiens,,,,,,,-39.7,11.1,89,2024-05-14,PWHL,2023/2024,Playoffs
-54,6:27,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,42,Claire Dalton,,,,,31,Aerin Frankel,,,,,,,79.3,7.6,89,2024-05-14,PWHL,2023/2024,Playoffs
-55,7:06,Goal,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,9,Sophie Shirley,16,Amanda Pelkey,7,Sidney Morin,35,Ann-Renée Desbiens,,5 7 8 9 16,Megan Keller - Sidney Morin - Lexie Adzija - Sophie Shirley - Amanda Pelkey,,7 23 25 29 44,Laura Stacey - Erin Ambrose - Mélodie Daoust - Marie-Philip Poulin - Amanda Boulier,-75.0,11.3,89,2024-05-14,PWHL,2023/2024,Playoffs
-56,7:15,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,9,Kati Tabin,,,,,31,Aerin Frankel,,,,,,,36.3,-16.7,89,2024-05-14,PWHL,2023/2024,Playoffs
-57,8:53,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,7,Laura Stacey,,,,,31,Aerin Frankel,,,,,,,67.3,14.5,89,2024-05-14,PWHL,2023/2024,Playoffs
-58,12:12,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,9,Sophie Shirley,,,,,35,Ann-Renée Desbiens,,,,,,,-63.3,15.3,89,2024-05-14,PWHL,2023/2024,Playoffs
-59,12:27,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,9,Sophie Shirley,,,,,35,Ann-Renée Desbiens,,,,,,,-65.0,21.8,89,2024-05-14,PWHL,2023/2024,Playoffs
-60,14:04,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,9,Sophie Shirley,,,,,35,Ann-Renée Desbiens,,,,,,,-79.0,25.2,89,2024-05-14,PWHL,2023/2024,Playoffs
-61,14:18,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,5,Megan Keller,,,,,35,Ann-Renée Desbiens,,,,,,,-60.3,-7.6,89,2024-05-14,PWHL,2023/2024,Playoffs
-62,14:27,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,9,Kati Tabin,,,,,31,Aerin Frankel,,,,,,,46.7,-18.4,89,2024-05-14,PWHL,2023/2024,Playoffs
-63,15:38,Penalty,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,11,Alina Müller,,,,,,,,,,,,,,,89,2024-05-14,PWHL,2023/2024,Playoffs
-64,16:17,Goal,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,4v5,16,Amanda Pelkey,20,Hannah Brandt,5,Megan Keller,35,Ann-Renée Desbiens,,5 16 20 22,Megan Keller - Amanda Pelkey - Hannah Brandt - Jessica DiGirolamo,,7 15 23 29 43,Laura Stacey - Maureen Murphy - Erin Ambrose - Marie-Philip Poulin - Kristin O'Neill,-66.0,-8.5,89,2024-05-14,PWHL,2023/2024,Playoffs
-65,16:54,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v4,29,Marie-Philip Poulin,,,,,31,Aerin Frankel,,,,,,,71.3,16.1,89,2024-05-14,PWHL,2023/2024,Playoffs
-66,17:58,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,25,Mélodie Daoust,,,,,31,Aerin Frankel,,,,,,,66.7,-14.2,89,2024-05-14,PWHL,2023/2024,Playoffs
-67,18:57,Block,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,42,Claire Dalton,,,,,31,Aerin Frankel,,,,,,,58.0,-4.5,89,2024-05-14,PWHL,2023/2024,Playoffs
-68,19:11,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,21,Hilary Knight,,,,,35,Ann-Renée Desbiens,,,,,,,-40.7,-24.4,89,2024-05-14,PWHL,2023/2024,Playoffs
-69,19:46,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,21,Hilary Knight,,,,,35,Ann-Renée Desbiens,,,,,,,-34.3,25.2,89,2024-05-14,PWHL,2023/2024,Playoffs
-70,19:47,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,47,Jamie Lee Rattray,,,,,35,Ann-Renée Desbiens,,,,,,,-67.0,-0.8,89,2024-05-14,PWHL,2023/2024,Playoffs
-71,1:02,Goal,Boston Fleet,Home,Boston Fleet,Montréal Victoire,OT1,event,5v5,11,Alina Müller,11,Alina Müller,37,Theresa Schafzahl,35,Ann-Renée Desbiens,,11 13 22 37 88,Alina Müller - Kaleigh Fratkin - Jessica DiGirolamo - Theresa Schafzahl - Susanna Tapani,,9 15 25 43 44,Kati Tabin - Maureen Murphy - Mélodie Daoust - Kristin O'Neill - Amanda Boulier,-74.7,-4.2,89,2024-05-14,PWHL,2023/2024,Playoffs
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,xG,ScoreState,BoxID,game_id,game_date,competition,season,state
+1,0:20,Block,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,7,Laura Stacey,,,,,31,Aerin Frankel,,,,,,,60.3,11.1,,0,O16,89,2024-05-14,PWHL,2023/2024,Playoffs
+2,4:16,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,16,Sarah Lefort,,,,,31,Aerin Frankel,,,,,,,47.7,-24.1,0.0458,0,O20,89,2024-05-14,PWHL,2023/2024,Playoffs
+3,4:41,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,23,Erin Ambrose,,,,,31,Aerin Frankel,,,,,,,36.3,24.1,0.0258,0,O26,89,2024-05-14,PWHL,2023/2024,Playoffs
+4,4:56,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,47,Jamie Lee Rattray,,,,,35,Ann-Renée Desbiens,,,,,,,33.0,11.6,0.0420,0,O25,89,2024-05-14,PWHL,2023/2024,Playoffs
+5,5:31,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,9,Kati Tabin,,,,,31,Aerin Frankel,,,,,,,58.3,6.5,0.1041,0,O15,89,2024-05-14,PWHL,2023/2024,Playoffs
+6,5:52,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,9,Kati Tabin,,,,,31,Aerin Frankel,,,,,,,67.7,-2.0,0.1041,0,O15,89,2024-05-14,PWHL,2023/2024,Playoffs
+7,6:04,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,42,Claire Dalton,,,,,31,Aerin Frankel,,,,,,,61.7,12.8,0.0899,0,O16,89,2024-05-14,PWHL,2023/2024,Playoffs
+8,6:18,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,7,Laura Stacey,,,,,31,Aerin Frankel,,,,,,,45.7,15.9,0.0386,0,O22,89,2024-05-14,PWHL,2023/2024,Playoffs
+9,8:12,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,23,Erin Ambrose,,,,,31,Aerin Frankel,,,,,,,37.0,8.8,0.0420,0,O25,89,2024-05-14,PWHL,2023/2024,Playoffs
+10,8:59,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,8,Gabrielle David,,,,,31,Aerin Frankel,,,,,,,75.3,2.8,0.1248,0,O11,89,2024-05-14,PWHL,2023/2024,Playoffs
+11,10:01,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,5,Megan Keller,,,,,35,Ann-Renée Desbiens,,,,,,,65.0,11.9,0.0899,0,O16,89,2024-05-14,PWHL,2023/2024,Playoffs
+12,11:03,Block,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,7,Laura Stacey,,,,,31,Aerin Frankel,,,,,,,39.3,-26.1,,0,O24,89,2024-05-14,PWHL,2023/2024,Playoffs
+13,11:25,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,16,Amanda Pelkey,,,,,35,Ann-Renée Desbiens,,,,,,,61.0,4.0,0.1041,0,O15,89,2024-05-14,PWHL,2023/2024,Playoffs
+14,11:54,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,16,Sarah Lefort,,,,,31,Aerin Frankel,,,,,,,37.0,-17.3,0.0420,0,O25,89,2024-05-14,PWHL,2023/2024,Playoffs
+15,13:26,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,1,event,5v5,7,Sidney Morin,,,,,35,Ann-Renée Desbiens,,,,,,,41.3,20.7,0.0386,0,O22,89,2024-05-14,PWHL,2023/2024,Playoffs
+16,13:57,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,2,Mariah Keopple,,,,,31,Aerin Frankel,,,,,,,44.0,-16.4,0.0458,0,O20,89,2024-05-14,PWHL,2023/2024,Playoffs
+17,14:35,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,25,Mélodie Daoust,,,,,31,Aerin Frankel,,,,,,,61.0,-8.5,0.0785,0,O14,89,2024-05-14,PWHL,2023/2024,Playoffs
+18,14:48,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,25,Mélodie Daoust,,,,,31,Aerin Frankel,,,,,,,67.0,-16.1,0.0371,0,O13,89,2024-05-14,PWHL,2023/2024,Playoffs
+19,15:31,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,6,Madison Bizal,,,,,31,Aerin Frankel,,,,,,,44.3,-2.0,0.0573,0,O21,89,2024-05-14,PWHL,2023/2024,Playoffs
+20,15:39,Goal,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,29,Marie-Philip Poulin,18,Mikyla Grant-Mentis,6,Madison Bizal,31,Aerin Frankel,,12 13 16 19 22,Taylor Wenczkowski - Kaleigh Fratkin - Amanda Pelkey - Gigi Marvin - Jessica DiGirolamo,,6 7 18 29 44,Madison Bizal - Laura Stacey - Mikyla Grant-Mentis - Marie-Philip Poulin - Amanda Boulier,73.0,7.1,0.1248,0,O11,89,2024-05-14,PWHL,2023/2024,Playoffs
+21,16:15,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,9,Kati Tabin,,,,,31,Aerin Frankel,,,,,,,30.0,11.1,0.0500,1,O25,89,2024-05-14,PWHL,2023/2024,Playoffs
+22,16:29,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,16,Sarah Lefort,,,,,31,Aerin Frankel,,,,,,,53.0,-9.6,0.0682,1,O21,89,2024-05-14,PWHL,2023/2024,Playoffs
+23,17:29,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,4,Catherine Daoust,,,,,31,Aerin Frankel,,,,,,,59.7,22.1,0.0488,1,O17,89,2024-05-14,PWHL,2023/2024,Playoffs
+24,19:23,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,1,event,5v5,29,Marie-Philip Poulin,,,,,31,Aerin Frankel,,,,,,,70.0,12.2,0.1061,1,O16,89,2024-05-14,PWHL,2023/2024,Playoffs
+25,0:08,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,2,event,5v5,21,Hilary Knight,,,,,35,Ann-Renée Desbiens,,,,,,,61.0,6.8,0.0959,-1,O16,89,2024-05-14,PWHL,2023/2024,Playoffs
+26,3:06,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,2,event,5v5,21,Hilary Knight,,,,,35,Ann-Renée Desbiens,,,,,,,72.0,9.9,0.0959,-1,O16,89,2024-05-14,PWHL,2023/2024,Playoffs
+27,4:00,Penalty,Boston Fleet,Home,Boston Fleet,Montréal Victoire,2,event,5v5,13,Kaleigh Fratkin,,,,,,,,,,,,,,,,-1,,89,2024-05-14,PWHL,2023/2024,Playoffs
+28,4:18,Block,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,7,Laura Stacey,,,,,31,Aerin Frankel,,,,,,,51.3,9.6,,1,O21,89,2024-05-14,PWHL,2023/2024,Playoffs
+29,4:25,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v4,29,Marie-Philip Poulin,,,,,31,Aerin Frankel,,,,,,,59.0,11.6,0.1610,1,O16,89,2024-05-14,PWHL,2023/2024,Playoffs
+30,5:17,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v4,44,Amanda Boulier,,,,,31,Aerin Frankel,,,,,,,35.3,15.0,0.0785,1,O25,89,2024-05-14,PWHL,2023/2024,Playoffs
+31,5:29,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v4,9,Kati Tabin,,,,,31,Aerin Frankel,,,,,,,49.7,19.8,0.0724,1,O22,89,2024-05-14,PWHL,2023/2024,Playoffs
+32,6:19,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,2,event,5v5,55,Kelly Babstock,,,,,35,Ann-Renée Desbiens,,,,,,,37.7,20.7,0.0277,-1,O26,89,2024-05-14,PWHL,2023/2024,Playoffs
+33,8:05,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,29,Marie-Philip Poulin,,,,,31,Aerin Frankel,,,,,,,49.3,13.9,0.0461,1,O22,89,2024-05-14,PWHL,2023/2024,Playoffs
+34,8:08,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,9,Kati Tabin,,,,,31,Aerin Frankel,,,,,,,71.7,15.0,0.0488,1,O17,89,2024-05-14,PWHL,2023/2024,Playoffs
+35,8:25,Penalty,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,43,Kristin O'Neill,,,,,,,,,,,,,,,,1,,89,2024-05-14,PWHL,2023/2024,Playoffs
+36,8:58,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,2,event,5v4,88,Susanna Tapani,,,,,35,Ann-Renée Desbiens,,,,,,,67.3,11.3,0.1464,-1,O16,89,2024-05-14,PWHL,2023/2024,Playoffs
+37,10:41,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,2,event,5v5,13,Kaleigh Fratkin,,,,,35,Ann-Renée Desbiens,,,,,,,47.7,20.7,0.0414,-1,O22,89,2024-05-14,PWHL,2023/2024,Playoffs
+38,12:19,Penalty,Boston Fleet,Home,Boston Fleet,Montréal Victoire,2,event,5v5,97,Jess Healey,,,,,,,,,,,,,,,,-1,,89,2024-05-14,PWHL,2023/2024,Playoffs
+39,12:50,Block,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,7,Laura Stacey,,,,,31,Aerin Frankel,,,,,,,64.7,12.8,,1,O16,89,2024-05-14,PWHL,2023/2024,Playoffs
+40,13:16,Block,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,15,Maureen Murphy,,,,,31,Aerin Frankel,,,,,,,58.0,3.1,,1,O15,89,2024-05-14,PWHL,2023/2024,Playoffs
+41,13:35,Goal,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v4,15,Maureen Murphy,29,Marie-Philip Poulin,23,Erin Ambrose,31,Aerin Frankel,,5 21 22 88,Megan Keller - Hilary Knight - Jessica DiGirolamo - Susanna Tapani,,7 15 23 29 43,Laura Stacey - Maureen Murphy - Erin Ambrose - Marie-Philip Poulin - Kristin O'Neill,32.7,1.7,0.0785,1,O25,89,2024-05-14,PWHL,2023/2024,Playoffs
+42,15:15,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,2,event,5v5,88,Susanna Tapani,,,,,35,Ann-Renée Desbiens,,,,,,,51.3,-16.1,0.0496,-2,O20,89,2024-05-14,PWHL,2023/2024,Playoffs
+43,19:32,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,2,event,5v5,16,Sarah Lefort,,,,,31,Aerin Frankel,,,,,,,45.7,13.9,0.0584,2,O22,89,2024-05-14,PWHL,2023/2024,Playoffs
+44,19:46,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,2,event,5v5,88,Susanna Tapani,,,,,35,Ann-Renée Desbiens,,,,,,,61.0,-24.1,0.0402,-2,O13,89,2024-05-14,PWHL,2023/2024,Playoffs
+45,2:17,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,25,Mélodie Daoust,,,,,31,Aerin Frankel,,,,,,,62.3,9.9,0.1322,2,O16,89,2024-05-14,PWHL,2023/2024,Playoffs
+46,2:53,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,12,Leah Lum,,,,,31,Aerin Frankel,,,,,,,10.7,-6.2,0.0828,2,N02,89,2024-05-14,PWHL,2023/2024,Playoffs
+47,3:05,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,14,Jillian Dempsey,,,,,31,Aerin Frankel,,,,,,,72.3,9.9,0.1322,2,O16,89,2024-05-14,PWHL,2023/2024,Playoffs
+48,3:28,Block,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,47,Jamie Lee Rattray,,,,,35,Ann-Renée Desbiens,,,,,,,54.3,8.5,,-2,O21,89,2024-05-14,PWHL,2023/2024,Playoffs
+49,3:34,Penalty,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,2,Mariah Keopple,,,,,,,,,,,,,,,,2,,89,2024-05-14,PWHL,2023/2024,Playoffs
+50,3:48,Block,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,7,Sidney Morin,,,,,35,Ann-Renée Desbiens,,,,,,,51.7,3.1,,-2,O21,89,2024-05-14,PWHL,2023/2024,Playoffs
+51,3:51,Block,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,7,Sidney Morin,,,,,35,Ann-Renée Desbiens,,,,,,,36.0,-9.3,,-2,O25,89,2024-05-14,PWHL,2023/2024,Playoffs
+52,4:21,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v4,11,Alina Müller,,,,,35,Ann-Renée Desbiens,,,,,,,51.0,-17.3,0.0778,-2,O20,89,2024-05-14,PWHL,2023/2024,Playoffs
+53,6:15,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,21,Hilary Knight,,,,,35,Ann-Renée Desbiens,,,,,,,39.7,-11.1,0.0454,-2,O25,89,2024-05-14,PWHL,2023/2024,Playoffs
+54,6:27,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,42,Claire Dalton,,,,,31,Aerin Frankel,,,,,,,79.3,7.6,0.1803,2,O11,89,2024-05-14,PWHL,2023/2024,Playoffs
+55,7:06,Goal,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,9,Sophie Shirley,16,Amanda Pelkey,7,Sidney Morin,35,Ann-Renée Desbiens,,5 7 8 9 16,Megan Keller - Sidney Morin - Lexie Adzija - Sophie Shirley - Amanda Pelkey,,7 23 25 29 44,Laura Stacey - Erin Ambrose - Mélodie Daoust - Marie-Philip Poulin - Amanda Boulier,75.0,-11.3,0.0712,-2,O06,89,2024-05-14,PWHL,2023/2024,Playoffs
+56,7:15,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,9,Kati Tabin,,,,,31,Aerin Frankel,,,,,,,36.3,-16.7,0.0500,1,O25,89,2024-05-14,PWHL,2023/2024,Playoffs
+57,8:53,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,7,Laura Stacey,,,,,31,Aerin Frankel,,,,,,,67.3,14.5,0.1061,1,O16,89,2024-05-14,PWHL,2023/2024,Playoffs
+58,12:12,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,9,Sophie Shirley,,,,,35,Ann-Renée Desbiens,,,,,,,63.3,-15.3,0.0838,-1,O14,89,2024-05-14,PWHL,2023/2024,Playoffs
+59,12:27,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,9,Sophie Shirley,,,,,35,Ann-Renée Desbiens,,,,,,,65.0,-21.8,0.0398,-1,O13,89,2024-05-14,PWHL,2023/2024,Playoffs
+60,14:04,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,9,Sophie Shirley,,,,,35,Ann-Renée Desbiens,,,,,,,79.0,-25.2,0.0190,-1,O05,89,2024-05-14,PWHL,2023/2024,Playoffs
+61,14:18,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,5,Megan Keller,,,,,35,Ann-Renée Desbiens,,,,,,,60.3,7.6,0.0959,-1,O16,89,2024-05-14,PWHL,2023/2024,Playoffs
+62,14:27,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,9,Kati Tabin,,,,,31,Aerin Frankel,,,,,,,46.7,-18.4,0.0546,1,O20,89,2024-05-14,PWHL,2023/2024,Playoffs
+63,15:38,Penalty,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,11,Alina Müller,,,,,,,,,,,,,,,,-1,,89,2024-05-14,PWHL,2023/2024,Playoffs
+64,16:17,Goal,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,4v5,16,Amanda Pelkey,20,Hannah Brandt,5,Megan Keller,35,Ann-Renée Desbiens,,5 16 20 22,Megan Keller - Amanda Pelkey - Hannah Brandt - Jessica DiGirolamo,,7 15 23 29 43,Laura Stacey - Maureen Murphy - Erin Ambrose - Marie-Philip Poulin - Kristin O'Neill,66.0,8.5,0.1575,-1,O16,89,2024-05-14,PWHL,2023/2024,Playoffs
+65,16:54,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v4,29,Marie-Philip Poulin,,,,,31,Aerin Frankel,,,,,,,71.3,16.1,0.0645,0,O17,89,2024-05-14,PWHL,2023/2024,Playoffs
+66,17:58,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,25,Mélodie Daoust,,,,,31,Aerin Frankel,,,,,,,66.7,-14.2,0.0785,0,O14,89,2024-05-14,PWHL,2023/2024,Playoffs
+67,18:57,Block,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,42,Claire Dalton,,,,,31,Aerin Frankel,,,,,,,58.0,-4.5,,0,O15,89,2024-05-14,PWHL,2023/2024,Playoffs
+68,19:11,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,21,Hilary Knight,,,,,35,Ann-Renée Desbiens,,,,,,,40.7,24.4,0.0258,0,O26,89,2024-05-14,PWHL,2023/2024,Playoffs
+69,19:46,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,21,Hilary Knight,,,,,35,Ann-Renée Desbiens,,,,,,,34.3,-25.2,0.0400,0,O24,89,2024-05-14,PWHL,2023/2024,Playoffs
+70,19:47,Shot,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,47,Jamie Lee Rattray,,,,,35,Ann-Renée Desbiens,,,,,,,67.0,0.8,0.1041,0,O15,89,2024-05-14,PWHL,2023/2024,Playoffs
+71,1:02,Goal,Boston Fleet,Home,Boston Fleet,Montréal Victoire,OT1,event,5v5,11,Alina Müller,11,Alina Müller,37,Theresa Schafzahl,35,Ann-Renée Desbiens,,11 13 22 37 88,Alina Müller - Kaleigh Fratkin - Jessica DiGirolamo - Theresa Schafzahl - Susanna Tapani,,9 15 25 43 44,Kati Tabin - Maureen Murphy - Mélodie Daoust - Kristin O'Neill - Amanda Boulier,74.7,4.2,0.1248,0,O11,89,2024-05-14,PWHL,2023/2024,Playoffs

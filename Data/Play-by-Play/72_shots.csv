@@ -1,110 +1,110 @@
-id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
-1,0:12,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,3,Jocelyne Larocque,,,,,38,Emerance Maschmeyer,,,,,,,-33.0,19.6,72,2024-05-05,PWHL,2023/2024,Regular Season
-2,1:04,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,24,Natalie Spooner,,,,,38,Emerance Maschmeyer,,,,,,,-56.0,3.4,72,2024-05-05,PWHL,2023/2024,Regular Season
-3,1:05,Goal,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,24,Natalie Spooner,34,Hannah Miller,,,38,Emerance Maschmeyer,,6 12 24 34 40,Kali Flanagan - Allie Munroe - Natalie Spooner - Hannah Miller - Blayre Turnbull,,9 16 19 21 71,Daryl Watts - Kateřina Mrázová - Brianne Jenner - Ashton Bell - Jincy Roese,-74.3,-7.1,72,2024-05-05,PWHL,2023/2024,Regular Season
-4,1:37,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,28,Kaitlin Willoughby,,,,,38,Emerance Maschmeyer,,,,,,,-61.0,18.7,72,2024-05-05,PWHL,2023/2024,Regular Season
-5,1:49,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,7,Olivia Knowles,,,,,38,Emerance Maschmeyer,,,,,,,-35.3,-28.9,72,2024-05-05,PWHL,2023/2024,Regular Season
-6,3:00,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,2,Aneta Tejralová,,,,,50,Kristen Campbell,,,,,,,33.7,23.8,72,2024-05-05,PWHL,2023/2024,Regular Season
-7,3:35,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,15,Savannah Harmon,,,,,50,Kristen Campbell,,,,,,,41.0,-6.0,72,2024-05-05,PWHL,2023/2024,Regular Season
-8,3:49,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,17,Gabbie Hughes,,,,,50,Kristen Campbell,,,,,,,65.3,0.8,72,2024-05-05,PWHL,2023/2024,Regular Season
-9,4:00,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,71,Jincy Roese,,,,,50,Kristen Campbell,,,,,,,29.0,-29.5,72,2024-05-05,PWHL,2023/2024,Regular Season
-10,4:17,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,41,Brittany Howard,,,,,38,Emerance Maschmeyer,,,,,,,-46.0,-3.7,72,2024-05-05,PWHL,2023/2024,Regular Season
-11,4:40,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,15,Savannah Harmon,,,,,50,Kristen Campbell,,,,,,,28.7,-17.8,72,2024-05-05,PWHL,2023/2024,Regular Season
-12,5:07,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,40,Blayre Turnbull,,,,,38,Emerance Maschmeyer,,,,,,,-13.3,-17.3,72,2024-05-05,PWHL,2023/2024,Regular Season
-13,5:10,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,24,Natalie Spooner,,,,,38,Emerance Maschmeyer,,,,,,,-71.0,10.8,72,2024-05-05,PWHL,2023/2024,Regular Season
-14,5:37,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,40,Blayre Turnbull,,,,,38,Emerance Maschmeyer,,,,,,,-49.0,4.2,72,2024-05-05,PWHL,2023/2024,Regular Season
-15,6:43,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,10,Alexa Vasko,,,,,38,Emerance Maschmeyer,,,,,,,-45.0,11.6,72,2024-05-05,PWHL,2023/2024,Regular Season
-16,7:19,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,21,Ashton Bell,,,,,50,Kristen Campbell,,,,,,,3.3,27.2,72,2024-05-05,PWHL,2023/2024,Regular Season
-17,8:02,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,8,Natalie Snodgrass,,,,,50,Kristen Campbell,,,,,,,49.0,-19.0,72,2024-05-05,PWHL,2023/2024,Regular Season
-18,8:08,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,5,Samantha Isbell,,,,,50,Kristen Campbell,,,,,,,47.7,0.8,72,2024-05-05,PWHL,2023/2024,Regular Season
-19,8:26,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,27,Emma Maltais,,,,,38,Emerance Maschmeyer,,,,,,,-46.7,29.2,72,2024-05-05,PWHL,2023/2024,Regular Season
-20,9:06,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,19,Brianne Jenner,,,,,50,Kristen Campbell,,,,,,,80.7,-2.8,72,2024-05-05,PWHL,2023/2024,Regular Season
-21,9:26,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,40,Blayre Turnbull,,,,,38,Emerance Maschmeyer,,,,,,,-88.0,-12.8,72,2024-05-05,PWHL,2023/2024,Regular Season
-22,9:38,Goal,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,17,Gabbie Hughes,14,Hayley Scamurra,26,Emily Clark,50,Kristen Campbell,,6 12 18 22 28,Kali Flanagan - Allie Munroe - Jesse Compher - Maggie Connors - Kaitlin Willoughby,,14 17 21 26 71,Hayley Scamurra - Gabbie Hughes - Ashton Bell - Emily Clark - Jincy Roese,85.7,-6.0,72,2024-05-05,PWHL,2023/2024,Regular Season
-23,10:36,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,14,Renata Fast,,,,,38,Emerance Maschmeyer,,,,,,,-32.3,-17.8,72,2024-05-05,PWHL,2023/2024,Regular Season
-24,10:48,Goal,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,20,Sarah Nurse,41,Brittany Howard,,,38,Emerance Maschmeyer,,3 14 20 27 41,Jocelyne Larocque - Renata Fast - Sarah Nurse - Emma Maltais - Brittany Howard,,2 8 10 13 15,Aneta Tejralová - Natalie Snodgrass - Becca Gilmore - Tereza Vanišová - Savannah Harmon,-81.3,-7.1,72,2024-05-05,PWHL,2023/2024,Regular Season
-25,12:36,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,18,Jesse Compher,,,,,,,,,,,,,,,72,2024-05-05,PWHL,2023/2024,Regular Season
-26,12:36,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,18,Jesse Compher,,,,,,,,,,,,,,,72,2024-05-05,PWHL,2023/2024,Regular Season
-27,12:38,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v3,19,Brianne Jenner,,,,,50,Kristen Campbell,,,,,,,83.7,-15.9,72,2024-05-05,PWHL,2023/2024,Regular Season
-28,13:13,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v3,14,Hayley Scamurra,,,,,50,Kristen Campbell,,,,,,,59.3,37.1,72,2024-05-05,PWHL,2023/2024,Regular Season
-29,13:39,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v3,14,Hayley Scamurra,,,,,50,Kristen Campbell,,,,,,,77.0,23.0,72,2024-05-05,PWHL,2023/2024,Regular Season
-30,15:21,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,14,Hayley Scamurra,,,,,50,Kristen Campbell,,,,,,,87.3,6.0,72,2024-05-05,PWHL,2023/2024,Regular Season
-31,16:25,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,26,Emily Clark,,,,,50,Kristen Campbell,,,,,,,54.7,-15.9,72,2024-05-05,PWHL,2023/2024,Regular Season
-32,16:43,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,21,Ashton Bell,,,,,50,Kristen Campbell,,,,,,,28.3,21.2,72,2024-05-05,PWHL,2023/2024,Regular Season
-33,17:33,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,5,Lauriane Rougeau,,,,,38,Emerance Maschmeyer,,,,,,,-34.0,23.8,72,2024-05-05,PWHL,2023/2024,Regular Season
-34,17:42,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,27,Shiann Darkangelo,,,,,50,Kristen Campbell,,,,,,,35.3,-29.2,72,2024-05-05,PWHL,2023/2024,Regular Season
-35,17:46,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,10,Becca Gilmore,,,,,50,Kristen Campbell,,,,,,,54.3,-1.4,72,2024-05-05,PWHL,2023/2024,Regular Season
-36,17:51,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,9,Daryl Watts,,,,,50,Kristen Campbell,,,,,,,75.0,-14.7,72,2024-05-05,PWHL,2023/2024,Regular Season
-37,18:00,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,19,Brianne Jenner,,,,,50,Kristen Campbell,,,,,,,59.0,-36.8,72,2024-05-05,PWHL,2023/2024,Regular Season
-38,18:15,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,16,Kateřina Mrázová,,,,,50,Kristen Campbell,,,,,,,42.7,-23.8,72,2024-05-05,PWHL,2023/2024,Regular Season
-39,18:24,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,15,Savannah Harmon,,,,,50,Kristen Campbell,,,,,,,31.0,-0.8,72,2024-05-05,PWHL,2023/2024,Regular Season
-40,18:37,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,28,Kaitlin Willoughby,,,,,38,Emerance Maschmeyer,,,,,,,-53.0,-14.2,72,2024-05-05,PWHL,2023/2024,Regular Season
-41,18:52,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,19,Rebecca Leslie,,,,,38,Emerance Maschmeyer,,,,,,,-27.7,0.0,72,2024-05-05,PWHL,2023/2024,Regular Season
-42,19:46,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,26,Emily Clark,,,,,50,Kristen Campbell,,,,,,,74.3,-12.2,72,2024-05-05,PWHL,2023/2024,Regular Season
-43,19:56,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,15,Savannah Harmon,,,,,50,Kristen Campbell,,,,,,,37.0,-4.8,72,2024-05-05,PWHL,2023/2024,Regular Season
-44,0:48,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,3,Jocelyne Larocque,,,,,38,Emerance Maschmeyer,,,,,,,-58.3,35.4,72,2024-05-05,PWHL,2023/2024,Regular Season
-45,0:54,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,24,Natalie Spooner,,,,,38,Emerance Maschmeyer,,,,,,,-64.0,28.1,72,2024-05-05,PWHL,2023/2024,Regular Season
-46,1:00,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,40,Blayre Turnbull,,,,,38,Emerance Maschmeyer,,,,,,,-59.0,-19.8,72,2024-05-05,PWHL,2023/2024,Regular Season
-47,1:10,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,12,Allie Munroe,,,,,38,Emerance Maschmeyer,,,,,,,-37.7,28.3,72,2024-05-05,PWHL,2023/2024,Regular Season
-48,1:41,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,21,Ashton Bell,,,,,50,Kristen Campbell,,,,,,,33.0,24.9,72,2024-05-05,PWHL,2023/2024,Regular Season
-49,2:10,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,19,Brianne Jenner,,,,,50,Kristen Campbell,,,,,,,66.0,35.1,72,2024-05-05,PWHL,2023/2024,Regular Season
-50,2:13,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,9,Daryl Watts,,,,,50,Kristen Campbell,,,,,,,47.7,18.4,72,2024-05-05,PWHL,2023/2024,Regular Season
-51,6:26,Goal,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,9,Daryl Watts,19,Brianne Jenner,,,50,Kristen Campbell,,3 10 14 17 19,Jocelyne Larocque - Alexa Vasko - Renata Fast - Samantha Cogan - Rebecca Leslie,,5 9 15 16 19,Samantha Isbell - Daryl Watts - Savannah Harmon - Kateřina Mrázová - Brianne Jenner,82.7,3.1,72,2024-05-05,PWHL,2023/2024,Regular Season
-52,7:01,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,26,Emily Clark,,,,,50,Kristen Campbell,,,,,,,43.3,-8.5,72,2024-05-05,PWHL,2023/2024,Regular Season
-53,7:14,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,26,Emily Clark,,,,,50,Kristen Campbell,,,,,,,83.7,21.8,72,2024-05-05,PWHL,2023/2024,Regular Season
-54,7:14,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,14,Hayley Scamurra,,,,,50,Kristen Campbell,,,,,,,75.0,3.4,72,2024-05-05,PWHL,2023/2024,Regular Season
-55,9:45,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,14,Hayley Scamurra,,,,,50,Kristen Campbell,,,,,,,37.0,-9.3,72,2024-05-05,PWHL,2023/2024,Regular Season
-56,10:02,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,14,Hayley Scamurra,,,,,50,Kristen Campbell,,,,,,,68.7,-9.3,72,2024-05-05,PWHL,2023/2024,Regular Season
-57,11:52,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,3,Jocelyne Larocque,,,,,38,Emerance Maschmeyer,,,,,,,-56.3,33.1,72,2024-05-05,PWHL,2023/2024,Regular Season
-58,12:16,Penalty,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,13,Tereza Vanišová,,,,,,,,,,,,,,,72,2024-05-05,PWHL,2023/2024,Regular Season
-59,12:36,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v4,24,Natalie Spooner,,,,,38,Emerance Maschmeyer,,,,,,,-81.0,-2.0,72,2024-05-05,PWHL,2023/2024,Regular Season
-60,13:02,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v4,24,Natalie Spooner,,,,,38,Emerance Maschmeyer,,,,,,,-26.0,-0.6,72,2024-05-05,PWHL,2023/2024,Regular Season
-61,15:05,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,19,Brianne Jenner,,,,,50,Kristen Campbell,,,,,,,57.0,6.2,72,2024-05-05,PWHL,2023/2024,Regular Season
-62,15:56,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,26,Emily Clark,,,,,50,Kristen Campbell,,,,,,,79.7,4.0,72,2024-05-05,PWHL,2023/2024,Regular Season
-63,16:28,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,19,Rebecca Leslie,,,,,38,Emerance Maschmeyer,,,,,,,-65.3,17.8,72,2024-05-05,PWHL,2023/2024,Regular Season
-64,17:16,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,8,Natalie Snodgrass,,,,,50,Kristen Campbell,,,,,,,43.7,10.8,72,2024-05-05,PWHL,2023/2024,Regular Season
-65,17:28,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,40,Blayre Turnbull,,,,,38,Emerance Maschmeyer,,,,,,,-46.7,-9.9,72,2024-05-05,PWHL,2023/2024,Regular Season
-66,18:49,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,6,Kali Flanagan,,,,,38,Emerance Maschmeyer,,,,,,,-32.0,-9.1,72,2024-05-05,PWHL,2023/2024,Regular Season
-67,19:55,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,14,Hayley Scamurra,,,,,50,Kristen Campbell,,,,,,,51.0,17.8,72,2024-05-05,PWHL,2023/2024,Regular Season
-68,19:58,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,2,Aneta Tejralová,,,,,50,Kristen Campbell,,,,,,,71.0,-20.4,72,2024-05-05,PWHL,2023/2024,Regular Season
-69,0:09,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,17,Gabbie Hughes,,,,,50,Kristen Campbell,,,,,,,7.0,-6.2,72,2024-05-05,PWHL,2023/2024,Regular Season
-70,0:15,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,17,Gabbie Hughes,,,,,50,Kristen Campbell,,,,,,,81.7,-35.4,72,2024-05-05,PWHL,2023/2024,Regular Season
-71,1:22,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,8,Natalie Snodgrass,,,,,50,Kristen Campbell,,,,,,,59.3,-32.9,72,2024-05-05,PWHL,2023/2024,Regular Season
-72,1:39,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,71,Jincy Roese,,,,,50,Kristen Campbell,,,,,,,35.3,-23.0,72,2024-05-05,PWHL,2023/2024,Regular Season
-73,1:39,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,5,Lauriane Rougeau,,,,,,,,,,,,,,,72,2024-05-05,PWHL,2023/2024,Regular Season
-74,2:01,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,3,Jocelyne Larocque,,,,,38,Emerance Maschmeyer,,,,,,,-39.0,16.1,72,2024-05-05,PWHL,2023/2024,Regular Season
-75,2:56,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v4,17,Gabbie Hughes,,,,,50,Kristen Campbell,,,,,,,54.0,23.2,72,2024-05-05,PWHL,2023/2024,Regular Season
-76,3:12,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v4,15,Savannah Harmon,,,,,50,Kristen Campbell,,,,,,,51.3,-16.4,72,2024-05-05,PWHL,2023/2024,Regular Season
-77,3:24,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,40,Blayre Turnbull,,,,,38,Emerance Maschmeyer,,,,,,,-52.7,-9.6,72,2024-05-05,PWHL,2023/2024,Regular Season
-78,4:05,Penalty,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,27,Shiann Darkangelo,,,,,,,,,,,,,,,72,2024-05-05,PWHL,2023/2024,Regular Season
-79,5:08,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v4,22,Maggie Connors,,,,,38,Emerance Maschmeyer,,,,,,,-51.0,28.1,72,2024-05-05,PWHL,2023/2024,Regular Season
-80,5:16,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,22,Maggie Connors,,,,,38,Emerance Maschmeyer,,,,,,,-55.3,28.1,72,2024-05-05,PWHL,2023/2024,Regular Season
-81,6:00,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,17,Gabbie Hughes,,,,,50,Kristen Campbell,,,,,,,69.3,20.7,72,2024-05-05,PWHL,2023/2024,Regular Season
-82,6:09,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,2,Aneta Tejralová,,,,,50,Kristen Campbell,,,,,,,17.7,-23.8,72,2024-05-05,PWHL,2023/2024,Regular Season
-83,7:19,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,51,Victoria Bach,,,,,38,Emerance Maschmeyer,,,,,,,-65.7,24.1,72,2024-05-05,PWHL,2023/2024,Regular Season
-84,7:48,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,8,Natalie Snodgrass,,,,,50,Kristen Campbell,,,,,,,54.3,-2.5,72,2024-05-05,PWHL,2023/2024,Regular Season
-85,7:56,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,15,Savannah Harmon,,,,,50,Kristen Campbell,,,,,,,56.0,-28.1,72,2024-05-05,PWHL,2023/2024,Regular Season
-86,8:06,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,10,Becca Gilmore,,,,,50,Kristen Campbell,,,,,,,61.0,9.3,72,2024-05-05,PWHL,2023/2024,Regular Season
-87,9:37,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,27,Emma Maltais,,,,,38,Emerance Maschmeyer,,,,,,,-44.0,-0.8,72,2024-05-05,PWHL,2023/2024,Regular Season
-88,9:58,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,7,Olivia Knowles,,,,,38,Emerance Maschmeyer,,,,,,,-43.3,20.4,72,2024-05-05,PWHL,2023/2024,Regular Season
-89,10:40,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,17,Gabbie Hughes,,,,,50,Kristen Campbell,,,,,,,74.7,2.3,72,2024-05-05,PWHL,2023/2024,Regular Season
-90,11:05,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,28,Kaitlin Willoughby,,,,,38,Emerance Maschmeyer,,,,,,,-39.7,2.3,72,2024-05-05,PWHL,2023/2024,Regular Season
-91,11:55,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,51,Victoria Bach,,,,,38,Emerance Maschmeyer,,,,,,,-41.3,36.5,72,2024-05-05,PWHL,2023/2024,Regular Season
-92,12:07,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,19,Brianne Jenner,,,,,50,Kristen Campbell,,,,,,,43.0,11.1,72,2024-05-05,PWHL,2023/2024,Regular Season
-93,12:29,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,10,Becca Gilmore,,,,,50,Kristen Campbell,,,,,,,29.3,0.8,72,2024-05-05,PWHL,2023/2024,Regular Season
-94,13:00,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,15,Savannah Harmon,,,,,50,Kristen Campbell,,,,,,,31.3,33.4,72,2024-05-05,PWHL,2023/2024,Regular Season
-95,13:13,Penalty,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,8,Natalie Snodgrass,,,,,,,,,,,,,,,72,2024-05-05,PWHL,2023/2024,Regular Season
-96,13:34,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,3v5,6,Kali Flanagan,,,,,38,Emerance Maschmeyer,,,,,,,-30.7,21.2,72,2024-05-05,PWHL,2023/2024,Regular Season
-97,13:53,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v4,24,Natalie Spooner,,,,,38,Emerance Maschmeyer,,,,,,,-65.0,-8.8,72,2024-05-05,PWHL,2023/2024,Regular Season
-98,14:13,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,3v5,24,Natalie Spooner,,,,,38,Emerance Maschmeyer,,,,,,,-79.3,16.1,72,2024-05-05,PWHL,2023/2024,Regular Season
-99,14:16,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v4,20,Sarah Nurse,,,,,38,Emerance Maschmeyer,,,,,,,-55.3,-28.3,72,2024-05-05,PWHL,2023/2024,Regular Season
-100,14:17,Goal,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v4,24,Natalie Spooner,20,Sarah Nurse,34,Hannah Miller,38,Emerance Maschmeyer,,14 20 24 27 34,Renata Fast - Sarah Nurse - Natalie Spooner - Emma Maltais - Hannah Miller,,2 14 15 27,Aneta Tejralová - Hayley Scamurra - Savannah Harmon - Shiann Darkangelo,-84.3,-7.1,72,2024-05-05,PWHL,2023/2024,Regular Season
-101,14:56,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,13,Tereza Vanišová,,,,,50,Kristen Campbell,,,,,,,65.7,-12.8,72,2024-05-05,PWHL,2023/2024,Regular Season
-102,15:26,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,27,Emma Maltais,,,,,38,Emerance Maschmeyer,,,,,,,-51.0,9.3,72,2024-05-05,PWHL,2023/2024,Regular Season
-103,15:41,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,24,Natalie Spooner,,,,,38,Emerance Maschmeyer,,,,,,,-21.0,2.8,72,2024-05-05,PWHL,2023/2024,Regular Season
-104,15:53,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,16,Kateřina Mrázová,,,,,50,Kristen Campbell,,,,,,,67.3,-33.1,72,2024-05-05,PWHL,2023/2024,Regular Season
-105,16:51,Goal,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,51,Victoria Bach,,,,,38,Emerance Maschmeyer,,3 14 22 24 51,Jocelyne Larocque - Renata Fast - Maggie Connors - Natalie Spooner - Victoria Bach,,9 10 15 16 19 71,Daryl Watts - Becca Gilmore - Savannah Harmon - Kateřina Mrázová - Brianne Jenner - Jincy Roese,-2.7,-1.1,72,2024-05-05,PWHL,2023/2024,Regular Season
-106,17:36,Goal,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,17,Samantha Cogan,28,Kaitlin Willoughby,,,38,Emerance Maschmeyer,,3 10 14 17 28,Jocelyne Larocque - Alexa Vasko - Renata Fast - Samantha Cogan - Kaitlin Willoughby,,13 14 15 17 21 26,Tereza Vanišová - Hayley Scamurra - Savannah Harmon - Gabbie Hughes - Ashton Bell - Emily Clark,-74.3,-4.5,72,2024-05-05,PWHL,2023/2024,Regular Season
-107,17:51,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,19,Brianne Jenner,,,,,50,Kristen Campbell,,,,,,,70.7,-19.3,72,2024-05-05,PWHL,2023/2024,Regular Season
-108,17:58,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,19,Brianne Jenner,,,,,50,Kristen Campbell,,,,,,,81.0,-11.1,72,2024-05-05,PWHL,2023/2024,Regular Season
-109,19:41,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,14,Hayley Scamurra,,,,,50,Kristen Campbell,,,,,,,60.3,-22.1,72,2024-05-05,PWHL,2023/2024,Regular Season
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,xG,ScoreState,BoxID,game_id,game_date,competition,season,state
+1,0:12,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,3,Jocelyne Larocque,,,,,38,Emerance Maschmeyer,,,,,,,33.0,-19.6,0.0420,0,O25,72,2024-05-05,PWHL,2023/2024,Regular Season
+2,1:04,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,24,Natalie Spooner,,,,,38,Emerance Maschmeyer,,,,,,,56.0,-3.4,,0,O21,72,2024-05-05,PWHL,2023/2024,Regular Season
+3,1:05,Goal,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,24,Natalie Spooner,34,Hannah Miller,,,38,Emerance Maschmeyer,,6 12 24 34 40,Kali Flanagan - Allie Munroe - Natalie Spooner - Hannah Miller - Blayre Turnbull,,9 16 19 21 71,Daryl Watts - Kateřina Mrázová - Brianne Jenner - Ashton Bell - Jincy Roese,74.3,7.1,0.1248,0,O11,72,2024-05-05,PWHL,2023/2024,Regular Season
+4,1:37,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,28,Kaitlin Willoughby,,,,,38,Emerance Maschmeyer,,,,,,,61.0,-18.7,,1,O13,72,2024-05-05,PWHL,2023/2024,Regular Season
+5,1:49,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,7,Olivia Knowles,,,,,38,Emerance Maschmeyer,,,,,,,35.3,28.9,0.0309,1,O26,72,2024-05-05,PWHL,2023/2024,Regular Season
+6,3:00,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,2,Aneta Tejralová,,,,,50,Kristen Campbell,,,,,,,33.7,23.8,,-1,O26,72,2024-05-05,PWHL,2023/2024,Regular Season
+7,3:35,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,15,Savannah Harmon,,,,,50,Kristen Campbell,,,,,,,41.0,-6.0,,-1,O21,72,2024-05-05,PWHL,2023/2024,Regular Season
+8,3:49,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,17,Gabbie Hughes,,,,,50,Kristen Campbell,,,,,,,65.3,0.8,0.1110,-1,O15,72,2024-05-05,PWHL,2023/2024,Regular Season
+9,4:00,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,71,Jincy Roese,,,,,50,Kristen Campbell,,,,,,,29.0,-29.5,0.0429,-1,O24,72,2024-05-05,PWHL,2023/2024,Regular Season
+10,4:17,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,41,Brittany Howard,,,,,38,Emerance Maschmeyer,,,,,,,46.0,3.7,0.0682,1,O21,72,2024-05-05,PWHL,2023/2024,Regular Season
+11,4:40,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,15,Savannah Harmon,,,,,50,Kristen Campbell,,,,,,,28.7,-17.8,0.0450,-1,O25,72,2024-05-05,PWHL,2023/2024,Regular Season
+12,5:07,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,40,Blayre Turnbull,,,,,38,Emerance Maschmeyer,,,,,,,13.3,17.3,0.0657,1,N02,72,2024-05-05,PWHL,2023/2024,Regular Season
+13,5:10,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,24,Natalie Spooner,,,,,38,Emerance Maschmeyer,,,,,,,71.0,-10.8,0.0929,1,O14,72,2024-05-05,PWHL,2023/2024,Regular Season
+14,5:37,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,40,Blayre Turnbull,,,,,38,Emerance Maschmeyer,,,,,,,49.0,-4.2,0.0682,1,O21,72,2024-05-05,PWHL,2023/2024,Regular Season
+15,6:43,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,10,Alexa Vasko,,,,,38,Emerance Maschmeyer,,,,,,,45.0,-11.6,0.0682,1,O21,72,2024-05-05,PWHL,2023/2024,Regular Season
+16,7:19,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,21,Ashton Bell,,,,,50,Kristen Campbell,,,,,,,3.3,27.2,0.0591,-1,N03,72,2024-05-05,PWHL,2023/2024,Regular Season
+17,8:02,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,8,Natalie Snodgrass,,,,,50,Kristen Campbell,,,,,,,49.0,-19.0,0.0491,-1,O20,72,2024-05-05,PWHL,2023/2024,Regular Season
+18,8:08,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,5,Samantha Isbell,,,,,50,Kristen Campbell,,,,,,,47.7,0.8,,-1,O21,72,2024-05-05,PWHL,2023/2024,Regular Season
+19,8:26,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,27,Emma Maltais,,,,,38,Emerance Maschmeyer,,,,,,,46.7,-29.2,0.0380,1,O19,72,2024-05-05,PWHL,2023/2024,Regular Season
+20,9:06,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,19,Brianne Jenner,,,,,50,Kristen Campbell,,,,,,,80.7,-2.8,0.1328,-1,O11,72,2024-05-05,PWHL,2023/2024,Regular Season
+21,9:26,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,40,Blayre Turnbull,,,,,38,Emerance Maschmeyer,,,,,,,88.0,12.8,0.0841,1,O08,72,2024-05-05,PWHL,2023/2024,Regular Season
+22,9:38,Goal,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,17,Gabbie Hughes,14,Hayley Scamurra,26,Emily Clark,50,Kristen Campbell,,6 12 18 22 28,Kali Flanagan - Allie Munroe - Jesse Compher - Maggie Connors - Kaitlin Willoughby,,14 17 21 26 71,Hayley Scamurra - Gabbie Hughes - Ashton Bell - Emily Clark - Jincy Roese,85.7,-6.0,0.0705,-1,O06,72,2024-05-05,PWHL,2023/2024,Regular Season
+23,10:36,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,14,Renata Fast,,,,,38,Emerance Maschmeyer,,,,,,,32.3,17.8,0.0420,0,O25,72,2024-05-05,PWHL,2023/2024,Regular Season
+24,10:48,Goal,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,20,Sarah Nurse,41,Brittany Howard,,,38,Emerance Maschmeyer,,3 14 20 27 41,Jocelyne Larocque - Renata Fast - Sarah Nurse - Emma Maltais - Brittany Howard,,2 8 10 13 15,Aneta Tejralová - Natalie Snodgrass - Becca Gilmore - Tereza Vanišová - Savannah Harmon,81.3,7.1,0.1248,0,O11,72,2024-05-05,PWHL,2023/2024,Regular Season
+25,12:36,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,18,Jesse Compher,,,,,,,,,,,,,,,,1,,72,2024-05-05,PWHL,2023/2024,Regular Season
+26,12:36,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,18,Jesse Compher,,,,,,,,,,,,,,,,1,,72,2024-05-05,PWHL,2023/2024,Regular Season
+27,12:38,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v3,19,Brianne Jenner,,,,,50,Kristen Campbell,,,,,,,83.7,-15.9,0.1093,-1,O06,72,2024-05-05,PWHL,2023/2024,Regular Season
+28,13:13,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v3,14,Hayley Scamurra,,,,,50,Kristen Campbell,,,,,,,59.3,37.1,0.0257,-1,O18,72,2024-05-05,PWHL,2023/2024,Regular Season
+29,13:39,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v3,14,Hayley Scamurra,,,,,50,Kristen Campbell,,,,,,,77.0,23.0,0.0504,-1,O09,72,2024-05-05,PWHL,2023/2024,Regular Season
+30,15:21,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,14,Hayley Scamurra,,,,,50,Kristen Campbell,,,,,,,87.3,6.0,0.0758,-1,O08,72,2024-05-05,PWHL,2023/2024,Regular Season
+31,16:25,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,26,Emily Clark,,,,,50,Kristen Campbell,,,,,,,54.7,-15.9,,-1,O20,72,2024-05-05,PWHL,2023/2024,Regular Season
+32,16:43,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,21,Ashton Bell,,,,,50,Kristen Campbell,,,,,,,28.3,21.2,0.0450,-1,O25,72,2024-05-05,PWHL,2023/2024,Regular Season
+33,17:33,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,5,Lauriane Rougeau,,,,,38,Emerance Maschmeyer,,,,,,,34.0,-23.8,0.0477,1,O24,72,2024-05-05,PWHL,2023/2024,Regular Season
+34,17:42,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,27,Shiann Darkangelo,,,,,50,Kristen Campbell,,,,,,,35.3,-29.2,0.0429,-1,O24,72,2024-05-05,PWHL,2023/2024,Regular Season
+35,17:46,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,10,Becca Gilmore,,,,,50,Kristen Campbell,,,,,,,54.3,-1.4,0.0614,-1,O21,72,2024-05-05,PWHL,2023/2024,Regular Season
+36,17:51,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,9,Daryl Watts,,,,,50,Kristen Campbell,,,,,,,75.0,-14.7,0.0705,-1,O06,72,2024-05-05,PWHL,2023/2024,Regular Season
+37,18:00,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,19,Brianne Jenner,,,,,50,Kristen Campbell,,,,,,,59.0,-36.8,,-1,O12,72,2024-05-05,PWHL,2023/2024,Regular Season
+38,18:15,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,16,Kateřina Mrázová,,,,,50,Kristen Campbell,,,,,,,42.7,-23.8,,-1,O20,72,2024-05-05,PWHL,2023/2024,Regular Season
+39,18:24,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,15,Savannah Harmon,,,,,50,Kristen Campbell,,,,,,,31.0,-0.8,0.0450,-1,O25,72,2024-05-05,PWHL,2023/2024,Regular Season
+40,18:37,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,28,Kaitlin Willoughby,,,,,38,Emerance Maschmeyer,,,,,,,53.0,14.2,0.0461,1,O22,72,2024-05-05,PWHL,2023/2024,Regular Season
+41,18:52,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,19,Rebecca Leslie,,,,,38,Emerance Maschmeyer,,,,,,,27.7,0.0,,1,O25,72,2024-05-05,PWHL,2023/2024,Regular Season
+42,19:46,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,26,Emily Clark,,,,,50,Kristen Campbell,,,,,,,74.3,-12.2,0.0705,-1,O06,72,2024-05-05,PWHL,2023/2024,Regular Season
+43,19:56,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,15,Savannah Harmon,,,,,50,Kristen Campbell,,,,,,,37.0,-4.8,,-1,O25,72,2024-05-05,PWHL,2023/2024,Regular Season
+44,0:48,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,3,Jocelyne Larocque,,,,,38,Emerance Maschmeyer,,,,,,,58.3,-35.4,0.0166,1,O12,72,2024-05-05,PWHL,2023/2024,Regular Season
+45,0:54,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,24,Natalie Spooner,,,,,38,Emerance Maschmeyer,,,,,,,64.0,-28.1,0.0443,1,O13,72,2024-05-05,PWHL,2023/2024,Regular Season
+46,1:00,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,40,Blayre Turnbull,,,,,38,Emerance Maschmeyer,,,,,,,59.0,19.8,0.0488,1,O17,72,2024-05-05,PWHL,2023/2024,Regular Season
+47,1:10,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,12,Allie Munroe,,,,,38,Emerance Maschmeyer,,,,,,,37.7,-28.3,,1,O24,72,2024-05-05,PWHL,2023/2024,Regular Season
+48,1:41,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,21,Ashton Bell,,,,,50,Kristen Campbell,,,,,,,33.0,24.9,0.0277,-1,O26,72,2024-05-05,PWHL,2023/2024,Regular Season
+49,2:10,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,19,Brianne Jenner,,,,,50,Kristen Campbell,,,,,,,66.0,35.1,0.0161,-1,O18,72,2024-05-05,PWHL,2023/2024,Regular Season
+50,2:13,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,9,Daryl Watts,,,,,50,Kristen Campbell,,,,,,,47.7,18.4,,-1,O22,72,2024-05-05,PWHL,2023/2024,Regular Season
+51,6:26,Goal,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,9,Daryl Watts,19,Brianne Jenner,,,50,Kristen Campbell,,3 10 14 17 19,Jocelyne Larocque - Alexa Vasko - Renata Fast - Samantha Cogan - Rebecca Leslie,,5 9 15 16 19,Samantha Isbell - Daryl Watts - Savannah Harmon - Kateřina Mrázová - Brianne Jenner,82.7,3.1,0.1328,-1,O11,72,2024-05-05,PWHL,2023/2024,Regular Season
+52,7:01,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,26,Emily Clark,,,,,50,Kristen Campbell,,,,,,,43.3,-8.5,,0,O21,72,2024-05-05,PWHL,2023/2024,Regular Season
+53,7:14,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,26,Emily Clark,,,,,50,Kristen Campbell,,,,,,,83.7,21.8,0.0296,0,O09,72,2024-05-05,PWHL,2023/2024,Regular Season
+54,7:14,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,14,Hayley Scamurra,,,,,50,Kristen Campbell,,,,,,,75.0,3.4,0.1248,0,O11,72,2024-05-05,PWHL,2023/2024,Regular Season
+55,9:45,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,14,Hayley Scamurra,,,,,50,Kristen Campbell,,,,,,,37.0,-9.3,,0,O25,72,2024-05-05,PWHL,2023/2024,Regular Season
+56,10:02,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,14,Hayley Scamurra,,,,,50,Kristen Campbell,,,,,,,68.7,-9.3,0.0785,0,O14,72,2024-05-05,PWHL,2023/2024,Regular Season
+57,11:52,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,3,Jocelyne Larocque,,,,,38,Emerance Maschmeyer,,,,,,,56.3,-33.1,,0,O19,72,2024-05-05,PWHL,2023/2024,Regular Season
+58,12:16,Penalty,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,13,Tereza Vanišová,,,,,,,,,,,,,,,,0,,72,2024-05-05,PWHL,2023/2024,Regular Season
+59,12:36,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v4,24,Natalie Spooner,,,,,38,Emerance Maschmeyer,,,,,,,81.0,2.0,0.1873,0,O11,72,2024-05-05,PWHL,2023/2024,Regular Season
+60,13:02,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v4,24,Natalie Spooner,,,,,38,Emerance Maschmeyer,,,,,,,26.0,0.6,0.0661,0,O25,72,2024-05-05,PWHL,2023/2024,Regular Season
+61,15:05,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,19,Brianne Jenner,,,,,50,Kristen Campbell,,,,,,,57.0,6.2,,0,O15,72,2024-05-05,PWHL,2023/2024,Regular Season
+62,15:56,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,26,Emily Clark,,,,,50,Kristen Campbell,,,,,,,79.7,4.0,0.1248,0,O11,72,2024-05-05,PWHL,2023/2024,Regular Season
+63,16:28,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,19,Rebecca Leslie,,,,,38,Emerance Maschmeyer,,,,,,,65.3,-17.8,,0,O13,72,2024-05-05,PWHL,2023/2024,Regular Season
+64,17:16,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,8,Natalie Snodgrass,,,,,50,Kristen Campbell,,,,,,,43.7,10.8,0.0573,0,O21,72,2024-05-05,PWHL,2023/2024,Regular Season
+65,17:28,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,40,Blayre Turnbull,,,,,38,Emerance Maschmeyer,,,,,,,46.7,9.9,0.0573,0,O21,72,2024-05-05,PWHL,2023/2024,Regular Season
+66,18:49,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,2,event,5v5,6,Kali Flanagan,,,,,38,Emerance Maschmeyer,,,,,,,32.0,9.1,0.0420,0,O25,72,2024-05-05,PWHL,2023/2024,Regular Season
+67,19:55,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,14,Hayley Scamurra,,,,,50,Kristen Campbell,,,,,,,51.0,17.8,0.0386,0,O22,72,2024-05-05,PWHL,2023/2024,Regular Season
+68,19:58,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,2,event,5v5,2,Aneta Tejralová,,,,,50,Kristen Campbell,,,,,,,71.0,-20.4,,0,O13,72,2024-05-05,PWHL,2023/2024,Regular Season
+69,0:09,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,17,Gabbie Hughes,,,,,50,Kristen Campbell,,,,,,,7.0,-6.2,0.0553,0,N02,72,2024-05-05,PWHL,2023/2024,Regular Season
+70,0:15,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,17,Gabbie Hughes,,,,,50,Kristen Campbell,,,,,,,81.7,-35.4,0.0191,0,O04,72,2024-05-05,PWHL,2023/2024,Regular Season
+71,1:22,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,8,Natalie Snodgrass,,,,,50,Kristen Campbell,,,,,,,59.3,-32.9,0.0138,0,O12,72,2024-05-05,PWHL,2023/2024,Regular Season
+72,1:39,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,71,Jincy Roese,,,,,50,Kristen Campbell,,,,,,,35.3,-23.0,0.0400,0,O24,72,2024-05-05,PWHL,2023/2024,Regular Season
+73,1:39,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,5,Lauriane Rougeau,,,,,,,,,,,,,,,,0,,72,2024-05-05,PWHL,2023/2024,Regular Season
+74,2:01,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,3,Jocelyne Larocque,,,,,38,Emerance Maschmeyer,,,,,,,39.0,-16.1,,0,O25,72,2024-05-05,PWHL,2023/2024,Regular Season
+75,2:56,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v4,17,Gabbie Hughes,,,,,50,Kristen Campbell,,,,,,,54.0,23.2,0.0243,0,O23,72,2024-05-05,PWHL,2023/2024,Regular Season
+76,3:12,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v4,15,Savannah Harmon,,,,,50,Kristen Campbell,,,,,,,51.3,-16.4,0.0721,0,O20,72,2024-05-05,PWHL,2023/2024,Regular Season
+77,3:24,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,40,Blayre Turnbull,,,,,38,Emerance Maschmeyer,,,,,,,52.7,9.6,,0,O21,72,2024-05-05,PWHL,2023/2024,Regular Season
+78,4:05,Penalty,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,27,Shiann Darkangelo,,,,,,,,,,,,,,,,0,,72,2024-05-05,PWHL,2023/2024,Regular Season
+79,5:08,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v4,22,Maggie Connors,,,,,38,Emerance Maschmeyer,,,,,,,51.0,-28.1,0.0505,0,O19,72,2024-05-05,PWHL,2023/2024,Regular Season
+80,5:16,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,22,Maggie Connors,,,,,38,Emerance Maschmeyer,,,,,,,55.3,-28.1,,0,O19,72,2024-05-05,PWHL,2023/2024,Regular Season
+81,6:00,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,17,Gabbie Hughes,,,,,50,Kristen Campbell,,,,,,,69.3,20.7,,0,O17,72,2024-05-05,PWHL,2023/2024,Regular Season
+82,6:09,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,2,Aneta Tejralová,,,,,50,Kristen Campbell,,,,,,,17.7,-23.8,0.0553,0,N01,72,2024-05-05,PWHL,2023/2024,Regular Season
+83,7:19,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,51,Victoria Bach,,,,,38,Emerance Maschmeyer,,,,,,,65.7,-24.1,0.0371,0,O13,72,2024-05-05,PWHL,2023/2024,Regular Season
+84,7:48,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,8,Natalie Snodgrass,,,,,50,Kristen Campbell,,,,,,,54.3,-2.5,0.0573,0,O21,72,2024-05-05,PWHL,2023/2024,Regular Season
+85,7:56,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,15,Savannah Harmon,,,,,50,Kristen Campbell,,,,,,,56.0,-28.1,,0,O19,72,2024-05-05,PWHL,2023/2024,Regular Season
+86,8:06,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,10,Becca Gilmore,,,,,50,Kristen Campbell,,,,,,,61.0,9.3,0.0899,0,O16,72,2024-05-05,PWHL,2023/2024,Regular Season
+87,9:37,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,27,Emma Maltais,,,,,38,Emerance Maschmeyer,,,,,,,44.0,0.8,0.0573,0,O21,72,2024-05-05,PWHL,2023/2024,Regular Season
+88,9:58,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,7,Olivia Knowles,,,,,38,Emerance Maschmeyer,,,,,,,43.3,-20.4,0.0458,0,O20,72,2024-05-05,PWHL,2023/2024,Regular Season
+89,10:40,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,17,Gabbie Hughes,,,,,50,Kristen Campbell,,,,,,,74.7,2.3,0.1248,0,O11,72,2024-05-05,PWHL,2023/2024,Regular Season
+90,11:05,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,28,Kaitlin Willoughby,,,,,38,Emerance Maschmeyer,,,,,,,39.7,-2.3,0.0420,0,O25,72,2024-05-05,PWHL,2023/2024,Regular Season
+91,11:55,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,51,Victoria Bach,,,,,38,Emerance Maschmeyer,,,,,,,41.3,-36.5,0.0318,0,O19,72,2024-05-05,PWHL,2023/2024,Regular Season
+92,12:07,Block,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,19,Brianne Jenner,,,,,50,Kristen Campbell,,,,,,,43.0,11.1,,0,O21,72,2024-05-05,PWHL,2023/2024,Regular Season
+93,12:29,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,10,Becca Gilmore,,,,,50,Kristen Campbell,,,,,,,29.3,0.8,0.0420,0,O25,72,2024-05-05,PWHL,2023/2024,Regular Season
+94,13:00,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,15,Savannah Harmon,,,,,50,Kristen Campbell,,,,,,,31.3,33.4,0.0258,0,O26,72,2024-05-05,PWHL,2023/2024,Regular Season
+95,13:13,Penalty,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,8,Natalie Snodgrass,,,,,,,,,,,,,,,,0,,72,2024-05-05,PWHL,2023/2024,Regular Season
+96,13:34,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,3v5,6,Kali Flanagan,,,,,38,Emerance Maschmeyer,,,,,,,30.7,-21.2,,0,O24,72,2024-05-05,PWHL,2023/2024,Regular Season
+97,13:53,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v4,24,Natalie Spooner,,,,,38,Emerance Maschmeyer,,,,,,,65.0,8.8,0.1377,0,O16,72,2024-05-05,PWHL,2023/2024,Regular Season
+98,14:13,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,3v5,24,Natalie Spooner,,,,,38,Emerance Maschmeyer,,,,,,,79.3,-16.1,,0,O06,72,2024-05-05,PWHL,2023/2024,Regular Season
+99,14:16,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v4,20,Sarah Nurse,,,,,38,Emerance Maschmeyer,,,,,,,55.3,28.3,0.0243,0,O23,72,2024-05-05,PWHL,2023/2024,Regular Season
+100,14:17,Goal,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v4,24,Natalie Spooner,20,Sarah Nurse,34,Hannah Miller,38,Emerance Maschmeyer,,14 20 24 27 34,Renata Fast - Sarah Nurse - Natalie Spooner - Emma Maltais - Hannah Miller,,2 14 15 27,Aneta Tejralová - Hayley Scamurra - Savannah Harmon - Shiann Darkangelo,84.3,7.1,0.1099,0,O08,72,2024-05-05,PWHL,2023/2024,Regular Season
+101,14:56,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,13,Tereza Vanišová,,,,,50,Kristen Campbell,,,,,,,65.7,-12.8,0.0838,-1,O14,72,2024-05-05,PWHL,2023/2024,Regular Season
+102,15:26,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,27,Emma Maltais,,,,,38,Emerance Maschmeyer,,,,,,,51.0,-9.3,,1,O21,72,2024-05-05,PWHL,2023/2024,Regular Season
+103,15:41,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,24,Natalie Spooner,,,,,38,Emerance Maschmeyer,,,,,,,21.0,-2.8,,1,N02,72,2024-05-05,PWHL,2023/2024,Regular Season
+104,15:53,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,16,Kateřina Mrázová,,,,,50,Kristen Campbell,,,,,,,67.3,-33.1,0.0148,-1,O12,72,2024-05-05,PWHL,2023/2024,Regular Season
+105,16:51,Goal,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,51,Victoria Bach,,,,,38,Emerance Maschmeyer,,3 14 22 24 51,Jocelyne Larocque - Renata Fast - Maggie Connors - Natalie Spooner - Victoria Bach,,9 10 15 16 19 71,Daryl Watts - Becca Gilmore - Savannah Harmon - Kateřina Mrázová - Brianne Jenner - Jincy Roese,2.7,1.1,0.0657,1,N02,72,2024-05-05,PWHL,2023/2024,Regular Season
+106,17:36,Goal,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,3,event,5v5,17,Samantha Cogan,28,Kaitlin Willoughby,,,38,Emerance Maschmeyer,,3 10 14 17 28,Jocelyne Larocque - Alexa Vasko - Renata Fast - Samantha Cogan - Kaitlin Willoughby,,13 14 15 17 21 26,Tereza Vanišová - Hayley Scamurra - Savannah Harmon - Gabbie Hughes - Ashton Bell - Emily Clark,74.3,4.5,0.1803,2,O11,72,2024-05-05,PWHL,2023/2024,Regular Season
+107,17:51,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,19,Brianne Jenner,,,,,50,Kristen Campbell,,,,,,,70.7,-19.3,0.0402,-3,O13,72,2024-05-05,PWHL,2023/2024,Regular Season
+108,17:58,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,19,Brianne Jenner,,,,,50,Kristen Campbell,,,,,,,81.0,-11.1,0.0712,-3,O06,72,2024-05-05,PWHL,2023/2024,Regular Season
+109,19:41,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,3,event,5v5,14,Hayley Scamurra,,,,,50,Kristen Campbell,,,,,,,60.3,-22.1,0.0402,-3,O13,72,2024-05-05,PWHL,2023/2024,Regular Season

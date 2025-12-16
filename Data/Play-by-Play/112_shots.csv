@@ -1,73 +1,73 @@
-id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
-1,0:31,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,1,event,5v5,20,Allyson Simpson,,,,,31,Aerin Frankel,,,,,,,35.7,-24.1,112,2024-12-08,PWHL,2024/2025,Regular Season
-2,1:21,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v5,19,Hannah Bilka,,,,,30,Corinne Schroeder,,,,,,,-75.3,9.3,112,2024-12-08,PWHL,2024/2025,Regular Season
-3,2:34,Block,New York Sirens,Away,Boston Fleet,New York Sirens,1,event,5v5,8,Maja Nylen Persson,,,,,31,Aerin Frankel,,,,,,,43.7,9.9,112,2024-12-08,PWHL,2024/2025,Regular Season
-4,4:00,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v5,19,Hannah Bilka,,,,,30,Corinne Schroeder,,,,,,,-52.3,-11.9,112,2024-12-08,PWHL,2024/2025,Regular Season
-5,5:11,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v5,36,Loren Gabel,,,,,30,Corinne Schroeder,,,,,,,-51.7,22.4,112,2024-12-08,PWHL,2024/2025,Regular Season
-6,5:56,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,1,event,5v5,25,Alex Carpenter,,,,,31,Aerin Frankel,,,,,,,64.7,16.1,112,2024-12-08,PWHL,2024/2025,Regular Season
-7,6:24,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v5,19,Hannah Bilka,,,,,30,Corinne Schroeder,,,,,,,-33.3,15.0,112,2024-12-08,PWHL,2024/2025,Regular Season
-8,6:25,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v5,21,Hilary Knight,,,,,30,Corinne Schroeder,,,,,,,-69.0,-6.2,112,2024-12-08,PWHL,2024/2025,Regular Season
-9,7:31,Goal,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v5,77,Susanna Tapani,37,Theresa Schafzahl,7,Sidney Morin,30,Corinne Schroeder,,5 15 19 37 77,Megan Keller - Sydney Bard - Hannah Bilka - Theresa Schafzahl - Susanna Tapani,,8 11 19 28 40,Maja Nylen Persson - Abby Roque - Paetyn Levis - Micah Zandee-Hart - Noora Tulus,-63.7,17.8,112,2024-12-08,PWHL,2024/2025,Regular Season
-10,9:43,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v5,25,Emma Greco,,,,,30,Corinne Schroeder,,,,,,,-4.3,28.6,112,2024-12-08,PWHL,2024/2025,Regular Season
-11,9:45,Penalty,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v5,17,Taylor Girard,,,,,,,,,,,,,,,112,2024-12-08,PWHL,2024/2025,Regular Season
-12,12:12,Block,New York Sirens,Away,Boston Fleet,New York Sirens,1,event,5v5,9,Jessie Eldridge,,,,,31,Aerin Frankel,,,,,,,60.0,1.1,112,2024-12-08,PWHL,2024/2025,Regular Season
-13,13:11,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,1,event,5v5,18,Élizabeth Giguère,,,,,31,Aerin Frankel,,,,,,,58.3,-24.9,112,2024-12-08,PWHL,2024/2025,Regular Season
-14,13:11,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v5,37,Theresa Schafzahl,,,,,30,Corinne Schroeder,,,,,,,-41.7,-11.6,112,2024-12-08,PWHL,2024/2025,Regular Season
-15,13:21,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,1,event,5v5,27,Jade Downie-Landry,,,,,31,Aerin Frankel,,,,,,,47.7,-16.7,112,2024-12-08,PWHL,2024/2025,Regular Season
-16,14:01,Goal,New York Sirens,Away,Boston Fleet,New York Sirens,1,event,5v5,19,Paetyn Levis,28,Micah Zandee-Hart,10,Sarah Fillier,31,Aerin Frankel,,5 15 19 20 21,Megan Keller - Sydney Bard - Hannah Bilka - Hannah Brandt - Hilary Knight,,8 10 19 25 28,Maja Nylen Persson - Sarah Fillier - Paetyn Levis - Alex Carpenter - Micah Zandee-Hart,73.3,-2.0,112,2024-12-08,PWHL,2024/2025,Regular Season
-17,15:01,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v5,88,Lexie Adzija,,,,,30,Corinne Schroeder,,,,,,,-43.0,8.5,112,2024-12-08,PWHL,2024/2025,Regular Season
-18,16:49,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v5,5,Megan Keller,,,,,30,Corinne Schroeder,,,,,,,-35.3,24.6,112,2024-12-08,PWHL,2024/2025,Regular Season
-19,17:17,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v5,19,Hannah Bilka,,,,,30,Corinne Schroeder,,,,,,,-39.3,-26.9,112,2024-12-08,PWHL,2024/2025,Regular Season
-20,17:34,Penalty,New York Sirens,Away,Boston Fleet,New York Sirens,1,event,5v5,40,Noora Tulus,,,,,,,,,,,,,,,112,2024-12-08,PWHL,2024/2025,Regular Season
-21,18:19,Penalty,New York Sirens,Away,Boston Fleet,New York Sirens,1,event,4v5,6,Brooke Hobson,,,,,,,,,,,,,,,112,2024-12-08,PWHL,2024/2025,Regular Season
-22,18:23,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v3,47,Jamie Lee Rattray,,,,,30,Corinne Schroeder,,,,,,,-41.0,26.4,112,2024-12-08,PWHL,2024/2025,Regular Season
-23,19:06,Block,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v3,15,Sydney Bard,,,,,30,Corinne Schroeder,,,,,,,-55.0,10.5,112,2024-12-08,PWHL,2024/2025,Regular Season
-24,19:17,Goal,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v3,15,Sydney Bard,21,Hilary Knight,19,Hannah Bilka,30,Corinne Schroeder,,15 19 20 21 77,Sydney Bard - Hannah Bilka - Hannah Brandt - Hilary Knight - Susanna Tapani,,15 20 27,Gabby Rosenthal - Allyson Simpson - Jade Downie-Landry,-59.0,17.3,112,2024-12-08,PWHL,2024/2025,Regular Season
-25,19:43,Block,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v4,21,Hilary Knight,,,,,30,Corinne Schroeder,,,,,,,-49.0,-6.5,112,2024-12-08,PWHL,2024/2025,Regular Season
-26,0:32,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,2,event,5v5,5,Megan Keller,,,,,30,Corinne Schroeder,,,,,,,-41.0,16.1,112,2024-12-08,PWHL,2024/2025,Regular Season
-27,0:59,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,2,event,5v5,11,Abby Roque,,,,,31,Aerin Frankel,,,,,,,73.0,9.3,112,2024-12-08,PWHL,2024/2025,Regular Season
-28,1:33,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,2,event,5v5,20,Allyson Simpson,,,,,31,Aerin Frankel,,,,,,,42.7,19.0,112,2024-12-08,PWHL,2024/2025,Regular Season
-29,1:49,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,2,event,5v5,77,Susanna Tapani,,,,,30,Corinne Schroeder,,,,,,,-53.0,24.1,112,2024-12-08,PWHL,2024/2025,Regular Season
-30,2:14,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,2,event,5v5,37,Theresa Schafzahl,,,,,30,Corinne Schroeder,,,,,,,-63.0,19.6,112,2024-12-08,PWHL,2024/2025,Regular Season
-31,2:45,Penalty,Boston Fleet,Home,Boston Fleet,New York Sirens,2,event,5v5,77,Susanna Tapani,,,,,,,,,,,,,,,112,2024-12-08,PWHL,2024/2025,Regular Season
-32,4:06,Penalty,Boston Fleet,Home,Boston Fleet,New York Sirens,2,event,4v5,16,Amanda Pelkey,,,,,,,,,,,,,,,112,2024-12-08,PWHL,2024/2025,Regular Season
-33,4:50,Goal,New York Sirens,Away,Boston Fleet,New York Sirens,2,event,5v4,11,Abby Roque,25,Alex Carpenter,28,Micah Zandee-Hart,31,Aerin Frankel,,2 22 27 77,Emily Brown - Jessica DiGirolamo - Shay Maloney - Susanna Tapani,,9 10 11 25 28,Jessie Eldridge - Sarah Fillier - Abby Roque - Alex Carpenter - Micah Zandee-Hart,55.0,-8.8,112,2024-12-08,PWHL,2024/2025,Regular Season
-34,6:06,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,2,event,5v5,21,Hilary Knight,,,,,30,Corinne Schroeder,,,,,,,-65.0,-9.6,112,2024-12-08,PWHL,2024/2025,Regular Season
-35,6:10,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,2,event,5v5,5,Megan Keller,,,,,30,Corinne Schroeder,,,,,,,-61.7,6.5,112,2024-12-08,PWHL,2024/2025,Regular Season
-36,7:48,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,2,event,5v5,18,Élizabeth Giguère,,,,,31,Aerin Frankel,,,,,,,72.3,-25.8,112,2024-12-08,PWHL,2024/2025,Regular Season
-37,7:59,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,2,event,5v5,21,Hilary Knight,,,,,30,Corinne Schroeder,,,,,,,-27.3,-15.6,112,2024-12-08,PWHL,2024/2025,Regular Season
-38,9:20,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,2,event,5v5,20,Allyson Simpson,,,,,31,Aerin Frankel,,,,,,,35.7,-9.1,112,2024-12-08,PWHL,2024/2025,Regular Season
-39,10:36,Block,New York Sirens,Away,Boston Fleet,New York Sirens,2,event,5v4,25,Alex Carpenter,,,,,31,Aerin Frankel,,,,,,,33.7,-19.0,112,2024-12-08,PWHL,2024/2025,Regular Season
-40,11:20,Block,New York Sirens,Away,Boston Fleet,New York Sirens,2,event,5v4,25,Alex Carpenter,,,,,31,Aerin Frankel,,,,,,,57.3,-0.8,112,2024-12-08,PWHL,2024/2025,Regular Season
-41,14:16,Block,New York Sirens,Away,Boston Fleet,New York Sirens,2,event,5v5,8,Maja Nylen Persson,,,,,31,Aerin Frankel,,,,,,,37.7,-24.6,112,2024-12-08,PWHL,2024/2025,Regular Season
-42,15:10,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,2,event,5v5,9,Jessie Eldridge,,,,,31,Aerin Frankel,,,,,,,43.0,11.9,112,2024-12-08,PWHL,2024/2025,Regular Season
-43,16:51,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,2,event,5v5,25,Alex Carpenter,,,,,31,Aerin Frankel,,,,,,,65.0,-1.7,112,2024-12-08,PWHL,2024/2025,Regular Season
-44,18:39,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,2,event,5v5,18,Élizabeth Giguère,,,,,31,Aerin Frankel,,,,,,,55.3,-17.3,112,2024-12-08,PWHL,2024/2025,Regular Season
-45,18:50,Penalty,New York Sirens,Away,Boston Fleet,New York Sirens,2,event,5v5,18,Élizabeth Giguère,,,,,,,,,,,,,,,112,2024-12-08,PWHL,2024/2025,Regular Season
-46,0:55,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,3,event,5v5,5,Megan Keller,,,,,30,Corinne Schroeder,,,,,,,-35.3,-12.8,112,2024-12-08,PWHL,2024/2025,Regular Season
-47,1:07,Goal,Boston Fleet,Home,Boston Fleet,New York Sirens,3,event,5v5,5,Megan Keller,,,,,30,Corinne Schroeder,,2 5 16 21 77,Emily Brown - Megan Keller - Amanda Pelkey - Hilary Knight - Susanna Tapani,,6 10 14 18 25,Brooke Hobson - Sarah Fillier - Jaime Bourbonnais - Élizabeth Giguère - Alex Carpenter,-67.3,-10.2,112,2024-12-08,PWHL,2024/2025,Regular Season
-48,1:18,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,3,event,5v5,19,Hannah Bilka,,,,,30,Corinne Schroeder,,,,,,,-59.0,9.3,112,2024-12-08,PWHL,2024/2025,Regular Season
-49,1:37,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v5,29,Emmy Fecteau,,,,,31,Aerin Frankel,,,,,,,47.3,-1.7,112,2024-12-08,PWHL,2024/2025,Regular Season
-50,2:09,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v5,18,Élizabeth Giguère,,,,,31,Aerin Frankel,,,,,,,61.0,6.2,112,2024-12-08,PWHL,2024/2025,Regular Season
-51,3:11,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v5,11,Abby Roque,,,,,31,Aerin Frankel,,,,,,,50.3,-23.2,112,2024-12-08,PWHL,2024/2025,Regular Season
-52,3:39,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v5,19,Paetyn Levis,,,,,31,Aerin Frankel,,,,,,,55.7,-13.6,112,2024-12-08,PWHL,2024/2025,Regular Season
-53,4:45,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v5,20,Allyson Simpson,,,,,31,Aerin Frankel,,,,,,,59.0,17.8,112,2024-12-08,PWHL,2024/2025,Regular Season
-54,5:07,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v5,20,Allyson Simpson,,,,,31,Aerin Frankel,,,,,,,64.0,11.1,112,2024-12-08,PWHL,2024/2025,Regular Season
-55,5:40,Penalty,Boston Fleet,Home,Boston Fleet,New York Sirens,3,event,5v5,15,Sydney Bard,,,,,,,,,,,,,,,112,2024-12-08,PWHL,2024/2025,Regular Season
-56,7:02,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v4,11,Abby Roque,,,,,31,Aerin Frankel,,,,,,,74.7,-7.4,112,2024-12-08,PWHL,2024/2025,Regular Season
-57,7:14,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v4,10,Sarah Fillier,,,,,31,Aerin Frankel,,,,,,,69.3,11.9,112,2024-12-08,PWHL,2024/2025,Regular Season
-58,7:48,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v5,40,Noora Tulus,,,,,31,Aerin Frankel,,,,,,,63.7,-8.5,112,2024-12-08,PWHL,2024/2025,Regular Season
-59,7:59,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v5,40,Noora Tulus,,,,,31,Aerin Frankel,,,,,,,79.0,-9.1,112,2024-12-08,PWHL,2024/2025,Regular Season
-60,8:27,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,3,event,5v5,7,Sidney Morin,,,,,30,Corinne Schroeder,,,,,,,-9.7,-26.9,112,2024-12-08,PWHL,2024/2025,Regular Season
-61,8:40,Penalty,Boston Fleet,Home,Boston Fleet,New York Sirens,3,event,5v5,16,Amanda Pelkey,,,,,,,,,,,,,,,112,2024-12-08,PWHL,2024/2025,Regular Season
-62,9:59,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v4,20,Allyson Simpson,,,,,31,Aerin Frankel,,,,,,,53.3,32.6,112,2024-12-08,PWHL,2024/2025,Regular Season
-63,10:13,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v4,20,Allyson Simpson,,,,,31,Aerin Frankel,,,,,,,65.7,24.4,112,2024-12-08,PWHL,2024/2025,Regular Season
-64,10:44,Block,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v4,8,Maja Nylen Persson,,,,,31,Aerin Frankel,,,,,,,41.0,-15.0,112,2024-12-08,PWHL,2024/2025,Regular Season
-65,11:26,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,3,event,5v5,21,Hilary Knight,,,,,30,Corinne Schroeder,,,,,,,-73.0,15.6,112,2024-12-08,PWHL,2024/2025,Regular Season
-66,11:42,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,3,event,5v5,7,Sidney Morin,,,,,30,Corinne Schroeder,,,,,,,-40.7,-27.5,112,2024-12-08,PWHL,2024/2025,Regular Season
-67,12:02,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v5,25,Alex Carpenter,,,,,31,Aerin Frankel,,,,,,,52.0,11.1,112,2024-12-08,PWHL,2024/2025,Regular Season
-68,13:25,Penalty,Boston Fleet,Home,Boston Fleet,New York Sirens,3,event,5v5,5,Megan Keller,,,,,,,,,,,,,,,112,2024-12-08,PWHL,2024/2025,Regular Season
-69,14:15,Block,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v5,28,Micah Zandee-Hart,,,,,31,Aerin Frankel,,,,,,,41.3,16.7,112,2024-12-08,PWHL,2024/2025,Regular Season
-70,16:06,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v5,6,Brooke Hobson,,,,,31,Aerin Frankel,,,,,,,34.7,-6.2,112,2024-12-08,PWHL,2024/2025,Regular Season
-71,17:41,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,3,event,5v5,88,Lexie Adzija,,,,,30,Corinne Schroeder,,,,,,,-69.0,6.8,112,2024-12-08,PWHL,2024/2025,Regular Season
-72,17:59,Goal,Boston Fleet,Home,Boston Fleet,New York Sirens,3,event,5v5,5,Megan Keller,77,Susanna Tapani,27,Shay Maloney,30,Corinne Schroeder,,5 15 27 37 77,Megan Keller - Sydney Bard - Shay Maloney - Theresa Schafzahl - Susanna Tapani,,9 11 14 20 40,Jessie Eldridge - Abby Roque - Jaime Bourbonnais - Allyson Simpson - Noora Tulus,-50.3,19.6,112,2024-12-08,PWHL,2024/2025,Regular Season
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,xG,ScoreState,BoxID,game_id,game_date,competition,season,state
+1,0:31,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,1,event,5v5,20,Allyson Simpson,,,,,31,Aerin Frankel,,,,,,,35.7,-24.1,0.0400,0,O24,112,2024-12-08,PWHL,2024/2025,Regular Season
+2,1:21,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v5,19,Hannah Bilka,,,,,30,Corinne Schroeder,,,,,,,75.3,-9.3,0.1248,0,O11,112,2024-12-08,PWHL,2024/2025,Regular Season
+3,2:34,Block,New York Sirens,Away,Boston Fleet,New York Sirens,1,event,5v5,8,Maja Nylen Persson,,,,,31,Aerin Frankel,,,,,,,43.7,9.9,,0,O21,112,2024-12-08,PWHL,2024/2025,Regular Season
+4,4:00,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v5,19,Hannah Bilka,,,,,30,Corinne Schroeder,,,,,,,52.3,11.9,0.0386,0,O22,112,2024-12-08,PWHL,2024/2025,Regular Season
+5,5:11,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v5,36,Loren Gabel,,,,,30,Corinne Schroeder,,,,,,,51.7,-22.4,0.0458,0,O20,112,2024-12-08,PWHL,2024/2025,Regular Season
+6,5:56,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,1,event,5v5,25,Alex Carpenter,,,,,31,Aerin Frankel,,,,,,,64.7,16.1,0.0899,0,O16,112,2024-12-08,PWHL,2024/2025,Regular Season
+7,6:24,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v5,19,Hannah Bilka,,,,,30,Corinne Schroeder,,,,,,,33.3,-15.0,0.0420,0,O25,112,2024-12-08,PWHL,2024/2025,Regular Season
+8,6:25,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v5,21,Hilary Knight,,,,,30,Corinne Schroeder,,,,,,,69.0,6.2,0.0899,0,O16,112,2024-12-08,PWHL,2024/2025,Regular Season
+9,7:31,Goal,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v5,77,Susanna Tapani,37,Theresa Schafzahl,7,Sidney Morin,30,Corinne Schroeder,,5 15 19 37 77,Megan Keller - Sydney Bard - Hannah Bilka - Theresa Schafzahl - Susanna Tapani,,8 11 19 28 40,Maja Nylen Persson - Abby Roque - Paetyn Levis - Micah Zandee-Hart - Noora Tulus,63.7,-17.8,0.0371,0,O13,112,2024-12-08,PWHL,2024/2025,Regular Season
+10,9:43,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v5,25,Emma Greco,,,,,30,Corinne Schroeder,,,,,,,4.3,-28.6,0.0657,1,N01,112,2024-12-08,PWHL,2024/2025,Regular Season
+11,9:45,Penalty,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v5,17,Taylor Girard,,,,,,,,,,,,,,,,1,,112,2024-12-08,PWHL,2024/2025,Regular Season
+12,12:12,Block,New York Sirens,Away,Boston Fleet,New York Sirens,1,event,5v5,9,Jessie Eldridge,,,,,31,Aerin Frankel,,,,,,,60.0,1.1,,-1,O15,112,2024-12-08,PWHL,2024/2025,Regular Season
+13,13:11,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,1,event,5v5,18,Élizabeth Giguère,,,,,31,Aerin Frankel,,,,,,,58.3,-24.9,0.0398,-1,O13,112,2024-12-08,PWHL,2024/2025,Regular Season
+14,13:11,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v5,37,Theresa Schafzahl,,,,,30,Corinne Schroeder,,,,,,,41.7,11.6,0.0682,1,O21,112,2024-12-08,PWHL,2024/2025,Regular Season
+15,13:21,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,1,event,5v5,27,Jade Downie-Landry,,,,,31,Aerin Frankel,,,,,,,47.7,-16.7,0.0491,-1,O20,112,2024-12-08,PWHL,2024/2025,Regular Season
+16,14:01,Goal,New York Sirens,Away,Boston Fleet,New York Sirens,1,event,5v5,19,Paetyn Levis,28,Micah Zandee-Hart,10,Sarah Fillier,31,Aerin Frankel,,5 15 19 20 21,Megan Keller - Sydney Bard - Hannah Bilka - Hannah Brandt - Hilary Knight,,8 10 19 25 28,Maja Nylen Persson - Sarah Fillier - Paetyn Levis - Alex Carpenter - Micah Zandee-Hart,73.3,-2.0,0.1328,-1,O11,112,2024-12-08,PWHL,2024/2025,Regular Season
+17,15:01,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v5,88,Lexie Adzija,,,,,30,Corinne Schroeder,,,,,,,43.0,-8.5,0.0573,0,O21,112,2024-12-08,PWHL,2024/2025,Regular Season
+18,16:49,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v5,5,Megan Keller,,,,,30,Corinne Schroeder,,,,,,,35.3,-24.6,0.0400,0,O24,112,2024-12-08,PWHL,2024/2025,Regular Season
+19,17:17,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v5,19,Hannah Bilka,,,,,30,Corinne Schroeder,,,,,,,39.3,26.9,0.0258,0,O26,112,2024-12-08,PWHL,2024/2025,Regular Season
+20,17:34,Penalty,New York Sirens,Away,Boston Fleet,New York Sirens,1,event,5v5,40,Noora Tulus,,,,,,,,,,,,,,,,0,,112,2024-12-08,PWHL,2024/2025,Regular Season
+21,18:19,Penalty,New York Sirens,Away,Boston Fleet,New York Sirens,1,event,4v5,6,Brooke Hobson,,,,,,,,,,,,,,,,0,,112,2024-12-08,PWHL,2024/2025,Regular Season
+22,18:23,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v3,47,Jamie Lee Rattray,,,,,30,Corinne Schroeder,,,,,,,41.0,-26.4,0.0721,0,O20,112,2024-12-08,PWHL,2024/2025,Regular Season
+23,19:06,Block,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v3,15,Sydney Bard,,,,,30,Corinne Schroeder,,,,,,,55.0,-10.5,,0,O20,112,2024-12-08,PWHL,2024/2025,Regular Season
+24,19:17,Goal,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v3,15,Sydney Bard,21,Hilary Knight,19,Hannah Bilka,30,Corinne Schroeder,,15 19 20 21 77,Sydney Bard - Hannah Bilka - Hannah Brandt - Hilary Knight - Susanna Tapani,,15 20 27,Gabby Rosenthal - Allyson Simpson - Jade Downie-Landry,59.0,-17.3,0.1210,0,O14,112,2024-12-08,PWHL,2024/2025,Regular Season
+25,19:43,Block,Boston Fleet,Home,Boston Fleet,New York Sirens,1,event,5v4,21,Hilary Knight,,,,,30,Corinne Schroeder,,,,,,,49.0,6.5,,1,O21,112,2024-12-08,PWHL,2024/2025,Regular Season
+26,0:32,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,2,event,5v5,5,Megan Keller,,,,,30,Corinne Schroeder,,,,,,,41.0,-16.1,0.0546,1,O20,112,2024-12-08,PWHL,2024/2025,Regular Season
+27,0:59,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,2,event,5v5,11,Abby Roque,,,,,31,Aerin Frankel,,,,,,,73.0,9.3,0.1328,-1,O11,112,2024-12-08,PWHL,2024/2025,Regular Season
+28,1:33,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,2,event,5v5,20,Allyson Simpson,,,,,31,Aerin Frankel,,,,,,,42.7,19.0,0.0414,-1,O22,112,2024-12-08,PWHL,2024/2025,Regular Season
+29,1:49,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,2,event,5v5,77,Susanna Tapani,,,,,30,Corinne Schroeder,,,,,,,53.0,-24.1,0.0380,1,O19,112,2024-12-08,PWHL,2024/2025,Regular Season
+30,2:14,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,2,event,5v5,37,Theresa Schafzahl,,,,,30,Corinne Schroeder,,,,,,,63.0,-19.6,0.0443,1,O13,112,2024-12-08,PWHL,2024/2025,Regular Season
+31,2:45,Penalty,Boston Fleet,Home,Boston Fleet,New York Sirens,2,event,5v5,77,Susanna Tapani,,,,,,,,,,,,,,,,1,,112,2024-12-08,PWHL,2024/2025,Regular Season
+32,4:06,Penalty,Boston Fleet,Home,Boston Fleet,New York Sirens,2,event,4v5,16,Amanda Pelkey,,,,,,,,,,,,,,,,1,,112,2024-12-08,PWHL,2024/2025,Regular Season
+33,4:50,Goal,New York Sirens,Away,Boston Fleet,New York Sirens,2,event,5v4,11,Abby Roque,25,Alex Carpenter,28,Micah Zandee-Hart,31,Aerin Frankel,,2 22 27 77,Emily Brown - Jessica DiGirolamo - Shay Maloney - Susanna Tapani,,9 10 11 25 28,Jessie Eldridge - Sarah Fillier - Abby Roque - Alex Carpenter - Micah Zandee-Hart,55.0,-8.8,0.0956,-1,O21,112,2024-12-08,PWHL,2024/2025,Regular Season
+34,6:06,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,2,event,5v5,21,Hilary Knight,,,,,30,Corinne Schroeder,,,,,,,65.0,9.6,0.0899,0,O16,112,2024-12-08,PWHL,2024/2025,Regular Season
+35,6:10,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,2,event,5v5,5,Megan Keller,,,,,30,Corinne Schroeder,,,,,,,61.7,-6.5,0.0785,0,O14,112,2024-12-08,PWHL,2024/2025,Regular Season
+36,7:48,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,2,event,5v5,18,Élizabeth Giguère,,,,,31,Aerin Frankel,,,,,,,72.3,-25.8,0.0138,0,O12,112,2024-12-08,PWHL,2024/2025,Regular Season
+37,7:59,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,2,event,5v5,21,Hilary Knight,,,,,30,Corinne Schroeder,,,,,,,27.3,15.6,0.0420,0,O25,112,2024-12-08,PWHL,2024/2025,Regular Season
+38,9:20,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,2,event,5v5,20,Allyson Simpson,,,,,31,Aerin Frankel,,,,,,,35.7,-9.1,0.0420,0,O25,112,2024-12-08,PWHL,2024/2025,Regular Season
+39,10:36,Block,New York Sirens,Away,Boston Fleet,New York Sirens,2,event,5v4,25,Alex Carpenter,,,,,31,Aerin Frankel,,,,,,,33.7,-19.0,,0,O25,112,2024-12-08,PWHL,2024/2025,Regular Season
+40,11:20,Block,New York Sirens,Away,Boston Fleet,New York Sirens,2,event,5v4,25,Alex Carpenter,,,,,31,Aerin Frankel,,,,,,,57.3,-0.8,,0,O15,112,2024-12-08,PWHL,2024/2025,Regular Season
+41,14:16,Block,New York Sirens,Away,Boston Fleet,New York Sirens,2,event,5v5,8,Maja Nylen Persson,,,,,31,Aerin Frankel,,,,,,,37.7,-24.6,,0,O24,112,2024-12-08,PWHL,2024/2025,Regular Season
+42,15:10,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,2,event,5v5,9,Jessie Eldridge,,,,,31,Aerin Frankel,,,,,,,43.0,11.9,0.0573,0,O21,112,2024-12-08,PWHL,2024/2025,Regular Season
+43,16:51,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,2,event,5v5,25,Alex Carpenter,,,,,31,Aerin Frankel,,,,,,,65.0,-1.7,0.1041,0,O15,112,2024-12-08,PWHL,2024/2025,Regular Season
+44,18:39,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,2,event,5v5,18,Élizabeth Giguère,,,,,31,Aerin Frankel,,,,,,,55.3,-17.3,0.0458,0,O20,112,2024-12-08,PWHL,2024/2025,Regular Season
+45,18:50,Penalty,New York Sirens,Away,Boston Fleet,New York Sirens,2,event,5v5,18,Élizabeth Giguère,,,,,,,,,,,,,,,,0,,112,2024-12-08,PWHL,2024/2025,Regular Season
+46,0:55,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,3,event,5v5,5,Megan Keller,,,,,30,Corinne Schroeder,,,,,,,35.3,12.8,0.0420,0,O25,112,2024-12-08,PWHL,2024/2025,Regular Season
+47,1:07,Goal,Boston Fleet,Home,Boston Fleet,New York Sirens,3,event,5v5,5,Megan Keller,,,,,30,Corinne Schroeder,,2 5 16 21 77,Emily Brown - Megan Keller - Amanda Pelkey - Hilary Knight - Susanna Tapani,,6 10 14 18 25,Brooke Hobson - Sarah Fillier - Jaime Bourbonnais - Élizabeth Giguère - Alex Carpenter,67.3,10.2,0.0899,0,O16,112,2024-12-08,PWHL,2024/2025,Regular Season
+48,1:18,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,3,event,5v5,19,Hannah Bilka,,,,,30,Corinne Schroeder,,,,,,,59.0,-9.3,0.0929,1,O14,112,2024-12-08,PWHL,2024/2025,Regular Season
+49,1:37,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v5,29,Emmy Fecteau,,,,,31,Aerin Frankel,,,,,,,47.3,-1.7,0.0614,-1,O21,112,2024-12-08,PWHL,2024/2025,Regular Season
+50,2:09,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v5,18,Élizabeth Giguère,,,,,31,Aerin Frankel,,,,,,,61.0,6.2,0.0959,-1,O16,112,2024-12-08,PWHL,2024/2025,Regular Season
+51,3:11,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v5,11,Abby Roque,,,,,31,Aerin Frankel,,,,,,,50.3,-23.2,0.0491,-1,O20,112,2024-12-08,PWHL,2024/2025,Regular Season
+52,3:39,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v5,19,Paetyn Levis,,,,,31,Aerin Frankel,,,,,,,55.7,-13.6,0.0491,-1,O20,112,2024-12-08,PWHL,2024/2025,Regular Season
+53,4:45,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v5,20,Allyson Simpson,,,,,31,Aerin Frankel,,,,,,,59.0,17.8,0.0959,-1,O16,112,2024-12-08,PWHL,2024/2025,Regular Season
+54,5:07,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v5,20,Allyson Simpson,,,,,31,Aerin Frankel,,,,,,,64.0,11.1,0.0959,-1,O16,112,2024-12-08,PWHL,2024/2025,Regular Season
+55,5:40,Penalty,Boston Fleet,Home,Boston Fleet,New York Sirens,3,event,5v5,15,Sydney Bard,,,,,,,,,,,,,,,,1,,112,2024-12-08,PWHL,2024/2025,Regular Season
+56,7:02,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v4,11,Abby Roque,,,,,31,Aerin Frankel,,,,,,,74.7,-7.4,0.1985,-1,O11,112,2024-12-08,PWHL,2024/2025,Regular Season
+57,7:14,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v4,10,Sarah Fillier,,,,,31,Aerin Frankel,,,,,,,69.3,11.9,0.1464,-1,O16,112,2024-12-08,PWHL,2024/2025,Regular Season
+58,7:48,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v5,40,Noora Tulus,,,,,31,Aerin Frankel,,,,,,,63.7,-8.5,0.0838,-1,O14,112,2024-12-08,PWHL,2024/2025,Regular Season
+59,7:59,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v5,40,Noora Tulus,,,,,31,Aerin Frankel,,,,,,,79.0,-9.1,0.0705,-1,O06,112,2024-12-08,PWHL,2024/2025,Regular Season
+60,8:27,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,3,event,5v5,7,Sidney Morin,,,,,30,Corinne Schroeder,,,,,,,9.7,26.9,0.0657,1,N03,112,2024-12-08,PWHL,2024/2025,Regular Season
+61,8:40,Penalty,Boston Fleet,Home,Boston Fleet,New York Sirens,3,event,5v5,16,Amanda Pelkey,,,,,,,,,,,,,,,,1,,112,2024-12-08,PWHL,2024/2025,Regular Season
+62,9:59,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v4,20,Allyson Simpson,,,,,31,Aerin Frankel,,,,,,,53.3,32.6,0.0261,-1,O23,112,2024-12-08,PWHL,2024/2025,Regular Season
+63,10:13,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v4,20,Allyson Simpson,,,,,31,Aerin Frankel,,,,,,,65.7,24.4,0.0690,-1,O17,112,2024-12-08,PWHL,2024/2025,Regular Season
+64,10:44,Block,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v4,8,Maja Nylen Persson,,,,,31,Aerin Frankel,,,,,,,41.0,-15.0,,-1,O21,112,2024-12-08,PWHL,2024/2025,Regular Season
+65,11:26,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,3,event,5v5,21,Hilary Knight,,,,,30,Corinne Schroeder,,,,,,,73.0,-15.6,0.0782,1,O06,112,2024-12-08,PWHL,2024/2025,Regular Season
+66,11:42,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,3,event,5v5,7,Sidney Morin,,,,,30,Corinne Schroeder,,,,,,,40.7,27.5,0.0309,1,O26,112,2024-12-08,PWHL,2024/2025,Regular Season
+67,12:02,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v5,25,Alex Carpenter,,,,,31,Aerin Frankel,,,,,,,52.0,11.1,0.0414,-1,O22,112,2024-12-08,PWHL,2024/2025,Regular Season
+68,13:25,Penalty,Boston Fleet,Home,Boston Fleet,New York Sirens,3,event,5v5,5,Megan Keller,,,,,,,,,,,,,,,,1,,112,2024-12-08,PWHL,2024/2025,Regular Season
+69,14:15,Block,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v5,28,Micah Zandee-Hart,,,,,31,Aerin Frankel,,,,,,,41.3,16.7,,-1,O22,112,2024-12-08,PWHL,2024/2025,Regular Season
+70,16:06,Shot,New York Sirens,Away,Boston Fleet,New York Sirens,3,event,5v5,6,Brooke Hobson,,,,,31,Aerin Frankel,,,,,,,34.7,-6.2,0.0450,-1,O25,112,2024-12-08,PWHL,2024/2025,Regular Season
+71,17:41,Shot,Boston Fleet,Home,Boston Fleet,New York Sirens,3,event,5v5,88,Lexie Adzija,,,,,30,Corinne Schroeder,,,,,,,69.0,-6.8,0.0929,1,O14,112,2024-12-08,PWHL,2024/2025,Regular Season
+72,17:59,Goal,Boston Fleet,Home,Boston Fleet,New York Sirens,3,event,5v5,5,Megan Keller,77,Susanna Tapani,27,Shay Maloney,30,Corinne Schroeder,,5 15 27 37 77,Megan Keller - Sydney Bard - Shay Maloney - Theresa Schafzahl - Susanna Tapani,,9 11 14 20 40,Jessie Eldridge - Abby Roque - Jaime Bourbonnais - Allyson Simpson - Noora Tulus,50.3,-19.6,0.0546,1,O20,112,2024-12-08,PWHL,2024/2025,Regular Season

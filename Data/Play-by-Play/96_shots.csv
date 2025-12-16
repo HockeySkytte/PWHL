@@ -1,69 +1,69 @@
-id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
-1,0:59,Goal,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,1,event,5v5,27,Taylor Heise,86,Michela Cava,,,31,Aerin Frankel,,2 22 26 27 86,Lee Stecklein - Natalie Buchbinder - Kendall Coyne Schofield - Taylor Heise - Michela Cava,,11 13 22 37 88,Alina Müller - Kaleigh Fratkin - Jessica DiGirolamo - Theresa Schafzahl - Susanna Tapani,-76.7,-0.8,96,2024-05-24,PWHL,2023/2024,Playoffs
-2,3:21,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,1,event,5v5,21,Liz Schepers,,,,,31,Aerin Frankel,,,,,,,-38.7,19.8,96,2024-05-24,PWHL,2023/2024,Playoffs
-3,4:25,Block,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,1,event,5v5,16,Sophie Jaques,,,,,31,Aerin Frankel,,,,,,,-33.0,-21.8,96,2024-05-24,PWHL,2023/2024,Playoffs
-4,5:08,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,1,event,5v5,16,Amanda Pelkey,,,,,29,Nicole Hensley,,,,,,,33.0,-16.1,96,2024-05-24,PWHL,2023/2024,Playoffs
-5,5:37,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,1,event,5v5,18,Brittyn Fleming,,,,,31,Aerin Frankel,,,,,,,-70.7,13.3,96,2024-05-24,PWHL,2023/2024,Playoffs
-6,5:53,Block,Boston Fleet,Away,Minnesota Frost,Boston Fleet,1,event,5v5,22,Jessica DiGirolamo,,,,,29,Nicole Hensley,,,,,,,41.0,15.3,96,2024-05-24,PWHL,2023/2024,Playoffs
-7,6:29,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,1,event,5v5,12,Kelly Pannek,,,,,31,Aerin Frankel,,,,,,,-49.7,-14.5,96,2024-05-24,PWHL,2023/2024,Playoffs
-8,7:07,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,1,event,5v5,86,Michela Cava,,,,,31,Aerin Frankel,,,,,,,-44.7,-0.6,96,2024-05-24,PWHL,2023/2024,Playoffs
-9,7:41,Penalty,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,1,event,5v5,25,Emma Greco,,,,,,,,,,,,,,,96,2024-05-24,PWHL,2023/2024,Playoffs
-10,8:14,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,1,event,5v4,21,Hilary Knight,,,,,29,Nicole Hensley,,,,,,,30.0,22.1,96,2024-05-24,PWHL,2023/2024,Playoffs
-11,8:20,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,1,event,5v4,5,Megan Keller,,,,,29,Nicole Hensley,,,,,,,36.7,21.8,96,2024-05-24,PWHL,2023/2024,Playoffs
-12,10:26,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,1,event,5v5,8,Lexie Adzija,,,,,29,Nicole Hensley,,,,,,,68.7,0.6,96,2024-05-24,PWHL,2023/2024,Playoffs
-13,10:34,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,1,event,5v5,7,Sidney Morin,,,,,29,Nicole Hensley,,,,,,,82.3,8.5,96,2024-05-24,PWHL,2023/2024,Playoffs
-14,11:22,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,1,event,5v5,11,Sophia Kunin,,,,,31,Aerin Frankel,,,,,,,-75.0,19.8,96,2024-05-24,PWHL,2023/2024,Playoffs
-15,12:39,Block,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,1,event,5v5,27,Taylor Heise,,,,,31,Aerin Frankel,,,,,,,-30.0,2.0,96,2024-05-24,PWHL,2023/2024,Playoffs
-16,13:01,Block,Boston Fleet,Away,Minnesota Frost,Boston Fleet,1,event,5v5,11,Alina Müller,,,,,29,Nicole Hensley,,,,,,,34.7,-1.1,96,2024-05-24,PWHL,2023/2024,Playoffs
-17,13:59,Block,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,1,event,5v5,18,Brittyn Fleming,,,,,31,Aerin Frankel,,,,,,,-32.7,-15.3,96,2024-05-24,PWHL,2023/2024,Playoffs
-18,15:03,Block,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,1,event,5v5,11,Sophia Kunin,,,,,31,Aerin Frankel,,,,,,,-66.7,13.6,96,2024-05-24,PWHL,2023/2024,Playoffs
-19,16:20,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,1,event,5v5,26,Kendall Coyne Schofield,,,,,31,Aerin Frankel,,,,,,,-61.7,31.4,96,2024-05-24,PWHL,2023/2024,Playoffs
-20,17:37,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,1,event,5v5,18,Brittyn Fleming,,,,,31,Aerin Frankel,,,,,,,-81.0,1.4,96,2024-05-24,PWHL,2023/2024,Playoffs
-21,17:38,Goal,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,1,event,5v5,10,Sydney Brodt,18,Brittyn Fleming,12,Kelly Pannek,31,Aerin Frankel,,10 12 18 19 25,Sydney Brodt - Kelly Pannek - Brittyn Fleming - Maggie Flaherty - Emma Greco,,8 13 16 22 47,Lexie Adzija - Kaleigh Fratkin - Amanda Pelkey - Jessica DiGirolamo - Jamie Lee Rattray,-82.0,-1.7,96,2024-05-24,PWHL,2023/2024,Playoffs
-22,18:57,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,1,event,5v5,21,Hilary Knight,,,,,29,Nicole Hensley,,,,,,,62.3,-25.5,96,2024-05-24,PWHL,2023/2024,Playoffs
-23,19:04,Block,Boston Fleet,Away,Minnesota Frost,Boston Fleet,1,event,5v5,5,Megan Keller,,,,,29,Nicole Hensley,,,,,,,43.0,-23.0,96,2024-05-24,PWHL,2023/2024,Playoffs
-24,19:13,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,1,event,5v5,7,Sidney Morin,,,,,29,Nicole Hensley,,,,,,,31.7,23.8,96,2024-05-24,PWHL,2023/2024,Playoffs
-25,0:17,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,2,event,5v5,26,Kendall Coyne Schofield,,,,,31,Aerin Frankel,,,,,,,-27.3,19.6,96,2024-05-24,PWHL,2023/2024,Playoffs
-26,0:49,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,2,event,5v5,16,Sophie Jaques,,,,,31,Aerin Frankel,,,,,,,-48.3,2.3,96,2024-05-24,PWHL,2023/2024,Playoffs
-27,1:40,Block,Boston Fleet,Away,Minnesota Frost,Boston Fleet,2,event,5v5,88,Susanna Tapani,,,,,29,Nicole Hensley,,,,,,,55.0,13.3,96,2024-05-24,PWHL,2023/2024,Playoffs
-28,2:14,Block,Boston Fleet,Away,Minnesota Frost,Boston Fleet,2,event,5v5,19,Gigi Marvin,,,,,29,Nicole Hensley,,,,,,,61.3,14.2,96,2024-05-24,PWHL,2023/2024,Playoffs
-29,4:38,Block,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,2,event,5v5,16,Sophie Jaques,,,,,31,Aerin Frankel,,,,,,,-37.3,-23.0,96,2024-05-24,PWHL,2023/2024,Playoffs
-30,5:57,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,2,event,5v5,14,Clair DeGeorge,,,,,31,Aerin Frankel,,,,,,,-59.0,-0.8,96,2024-05-24,PWHL,2023/2024,Playoffs
-31,8:20,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,2,event,5v5,21,Liz Schepers,,,,,31,Aerin Frankel,,,,,,,-85.7,-11.3,96,2024-05-24,PWHL,2023/2024,Playoffs
-32,9:57,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,2,event,5v5,23,Mellissa Channell-Watkins,,,,,31,Aerin Frankel,,,,,,,-33.0,27.8,96,2024-05-24,PWHL,2023/2024,Playoffs
-33,10:07,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,2,event,5v5,2,Lee Stecklein,,,,,31,Aerin Frankel,,,,,,,-31.0,17.8,96,2024-05-24,PWHL,2023/2024,Playoffs
-34,11:55,Block,Boston Fleet,Away,Minnesota Frost,Boston Fleet,2,event,5v5,2,Emily Brown,,,,,29,Nicole Hensley,,,,,,,41.0,-29.5,96,2024-05-24,PWHL,2023/2024,Playoffs
-35,11:56,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,2,event,5v5,2,Emily Brown,,,,,29,Nicole Hensley,,,,,,,73.0,-15.0,96,2024-05-24,PWHL,2023/2024,Playoffs
-36,13:08,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,2,event,5v5,25,Emma Greco,,,,,31,Aerin Frankel,,,,,,,-42.0,30.3,96,2024-05-24,PWHL,2023/2024,Playoffs
-37,13:33,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,2,event,5v5,16,Amanda Pelkey,,,,,29,Nicole Hensley,,,,,,,50.3,15.6,96,2024-05-24,PWHL,2023/2024,Playoffs
-38,14:05,Block,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,2,event,5v5,16,Sophie Jaques,,,,,31,Aerin Frankel,,,,,,,-37.0,-2.8,96,2024-05-24,PWHL,2023/2024,Playoffs
-39,14:15,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,2,event,5v5,12,Kelly Pannek,,,,,31,Aerin Frankel,,,,,,,-72.3,0.8,96,2024-05-24,PWHL,2023/2024,Playoffs
-40,14:54,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,2,event,5v5,27,Taylor Heise,,,,,31,Aerin Frankel,,,,,,,-59.3,11.1,96,2024-05-24,PWHL,2023/2024,Playoffs
-41,15:08,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,2,event,5v5,16,Sophie Jaques,,,,,31,Aerin Frankel,,,,,,,-55.0,-23.8,96,2024-05-24,PWHL,2023/2024,Playoffs
-42,15:43,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,2,event,5v5,55,Kelly Babstock,,,,,29,Nicole Hensley,,,,,,,44.3,28.1,96,2024-05-24,PWHL,2023/2024,Playoffs
-43,17:05,Block,Boston Fleet,Away,Minnesota Frost,Boston Fleet,2,event,5v5,11,Alina Müller,,,,,29,Nicole Hensley,,,,,,,43.0,11.6,96,2024-05-24,PWHL,2023/2024,Playoffs
-44,17:57,Block,Boston Fleet,Away,Minnesota Frost,Boston Fleet,2,event,5v5,5,Megan Keller,,,,,29,Nicole Hensley,,,,,,,34.0,-31.4,96,2024-05-24,PWHL,2023/2024,Playoffs
-45,18:07,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,2,event,5v5,41,Denisa Křížová,,,,,31,Aerin Frankel,,,,,,,-53.7,-0.8,96,2024-05-24,PWHL,2023/2024,Playoffs
-46,19:11,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,2,event,5v5,47,Jamie Lee Rattray,,,,,29,Nicole Hensley,,,,,,,79.0,0.8,96,2024-05-24,PWHL,2023/2024,Playoffs
-47,19:58,Goal,Boston Fleet,Away,Minnesota Frost,Boston Fleet,2,event,5v5,11,Alina Müller,88,Susanna Tapani,47,Jamie Lee Rattray,29,Nicole Hensley,,7 11 12 16 23,Claire Butorac - Sophia Kunin - Kelly Pannek - Sophie Jaques - Mellissa Channell-Watkins,,7 11 22 47 88,Sidney Morin - Alina Müller - Jessica DiGirolamo - Jamie Lee Rattray - Susanna Tapani,81.0,-7.4,96,2024-05-24,PWHL,2023/2024,Playoffs
-48,0:35,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,5v5,11,Alina Müller,,,,,29,Nicole Hensley,,,,,,,20.0,-33.1,96,2024-05-24,PWHL,2023/2024,Playoffs
-49,1:03,Block,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,3,event,5v5,12,Kelly Pannek,,,,,31,Aerin Frankel,,,,,,,-48.3,21.8,96,2024-05-24,PWHL,2023/2024,Playoffs
-50,1:13,Block,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,5v5,22,Jessica DiGirolamo,,,,,29,Nicole Hensley,,,,,,,66.0,-12.8,96,2024-05-24,PWHL,2023/2024,Playoffs
-51,2:08,Block,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,5v5,16,Amanda Pelkey,,,,,29,Nicole Hensley,,,,,,,52.3,-21.0,96,2024-05-24,PWHL,2023/2024,Playoffs
-52,2:38,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,5v5,5,Megan Keller,,,,,29,Nicole Hensley,,,,,,,35.7,24.4,96,2024-05-24,PWHL,2023/2024,Playoffs
-53,3:17,Block,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,5v5,2,Emily Brown,,,,,29,Nicole Hensley,,,,,,,32.0,28.1,96,2024-05-24,PWHL,2023/2024,Playoffs
-54,3:29,Goal,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,3,event,5v5,86,Michela Cava,27,Taylor Heise,,,31,Aerin Frankel,,2 22 26 27 86,Lee Stecklein - Natalie Buchbinder - Kendall Coyne Schofield - Taylor Heise - Michela Cava,,2 5 11 21 88,Emily Brown - Megan Keller - Alina Müller - Hilary Knight - Susanna Tapani,-85.3,7.4,96,2024-05-24,PWHL,2023/2024,Playoffs
-55,4:09,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,3,event,5v5,41,Denisa Křížová,,,,,31,Aerin Frankel,,,,,,,-78.7,1.1,96,2024-05-24,PWHL,2023/2024,Playoffs
-56,7:17,Penalty,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,5v5,13,Kaleigh Fratkin,,,,,,,,,,,,,,,96,2024-05-24,PWHL,2023/2024,Playoffs
-57,8:42,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,4v5,20,Hannah Brandt,,,,,29,Nicole Hensley,,,,,,,57.3,37.4,96,2024-05-24,PWHL,2023/2024,Playoffs
-58,9:13,Block,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,3,event,4v5,16,Sophie Jaques,,,,,31,Aerin Frankel,,,,,,,-37.7,-0.8,96,2024-05-24,PWHL,2023/2024,Playoffs
-59,9:37,Block,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,5v4,7,Sidney Morin,,,,,29,Nicole Hensley,,,,,,,36.3,32.0,96,2024-05-24,PWHL,2023/2024,Playoffs
-60,11:52,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,3,event,5v5,13,Grace Zumwinkle,,,,,31,Aerin Frankel,,,,,,,-65.0,-0.6,96,2024-05-24,PWHL,2023/2024,Playoffs
-61,12:37,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,3,event,5v5,26,Kendall Coyne Schofield,,,,,31,Aerin Frankel,,,,,,,-77.0,4.2,96,2024-05-24,PWHL,2023/2024,Playoffs
-62,13:27,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,5v5,47,Jamie Lee Rattray,,,,,29,Nicole Hensley,,,,,,,55.7,-0.3,96,2024-05-24,PWHL,2023/2024,Playoffs
-63,14:11,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,5v5,7,Sidney Morin,,,,,29,Nicole Hensley,,,,,,,64.0,32.9,96,2024-05-24,PWHL,2023/2024,Playoffs
-64,15:37,Penalty,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,3,event,5v5,7,Claire Butorac,,,,,,,,,,,,,,,96,2024-05-24,PWHL,2023/2024,Playoffs
-65,15:54,Block,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,5v5,88,Susanna Tapani,,,,,29,Nicole Hensley,,,,,,,51.0,26.6,96,2024-05-24,PWHL,2023/2024,Playoffs
-66,16:10,Goal,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,3,event,4v5,13,Grace Zumwinkle,,,,,,,,2 12 13 25,Lee Stecklein - Kelly Pannek - Grace Zumwinkle - Emma Greco,,5 9 12 21 88,Megan Keller - Sophie Shirley - Taylor Wenczkowski - Hilary Knight - Susanna Tapani,-80.7,5.4,96,2024-05-24,PWHL,2023/2024,Playoffs
-67,19:12,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,5v5,47,Jamie Lee Rattray,,,,,29,Nicole Hensley,,,,,,,52.0,17.8,96,2024-05-24,PWHL,2023/2024,Playoffs
-68,19:18,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,5v5,13,Kaleigh Fratkin,,,,,29,Nicole Hensley,,,,,,,36.7,-15.3,96,2024-05-24,PWHL,2023/2024,Playoffs
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,xG,ScoreState,BoxID,game_id,game_date,competition,season,state
+1,0:59,Goal,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,1,event,5v5,27,Taylor Heise,86,Michela Cava,,,31,Aerin Frankel,,2 22 26 27 86,Lee Stecklein - Natalie Buchbinder - Kendall Coyne Schofield - Taylor Heise - Michela Cava,,11 13 22 37 88,Alina Müller - Kaleigh Fratkin - Jessica DiGirolamo - Theresa Schafzahl - Susanna Tapani,76.7,0.8,0.1248,0,O11,96,2024-05-24,PWHL,2023/2024,Playoffs
+2,3:21,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,1,event,5v5,21,Liz Schepers,,,,,31,Aerin Frankel,,,,,,,38.7,-19.8,0.0477,1,O24,96,2024-05-24,PWHL,2023/2024,Playoffs
+3,4:25,Block,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,1,event,5v5,16,Sophie Jaques,,,,,31,Aerin Frankel,,,,,,,33.0,21.8,,1,O26,96,2024-05-24,PWHL,2023/2024,Playoffs
+4,5:08,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,1,event,5v5,16,Amanda Pelkey,,,,,29,Nicole Hensley,,,,,,,33.0,-16.1,0.0450,-1,O25,96,2024-05-24,PWHL,2023/2024,Playoffs
+5,5:37,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,1,event,5v5,18,Brittyn Fleming,,,,,31,Aerin Frankel,,,,,,,70.7,-13.3,0.0443,1,O13,96,2024-05-24,PWHL,2023/2024,Playoffs
+6,5:53,Block,Boston Fleet,Away,Minnesota Frost,Boston Fleet,1,event,5v5,22,Jessica DiGirolamo,,,,,29,Nicole Hensley,,,,,,,41.0,15.3,,-1,O21,96,2024-05-24,PWHL,2023/2024,Playoffs
+7,6:29,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,1,event,5v5,12,Kelly Pannek,,,,,31,Aerin Frankel,,,,,,,49.7,14.5,0.0461,1,O22,96,2024-05-24,PWHL,2023/2024,Playoffs
+8,7:07,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,1,event,5v5,86,Michela Cava,,,,,31,Aerin Frankel,,,,,,,44.7,0.6,0.0682,1,O21,96,2024-05-24,PWHL,2023/2024,Playoffs
+9,7:41,Penalty,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,1,event,5v5,25,Emma Greco,,,,,,,,,,,,,,,,1,,96,2024-05-24,PWHL,2023/2024,Playoffs
+10,8:14,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,1,event,5v4,21,Hilary Knight,,,,,29,Nicole Hensley,,,,,,,30.0,22.1,0.0441,-1,O26,96,2024-05-24,PWHL,2023/2024,Playoffs
+11,8:20,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,1,event,5v4,5,Megan Keller,,,,,29,Nicole Hensley,,,,,,,36.7,21.8,0.0441,-1,O26,96,2024-05-24,PWHL,2023/2024,Playoffs
+12,10:26,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,1,event,5v5,8,Lexie Adzija,,,,,29,Nicole Hensley,,,,,,,68.7,0.6,0.1110,-1,O15,96,2024-05-24,PWHL,2023/2024,Playoffs
+13,10:34,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,1,event,5v5,7,Sidney Morin,,,,,29,Nicole Hensley,,,,,,,82.3,8.5,0.0758,-1,O08,96,2024-05-24,PWHL,2023/2024,Playoffs
+14,11:22,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,1,event,5v5,11,Sophia Kunin,,,,,31,Aerin Frankel,,,,,,,75.0,-19.8,0.0782,1,O06,96,2024-05-24,PWHL,2023/2024,Playoffs
+15,12:39,Block,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,1,event,5v5,27,Taylor Heise,,,,,31,Aerin Frankel,,,,,,,30.0,-2.0,,1,O25,96,2024-05-24,PWHL,2023/2024,Playoffs
+16,13:01,Block,Boston Fleet,Away,Minnesota Frost,Boston Fleet,1,event,5v5,11,Alina Müller,,,,,29,Nicole Hensley,,,,,,,34.7,-1.1,,-1,O25,96,2024-05-24,PWHL,2023/2024,Playoffs
+17,13:59,Block,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,1,event,5v5,18,Brittyn Fleming,,,,,31,Aerin Frankel,,,,,,,32.7,15.3,,1,O25,96,2024-05-24,PWHL,2023/2024,Playoffs
+18,15:03,Block,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,1,event,5v5,11,Sophia Kunin,,,,,31,Aerin Frankel,,,,,,,66.7,-13.6,,1,O14,96,2024-05-24,PWHL,2023/2024,Playoffs
+19,16:20,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,1,event,5v5,26,Kendall Coyne Schofield,,,,,31,Aerin Frankel,,,,,,,61.7,-31.4,0.0166,1,O12,96,2024-05-24,PWHL,2023/2024,Playoffs
+20,17:37,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,1,event,5v5,18,Brittyn Fleming,,,,,31,Aerin Frankel,,,,,,,81.0,-1.4,0.1463,1,O11,96,2024-05-24,PWHL,2023/2024,Playoffs
+21,17:38,Goal,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,1,event,5v5,10,Sydney Brodt,18,Brittyn Fleming,12,Kelly Pannek,31,Aerin Frankel,,10 12 18 19 25,Sydney Brodt - Kelly Pannek - Brittyn Fleming - Maggie Flaherty - Emma Greco,,8 13 16 22 47,Lexie Adzija - Kaleigh Fratkin - Amanda Pelkey - Jessica DiGirolamo - Jamie Lee Rattray,82.0,1.7,0.1463,1,O11,96,2024-05-24,PWHL,2023/2024,Playoffs
+22,18:57,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,1,event,5v5,21,Hilary Knight,,,,,29,Nicole Hensley,,,,,,,62.3,-25.5,0.0402,-2,O13,96,2024-05-24,PWHL,2023/2024,Playoffs
+23,19:04,Block,Boston Fleet,Away,Minnesota Frost,Boston Fleet,1,event,5v5,5,Megan Keller,,,,,29,Nicole Hensley,,,,,,,43.0,-23.0,,-2,O20,96,2024-05-24,PWHL,2023/2024,Playoffs
+24,19:13,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,1,event,5v5,7,Sidney Morin,,,,,29,Nicole Hensley,,,,,,,31.7,23.8,0.0280,-2,O26,96,2024-05-24,PWHL,2023/2024,Playoffs
+25,0:17,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,2,event,5v5,26,Kendall Coyne Schofield,,,,,31,Aerin Frankel,,,,,,,27.3,-19.6,0.0633,2,O25,96,2024-05-24,PWHL,2023/2024,Playoffs
+26,0:49,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,2,event,5v5,16,Sophie Jaques,,,,,31,Aerin Frankel,,,,,,,48.3,-2.3,0.0858,2,O21,96,2024-05-24,PWHL,2023/2024,Playoffs
+27,1:40,Block,Boston Fleet,Away,Minnesota Frost,Boston Fleet,2,event,5v5,88,Susanna Tapani,,,,,29,Nicole Hensley,,,,,,,55.0,13.3,,-2,O22,96,2024-05-24,PWHL,2023/2024,Playoffs
+28,2:14,Block,Boston Fleet,Away,Minnesota Frost,Boston Fleet,2,event,5v5,19,Gigi Marvin,,,,,29,Nicole Hensley,,,,,,,61.3,14.2,,-2,O16,96,2024-05-24,PWHL,2023/2024,Playoffs
+29,4:38,Block,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,2,event,5v5,16,Sophie Jaques,,,,,31,Aerin Frankel,,,,,,,37.3,23.0,,2,O26,96,2024-05-24,PWHL,2023/2024,Playoffs
+30,5:57,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,2,event,5v5,14,Clair DeGeorge,,,,,31,Aerin Frankel,,,,,,,59.0,0.8,0.1520,2,O15,96,2024-05-24,PWHL,2023/2024,Playoffs
+31,8:20,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,2,event,5v5,21,Liz Schepers,,,,,31,Aerin Frankel,,,,,,,85.7,11.3,0.1054,2,O08,96,2024-05-24,PWHL,2023/2024,Playoffs
+32,9:57,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,2,event,5v5,23,Mellissa Channell-Watkins,,,,,31,Aerin Frankel,,,,,,,33.0,-27.8,0.0605,2,O24,96,2024-05-24,PWHL,2023/2024,Playoffs
+33,10:07,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,2,event,5v5,2,Lee Stecklein,,,,,31,Aerin Frankel,,,,,,,31.0,-17.8,0.0633,2,O25,96,2024-05-24,PWHL,2023/2024,Playoffs
+34,11:55,Block,Boston Fleet,Away,Minnesota Frost,Boston Fleet,2,event,5v5,2,Emily Brown,,,,,29,Nicole Hensley,,,,,,,41.0,-29.5,,-2,O19,96,2024-05-24,PWHL,2023/2024,Playoffs
+35,11:56,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,2,event,5v5,2,Emily Brown,,,,,29,Nicole Hensley,,,,,,,73.0,-15.0,0.0712,-2,O06,96,2024-05-24,PWHL,2023/2024,Playoffs
+36,13:08,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,2,event,5v5,25,Emma Greco,,,,,31,Aerin Frankel,,,,,,,42.0,-30.3,0.0483,2,O19,96,2024-05-24,PWHL,2023/2024,Playoffs
+37,13:33,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,2,event,5v5,16,Amanda Pelkey,,,,,29,Nicole Hensley,,,,,,,50.3,15.6,0.0418,-2,O22,96,2024-05-24,PWHL,2023/2024,Playoffs
+38,14:05,Block,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,2,event,5v5,16,Sophie Jaques,,,,,31,Aerin Frankel,,,,,,,37.0,2.8,,2,O25,96,2024-05-24,PWHL,2023/2024,Playoffs
+39,14:15,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,2,event,5v5,12,Kelly Pannek,,,,,31,Aerin Frankel,,,,,,,72.3,-0.8,0.1161,2,O14,96,2024-05-24,PWHL,2023/2024,Playoffs
+40,14:54,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,2,event,5v5,27,Taylor Heise,,,,,31,Aerin Frankel,,,,,,,59.3,-11.1,0.1161,2,O14,96,2024-05-24,PWHL,2023/2024,Playoffs
+41,15:08,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,2,event,5v5,16,Sophie Jaques,,,,,31,Aerin Frankel,,,,,,,55.0,23.8,0.0232,2,O23,96,2024-05-24,PWHL,2023/2024,Playoffs
+42,15:43,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,2,event,5v5,55,Kelly Babstock,,,,,29,Nicole Hensley,,,,,,,44.3,28.1,0.0164,-2,O23,96,2024-05-24,PWHL,2023/2024,Playoffs
+43,17:05,Block,Boston Fleet,Away,Minnesota Frost,Boston Fleet,2,event,5v5,11,Alina Müller,,,,,29,Nicole Hensley,,,,,,,43.0,11.6,,-2,O21,96,2024-05-24,PWHL,2023/2024,Playoffs
+44,17:57,Block,Boston Fleet,Away,Minnesota Frost,Boston Fleet,2,event,5v5,5,Megan Keller,,,,,29,Nicole Hensley,,,,,,,34.0,-31.4,,-2,O24,96,2024-05-24,PWHL,2023/2024,Playoffs
+45,18:07,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,2,event,5v5,41,Denisa Křížová,,,,,31,Aerin Frankel,,,,,,,53.7,0.8,0.0858,2,O21,96,2024-05-24,PWHL,2023/2024,Playoffs
+46,19:11,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,2,event,5v5,47,Jamie Lee Rattray,,,,,29,Nicole Hensley,,,,,,,79.0,0.8,0.1341,-2,O11,96,2024-05-24,PWHL,2023/2024,Playoffs
+47,19:58,Goal,Boston Fleet,Away,Minnesota Frost,Boston Fleet,2,event,5v5,11,Alina Müller,88,Susanna Tapani,47,Jamie Lee Rattray,29,Nicole Hensley,,7 11 12 16 23,Claire Butorac - Sophia Kunin - Kelly Pannek - Sophie Jaques - Mellissa Channell-Watkins,,7 11 22 47 88,Sidney Morin - Alina Müller - Jessica DiGirolamo - Jamie Lee Rattray - Susanna Tapani,81.0,-7.4,0.1341,-2,O11,96,2024-05-24,PWHL,2023/2024,Playoffs
+48,0:35,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,5v5,11,Alina Müller,,,,,29,Nicole Hensley,,,,,,,20.0,-33.1,0.0591,-1,N01,96,2024-05-24,PWHL,2023/2024,Playoffs
+49,1:03,Block,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,3,event,5v5,12,Kelly Pannek,,,,,31,Aerin Frankel,,,,,,,48.3,-21.8,,1,O20,96,2024-05-24,PWHL,2023/2024,Playoffs
+50,1:13,Block,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,5v5,22,Jessica DiGirolamo,,,,,29,Nicole Hensley,,,,,,,66.0,-12.8,,-1,O14,96,2024-05-24,PWHL,2023/2024,Playoffs
+51,2:08,Block,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,5v5,16,Amanda Pelkey,,,,,29,Nicole Hensley,,,,,,,52.3,-21.0,,-1,O20,96,2024-05-24,PWHL,2023/2024,Playoffs
+52,2:38,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,5v5,5,Megan Keller,,,,,29,Nicole Hensley,,,,,,,35.7,24.4,0.0277,-1,O26,96,2024-05-24,PWHL,2023/2024,Playoffs
+53,3:17,Block,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,5v5,2,Emily Brown,,,,,29,Nicole Hensley,,,,,,,32.0,28.1,,-1,O26,96,2024-05-24,PWHL,2023/2024,Playoffs
+54,3:29,Goal,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,3,event,5v5,86,Michela Cava,27,Taylor Heise,,,31,Aerin Frankel,,2 22 26 27 86,Lee Stecklein - Natalie Buchbinder - Kendall Coyne Schofield - Taylor Heise - Michela Cava,,2 5 11 21 88,Emily Brown - Megan Keller - Alina Müller - Hilary Knight - Susanna Tapani,85.3,-7.4,0.0782,1,O06,96,2024-05-24,PWHL,2023/2024,Playoffs
+55,4:09,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,3,event,5v5,41,Denisa Křížová,,,,,31,Aerin Frankel,,,,,,,78.7,-1.1,0.1803,2,O11,96,2024-05-24,PWHL,2023/2024,Playoffs
+56,7:17,Penalty,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,5v5,13,Kaleigh Fratkin,,,,,,,,,,,,,,,,-2,,96,2024-05-24,PWHL,2023/2024,Playoffs
+57,8:42,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,4v5,20,Hannah Brandt,,,,,29,Nicole Hensley,,,,,,,57.3,37.4,0.0282,-2,O18,96,2024-05-24,PWHL,2023/2024,Playoffs
+58,9:13,Block,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,3,event,4v5,16,Sophie Jaques,,,,,31,Aerin Frankel,,,,,,,37.7,0.8,,2,O25,96,2024-05-24,PWHL,2023/2024,Playoffs
+59,9:37,Block,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,5v4,7,Sidney Morin,,,,,29,Nicole Hensley,,,,,,,36.3,32.0,,-2,O26,96,2024-05-24,PWHL,2023/2024,Playoffs
+60,11:52,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,3,event,5v5,13,Grace Zumwinkle,,,,,31,Aerin Frankel,,,,,,,65.0,0.6,0.1520,2,O15,96,2024-05-24,PWHL,2023/2024,Playoffs
+61,12:37,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,3,event,5v5,26,Kendall Coyne Schofield,,,,,31,Aerin Frankel,,,,,,,77.0,-4.2,0.1803,2,O11,96,2024-05-24,PWHL,2023/2024,Playoffs
+62,13:27,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,5v5,47,Jamie Lee Rattray,,,,,29,Nicole Hensley,,,,,,,55.7,-0.3,0.0620,-2,O21,96,2024-05-24,PWHL,2023/2024,Playoffs
+63,14:11,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,5v5,7,Sidney Morin,,,,,29,Nicole Hensley,,,,,,,64.0,32.9,0.0162,-2,O18,96,2024-05-24,PWHL,2023/2024,Playoffs
+64,15:37,Penalty,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,3,event,5v5,7,Claire Butorac,,,,,,,,,,,,,,,,2,,96,2024-05-24,PWHL,2023/2024,Playoffs
+65,15:54,Block,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,5v5,88,Susanna Tapani,,,,,29,Nicole Hensley,,,,,,,51.0,26.6,,-2,O23,96,2024-05-24,PWHL,2023/2024,Playoffs
+66,16:10,Goal,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,3,event,4v5,13,Grace Zumwinkle,,,,,,,,2 12 13 25,Lee Stecklein - Kelly Pannek - Grace Zumwinkle - Emma Greco,,5 9 12 21 88,Megan Keller - Sophie Shirley - Taylor Wenczkowski - Hilary Knight - Susanna Tapani,80.7,-5.4,0.2793,2,O11,96,2024-05-24,PWHL,2023/2024,Playoffs
+67,19:12,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,5v5,47,Jamie Lee Rattray,,,,,29,Nicole Hensley,,,,,,,52.0,17.8,0.0418,-3,O22,96,2024-05-24,PWHL,2023/2024,Playoffs
+68,19:18,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,5v5,13,Kaleigh Fratkin,,,,,29,Nicole Hensley,,,,,,,36.7,-15.3,0.0454,-3,O25,96,2024-05-24,PWHL,2023/2024,Playoffs

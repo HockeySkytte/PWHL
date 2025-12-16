@@ -1,84 +1,84 @@
-id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
-1,0:28,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,7,Laura Stacey,,,,,1,Raygan Kirk,,,,,,,-41.7,-25.8,224,2025-12-07,PWHL,2025/2026,Regular Season
-2,0:54,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,27,Shiann Darkangelo,,,,,1,Raygan Kirk,,,,,,,-78.3,26.1,224,2025-12-07,PWHL,2025/2026,Regular Season
-3,0:55,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,21,Maureen Murphy,,,,,1,Raygan Kirk,,,,,,,-71.3,2.5,224,2025-12-07,PWHL,2025/2026,Regular Season
-4,1:22,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,44,Amanda Boulier,,,,,1,Raygan Kirk,,,,,,,-32.3,7.6,224,2025-12-07,PWHL,2025/2026,Regular Season
-5,2:10,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,61,Nicole Gosling,,,,,1,Raygan Kirk,,,,,,,-77.0,34.6,224,2025-12-07,PWHL,2025/2026,Regular Season
-6,2:53,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,7,Laura Stacey,,,,,1,Raygan Kirk,,,,,,,-58.3,35.7,224,2025-12-07,PWHL,2025/2026,Regular Season
-7,4:16,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,27,Emma Maltais,,,,,35,Ann-Renée Desbiens,,,,,,,51.7,38.8,224,2025-12-07,PWHL,2025/2026,Regular Season
-8,6:15,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,44,Amanda Boulier,,,,,1,Raygan Kirk,,,,,,,-85.3,17.3,224,2025-12-07,PWHL,2025/2026,Regular Season
-9,6:36,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,71,Anna Kjellbin,,,,,35,Ann-Renée Desbiens,,,,,,,9.7,14.5,224,2025-12-07,PWHL,2025/2026,Regular Season
-10,8:38,Goal,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,9,Kati Tabin,96,Natálie Mlýnková,91,Maggie Flaherty,1,Raygan Kirk,,9 21 27 91 96,Kati Tabin - Maureen Murphy - Shiann Darkangelo - Maggie Flaherty - Natálie Mlýnková,,12 18 40 42 71,Allie Munroe - Jesse Compher - Blayre Turnbull - Claire Dalton - Anna Kjellbin,-31.3,-12.5,224,2025-12-07,PWHL,2025/2026,Regular Season
-11,9:00,Penalty,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,16,Hayley Scamurra,,,,,,,,,,,,,,,224,2025-12-07,PWHL,2025/2026,Regular Season
-12,9:34,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v4,17,Ella Shelton,,,,,35,Ann-Renée Desbiens,,,,,,,56.3,24.4,224,2025-12-07,PWHL,2025/2026,Regular Season
-13,10:53,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v4,27,Emma Maltais,,,,,35,Ann-Renée Desbiens,,,,,,,54.7,12.5,224,2025-12-07,PWHL,2025/2026,Regular Season
-14,12:17,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,19,Kaitlin Willoughby,,,,,1,Raygan Kirk,,,,,,,-79.0,6.8,224,2025-12-07,PWHL,2025/2026,Regular Season
-15,12:38,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,29,Marie-Philip Poulin,,,,,1,Raygan Kirk,,,,,,,-61.0,-17.0,224,2025-12-07,PWHL,2025/2026,Regular Season
-16,13:03,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,24,Natalie Spooner,,,,,35,Ann-Renée Desbiens,,,,,,,41.3,7.9,224,2025-12-07,PWHL,2025/2026,Regular Season
-17,13:35,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,44,Amanda Boulier,,,,,1,Raygan Kirk,,,,,,,-30.0,-22.1,224,2025-12-07,PWHL,2025/2026,Regular Season
-18,14:06,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,22,Jessica DiGirolamo,,,,,1,Raygan Kirk,,,,,,,18.0,38.8,224,2025-12-07,PWHL,2025/2026,Regular Season
-19,14:12,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,16,Hayley Scamurra,,,,,1,Raygan Kirk,,,,,,,-59.7,15.6,224,2025-12-07,PWHL,2025/2026,Regular Season
-20,14:41,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,12,Allie Munroe,,,,,35,Ann-Renée Desbiens,,,,,,,85.0,9.9,224,2025-12-07,PWHL,2025/2026,Regular Season
-21,17:03,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,29,Marie-Philip Poulin,,,,,1,Raygan Kirk,,,,,,,-45.0,-23.5,224,2025-12-07,PWHL,2025/2026,Regular Season
-22,17:25,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,61,Nicole Gosling,,,,,1,Raygan Kirk,,,,,,,-33.0,12.8,224,2025-12-07,PWHL,2025/2026,Regular Season
-23,17:26,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,96,Natálie Mlýnková,,,,,1,Raygan Kirk,,,,,,,-85.0,30.0,224,2025-12-07,PWHL,2025/2026,Regular Season
-24,0:18,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5,29,Marie-Philip Poulin,,,,,1,Raygan Kirk,,,,,,,-58.0,-23.2,224,2025-12-07,PWHL,2025/2026,Regular Season
-25,1:33,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,14,Renata Fast,,,,,35,Ann-Renée Desbiens,,,,,,,47.0,-1.4,224,2025-12-07,PWHL,2025/2026,Regular Season
-26,1:51,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,19,Sara Hjalmarsson,,,,,35,Ann-Renée Desbiens,,,,,,,59.0,-24.9,224,2025-12-07,PWHL,2025/2026,Regular Season
-27,1:56,Penalty,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,19,Sara Hjalmarsson,,,,,,,,,,,,,,,224,2025-12-07,PWHL,2025/2026,Regular Season
-28,2:21,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v4,7,Laura Stacey,,,,,1,Raygan Kirk,,,,,,,-83.7,14.7,224,2025-12-07,PWHL,2025/2026,Regular Season
-29,2:21,Penalty,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,4v5,17,Ella Shelton,,,,,,,,,,,,,,,224,2025-12-07,PWHL,2025/2026,Regular Season
-30,2:41,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v3,29,Marie-Philip Poulin,,,,,1,Raygan Kirk,,,,,,,-83.0,6.5,224,2025-12-07,PWHL,2025/2026,Regular Season
-31,2:57,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v3,29,Marie-Philip Poulin,,,,,1,Raygan Kirk,,,,,,,-75.0,-17.8,224,2025-12-07,PWHL,2025/2026,Regular Season
-32,3:21,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v3,96,Natálie Mlýnková,,,,,1,Raygan Kirk,,,,,,,-71.3,-11.1,224,2025-12-07,PWHL,2025/2026,Regular Season
-33,3:44,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v3,61,Nicole Gosling,,,,,1,Raygan Kirk,,,,,,,-33.7,10.2,224,2025-12-07,PWHL,2025/2026,Regular Season
-34,4:15,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v4,28,Catherine Dubois,,,,,1,Raygan Kirk,,,,,,,-77.3,-2.0,224,2025-12-07,PWHL,2025/2026,Regular Season
-35,5:40,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5,7,Laura Stacey,,,,,1,Raygan Kirk,,,,,,,-91.7,10.2,224,2025-12-07,PWHL,2025/2026,Regular Season
-36,6:29,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,18,Jesse Compher,,,,,35,Ann-Renée Desbiens,,,,,,,67.7,3.7,224,2025-12-07,PWHL,2025/2026,Regular Season
-37,7:10,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,14,Renata Fast,,,,,35,Ann-Renée Desbiens,,,,,,,46.3,-6.2,224,2025-12-07,PWHL,2025/2026,Regular Season
-38,8:36,Goal,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5,16,Hayley Scamurra,88,Skylar Irving,,,1,Raygan Kirk,,9 16 17 88 91,Kati Tabin - Hayley Scamurra - Dara Greig - Skylar Irving - Maggie Flaherty,,6 8 12 25 67,Kali Flanagan - Clair DeGeorge - Allie Munroe - Clara Van Wieren - Emma Woods,-80.7,-2.3,224,2025-12-07,PWHL,2025/2026,Regular Season
-39,8:54,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,24,Natalie Spooner,,,,,35,Ann-Renée Desbiens,,,,,,,60.3,31.4,224,2025-12-07,PWHL,2025/2026,Regular Season
-40,8:55,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,9,Daryl Watts,,,,,35,Ann-Renée Desbiens,,,,,,,57.0,19.3,224,2025-12-07,PWHL,2025/2026,Regular Season
-41,11:24,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,19,Sara Hjalmarsson,,,,,35,Ann-Renée Desbiens,,,,,,,29.0,7.4,224,2025-12-07,PWHL,2025/2026,Regular Season
-42,12:28,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5,21,Maureen Murphy,,,,,1,Raygan Kirk,,,,,,,-38.7,0.3,224,2025-12-07,PWHL,2025/2026,Regular Season
-43,14:03,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,6,Kali Flanagan,,,,,35,Ann-Renée Desbiens,,,,,,,69.0,20.1,224,2025-12-07,PWHL,2025/2026,Regular Season
-44,16:52,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5,9,Kati Tabin,,,,,1,Raygan Kirk,,,,,,,-27.0,-33.4,224,2025-12-07,PWHL,2025/2026,Regular Season
-45,17:01,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5,9,Kati Tabin,,,,,1,Raygan Kirk,,,,,,,-40.7,-3.7,224,2025-12-07,PWHL,2025/2026,Regular Season
-46,17:58,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5,96,Natálie Mlýnková,,,,,1,Raygan Kirk,,,,,,,-54.0,11.3,224,2025-12-07,PWHL,2025/2026,Regular Season
-47,0:37,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,18,Jesse Compher,,,,,35,Ann-Renée Desbiens,,,,,,,68.0,40.2,224,2025-12-07,PWHL,2025/2026,Regular Season
-48,1:20,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,24,Natalie Spooner,,,,,35,Ann-Renée Desbiens,,,,,,,69.0,17.8,224,2025-12-07,PWHL,2025/2026,Regular Season
-49,1:36,Goal,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,20,Emma Gentry,14,Renata Fast,,,35,Ann-Renée Desbiens,,16 22 44 88 96,Hayley Scamurra - Jessica DiGirolamo - Amanda Boulier - Skylar Irving - Natálie Mlýnková,,11 14 15 20 22,Kiara Zanon - Renata Fast - Savannah Harmon - Emma Gentry - Maggie Connors,52.0,16.4,224,2025-12-07,PWHL,2025/2026,Regular Season
-50,1:50,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,15,Savannah Harmon,,,,,35,Ann-Renée Desbiens,,,,,,,43.0,-21.8,224,2025-12-07,PWHL,2025/2026,Regular Season
-51,2:49,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5,29,Marie-Philip Poulin,,,,,1,Raygan Kirk,,,,,,,-66.3,-20.1,224,2025-12-07,PWHL,2025/2026,Regular Season
-52,2:54,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5,29,Marie-Philip Poulin,,,,,1,Raygan Kirk,,,,,,,-50.7,-19.3,224,2025-12-07,PWHL,2025/2026,Regular Season
-53,3:38,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,14,Renata Fast,,,,,35,Ann-Renée Desbiens,,,,,,,45.3,29.7,224,2025-12-07,PWHL,2025/2026,Regular Season
-54,4:02,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,9,Daryl Watts,,,,,35,Ann-Renée Desbiens,,,,,,,52.3,-15.0,224,2025-12-07,PWHL,2025/2026,Regular Season
-55,4:33,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5,96,Natálie Mlýnková,,,,,1,Raygan Kirk,,,,,,,-85.3,-21.2,224,2025-12-07,PWHL,2025/2026,Regular Season
-56,5:08,Penalty,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,15,Savannah Harmon,,,,,,,,,,,,,,,224,2025-12-07,PWHL,2025/2026,Regular Season
-57,5:39,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v4,29,Marie-Philip Poulin,,,,,1,Raygan Kirk,,,,,,,-72.3,-15.0,224,2025-12-07,PWHL,2025/2026,Regular Season
-58,5:41,Goal,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v4,7,Laura Stacey,29,Marie-Philip Poulin,23,Erin Ambrose,1,Raygan Kirk,,7 11 23 29 96,Laura Stacey - Abby Roque - Erin Ambrose - Marie-Philip Poulin - Natálie Mlýnková,,11 14 20 22,Kiara Zanon - Renata Fast - Emma Gentry - Maggie Connors,-81.0,2.8,224,2025-12-07,PWHL,2025/2026,Regular Season
-59,8:19,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5,51,Kelly Ann Nadeau,,,,,1,Raygan Kirk,,,,,,,-31.3,-12.8,224,2025-12-07,PWHL,2025/2026,Regular Season
-60,8:20,Penalty,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5,28,Catherine Dubois,,,,,,,,,,,,,,,224,2025-12-07,PWHL,2025/2026,Regular Season
-61,8:45,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v4,9,Daryl Watts,,,,,35,Ann-Renée Desbiens,,,,,,,30.0,-14.5,224,2025-12-07,PWHL,2025/2026,Regular Season
-62,9:13,Penalty,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,4v5,9,Kati Tabin,,,,,,,,,,,,,,,224,2025-12-07,PWHL,2025/2026,Regular Season
-63,9:48,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v3,17,Ella Shelton,,,,,35,Ann-Renée Desbiens,,,,,,,78.7,0.0,224,2025-12-07,PWHL,2025/2026,Regular Season
-64,9:50,Penalty,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,3v5,7,Laura Stacey,,,,,,,,,,,,,,,224,2025-12-07,PWHL,2025/2026,Regular Season
-65,10:29,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v4,40,Blayre Turnbull,,,,,35,Ann-Renée Desbiens,,,,,,,75.3,14.5,224,2025-12-07,PWHL,2025/2026,Regular Season
-66,10:39,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v4,17,Ella Shelton,,,,,35,Ann-Renée Desbiens,,,,,,,32.0,20.1,224,2025-12-07,PWHL,2025/2026,Regular Season
-67,12:04,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v4,18,Jesse Compher,,,,,35,Ann-Renée Desbiens,,,,,,,40.7,-12.8,224,2025-12-07,PWHL,2025/2026,Regular Season
-68,12:13,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,17,Ella Shelton,,,,,35,Ann-Renée Desbiens,,,,,,,32.0,32.0,224,2025-12-07,PWHL,2025/2026,Regular Season
-69,12:15,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,9,Daryl Watts,,,,,35,Ann-Renée Desbiens,,,,,,,69.0,-12.8,224,2025-12-07,PWHL,2025/2026,Regular Season
-70,12:19,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v4,9,Daryl Watts,,,,,35,Ann-Renée Desbiens,,,,,,,87.0,-7.9,224,2025-12-07,PWHL,2025/2026,Regular Season
-71,12:20,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v4,9,Daryl Watts,,,,,35,Ann-Renée Desbiens,,,,,,,83.0,-6.2,224,2025-12-07,PWHL,2025/2026,Regular Season
-72,12:36,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,4v5,96,Natálie Mlýnková,,,,,1,Raygan Kirk,,,,,,,29.3,36.3,224,2025-12-07,PWHL,2025/2026,Regular Season
-73,13:41,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,4v5,7,Laura Stacey,,,,,1,Raygan Kirk,,,,,,,-50.0,21.8,224,2025-12-07,PWHL,2025/2026,Regular Season
-74,13:52,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,4v5,27,Shiann Darkangelo,,,,,1,Raygan Kirk,,,,,,,-64.0,1.1,224,2025-12-07,PWHL,2025/2026,Regular Season
-75,16:59,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,42,Claire Dalton,,,,,35,Ann-Renée Desbiens,,,,,,,47.7,-14.2,224,2025-12-07,PWHL,2025/2026,Regular Season
-76,17:49,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,9,Daryl Watts,,,,,35,Ann-Renée Desbiens,,,,,,,42.3,-4.0,224,2025-12-07,PWHL,2025/2026,Regular Season
-77,17:53,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,27,Emma Maltais,,,,,35,Ann-Renée Desbiens,,,,,,,76.0,-20.4,224,2025-12-07,PWHL,2025/2026,Regular Season
-78,18:01,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,9,Daryl Watts,,,,,35,Ann-Renée Desbiens,,,,,,,33.7,36.3,224,2025-12-07,PWHL,2025/2026,Regular Season
-79,18:11,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,19,Sara Hjalmarsson,,,,,35,Ann-Renée Desbiens,,,,,,,76.7,-24.6,224,2025-12-07,PWHL,2025/2026,Regular Season
-80,18:19,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,6,Kali Flanagan,,,,,35,Ann-Renée Desbiens,,,,,,,58.7,-25.8,224,2025-12-07,PWHL,2025/2026,Regular Season
-81,19:50,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,6,Kali Flanagan,,,,,35,Ann-Renée Desbiens,,,,,,,35.7,-21.2,224,2025-12-07,PWHL,2025/2026,Regular Season
-82,19:56,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,6,Kali Flanagan,,,,,35,Ann-Renée Desbiens,,,,,,,37.3,-14.7,224,2025-12-07,PWHL,2025/2026,Regular Season
-83,19:57,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,18,Jesse Compher,,,,,35,Ann-Renée Desbiens,,,,,,,79.0,1.1,224,2025-12-07,PWHL,2025/2026,Regular Season
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,xG,ScoreState,BoxID,game_id,game_date,competition,season,state
+1,0:28,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,7,Laura Stacey,,,,,1,Raygan Kirk,,,,,,,41.7,25.8,0.0386,0,O22,224,2025-12-07,PWHL,2025/2026,Regular Season
+2,0:54,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,27,Shiann Darkangelo,,,,,1,Raygan Kirk,,,,,,,78.3,-26.1,0.0177,0,O05,224,2025-12-07,PWHL,2025/2026,Regular Season
+3,0:55,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,21,Maureen Murphy,,,,,1,Raygan Kirk,,,,,,,71.3,-2.5,0.0785,0,O14,224,2025-12-07,PWHL,2025/2026,Regular Season
+4,1:22,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,44,Amanda Boulier,,,,,1,Raygan Kirk,,,,,,,32.3,-7.6,,0,O25,224,2025-12-07,PWHL,2025/2026,Regular Season
+5,2:10,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,61,Nicole Gosling,,,,,1,Raygan Kirk,,,,,,,77.0,-34.6,0.0191,0,O04,224,2025-12-07,PWHL,2025/2026,Regular Season
+6,2:53,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,7,Laura Stacey,,,,,1,Raygan Kirk,,,,,,,58.3,-35.7,0.0138,0,O12,224,2025-12-07,PWHL,2025/2026,Regular Season
+7,4:16,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,27,Emma Maltais,,,,,35,Ann-Renée Desbiens,,,,,,,51.7,38.8,0.0152,0,O23,224,2025-12-07,PWHL,2025/2026,Regular Season
+8,6:15,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,44,Amanda Boulier,,,,,1,Raygan Kirk,,,,,,,85.3,-17.3,0.0659,0,O06,224,2025-12-07,PWHL,2025/2026,Regular Season
+9,6:36,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,71,Anna Kjellbin,,,,,35,Ann-Renée Desbiens,,,,,,,9.7,14.5,0.0553,0,N02,224,2025-12-07,PWHL,2025/2026,Regular Season
+10,8:38,Goal,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,9,Kati Tabin,96,Natálie Mlýnková,91,Maggie Flaherty,1,Raygan Kirk,,9 21 27 91 96,Kati Tabin - Maureen Murphy - Shiann Darkangelo - Maggie Flaherty - Natálie Mlýnková,,12 18 40 42 71,Allie Munroe - Jesse Compher - Blayre Turnbull - Claire Dalton - Anna Kjellbin,31.3,12.5,0.0420,0,O25,224,2025-12-07,PWHL,2025/2026,Regular Season
+11,9:00,Penalty,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,16,Hayley Scamurra,,,,,,,,,,,,,,,,1,,224,2025-12-07,PWHL,2025/2026,Regular Season
+12,9:34,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v4,17,Ella Shelton,,,,,35,Ann-Renée Desbiens,,,,,,,56.3,24.4,,-1,O23,224,2025-12-07,PWHL,2025/2026,Regular Season
+13,10:53,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v4,27,Emma Maltais,,,,,35,Ann-Renée Desbiens,,,,,,,54.7,12.5,,-1,O22,224,2025-12-07,PWHL,2025/2026,Regular Season
+14,12:17,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,19,Kaitlin Willoughby,,,,,1,Raygan Kirk,,,,,,,79.0,-6.8,0.1463,1,O11,224,2025-12-07,PWHL,2025/2026,Regular Season
+15,12:38,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,29,Marie-Philip Poulin,,,,,1,Raygan Kirk,,,,,,,61.0,17.0,0.1061,1,O16,224,2025-12-07,PWHL,2025/2026,Regular Season
+16,13:03,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,24,Natalie Spooner,,,,,35,Ann-Renée Desbiens,,,,,,,41.3,7.9,,-1,O21,224,2025-12-07,PWHL,2025/2026,Regular Season
+17,13:35,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,44,Amanda Boulier,,,,,1,Raygan Kirk,,,,,,,30.0,22.1,,1,O26,224,2025-12-07,PWHL,2025/2026,Regular Season
+18,14:06,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,22,Jessica DiGirolamo,,,,,1,Raygan Kirk,,,,,,,-18.0,-38.8,0.0657,1,N04,224,2025-12-07,PWHL,2025/2026,Regular Season
+19,14:12,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,16,Hayley Scamurra,,,,,1,Raygan Kirk,,,,,,,59.7,-15.6,0.0929,1,O14,224,2025-12-07,PWHL,2025/2026,Regular Season
+20,14:41,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,1,event,5v5,12,Allie Munroe,,,,,35,Ann-Renée Desbiens,,,,,,,85.0,9.9,0.0758,-1,O08,224,2025-12-07,PWHL,2025/2026,Regular Season
+21,17:03,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,29,Marie-Philip Poulin,,,,,1,Raygan Kirk,,,,,,,45.0,23.5,,1,O22,224,2025-12-07,PWHL,2025/2026,Regular Season
+22,17:25,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,61,Nicole Gosling,,,,,1,Raygan Kirk,,,,,,,33.0,-12.8,,1,O25,224,2025-12-07,PWHL,2025/2026,Regular Season
+23,17:26,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,1,event,5v5,96,Natálie Mlýnková,,,,,1,Raygan Kirk,,,,,,,85.0,-30.0,0.0229,1,O04,224,2025-12-07,PWHL,2025/2026,Regular Season
+24,0:18,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5,29,Marie-Philip Poulin,,,,,1,Raygan Kirk,,,,,,,58.0,23.2,0.0488,1,O17,224,2025-12-07,PWHL,2025/2026,Regular Season
+25,1:33,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,14,Renata Fast,,,,,35,Ann-Renée Desbiens,,,,,,,47.0,-1.4,,-1,O21,224,2025-12-07,PWHL,2025/2026,Regular Season
+26,1:51,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,19,Sara Hjalmarsson,,,,,35,Ann-Renée Desbiens,,,,,,,59.0,-24.9,0.0398,-1,O13,224,2025-12-07,PWHL,2025/2026,Regular Season
+27,1:56,Penalty,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,19,Sara Hjalmarsson,,,,,,,,,,,,,,,,-1,,224,2025-12-07,PWHL,2025/2026,Regular Season
+28,2:21,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v4,7,Laura Stacey,,,,,1,Raygan Kirk,,,,,,,83.7,-14.7,0.1207,1,O06,224,2025-12-07,PWHL,2025/2026,Regular Season
+29,2:21,Penalty,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,4v5,17,Ella Shelton,,,,,,,,,,,,,,,,-1,,224,2025-12-07,PWHL,2025/2026,Regular Season
+30,2:41,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v3,29,Marie-Philip Poulin,,,,,1,Raygan Kirk,,,,,,,83.0,-6.5,0.3423,1,O07,224,2025-12-07,PWHL,2025/2026,Regular Season
+31,2:57,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v3,29,Marie-Philip Poulin,,,,,1,Raygan Kirk,,,,,,,75.0,17.8,0.1292,1,O08,224,2025-12-07,PWHL,2025/2026,Regular Season
+32,3:21,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v3,96,Natálie Mlýnková,,,,,1,Raygan Kirk,,,,,,,71.3,11.1,0.1610,1,O16,224,2025-12-07,PWHL,2025/2026,Regular Season
+33,3:44,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v3,61,Nicole Gosling,,,,,1,Raygan Kirk,,,,,,,33.7,-10.2,0.0785,1,O25,224,2025-12-07,PWHL,2025/2026,Regular Season
+34,4:15,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v4,28,Catherine Dubois,,,,,1,Raygan Kirk,,,,,,,77.3,2.0,0.2170,1,O11,224,2025-12-07,PWHL,2025/2026,Regular Season
+35,5:40,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5,7,Laura Stacey,,,,,1,Raygan Kirk,,,,,,,91.7,-10.2,0.1751,1,O02,224,2025-12-07,PWHL,2025/2026,Regular Season
+36,6:29,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,18,Jesse Compher,,,,,35,Ann-Renée Desbiens,,,,,,,67.7,3.7,0.0959,-1,O16,224,2025-12-07,PWHL,2025/2026,Regular Season
+37,7:10,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,14,Renata Fast,,,,,35,Ann-Renée Desbiens,,,,,,,46.3,-6.2,0.0614,-1,O21,224,2025-12-07,PWHL,2025/2026,Regular Season
+38,8:36,Goal,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5,16,Hayley Scamurra,88,Skylar Irving,,,1,Raygan Kirk,,9 16 17 88 91,Kati Tabin - Hayley Scamurra - Dara Greig - Skylar Irving - Maggie Flaherty,,6 8 12 25 67,Kali Flanagan - Clair DeGeorge - Allie Munroe - Clara Van Wieren - Emma Woods,80.7,2.3,0.1463,1,O11,224,2025-12-07,PWHL,2025/2026,Regular Season
+39,8:54,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,24,Natalie Spooner,,,,,35,Ann-Renée Desbiens,,,,,,,60.3,31.4,0.0162,-2,O18,224,2025-12-07,PWHL,2025/2026,Regular Season
+40,8:55,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,9,Daryl Watts,,,,,35,Ann-Renée Desbiens,,,,,,,57.0,19.3,0.0969,-2,O16,224,2025-12-07,PWHL,2025/2026,Regular Season
+41,11:24,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,19,Sara Hjalmarsson,,,,,35,Ann-Renée Desbiens,,,,,,,29.0,7.4,0.0454,-2,O25,224,2025-12-07,PWHL,2025/2026,Regular Season
+42,12:28,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5,21,Maureen Murphy,,,,,1,Raygan Kirk,,,,,,,38.7,-0.3,0.0633,2,O25,224,2025-12-07,PWHL,2025/2026,Regular Season
+43,14:03,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,6,Kali Flanagan,,,,,35,Ann-Renée Desbiens,,,,,,,69.0,20.1,0.0443,-2,O17,224,2025-12-07,PWHL,2025/2026,Regular Season
+44,16:52,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5,9,Kati Tabin,,,,,1,Raygan Kirk,,,,,,,27.0,33.4,,2,O26,224,2025-12-07,PWHL,2025/2026,Regular Season
+45,17:01,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5,9,Kati Tabin,,,,,1,Raygan Kirk,,,,,,,40.7,3.7,,2,O25,224,2025-12-07,PWHL,2025/2026,Regular Season
+46,17:58,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5,96,Natálie Mlýnková,,,,,1,Raygan Kirk,,,,,,,54.0,-11.3,0.0690,2,O20,224,2025-12-07,PWHL,2025/2026,Regular Season
+47,0:37,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,18,Jesse Compher,,,,,35,Ann-Renée Desbiens,,,,,,,68.0,40.2,0.0243,-2,O10,224,2025-12-07,PWHL,2025/2026,Regular Season
+48,1:20,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,24,Natalie Spooner,,,,,35,Ann-Renée Desbiens,,,,,,,69.0,17.8,,-2,O17,224,2025-12-07,PWHL,2025/2026,Regular Season
+49,1:36,Goal,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,20,Emma Gentry,14,Renata Fast,,,35,Ann-Renée Desbiens,,16 22 44 88 96,Hayley Scamurra - Jessica DiGirolamo - Amanda Boulier - Skylar Irving - Natálie Mlýnková,,11 14 15 20 22,Kiara Zanon - Renata Fast - Savannah Harmon - Emma Gentry - Maggie Connors,52.0,16.4,0.0418,-2,O22,224,2025-12-07,PWHL,2025/2026,Regular Season
+50,1:50,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,15,Savannah Harmon,,,,,35,Ann-Renée Desbiens,,,,,,,43.0,-21.8,0.0491,-1,O20,224,2025-12-07,PWHL,2025/2026,Regular Season
+51,2:49,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5,29,Marie-Philip Poulin,,,,,1,Raygan Kirk,,,,,,,66.3,20.1,0.0488,1,O17,224,2025-12-07,PWHL,2025/2026,Regular Season
+52,2:54,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5,29,Marie-Philip Poulin,,,,,1,Raygan Kirk,,,,,,,50.7,19.3,,1,O22,224,2025-12-07,PWHL,2025/2026,Regular Season
+53,3:38,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,14,Renata Fast,,,,,35,Ann-Renée Desbiens,,,,,,,45.3,29.7,,-1,O23,224,2025-12-07,PWHL,2025/2026,Regular Season
+54,4:02,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,9,Daryl Watts,,,,,35,Ann-Renée Desbiens,,,,,,,52.3,-15.0,,-1,O20,224,2025-12-07,PWHL,2025/2026,Regular Season
+55,4:33,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5,96,Natálie Mlýnková,,,,,1,Raygan Kirk,,,,,,,85.3,21.2,0.0354,1,O09,224,2025-12-07,PWHL,2025/2026,Regular Season
+56,5:08,Penalty,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,15,Savannah Harmon,,,,,,,,,,,,,,,,-1,,224,2025-12-07,PWHL,2025/2026,Regular Season
+57,5:39,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v4,29,Marie-Philip Poulin,,,,,1,Raygan Kirk,,,,,,,72.3,15.0,0.0766,1,O17,224,2025-12-07,PWHL,2025/2026,Regular Season
+58,5:41,Goal,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v4,7,Laura Stacey,29,Marie-Philip Poulin,23,Erin Ambrose,1,Raygan Kirk,,7 11 23 29 96,Laura Stacey - Abby Roque - Erin Ambrose - Marie-Philip Poulin - Natálie Mlýnková,,11 14 20 22,Kiara Zanon - Renata Fast - Emma Gentry - Maggie Connors,81.0,-2.8,0.2170,1,O11,224,2025-12-07,PWHL,2025/2026,Regular Season
+59,8:19,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5,51,Kelly Ann Nadeau,,,,,1,Raygan Kirk,,,,,,,31.3,12.8,,2,O25,224,2025-12-07,PWHL,2025/2026,Regular Season
+60,8:20,Penalty,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5,28,Catherine Dubois,,,,,,,,,,,,,,,,2,,224,2025-12-07,PWHL,2025/2026,Regular Season
+61,8:45,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v4,9,Daryl Watts,,,,,35,Ann-Renée Desbiens,,,,,,,30.0,-14.5,0.0714,-2,O25,224,2025-12-07,PWHL,2025/2026,Regular Season
+62,9:13,Penalty,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,4v5,9,Kati Tabin,,,,,,,,,,,,,,,,2,,224,2025-12-07,PWHL,2025/2026,Regular Season
+63,9:48,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v3,17,Ella Shelton,,,,,35,Ann-Renée Desbiens,,,,,,,78.7,0.0,0.2002,-2,O11,224,2025-12-07,PWHL,2025/2026,Regular Season
+64,9:50,Penalty,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,3v5,7,Laura Stacey,,,,,,,,,,,,,,,,2,,224,2025-12-07,PWHL,2025/2026,Regular Season
+65,10:29,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v4,40,Blayre Turnbull,,,,,35,Ann-Renée Desbiens,,,,,,,75.3,14.5,,-2,O08,224,2025-12-07,PWHL,2025/2026,Regular Season
+66,10:39,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v4,17,Ella Shelton,,,,,35,Ann-Renée Desbiens,,,,,,,32.0,20.1,,-2,O25,224,2025-12-07,PWHL,2025/2026,Regular Season
+67,12:04,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v4,18,Jesse Compher,,,,,35,Ann-Renée Desbiens,,,,,,,40.7,-12.8,0.0714,-2,O25,224,2025-12-07,PWHL,2025/2026,Regular Season
+68,12:13,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,17,Ella Shelton,,,,,35,Ann-Renée Desbiens,,,,,,,32.0,32.0,,-2,O26,224,2025-12-07,PWHL,2025/2026,Regular Season
+69,12:15,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,9,Daryl Watts,,,,,35,Ann-Renée Desbiens,,,,,,,69.0,-12.8,,-2,O14,224,2025-12-07,PWHL,2025/2026,Regular Season
+70,12:19,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v4,9,Daryl Watts,,,,,35,Ann-Renée Desbiens,,,,,,,87.0,-7.9,0.1103,-2,O06,224,2025-12-07,PWHL,2025/2026,Regular Season
+71,12:20,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v4,9,Daryl Watts,,,,,35,Ann-Renée Desbiens,,,,,,,83.0,-6.2,0.3199,-2,O07,224,2025-12-07,PWHL,2025/2026,Regular Season
+72,12:36,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,4v5,96,Natálie Mlýnková,,,,,1,Raygan Kirk,,,,,,,-29.3,-36.3,0.1372,2,D26,224,2025-12-07,PWHL,2025/2026,Regular Season
+73,13:41,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,4v5,7,Laura Stacey,,,,,1,Raygan Kirk,,,,,,,50.0,-21.8,0.1155,2,O20,224,2025-12-07,PWHL,2025/2026,Regular Season
+74,13:52,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,4v5,27,Shiann Darkangelo,,,,,1,Raygan Kirk,,,,,,,64.0,-1.1,0.2400,2,O15,224,2025-12-07,PWHL,2025/2026,Regular Season
+75,16:59,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,42,Claire Dalton,,,,,35,Ann-Renée Desbiens,,,,,,,47.7,-14.2,,-2,O20,224,2025-12-07,PWHL,2025/2026,Regular Season
+76,17:49,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,9,Daryl Watts,,,,,35,Ann-Renée Desbiens,,,,,,,42.3,-4.0,0.0620,-2,O21,224,2025-12-07,PWHL,2025/2026,Regular Season
+77,17:53,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,27,Emma Maltais,,,,,35,Ann-Renée Desbiens,,,,,,,76.0,-20.4,,-2,O06,224,2025-12-07,PWHL,2025/2026,Regular Season
+78,18:01,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,9,Daryl Watts,,,,,35,Ann-Renée Desbiens,,,,,,,33.7,36.3,,-2,O26,224,2025-12-07,PWHL,2025/2026,Regular Season
+79,18:11,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,19,Sara Hjalmarsson,,,,,35,Ann-Renée Desbiens,,,,,,,76.7,-24.6,,-2,O05,224,2025-12-07,PWHL,2025/2026,Regular Season
+80,18:19,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,6,Kali Flanagan,,,,,35,Ann-Renée Desbiens,,,,,,,58.7,-25.8,,-2,O13,224,2025-12-07,PWHL,2025/2026,Regular Season
+81,19:50,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,6,Kali Flanagan,,,,,35,Ann-Renée Desbiens,,,,,,,35.7,-21.2,0.0433,-2,O24,224,2025-12-07,PWHL,2025/2026,Regular Season
+82,19:56,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,6,Kali Flanagan,,,,,35,Ann-Renée Desbiens,,,,,,,37.3,-14.7,0.0454,-2,O25,224,2025-12-07,PWHL,2025/2026,Regular Season
+83,19:57,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,18,Jesse Compher,,,,,35,Ann-Renée Desbiens,,,,,,,79.0,1.1,0.1341,-2,O11,224,2025-12-07,PWHL,2025/2026,Regular Season

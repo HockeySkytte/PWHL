@@ -1,81 +1,81 @@
-id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
-1,0:11,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v5,13,Kaleigh Fratkin,,,,,37,Erica Howe,,,,,,,7.3,24.6,52,2024-03-20,PWHL,2023/2024,Regular Season
-2,1:13,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,34,Hannah Miller,,,,,30,Emma Söderberg,,,,,,,-37.3,17.6,52,2024-03-20,PWHL,2023/2024,Regular Season
-3,3:41,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v5,21,Hilary Knight,,,,,37,Erica Howe,,,,,,,65.3,15.6,52,2024-03-20,PWHL,2023/2024,Regular Season
-4,4:04,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v5,16,Amanda Pelkey,,,,,37,Erica Howe,,,,,,,32.0,-26.4,52,2024-03-20,PWHL,2023/2024,Regular Season
-5,4:23,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,14,Renata Fast,,,,,30,Emma Söderberg,,,,,,,-36.0,-22.1,52,2024-03-20,PWHL,2023/2024,Regular Season
-6,4:47,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,3,Jocelyne Larocque,,,,,30,Emma Söderberg,,,,,,,-36.3,3.4,52,2024-03-20,PWHL,2023/2024,Regular Season
-7,7:44,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v5,20,Hannah Brandt,,,,,37,Erica Howe,,,,,,,41.0,-7.1,52,2024-03-20,PWHL,2023/2024,Regular Season
-8,7:51,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,24,Natalie Spooner,,,,,30,Emma Söderberg,,,,,,,-53.0,-13.9,52,2024-03-20,PWHL,2023/2024,Regular Season
-9,9:27,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,3,Jocelyne Larocque,,,,,,,,,,,,,,,52,2024-03-20,PWHL,2023/2024,Regular Season
-10,10:06,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,4v5,20,Sarah Nurse,,,,,,,,,,,,,,,52,2024-03-20,PWHL,2023/2024,Regular Season
-11,10:28,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v3,5,Megan Keller,,,,,37,Erica Howe,,,,,,,53.7,3.1,52,2024-03-20,PWHL,2023/2024,Regular Season
-12,10:49,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v3,88,Susanna Tapani,,,,,37,Erica Howe,,,,,,,74.3,6.2,52,2024-03-20,PWHL,2023/2024,Regular Season
-13,11:12,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v3,7,Sidney Morin,,,,,37,Erica Howe,,,,,,,69.0,9.1,52,2024-03-20,PWHL,2023/2024,Regular Season
-14,11:21,Goal,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v3,7,Sidney Morin,47,Jamie Lee Rattray,22,Jessica DiGirolamo,37,Erica Howe,,6 14 40,Kali Flanagan - Renata Fast - Blayre Turnbull,,7 17 20 22 47,Sidney Morin - Taylor Girard - Hannah Brandt - Jessica DiGirolamo - Jamie Lee Rattray,63.0,-11.6,52,2024-03-20,PWHL,2023/2024,Regular Season
-15,16:26,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,27,Emma Maltais,,,,,,,,,,,,,,,52,2024-03-20,PWHL,2023/2024,Regular Season
-16,16:43,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v4,5,Megan Keller,,,,,37,Erica Howe,,,,,,,35.0,-19.6,52,2024-03-20,PWHL,2023/2024,Regular Season
-17,16:56,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v4,88,Susanna Tapani,,,,,37,Erica Howe,,,,,,,78.3,-2.5,52,2024-03-20,PWHL,2023/2024,Regular Season
-18,17:06,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v4,19,Gigi Marvin,,,,,37,Erica Howe,,,,,,,81.0,3.1,52,2024-03-20,PWHL,2023/2024,Regular Season
-19,17:15,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v4,5,Megan Keller,,,,,37,Erica Howe,,,,,,,36.7,8.2,52,2024-03-20,PWHL,2023/2024,Regular Season
-20,17:51,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v4,47,Jamie Lee Rattray,,,,,37,Erica Howe,,,,,,,56.3,18.7,52,2024-03-20,PWHL,2023/2024,Regular Season
-21,19:05,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v5,47,Jamie Lee Rattray,,,,,37,Erica Howe,,,,,,,20.0,36.5,52,2024-03-20,PWHL,2023/2024,Regular Season
-22,0:12,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,24,Natalie Spooner,,,,,30,Emma Söderberg,,,,,,,-60.7,11.9,52,2024-03-20,PWHL,2023/2024,Regular Season
-23,0:58,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,2,Emily Brown,,,,,37,Erica Howe,,,,,,,45.0,-18.4,52,2024-03-20,PWHL,2023/2024,Regular Season
-24,1:39,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,7,Sidney Morin,,,,,37,Erica Howe,,,,,,,53.0,32.3,52,2024-03-20,PWHL,2023/2024,Regular Season
-25,2:20,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,5,Lauriane Rougeau,,,,,30,Emma Söderberg,,,,,,,-38.0,32.6,52,2024-03-20,PWHL,2023/2024,Regular Season
-26,3:03,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,17,Taylor Girard,,,,,37,Erica Howe,,,,,,,64.7,10.2,52,2024-03-20,PWHL,2023/2024,Regular Season
-27,4:57,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,7,Sidney Morin,,,,,37,Erica Howe,,,,,,,54.3,14.2,52,2024-03-20,PWHL,2023/2024,Regular Season
-28,5:34,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,3,Jocelyne Larocque,,,,,30,Emma Söderberg,,,,,,,-53.0,20.1,52,2024-03-20,PWHL,2023/2024,Regular Season
-29,6:02,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,19,Gigi Marvin,,,,,37,Erica Howe,,,,,,,79.3,2.5,52,2024-03-20,PWHL,2023/2024,Regular Season
-30,8:19,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,97,Jess Healey,,,,,37,Erica Howe,,,,,,,51.7,-5.1,52,2024-03-20,PWHL,2023/2024,Regular Season
-31,8:35,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,22,Jessica DiGirolamo,,,,,37,Erica Howe,,,,,,,37.0,19.6,52,2024-03-20,PWHL,2023/2024,Regular Season
-32,9:32,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,4v5,3,Jocelyne Larocque,,,,,30,Emma Söderberg,,,,,,,-39.7,20.7,52,2024-03-20,PWHL,2023/2024,Regular Season
-33,9:37,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,20,Sarah Nurse,,,,,30,Emma Söderberg,,,,,,,-77.0,0.8,52,2024-03-20,PWHL,2023/2024,Regular Season
-34,10:13,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v3,88,Susanna Tapani,,,,,37,Erica Howe,,,,,,,51.0,-11.1,52,2024-03-20,PWHL,2023/2024,Regular Season
-35,10:27,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,5,Megan Keller,,,,,37,Erica Howe,,,,,,,33.3,1.7,52,2024-03-20,PWHL,2023/2024,Regular Season
-36,10:35,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v3,13,Kaleigh Fratkin,,,,,37,Erica Howe,,,,,,,40.0,7.9,52,2024-03-20,PWHL,2023/2024,Regular Season
-37,10:46,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,77,Nicole Kosta,,,,,37,Erica Howe,,,,,,,69.3,2.0,52,2024-03-20,PWHL,2023/2024,Regular Season
-38,12:24,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,97,Jess Healey,,,,,37,Erica Howe,,,,,,,67.3,-14.2,52,2024-03-20,PWHL,2023/2024,Regular Season
-39,12:35,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,21,Hilary Knight,,,,,37,Erica Howe,,,,,,,78.3,-3.4,52,2024-03-20,PWHL,2023/2024,Regular Season
-40,13:55,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,37,Theresa Schafzahl,,,,,37,Erica Howe,,,,,,,53.0,-13.6,52,2024-03-20,PWHL,2023/2024,Regular Season
-41,14:15,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,13,Kaleigh Fratkin,,,,,37,Erica Howe,,,,,,,46.3,25.5,52,2024-03-20,PWHL,2023/2024,Regular Season
-42,14:41,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,5,Megan Keller,,,,,37,Erica Howe,,,,,,,73.0,0.0,52,2024-03-20,PWHL,2023/2024,Regular Season
-43,17:01,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,4v5,10,Alexa Vasko,,,,,30,Emma Söderberg,,,,,,,-62.3,-11.1,52,2024-03-20,PWHL,2023/2024,Regular Season
-44,17:39,Penalty,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,17,Taylor Girard,,,,,,,,,,,,,,,52,2024-03-20,PWHL,2023/2024,Regular Season
-45,17:56,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v4,34,Hannah Miller,,,,,30,Emma Söderberg,,,,,,,-45.0,14.2,52,2024-03-20,PWHL,2023/2024,Regular Season
-46,18:04,Penalty,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,4v5,13,Kaleigh Fratkin,,,,,,,,,,,,,,,52,2024-03-20,PWHL,2023/2024,Regular Season
-47,18:54,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v3,40,Blayre Turnbull,,,,,30,Emma Söderberg,,,,,,,-82.0,-2.8,52,2024-03-20,PWHL,2023/2024,Regular Season
-48,19:02,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,20,Sarah Nurse,,,,,30,Emma Söderberg,,,,,,,-69.0,8.5,52,2024-03-20,PWHL,2023/2024,Regular Season
-49,19:15,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,40,Blayre Turnbull,,,,,30,Emma Söderberg,,,,,,,-52.3,-18.7,52,2024-03-20,PWHL,2023/2024,Regular Season
-50,19:53,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v4,51,Victoria Bach,,,,,30,Emma Söderberg,,,,,,,-55.0,-2.5,52,2024-03-20,PWHL,2023/2024,Regular Season
-51,0:17,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,20,Sarah Nurse,,,,,30,Emma Söderberg,,,,,,,-66.3,11.1,52,2024-03-20,PWHL,2023/2024,Regular Season
-52,1:28,Penalty,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,8,Lexie Adzija,,,,,,,,,,,,,,,52,2024-03-20,PWHL,2023/2024,Regular Season
-53,1:43,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v4,14,Renata Fast,,,,,30,Emma Söderberg,,,,,,,-34.0,19.3,52,2024-03-20,PWHL,2023/2024,Regular Season
-54,1:50,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,34,Hannah Miller,,,,,30,Emma Söderberg,,,,,,,-59.0,21.2,52,2024-03-20,PWHL,2023/2024,Regular Season
-55,2:14,Goal,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v4,14,Renata Fast,34,Hannah Miller,20,Sarah Nurse,30,Emma Söderberg,,14 20 24 34 40,Renata Fast - Sarah Nurse - Natalie Spooner - Hannah Miller - Blayre Turnbull,,5 13 17 20,Megan Keller - Kaleigh Fratkin - Taylor Girard - Hannah Brandt,-53.0,4.8,52,2024-03-20,PWHL,2023/2024,Regular Season
-56,4:32,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,18,Jesse Compher,,,,,30,Emma Söderberg,,,,,,,-70.7,25.8,52,2024-03-20,PWHL,2023/2024,Regular Season
-57,5:35,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,6,Kali Flanagan,,,,,30,Emma Söderberg,,,,,,,-40.0,-15.3,52,2024-03-20,PWHL,2023/2024,Regular Season
-58,6:02,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,51,Victoria Bach,,,,,30,Emma Söderberg,,,,,,,-57.3,8.5,52,2024-03-20,PWHL,2023/2024,Regular Season
-59,6:33,Penalty,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,9,Sophie Shirley,,,,,,,,,,,,,,,52,2024-03-20,PWHL,2023/2024,Regular Season
-60,6:48,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,20,Sarah Nurse,,,,,30,Emma Söderberg,,,,,,,-55.0,7.4,52,2024-03-20,PWHL,2023/2024,Regular Season
-61,6:59,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,34,Hannah Miller,,,,,30,Emma Söderberg,,,,,,,-54.0,23.8,52,2024-03-20,PWHL,2023/2024,Regular Season
-62,7:05,Goal,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v4,24,Natalie Spooner,20,Sarah Nurse,,,30,Emma Söderberg,,14 20 24 34 40,Renata Fast - Sarah Nurse - Natalie Spooner - Hannah Miller - Blayre Turnbull,,2 17 20 22,Emily Brown - Taylor Girard - Hannah Brandt - Jessica DiGirolamo,-62.0,-2.0,52,2024-03-20,PWHL,2023/2024,Regular Season
-63,7:41,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,7,Sidney Morin,,,,,37,Erica Howe,,,,,,,39.0,15.6,52,2024-03-20,PWHL,2023/2024,Regular Season
-64,8:52,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,24,Natalie Spooner,,,,,30,Emma Söderberg,,,,,,,-84.3,7.6,52,2024-03-20,PWHL,2023/2024,Regular Season
-65,10:39,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,5,Megan Keller,,,,,37,Erica Howe,,,,,,,38.0,-2.8,52,2024-03-20,PWHL,2023/2024,Regular Season
-66,10:40,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,21,Hilary Knight,,,,,37,Erica Howe,,,,,,,78.0,-2.5,52,2024-03-20,PWHL,2023/2024,Regular Season
-67,11:30,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,14,Renata Fast,,,,,30,Emma Söderberg,,,,,,,-39.0,-12.2,52,2024-03-20,PWHL,2023/2024,Regular Season
-68,12:23,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,47,Jamie Lee Rattray,,,,,37,Erica Howe,,,,,,,73.7,-11.9,52,2024-03-20,PWHL,2023/2024,Regular Season
-69,12:53,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,8,Lexie Adzija,,,,,37,Erica Howe,,,,,,,69.0,6.2,52,2024-03-20,PWHL,2023/2024,Regular Season
-70,12:56,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,97,Jess Healey,,,,,37,Erica Howe,,,,,,,64.0,-26.1,52,2024-03-20,PWHL,2023/2024,Regular Season
-71,13:04,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,7,Sidney Morin,,,,,37,Erica Howe,,,,,,,39.7,21.2,52,2024-03-20,PWHL,2023/2024,Regular Season
-72,14:39,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,9,Sophie Shirley,,,,,37,Erica Howe,,,,,,,83.7,-10.5,52,2024-03-20,PWHL,2023/2024,Regular Season
-73,14:45,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,27,Emma Maltais,,,,,30,Emma Söderberg,,,,,,,-72.7,8.8,52,2024-03-20,PWHL,2023/2024,Regular Season
-74,14:55,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,20,Sarah Nurse,,,,,30,Emma Söderberg,,,,,,,-66.0,36.0,52,2024-03-20,PWHL,2023/2024,Regular Season
-75,15:19,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,18,Jesse Compher,,,,,30,Emma Söderberg,,,,,,,-53.0,-18.1,52,2024-03-20,PWHL,2023/2024,Regular Season
-76,15:25,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,40,Blayre Turnbull,,,,,30,Emma Söderberg,,,,,,,-77.0,-0.8,52,2024-03-20,PWHL,2023/2024,Regular Season
-77,15:39,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,14,Renata Fast,,,,,30,Emma Söderberg,,,,,,,-31.3,-32.0,52,2024-03-20,PWHL,2023/2024,Regular Season
-78,18:01,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,21,Hilary Knight,,,,,37,Erica Howe,,,,,,,69.0,-12.5,52,2024-03-20,PWHL,2023/2024,Regular Season
-79,19:55,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,88,Susanna Tapani,,,,,37,Erica Howe,,,,,,,65.0,-6.0,52,2024-03-20,PWHL,2023/2024,Regular Season
-80,19:56,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,11,Alina Müller,,,,,37,Erica Howe,,,,,,,63.7,-8.2,52,2024-03-20,PWHL,2023/2024,Regular Season
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,xG,ScoreState,BoxID,game_id,game_date,competition,season,state
+1,0:11,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v5,13,Kaleigh Fratkin,,,,,37,Erica Howe,,,,,,,7.3,24.6,0.0553,0,N03,52,2024-03-20,PWHL,2023/2024,Regular Season
+2,1:13,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,34,Hannah Miller,,,,,30,Emma Söderberg,,,,,,,37.3,-17.6,,0,O25,52,2024-03-20,PWHL,2023/2024,Regular Season
+3,3:41,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v5,21,Hilary Knight,,,,,37,Erica Howe,,,,,,,65.3,15.6,0.0899,0,O16,52,2024-03-20,PWHL,2023/2024,Regular Season
+4,4:04,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v5,16,Amanda Pelkey,,,,,37,Erica Howe,,,,,,,32.0,-26.4,0.0400,0,O24,52,2024-03-20,PWHL,2023/2024,Regular Season
+5,4:23,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,14,Renata Fast,,,,,30,Emma Söderberg,,,,,,,36.0,22.1,0.0258,0,O26,52,2024-03-20,PWHL,2023/2024,Regular Season
+6,4:47,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,3,Jocelyne Larocque,,,,,30,Emma Söderberg,,,,,,,36.3,-3.4,0.0420,0,O25,52,2024-03-20,PWHL,2023/2024,Regular Season
+7,7:44,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v5,20,Hannah Brandt,,,,,37,Erica Howe,,,,,,,41.0,-7.1,0.0573,0,O21,52,2024-03-20,PWHL,2023/2024,Regular Season
+8,7:51,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,24,Natalie Spooner,,,,,30,Emma Söderberg,,,,,,,53.0,13.9,0.0386,0,O22,52,2024-03-20,PWHL,2023/2024,Regular Season
+9,9:27,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,3,Jocelyne Larocque,,,,,,,,,,,,,,,,0,,52,2024-03-20,PWHL,2023/2024,Regular Season
+10,10:06,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,4v5,20,Sarah Nurse,,,,,,,,,,,,,,,,0,,52,2024-03-20,PWHL,2023/2024,Regular Season
+11,10:28,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v3,5,Megan Keller,,,,,37,Erica Howe,,,,,,,53.7,3.1,0.0895,0,O21,52,2024-03-20,PWHL,2023/2024,Regular Season
+12,10:49,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v3,88,Susanna Tapani,,,,,37,Erica Howe,,,,,,,74.3,6.2,,0,O11,52,2024-03-20,PWHL,2023/2024,Regular Season
+13,11:12,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v3,7,Sidney Morin,,,,,37,Erica Howe,,,,,,,69.0,9.1,0.1377,0,O16,52,2024-03-20,PWHL,2023/2024,Regular Season
+14,11:21,Goal,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v3,7,Sidney Morin,47,Jamie Lee Rattray,22,Jessica DiGirolamo,37,Erica Howe,,6 14 40,Kali Flanagan - Renata Fast - Blayre Turnbull,,7 17 20 22 47,Sidney Morin - Taylor Girard - Hannah Brandt - Jessica DiGirolamo - Jamie Lee Rattray,63.0,-11.6,0.1210,0,O14,52,2024-03-20,PWHL,2023/2024,Regular Season
+15,16:26,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,27,Emma Maltais,,,,,,,,,,,,,,,,-1,,52,2024-03-20,PWHL,2023/2024,Regular Season
+16,16:43,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v4,5,Megan Keller,,,,,37,Erica Howe,,,,,,,35.0,-19.6,,1,O24,52,2024-03-20,PWHL,2023/2024,Regular Season
+17,16:56,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v4,88,Susanna Tapani,,,,,37,Erica Howe,,,,,,,78.3,-2.5,0.2170,1,O11,52,2024-03-20,PWHL,2023/2024,Regular Season
+18,17:06,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v4,19,Gigi Marvin,,,,,37,Erica Howe,,,,,,,81.0,3.1,0.2170,1,O11,52,2024-03-20,PWHL,2023/2024,Regular Season
+19,17:15,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v4,5,Megan Keller,,,,,37,Erica Howe,,,,,,,36.7,8.2,,1,O25,52,2024-03-20,PWHL,2023/2024,Regular Season
+20,17:51,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v4,47,Jamie Lee Rattray,,,,,37,Erica Howe,,,,,,,56.3,18.7,,1,O22,52,2024-03-20,PWHL,2023/2024,Regular Season
+21,19:05,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v5,47,Jamie Lee Rattray,,,,,37,Erica Howe,,,,,,,20.0,36.5,0.0657,1,N03,52,2024-03-20,PWHL,2023/2024,Regular Season
+22,0:12,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,24,Natalie Spooner,,,,,30,Emma Söderberg,,,,,,,60.7,-11.9,0.0838,-1,O14,52,2024-03-20,PWHL,2023/2024,Regular Season
+23,0:58,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,2,Emily Brown,,,,,37,Erica Howe,,,,,,,45.0,-18.4,0.0546,1,O20,52,2024-03-20,PWHL,2023/2024,Regular Season
+24,1:39,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,7,Sidney Morin,,,,,37,Erica Howe,,,,,,,53.0,32.3,0.0182,1,O23,52,2024-03-20,PWHL,2023/2024,Regular Season
+25,2:20,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,5,Lauriane Rougeau,,,,,30,Emma Söderberg,,,,,,,38.0,-32.6,0.0429,-1,O24,52,2024-03-20,PWHL,2023/2024,Regular Season
+26,3:03,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,17,Taylor Girard,,,,,37,Erica Howe,,,,,,,64.7,10.2,0.1061,1,O16,52,2024-03-20,PWHL,2023/2024,Regular Season
+27,4:57,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,7,Sidney Morin,,,,,37,Erica Howe,,,,,,,54.3,14.2,0.0461,1,O22,52,2024-03-20,PWHL,2023/2024,Regular Season
+28,5:34,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,3,Jocelyne Larocque,,,,,30,Emma Söderberg,,,,,,,53.0,-20.1,,-1,O20,52,2024-03-20,PWHL,2023/2024,Regular Season
+29,6:02,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,19,Gigi Marvin,,,,,37,Erica Howe,,,,,,,79.3,2.5,0.1463,1,O11,52,2024-03-20,PWHL,2023/2024,Regular Season
+30,8:19,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,97,Jess Healey,,,,,37,Erica Howe,,,,,,,51.7,-5.1,,1,O21,52,2024-03-20,PWHL,2023/2024,Regular Season
+31,8:35,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,22,Jessica DiGirolamo,,,,,37,Erica Howe,,,,,,,37.0,19.6,,1,O26,52,2024-03-20,PWHL,2023/2024,Regular Season
+32,9:32,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,4v5,3,Jocelyne Larocque,,,,,30,Emma Söderberg,,,,,,,39.7,-20.7,,-1,O24,52,2024-03-20,PWHL,2023/2024,Regular Season
+33,9:37,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,20,Sarah Nurse,,,,,30,Emma Söderberg,,,,,,,77.0,-0.8,0.1328,-1,O11,52,2024-03-20,PWHL,2023/2024,Regular Season
+34,10:13,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v3,88,Susanna Tapani,,,,,37,Erica Howe,,,,,,,51.0,-11.1,,1,O20,52,2024-03-20,PWHL,2023/2024,Regular Season
+35,10:27,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,5,Megan Keller,,,,,37,Erica Howe,,,,,,,33.3,1.7,0.0500,1,O25,52,2024-03-20,PWHL,2023/2024,Regular Season
+36,10:35,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v3,13,Kaleigh Fratkin,,,,,37,Erica Howe,,,,,,,40.0,7.9,,1,O25,52,2024-03-20,PWHL,2023/2024,Regular Season
+37,10:46,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,77,Nicole Kosta,,,,,37,Erica Howe,,,,,,,69.3,2.0,0.1061,1,O16,52,2024-03-20,PWHL,2023/2024,Regular Season
+38,12:24,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,97,Jess Healey,,,,,37,Erica Howe,,,,,,,67.3,-14.2,0.0929,1,O14,52,2024-03-20,PWHL,2023/2024,Regular Season
+39,12:35,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,21,Hilary Knight,,,,,37,Erica Howe,,,,,,,78.3,-3.4,0.1463,1,O11,52,2024-03-20,PWHL,2023/2024,Regular Season
+40,13:55,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,37,Theresa Schafzahl,,,,,37,Erica Howe,,,,,,,53.0,-13.6,0.0546,1,O20,52,2024-03-20,PWHL,2023/2024,Regular Season
+41,14:15,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,13,Kaleigh Fratkin,,,,,37,Erica Howe,,,,,,,46.3,25.5,,1,O23,52,2024-03-20,PWHL,2023/2024,Regular Season
+42,14:41,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,5,Megan Keller,,,,,37,Erica Howe,,,,,,,73.0,0.0,0.1463,1,O11,52,2024-03-20,PWHL,2023/2024,Regular Season
+43,17:01,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,4v5,10,Alexa Vasko,,,,,30,Emma Söderberg,,,,,,,62.3,11.1,,-1,O16,52,2024-03-20,PWHL,2023/2024,Regular Season
+44,17:39,Penalty,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,17,Taylor Girard,,,,,,,,,,,,,,,,1,,52,2024-03-20,PWHL,2023/2024,Regular Season
+45,17:56,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v4,34,Hannah Miller,,,,,30,Emma Söderberg,,,,,,,45.0,-14.2,0.0770,-1,O20,52,2024-03-20,PWHL,2023/2024,Regular Season
+46,18:04,Penalty,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,4v5,13,Kaleigh Fratkin,,,,,,,,,,,,,,,,1,,52,2024-03-20,PWHL,2023/2024,Regular Season
+47,18:54,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v3,40,Blayre Turnbull,,,,,30,Emma Söderberg,,,,,,,82.0,2.8,0.1985,-1,O11,52,2024-03-20,PWHL,2023/2024,Regular Season
+48,19:02,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,20,Sarah Nurse,,,,,30,Emma Söderberg,,,,,,,69.0,-8.5,,-1,O14,52,2024-03-20,PWHL,2023/2024,Regular Season
+49,19:15,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,40,Blayre Turnbull,,,,,30,Emma Söderberg,,,,,,,52.3,18.7,,-1,O22,52,2024-03-20,PWHL,2023/2024,Regular Season
+50,19:53,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v4,51,Victoria Bach,,,,,30,Emma Söderberg,,,,,,,55.0,2.5,0.0956,-1,O21,52,2024-03-20,PWHL,2023/2024,Regular Season
+51,0:17,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,20,Sarah Nurse,,,,,30,Emma Söderberg,,,,,,,66.3,-11.1,0.0838,-1,O14,52,2024-03-20,PWHL,2023/2024,Regular Season
+52,1:28,Penalty,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,8,Lexie Adzija,,,,,,,,,,,,,,,,1,,52,2024-03-20,PWHL,2023/2024,Regular Season
+53,1:43,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v4,14,Renata Fast,,,,,30,Emma Söderberg,,,,,,,34.0,-19.3,0.0707,-1,O25,52,2024-03-20,PWHL,2023/2024,Regular Season
+54,1:50,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,34,Hannah Miller,,,,,30,Emma Söderberg,,,,,,,59.0,-21.2,,-1,O13,52,2024-03-20,PWHL,2023/2024,Regular Season
+55,2:14,Goal,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v4,14,Renata Fast,34,Hannah Miller,20,Sarah Nurse,30,Emma Söderberg,,14 20 24 34 40,Renata Fast - Sarah Nurse - Natalie Spooner - Hannah Miller - Blayre Turnbull,,5 13 17 20,Megan Keller - Kaleigh Fratkin - Taylor Girard - Hannah Brandt,53.0,-4.8,0.0956,-1,O21,52,2024-03-20,PWHL,2023/2024,Regular Season
+56,4:32,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,18,Jesse Compher,,,,,30,Emma Söderberg,,,,,,,70.7,-25.8,,0,O12,52,2024-03-20,PWHL,2023/2024,Regular Season
+57,5:35,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,6,Kali Flanagan,,,,,30,Emma Söderberg,,,,,,,40.0,15.3,,0,O25,52,2024-03-20,PWHL,2023/2024,Regular Season
+58,6:02,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,51,Victoria Bach,,,,,30,Emma Söderberg,,,,,,,57.3,-8.5,0.0785,0,O14,52,2024-03-20,PWHL,2023/2024,Regular Season
+59,6:33,Penalty,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,9,Sophie Shirley,,,,,,,,,,,,,,,,0,,52,2024-03-20,PWHL,2023/2024,Regular Season
+60,6:48,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,20,Sarah Nurse,,,,,30,Emma Söderberg,,,,,,,55.0,-7.4,,0,O21,52,2024-03-20,PWHL,2023/2024,Regular Season
+61,6:59,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,34,Hannah Miller,,,,,30,Emma Söderberg,,,,,,,54.0,-23.8,,0,O19,52,2024-03-20,PWHL,2023/2024,Regular Season
+62,7:05,Goal,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v4,24,Natalie Spooner,20,Sarah Nurse,,,30,Emma Söderberg,,14 20 24 34 40,Renata Fast - Sarah Nurse - Natalie Spooner - Hannah Miller - Blayre Turnbull,,2 17 20 22,Emily Brown - Taylor Girard - Hannah Brandt - Jessica DiGirolamo,62.0,2.0,0.1581,0,O15,52,2024-03-20,PWHL,2023/2024,Regular Season
+63,7:41,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,7,Sidney Morin,,,,,37,Erica Howe,,,,,,,39.0,15.6,0.0450,-1,O25,52,2024-03-20,PWHL,2023/2024,Regular Season
+64,8:52,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,24,Natalie Spooner,,,,,30,Emma Söderberg,,,,,,,84.3,-7.6,0.0782,1,O06,52,2024-03-20,PWHL,2023/2024,Regular Season
+65,10:39,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,5,Megan Keller,,,,,37,Erica Howe,,,,,,,38.0,-2.8,0.0450,-1,O25,52,2024-03-20,PWHL,2023/2024,Regular Season
+66,10:40,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,21,Hilary Knight,,,,,37,Erica Howe,,,,,,,78.0,-2.5,0.1328,-1,O11,52,2024-03-20,PWHL,2023/2024,Regular Season
+67,11:30,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,14,Renata Fast,,,,,30,Emma Söderberg,,,,,,,39.0,12.2,0.0500,1,O25,52,2024-03-20,PWHL,2023/2024,Regular Season
+68,12:23,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,47,Jamie Lee Rattray,,,,,37,Erica Howe,,,,,,,73.7,-11.9,0.0705,-1,O06,52,2024-03-20,PWHL,2023/2024,Regular Season
+69,12:53,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,8,Lexie Adzija,,,,,37,Erica Howe,,,,,,,69.0,6.2,,-1,O16,52,2024-03-20,PWHL,2023/2024,Regular Season
+70,12:56,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,97,Jess Healey,,,,,37,Erica Howe,,,,,,,64.0,-26.1,0.0398,-1,O13,52,2024-03-20,PWHL,2023/2024,Regular Season
+71,13:04,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,7,Sidney Morin,,,,,37,Erica Howe,,,,,,,39.7,21.2,,-1,O26,52,2024-03-20,PWHL,2023/2024,Regular Season
+72,14:39,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,9,Sophie Shirley,,,,,37,Erica Howe,,,,,,,83.7,-10.5,0.0705,-1,O06,52,2024-03-20,PWHL,2023/2024,Regular Season
+73,14:45,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,27,Emma Maltais,,,,,30,Emma Söderberg,,,,,,,72.7,-8.8,0.0929,1,O14,52,2024-03-20,PWHL,2023/2024,Regular Season
+74,14:55,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,20,Sarah Nurse,,,,,30,Emma Söderberg,,,,,,,66.0,-36.0,0.0166,1,O12,52,2024-03-20,PWHL,2023/2024,Regular Season
+75,15:19,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,18,Jesse Compher,,,,,30,Emma Söderberg,,,,,,,53.0,18.1,0.0461,1,O22,52,2024-03-20,PWHL,2023/2024,Regular Season
+76,15:25,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,40,Blayre Turnbull,,,,,30,Emma Söderberg,,,,,,,77.0,0.8,0.1463,1,O11,52,2024-03-20,PWHL,2023/2024,Regular Season
+77,15:39,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,14,Renata Fast,,,,,30,Emma Söderberg,,,,,,,31.3,32.0,0.0309,1,O26,52,2024-03-20,PWHL,2023/2024,Regular Season
+78,18:01,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,21,Hilary Knight,,,,,37,Erica Howe,,,,,,,69.0,-12.5,0.0838,-1,O14,52,2024-03-20,PWHL,2023/2024,Regular Season
+79,19:55,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,88,Susanna Tapani,,,,,37,Erica Howe,,,,,,,65.0,-6.0,,-1,O14,52,2024-03-20,PWHL,2023/2024,Regular Season
+80,19:56,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,11,Alina Müller,,,,,37,Erica Howe,,,,,,,63.7,-8.2,0.0838,-1,O14,52,2024-03-20,PWHL,2023/2024,Regular Season

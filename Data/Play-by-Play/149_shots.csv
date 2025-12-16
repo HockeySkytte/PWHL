@@ -1,92 +1,92 @@
-id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
-1,0:29,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v5,3,Brooke McQuigge,,,,,20,Elaine Chuli,,,,,,,52.0,-16.1,149,2025-02-18,PWHL,2024/2025,Regular Season
-2,1:03,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,5v5,5,Anna Wilgren,,,,,35,Maddie Rooney,,,,,,,-35.3,34.0,149,2025-02-18,PWHL,2024/2025,Regular Season
-3,1:37,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,5v5,42,Claire Dalton,,,,,35,Maddie Rooney,,,,,,,-51.7,9.9,149,2025-02-18,PWHL,2024/2025,Regular Season
-4,1:52,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,5v5,21,Maureen Murphy,,,,,35,Maddie Rooney,,,,,,,-70.0,-17.8,149,2025-02-18,PWHL,2024/2025,Regular Season
-5,2:57,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v5,21,Liz Schepers,,,,,20,Elaine Chuli,,,,,,,39.7,28.6,149,2025-02-18,PWHL,2024/2025,Regular Season
-6,3:56,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v5,86,Michela Cava,,,,,20,Elaine Chuli,,,,,,,74.7,30.3,149,2025-02-18,PWHL,2024/2025,Regular Season
-7,4:48,Penalty,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v5,26,Kendall Coyne Schofield,,,,,,,,,,,,,,,149,2025-02-18,PWHL,2024/2025,Regular Season
-8,4:55,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,5v4,12,Jenn Gardiner,,,,,35,Maddie Rooney,,,,,,,-27.0,-6.5,149,2025-02-18,PWHL,2024/2025,Regular Season
-9,5:15,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,5v4,12,Jenn Gardiner,,,,,35,Maddie Rooney,,,,,,,-46.0,-18.1,149,2025-02-18,PWHL,2024/2025,Regular Season
-10,6:41,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,5v4,7,Laura Stacey,,,,,35,Maddie Rooney,,,,,,,-80.7,19.8,149,2025-02-18,PWHL,2024/2025,Regular Season
-11,7:14,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,5v5,17,Dara Greig,,,,,35,Maddie Rooney,,,,,,,-54.3,21.8,149,2025-02-18,PWHL,2024/2025,Regular Season
-12,7:27,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,5v5,7,Laura Stacey,,,,,35,Maddie Rooney,,,,,,,-49.7,19.3,149,2025-02-18,PWHL,2024/2025,Regular Season
-13,8:02,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v5,19,Maggie Flaherty,,,,,20,Elaine Chuli,,,,,,,39.3,34.9,149,2025-02-18,PWHL,2024/2025,Regular Season
-14,9:27,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,5v5,5,Anna Wilgren,,,,,35,Maddie Rooney,,,,,,,-71.0,40.2,149,2025-02-18,PWHL,2024/2025,Regular Season
-15,10:23,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v5,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,31.7,38.5,149,2025-02-18,PWHL,2024/2025,Regular Season
-16,11:07,Penalty,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,5v5,17,Dara Greig,,,,,,,,,,,,,,,149,2025-02-18,PWHL,2024/2025,Regular Season
-17,11:33,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v4,42,Claire Thompson,,,,,20,Elaine Chuli,,,,,,,32.0,-16.1,149,2025-02-18,PWHL,2024/2025,Regular Season
-18,11:52,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v4,26,Kendall Coyne Schofield,,,,,20,Elaine Chuli,,,,,,,75.3,10.8,149,2025-02-18,PWHL,2024/2025,Regular Season
-19,12:18,Penalty,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v4,12,Kelly Pannek,,,,,,,,,,,,,,,149,2025-02-18,PWHL,2024/2025,Regular Season
-20,12:26,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,4v4,7,Laura Stacey,,,,,35,Maddie Rooney,,,,,,,-57.0,12.8,149,2025-02-18,PWHL,2024/2025,Regular Season
-21,12:41,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,4v4,7,Laura Stacey,,,,,35,Maddie Rooney,,,,,,,-32.7,9.9,149,2025-02-18,PWHL,2024/2025,Regular Season
-22,13:12,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,5v4,7,Laura Stacey,,,,,35,Maddie Rooney,,,,,,,-35.7,2.5,149,2025-02-18,PWHL,2024/2025,Regular Season
-23,13:47,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,5v4,43,Kristin O'Neill,,,,,35,Maddie Rooney,,,,,,,-78.0,-1.7,149,2025-02-18,PWHL,2024/2025,Regular Season
-24,14:22,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,5v5,12,Jenn Gardiner,,,,,35,Maddie Rooney,,,,,,,-39.7,30.9,149,2025-02-18,PWHL,2024/2025,Regular Season
-25,15:09,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v5,21,Liz Schepers,,,,,20,Elaine Chuli,,,,,,,76.3,7.9,149,2025-02-18,PWHL,2024/2025,Regular Season
-26,15:27,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,5v5,5,Anna Wilgren,,,,,35,Maddie Rooney,,,,,,,-31.0,30.9,149,2025-02-18,PWHL,2024/2025,Regular Season
-27,15:34,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,5v5,7,Laura Stacey,,,,,35,Maddie Rooney,,,,,,,-53.0,-7.9,149,2025-02-18,PWHL,2024/2025,Regular Season
-28,16:42,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v5,13,Grace Zumwinkle,,,,,20,Elaine Chuli,,,,,,,78.3,3.4,149,2025-02-18,PWHL,2024/2025,Regular Season
-29,18:16,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v5,42,Claire Thompson,,,,,20,Elaine Chuli,,,,,,,28.3,29.7,149,2025-02-18,PWHL,2024/2025,Regular Season
-30,18:43,Goal,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v5,21,Liz Schepers,42,Claire Thompson,7,Claire Butorac,20,Elaine Chuli,,5 9 13 18 42,Anna Wilgren - Kati Tabin - Alexandra Labelle - Mikyla Grant-Mentis - Claire Dalton,,7 9 21 26 42,Claire Butorac - Mae Batherson - Liz Schepers - Kendall Coyne Schofield - Claire Thompson,70.7,3.7,149,2025-02-18,PWHL,2024/2025,Regular Season
-31,19:45,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v5,2,Lee Stecklein,,,,,20,Elaine Chuli,,,,,,,28.7,-21.0,149,2025-02-18,PWHL,2024/2025,Regular Season
-32,0:28,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,5v5,7,Laura Stacey,,,,,35,Maddie Rooney,,,,,,,-78.3,19.6,149,2025-02-18,PWHL,2024/2025,Regular Season
-33,0:44,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,12,Kelly Pannek,,,,,20,Elaine Chuli,,,,,,,79.7,-3.1,149,2025-02-18,PWHL,2024/2025,Regular Season
-34,1:20,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,86,Michela Cava,,,,,20,Elaine Chuli,,,,,,,86.3,30.6,149,2025-02-18,PWHL,2024/2025,Regular Season
-35,1:51,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,5v5,23,Erin Ambrose,,,,,35,Maddie Rooney,,,,,,,-31.0,-28.6,149,2025-02-18,PWHL,2024/2025,Regular Season
-36,2:01,Penalty,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,5v5,9,Kati Tabin,,,,,,,,,,,,,,,149,2025-02-18,PWHL,2024/2025,Regular Season
-37,3:07,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,12,Kelly Pannek,,,,,20,Elaine Chuli,,,,,,,57.0,-17.3,149,2025-02-18,PWHL,2024/2025,Regular Season
-38,4:27,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,14,Dominique Petrie,,,,,20,Elaine Chuli,,,,,,,53.0,34.0,149,2025-02-18,PWHL,2024/2025,Regular Season
-39,5:31,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,12,Kelly Pannek,,,,,20,Elaine Chuli,,,,,,,68.3,9.6,149,2025-02-18,PWHL,2024/2025,Regular Season
-40,6:04,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,5v5,3,Cayla Barnes,,,,,35,Maddie Rooney,,,,,,,-61.0,-1.4,149,2025-02-18,PWHL,2024/2025,Regular Season
-41,7:20,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,5v5,21,Maureen Murphy,,,,,35,Maddie Rooney,,,,,,,-67.0,-25.5,149,2025-02-18,PWHL,2024/2025,Regular Season
-42,8:25,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,5v5,12,Jenn Gardiner,,,,,35,Maddie Rooney,,,,,,,-69.7,4.2,149,2025-02-18,PWHL,2024/2025,Regular Season
-43,8:44,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,5v5,12,Jenn Gardiner,,,,,35,Maddie Rooney,,,,,,,-56.0,-4.0,149,2025-02-18,PWHL,2024/2025,Regular Season
-44,10:35,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,86,Michela Cava,,,,,20,Elaine Chuli,,,,,,,80.0,22.4,149,2025-02-18,PWHL,2024/2025,Regular Season
-45,10:43,Goal,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,26,Kendall Coyne Schofield,16,Sophie Jaques,2,Lee Stecklein,20,Elaine Chuli,,2 8 21 23 26,Mariah Keopple - Gabrielle David - Maureen Murphy - Erin Ambrose - Clair DeGeorge,,2 16 26 27 86,Lee Stecklein - Sophie Jaques - Kendall Coyne Schofield - Taylor Heise - Michela Cava,62.7,-4.2,149,2025-02-18,PWHL,2024/2025,Regular Season
-46,12:25,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,4v4,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,28.3,23.0,149,2025-02-18,PWHL,2024/2025,Regular Season
-47,14:28,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,5v5,7,Laura Stacey,,,,,35,Maddie Rooney,,,,,,,-29.0,21.2,149,2025-02-18,PWHL,2024/2025,Regular Season
-48,14:56,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,5v5,29,Marie-Philip Poulin,,,,,35,Maddie Rooney,,,,,,,-39.7,-6.0,149,2025-02-18,PWHL,2024/2025,Regular Season
-49,15:03,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,5v5,44,Amanda Boulier,,,,,35,Maddie Rooney,,,,,,,-31.3,-23.0,149,2025-02-18,PWHL,2024/2025,Regular Season
-50,15:16,Penalty,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,5v5,24,Abby Boreen,,,,,,,,,,,,,,,149,2025-02-18,PWHL,2024/2025,Regular Season
-51,16:07,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,86,Michela Cava,,,,,20,Elaine Chuli,,,,,,,65.7,-21.2,149,2025-02-18,PWHL,2024/2025,Regular Season
-52,16:54,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v4,12,Kelly Pannek,,,,,20,Elaine Chuli,,,,,,,56.7,-21.0,149,2025-02-18,PWHL,2024/2025,Regular Season
-53,18:46,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,42,Claire Thompson,,,,,20,Elaine Chuli,,,,,,,38.7,31.4,149,2025-02-18,PWHL,2024/2025,Regular Season
-54,18:54,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,27,Taylor Heise,,,,,20,Elaine Chuli,,,,,,,45.0,21.5,149,2025-02-18,PWHL,2024/2025,Regular Season
-55,19:26,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,45.0,34.3,149,2025-02-18,PWHL,2024/2025,Regular Season
-56,19:59,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,88.0,25.2,149,2025-02-18,PWHL,2024/2025,Regular Season
-57,0:47,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,86,Michela Cava,,,,,20,Elaine Chuli,,,,,,,74.3,11.3,149,2025-02-18,PWHL,2024/2025,Regular Season
-58,0:49,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,26,Kendall Coyne Schofield,,,,,20,Elaine Chuli,,,,,,,79.0,-10.2,149,2025-02-18,PWHL,2024/2025,Regular Season
-59,1:40,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,19,Maggie Flaherty,,,,,20,Elaine Chuli,,,,,,,54.7,20.1,149,2025-02-18,PWHL,2024/2025,Regular Season
-60,1:57,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,77,Britta Curl-Salemme,,,,,20,Elaine Chuli,,,,,,,57.7,18.1,149,2025-02-18,PWHL,2024/2025,Regular Season
-61,2:23,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,41,Denisa Křížová,,,,,20,Elaine Chuli,,,,,,,45.0,-6.2,149,2025-02-18,PWHL,2024/2025,Regular Season
-62,3:00,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,5v5,8,Gabrielle David,,,,,35,Maddie Rooney,,,,,,,-62.3,-7.6,149,2025-02-18,PWHL,2024/2025,Regular Season
-63,3:25,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,5v5,23,Erin Ambrose,,,,,35,Maddie Rooney,,,,,,,-6.0,-22.4,149,2025-02-18,PWHL,2024/2025,Regular Season
-64,3:29,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,5v5,21,Maureen Murphy,,,,,35,Maddie Rooney,,,,,,,-84.3,7.6,149,2025-02-18,PWHL,2024/2025,Regular Season
-65,3:49,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,9,Mae Batherson,,,,,20,Elaine Chuli,,,,,,,33.7,-23.0,149,2025-02-18,PWHL,2024/2025,Regular Season
-66,3:58,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,12,Kelly Pannek,,,,,20,Elaine Chuli,,,,,,,79.3,1.4,149,2025-02-18,PWHL,2024/2025,Regular Season
-67,5:09,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,14,Dominique Petrie,,,,,20,Elaine Chuli,,,,,,,57.3,-20.7,149,2025-02-18,PWHL,2024/2025,Regular Season
-68,6:27,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,4v5,7,Claire Butorac,,,,,20,Elaine Chuli,,,,,,,70.0,13.9,149,2025-02-18,PWHL,2024/2025,Regular Season
-69,7:05,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,13,Grace Zumwinkle,,,,,20,Elaine Chuli,,,,,,,52.3,28.1,149,2025-02-18,PWHL,2024/2025,Regular Season
-70,7:21,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,2,Lee Stecklein,,,,,20,Elaine Chuli,,,,,,,29.0,-26.9,149,2025-02-18,PWHL,2024/2025,Regular Season
-71,7:34,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,65.0,24.9,149,2025-02-18,PWHL,2024/2025,Regular Season
-72,7:37,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,86,Michela Cava,,,,,20,Elaine Chuli,,,,,,,70.0,-21.2,149,2025-02-18,PWHL,2024/2025,Regular Season
-73,8:27,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,77,Britta Curl-Salemme,,,,,20,Elaine Chuli,,,,,,,42.3,6.0,149,2025-02-18,PWHL,2024/2025,Regular Season
-74,10:00,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,5v5,12,Jenn Gardiner,,,,,35,Maddie Rooney,,,,,,,-27.0,37.4,149,2025-02-18,PWHL,2024/2025,Regular Season
-75,10:09,Penalty,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,19,Maggie Flaherty,,,,,,,,,,,,,,,149,2025-02-18,PWHL,2024/2025,Regular Season
-76,11:02,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,5v4,3,Cayla Barnes,,,,,35,Maddie Rooney,,,,,,,-39.0,23.0,149,2025-02-18,PWHL,2024/2025,Regular Season
-77,11:37,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,4v5,7,Laura Stacey,,,,,35,Maddie Rooney,,,,,,,-39.7,29.5,149,2025-02-18,PWHL,2024/2025,Regular Season
-78,11:56,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v4,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,73.3,25.5,149,2025-02-18,PWHL,2024/2025,Regular Season
-79,12:31,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,4v4,5,Anna Wilgren,,,,,35,Maddie Rooney,,,,,,,-32.7,35.7,149,2025-02-18,PWHL,2024/2025,Regular Season
-80,14:16,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,5v5,23,Erin Ambrose,,,,,35,Maddie Rooney,,,,,,,-31.0,-35.1,149,2025-02-18,PWHL,2024/2025,Regular Season
-81,14:27,Goal,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,41,Denisa Křížová,14,Dominique Petrie,9,Mae Batherson,20,Elaine Chuli,,9 17 23 24 43,Kati Tabin - Dara Greig - Erin Ambrose - Abby Boreen - Kristin O'Neill,,2 14 16 41 77,Lee Stecklein - Dominique Petrie - Sophie Jaques - Denisa Křížová - Britta Curl-Salemme,69.7,-1.4,149,2025-02-18,PWHL,2024/2025,Regular Season
-82,15:07,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,7,Claire Butorac,,,,,20,Elaine Chuli,,,,,,,64.3,-15.6,149,2025-02-18,PWHL,2024/2025,Regular Season
-83,15:48,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,5v5,29,Marie-Philip Poulin,,,,,35,Maddie Rooney,,,,,,,-68.7,-15.6,149,2025-02-18,PWHL,2024/2025,Regular Season
-84,15:58,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,26,Kendall Coyne Schofield,,,,,20,Elaine Chuli,,,,,,,61.0,3.7,149,2025-02-18,PWHL,2024/2025,Regular Season
-85,16:14,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,5v5,29,Marie-Philip Poulin,,,,,35,Maddie Rooney,,,,,,,-52.0,-20.7,149,2025-02-18,PWHL,2024/2025,Regular Season
-86,16:49,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,5v5,29,Marie-Philip Poulin,,,,,35,Maddie Rooney,,,,,,,-69.0,-23.2,149,2025-02-18,PWHL,2024/2025,Regular Season
-87,17:52,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,5v5,9,Kati Tabin,,,,,35,Maddie Rooney,,,,,,,-33.0,-14.7,149,2025-02-18,PWHL,2024/2025,Regular Season
-88,18:10,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,5v5,5,Anna Wilgren,,,,,35,Maddie Rooney,,,,,,,-32.0,4.2,149,2025-02-18,PWHL,2024/2025,Regular Season
-89,18:32,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,5v5,7,Laura Stacey,,,,,35,Maddie Rooney,,,,,,,-41.0,26.9,149,2025-02-18,PWHL,2024/2025,Regular Season
-90,19:35,Goal,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,41,Denisa Křížová,19,Maggie Flaherty,77,Britta Curl-Salemme,20,Elaine Chuli,,5 9 13 17 21 42,Anna Wilgren - Kati Tabin - Alexandra Labelle - Dara Greig - Maureen Murphy - Claire Dalton,,14 19 41 42 77,Dominique Petrie - Maggie Flaherty - Denisa Křížová - Claire Thompson - Britta Curl-Salemme,-31.0,-38.2,149,2025-02-18,PWHL,2024/2025,Regular Season
-91,20:00,Penalty,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,5v5,18,Mikyla Grant-Mentis,,,,,,,,,,,,,,,149,2025-02-18,PWHL,2024/2025,Regular Season
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,xG,ScoreState,BoxID,game_id,game_date,competition,season,state
+1,0:29,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v5,3,Brooke McQuigge,,,,,20,Elaine Chuli,,,,,,,52.0,-16.1,,0,O20,149,2025-02-18,PWHL,2024/2025,Regular Season
+2,1:03,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,5v5,5,Anna Wilgren,,,,,35,Maddie Rooney,,,,,,,35.3,-34.0,,0,O24,149,2025-02-18,PWHL,2024/2025,Regular Season
+3,1:37,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,5v5,42,Claire Dalton,,,,,35,Maddie Rooney,,,,,,,51.7,-9.9,0.0573,0,O21,149,2025-02-18,PWHL,2024/2025,Regular Season
+4,1:52,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,5v5,21,Maureen Murphy,,,,,35,Maddie Rooney,,,,,,,70.0,17.8,0.0409,0,O17,149,2025-02-18,PWHL,2024/2025,Regular Season
+5,2:57,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v5,21,Liz Schepers,,,,,20,Elaine Chuli,,,,,,,39.7,28.6,,0,O26,149,2025-02-18,PWHL,2024/2025,Regular Season
+6,3:56,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v5,86,Michela Cava,,,,,20,Elaine Chuli,,,,,,,74.7,30.3,0.0296,0,O09,149,2025-02-18,PWHL,2024/2025,Regular Season
+7,4:48,Penalty,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v5,26,Kendall Coyne Schofield,,,,,,,,,,,,,,,,0,,149,2025-02-18,PWHL,2024/2025,Regular Season
+8,4:55,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,5v4,12,Jenn Gardiner,,,,,35,Maddie Rooney,,,,,,,27.0,6.5,,0,O25,149,2025-02-18,PWHL,2024/2025,Regular Season
+9,5:15,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,5v4,12,Jenn Gardiner,,,,,35,Maddie Rooney,,,,,,,46.0,18.1,,0,O22,149,2025-02-18,PWHL,2024/2025,Regular Season
+10,6:41,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,5v4,7,Laura Stacey,,,,,35,Maddie Rooney,,,,,,,80.7,-19.8,0.1024,0,O06,149,2025-02-18,PWHL,2024/2025,Regular Season
+11,7:14,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,5v5,17,Dara Greig,,,,,35,Maddie Rooney,,,,,,,54.3,-21.8,0.0318,0,O19,149,2025-02-18,PWHL,2024/2025,Regular Season
+12,7:27,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,5v5,7,Laura Stacey,,,,,35,Maddie Rooney,,,,,,,49.7,-19.3,,0,O20,149,2025-02-18,PWHL,2024/2025,Regular Season
+13,8:02,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v5,19,Maggie Flaherty,,,,,20,Elaine Chuli,,,,,,,39.3,34.9,0.0258,0,O26,149,2025-02-18,PWHL,2024/2025,Regular Season
+14,9:27,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,5v5,5,Anna Wilgren,,,,,35,Maddie Rooney,,,,,,,71.0,-40.2,0.0191,0,O04,149,2025-02-18,PWHL,2024/2025,Regular Season
+15,10:23,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v5,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,31.7,38.5,,0,O26,149,2025-02-18,PWHL,2024/2025,Regular Season
+16,11:07,Penalty,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,5v5,17,Dara Greig,,,,,,,,,,,,,,,,0,,149,2025-02-18,PWHL,2024/2025,Regular Season
+17,11:33,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v4,42,Claire Thompson,,,,,20,Elaine Chuli,,,,,,,32.0,-16.1,0.0661,0,O25,149,2025-02-18,PWHL,2024/2025,Regular Season
+18,11:52,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v4,26,Kendall Coyne Schofield,,,,,20,Elaine Chuli,,,,,,,75.3,10.8,0.1873,0,O11,149,2025-02-18,PWHL,2024/2025,Regular Season
+19,12:18,Penalty,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v4,12,Kelly Pannek,,,,,,,,,,,,,,,,0,,149,2025-02-18,PWHL,2024/2025,Regular Season
+20,12:26,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,4v4,7,Laura Stacey,,,,,35,Maddie Rooney,,,,,,,57.0,-12.8,0.0785,0,O14,149,2025-02-18,PWHL,2024/2025,Regular Season
+21,12:41,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,4v4,7,Laura Stacey,,,,,35,Maddie Rooney,,,,,,,32.7,-9.9,,0,O25,149,2025-02-18,PWHL,2024/2025,Regular Season
+22,13:12,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,5v4,7,Laura Stacey,,,,,35,Maddie Rooney,,,,,,,35.7,-2.5,0.0661,0,O25,149,2025-02-18,PWHL,2024/2025,Regular Season
+23,13:47,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,5v4,43,Kristin O'Neill,,,,,35,Maddie Rooney,,,,,,,78.0,1.7,0.1873,0,O11,149,2025-02-18,PWHL,2024/2025,Regular Season
+24,14:22,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,5v5,12,Jenn Gardiner,,,,,35,Maddie Rooney,,,,,,,39.7,-30.9,,0,O24,149,2025-02-18,PWHL,2024/2025,Regular Season
+25,15:09,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v5,21,Liz Schepers,,,,,20,Elaine Chuli,,,,,,,76.3,7.9,0.1248,0,O11,149,2025-02-18,PWHL,2024/2025,Regular Season
+26,15:27,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,5v5,5,Anna Wilgren,,,,,35,Maddie Rooney,,,,,,,31.0,-30.9,,0,O24,149,2025-02-18,PWHL,2024/2025,Regular Season
+27,15:34,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,5v5,7,Laura Stacey,,,,,35,Maddie Rooney,,,,,,,53.0,7.9,0.0573,0,O21,149,2025-02-18,PWHL,2024/2025,Regular Season
+28,16:42,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v5,13,Grace Zumwinkle,,,,,20,Elaine Chuli,,,,,,,78.3,3.4,0.1248,0,O11,149,2025-02-18,PWHL,2024/2025,Regular Season
+29,18:16,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v5,42,Claire Thompson,,,,,20,Elaine Chuli,,,,,,,28.3,29.7,,0,O26,149,2025-02-18,PWHL,2024/2025,Regular Season
+30,18:43,Goal,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v5,21,Liz Schepers,42,Claire Thompson,7,Claire Butorac,20,Elaine Chuli,,5 9 13 18 42,Anna Wilgren - Kati Tabin - Alexandra Labelle - Mikyla Grant-Mentis - Claire Dalton,,7 9 21 26 42,Claire Butorac - Mae Batherson - Liz Schepers - Kendall Coyne Schofield - Claire Thompson,70.7,3.7,0.0899,0,O16,149,2025-02-18,PWHL,2024/2025,Regular Season
+31,19:45,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v5,2,Lee Stecklein,,,,,20,Elaine Chuli,,,,,,,28.7,-21.0,,1,O25,149,2025-02-18,PWHL,2024/2025,Regular Season
+32,0:28,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,5v5,7,Laura Stacey,,,,,35,Maddie Rooney,,,,,,,78.3,-19.6,0.0705,-1,O06,149,2025-02-18,PWHL,2024/2025,Regular Season
+33,0:44,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,12,Kelly Pannek,,,,,20,Elaine Chuli,,,,,,,79.7,-3.1,0.1463,1,O11,149,2025-02-18,PWHL,2024/2025,Regular Season
+34,1:20,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,86,Michela Cava,,,,,20,Elaine Chuli,,,,,,,86.3,30.6,0.0268,1,O10,149,2025-02-18,PWHL,2024/2025,Regular Season
+35,1:51,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,5v5,23,Erin Ambrose,,,,,35,Maddie Rooney,,,,,,,31.0,28.6,,-1,O26,149,2025-02-18,PWHL,2024/2025,Regular Season
+36,2:01,Penalty,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,5v5,9,Kati Tabin,,,,,,,,,,,,,,,,-1,,149,2025-02-18,PWHL,2024/2025,Regular Season
+37,3:07,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,12,Kelly Pannek,,,,,20,Elaine Chuli,,,,,,,57.0,-17.3,,1,O14,149,2025-02-18,PWHL,2024/2025,Regular Season
+38,4:27,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,14,Dominique Petrie,,,,,20,Elaine Chuli,,,,,,,53.0,34.0,0.0182,1,O23,149,2025-02-18,PWHL,2024/2025,Regular Season
+39,5:31,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,12,Kelly Pannek,,,,,20,Elaine Chuli,,,,,,,68.3,9.6,0.1061,1,O16,149,2025-02-18,PWHL,2024/2025,Regular Season
+40,6:04,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,5v5,3,Cayla Barnes,,,,,35,Maddie Rooney,,,,,,,61.0,1.4,0.1110,-1,O15,149,2025-02-18,PWHL,2024/2025,Regular Season
+41,7:20,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,5v5,21,Maureen Murphy,,,,,35,Maddie Rooney,,,,,,,67.0,25.5,,-1,O17,149,2025-02-18,PWHL,2024/2025,Regular Season
+42,8:25,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,5v5,12,Jenn Gardiner,,,,,35,Maddie Rooney,,,,,,,69.7,-4.2,,-1,O14,149,2025-02-18,PWHL,2024/2025,Regular Season
+43,8:44,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,5v5,12,Jenn Gardiner,,,,,35,Maddie Rooney,,,,,,,56.0,4.0,,-1,O21,149,2025-02-18,PWHL,2024/2025,Regular Season
+44,10:35,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,86,Michela Cava,,,,,20,Elaine Chuli,,,,,,,80.0,22.4,0.0354,1,O09,149,2025-02-18,PWHL,2024/2025,Regular Season
+45,10:43,Goal,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,26,Kendall Coyne Schofield,16,Sophie Jaques,2,Lee Stecklein,20,Elaine Chuli,,2 8 21 23 26,Mariah Keopple - Gabrielle David - Maureen Murphy - Erin Ambrose - Clair DeGeorge,,2 16 26 27 86,Lee Stecklein - Sophie Jaques - Kendall Coyne Schofield - Taylor Heise - Michela Cava,62.7,-4.2,0.1225,1,O15,149,2025-02-18,PWHL,2024/2025,Regular Season
+46,12:25,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,4v4,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,28.3,23.0,,2,O26,149,2025-02-18,PWHL,2024/2025,Regular Season
+47,14:28,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,5v5,7,Laura Stacey,,,,,35,Maddie Rooney,,,,,,,29.0,-21.2,0.0454,-2,O25,149,2025-02-18,PWHL,2024/2025,Regular Season
+48,14:56,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,5v5,29,Marie-Philip Poulin,,,,,35,Maddie Rooney,,,,,,,39.7,6.0,,-2,O25,149,2025-02-18,PWHL,2024/2025,Regular Season
+49,15:03,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,5v5,44,Amanda Boulier,,,,,35,Maddie Rooney,,,,,,,31.3,23.0,,-2,O26,149,2025-02-18,PWHL,2024/2025,Regular Season
+50,15:16,Penalty,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,5v5,24,Abby Boreen,,,,,,,,,,,,,,,,-2,,149,2025-02-18,PWHL,2024/2025,Regular Season
+51,16:07,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,86,Michela Cava,,,,,20,Elaine Chuli,,,,,,,65.7,-21.2,,2,O13,149,2025-02-18,PWHL,2024/2025,Regular Season
+52,16:54,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v4,12,Kelly Pannek,,,,,20,Elaine Chuli,,,,,,,56.7,-21.0,0.0758,2,O19,149,2025-02-18,PWHL,2024/2025,Regular Season
+53,18:46,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,42,Claire Thompson,,,,,20,Elaine Chuli,,,,,,,38.7,31.4,0.0393,2,O26,149,2025-02-18,PWHL,2024/2025,Regular Season
+54,18:54,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,27,Taylor Heise,,,,,20,Elaine Chuli,,,,,,,45.0,21.5,0.0584,2,O22,149,2025-02-18,PWHL,2024/2025,Regular Season
+55,19:26,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,45.0,34.3,,2,O23,149,2025-02-18,PWHL,2024/2025,Regular Season
+56,19:59,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,88.0,25.2,0.0450,2,O09,149,2025-02-18,PWHL,2024/2025,Regular Season
+57,0:47,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,86,Michela Cava,,,,,20,Elaine Chuli,,,,,,,74.3,11.3,0.1803,2,O11,149,2025-02-18,PWHL,2024/2025,Regular Season
+58,0:49,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,26,Kendall Coyne Schofield,,,,,20,Elaine Chuli,,,,,,,79.0,-10.2,0.0982,2,O06,149,2025-02-18,PWHL,2024/2025,Regular Season
+59,1:40,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,19,Maggie Flaherty,,,,,20,Elaine Chuli,,,,,,,54.7,20.1,0.0584,2,O22,149,2025-02-18,PWHL,2024/2025,Regular Season
+60,1:57,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,77,Britta Curl-Salemme,,,,,20,Elaine Chuli,,,,,,,57.7,18.1,,2,O16,149,2025-02-18,PWHL,2024/2025,Regular Season
+61,2:23,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,41,Denisa Křížová,,,,,20,Elaine Chuli,,,,,,,45.0,-6.2,0.0858,2,O21,149,2025-02-18,PWHL,2024/2025,Regular Season
+62,3:00,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,5v5,8,Gabrielle David,,,,,35,Maddie Rooney,,,,,,,62.3,7.6,0.0969,-2,O16,149,2025-02-18,PWHL,2024/2025,Regular Season
+63,3:25,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,5v5,23,Erin Ambrose,,,,,35,Maddie Rooney,,,,,,,6.0,22.4,0.0597,-2,N03,149,2025-02-18,PWHL,2024/2025,Regular Season
+64,3:29,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,5v5,21,Maureen Murphy,,,,,35,Maddie Rooney,,,,,,,84.3,-7.6,0.0712,-2,O06,149,2025-02-18,PWHL,2024/2025,Regular Season
+65,3:49,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,9,Mae Batherson,,,,,20,Elaine Chuli,,,,,,,33.7,-23.0,,2,O24,149,2025-02-18,PWHL,2024/2025,Regular Season
+66,3:58,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,12,Kelly Pannek,,,,,20,Elaine Chuli,,,,,,,79.3,1.4,0.1803,2,O11,149,2025-02-18,PWHL,2024/2025,Regular Season
+67,5:09,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,14,Dominique Petrie,,,,,20,Elaine Chuli,,,,,,,57.3,-20.7,0.0561,2,O13,149,2025-02-18,PWHL,2024/2025,Regular Season
+68,6:27,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,4v5,7,Claire Butorac,,,,,20,Elaine Chuli,,,,,,,70.0,13.9,,2,O17,149,2025-02-18,PWHL,2024/2025,Regular Season
+69,7:05,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,13,Grace Zumwinkle,,,,,20,Elaine Chuli,,,,,,,52.3,28.1,0.0232,2,O23,149,2025-02-18,PWHL,2024/2025,Regular Season
+70,7:21,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,2,Lee Stecklein,,,,,20,Elaine Chuli,,,,,,,29.0,-26.9,,2,O24,149,2025-02-18,PWHL,2024/2025,Regular Season
+71,7:34,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,65.0,24.9,0.0618,2,O17,149,2025-02-18,PWHL,2024/2025,Regular Season
+72,7:37,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,86,Michela Cava,,,,,20,Elaine Chuli,,,,,,,70.0,-21.2,0.0561,2,O13,149,2025-02-18,PWHL,2024/2025,Regular Season
+73,8:27,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,77,Britta Curl-Salemme,,,,,20,Elaine Chuli,,,,,,,42.3,6.0,,2,O21,149,2025-02-18,PWHL,2024/2025,Regular Season
+74,10:00,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,5v5,12,Jenn Gardiner,,,,,35,Maddie Rooney,,,,,,,27.0,-37.4,0.0433,-2,O24,149,2025-02-18,PWHL,2024/2025,Regular Season
+75,10:09,Penalty,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,19,Maggie Flaherty,,,,,,,,,,,,,,,,2,,149,2025-02-18,PWHL,2024/2025,Regular Season
+76,11:02,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,5v4,3,Cayla Barnes,,,,,35,Maddie Rooney,,,,,,,39.0,-23.0,0.0682,-2,O24,149,2025-02-18,PWHL,2024/2025,Regular Season
+77,11:37,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,4v5,7,Laura Stacey,,,,,35,Maddie Rooney,,,,,,,39.7,-29.5,,-2,O24,149,2025-02-18,PWHL,2024/2025,Regular Season
+78,11:56,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v4,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,73.3,25.5,,2,O09,149,2025-02-18,PWHL,2024/2025,Regular Season
+79,12:31,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,4v4,5,Anna Wilgren,,,,,35,Maddie Rooney,,,,,,,32.7,-35.7,,-2,O24,149,2025-02-18,PWHL,2024/2025,Regular Season
+80,14:16,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,5v5,23,Erin Ambrose,,,,,35,Maddie Rooney,,,,,,,31.0,35.1,0.0280,-2,O26,149,2025-02-18,PWHL,2024/2025,Regular Season
+81,14:27,Goal,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,41,Denisa Křížová,14,Dominique Petrie,9,Mae Batherson,20,Elaine Chuli,,9 17 23 24 43,Kati Tabin - Dara Greig - Erin Ambrose - Abby Boreen - Kristin O'Neill,,2 14 16 41 77,Lee Stecklein - Dominique Petrie - Sophie Jaques - Denisa Křížová - Britta Curl-Salemme,69.7,-1.4,0.1520,2,O15,149,2025-02-18,PWHL,2024/2025,Regular Season
+82,15:07,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,7,Claire Butorac,,,,,20,Elaine Chuli,,,,,,,64.3,-15.6,,3,O14,149,2025-02-18,PWHL,2024/2025,Regular Season
+83,15:48,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,5v5,29,Marie-Philip Poulin,,,,,35,Maddie Rooney,,,,,,,68.7,15.6,0.0443,-3,O17,149,2025-02-18,PWHL,2024/2025,Regular Season
+84,15:58,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,26,Kendall Coyne Schofield,,,,,20,Elaine Chuli,,,,,,,61.0,3.7,,3,O15,149,2025-02-18,PWHL,2024/2025,Regular Season
+85,16:14,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,5v5,29,Marie-Philip Poulin,,,,,35,Maddie Rooney,,,,,,,52.0,20.7,0.0418,-3,O22,149,2025-02-18,PWHL,2024/2025,Regular Season
+86,16:49,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,5v5,29,Marie-Philip Poulin,,,,,35,Maddie Rooney,,,,,,,69.0,23.2,0.0443,-3,O17,149,2025-02-18,PWHL,2024/2025,Regular Season
+87,17:52,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,5v5,9,Kati Tabin,,,,,35,Maddie Rooney,,,,,,,33.0,14.7,,-3,O25,149,2025-02-18,PWHL,2024/2025,Regular Season
+88,18:10,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,5v5,5,Anna Wilgren,,,,,35,Maddie Rooney,,,,,,,32.0,-4.2,,-3,O25,149,2025-02-18,PWHL,2024/2025,Regular Season
+89,18:32,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,5v5,7,Laura Stacey,,,,,35,Maddie Rooney,,,,,,,41.0,-26.9,,-3,O20,149,2025-02-18,PWHL,2024/2025,Regular Season
+90,19:35,Goal,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,41,Denisa Křížová,19,Maggie Flaherty,77,Britta Curl-Salemme,20,Elaine Chuli,,5 9 13 17 21 42,Anna Wilgren - Kati Tabin - Alexandra Labelle - Dara Greig - Maureen Murphy - Claire Dalton,,14 19 41 42 77,Dominique Petrie - Maggie Flaherty - Denisa Křížová - Claire Thompson - Britta Curl-Salemme,-31.0,-38.2,0.0828,3,D26,149,2025-02-18,PWHL,2024/2025,Regular Season
+91,20:00,Penalty,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,5v5,18,Mikyla Grant-Mentis,,,,,,,,,,,,,,,,-4,,149,2025-02-18,PWHL,2024/2025,Regular Season

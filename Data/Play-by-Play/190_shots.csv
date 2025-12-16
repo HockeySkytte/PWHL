@@ -1,108 +1,108 @@
-id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
-1,0:51,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,1,event,5v5,21,Maureen Murphy,,,,,29,Klára Peslarová,,,,,,,-54.7,-17.0,190,2025-04-28,PWHL,2024/2025,Regular Season
-2,2:04,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,1,event,5v5,55,Daniela Pejšová,,,,,35,Ann-Renée Desbiens,,,,,,,31.0,31.2,190,2025-04-28,PWHL,2024/2025,Regular Season
-3,2:54,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,1,event,5v5,77,Susanna Tapani,,,,,35,Ann-Renée Desbiens,,,,,,,64.7,-9.3,190,2025-04-28,PWHL,2024/2025,Regular Season
-4,3:12,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,1,event,5v5,7,Sidney Morin,,,,,35,Ann-Renée Desbiens,,,,,,,77.7,29.7,190,2025-04-28,PWHL,2024/2025,Regular Season
-5,3:44,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,1,event,5v5,29,Marie-Philip Poulin,,,,,29,Klára Peslarová,,,,,,,-66.3,5.4,190,2025-04-28,PWHL,2024/2025,Regular Season
-6,4:29,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,1,event,5v5,28,Catherine Dubois,,,,,29,Klára Peslarová,,,,,,,-69.0,39.7,190,2025-04-28,PWHL,2024/2025,Regular Season
-7,4:59,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,1,event,5v5,37,Theresa Schafzahl,,,,,35,Ann-Renée Desbiens,,,,,,,79.7,12.5,190,2025-04-28,PWHL,2024/2025,Regular Season
-8,5:14,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,1,event,5v5,7,Sidney Morin,,,,,35,Ann-Renée Desbiens,,,,,,,26.0,36.0,190,2025-04-28,PWHL,2024/2025,Regular Season
-9,6:11,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,1,event,5v5,44,Jill Saulnier,,,,,35,Ann-Renée Desbiens,,,,,,,61.0,-33.1,190,2025-04-28,PWHL,2024/2025,Regular Season
-10,7:26,Penalty,Boston Fleet,Away,Montréal Victoire,Boston Fleet,1,event,5v5,25,Emma Greco,,,,,,,,,,,,,,,190,2025-04-28,PWHL,2024/2025,Regular Season
-11,8:10,Penalty,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,1,event,5v4,25,Lina Ljungblom,,,,,,,,,,,,,,,190,2025-04-28,PWHL,2024/2025,Regular Season
-12,8:14,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,1,event,4v4,55,Daniela Pejšová,,,,,35,Ann-Renée Desbiens,,,,,,,41.7,28.1,190,2025-04-28,PWHL,2024/2025,Regular Season
-13,8:26,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,1,event,4v4,55,Daniela Pejšová,,,,,35,Ann-Renée Desbiens,,,,,,,25.0,1.4,190,2025-04-28,PWHL,2024/2025,Regular Season
-14,9:15,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,1,event,4v4,15,Sydney Bard,,,,,35,Ann-Renée Desbiens,,,,,,,72.0,38.5,190,2025-04-28,PWHL,2024/2025,Regular Season
-15,9:21,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,1,event,4v4,15,Sydney Bard,,,,,35,Ann-Renée Desbiens,,,,,,,30.3,36.5,190,2025-04-28,PWHL,2024/2025,Regular Season
-16,10:54,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,1,event,5v5,3,Cayla Barnes,,,,,29,Klára Peslarová,,,,,,,-57.0,-11.6,190,2025-04-28,PWHL,2024/2025,Regular Season
-17,10:59,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,1,event,5v5,7,Laura Stacey,,,,,29,Klára Peslarová,,,,,,,-52.0,-5.7,190,2025-04-28,PWHL,2024/2025,Regular Season
-18,13:22,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,1,event,5v5,17,Dara Greig,,,,,29,Klára Peslarová,,,,,,,-43.0,14.7,190,2025-04-28,PWHL,2024/2025,Regular Season
-19,13:34,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,1,event,5v5,7,Laura Stacey,,,,,29,Klára Peslarová,,,,,,,-41.0,26.4,190,2025-04-28,PWHL,2024/2025,Regular Season
-20,15:51,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,1,event,5v5,29,Marie-Philip Poulin,,,,,29,Klára Peslarová,,,,,,,-60.0,-7.6,190,2025-04-28,PWHL,2024/2025,Regular Season
-21,16:20,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,1,event,5v5,29,Marie-Philip Poulin,,,,,29,Klára Peslarová,,,,,,,-49.3,40.5,190,2025-04-28,PWHL,2024/2025,Regular Season
-22,17:37,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,1,event,5v5,18,Mikyla Grant-Mentis,,,,,29,Klára Peslarová,,,,,,,-51.3,24.6,190,2025-04-28,PWHL,2024/2025,Regular Season
-23,18:40,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,1,event,5v5,21,Hilary Knight,,,,,35,Ann-Renée Desbiens,,,,,,,59.7,26.9,190,2025-04-28,PWHL,2024/2025,Regular Season
-24,18:48,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,1,event,5v5,5,Megan Keller,,,,,35,Ann-Renée Desbiens,,,,,,,29.0,11.9,190,2025-04-28,PWHL,2024/2025,Regular Season
-25,18:55,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,1,event,5v5,7,Laura Stacey,,,,,29,Klára Peslarová,,,,,,,-77.0,12.5,190,2025-04-28,PWHL,2024/2025,Regular Season
-26,19:14,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,1,event,5v5,19,Hannah Bilka,,,,,35,Ann-Renée Desbiens,,,,,,,55.7,0.0,190,2025-04-28,PWHL,2024/2025,Regular Season
-27,19:33,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,1,event,5v5,42,Claire Dalton,,,,,29,Klára Peslarová,,,,,,,-37.3,-34.6,190,2025-04-28,PWHL,2024/2025,Regular Season
-28,19:42,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,1,event,5v5,3,Cayla Barnes,,,,,29,Klára Peslarová,,,,,,,-27.0,7.9,190,2025-04-28,PWHL,2024/2025,Regular Season
-29,1:40,Penalty,Boston Fleet,Away,Montréal Victoire,Boston Fleet,2,event,5v5,55,Daniela Pejšová,,,,,,,,,,,,,,,190,2025-04-28,PWHL,2024/2025,Regular Season
-30,1:56,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v4,29,Marie-Philip Poulin,,,,,29,Klára Peslarová,,,,,,,-46.7,17.6,190,2025-04-28,PWHL,2024/2025,Regular Season
-31,2:23,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,3,Cayla Barnes,,,,,29,Klára Peslarová,,,,,,,-27.3,-12.8,190,2025-04-28,PWHL,2024/2025,Regular Season
-32,3:05,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v4,24,Abby Boreen,,,,,29,Klára Peslarová,,,,,,,-77.0,4.5,190,2025-04-28,PWHL,2024/2025,Regular Season
-33,4:24,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,42,Claire Dalton,,,,,29,Klára Peslarová,,,,,,,-36.3,-35.7,190,2025-04-28,PWHL,2024/2025,Regular Season
-34,4:39,Penalty,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,18,Mikyla Grant-Mentis,,,,,,,,,,,,,,,190,2025-04-28,PWHL,2024/2025,Regular Season
-35,4:56,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,2,event,5v4,36,Loren Gabel,,,,,35,Ann-Renée Desbiens,,,,,,,53.0,17.0,190,2025-04-28,PWHL,2024/2025,Regular Season
-36,5:15,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,2,event,5v4,36,Loren Gabel,,,,,35,Ann-Renée Desbiens,,,,,,,55.0,19.3,190,2025-04-28,PWHL,2024/2025,Regular Season
-37,5:20,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,2,event,5v5,5,Megan Keller,,,,,35,Ann-Renée Desbiens,,,,,,,31.0,-15.0,190,2025-04-28,PWHL,2024/2025,Regular Season
-38,5:30,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,2,event,5v5,27,Shay Maloney,,,,,35,Ann-Renée Desbiens,,,,,,,57.7,-21.2,190,2025-04-28,PWHL,2024/2025,Regular Season
-39,6:27,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,2,event,5v5,47,Jamie Lee Rattray,,,,,35,Ann-Renée Desbiens,,,,,,,80.0,16.1,190,2025-04-28,PWHL,2024/2025,Regular Season
-40,6:36,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,2,event,5v5,22,Jessica DiGirolamo,,,,,35,Ann-Renée Desbiens,,,,,,,65.3,19.3,190,2025-04-28,PWHL,2024/2025,Regular Season
-41,7:11,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,24,Abby Boreen,,,,,29,Klára Peslarová,,,,,,,-59.0,-22.4,190,2025-04-28,PWHL,2024/2025,Regular Season
-42,8:01,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v4,5,Anna Wilgren,,,,,29,Klára Peslarová,,,,,,,-27.0,33.1,190,2025-04-28,PWHL,2024/2025,Regular Season
-43,8:17,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,24,Abby Boreen,,,,,29,Klára Peslarová,,,,,,,-15.7,-29.7,190,2025-04-28,PWHL,2024/2025,Regular Season
-44,8:35,Penalty,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,14,Dominika Lásková,,,,,,,,,,,,,,,190,2025-04-28,PWHL,2024/2025,Regular Season
-45,8:45,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,2,event,4v4,7,Sidney Morin,,,,,35,Ann-Renée Desbiens,,,,,,,27.3,-4.0,190,2025-04-28,PWHL,2024/2025,Regular Season
-46,9:42,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,2,event,5v4,19,Hannah Bilka,,,,,35,Ann-Renée Desbiens,,,,,,,40.7,2.5,190,2025-04-28,PWHL,2024/2025,Regular Season
-47,9:58,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,4v5,3,Cayla Barnes,,,,,29,Klára Peslarová,,,,,,,-51.0,-14.5,190,2025-04-28,PWHL,2024/2025,Regular Season
-48,11:04,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,43,Kristin O'Neill,,,,,29,Klára Peslarová,,,,,,,-82.7,-3.7,190,2025-04-28,PWHL,2024/2025,Regular Season
-49,11:14,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,42,Claire Dalton,,,,,29,Klára Peslarová,,,,,,,-85.0,5.1,190,2025-04-28,PWHL,2024/2025,Regular Season
-50,11:37,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,28,Catherine Dubois,,,,,29,Klára Peslarová,,,,,,,-74.3,6.0,190,2025-04-28,PWHL,2024/2025,Regular Season
-51,12:15,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,12,Jenn Gardiner,,,,,29,Klára Peslarová,,,,,,,-35.0,-16.4,190,2025-04-28,PWHL,2024/2025,Regular Season
-52,12:20,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,2,Mariah Keopple,,,,,29,Klára Peslarová,,,,,,,-30.0,26.9,190,2025-04-28,PWHL,2024/2025,Regular Season
-53,13:03,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,2,event,5v5,21,Hilary Knight,,,,,35,Ann-Renée Desbiens,,,,,,,66.7,31.7,190,2025-04-28,PWHL,2024/2025,Regular Season
-54,14:22,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,2,event,5v5,47,Jamie Lee Rattray,,,,,35,Ann-Renée Desbiens,,,,,,,73.7,9.9,190,2025-04-28,PWHL,2024/2025,Regular Season
-55,15:09,Penalty,Boston Fleet,Away,Montréal Victoire,Boston Fleet,2,event,5v5,5,Megan Keller,,,,,,,,,,,,,,,190,2025-04-28,PWHL,2024/2025,Regular Season
-56,15:23,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,12,Jenn Gardiner,,,,,29,Klára Peslarová,,,,,,,-47.3,-27.5,190,2025-04-28,PWHL,2024/2025,Regular Season
-57,16:44,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v4,44,Amanda Boulier,,,,,29,Klára Peslarová,,,,,,,-43.0,13.3,190,2025-04-28,PWHL,2024/2025,Regular Season
-58,16:46,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v4,28,Catherine Dubois,,,,,29,Klára Peslarová,,,,,,,-71.0,0.3,190,2025-04-28,PWHL,2024/2025,Regular Season
-59,16:47,Goal,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v4,12,Jenn Gardiner,24,Abby Boreen,28,Catherine Dubois,29,Klára Peslarová,,3 12 24 28 44,Cayla Barnes - Jenn Gardiner - Abby Boreen - Catherine Dubois - Amanda Boulier,,2 20 22 44,Emily Brown - Hannah Brandt - Jessica DiGirolamo - Jill Saulnier,-83.3,-11.3,190,2025-04-28,PWHL,2024/2025,Regular Season
-60,17:40,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,2,event,5v5,5,Megan Keller,,,,,35,Ann-Renée Desbiens,,,,,,,28.7,-20.4,190,2025-04-28,PWHL,2024/2025,Regular Season
-61,17:55,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,18,Mikyla Grant-Mentis,,,,,29,Klára Peslarová,,,,,,,-71.7,-1.4,190,2025-04-28,PWHL,2024/2025,Regular Season
-62,18:11,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,2,event,5v5,88,Lexie Adzija,,,,,35,Ann-Renée Desbiens,,,,,,,42.3,-4.0,190,2025-04-28,PWHL,2024/2025,Regular Season
-63,18:14,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,2,event,5v5,88,Lexie Adzija,,,,,35,Ann-Renée Desbiens,,,,,,,60.3,-3.1,190,2025-04-28,PWHL,2024/2025,Regular Season
-64,19:08,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,44,Amanda Boulier,,,,,29,Klára Peslarová,,,,,,,-31.7,-26.4,190,2025-04-28,PWHL,2024/2025,Regular Season
-65,19:26,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,3,Cayla Barnes,,,,,29,Klára Peslarová,,,,,,,-29.0,7.1,190,2025-04-28,PWHL,2024/2025,Regular Season
-66,19:53,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,21,Maureen Murphy,,,,,29,Klára Peslarová,,,,,,,-72.7,-29.7,190,2025-04-28,PWHL,2024/2025,Regular Season
-67,19:54,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,21,Maureen Murphy,,,,,29,Klára Peslarová,,,,,,,-80.3,-32.0,190,2025-04-28,PWHL,2024/2025,Regular Season
-68,0:28,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v5,8,Kelly Babstock,,,,,35,Ann-Renée Desbiens,,,,,,,73.0,14.5,190,2025-04-28,PWHL,2024/2025,Regular Season
-69,0:55,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v5,77,Susanna Tapani,,,,,35,Ann-Renée Desbiens,,,,,,,47.0,-7.6,190,2025-04-28,PWHL,2024/2025,Regular Season
-70,1:14,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v5,25,Emma Greco,,,,,35,Ann-Renée Desbiens,,,,,,,32.7,30.9,190,2025-04-28,PWHL,2024/2025,Regular Season
-71,1:21,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v5,19,Hannah Bilka,,,,,35,Ann-Renée Desbiens,,,,,,,25.0,11.9,190,2025-04-28,PWHL,2024/2025,Regular Season
-72,3:21,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,3,event,5v5,25,Lina Ljungblom,,,,,29,Klára Peslarová,,,,,,,-52.3,24.6,190,2025-04-28,PWHL,2024/2025,Regular Season
-73,3:21,Penalty,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v5,27,Shay Maloney,,,,,,,,,,,,,,,190,2025-04-28,PWHL,2024/2025,Regular Season
-74,3:38,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,3,event,5v5,29,Marie-Philip Poulin,,,,,29,Klára Peslarová,,,,,,,-53.7,23.8,190,2025-04-28,PWHL,2024/2025,Regular Season
-75,4:16,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,3,event,5v4,3,Cayla Barnes,,,,,29,Klára Peslarová,,,,,,,-34.7,-10.2,190,2025-04-28,PWHL,2024/2025,Regular Season
-76,4:48,Goal,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,3,event,5v4,28,Catherine Dubois,21,Maureen Murphy,5,Anna Wilgren,29,Klára Peslarová,,5 21 24 28 44,Anna Wilgren - Maureen Murphy - Abby Boreen - Catherine Dubois - Amanda Boulier,,5 20 22 44,Megan Keller - Hannah Brandt - Jessica DiGirolamo - Jill Saulnier,-80.0,-3.1,190,2025-04-28,PWHL,2024/2025,Regular Season
-77,5:56,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v5,88,Lexie Adzija,,,,,35,Ann-Renée Desbiens,,,,,,,45.0,28.1,190,2025-04-28,PWHL,2024/2025,Regular Season
-78,7:14,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v5,36,Loren Gabel,,,,,35,Ann-Renée Desbiens,,,,,,,35.0,23.2,190,2025-04-28,PWHL,2024/2025,Regular Season
-79,8:00,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,3,event,5v5,7,Laura Stacey,,,,,29,Klára Peslarová,,,,,,,-83.3,-9.3,190,2025-04-28,PWHL,2024/2025,Regular Season
-80,9:49,Penalty,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,3,event,5v5,28,Catherine Dubois,,,,,,,,,,,,,,,190,2025-04-28,PWHL,2024/2025,Regular Season
-81,10:25,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v4,21,Hilary Knight,,,,,35,Ann-Renée Desbiens,,,,,,,73.0,-2.8,190,2025-04-28,PWHL,2024/2025,Regular Season
-82,10:37,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v4,19,Hannah Bilka,,,,,35,Ann-Renée Desbiens,,,,,,,81.7,29.5,190,2025-04-28,PWHL,2024/2025,Regular Season
-83,10:44,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v4,27,Shay Maloney,,,,,35,Ann-Renée Desbiens,,,,,,,84.3,-7.4,190,2025-04-28,PWHL,2024/2025,Regular Season
-84,10:46,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v4,27,Shay Maloney,,,,,35,Ann-Renée Desbiens,,,,,,,84.3,-7.4,190,2025-04-28,PWHL,2024/2025,Regular Season
-85,11:26,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v5,19,Hannah Bilka,,,,,35,Ann-Renée Desbiens,,,,,,,49.7,21.8,190,2025-04-28,PWHL,2024/2025,Regular Season
-86,12:35,Penalty,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v5,47,Jamie Lee Rattray,,,,,,,,,,,,,,,190,2025-04-28,PWHL,2024/2025,Regular Season
-87,13:12,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,3,event,5v5,29,Marie-Philip Poulin,,,,,29,Klára Peslarová,,,,,,,-62.3,15.0,190,2025-04-28,PWHL,2024/2025,Regular Season
-88,13:14,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,3,event,5v4,7,Laura Stacey,,,,,29,Klára Peslarová,,,,,,,-81.0,6.0,190,2025-04-28,PWHL,2024/2025,Regular Season
-89,14:53,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,3,event,5v5,21,Maureen Murphy,,,,,29,Klára Peslarová,,,,,,,-75.0,-3.4,190,2025-04-28,PWHL,2024/2025,Regular Season
-90,15:27,Penalty,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v5,7,Sidney Morin,,,,,,,,,,,,,,,190,2025-04-28,PWHL,2024/2025,Regular Season
-91,15:53,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,3,event,5v5,29,Marie-Philip Poulin,,,,,29,Klára Peslarová,,,,,,,-51.3,16.7,190,2025-04-28,PWHL,2024/2025,Regular Season
-92,16:27,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v5,27,Shay Maloney,,,,,35,Ann-Renée Desbiens,,,,,,,57.7,-0.3,190,2025-04-28,PWHL,2024/2025,Regular Season
-93,17:13,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,4v5,20,Hannah Brandt,,,,,35,Ann-Renée Desbiens,,,,,,,65.7,14.7,190,2025-04-28,PWHL,2024/2025,Regular Season
-94,17:14,Goal,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,4v5,20,Hannah Brandt,47,Jamie Lee Rattray,22,Jessica DiGirolamo,35,Ann-Renée Desbiens,,2 14 21 24 28,Mariah Keopple - Dominika Lásková - Maureen Murphy - Abby Boreen - Catherine Dubois,,5 20 22 47,Megan Keller - Hannah Brandt - Jessica DiGirolamo - Jamie Lee Rattray,77.3,-1.7,190,2025-04-28,PWHL,2024/2025,Regular Season
-95,17:53,Goal,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v5,19,Hannah Bilka,7,Sidney Morin,21,Hilary Knight,35,Ann-Renée Desbiens,,2 5 17 19 43,Mariah Keopple - Anna Wilgren - Dara Greig - Kaitlin Willoughby - Kristin O'Neill,,5 7 19 21 77,Megan Keller - Sidney Morin - Hannah Bilka - Hilary Knight - Susanna Tapani,69.0,11.1,190,2025-04-28,PWHL,2024/2025,Regular Season
-96,18:09,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,3,event,5v5,17,Dara Greig,,,,,29,Klára Peslarová,,,,,,,-61.3,-7.9,190,2025-04-28,PWHL,2024/2025,Regular Season
-97,18:49,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v5,47,Jamie Lee Rattray,,,,,35,Ann-Renée Desbiens,,,,,,,42.7,10.8,190,2025-04-28,PWHL,2024/2025,Regular Season
-98,19:24,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,3,event,5v5,29,Marie-Philip Poulin,,,,,29,Klára Peslarová,,,,,,,-63.0,-7.9,190,2025-04-28,PWHL,2024/2025,Regular Season
-99,19:28,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,3,event,5v5,12,Jenn Gardiner,,,,,29,Klára Peslarová,,,,,,,-72.0,0.8,190,2025-04-28,PWHL,2024/2025,Regular Season
-100,19:35,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,3,event,5v5,29,Marie-Philip Poulin,,,,,29,Klára Peslarová,,,,,,,-72.0,0.8,190,2025-04-28,PWHL,2024/2025,Regular Season
-101,0:58,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,OT1,event,5v5,13,Alexandra Labelle,,,,,29,Klára Peslarová,,,,,,,-64.3,-16.1,190,2025-04-28,PWHL,2024/2025,Regular Season
-102,1:25,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,OT1,event,3v3,21,Hilary Knight,,,,,35,Ann-Renée Desbiens,,,,,,,71.0,-11.1,190,2025-04-28,PWHL,2024/2025,Regular Season
-103,2:22,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,OT1,event,3v3,5,Megan Keller,,,,,35,Ann-Renée Desbiens,,,,,,,58.3,12.2,190,2025-04-28,PWHL,2024/2025,Regular Season
-104,3:40,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,OT1,event,5v5,5,Anna Wilgren,,,,,29,Klára Peslarová,,,,,,,-61.3,-17.8,190,2025-04-28,PWHL,2024/2025,Regular Season
-105,3:49,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,OT1,event,3v3,29,Marie-Philip Poulin,,,,,29,Klára Peslarová,,,,,,,-41.3,21.8,190,2025-04-28,PWHL,2024/2025,Regular Season
-106,4:11,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,OT1,event,3v3,29,Marie-Philip Poulin,,,,,29,Klára Peslarová,,,,,,,-58.3,-24.6,190,2025-04-28,PWHL,2024/2025,Regular Season
-107,4:17,Goal,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,OT1,event,3v3,7,Laura Stacey,29,Marie-Philip Poulin,,,29,Klára Peslarová,,3 7 29,Cayla Barnes - Laura Stacey - Marie-Philip Poulin,,5 21 77,Megan Keller - Hilary Knight - Susanna Tapani,-59.0,3.4,190,2025-04-28,PWHL,2024/2025,Regular Season
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,xG,ScoreState,BoxID,game_id,game_date,competition,season,state
+1,0:51,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,1,event,5v5,21,Maureen Murphy,,,,,29,Klára Peslarová,,,,,,,54.7,17.0,,0,O22,190,2025-04-28,PWHL,2024/2025,Regular Season
+2,2:04,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,1,event,5v5,55,Daniela Pejšová,,,,,35,Ann-Renée Desbiens,,,,,,,31.0,31.2,0.0258,0,O26,190,2025-04-28,PWHL,2024/2025,Regular Season
+3,2:54,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,1,event,5v5,77,Susanna Tapani,,,,,35,Ann-Renée Desbiens,,,,,,,64.7,-9.3,,0,O14,190,2025-04-28,PWHL,2024/2025,Regular Season
+4,3:12,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,1,event,5v5,7,Sidney Morin,,,,,35,Ann-Renée Desbiens,,,,,,,77.7,29.7,0.0296,0,O09,190,2025-04-28,PWHL,2024/2025,Regular Season
+5,3:44,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,1,event,5v5,29,Marie-Philip Poulin,,,,,29,Klára Peslarová,,,,,,,66.3,-5.4,0.0785,0,O14,190,2025-04-28,PWHL,2024/2025,Regular Season
+6,4:29,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,1,event,5v5,28,Catherine Dubois,,,,,29,Klára Peslarová,,,,,,,69.0,-39.7,,0,O04,190,2025-04-28,PWHL,2024/2025,Regular Season
+7,4:59,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,1,event,5v5,37,Theresa Schafzahl,,,,,35,Ann-Renée Desbiens,,,,,,,79.7,12.5,0.0709,0,O08,190,2025-04-28,PWHL,2024/2025,Regular Season
+8,5:14,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,1,event,5v5,7,Sidney Morin,,,,,35,Ann-Renée Desbiens,,,,,,,26.0,36.0,,0,O26,190,2025-04-28,PWHL,2024/2025,Regular Season
+9,6:11,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,1,event,5v5,44,Jill Saulnier,,,,,35,Ann-Renée Desbiens,,,,,,,61.0,-33.1,0.0138,0,O12,190,2025-04-28,PWHL,2024/2025,Regular Season
+10,7:26,Penalty,Boston Fleet,Away,Montréal Victoire,Boston Fleet,1,event,5v5,25,Emma Greco,,,,,,,,,,,,,,,,0,,190,2025-04-28,PWHL,2024/2025,Regular Season
+11,8:10,Penalty,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,1,event,5v4,25,Lina Ljungblom,,,,,,,,,,,,,,,,0,,190,2025-04-28,PWHL,2024/2025,Regular Season
+12,8:14,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,1,event,4v4,55,Daniela Pejšová,,,,,35,Ann-Renée Desbiens,,,,,,,41.7,28.1,,0,O23,190,2025-04-28,PWHL,2024/2025,Regular Season
+13,8:26,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,1,event,4v4,55,Daniela Pejšová,,,,,35,Ann-Renée Desbiens,,,,,,,25.0,1.4,,0,O25,190,2025-04-28,PWHL,2024/2025,Regular Season
+14,9:15,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,1,event,4v4,15,Sydney Bard,,,,,35,Ann-Renée Desbiens,,,,,,,72.0,38.5,0.0224,0,O10,190,2025-04-28,PWHL,2024/2025,Regular Season
+15,9:21,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,1,event,4v4,15,Sydney Bard,,,,,35,Ann-Renée Desbiens,,,,,,,30.3,36.5,0.0258,0,O26,190,2025-04-28,PWHL,2024/2025,Regular Season
+16,10:54,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,1,event,5v5,3,Cayla Barnes,,,,,29,Klára Peslarová,,,,,,,57.0,11.6,0.0899,0,O16,190,2025-04-28,PWHL,2024/2025,Regular Season
+17,10:59,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,1,event,5v5,7,Laura Stacey,,,,,29,Klára Peslarová,,,,,,,52.0,5.7,,0,O21,190,2025-04-28,PWHL,2024/2025,Regular Season
+18,13:22,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,1,event,5v5,17,Dara Greig,,,,,29,Klára Peslarová,,,,,,,43.0,-14.7,,0,O21,190,2025-04-28,PWHL,2024/2025,Regular Season
+19,13:34,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,1,event,5v5,7,Laura Stacey,,,,,29,Klára Peslarová,,,,,,,41.0,-26.4,0.0458,0,O20,190,2025-04-28,PWHL,2024/2025,Regular Season
+20,15:51,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,1,event,5v5,29,Marie-Philip Poulin,,,,,29,Klára Peslarová,,,,,,,60.0,7.6,,0,O16,190,2025-04-28,PWHL,2024/2025,Regular Season
+21,16:20,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,1,event,5v5,29,Marie-Philip Poulin,,,,,29,Klára Peslarová,,,,,,,49.3,-40.5,0.0318,0,O19,190,2025-04-28,PWHL,2024/2025,Regular Season
+22,17:37,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,1,event,5v5,18,Mikyla Grant-Mentis,,,,,29,Klára Peslarová,,,,,,,51.3,-24.6,,0,O19,190,2025-04-28,PWHL,2024/2025,Regular Season
+23,18:40,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,1,event,5v5,21,Hilary Knight,,,,,35,Ann-Renée Desbiens,,,,,,,59.7,26.9,0.0409,0,O17,190,2025-04-28,PWHL,2024/2025,Regular Season
+24,18:48,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,1,event,5v5,5,Megan Keller,,,,,35,Ann-Renée Desbiens,,,,,,,29.0,11.9,,0,O25,190,2025-04-28,PWHL,2024/2025,Regular Season
+25,18:55,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,1,event,5v5,7,Laura Stacey,,,,,29,Klára Peslarová,,,,,,,77.0,-12.5,0.0659,0,O06,190,2025-04-28,PWHL,2024/2025,Regular Season
+26,19:14,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,1,event,5v5,19,Hannah Bilka,,,,,35,Ann-Renée Desbiens,,,,,,,55.7,0.0,0.0573,0,O21,190,2025-04-28,PWHL,2024/2025,Regular Season
+27,19:33,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,1,event,5v5,42,Claire Dalton,,,,,29,Klára Peslarová,,,,,,,37.3,34.6,0.0258,0,O26,190,2025-04-28,PWHL,2024/2025,Regular Season
+28,19:42,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,1,event,5v5,3,Cayla Barnes,,,,,29,Klára Peslarová,,,,,,,27.0,-7.9,0.0420,0,O25,190,2025-04-28,PWHL,2024/2025,Regular Season
+29,1:40,Penalty,Boston Fleet,Away,Montréal Victoire,Boston Fleet,2,event,5v5,55,Daniela Pejšová,,,,,,,,,,,,,,,,0,,190,2025-04-28,PWHL,2024/2025,Regular Season
+30,1:56,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v4,29,Marie-Philip Poulin,,,,,29,Klára Peslarová,,,,,,,46.7,-17.6,0.0721,0,O20,190,2025-04-28,PWHL,2024/2025,Regular Season
+31,2:23,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,3,Cayla Barnes,,,,,29,Klára Peslarová,,,,,,,27.3,12.8,,0,O25,190,2025-04-28,PWHL,2024/2025,Regular Season
+32,3:05,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v4,24,Abby Boreen,,,,,29,Klára Peslarová,,,,,,,77.0,-4.5,0.1873,0,O11,190,2025-04-28,PWHL,2024/2025,Regular Season
+33,4:24,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,42,Claire Dalton,,,,,29,Klára Peslarová,,,,,,,36.3,35.7,0.0258,0,O26,190,2025-04-28,PWHL,2024/2025,Regular Season
+34,4:39,Penalty,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,18,Mikyla Grant-Mentis,,,,,,,,,,,,,,,,0,,190,2025-04-28,PWHL,2024/2025,Regular Season
+35,4:56,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,2,event,5v4,36,Loren Gabel,,,,,35,Ann-Renée Desbiens,,,,,,,53.0,17.0,0.0610,0,O22,190,2025-04-28,PWHL,2024/2025,Regular Season
+36,5:15,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,2,event,5v4,36,Loren Gabel,,,,,35,Ann-Renée Desbiens,,,,,,,55.0,19.3,0.0610,0,O22,190,2025-04-28,PWHL,2024/2025,Regular Season
+37,5:20,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,2,event,5v5,5,Megan Keller,,,,,35,Ann-Renée Desbiens,,,,,,,31.0,-15.0,,0,O25,190,2025-04-28,PWHL,2024/2025,Regular Season
+38,5:30,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,2,event,5v5,27,Shay Maloney,,,,,35,Ann-Renée Desbiens,,,,,,,57.7,-21.2,,0,O13,190,2025-04-28,PWHL,2024/2025,Regular Season
+39,6:27,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,2,event,5v5,47,Jamie Lee Rattray,,,,,35,Ann-Renée Desbiens,,,,,,,80.0,16.1,,0,O08,190,2025-04-28,PWHL,2024/2025,Regular Season
+40,6:36,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,2,event,5v5,22,Jessica DiGirolamo,,,,,35,Ann-Renée Desbiens,,,,,,,65.3,19.3,,0,O17,190,2025-04-28,PWHL,2024/2025,Regular Season
+41,7:11,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,24,Abby Boreen,,,,,29,Klára Peslarová,,,,,,,59.0,22.4,,0,O17,190,2025-04-28,PWHL,2024/2025,Regular Season
+42,8:01,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v4,5,Anna Wilgren,,,,,29,Klára Peslarová,,,,,,,27.0,-33.1,,0,O24,190,2025-04-28,PWHL,2024/2025,Regular Season
+43,8:17,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,24,Abby Boreen,,,,,29,Klára Peslarová,,,,,,,15.7,29.7,0.0553,0,N03,190,2025-04-28,PWHL,2024/2025,Regular Season
+44,8:35,Penalty,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,14,Dominika Lásková,,,,,,,,,,,,,,,,0,,190,2025-04-28,PWHL,2024/2025,Regular Season
+45,8:45,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,2,event,4v4,7,Sidney Morin,,,,,35,Ann-Renée Desbiens,,,,,,,27.3,-4.0,,0,O25,190,2025-04-28,PWHL,2024/2025,Regular Season
+46,9:42,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,2,event,5v4,19,Hannah Bilka,,,,,35,Ann-Renée Desbiens,,,,,,,40.7,2.5,0.0661,0,O25,190,2025-04-28,PWHL,2024/2025,Regular Season
+47,9:58,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,4v5,3,Cayla Barnes,,,,,29,Klára Peslarová,,,,,,,51.0,14.5,0.0661,0,O22,190,2025-04-28,PWHL,2024/2025,Regular Season
+48,11:04,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,43,Kristin O'Neill,,,,,29,Klára Peslarová,,,,,,,82.7,3.7,0.1248,0,O11,190,2025-04-28,PWHL,2024/2025,Regular Season
+49,11:14,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,42,Claire Dalton,,,,,29,Klára Peslarová,,,,,,,85.0,-5.1,0.2112,0,O07,190,2025-04-28,PWHL,2024/2025,Regular Season
+50,11:37,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,28,Catherine Dubois,,,,,29,Klára Peslarová,,,,,,,74.3,-6.0,0.1248,0,O11,190,2025-04-28,PWHL,2024/2025,Regular Season
+51,12:15,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,12,Jenn Gardiner,,,,,29,Klára Peslarová,,,,,,,35.0,16.4,0.0420,0,O25,190,2025-04-28,PWHL,2024/2025,Regular Season
+52,12:20,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,2,Mariah Keopple,,,,,29,Klára Peslarová,,,,,,,30.0,-26.9,0.0400,0,O24,190,2025-04-28,PWHL,2024/2025,Regular Season
+53,13:03,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,2,event,5v5,21,Hilary Knight,,,,,35,Ann-Renée Desbiens,,,,,,,66.7,31.7,0.0150,0,O18,190,2025-04-28,PWHL,2024/2025,Regular Season
+54,14:22,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,2,event,5v5,47,Jamie Lee Rattray,,,,,35,Ann-Renée Desbiens,,,,,,,73.7,9.9,0.1248,0,O11,190,2025-04-28,PWHL,2024/2025,Regular Season
+55,15:09,Penalty,Boston Fleet,Away,Montréal Victoire,Boston Fleet,2,event,5v5,5,Megan Keller,,,,,,,,,,,,,,,,0,,190,2025-04-28,PWHL,2024/2025,Regular Season
+56,15:23,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,12,Jenn Gardiner,,,,,29,Klára Peslarová,,,,,,,47.3,27.5,,0,O23,190,2025-04-28,PWHL,2024/2025,Regular Season
+57,16:44,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v4,44,Amanda Boulier,,,,,29,Klára Peslarová,,,,,,,43.0,-13.3,0.0895,0,O21,190,2025-04-28,PWHL,2024/2025,Regular Season
+58,16:46,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v4,28,Catherine Dubois,,,,,29,Klára Peslarová,,,,,,,71.0,-0.3,0.1581,0,O15,190,2025-04-28,PWHL,2024/2025,Regular Season
+59,16:47,Goal,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v4,12,Jenn Gardiner,24,Abby Boreen,28,Catherine Dubois,29,Klára Peslarová,,3 12 24 28 44,Cayla Barnes - Jenn Gardiner - Abby Boreen - Catherine Dubois - Amanda Boulier,,2 20 22 44,Emily Brown - Hannah Brandt - Jessica DiGirolamo - Jill Saulnier,83.3,11.3,0.1099,0,O08,190,2025-04-28,PWHL,2024/2025,Regular Season
+60,17:40,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,2,event,5v5,5,Megan Keller,,,,,35,Ann-Renée Desbiens,,,,,,,28.7,-20.4,0.0450,-1,O25,190,2025-04-28,PWHL,2024/2025,Regular Season
+61,17:55,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,18,Mikyla Grant-Mentis,,,,,29,Klára Peslarová,,,,,,,71.7,1.4,0.1061,1,O16,190,2025-04-28,PWHL,2024/2025,Regular Season
+62,18:11,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,2,event,5v5,88,Lexie Adzija,,,,,35,Ann-Renée Desbiens,,,,,,,42.3,-4.0,0.0614,-1,O21,190,2025-04-28,PWHL,2024/2025,Regular Season
+63,18:14,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,2,event,5v5,88,Lexie Adzija,,,,,35,Ann-Renée Desbiens,,,,,,,60.3,-3.1,0.1110,-1,O15,190,2025-04-28,PWHL,2024/2025,Regular Season
+64,19:08,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,44,Amanda Boulier,,,,,29,Klára Peslarová,,,,,,,31.7,26.4,,1,O26,190,2025-04-28,PWHL,2024/2025,Regular Season
+65,19:26,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,3,Cayla Barnes,,,,,29,Klára Peslarová,,,,,,,29.0,-7.1,0.0500,1,O25,190,2025-04-28,PWHL,2024/2025,Regular Season
+66,19:53,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,21,Maureen Murphy,,,,,29,Klára Peslarová,,,,,,,72.7,29.7,,1,O18,190,2025-04-28,PWHL,2024/2025,Regular Season
+67,19:54,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,2,event,5v5,21,Maureen Murphy,,,,,29,Klára Peslarová,,,,,,,80.3,32.0,0.0354,1,O09,190,2025-04-28,PWHL,2024/2025,Regular Season
+68,0:28,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v5,8,Kelly Babstock,,,,,35,Ann-Renée Desbiens,,,,,,,73.0,14.5,0.0758,-1,O08,190,2025-04-28,PWHL,2024/2025,Regular Season
+69,0:55,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v5,77,Susanna Tapani,,,,,35,Ann-Renée Desbiens,,,,,,,47.0,-7.6,,-1,O21,190,2025-04-28,PWHL,2024/2025,Regular Season
+70,1:14,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v5,25,Emma Greco,,,,,35,Ann-Renée Desbiens,,,,,,,32.7,30.9,0.0277,-1,O26,190,2025-04-28,PWHL,2024/2025,Regular Season
+71,1:21,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v5,19,Hannah Bilka,,,,,35,Ann-Renée Desbiens,,,,,,,25.0,11.9,,-1,O25,190,2025-04-28,PWHL,2024/2025,Regular Season
+72,3:21,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,3,event,5v5,25,Lina Ljungblom,,,,,29,Klára Peslarová,,,,,,,52.3,-24.6,0.0380,1,O19,190,2025-04-28,PWHL,2024/2025,Regular Season
+73,3:21,Penalty,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v5,27,Shay Maloney,,,,,,,,,,,,,,,,-1,,190,2025-04-28,PWHL,2024/2025,Regular Season
+74,3:38,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,3,event,5v5,29,Marie-Philip Poulin,,,,,29,Klára Peslarová,,,,,,,53.7,-23.8,,1,O19,190,2025-04-28,PWHL,2024/2025,Regular Season
+75,4:16,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,3,event,5v4,3,Cayla Barnes,,,,,29,Klára Peslarová,,,,,,,34.7,10.2,0.0785,1,O25,190,2025-04-28,PWHL,2024/2025,Regular Season
+76,4:48,Goal,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,3,event,5v4,28,Catherine Dubois,21,Maureen Murphy,5,Anna Wilgren,29,Klára Peslarová,,5 21 24 28 44,Anna Wilgren - Maureen Murphy - Abby Boreen - Catherine Dubois - Amanda Boulier,,5 20 22 44,Megan Keller - Hannah Brandt - Jessica DiGirolamo - Jill Saulnier,80.0,3.1,0.2170,1,O11,190,2025-04-28,PWHL,2024/2025,Regular Season
+77,5:56,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v5,88,Lexie Adzija,,,,,35,Ann-Renée Desbiens,,,,,,,45.0,28.1,0.0164,-2,O23,190,2025-04-28,PWHL,2024/2025,Regular Season
+78,7:14,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v5,36,Loren Gabel,,,,,35,Ann-Renée Desbiens,,,,,,,35.0,23.2,,-2,O26,190,2025-04-28,PWHL,2024/2025,Regular Season
+79,8:00,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,3,event,5v5,7,Laura Stacey,,,,,29,Klára Peslarová,,,,,,,83.3,9.3,0.1054,2,O08,190,2025-04-28,PWHL,2024/2025,Regular Season
+80,9:49,Penalty,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,3,event,5v5,28,Catherine Dubois,,,,,,,,,,,,,,,,2,,190,2025-04-28,PWHL,2024/2025,Regular Season
+81,10:25,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v4,21,Hilary Knight,,,,,35,Ann-Renée Desbiens,,,,,,,73.0,-2.8,0.2002,-2,O11,190,2025-04-28,PWHL,2024/2025,Regular Season
+82,10:37,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v4,19,Hannah Bilka,,,,,35,Ann-Renée Desbiens,,,,,,,81.7,29.5,0.0509,-2,O09,190,2025-04-28,PWHL,2024/2025,Regular Season
+83,10:44,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v4,27,Shay Maloney,,,,,35,Ann-Renée Desbiens,,,,,,,84.3,-7.4,0.1103,-2,O06,190,2025-04-28,PWHL,2024/2025,Regular Season
+84,10:46,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v4,27,Shay Maloney,,,,,35,Ann-Renée Desbiens,,,,,,,84.3,-7.4,0.1103,-2,O06,190,2025-04-28,PWHL,2024/2025,Regular Season
+85,11:26,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v5,19,Hannah Bilka,,,,,35,Ann-Renée Desbiens,,,,,,,49.7,21.8,,-2,O22,190,2025-04-28,PWHL,2024/2025,Regular Season
+86,12:35,Penalty,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v5,47,Jamie Lee Rattray,,,,,,,,,,,,,,,,-2,,190,2025-04-28,PWHL,2024/2025,Regular Season
+87,13:12,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,3,event,5v5,29,Marie-Philip Poulin,,,,,29,Klára Peslarová,,,,,,,62.3,-15.0,,2,O14,190,2025-04-28,PWHL,2024/2025,Regular Season
+88,13:14,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,3,event,5v4,7,Laura Stacey,,,,,29,Klára Peslarová,,,,,,,81.0,-6.0,0.2623,2,O11,190,2025-04-28,PWHL,2024/2025,Regular Season
+89,14:53,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,3,event,5v5,21,Maureen Murphy,,,,,29,Klára Peslarová,,,,,,,75.0,3.4,0.1803,2,O11,190,2025-04-28,PWHL,2024/2025,Regular Season
+90,15:27,Penalty,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v5,7,Sidney Morin,,,,,,,,,,,,,,,,-2,,190,2025-04-28,PWHL,2024/2025,Regular Season
+91,15:53,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,3,event,5v5,29,Marie-Philip Poulin,,,,,29,Klára Peslarová,,,,,,,51.3,-16.7,,2,O20,190,2025-04-28,PWHL,2024/2025,Regular Season
+92,16:27,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v5,27,Shay Maloney,,,,,35,Ann-Renée Desbiens,,,,,,,57.7,-0.3,,-2,O15,190,2025-04-28,PWHL,2024/2025,Regular Season
+93,17:13,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,4v5,20,Hannah Brandt,,,,,35,Ann-Renée Desbiens,,,,,,,65.7,14.7,0.1589,-2,O16,190,2025-04-28,PWHL,2024/2025,Regular Season
+94,17:14,Goal,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,4v5,20,Hannah Brandt,47,Jamie Lee Rattray,22,Jessica DiGirolamo,35,Ann-Renée Desbiens,,2 14 21 24 28,Mariah Keopple - Dominika Lásková - Maureen Murphy - Abby Boreen - Catherine Dubois,,5 20 22 47,Megan Keller - Hannah Brandt - Jessica DiGirolamo - Jamie Lee Rattray,77.3,-1.7,0.2143,-2,O11,190,2025-04-28,PWHL,2024/2025,Regular Season
+95,17:53,Goal,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v5,19,Hannah Bilka,7,Sidney Morin,21,Hilary Knight,35,Ann-Renée Desbiens,,2 5 17 19 43,Mariah Keopple - Anna Wilgren - Dara Greig - Kaitlin Willoughby - Kristin O'Neill,,5 7 19 21 77,Megan Keller - Sidney Morin - Hannah Bilka - Hilary Knight - Susanna Tapani,69.0,11.1,0.0959,-1,O16,190,2025-04-28,PWHL,2024/2025,Regular Season
+96,18:09,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,3,event,5v5,17,Dara Greig,,,,,29,Klára Peslarová,,,,,,,61.3,7.9,0.0899,0,O16,190,2025-04-28,PWHL,2024/2025,Regular Season
+97,18:49,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v5,47,Jamie Lee Rattray,,,,,35,Ann-Renée Desbiens,,,,,,,42.7,10.8,0.0573,0,O21,190,2025-04-28,PWHL,2024/2025,Regular Season
+98,19:24,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,3,event,5v5,29,Marie-Philip Poulin,,,,,29,Klára Peslarová,,,,,,,63.0,7.9,0.0899,0,O16,190,2025-04-28,PWHL,2024/2025,Regular Season
+99,19:28,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,3,event,5v5,12,Jenn Gardiner,,,,,29,Klára Peslarová,,,,,,,72.0,-0.8,0.0785,0,O14,190,2025-04-28,PWHL,2024/2025,Regular Season
+100,19:35,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,3,event,5v5,29,Marie-Philip Poulin,,,,,29,Klára Peslarová,,,,,,,72.0,-0.8,0.0785,0,O14,190,2025-04-28,PWHL,2024/2025,Regular Season
+101,0:58,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,OT1,event,5v5,13,Alexandra Labelle,,,,,29,Klára Peslarová,,,,,,,64.3,16.1,,0,O16,190,2025-04-28,PWHL,2024/2025,Regular Season
+102,1:25,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,OT1,event,3v3,21,Hilary Knight,,,,,35,Ann-Renée Desbiens,,,,,,,71.0,-11.1,0.0785,0,O14,190,2025-04-28,PWHL,2024/2025,Regular Season
+103,2:22,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,OT1,event,3v3,5,Megan Keller,,,,,35,Ann-Renée Desbiens,,,,,,,58.3,12.2,0.0899,0,O16,190,2025-04-28,PWHL,2024/2025,Regular Season
+104,3:40,Block,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,OT1,event,5v5,5,Anna Wilgren,,,,,29,Klára Peslarová,,,,,,,61.3,17.8,,0,O16,190,2025-04-28,PWHL,2024/2025,Regular Season
+105,3:49,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,OT1,event,3v3,29,Marie-Philip Poulin,,,,,29,Klára Peslarová,,,,,,,41.3,-21.8,0.0458,0,O20,190,2025-04-28,PWHL,2024/2025,Regular Season
+106,4:11,Shot,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,OT1,event,3v3,29,Marie-Philip Poulin,,,,,29,Klára Peslarová,,,,,,,58.3,24.6,0.0409,0,O17,190,2025-04-28,PWHL,2024/2025,Regular Season
+107,4:17,Goal,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,OT1,event,3v3,7,Laura Stacey,29,Marie-Philip Poulin,,,29,Klára Peslarová,,3 7 29,Cayla Barnes - Laura Stacey - Marie-Philip Poulin,,5 21 77,Megan Keller - Hilary Knight - Susanna Tapani,59.0,-3.4,0.1041,0,O15,190,2025-04-28,PWHL,2024/2025,Regular Season

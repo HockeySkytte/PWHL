@@ -1,80 +1,80 @@
-id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
-1,1:28,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,17,Ella Shelton,,,,,29,Nicole Hensley,,,,,,,-75.3,12.8,24,2024-01-28,PWHL,2023/2024,Regular Season
-2,1:45,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,86,Michela Cava,,,,,39,Abigail Levy,,,,,,,53.0,-14.2,24,2024-01-28,PWHL,2023/2024,Regular Season
-3,3:07,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,13,Grace Zumwinkle,,,,,39,Abigail Levy,,,,,,,45.7,5.1,24,2024-01-28,PWHL,2023/2024,Regular Season
-4,3:21,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,13,Grace Zumwinkle,,,,,39,Abigail Levy,,,,,,,83.3,30.3,24,2024-01-28,PWHL,2023/2024,Regular Season
-5,3:51,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,26,Kendall Coyne Schofield,,,,,39,Abigail Levy,,,,,,,83.0,-26.1,24,2024-01-28,PWHL,2023/2024,Regular Season
-6,5:48,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,14,Jaime Bourbonnais,,,,,29,Nicole Hensley,,,,,,,-49.7,-11.6,24,2024-01-28,PWHL,2023/2024,Regular Season
-7,6:39,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,18,Élizabeth Giguère,,,,,29,Nicole Hensley,,,,,,,-76.7,8.8,24,2024-01-28,PWHL,2023/2024,Regular Season
-8,11:18,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,12,Kelly Pannek,,,,,39,Abigail Levy,,,,,,,84.3,-8.5,24,2024-01-28,PWHL,2023/2024,Regular Season
-9,12:52,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,23,Madison Packer,,,,,29,Nicole Hensley,,,,,,,-53.7,-19.6,24,2024-01-28,PWHL,2023/2024,Regular Season
-10,13:08,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,28,Micah Zandee-Hart,,,,,29,Nicole Hensley,,,,,,,-44.3,36.5,24,2024-01-28,PWHL,2023/2024,Regular Season
-11,13:12,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,71,Savannah Norcross,,,,,29,Nicole Hensley,,,,,,,-80.0,6.0,24,2024-01-28,PWHL,2023/2024,Regular Season
-12,15:47,Goal,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,9,Abby Cook,26,Kendall Coyne Schofield,12,Kelly Pannek,39,Abigail Levy,,9 17 19 25 59,Jessie Eldridge - Ella Shelton - Paetyn Levis - Alex Carpenter - Johanna Fällman,,9 12 24 25 26,Abby Cook - Kelly Pannek - Abby Boreen - Emma Greco - Kendall Coyne Schofield,38.7,6.8,24,2024-01-28,PWHL,2023/2024,Regular Season
-13,16:22,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,9,Jessie Eldridge,,,,,29,Nicole Hensley,,,,,,,-59.0,-28.1,24,2024-01-28,PWHL,2023/2024,Regular Season
-14,16:43,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,19,Paetyn Levis,,,,,29,Nicole Hensley,,,,,,,-43.3,32.3,24,2024-01-28,PWHL,2023/2024,Regular Season
-15,17:15,Penalty,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,19,Maggie Flaherty,,,,,,,,,,,,,,,24,2024-01-28,PWHL,2023/2024,Regular Season
-16,18:38,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v4,11,Abby Roque,,,,,29,Nicole Hensley,,,,,,,-74.0,12.8,24,2024-01-28,PWHL,2023/2024,Regular Season
-17,19:11,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,4v5,25,Emma Greco,,,,,39,Abigail Levy,,,,,,,-57.7,29.5,24,2024-01-28,PWHL,2023/2024,Regular Season
-18,19:31,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,18,Élizabeth Giguère,,,,,29,Nicole Hensley,,,,,,,45.3,36.8,24,2024-01-28,PWHL,2023/2024,Regular Season
-19,19:42,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,13,Grace Zumwinkle,,,,,39,Abigail Levy,,,,,,,69.7,-36.3,24,2024-01-28,PWHL,2023/2024,Regular Season
-20,20:00,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,13,Grace Zumwinkle,,,,,39,Abigail Levy,,,,,,,68.7,5.1,24,2024-01-28,PWHL,2023/2024,Regular Season
-21,0:18,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,25,Alex Carpenter,,,,,29,Nicole Hensley,,,,,,,-57.7,16.1,24,2024-01-28,PWHL,2023/2024,Regular Season
-22,1:10,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,11,Abby Roque,,,,,29,Nicole Hensley,,,,,,,-73.0,-5.1,24,2024-01-28,PWHL,2023/2024,Regular Season
-23,2:14,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,28,Micah Zandee-Hart,,,,,29,Nicole Hensley,,,,,,,-31.7,35.1,24,2024-01-28,PWHL,2023/2024,Regular Season
-24,3:13,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,21,Liz Schepers,,,,,39,Abigail Levy,,,,,,,82.3,4.8,24,2024-01-28,PWHL,2023/2024,Regular Season
-25,3:41,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,21,Liz Schepers,,,,,39,Abigail Levy,,,,,,,79.0,21.8,24,2024-01-28,PWHL,2023/2024,Regular Season
-26,4:30,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,27,Jade Downie-Landry,,,,,29,Nicole Hensley,,,,,,,79.3,-34.0,24,2024-01-28,PWHL,2023/2024,Regular Season
-27,5:36,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,6,Brooke Hobson,,,,,29,Nicole Hensley,,,,,,,-36.7,23.2,24,2024-01-28,PWHL,2023/2024,Regular Season
-28,6:32,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,23,Madison Packer,,,,,29,Nicole Hensley,,,,,,,-36.3,-36.3,24,2024-01-28,PWHL,2023/2024,Regular Season
-29,6:53,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,7,Claire Butorac,,,,,39,Abigail Levy,,,,,,,71.3,7.6,24,2024-01-28,PWHL,2023/2024,Regular Season
-30,7:23,Penalty,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,41,Denisa Křížová,,,,,,,,,,,,,,,24,2024-01-28,PWHL,2023/2024,Regular Season
-31,9:23,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,18,Élizabeth Giguère,,,,,29,Nicole Hensley,,,,,,,-53.7,14.2,24,2024-01-28,PWHL,2023/2024,Regular Season
-32,11:51,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,23,Mellissa Channell-Watkins,,,,,39,Abigail Levy,,,,,,,51.0,-31.7,24,2024-01-28,PWHL,2023/2024,Regular Season
-33,12:23,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,4,Taylor Baker,,,,,29,Nicole Hensley,,,,,,,-33.0,-34.3,24,2024-01-28,PWHL,2023/2024,Regular Season
-34,12:40,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,11,Abby Roque,,,,,29,Nicole Hensley,,,,,,,-85.3,9.1,24,2024-01-28,PWHL,2023/2024,Regular Season
-35,13:42,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,9,Jessie Eldridge,,,,,29,Nicole Hensley,,,,,,,-59.7,2.3,24,2024-01-28,PWHL,2023/2024,Regular Season
-36,13:55,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,9,Jessie Eldridge,,,,,29,Nicole Hensley,,,,,,,-82.7,-7.1,24,2024-01-28,PWHL,2023/2024,Regular Season
-37,13:55,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,25,Alex Carpenter,,,,,29,Nicole Hensley,,,,,,,-44.7,-6.0,24,2024-01-28,PWHL,2023/2024,Regular Season
-38,14:55,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,86,Michela Cava,,,,,39,Abigail Levy,,,,,,,64.7,3.1,24,2024-01-28,PWHL,2023/2024,Regular Season
-39,15:33,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,17,Ella Shelton,,,,,29,Nicole Hensley,,,,,,,-23.0,32.3,24,2024-01-28,PWHL,2023/2024,Regular Season
-40,15:41,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,9,Jessie Eldridge,,,,,29,Nicole Hensley,,,,,,,-82.3,10.5,24,2024-01-28,PWHL,2023/2024,Regular Season
-41,16:17,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,22,Natalie Buchbinder,,,,,39,Abigail Levy,,,,,,,53.7,16.1,24,2024-01-28,PWHL,2023/2024,Regular Season
-42,17:09,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,12,Chloé Aurard,,,,,29,Nicole Hensley,,,,,,,-75.3,14.2,24,2024-01-28,PWHL,2023/2024,Regular Season
-43,17:09,Penalty,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,2,Lee Stecklein,,,,,,,,,,,,,,,24,2024-01-28,PWHL,2023/2024,Regular Season
-44,17:47,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v4,25,Alex Carpenter,,,,,29,Nicole Hensley,,,,,,,-60.7,-23.5,24,2024-01-28,PWHL,2023/2024,Regular Season
-45,19:11,Penalty,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,19,Maggie Flaherty,,,,,,,,,,,,,,,24,2024-01-28,PWHL,2023/2024,Regular Season
-46,19:11,Penalty,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,27,Jade Downie-Landry,,,,,,,,,,,,,,,24,2024-01-28,PWHL,2023/2024,Regular Season
-47,19:16,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,18,Élizabeth Giguère,,,,,29,Nicole Hensley,,,,,,,-65.0,-3.4,24,2024-01-28,PWHL,2023/2024,Regular Season
-48,19:33,Penalty,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,12,Kelly Pannek,,,,,,,,,,,,,,,24,2024-01-28,PWHL,2023/2024,Regular Season
-49,0:23,Goal,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v4,17,Ella Shelton,28,Micah Zandee-Hart,25,Alex Carpenter,29,Nicole Hensley,,11 17 25 28,Abby Roque - Ella Shelton - Alex Carpenter - Micah Zandee-Hart,,2 21 22,Lee Stecklein - Liz Schepers - Natalie Buchbinder,-82.3,-7.6,24,2024-01-28,PWHL,2023/2024,Regular Season
-50,0:46,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,27,Taylor Heise,,,,,39,Abigail Levy,,,,,,,80.7,-10.8,24,2024-01-28,PWHL,2023/2024,Regular Season
-51,1:56,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,13,Grace Zumwinkle,,,,,39,Abigail Levy,,,,,,,71.3,-36.8,24,2024-01-28,PWHL,2023/2024,Regular Season
-52,4:12,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,13,Alexandra Labelle,,,,,29,Nicole Hensley,,,,,,,-85.0,12.5,24,2024-01-28,PWHL,2023/2024,Regular Season
-53,4:20,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,13,Alexandra Labelle,,,,,29,Nicole Hensley,,,,,,,-86.0,-11.3,24,2024-01-28,PWHL,2023/2024,Regular Season
-54,5:37,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,26,Kendall Coyne Schofield,,,,,39,Abigail Levy,,,,,,,71.3,-24.6,24,2024-01-28,PWHL,2023/2024,Regular Season
-55,6:47,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,77,Susanna Tapani,,,,,39,Abigail Levy,,,,,,,86.3,9.6,24,2024-01-28,PWHL,2023/2024,Regular Season
-56,6:55,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,2,Lee Stecklein,,,,,39,Abigail Levy,,,,,,,66.7,-12.5,24,2024-01-28,PWHL,2023/2024,Regular Season
-57,8:10,Penalty,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,21,Liz Schepers,,,,,,,,,,,,,,,24,2024-01-28,PWHL,2023/2024,Regular Season
-58,10:48,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,86,Michela Cava,,,,,39,Abigail Levy,,,,,,,76.3,-9.3,24,2024-01-28,PWHL,2023/2024,Regular Season
-59,10:48,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,86,Michela Cava,,,,,39,Abigail Levy,,,,,,,75.0,-4.2,24,2024-01-28,PWHL,2023/2024,Regular Season
-60,12:26,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,24,Abby Boreen,,,,,39,Abigail Levy,,,,,,,77.7,0.6,24,2024-01-28,PWHL,2023/2024,Regular Season
-61,12:50,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,26,Kendall Coyne Schofield,,,,,39,Abigail Levy,,,,,,,75.3,-15.9,24,2024-01-28,PWHL,2023/2024,Regular Season
-62,13:16,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,41,Denisa Křížová,,,,,39,Abigail Levy,,,,,,,57.0,-36.0,24,2024-01-28,PWHL,2023/2024,Regular Season
-63,13:16,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,27,Taylor Heise,,,,,39,Abigail Levy,,,,,,,51.0,12.8,24,2024-01-28,PWHL,2023/2024,Regular Season
-64,13:16,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,67,Emma Woods,,,,,29,Nicole Hensley,,,,,,,-55.0,11.6,24,2024-01-28,PWHL,2023/2024,Regular Season
-65,13:20,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,25,Emma Greco,,,,,39,Abigail Levy,,,,,,,82.7,-13.0,24,2024-01-28,PWHL,2023/2024,Regular Season
-66,13:52,Penalty,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,41,Denisa Křížová,,,,,,,,,,,,,,,24,2024-01-28,PWHL,2023/2024,Regular Season
-67,13:52,Penalty,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,27,Jade Downie-Landry,,,,,,,,,,,,,,,24,2024-01-28,PWHL,2023/2024,Regular Season
-68,14:41,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,26,Kendall Coyne Schofield,,,,,39,Abigail Levy,,,,,,,63.0,-9.3,24,2024-01-28,PWHL,2023/2024,Regular Season
-69,14:52,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,22,Natalie Buchbinder,,,,,39,Abigail Levy,,,,,,,64.7,12.8,24,2024-01-28,PWHL,2023/2024,Regular Season
-70,15:06,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,13,Grace Zumwinkle,,,,,39,Abigail Levy,,,,,,,49.3,4.2,24,2024-01-28,PWHL,2023/2024,Regular Season
-71,15:58,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,11,Abby Roque,,,,,29,Nicole Hensley,,,,,,,-31.3,-2.8,24,2024-01-28,PWHL,2023/2024,Regular Season
-72,17:22,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,27,Taylor Heise,,,,,39,Abigail Levy,,,,,,,76.0,32.3,24,2024-01-28,PWHL,2023/2024,Regular Season
-73,18:56,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,24,Abby Boreen,,,,,39,Abigail Levy,,,,,,,82.7,8.8,24,2024-01-28,PWHL,2023/2024,Regular Season
-74,0:50,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,OT1,event,3v3,26,Kendall Coyne Schofield,,,,,39,Abigail Levy,,,,,,,76.0,-5.1,24,2024-01-28,PWHL,2023/2024,Regular Season
-75,1:31,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,OT1,event,3v3,18,Brittyn Fleming,,,,,39,Abigail Levy,,,,,,,80.3,-10.5,24,2024-01-28,PWHL,2023/2024,Regular Season
-76,1:41,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,OT1,event,3v3,14,Jaime Bourbonnais,,,,,29,Nicole Hensley,,,,,,,-59.0,-1.1,24,2024-01-28,PWHL,2023/2024,Regular Season
-77,2:29,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,OT1,event,3v3,27,Jade Downie-Landry,,,,,29,Nicole Hensley,,,,,,,-56.7,32.3,24,2024-01-28,PWHL,2023/2024,Regular Season
-78,2:39,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,OT1,event,3v3,12,Kelly Pannek,,,,,39,Abigail Levy,,,,,,,70.0,-22.7,24,2024-01-28,PWHL,2023/2024,Regular Season
-79,2:56,Goal,Minnesota Frost,Away,New York Sirens,Minnesota Frost,OT1,event,3v3,12,Kelly Pannek,12,Kelly Pannek,29,Nicole Hensley,39,Abigail Levy,,17 25 27,Ella Shelton - Alex Carpenter - Jade Downie-Landry,,12 22 24,Kelly Pannek - Natalie Buchbinder - Abby Boreen,82.0,-7.1,24,2024-01-28,PWHL,2023/2024,Regular Season
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,xG,ScoreState,BoxID,game_id,game_date,competition,season,state
+1,1:28,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,17,Ella Shelton,,,,,29,Nicole Hensley,,,,,,,75.3,-12.8,0.0659,0,O06,24,2024-01-28,PWHL,2023/2024,Regular Season
+2,1:45,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,86,Michela Cava,,,,,39,Abbey Levy,,,,,,,53.0,-14.2,0.0458,0,O20,24,2024-01-28,PWHL,2023/2024,Regular Season
+3,3:07,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,13,Grace Zumwinkle,,,,,39,Abbey Levy,,,,,,,45.7,5.1,0.0573,0,O21,24,2024-01-28,PWHL,2023/2024,Regular Season
+4,3:21,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,13,Grace Zumwinkle,,,,,39,Abbey Levy,,,,,,,83.3,30.3,0.0296,0,O09,24,2024-01-28,PWHL,2023/2024,Regular Season
+5,3:51,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,26,Kendall Coyne Schofield,,,,,39,Abbey Levy,,,,,,,83.0,-26.1,0.0177,0,O05,24,2024-01-28,PWHL,2023/2024,Regular Season
+6,5:48,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,14,Jaime Bourbonnais,,,,,29,Nicole Hensley,,,,,,,49.7,11.6,0.0573,0,O21,24,2024-01-28,PWHL,2023/2024,Regular Season
+7,6:39,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,18,Élizabeth Giguère,,,,,29,Nicole Hensley,,,,,,,76.7,-8.8,0.1248,0,O11,24,2024-01-28,PWHL,2023/2024,Regular Season
+8,11:18,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,12,Kelly Pannek,,,,,39,Abbey Levy,,,,,,,84.3,-8.5,0.0659,0,O06,24,2024-01-28,PWHL,2023/2024,Regular Season
+9,12:52,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,23,Madison Packer,,,,,29,Nicole Hensley,,,,,,,53.7,19.6,0.0386,0,O22,24,2024-01-28,PWHL,2023/2024,Regular Season
+10,13:08,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,28,Micah Zandee-Hart,,,,,29,Nicole Hensley,,,,,,,44.3,-36.5,0.0318,0,O19,24,2024-01-28,PWHL,2023/2024,Regular Season
+11,13:12,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,71,Savannah Norcross,,,,,29,Nicole Hensley,,,,,,,80.0,-6.0,0.1248,0,O11,24,2024-01-28,PWHL,2023/2024,Regular Season
+12,15:47,Goal,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,9,Abby Cook,26,Kendall Coyne Schofield,12,Kelly Pannek,39,Abbey Levy,,9 17 19 25 59,Jessie Eldridge - Ella Shelton - Paetyn Levis - Alex Carpenter - Johanna Fällman,,9 12 24 25 26,Abby Cook - Kelly Pannek - Abby Boreen - Emma Greco - Kendall Coyne Schofield,38.7,6.8,0.0420,0,O25,24,2024-01-28,PWHL,2023/2024,Regular Season
+13,16:22,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,9,Jessie Eldridge,,,,,29,Nicole Hensley,,,,,,,59.0,28.1,0.0438,-1,O17,24,2024-01-28,PWHL,2023/2024,Regular Season
+14,16:43,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,19,Paetyn Levis,,,,,29,Nicole Hensley,,,,,,,43.3,-32.3,0.0341,-1,O19,24,2024-01-28,PWHL,2023/2024,Regular Season
+15,17:15,Penalty,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,19,Maggie Flaherty,,,,,,,,,,,,,,,,1,,24,2024-01-28,PWHL,2023/2024,Regular Season
+16,18:38,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v4,11,Abby Roque,,,,,29,Nicole Hensley,,,,,,,74.0,-12.8,0.1093,-1,O06,24,2024-01-28,PWHL,2023/2024,Regular Season
+17,19:11,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,4v5,25,Emma Greco,,,,,39,Abbey Levy,,,,,,,-57.7,29.5,0.1102,1,D13,24,2024-01-28,PWHL,2023/2024,Regular Season
+18,19:31,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,1,event,5v5,18,Élizabeth Giguère,,,,,29,Nicole Hensley,,,,,,,-45.3,-36.8,0.0591,-1,D23,24,2024-01-28,PWHL,2023/2024,Regular Season
+19,19:42,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,13,Grace Zumwinkle,,,,,39,Abbey Levy,,,,,,,69.7,-36.3,0.0166,1,O12,24,2024-01-28,PWHL,2023/2024,Regular Season
+20,20:00,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,1,event,5v5,13,Grace Zumwinkle,,,,,39,Abbey Levy,,,,,,,68.7,5.1,0.1061,1,O16,24,2024-01-28,PWHL,2023/2024,Regular Season
+21,0:18,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,25,Alex Carpenter,,,,,29,Nicole Hensley,,,,,,,57.7,-16.1,0.0838,-1,O14,24,2024-01-28,PWHL,2023/2024,Regular Season
+22,1:10,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,11,Abby Roque,,,,,29,Nicole Hensley,,,,,,,73.0,5.1,0.1328,-1,O11,24,2024-01-28,PWHL,2023/2024,Regular Season
+23,2:14,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,28,Micah Zandee-Hart,,,,,29,Nicole Hensley,,,,,,,31.7,-35.1,0.0429,-1,O24,24,2024-01-28,PWHL,2023/2024,Regular Season
+24,3:13,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,21,Liz Schepers,,,,,39,Abbey Levy,,,,,,,82.3,4.8,0.1463,1,O11,24,2024-01-28,PWHL,2023/2024,Regular Season
+25,3:41,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,21,Liz Schepers,,,,,39,Abbey Levy,,,,,,,79.0,21.8,0.0354,1,O09,24,2024-01-28,PWHL,2023/2024,Regular Season
+26,4:30,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,27,Jade Downie-Landry,,,,,29,Nicole Hensley,,,,,,,-79.3,34.0,0.0591,-1,D04,24,2024-01-28,PWHL,2023/2024,Regular Season
+27,5:36,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,6,Brooke Hobson,,,,,29,Nicole Hensley,,,,,,,36.7,-23.2,0.0429,-1,O24,24,2024-01-28,PWHL,2023/2024,Regular Season
+28,6:32,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,23,Madison Packer,,,,,29,Nicole Hensley,,,,,,,36.3,36.3,0.0277,-1,O26,24,2024-01-28,PWHL,2023/2024,Regular Season
+29,6:53,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,7,Claire Butorac,,,,,39,Abbey Levy,,,,,,,71.3,7.6,0.1061,1,O16,24,2024-01-28,PWHL,2023/2024,Regular Season
+30,7:23,Penalty,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,41,Denisa Křížová,,,,,,,,,,,,,,,,1,,24,2024-01-28,PWHL,2023/2024,Regular Season
+31,9:23,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,18,Élizabeth Giguère,,,,,29,Nicole Hensley,,,,,,,53.7,-14.2,0.0491,-1,O20,24,2024-01-28,PWHL,2023/2024,Regular Season
+32,11:51,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,23,Mellissa Channell-Watkins,,,,,39,Abbey Levy,,,,,,,51.0,-31.7,0.0380,1,O19,24,2024-01-28,PWHL,2023/2024,Regular Season
+33,12:23,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,4,Taylor Baker,,,,,29,Nicole Hensley,,,,,,,33.0,34.3,0.0277,-1,O26,24,2024-01-28,PWHL,2023/2024,Regular Season
+34,12:40,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,11,Abby Roque,,,,,29,Nicole Hensley,,,,,,,85.3,-9.1,0.0705,-1,O06,24,2024-01-28,PWHL,2023/2024,Regular Season
+35,13:42,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,9,Jessie Eldridge,,,,,29,Nicole Hensley,,,,,,,59.7,-2.3,0.1110,-1,O15,24,2024-01-28,PWHL,2023/2024,Regular Season
+36,13:55,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,9,Jessie Eldridge,,,,,29,Nicole Hensley,,,,,,,82.7,7.1,0.1328,-1,O11,24,2024-01-28,PWHL,2023/2024,Regular Season
+37,13:55,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,25,Alex Carpenter,,,,,29,Nicole Hensley,,,,,,,44.7,6.0,0.0614,-1,O21,24,2024-01-28,PWHL,2023/2024,Regular Season
+38,14:55,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,86,Michela Cava,,,,,39,Abbey Levy,,,,,,,64.7,3.1,0.1225,1,O15,24,2024-01-28,PWHL,2023/2024,Regular Season
+39,15:33,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,17,Ella Shelton,,,,,29,Nicole Hensley,,,,,,,23.0,-32.3,0.0591,-1,N01,24,2024-01-28,PWHL,2023/2024,Regular Season
+40,15:41,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,9,Jessie Eldridge,,,,,29,Nicole Hensley,,,,,,,82.3,-10.5,0.0705,-1,O06,24,2024-01-28,PWHL,2023/2024,Regular Season
+41,16:17,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,22,Natalie Buchbinder,,,,,39,Abbey Levy,,,,,,,53.7,16.1,0.0461,1,O22,24,2024-01-28,PWHL,2023/2024,Regular Season
+42,17:09,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,12,Chloé Aurard-Bushee,,,,,29,Nicole Hensley,,,,,,,75.3,-14.2,0.0705,-1,O06,24,2024-01-28,PWHL,2023/2024,Regular Season
+43,17:09,Penalty,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,2,Lee Stecklein,,,,,,,,,,,,,,,,1,,24,2024-01-28,PWHL,2023/2024,Regular Season
+44,17:47,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v4,25,Alex Carpenter,,,,,29,Nicole Hensley,,,,,,,60.7,23.5,0.0690,-1,O17,24,2024-01-28,PWHL,2023/2024,Regular Season
+45,19:11,Penalty,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,19,Maggie Flaherty,,,,,,,,,,,,,,,,1,,24,2024-01-28,PWHL,2023/2024,Regular Season
+46,19:11,Penalty,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,27,Jade Downie-Landry,,,,,,,,,,,,,,,,-1,,24,2024-01-28,PWHL,2023/2024,Regular Season
+47,19:16,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,2,event,5v5,18,Élizabeth Giguère,,,,,29,Nicole Hensley,,,,,,,65.0,3.4,0.1110,-1,O15,24,2024-01-28,PWHL,2023/2024,Regular Season
+48,19:33,Penalty,Minnesota Frost,Away,New York Sirens,Minnesota Frost,2,event,5v5,12,Kelly Pannek,,,,,,,,,,,,,,,,1,,24,2024-01-28,PWHL,2023/2024,Regular Season
+49,0:23,Goal,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v4,17,Ella Shelton,28,Micah Zandee-Hart,25,Alex Carpenter,29,Nicole Hensley,,11 17 25 28,Abby Roque - Ella Shelton - Alex Carpenter - Micah Zandee-Hart,,2 21 22,Lee Stecklein - Liz Schepers - Natalie Buchbinder,82.3,7.6,0.1171,-1,O08,24,2024-01-28,PWHL,2023/2024,Regular Season
+50,0:46,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,27,Taylor Heise,,,,,39,Abbey Levy,,,,,,,80.7,-10.8,0.0659,0,O06,24,2024-01-28,PWHL,2023/2024,Regular Season
+51,1:56,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,13,Grace Zumwinkle,,,,,39,Abbey Levy,,,,,,,71.3,-36.8,0.0138,0,O12,24,2024-01-28,PWHL,2023/2024,Regular Season
+52,4:12,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,13,Alexandra Labelle,,,,,29,Nicole Hensley,,,,,,,85.0,-12.5,0.0659,0,O06,24,2024-01-28,PWHL,2023/2024,Regular Season
+53,4:20,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,13,Alexandra Labelle,,,,,29,Nicole Hensley,,,,,,,86.0,11.3,0.0709,0,O08,24,2024-01-28,PWHL,2023/2024,Regular Season
+54,5:37,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,26,Kendall Coyne Schofield,,,,,39,Abbey Levy,,,,,,,71.3,-24.6,0.0371,0,O13,24,2024-01-28,PWHL,2023/2024,Regular Season
+55,6:47,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,77,Susanna Tapani,,,,,39,Abbey Levy,,,,,,,86.3,9.6,0.0709,0,O08,24,2024-01-28,PWHL,2023/2024,Regular Season
+56,6:55,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,2,Lee Stecklein,,,,,39,Abbey Levy,,,,,,,66.7,-12.5,0.0785,0,O14,24,2024-01-28,PWHL,2023/2024,Regular Season
+57,8:10,Penalty,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,21,Liz Schepers,,,,,,,,,,,,,,,,0,,24,2024-01-28,PWHL,2023/2024,Regular Season
+58,10:48,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,86,Michela Cava,,,,,39,Abbey Levy,,,,,,,76.3,-9.3,0.1248,0,O11,24,2024-01-28,PWHL,2023/2024,Regular Season
+59,10:48,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,86,Michela Cava,,,,,39,Abbey Levy,,,,,,,75.0,-4.2,0.1248,0,O11,24,2024-01-28,PWHL,2023/2024,Regular Season
+60,12:26,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,24,Abby Boreen,,,,,39,Abbey Levy,,,,,,,77.7,0.6,0.1248,0,O11,24,2024-01-28,PWHL,2023/2024,Regular Season
+61,12:50,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,26,Kendall Coyne Schofield,,,,,39,Abbey Levy,,,,,,,75.3,-15.9,0.0659,0,O06,24,2024-01-28,PWHL,2023/2024,Regular Season
+62,13:16,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,41,Denisa Křížová,,,,,39,Abbey Levy,,,,,,,57.0,-36.0,0.0138,0,O12,24,2024-01-28,PWHL,2023/2024,Regular Season
+63,13:16,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,27,Taylor Heise,,,,,39,Abbey Levy,,,,,,,51.0,12.8,0.0386,0,O22,24,2024-01-28,PWHL,2023/2024,Regular Season
+64,13:16,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,67,Emma Woods,,,,,29,Nicole Hensley,,,,,,,55.0,-11.6,0.0458,0,O20,24,2024-01-28,PWHL,2023/2024,Regular Season
+65,13:20,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,25,Emma Greco,,,,,39,Abbey Levy,,,,,,,82.7,-13.0,0.0659,0,O06,24,2024-01-28,PWHL,2023/2024,Regular Season
+66,13:52,Penalty,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,41,Denisa Křížová,,,,,,,,,,,,,,,,0,,24,2024-01-28,PWHL,2023/2024,Regular Season
+67,13:52,Penalty,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,27,Jade Downie-Landry,,,,,,,,,,,,,,,,0,,24,2024-01-28,PWHL,2023/2024,Regular Season
+68,14:41,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,26,Kendall Coyne Schofield,,,,,39,Abbey Levy,,,,,,,63.0,-9.3,0.0785,0,O14,24,2024-01-28,PWHL,2023/2024,Regular Season
+69,14:52,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,22,Natalie Buchbinder,,,,,39,Abbey Levy,,,,,,,64.7,12.8,0.0899,0,O16,24,2024-01-28,PWHL,2023/2024,Regular Season
+70,15:06,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,13,Grace Zumwinkle,,,,,39,Abbey Levy,,,,,,,49.3,4.2,0.0573,0,O21,24,2024-01-28,PWHL,2023/2024,Regular Season
+71,15:58,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,11,Abby Roque,,,,,29,Nicole Hensley,,,,,,,31.3,2.8,0.0420,0,O25,24,2024-01-28,PWHL,2023/2024,Regular Season
+72,17:22,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,27,Taylor Heise,,,,,39,Abbey Levy,,,,,,,76.0,32.3,0.0296,0,O09,24,2024-01-28,PWHL,2023/2024,Regular Season
+73,18:56,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,24,Abby Boreen,,,,,39,Abbey Levy,,,,,,,82.7,8.8,0.0709,0,O08,24,2024-01-28,PWHL,2023/2024,Regular Season
+74,0:50,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,OT1,event,3v3,26,Kendall Coyne Schofield,,,,,39,Abbey Levy,,,,,,,76.0,-5.1,0.1248,0,O11,24,2024-01-28,PWHL,2023/2024,Regular Season
+75,1:31,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,OT1,event,3v3,18,Brittyn Fleming,,,,,39,Abbey Levy,,,,,,,80.3,-10.5,0.0659,0,O06,24,2024-01-28,PWHL,2023/2024,Regular Season
+76,1:41,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,OT1,event,3v3,14,Jaime Bourbonnais,,,,,29,Nicole Hensley,,,,,,,59.0,1.1,0.1041,0,O15,24,2024-01-28,PWHL,2023/2024,Regular Season
+77,2:29,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,OT1,event,3v3,27,Jade Downie-Landry,,,,,29,Nicole Hensley,,,,,,,56.7,-32.3,0.0318,0,O19,24,2024-01-28,PWHL,2023/2024,Regular Season
+78,2:39,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,OT1,event,3v3,12,Kelly Pannek,,,,,39,Abbey Levy,,,,,,,70.0,-22.7,0.0371,0,O13,24,2024-01-28,PWHL,2023/2024,Regular Season
+79,2:56,Goal,Minnesota Frost,Away,New York Sirens,Minnesota Frost,OT1,event,3v3,12,Kelly Pannek,12,Kelly Pannek,29,Nicole Hensley,39,Abbey Levy,,17 25 27,Ella Shelton - Alex Carpenter - Jade Downie-Landry,,12 22 24,Kelly Pannek - Natalie Buchbinder - Abby Boreen,82.0,-7.1,0.1248,0,O11,24,2024-01-28,PWHL,2023/2024,Regular Season

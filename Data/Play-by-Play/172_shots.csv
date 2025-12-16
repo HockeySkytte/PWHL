@@ -1,80 +1,80 @@
-id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
-1,0:42,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v5,9,Kati Tabin,,,,,38,Emerance Maschmeyer,,,,,,,61.0,-6.0,172,2024-12-06,PWHL,2024/2025,Regular Season
-2,1:54,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v5,12,Jenn Gardiner,,,,,38,Emerance Maschmeyer,,,,,,,51.3,-10.2,172,2024-12-06,PWHL,2024/2025,Regular Season
-3,3:34,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,2,Aneta Tejralová,,,,,20,Elaine Chuli,,,,,,,-28.3,31.2,172,2024-12-06,PWHL,2024/2025,Regular Season
-4,4:19,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,6,Stephanie Markowski,,,,,20,Elaine Chuli,,,,,,,-47.0,9.6,172,2024-12-06,PWHL,2024/2025,Regular Season
-5,5:23,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,8,Natalie Snodgrass,,,,,20,Elaine Chuli,,,,,,,-60.0,24.6,172,2024-12-06,PWHL,2024/2025,Regular Season
-6,5:37,Penalty,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,88,Ronja Savolainen,,,,,,,,,,,,,,,172,2024-12-06,PWHL,2024/2025,Regular Season
-7,7:01,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v4,3,Cayla Barnes,,,,,38,Emerance Maschmeyer,,,,,,,45.0,2.8,172,2024-12-06,PWHL,2024/2025,Regular Season
-8,9:28,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v5,13,Alexandra Labelle,,,,,38,Emerance Maschmeyer,,,,,,,60.7,14.5,172,2024-12-06,PWHL,2024/2025,Regular Season
-9,9:43,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,88,Ronja Savolainen,,,,,20,Elaine Chuli,,,,,,,-64.7,-2.8,172,2024-12-06,PWHL,2024/2025,Regular Season
-10,9:44,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,13,Tereza Vanišová,,,,,20,Elaine Chuli,,,,,,,81.0,4.2,172,2024-12-06,PWHL,2024/2025,Regular Season
-11,11:06,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,71,Jincy Roese,,,,,20,Elaine Chuli,,,,,,,-74.3,6.0,172,2024-12-06,PWHL,2024/2025,Regular Season
-12,11:20,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v5,13,Alexandra Labelle,,,,,38,Emerance Maschmeyer,,,,,,,75.3,-4.2,172,2024-12-06,PWHL,2024/2025,Regular Season
-13,12:33,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,94,Anna Meixner,,,,,20,Elaine Chuli,,,,,,,-64.0,11.6,172,2024-12-06,PWHL,2024/2025,Regular Season
-14,13:32,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,14,Hayley Scamurra,,,,,20,Elaine Chuli,,,,,,,-83.7,-7.6,172,2024-12-06,PWHL,2024/2025,Regular Season
-15,13:51,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,19,Brianne Jenner,,,,,20,Elaine Chuli,,,,,,,-77.3,-2.5,172,2024-12-06,PWHL,2024/2025,Regular Season
-16,15:44,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,92,Danielle Serdachny,,,,,20,Elaine Chuli,,,,,,,87.0,8.5,172,2024-12-06,PWHL,2024/2025,Regular Season
-17,15:48,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,88,Ronja Savolainen,,,,,20,Elaine Chuli,,,,,,,-71.0,6.0,172,2024-12-06,PWHL,2024/2025,Regular Season
-18,16:02,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v5,7,Laura Stacey,,,,,38,Emerance Maschmeyer,,,,,,,72.3,-3.7,172,2024-12-06,PWHL,2024/2025,Regular Season
-19,17:43,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,19,Brianne Jenner,,,,,20,Elaine Chuli,,,,,,,-70.0,17.3,172,2024-12-06,PWHL,2024/2025,Regular Season
-20,18:59,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,37,Rebecca Leslie,,,,,20,Elaine Chuli,,,,,,,-72.3,-9.1,172,2024-12-06,PWHL,2024/2025,Regular Season
-21,19:56,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v5,23,Erin Ambrose,,,,,38,Emerance Maschmeyer,,,,,,,36.3,38.5,172,2024-12-06,PWHL,2024/2025,Regular Season
-22,0:47,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,9,Kati Tabin,,,,,38,Emerance Maschmeyer,,,,,,,78.3,-2.0,172,2024-12-06,PWHL,2024/2025,Regular Season
-23,0:57,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,71,Anna Kjellbin,,,,,38,Emerance Maschmeyer,,,,,,,70.3,7.6,172,2024-12-06,PWHL,2024/2025,Regular Season
-24,1:10,Penalty,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,16,Kateřina Mrázová,,,,,,,,,,,,,,,172,2024-12-06,PWHL,2024/2025,Regular Season
-25,1:57,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v4,29,Marie-Philip Poulin,,,,,38,Emerance Maschmeyer,,,,,,,71.0,15.9,172,2024-12-06,PWHL,2024/2025,Regular Season
-26,2:17,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v4,43,Kristin O'Neill,,,,,38,Emerance Maschmeyer,,,,,,,41.0,4.2,172,2024-12-06,PWHL,2024/2025,Regular Season
-27,2:29,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v4,29,Marie-Philip Poulin,,,,,38,Emerance Maschmeyer,,,,,,,33.7,9.9,172,2024-12-06,PWHL,2024/2025,Regular Season
-28,2:42,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v4,7,Laura Stacey,,,,,38,Emerance Maschmeyer,,,,,,,31.7,-3.7,172,2024-12-06,PWHL,2024/2025,Regular Season
-29,3:48,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,88,Ronja Savolainen,,,,,20,Elaine Chuli,,,,,,,-61.7,-20.1,172,2024-12-06,PWHL,2024/2025,Regular Season
-30,4:00,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,21,Ashton Bell,,,,,20,Elaine Chuli,,,,,,,-33.0,4.2,172,2024-12-06,PWHL,2024/2025,Regular Season
-31,4:04,Penalty,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,44,Amanda Boulier,,,,,,,,,,,,,,,172,2024-12-06,PWHL,2024/2025,Regular Season
-32,4:57,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,16,Kateřina Mrázová,,,,,20,Elaine Chuli,,,,,,,-61.7,-15.0,172,2024-12-06,PWHL,2024/2025,Regular Season
-33,5:40,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v4,17,Gabbie Hughes,,,,,20,Elaine Chuli,,,,,,,-44.7,-26.1,172,2024-12-06,PWHL,2024/2025,Regular Season
-34,6:12,Penalty,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,17,Dara Greig,,,,,,,,,,,,,,,172,2024-12-06,PWHL,2024/2025,Regular Season
-35,7:07,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v4,14,Hayley Scamurra,,,,,20,Elaine Chuli,,,,,,,-81.0,-4.0,172,2024-12-06,PWHL,2024/2025,Regular Season
-36,7:12,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v4,13,Tereza Vanišová,,,,,20,Elaine Chuli,,,,,,,-82.0,-2.0,172,2024-12-06,PWHL,2024/2025,Regular Season
-37,7:25,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v4,19,Brianne Jenner,,,,,20,Elaine Chuli,,,,,,,-77.0,9.9,172,2024-12-06,PWHL,2024/2025,Regular Season
-38,7:30,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v4,26,Emily Clark,,,,,20,Elaine Chuli,,,,,,,-71.7,-9.9,172,2024-12-06,PWHL,2024/2025,Regular Season
-39,8:02,Goal,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,4v5,29,Marie-Philip Poulin,,,,,38,Emerance Maschmeyer,,2 17 19 26 88,Aneta Tejralová - Gabbie Hughes - Brianne Jenner - Emily Clark - Ronja Savolainen,,9 23 29 42,Kati Tabin - Erin Ambrose - Marie-Philip Poulin - Claire Dalton,56.3,3.4,172,2024-12-06,PWHL,2024/2025,Regular Season
-40,8:09,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,8,Natalie Snodgrass,,,,,20,Elaine Chuli,,,,,,,-77.0,15.0,172,2024-12-06,PWHL,2024/2025,Regular Season
-41,9:19,Penalty,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,17,Gabbie Hughes,,,,,,,,,,,,,,,172,2024-12-06,PWHL,2024/2025,Regular Season
-42,9:31,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v4,23,Erin Ambrose,,,,,38,Emerance Maschmeyer,,,,,,,64.7,7.6,172,2024-12-06,PWHL,2024/2025,Regular Season
-43,10:26,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v4,24,Abby Boreen,,,,,38,Emerance Maschmeyer,,,,,,,84.7,-6.0,172,2024-12-06,PWHL,2024/2025,Regular Season
-44,11:18,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v4,24,Abby Boreen,,,,,38,Emerance Maschmeyer,,,,,,,39.0,-12.5,172,2024-12-06,PWHL,2024/2025,Regular Season
-45,13:30,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,7,Laura Stacey,,,,,38,Emerance Maschmeyer,,,,,,,77.7,-13.3,172,2024-12-06,PWHL,2024/2025,Regular Season
-46,13:40,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,12,Jenn Gardiner,,,,,38,Emerance Maschmeyer,,,,,,,77.7,1.7,172,2024-12-06,PWHL,2024/2025,Regular Season
-47,13:49,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,9,Kati Tabin,,,,,38,Emerance Maschmeyer,,,,,,,81.3,4.0,172,2024-12-06,PWHL,2024/2025,Regular Season
-48,13:55,Block,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,5,Anna Wilgren,,,,,38,Emerance Maschmeyer,,,,,,,56.3,6.0,172,2024-12-06,PWHL,2024/2025,Regular Season
-49,14:58,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,8,Natalie Snodgrass,,,,,20,Elaine Chuli,,,,,,,-68.3,19.3,172,2024-12-06,PWHL,2024/2025,Regular Season
-50,15:00,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,23,Erin Ambrose,,,,,38,Emerance Maschmeyer,,,,,,,84.0,-17.8,172,2024-12-06,PWHL,2024/2025,Regular Season
-51,15:11,Goal,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,21,Ashton Bell,19,Brianne Jenner,6,Stephanie Markowski,20,Elaine Chuli,,6 14 19 21 27,Stephanie Markowski - Hayley Scamurra - Brianne Jenner - Ashton Bell - Shiann Darkangelo,,3 25 28 42 71,Cayla Barnes - Lina Ljungblom - Catherine Dubois - Claire Dalton - Anna Kjellbin,-71.7,-21.2,172,2024-12-06,PWHL,2024/2025,Regular Season
-52,15:13,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,19,Brianne Jenner,,,,,20,Elaine Chuli,,,,,,,-79.0,-17.0,172,2024-12-06,PWHL,2024/2025,Regular Season
-53,15:31,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,19,Brianne Jenner,,,,,20,Elaine Chuli,,,,,,,-71.7,21.5,172,2024-12-06,PWHL,2024/2025,Regular Season
-54,16:32,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,88,Ronja Savolainen,,,,,20,Elaine Chuli,,,,,,,-58.7,-2.5,172,2024-12-06,PWHL,2024/2025,Regular Season
-55,17:36,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,5,Anna Wilgren,,,,,38,Emerance Maschmeyer,,,,,,,69.0,-14.5,172,2024-12-06,PWHL,2024/2025,Regular Season
-56,17:46,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,29,Marie-Philip Poulin,,,,,38,Emerance Maschmeyer,,,,,,,27.7,0.0,172,2024-12-06,PWHL,2024/2025,Regular Season
-57,17:57,Goal,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,18,Mikyla Grant-Mentis,42,Claire Dalton,,,38,Emerance Maschmeyer,,15 17 18 19 37,Savannah Harmon - Gabbie Hughes - Mannon McMahon - Brianne Jenner - Rebecca Leslie,,5 13 18 42 44,Anna Wilgren - Alexandra Labelle - Mikyla Grant-Mentis - Claire Dalton - Amanda Boulier,75.3,-9.1,172,2024-12-06,PWHL,2024/2025,Regular Season
-58,18:55,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,88,Ronja Savolainen,,,,,20,Elaine Chuli,,,,,,,-77.0,13.0,172,2024-12-06,PWHL,2024/2025,Regular Season
-59,0:25,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,88,Ronja Savolainen,,,,,20,Elaine Chuli,,,,,,,-69.0,-13.9,172,2024-12-06,PWHL,2024/2025,Regular Season
-60,0:38,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,16,Kateřina Mrázová,,,,,20,Elaine Chuli,,,,,,,-68.7,3.4,172,2024-12-06,PWHL,2024/2025,Regular Season
-61,0:55,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,26,Emily Clark,,,,,20,Elaine Chuli,,,,,,,-77.7,-5.1,172,2024-12-06,PWHL,2024/2025,Regular Season
-62,1:50,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,8,Natalie Snodgrass,,,,,20,Elaine Chuli,,,,,,,-54.7,-9.3,172,2024-12-06,PWHL,2024/2025,Regular Season
-63,2:32,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,2,Aneta Tejralová,,,,,20,Elaine Chuli,,,,,,,-37.3,26.1,172,2024-12-06,PWHL,2024/2025,Regular Season
-64,3:21,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,13,Tereza Vanišová,,,,,20,Elaine Chuli,,,,,,,-64.7,-0.8,172,2024-12-06,PWHL,2024/2025,Regular Season
-65,4:23,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v5,7,Laura Stacey,,,,,38,Emerance Maschmeyer,,,,,,,39.0,-1.4,172,2024-12-06,PWHL,2024/2025,Regular Season
-66,6:13,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v5,42,Claire Dalton,,,,,38,Emerance Maschmeyer,,,,,,,72.7,-18.7,172,2024-12-06,PWHL,2024/2025,Regular Season
-67,6:29,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v5,26,Clair DeGeorge,,,,,38,Emerance Maschmeyer,,,,,,,79.7,-7.9,172,2024-12-06,PWHL,2024/2025,Regular Season
-68,7:49,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,6,Stephanie Markowski,,,,,20,Elaine Chuli,,,,,,,-52.3,19.6,172,2024-12-06,PWHL,2024/2025,Regular Season
-69,8:54,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,16,Kateřina Mrázová,,,,,20,Elaine Chuli,,,,,,,-80.7,7.9,172,2024-12-06,PWHL,2024/2025,Regular Season
-70,9:19,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,14,Hayley Scamurra,,,,,20,Elaine Chuli,,,,,,,-58.0,-20.1,172,2024-12-06,PWHL,2024/2025,Regular Season
-71,10:35,Penalty,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,18,Mannon McMahon,,,,,,,,,,,,,,,172,2024-12-06,PWHL,2024/2025,Regular Season
-72,11:18,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v4,12,Jenn Gardiner,,,,,38,Emerance Maschmeyer,,,,,,,74.0,0.8,172,2024-12-06,PWHL,2024/2025,Regular Season
-73,14:09,Block,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v5,29,Marie-Philip Poulin,,,,,38,Emerance Maschmeyer,,,,,,,67.0,-17.0,172,2024-12-06,PWHL,2024/2025,Regular Season
-74,16:40,Block,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v5,7,Laura Stacey,,,,,38,Emerance Maschmeyer,,,,,,,52.7,12.2,172,2024-12-06,PWHL,2024/2025,Regular Season
-75,16:56,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v5,2,Mariah Keopple,,,,,38,Emerance Maschmeyer,,,,,,,55.3,19.0,172,2024-12-06,PWHL,2024/2025,Regular Season
-76,17:39,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,15,Savannah Harmon,,,,,20,Elaine Chuli,,,,,,,-58.7,23.2,172,2024-12-06,PWHL,2024/2025,Regular Season
-77,18:36,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,17,Gabbie Hughes,,,,,20,Elaine Chuli,,,,,,,-73.7,-13.9,172,2024-12-06,PWHL,2024/2025,Regular Season
-78,18:52,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,13,Tereza Vanišová,,,,,20,Elaine Chuli,,,,,,,-65.0,25.5,172,2024-12-06,PWHL,2024/2025,Regular Season
-79,19:01,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,15,Savannah Harmon,,,,,20,Elaine Chuli,,,,,,,-43.0,24.9,172,2024-12-06,PWHL,2024/2025,Regular Season
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,xG,ScoreState,BoxID,game_id,game_date,competition,season,state
+1,0:42,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v5,9,Kati Tabin,,,,,38,Emerance Maschmeyer,,,,,,,61.0,-6.0,0.0785,0,O14,172,2024-12-06,PWHL,2024/2025,Regular Season
+2,1:54,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v5,12,Jenn Gardiner,,,,,38,Emerance Maschmeyer,,,,,,,51.3,-10.2,0.0573,0,O21,172,2024-12-06,PWHL,2024/2025,Regular Season
+3,3:34,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,2,Aneta Tejralová,,,,,20,Elaine Chuli,,,,,,,28.3,-31.2,0.0400,0,O24,172,2024-12-06,PWHL,2024/2025,Regular Season
+4,4:19,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,6,Stephanie Markowski,,,,,20,Elaine Chuli,,,,,,,47.0,-9.6,0.0573,0,O21,172,2024-12-06,PWHL,2024/2025,Regular Season
+5,5:23,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,8,Natalie Snodgrass,,,,,20,Elaine Chuli,,,,,,,60.0,-24.6,0.0371,0,O13,172,2024-12-06,PWHL,2024/2025,Regular Season
+6,5:37,Penalty,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,88,Ronja Savolainen,,,,,,,,,,,,,,,,0,,172,2024-12-06,PWHL,2024/2025,Regular Season
+7,7:01,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v4,3,Cayla Barnes,,,,,38,Emerance Maschmeyer,,,,,,,45.0,2.8,0.0895,0,O21,172,2024-12-06,PWHL,2024/2025,Regular Season
+8,9:28,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v5,13,Alexandra Labelle,,,,,38,Emerance Maschmeyer,,,,,,,60.7,14.5,0.0899,0,O16,172,2024-12-06,PWHL,2024/2025,Regular Season
+9,9:43,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,88,Ronja Savolainen,,,,,20,Elaine Chuli,,,,,,,64.7,2.8,,0,O15,172,2024-12-06,PWHL,2024/2025,Regular Season
+10,9:44,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,13,Tereza Vanišová,,,,,20,Elaine Chuli,,,,,,,-81.0,-4.2,,0,D11,172,2024-12-06,PWHL,2024/2025,Regular Season
+11,11:06,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,71,Jincy Roese,,,,,20,Elaine Chuli,,,,,,,74.3,-6.0,,0,O11,172,2024-12-06,PWHL,2024/2025,Regular Season
+12,11:20,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v5,13,Alexandra Labelle,,,,,38,Emerance Maschmeyer,,,,,,,75.3,-4.2,0.1248,0,O11,172,2024-12-06,PWHL,2024/2025,Regular Season
+13,12:33,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,94,Anna Meixner,,,,,20,Elaine Chuli,,,,,,,64.0,-11.6,0.0785,0,O14,172,2024-12-06,PWHL,2024/2025,Regular Season
+14,13:32,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,14,Hayley Scamurra,,,,,20,Elaine Chuli,,,,,,,83.7,7.6,0.0709,0,O08,172,2024-12-06,PWHL,2024/2025,Regular Season
+15,13:51,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,19,Brianne Jenner,,,,,20,Elaine Chuli,,,,,,,77.3,2.5,0.1248,0,O11,172,2024-12-06,PWHL,2024/2025,Regular Season
+16,15:44,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,92,Danielle Serdachny,,,,,20,Elaine Chuli,,,,,,,-87.0,-8.5,,0,D08,172,2024-12-06,PWHL,2024/2025,Regular Season
+17,15:48,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,88,Ronja Savolainen,,,,,20,Elaine Chuli,,,,,,,71.0,-6.0,0.0785,0,O14,172,2024-12-06,PWHL,2024/2025,Regular Season
+18,16:02,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v5,7,Laura Stacey,,,,,38,Emerance Maschmeyer,,,,,,,72.3,-3.7,0.0785,0,O14,172,2024-12-06,PWHL,2024/2025,Regular Season
+19,17:43,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,19,Brianne Jenner,,,,,20,Elaine Chuli,,,,,,,70.0,-17.3,0.0371,0,O13,172,2024-12-06,PWHL,2024/2025,Regular Season
+20,18:59,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,1,event,5v5,37,Rebecca Leslie,,,,,20,Elaine Chuli,,,,,,,72.3,9.1,,0,O16,172,2024-12-06,PWHL,2024/2025,Regular Season
+21,19:56,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,1,event,5v5,23,Erin Ambrose,,,,,38,Emerance Maschmeyer,,,,,,,36.3,38.5,0.0258,0,O26,172,2024-12-06,PWHL,2024/2025,Regular Season
+22,0:47,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,9,Kati Tabin,,,,,38,Emerance Maschmeyer,,,,,,,78.3,-2.0,0.1248,0,O11,172,2024-12-06,PWHL,2024/2025,Regular Season
+23,0:57,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,71,Anna Kjellbin,,,,,38,Emerance Maschmeyer,,,,,,,70.3,7.6,0.0899,0,O16,172,2024-12-06,PWHL,2024/2025,Regular Season
+24,1:10,Penalty,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,16,Kateřina Mrázová,,,,,,,,,,,,,,,,0,,172,2024-12-06,PWHL,2024/2025,Regular Season
+25,1:57,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v4,29,Marie-Philip Poulin,,,,,38,Emerance Maschmeyer,,,,,,,71.0,15.9,0.0645,0,O17,172,2024-12-06,PWHL,2024/2025,Regular Season
+26,2:17,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v4,43,Kristin O'Neill,,,,,38,Emerance Maschmeyer,,,,,,,41.0,4.2,0.0895,0,O21,172,2024-12-06,PWHL,2024/2025,Regular Season
+27,2:29,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v4,29,Marie-Philip Poulin,,,,,38,Emerance Maschmeyer,,,,,,,33.7,9.9,0.0661,0,O25,172,2024-12-06,PWHL,2024/2025,Regular Season
+28,2:42,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v4,7,Laura Stacey,,,,,38,Emerance Maschmeyer,,,,,,,31.7,-3.7,0.0661,0,O25,172,2024-12-06,PWHL,2024/2025,Regular Season
+29,3:48,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,88,Ronja Savolainen,,,,,20,Elaine Chuli,,,,,,,61.7,20.1,0.0409,0,O17,172,2024-12-06,PWHL,2024/2025,Regular Season
+30,4:00,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,21,Ashton Bell,,,,,20,Elaine Chuli,,,,,,,33.0,-4.2,,0,O25,172,2024-12-06,PWHL,2024/2025,Regular Season
+31,4:04,Penalty,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,44,Amanda Boulier,,,,,,,,,,,,,,,,0,,172,2024-12-06,PWHL,2024/2025,Regular Season
+32,4:57,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,16,Kateřina Mrázová,,,,,20,Elaine Chuli,,,,,,,61.7,15.0,,0,O16,172,2024-12-06,PWHL,2024/2025,Regular Season
+33,5:40,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v4,17,Gabbie Hughes,,,,,20,Elaine Chuli,,,,,,,44.7,26.1,0.0610,0,O22,172,2024-12-06,PWHL,2024/2025,Regular Season
+34,6:12,Penalty,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,17,Dara Greig,,,,,,,,,,,,,,,,0,,172,2024-12-06,PWHL,2024/2025,Regular Season
+35,7:07,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v4,14,Hayley Scamurra,,,,,20,Elaine Chuli,,,,,,,81.0,4.0,0.1873,0,O11,172,2024-12-06,PWHL,2024/2025,Regular Season
+36,7:12,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v4,13,Tereza Vanišová,,,,,20,Elaine Chuli,,,,,,,82.0,2.0,0.1873,0,O11,172,2024-12-06,PWHL,2024/2025,Regular Season
+37,7:25,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v4,19,Brianne Jenner,,,,,20,Elaine Chuli,,,,,,,77.0,-9.9,0.1873,0,O11,172,2024-12-06,PWHL,2024/2025,Regular Season
+38,7:30,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v4,26,Emily Clark,,,,,20,Elaine Chuli,,,,,,,71.7,9.9,0.1377,0,O16,172,2024-12-06,PWHL,2024/2025,Regular Season
+39,8:02,Goal,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,4v5,29,Marie-Philip Poulin,,,,,38,Emerance Maschmeyer,,2 17 19 26 88,Aneta Tejralová - Gabbie Hughes - Brianne Jenner - Emily Clark - Ronja Savolainen,,9 23 29 42,Kati Tabin - Erin Ambrose - Marie-Philip Poulin - Claire Dalton,56.3,3.4,0.0968,0,O21,172,2024-12-06,PWHL,2024/2025,Regular Season
+40,8:09,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,8,Natalie Snodgrass,,,,,20,Elaine Chuli,,,,,,,77.0,-15.0,,-1,O06,172,2024-12-06,PWHL,2024/2025,Regular Season
+41,9:19,Penalty,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,17,Gabbie Hughes,,,,,,,,,,,,,,,,-1,,172,2024-12-06,PWHL,2024/2025,Regular Season
+42,9:31,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v4,23,Erin Ambrose,,,,,38,Emerance Maschmeyer,,,,,,,64.7,7.6,0.1610,1,O16,172,2024-12-06,PWHL,2024/2025,Regular Season
+43,10:26,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v4,24,Abby Boreen,,,,,38,Emerance Maschmeyer,,,,,,,84.7,-6.0,0.3423,1,O07,172,2024-12-06,PWHL,2024/2025,Regular Season
+44,11:18,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v4,24,Abby Boreen,,,,,38,Emerance Maschmeyer,,,,,,,39.0,-12.5,0.0785,1,O25,172,2024-12-06,PWHL,2024/2025,Regular Season
+45,13:30,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,7,Laura Stacey,,,,,38,Emerance Maschmeyer,,,,,,,77.7,-13.3,0.0782,1,O06,172,2024-12-06,PWHL,2024/2025,Regular Season
+46,13:40,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,12,Jenn Gardiner,,,,,38,Emerance Maschmeyer,,,,,,,77.7,1.7,0.1463,1,O11,172,2024-12-06,PWHL,2024/2025,Regular Season
+47,13:49,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,9,Kati Tabin,,,,,38,Emerance Maschmeyer,,,,,,,81.3,4.0,0.1463,1,O11,172,2024-12-06,PWHL,2024/2025,Regular Season
+48,13:55,Block,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,5,Anna Wilgren,,,,,38,Emerance Maschmeyer,,,,,,,56.3,6.0,,1,O21,172,2024-12-06,PWHL,2024/2025,Regular Season
+49,14:58,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,8,Natalie Snodgrass,,,,,20,Elaine Chuli,,,,,,,68.3,-19.3,,-1,O13,172,2024-12-06,PWHL,2024/2025,Regular Season
+50,15:00,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,23,Erin Ambrose,,,,,38,Emerance Maschmeyer,,,,,,,84.0,-17.8,0.0782,1,O06,172,2024-12-06,PWHL,2024/2025,Regular Season
+51,15:11,Goal,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,21,Ashton Bell,19,Brianne Jenner,6,Stephanie Markowski,20,Elaine Chuli,,6 14 19 21 27,Stephanie Markowski - Hayley Scamurra - Brianne Jenner - Ashton Bell - Shiann Darkangelo,,3 25 28 42 71,Cayla Barnes - Lina Ljungblom - Catherine Dubois - Claire Dalton - Anna Kjellbin,71.7,21.2,0.0438,-1,O17,172,2024-12-06,PWHL,2024/2025,Regular Season
+52,15:13,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,19,Brianne Jenner,,,,,20,Elaine Chuli,,,,,,,79.0,17.0,0.0709,0,O08,172,2024-12-06,PWHL,2024/2025,Regular Season
+53,15:31,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,19,Brianne Jenner,,,,,20,Elaine Chuli,,,,,,,71.7,-21.5,0.0371,0,O13,172,2024-12-06,PWHL,2024/2025,Regular Season
+54,16:32,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,88,Ronja Savolainen,,,,,20,Elaine Chuli,,,,,,,58.7,2.5,0.1041,0,O15,172,2024-12-06,PWHL,2024/2025,Regular Season
+55,17:36,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,5,Anna Wilgren,,,,,38,Emerance Maschmeyer,,,,,,,69.0,-14.5,0.0371,0,O13,172,2024-12-06,PWHL,2024/2025,Regular Season
+56,17:46,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,29,Marie-Philip Poulin,,,,,38,Emerance Maschmeyer,,,,,,,27.7,0.0,0.0420,0,O25,172,2024-12-06,PWHL,2024/2025,Regular Season
+57,17:57,Goal,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,2,event,5v5,18,Mikyla Grant-Mentis,42,Claire Dalton,,,38,Emerance Maschmeyer,,15 17 18 19 37,Savannah Harmon - Gabbie Hughes - Mannon McMahon - Brianne Jenner - Rebecca Leslie,,5 13 18 42 44,Anna Wilgren - Alexandra Labelle - Mikyla Grant-Mentis - Claire Dalton - Amanda Boulier,75.3,-9.1,0.1248,0,O11,172,2024-12-06,PWHL,2024/2025,Regular Season
+58,18:55,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,2,event,5v5,88,Ronja Savolainen,,,,,20,Elaine Chuli,,,,,,,77.0,-13.0,0.0705,-1,O06,172,2024-12-06,PWHL,2024/2025,Regular Season
+59,0:25,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,88,Ronja Savolainen,,,,,20,Elaine Chuli,,,,,,,69.0,13.9,0.0959,-1,O16,172,2024-12-06,PWHL,2024/2025,Regular Season
+60,0:38,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,16,Kateřina Mrázová,,,,,20,Elaine Chuli,,,,,,,68.7,-3.4,0.0838,-1,O14,172,2024-12-06,PWHL,2024/2025,Regular Season
+61,0:55,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,26,Emily Clark,,,,,20,Elaine Chuli,,,,,,,77.7,5.1,0.1328,-1,O11,172,2024-12-06,PWHL,2024/2025,Regular Season
+62,1:50,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,8,Natalie Snodgrass,,,,,20,Elaine Chuli,,,,,,,54.7,9.3,,-1,O22,172,2024-12-06,PWHL,2024/2025,Regular Season
+63,2:32,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,2,Aneta Tejralová,,,,,20,Elaine Chuli,,,,,,,37.3,-26.1,,-1,O24,172,2024-12-06,PWHL,2024/2025,Regular Season
+64,3:21,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,13,Tereza Vanišová,,,,,20,Elaine Chuli,,,,,,,64.7,0.8,,-1,O15,172,2024-12-06,PWHL,2024/2025,Regular Season
+65,4:23,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v5,7,Laura Stacey,,,,,38,Emerance Maschmeyer,,,,,,,39.0,-1.4,0.0500,1,O25,172,2024-12-06,PWHL,2024/2025,Regular Season
+66,6:13,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v5,42,Claire Dalton,,,,,38,Emerance Maschmeyer,,,,,,,72.7,-18.7,0.0443,1,O13,172,2024-12-06,PWHL,2024/2025,Regular Season
+67,6:29,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v5,26,Clair DeGeorge,,,,,38,Emerance Maschmeyer,,,,,,,79.7,-7.9,0.1463,1,O11,172,2024-12-06,PWHL,2024/2025,Regular Season
+68,7:49,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,6,Stephanie Markowski,,,,,20,Elaine Chuli,,,,,,,52.3,-19.6,0.0491,-1,O20,172,2024-12-06,PWHL,2024/2025,Regular Season
+69,8:54,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,16,Kateřina Mrázová,,,,,20,Elaine Chuli,,,,,,,80.7,-7.9,0.1328,-1,O11,172,2024-12-06,PWHL,2024/2025,Regular Season
+70,9:19,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,14,Hayley Scamurra,,,,,20,Elaine Chuli,,,,,,,58.0,20.1,0.0438,-1,O17,172,2024-12-06,PWHL,2024/2025,Regular Season
+71,10:35,Penalty,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,18,Mannon McMahon,,,,,,,,,,,,,,,,-1,,172,2024-12-06,PWHL,2024/2025,Regular Season
+72,11:18,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v4,12,Jenn Gardiner,,,,,38,Emerance Maschmeyer,,,,,,,74.0,0.8,0.2170,1,O11,172,2024-12-06,PWHL,2024/2025,Regular Season
+73,14:09,Block,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v5,29,Marie-Philip Poulin,,,,,38,Emerance Maschmeyer,,,,,,,67.0,-17.0,,1,O13,172,2024-12-06,PWHL,2024/2025,Regular Season
+74,16:40,Block,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v5,7,Laura Stacey,,,,,38,Emerance Maschmeyer,,,,,,,52.7,12.2,,1,O22,172,2024-12-06,PWHL,2024/2025,Regular Season
+75,16:56,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v5,2,Mariah Keopple,,,,,38,Emerance Maschmeyer,,,,,,,55.3,19.0,0.0461,1,O22,172,2024-12-06,PWHL,2024/2025,Regular Season
+76,17:39,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,15,Savannah Harmon,,,,,20,Elaine Chuli,,,,,,,58.7,-23.2,,-1,O13,172,2024-12-06,PWHL,2024/2025,Regular Season
+77,18:36,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,17,Gabbie Hughes,,,,,20,Elaine Chuli,,,,,,,73.7,13.9,0.0758,-1,O08,172,2024-12-06,PWHL,2024/2025,Regular Season
+78,18:52,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,13,Tereza Vanišová,,,,,20,Elaine Chuli,,,,,,,65.0,-25.5,,-1,O13,172,2024-12-06,PWHL,2024/2025,Regular Season
+79,19:01,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,15,Savannah Harmon,,,,,20,Elaine Chuli,,,,,,,43.0,-24.9,0.0491,-1,O20,172,2024-12-06,PWHL,2024/2025,Regular Season

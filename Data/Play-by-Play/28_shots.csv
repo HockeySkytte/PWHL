@@ -1,60 +1,60 @@
-id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
-1,0:42,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,23,Mellissa Channell-Watkins,,,,,38,Emerance Maschmeyer,,,,,,,-60.0,4.2,28,2024-02-14,PWHL,2023/2024,Regular Season
-2,2:41,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,19,Brianne Jenner,,,,,35,Maddie Rooney,,,,,,,36.7,-26.1,28,2024-02-14,PWHL,2023/2024,Regular Season
-3,3:11,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,26,Kendall Coyne Schofield,,,,,38,Emerance Maschmeyer,,,,,,,-61.7,-29.5,28,2024-02-14,PWHL,2023/2024,Regular Season
-4,4:56,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,10,Becca Gilmore,,,,,35,Maddie Rooney,,,,,,,85.0,-13.0,28,2024-02-14,PWHL,2023/2024,Regular Season
-5,5:20,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,10,Becca Gilmore,,,,,35,Maddie Rooney,,,,,,,70.3,15.6,28,2024-02-14,PWHL,2023/2024,Regular Season
-6,5:29,Goal,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,28,Amanda Boulier,2,Aneta Tejralová,10,Becca Gilmore,35,Maddie Rooney,,2 7 14 18 19,Lee Stecklein - Claire Butorac - Clair DeGeorge - Brittyn Fleming - Maggie Flaherty,,2 10 14 25 28,Aneta Tejralová - Becca Gilmore - Hayley Scamurra - Kristin Della Rovere - Amanda Boulier,53.0,12.5,28,2024-02-14,PWHL,2023/2024,Regular Season
-7,7:59,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,19,Maggie Flaherty,,,,,38,Emerance Maschmeyer,,,,,,,-33.3,-7.4,28,2024-02-14,PWHL,2023/2024,Regular Season
-8,8:36,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,3,Zoe Boyd,,,,,35,Maddie Rooney,,,,,,,53.0,-16.7,28,2024-02-14,PWHL,2023/2024,Regular Season
-9,9:00,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,24,Abby Boreen,,,,,38,Emerance Maschmeyer,,,,,,,-78.3,-12.8,28,2024-02-14,PWHL,2023/2024,Regular Season
-10,9:20,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,26,Kendall Coyne Schofield,,,,,38,Emerance Maschmeyer,,,,,,,-80.3,10.2,28,2024-02-14,PWHL,2023/2024,Regular Season
-11,9:49,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,13,Grace Zumwinkle,,,,,38,Emerance Maschmeyer,,,,,,,-53.0,-19.3,28,2024-02-14,PWHL,2023/2024,Regular Season
-12,10:40,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,21,Liz Schepers,,,,,38,Emerance Maschmeyer,,,,,,,-64.3,5.1,28,2024-02-14,PWHL,2023/2024,Regular Season
-13,11:15,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,26,Emily Clark,,,,,35,Maddie Rooney,,,,,,,32.0,-7.1,28,2024-02-14,PWHL,2023/2024,Regular Season
-14,12:52,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,71,Jincy Roese,,,,,35,Maddie Rooney,,,,,,,69.0,2.0,28,2024-02-14,PWHL,2023/2024,Regular Season
-15,13:01,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,26,Kendall Coyne Schofield,,,,,38,Emerance Maschmeyer,,,,,,,-76.3,0.6,28,2024-02-14,PWHL,2023/2024,Regular Season
-16,14:16,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,18,Brittyn Fleming,,,,,38,Emerance Maschmeyer,,,,,,,-49.7,30.6,28,2024-02-14,PWHL,2023/2024,Regular Season
-17,14:18,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,26,Kendall Coyne Schofield,,,,,38,Emerance Maschmeyer,,,,,,,-50.7,15.0,28,2024-02-14,PWHL,2023/2024,Regular Season
-18,16:50,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,8,Natalie Snodgrass,,,,,35,Maddie Rooney,,,,,,,73.3,2.0,28,2024-02-14,PWHL,2023/2024,Regular Season
-19,0:36,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,10,Becca Gilmore,,,,,35,Maddie Rooney,,,,,,,51.3,2.0,28,2024-02-14,PWHL,2023/2024,Regular Season
-20,1:09,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,41,Denisa Křížová,,,,,38,Emerance Maschmeyer,,,,,,,-86.3,-7.6,28,2024-02-14,PWHL,2023/2024,Regular Season
-21,1:58,Penalty,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,3,Zoe Boyd,,,,,,,,,,,,,,,28,2024-02-14,PWHL,2023/2024,Regular Season
-22,2:20,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,13,Grace Zumwinkle,,,,,38,Emerance Maschmeyer,,,,,,,-81.0,28.9,28,2024-02-14,PWHL,2023/2024,Regular Season
-23,2:35,Goal,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v4,24,Abby Boreen,12,Kelly Pannek,16,Sophie Jaques,38,Emerance Maschmeyer,,2 12 13 16 24,Lee Stecklein - Kelly Pannek - Grace Zumwinkle - Sophie Jaques - Abby Boreen,,10 25 28 71,Becca Gilmore - Kristin Della Rovere - Amanda Boulier - Jincy Roese,-85.7,4.2,28,2024-02-14,PWHL,2023/2024,Regular Season
-24,2:54,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,21,Ashton Bell,,,,,35,Maddie Rooney,,,,,,,81.3,15.0,28,2024-02-14,PWHL,2023/2024,Regular Season
-25,4:50,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,25,Emma Greco,,,,,38,Emerance Maschmeyer,,,,,,,-79.7,0.8,28,2024-02-14,PWHL,2023/2024,Regular Season
-26,4:55,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,17,Gabbie Hughes,,,,,35,Maddie Rooney,,,,,,,80.0,-3.1,28,2024-02-14,PWHL,2023/2024,Regular Season
-27,7:05,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,14,Hayley Scamurra,,,,,35,Maddie Rooney,,,,,,,49.7,-5.4,28,2024-02-14,PWHL,2023/2024,Regular Season
-28,7:28,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,16,Kateřina Mrázová,,,,,35,Maddie Rooney,,,,,,,41.3,-28.3,28,2024-02-14,PWHL,2023/2024,Regular Season
-29,7:29,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,12,Kelly Pannek,,,,,38,Emerance Maschmeyer,,,,,,,-75.7,12.5,28,2024-02-14,PWHL,2023/2024,Regular Season
-30,9:40,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,25,Kristin Della Rovere,,,,,35,Maddie Rooney,,,,,,,58.0,34.9,28,2024-02-14,PWHL,2023/2024,Regular Season
-31,9:55,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,16,Sophie Jaques,,,,,38,Emerance Maschmeyer,,,,,,,-29.7,-36.5,28,2024-02-14,PWHL,2023/2024,Regular Season
-32,10:36,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,16,Sophie Jaques,,,,,38,Emerance Maschmeyer,,,,,,,-40.0,-15.6,28,2024-02-14,PWHL,2023/2024,Regular Season
-33,11:29,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,21,Liz Schepers,,,,,38,Emerance Maschmeyer,,,,,,,-80.0,-2.0,28,2024-02-14,PWHL,2023/2024,Regular Season
-34,14:10,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,12,Kelly Pannek,,,,,38,Emerance Maschmeyer,,,,,,,-69.0,-12.5,28,2024-02-14,PWHL,2023/2024,Regular Season
-35,16:50,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,22,Natalie Buchbinder,,,,,38,Emerance Maschmeyer,,,,,,,-6.3,38.2,28,2024-02-14,PWHL,2023/2024,Regular Season
-36,17:10,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,71,Jincy Roese,,,,,35,Maddie Rooney,,,,,,,78.7,-30.9,28,2024-02-14,PWHL,2023/2024,Regular Season
-37,0:34,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,12,Kelly Pannek,,,,,38,Emerance Maschmeyer,,,,,,,-43.0,-2.0,28,2024-02-14,PWHL,2023/2024,Regular Season
-38,1:29,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,13,Grace Zumwinkle,,,,,38,Emerance Maschmeyer,,,,,,,-83.7,5.4,28,2024-02-14,PWHL,2023/2024,Regular Season
-39,3:18,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,12,Kelly Pannek,,,,,38,Emerance Maschmeyer,,,,,,,-68.0,-23.0,28,2024-02-14,PWHL,2023/2024,Regular Season
-40,3:35,Goal,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,19,Maggie Flaherty,26,Kendall Coyne Schofield,24,Abby Boreen,38,Emerance Maschmeyer,,12 19 22 24 26,Kelly Pannek - Maggie Flaherty - Natalie Buchbinder - Abby Boreen - Kendall Coyne Schofield,,2 10 14 19 71,Aneta Tejralová - Becca Gilmore - Hayley Scamurra - Brianne Jenner - Jincy Roese,-29.0,36.5,28,2024-02-14,PWHL,2023/2024,Regular Season
-41,4:50,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,21,Ashton Bell,,,,,35,Maddie Rooney,,,,,,,39.3,19.0,28,2024-02-14,PWHL,2023/2024,Regular Season
-42,5:00,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,9,Daryl Watts,,,,,35,Maddie Rooney,,,,,,,61.0,15.9,28,2024-02-14,PWHL,2023/2024,Regular Season
-43,5:15,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,8,Natalie Snodgrass,,,,,35,Maddie Rooney,,,,,,,77.7,2.0,28,2024-02-14,PWHL,2023/2024,Regular Season
-44,6:16,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,3,Zoe Boyd,,,,,35,Maddie Rooney,,,,,,,31.3,-20.1,28,2024-02-14,PWHL,2023/2024,Regular Season
-45,6:50,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,7,Claire Butorac,,,,,38,Emerance Maschmeyer,,,,,,,-22.0,-24.1,28,2024-02-14,PWHL,2023/2024,Regular Season
-46,7:10,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,41,Denisa Křížová,,,,,38,Emerance Maschmeyer,,,,,,,-83.0,-6.5,28,2024-02-14,PWHL,2023/2024,Regular Season
-47,8:50,Penalty,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,7,Claire Butorac,,,,,,,,,,,,,,,28,2024-02-14,PWHL,2023/2024,Regular Season
-48,9:23,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v4,14,Hayley Scamurra,,,,,35,Maddie Rooney,,,,,,,77.0,-14.5,28,2024-02-14,PWHL,2023/2024,Regular Season
-49,9:25,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v4,88,Lexie Adzija,,,,,35,Maddie Rooney,,,,,,,81.0,0.8,28,2024-02-14,PWHL,2023/2024,Regular Season
-50,9:40,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v4,14,Hayley Scamurra,,,,,35,Maddie Rooney,,,,,,,67.0,-15.3,28,2024-02-14,PWHL,2023/2024,Regular Season
-51,11:11,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,12,Kelly Pannek,,,,,38,Emerance Maschmeyer,,,,,,,-62.0,23.0,28,2024-02-14,PWHL,2023/2024,Regular Season
-52,12:05,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,13,Grace Zumwinkle,,,,,38,Emerance Maschmeyer,,,,,,,-64.3,-21.8,28,2024-02-14,PWHL,2023/2024,Regular Season
-53,12:57,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,13,Grace Zumwinkle,,,,,38,Emerance Maschmeyer,,,,,,,-4.0,-33.4,28,2024-02-14,PWHL,2023/2024,Regular Season
-54,15:49,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,11,Akane Shiga,,,,,35,Maddie Rooney,,,,,,,65.3,21.0,28,2024-02-14,PWHL,2023/2024,Regular Season
-55,16:25,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,9,Daryl Watts,,,,,35,Maddie Rooney,,,,,,,72.0,-15.0,28,2024-02-14,PWHL,2023/2024,Regular Season
-56,17:19,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,26,Kendall Coyne Schofield,,,,,38,Emerance Maschmeyer,,,,,,,-80.3,-13.3,28,2024-02-14,PWHL,2023/2024,Regular Season
-57,18:19,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,15,Savannah Harmon,,,,,35,Maddie Rooney,,,,,,,71.0,-35.4,28,2024-02-14,PWHL,2023/2024,Regular Season
-58,19:20,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,9,Daryl Watts,,,,,35,Maddie Rooney,,,,,,,82.7,-21.2,28,2024-02-14,PWHL,2023/2024,Regular Season
-59,19:46,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,15,Savannah Harmon,,,,,35,Maddie Rooney,,,,,,,80.3,-10.2,28,2024-02-14,PWHL,2023/2024,Regular Season
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,xG,ScoreState,BoxID,game_id,game_date,competition,season,state
+1,0:42,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,23,Mellissa Channell-Watkins,,,,,38,Emerance Maschmeyer,,,,,,,60.0,-4.2,,0,O15,28,2024-02-14,PWHL,2023/2024,Regular Season
+2,2:41,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,19,Brianne Jenner,,,,,35,Maddie Rooney,,,,,,,36.7,-26.1,0.0400,0,O24,28,2024-02-14,PWHL,2023/2024,Regular Season
+3,3:11,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,26,Kendall Coyne Schofield,,,,,38,Emerance Maschmeyer,,,,,,,61.7,29.5,,0,O17,28,2024-02-14,PWHL,2023/2024,Regular Season
+4,4:56,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,10,Becca Gilmore,,,,,35,Maddie Rooney,,,,,,,85.0,-13.0,0.0659,0,O06,28,2024-02-14,PWHL,2023/2024,Regular Season
+5,5:20,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,10,Becca Gilmore,,,,,35,Maddie Rooney,,,,,,,70.3,15.6,,0,O17,28,2024-02-14,PWHL,2023/2024,Regular Season
+6,5:29,Goal,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,28,Amanda Boulier,2,Aneta Tejralová,10,Becca Gilmore,35,Maddie Rooney,,2 7 14 18 19,Lee Stecklein - Claire Butorac - Clair DeGeorge - Brittyn Fleming - Maggie Flaherty,,2 10 14 25 28,Aneta Tejralová - Becca Gilmore - Hayley Scamurra - Kristin Della Rovere - Amanda Boulier,53.0,12.5,0.0386,0,O22,28,2024-02-14,PWHL,2023/2024,Regular Season
+7,7:59,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,19,Maggie Flaherty,,,,,38,Emerance Maschmeyer,,,,,,,33.3,7.4,,-1,O25,28,2024-02-14,PWHL,2023/2024,Regular Season
+8,8:36,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,3,Zoe Boyd,,,,,35,Maddie Rooney,,,,,,,53.0,-16.7,,1,O20,28,2024-02-14,PWHL,2023/2024,Regular Season
+9,9:00,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,24,Abby Boreen,,,,,38,Emerance Maschmeyer,,,,,,,78.3,12.8,0.0758,-1,O08,28,2024-02-14,PWHL,2023/2024,Regular Season
+10,9:20,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,26,Kendall Coyne Schofield,,,,,38,Emerance Maschmeyer,,,,,,,80.3,-10.2,,-1,O06,28,2024-02-14,PWHL,2023/2024,Regular Season
+11,9:49,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,13,Grace Zumwinkle,,,,,38,Emerance Maschmeyer,,,,,,,53.0,19.3,0.0414,-1,O22,28,2024-02-14,PWHL,2023/2024,Regular Season
+12,10:40,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,21,Liz Schepers,,,,,38,Emerance Maschmeyer,,,,,,,64.3,-5.1,,-1,O14,28,2024-02-14,PWHL,2023/2024,Regular Season
+13,11:15,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,26,Emily Clark,,,,,35,Maddie Rooney,,,,,,,32.0,-7.1,0.0500,1,O25,28,2024-02-14,PWHL,2023/2024,Regular Season
+14,12:52,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,71,Jincy Roese,,,,,35,Maddie Rooney,,,,,,,69.0,2.0,0.1225,1,O15,28,2024-02-14,PWHL,2023/2024,Regular Season
+15,13:01,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,26,Kendall Coyne Schofield,,,,,38,Emerance Maschmeyer,,,,,,,76.3,-0.6,0.1328,-1,O11,28,2024-02-14,PWHL,2023/2024,Regular Season
+16,14:16,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,18,Brittyn Fleming,,,,,38,Emerance Maschmeyer,,,,,,,49.7,-30.6,0.0341,-1,O19,28,2024-02-14,PWHL,2023/2024,Regular Season
+17,14:18,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,26,Kendall Coyne Schofield,,,,,38,Emerance Maschmeyer,,,,,,,50.7,-15.0,0.0491,-1,O20,28,2024-02-14,PWHL,2023/2024,Regular Season
+18,16:50,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,8,Natalie Snodgrass,,,,,35,Maddie Rooney,,,,,,,73.3,2.0,0.1463,1,O11,28,2024-02-14,PWHL,2023/2024,Regular Season
+19,0:36,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,10,Becca Gilmore,,,,,35,Maddie Rooney,,,,,,,51.3,2.0,0.0682,1,O21,28,2024-02-14,PWHL,2023/2024,Regular Season
+20,1:09,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,41,Denisa Křížová,,,,,38,Emerance Maschmeyer,,,,,,,86.3,7.6,0.0758,-1,O08,28,2024-02-14,PWHL,2023/2024,Regular Season
+21,1:58,Penalty,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,3,Zoe Boyd,,,,,,,,,,,,,,,,1,,28,2024-02-14,PWHL,2023/2024,Regular Season
+22,2:20,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,13,Grace Zumwinkle,,,,,38,Emerance Maschmeyer,,,,,,,81.0,-28.9,,-1,O05,28,2024-02-14,PWHL,2023/2024,Regular Season
+23,2:35,Goal,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v4,24,Abby Boreen,12,Kelly Pannek,16,Sophie Jaques,38,Emerance Maschmeyer,,2 12 13 16 24,Lee Stecklein - Kelly Pannek - Grace Zumwinkle - Sophie Jaques - Abby Boreen,,10 25 28 71,Becca Gilmore - Kristin Della Rovere - Amanda Boulier - Jincy Roese,85.7,-4.2,0.3175,-1,O07,28,2024-02-14,PWHL,2023/2024,Regular Season
+24,2:54,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,21,Ashton Bell,,,,,35,Maddie Rooney,,,,,,,81.3,15.0,0.0709,0,O08,28,2024-02-14,PWHL,2023/2024,Regular Season
+25,4:50,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,25,Emma Greco,,,,,38,Emerance Maschmeyer,,,,,,,79.7,-0.8,0.1248,0,O11,28,2024-02-14,PWHL,2023/2024,Regular Season
+26,4:55,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,17,Gabbie Hughes,,,,,35,Maddie Rooney,,,,,,,80.0,-3.1,0.1248,0,O11,28,2024-02-14,PWHL,2023/2024,Regular Season
+27,7:05,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,14,Hayley Scamurra,,,,,35,Maddie Rooney,,,,,,,49.7,-5.4,0.0573,0,O21,28,2024-02-14,PWHL,2023/2024,Regular Season
+28,7:28,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,16,Kateřina Mrázová,,,,,35,Maddie Rooney,,,,,,,41.3,-28.3,0.0318,0,O19,28,2024-02-14,PWHL,2023/2024,Regular Season
+29,7:29,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,12,Kelly Pannek,,,,,38,Emerance Maschmeyer,,,,,,,75.7,-12.5,0.0659,0,O06,28,2024-02-14,PWHL,2023/2024,Regular Season
+30,9:40,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,25,Kristin Della Rovere,,,,,35,Maddie Rooney,,,,,,,58.0,34.9,0.0150,0,O18,28,2024-02-14,PWHL,2023/2024,Regular Season
+31,9:55,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,16,Sophie Jaques,,,,,38,Emerance Maschmeyer,,,,,,,29.7,36.5,0.0258,0,O26,28,2024-02-14,PWHL,2023/2024,Regular Season
+32,10:36,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,16,Sophie Jaques,,,,,38,Emerance Maschmeyer,,,,,,,40.0,15.6,0.0420,0,O25,28,2024-02-14,PWHL,2023/2024,Regular Season
+33,11:29,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,21,Liz Schepers,,,,,38,Emerance Maschmeyer,,,,,,,80.0,2.0,0.1248,0,O11,28,2024-02-14,PWHL,2023/2024,Regular Season
+34,14:10,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,12,Kelly Pannek,,,,,38,Emerance Maschmeyer,,,,,,,69.0,12.5,0.0899,0,O16,28,2024-02-14,PWHL,2023/2024,Regular Season
+35,16:50,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,22,Natalie Buchbinder,,,,,38,Emerance Maschmeyer,,,,,,,6.3,-38.2,0.0553,0,N01,28,2024-02-14,PWHL,2023/2024,Regular Season
+36,17:10,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,71,Jincy Roese,,,,,35,Maddie Rooney,,,,,,,78.7,-30.9,0.0177,0,O05,28,2024-02-14,PWHL,2023/2024,Regular Season
+37,0:34,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,12,Kelly Pannek,,,,,38,Emerance Maschmeyer,,,,,,,43.0,2.0,0.0573,0,O21,28,2024-02-14,PWHL,2023/2024,Regular Season
+38,1:29,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,13,Grace Zumwinkle,,,,,38,Emerance Maschmeyer,,,,,,,83.7,-5.4,0.2112,0,O07,28,2024-02-14,PWHL,2023/2024,Regular Season
+39,3:18,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,12,Kelly Pannek,,,,,38,Emerance Maschmeyer,,,,,,,68.0,23.0,0.0409,0,O17,28,2024-02-14,PWHL,2023/2024,Regular Season
+40,3:35,Goal,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,19,Maggie Flaherty,26,Kendall Coyne Schofield,24,Abby Boreen,38,Emerance Maschmeyer,,12 19 22 24 26,Kelly Pannek - Maggie Flaherty - Natalie Buchbinder - Abby Boreen - Kendall Coyne Schofield,,2 10 14 19 71,Aneta Tejralová - Becca Gilmore - Hayley Scamurra - Brianne Jenner - Jincy Roese,29.0,-36.5,0.0400,0,O24,28,2024-02-14,PWHL,2023/2024,Regular Season
+41,4:50,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,21,Ashton Bell,,,,,35,Maddie Rooney,,,,,,,39.3,19.0,0.0277,-1,O26,28,2024-02-14,PWHL,2023/2024,Regular Season
+42,5:00,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,9,Daryl Watts,,,,,35,Maddie Rooney,,,,,,,61.0,15.9,,-1,O16,28,2024-02-14,PWHL,2023/2024,Regular Season
+43,5:15,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,8,Natalie Snodgrass,,,,,35,Maddie Rooney,,,,,,,77.7,2.0,0.1328,-1,O11,28,2024-02-14,PWHL,2023/2024,Regular Season
+44,6:16,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,3,Zoe Boyd,,,,,35,Maddie Rooney,,,,,,,31.3,-20.1,0.0450,-1,O25,28,2024-02-14,PWHL,2023/2024,Regular Season
+45,6:50,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,7,Claire Butorac,,,,,38,Emerance Maschmeyer,,,,,,,22.0,24.1,0.0657,1,N03,28,2024-02-14,PWHL,2023/2024,Regular Season
+46,7:10,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,41,Denisa Křížová,,,,,38,Emerance Maschmeyer,,,,,,,83.0,6.5,0.2435,1,O07,28,2024-02-14,PWHL,2023/2024,Regular Season
+47,8:50,Penalty,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,7,Claire Butorac,,,,,,,,,,,,,,,,1,,28,2024-02-14,PWHL,2023/2024,Regular Season
+48,9:23,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v4,14,Hayley Scamurra,,,,,35,Maddie Rooney,,,,,,,77.0,-14.5,0.1093,-1,O06,28,2024-02-14,PWHL,2023/2024,Regular Season
+49,9:25,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v4,88,Lexie Adzija,,,,,35,Maddie Rooney,,,,,,,81.0,0.8,0.1985,-1,O11,28,2024-02-14,PWHL,2023/2024,Regular Season
+50,9:40,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v4,14,Hayley Scamurra,,,,,35,Maddie Rooney,,,,,,,67.0,-15.3,0.0627,-1,O13,28,2024-02-14,PWHL,2023/2024,Regular Season
+51,11:11,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,12,Kelly Pannek,,,,,38,Emerance Maschmeyer,,,,,,,62.0,-23.0,0.0443,1,O13,28,2024-02-14,PWHL,2023/2024,Regular Season
+52,12:05,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,13,Grace Zumwinkle,,,,,38,Emerance Maschmeyer,,,,,,,64.3,21.8,0.0488,1,O17,28,2024-02-14,PWHL,2023/2024,Regular Season
+53,12:57,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,13,Grace Zumwinkle,,,,,38,Emerance Maschmeyer,,,,,,,4.0,33.4,0.0657,1,N03,28,2024-02-14,PWHL,2023/2024,Regular Season
+54,15:49,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,11,Akane Shiga,,,,,35,Maddie Rooney,,,,,,,65.3,21.0,0.0438,-1,O17,28,2024-02-14,PWHL,2023/2024,Regular Season
+55,16:25,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,9,Daryl Watts,,,,,35,Maddie Rooney,,,,,,,72.0,-15.0,0.0398,-1,O13,28,2024-02-14,PWHL,2023/2024,Regular Season
+56,17:19,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,26,Kendall Coyne Schofield,,,,,38,Emerance Maschmeyer,,,,,,,80.3,13.3,0.0841,1,O08,28,2024-02-14,PWHL,2023/2024,Regular Season
+57,18:19,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,15,Savannah Harmon,,,,,35,Maddie Rooney,,,,,,,71.0,-35.4,0.0148,-1,O12,28,2024-02-14,PWHL,2023/2024,Regular Season
+58,19:20,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,9,Daryl Watts,,,,,35,Maddie Rooney,,,,,,,82.7,-21.2,0.0190,-1,O05,28,2024-02-14,PWHL,2023/2024,Regular Season
+59,19:46,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,15,Savannah Harmon,,,,,35,Maddie Rooney,,,,,,,80.3,-10.2,0.0705,-1,O06,28,2024-02-14,PWHL,2023/2024,Regular Season

@@ -1,71 +1,71 @@
-id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
-1,1:16,Block,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v5,9,Kati Tabin,,,,,39,Abigail Levy,,,,,,,34.7,-21.5,35,2024-02-21,PWHL,2023/2024,Regular Season
-2,1:32,Penalty,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v5,15,Maureen Murphy,,,,,,,,,,,,,,,35,2024-02-21,PWHL,2023/2024,Regular Season
-3,2:43,Goal,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,5v4,25,Alex Carpenter,11,Abby Roque,14,Jaime Bourbonnais,35,Ann-Renée Desbiens,,9 11 14 17 25,Jessie Eldridge - Abby Roque - Jaime Bourbonnais - Ella Shelton - Alex Carpenter,,4 8 9 26,Catherine Daoust - Gabrielle David - Kati Tabin - Sarah Bujold,-67.0,16.1,35,2024-02-21,PWHL,2023/2024,Regular Season
-4,5:05,Penalty,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,5v5,9,Jessie Eldridge,,,,,,,,,,,,,,,35,2024-02-21,PWHL,2023/2024,Regular Season
-5,7:11,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v5,16,Sarah Lefort,,,,,39,Abigail Levy,,,,,,,84.7,10.2,35,2024-02-21,PWHL,2023/2024,Regular Season
-6,9:33,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v5,28,Catherine Dubois,,,,,39,Abigail Levy,,,,,,,54.0,-7.4,35,2024-02-21,PWHL,2023/2024,Regular Season
-7,10:25,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,5v5,28,Micah Zandee-Hart,,,,,35,Ann-Renée Desbiens,,,,,,,-28.7,23.0,35,2024-02-21,PWHL,2023/2024,Regular Season
-8,12:29,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,5v5,27,Jade Downie-Landry,,,,,35,Ann-Renée Desbiens,,,,,,,-38.7,-7.6,35,2024-02-21,PWHL,2023/2024,Regular Season
-9,12:42,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,5v5,19,Paetyn Levis,,,,,35,Ann-Renée Desbiens,,,,,,,-67.7,-4.2,35,2024-02-21,PWHL,2023/2024,Regular Season
-10,13:34,Block,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,5v5,6,Brooke Hobson,,,,,35,Ann-Renée Desbiens,,,,,,,-59.7,-6.0,35,2024-02-21,PWHL,2023/2024,Regular Season
-11,13:53,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v5,7,Laura Stacey,,,,,39,Abigail Levy,,,,,,,57.7,13.3,35,2024-02-21,PWHL,2023/2024,Regular Season
-12,14:22,Block,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v5,12,Leah Lum,,,,,39,Abigail Levy,,,,,,,33.0,30.3,35,2024-02-21,PWHL,2023/2024,Regular Season
-13,16:19,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v5,4,Catherine Daoust,,,,,39,Abigail Levy,,,,,,,71.0,25.5,35,2024-02-21,PWHL,2023/2024,Regular Season
-14,16:33,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v5,4,Catherine Daoust,,,,,39,Abigail Levy,,,,,,,38.3,23.5,35,2024-02-21,PWHL,2023/2024,Regular Season
-15,17:10,Block,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,5v5,11,Abby Roque,,,,,35,Ann-Renée Desbiens,,,,,,,-62.3,30.0,35,2024-02-21,PWHL,2023/2024,Regular Season
-16,17:25,Penalty,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,5v5,67,Emma Woods,,,,,,,,,,,,,,,35,2024-02-21,PWHL,2023/2024,Regular Season
-17,18:16,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v4,21,Tereza Vanišová,,,,,39,Abigail Levy,,,,,,,56.7,4.0,35,2024-02-21,PWHL,2023/2024,Regular Season
-18,18:47,Goal,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,4v5,25,Alex Carpenter,11,Abby Roque,,,35,Ann-Renée Desbiens,,4 11 25 28,Taylor Baker - Abby Roque - Alex Carpenter - Micah Zandee-Hart,,7 21 23 28 29,Laura Stacey - Tereza Vanišová - Erin Ambrose - Catherine Dubois - Marie-Philip Poulin,-70.7,-0.8,35,2024-02-21,PWHL,2023/2024,Regular Season
-19,19:47,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,5v5,18,Élizabeth Giguère,,,,,35,Ann-Renée Desbiens,,,,,,,-47.7,-30.3,35,2024-02-21,PWHL,2023/2024,Regular Season
-20,1:11,Penalty,New York Sirens,Home,New York Sirens,Montréal Victoire,2,event,5v5,27,Jade Downie-Landry,,,,,,,,,,,,,,,35,2024-02-21,PWHL,2023/2024,Regular Season
-21,1:41,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,2,event,5v4,23,Erin Ambrose,,,,,39,Abigail Levy,,,,,,,56.7,22.4,35,2024-02-21,PWHL,2023/2024,Regular Season
-22,2:02,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,2,event,5v4,28,Catherine Dubois,,,,,39,Abigail Levy,,,,,,,81.0,6.0,35,2024-02-21,PWHL,2023/2024,Regular Season
-23,2:03,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,2,event,4v5,28,Micah Zandee-Hart,,,,,35,Ann-Renée Desbiens,,,,,,,82.0,4.2,35,2024-02-21,PWHL,2023/2024,Regular Season
-24,2:44,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,2,event,5v4,7,Laura Stacey,,,,,39,Abigail Levy,,,,,,,70.0,-13.9,35,2024-02-21,PWHL,2023/2024,Regular Season
-25,3:01,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,2,event,5v4,15,Maureen Murphy,,,,,39,Abigail Levy,,,,,,,47.0,8.2,35,2024-02-21,PWHL,2023/2024,Regular Season
-26,4:54,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,2,event,5v5,27,Jade Downie-Landry,,,,,35,Ann-Renée Desbiens,,,,,,,-48.7,-3.7,35,2024-02-21,PWHL,2023/2024,Regular Season
-27,7:40,Penalty,Montréal Victoire,Away,New York Sirens,Montréal Victoire,2,event,5v5,16,Sarah Lefort,,,,,,,,,,,,,,,35,2024-02-21,PWHL,2023/2024,Regular Season
-28,15:12,Penalty,New York Sirens,Home,New York Sirens,Montréal Victoire,2,event,5v5,28,Micah Zandee-Hart,,,,,,,,,,,,,,,35,2024-02-21,PWHL,2023/2024,Regular Season
-29,16:04,Goal,Montréal Victoire,Away,New York Sirens,Montréal Victoire,2,event,5v4,7,Laura Stacey,28,Catherine Dubois,21,Tereza Vanišová,39,Abigail Levy,,11 17 25 59,Abby Roque - Ella Shelton - Alex Carpenter - Johanna Fällman,,7 21 23 28 29,Laura Stacey - Tereza Vanišová - Erin Ambrose - Catherine Dubois - Marie-Philip Poulin,61.0,26.9,35,2024-02-21,PWHL,2023/2024,Regular Season
-30,17:25,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,2,event,5v5,14,Jillian Dempsey,,,,,39,Abigail Levy,,,,,,,-77.3,-17.6,35,2024-02-21,PWHL,2023/2024,Regular Season
-31,19:24,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,2,event,5v5,29,Marie-Philip Poulin,,,,,39,Abigail Levy,,,,,,,53.3,-36.8,35,2024-02-21,PWHL,2023/2024,Regular Season
-32,1:02,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,12,Chloé Aurard,,,,,35,Ann-Renée Desbiens,,,,,,,-53.7,10.8,35,2024-02-21,PWHL,2023/2024,Regular Season
-33,3:04,Block,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,2,Mariah Keopple,,,,,39,Abigail Levy,,,,,,,-57.0,-24.6,35,2024-02-21,PWHL,2023/2024,Regular Season
-34,4:00,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,10,Kayla Vespa,,,,,35,Ann-Renée Desbiens,,,,,,,-50.0,18.1,35,2024-02-21,PWHL,2023/2024,Regular Season
-35,5:17,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,7,Laura Stacey,,,,,39,Abigail Levy,,,,,,,44.3,-24.4,35,2024-02-21,PWHL,2023/2024,Regular Season
-36,5:27,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,42,Claire Dalton,,,,,39,Abigail Levy,,,,,,,73.0,19.0,35,2024-02-21,PWHL,2023/2024,Regular Season
-37,5:32,Penalty,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,4,Taylor Baker,,,,,,,,,,,,,,,35,2024-02-21,PWHL,2023/2024,Regular Season
-38,6:21,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v4,12,Leah Lum,,,,,39,Abigail Levy,,,,,,,30.7,2.5,35,2024-02-21,PWHL,2023/2024,Regular Season
-39,6:44,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v4,21,Tereza Vanišová,,,,,39,Abigail Levy,,,,,,,65.3,17.8,35,2024-02-21,PWHL,2023/2024,Regular Season
-40,8:29,Goal,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,15,Maureen Murphy,21,Tereza Vanišová,6,Madison Bizal,39,Abigail Levy,,6 9 12 14 27,Brooke Hobson - Jessie Eldridge - Chloé Aurard - Jaime Bourbonnais - Jade Downie-Landry,,6 10 15 21 43,Madison Bizal - Brigitte Laganière - Maureen Murphy - Tereza Vanišová - Kristin O'Neill,64.7,-11.9,35,2024-02-21,PWHL,2023/2024,Regular Season
-41,8:44,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,11,Abby Roque,,,,,35,Ann-Renée Desbiens,,,,,,,-42.7,25.2,35,2024-02-21,PWHL,2023/2024,Regular Season
-42,10:02,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,27,Jade Downie-Landry,,,,,35,Ann-Renée Desbiens,,,,,,,-60.3,13.9,35,2024-02-21,PWHL,2023/2024,Regular Season
-43,10:41,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,9,Jessie Eldridge,,,,,35,Ann-Renée Desbiens,,,,,,,-77.0,-12.8,35,2024-02-21,PWHL,2023/2024,Regular Season
-44,11:18,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,13,Alexandra Labelle,,,,,35,Ann-Renée Desbiens,,,,,,,-45.0,-26.4,35,2024-02-21,PWHL,2023/2024,Regular Season
-45,12:37,Block,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,12,Chloé Aurard,,,,,35,Ann-Renée Desbiens,,,,,,,-59.0,18.7,35,2024-02-21,PWHL,2023/2024,Regular Season
-46,13:04,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,21,Tereza Vanišová,,,,,39,Abigail Levy,,,,,,,67.7,17.3,35,2024-02-21,PWHL,2023/2024,Regular Season
-47,13:25,Block,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,28,Catherine Dubois,,,,,39,Abigail Levy,,,,,,,67.0,26.4,35,2024-02-21,PWHL,2023/2024,Regular Season
-48,14:37,Block,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,29,Marie-Philip Poulin,,,,,39,Abigail Levy,,,,,,,63.7,4.2,35,2024-02-21,PWHL,2023/2024,Regular Season
-49,14:54,Block,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,23,Erin Ambrose,,,,,39,Abigail Levy,,,,,,,41.0,10.5,35,2024-02-21,PWHL,2023/2024,Regular Season
-50,15:22,Block,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,10,Brigitte Laganière,,,,,39,Abigail Levy,,,,,,,68.0,2.3,35,2024-02-21,PWHL,2023/2024,Regular Season
-51,15:42,Penalty,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,26,Sarah Bujold,,,,,,,,,,,,,,,35,2024-02-21,PWHL,2023/2024,Regular Season
-52,16:11,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v4,14,Jaime Bourbonnais,,,,,35,Ann-Renée Desbiens,,,,,,,-48.3,-22.1,35,2024-02-21,PWHL,2023/2024,Regular Season
-53,17:50,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,27,Jade Downie-Landry,,,,,35,Ann-Renée Desbiens,,,,,,,-31.0,-6.5,35,2024-02-21,PWHL,2023/2024,Regular Season
-54,17:53,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,9,Jessie Eldridge,,,,,35,Ann-Renée Desbiens,,,,,,,-57.7,3.4,35,2024-02-21,PWHL,2023/2024,Regular Season
-55,0:15,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,OT1,event,3v3,29,Marie-Philip Poulin,,,,,39,Abigail Levy,,,,,,,-75.0,9.3,35,2024-02-21,PWHL,2023/2024,Regular Season
-56,0:56,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,OT1,event,3v3,7,Laura Stacey,,,,,39,Abigail Levy,,,,,,,-74.7,11.9,35,2024-02-21,PWHL,2023/2024,Regular Season
-57,1:22,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,OT1,event,3v3,9,Jessie Eldridge,,,,,35,Ann-Renée Desbiens,,,,,,,71.7,2.8,35,2024-02-21,PWHL,2023/2024,Regular Season
-58,2:01,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,OT1,event,3v3,25,Alex Carpenter,,,,,35,Ann-Renée Desbiens,,,,,,,52.3,6.5,35,2024-02-21,PWHL,2023/2024,Regular Season
-59,2:09,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,OT1,event,3v3,25,Alex Carpenter,,,,,35,Ann-Renée Desbiens,,,,,,,-87.7,8.2,35,2024-02-21,PWHL,2023/2024,Regular Season
-60,4:40,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,OT1,event,3v3,29,Marie-Philip Poulin,,,,,39,Abigail Levy,,,,,,,-69.7,6.8,35,2024-02-21,PWHL,2023/2024,Regular Season
-61,4:52,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,OT1,event,3v3,42,Claire Dalton,,,,,39,Abigail Levy,,,,,,,-67.0,-24.9,35,2024-02-21,PWHL,2023/2024,Regular Season
-62,5:00,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,OT1,event,3v3,25,Alex Carpenter,,,,,35,Ann-Renée Desbiens,,,,,,,21.0,31.4,35,2024-02-21,PWHL,2023/2024,Regular Season
-63,,SO Miss,New York Sirens,Home,New York Sirens,Montréal Victoire,SO,event,1v0,18,Élizabeth Giguère,,,,,35,Ann-Renée Desbiens,,,,,,,,,35,2024-02-21,PWHL,2023/2024,Regular Season
-64,,SO Miss,Montréal Victoire,Away,New York Sirens,Montréal Victoire,SO,event,1v0,29,Marie-Philip Poulin,,,,,39,Abigail Levy,,,,,,,,,35,2024-02-21,PWHL,2023/2024,Regular Season
-65,,SO Miss,New York Sirens,Home,New York Sirens,Montréal Victoire,SO,event,1v0,25,Alex Carpenter,,,,,35,Ann-Renée Desbiens,,,,,,,,,35,2024-02-21,PWHL,2023/2024,Regular Season
-66,,SO Miss,Montréal Victoire,Away,New York Sirens,Montréal Victoire,SO,event,1v0,21,Tereza Vanišová,,,,,39,Abigail Levy,,,,,,,,,35,2024-02-21,PWHL,2023/2024,Regular Season
-67,,SO Goal,New York Sirens,Home,New York Sirens,Montréal Victoire,SO,event,1v0,,,,,,,35,Ann-Renée Desbiens,,,,,,,,,35,2024-02-21,PWHL,2023/2024,Regular Season
-68,,SO Miss,Montréal Victoire,Away,New York Sirens,Montréal Victoire,SO,event,1v0,29,Marie-Philip Poulin,,,,,39,Abigail Levy,,,,,,,,,35,2024-02-21,PWHL,2023/2024,Regular Season
-69,,SO Goal,New York Sirens,Home,New York Sirens,Montréal Victoire,SO,event,1v0,,,,,,,35,Ann-Renée Desbiens,,,,,,,,,35,2024-02-21,PWHL,2023/2024,Regular Season
-70,,SO Miss,Montréal Victoire,Away,New York Sirens,Montréal Victoire,SO,event,1v0,7,Laura Stacey,,,,,39,Abigail Levy,,,,,,,,,35,2024-02-21,PWHL,2023/2024,Regular Season
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,xG,ScoreState,BoxID,game_id,game_date,competition,season,state
+1,1:16,Block,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v5,9,Kati Tabin,,,,,39,Abbey Levy,,,,,,,34.7,-21.5,,0,O24,35,2024-02-21,PWHL,2023/2024,Regular Season
+2,1:32,Penalty,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v5,15,Maureen Murphy,,,,,,,,,,,,,,,,0,,35,2024-02-21,PWHL,2023/2024,Regular Season
+3,2:43,Goal,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,5v4,25,Alex Carpenter,11,Abby Roque,14,Jaime Bourbonnais,35,Ann-Renée Desbiens,,9 11 14 17 25,Jessie Eldridge - Abby Roque - Jaime Bourbonnais - Ella Shelton - Alex Carpenter,,4 8 9 26,Catherine Daoust - Gabrielle David - Kati Tabin - Sarah Bujold,67.0,-16.1,0.0586,0,O13,35,2024-02-21,PWHL,2023/2024,Regular Season
+4,5:05,Penalty,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,5v5,9,Jessie Eldridge,,,,,,,,,,,,,,,,1,,35,2024-02-21,PWHL,2023/2024,Regular Season
+5,7:11,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v5,16,Sarah Lefort,,,,,39,Abbey Levy,,,,,,,84.7,10.2,0.0758,-1,O08,35,2024-02-21,PWHL,2023/2024,Regular Season
+6,9:33,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v5,28,Catherine Dubois,,,,,39,Abbey Levy,,,,,,,54.0,-7.4,0.0614,-1,O21,35,2024-02-21,PWHL,2023/2024,Regular Season
+7,10:25,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,5v5,28,Micah Zandee-Hart,,,,,35,Ann-Renée Desbiens,,,,,,,28.7,-23.0,0.0477,1,O24,35,2024-02-21,PWHL,2023/2024,Regular Season
+8,12:29,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,5v5,27,Jade Downie-Landry,,,,,35,Ann-Renée Desbiens,,,,,,,38.7,7.6,0.0500,1,O25,35,2024-02-21,PWHL,2023/2024,Regular Season
+9,12:42,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,5v5,19,Paetyn Levis,,,,,35,Ann-Renée Desbiens,,,,,,,67.7,4.2,0.1061,1,O16,35,2024-02-21,PWHL,2023/2024,Regular Season
+10,13:34,Block,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,5v5,6,Brooke Hobson,,,,,35,Ann-Renée Desbiens,,,,,,,59.7,6.0,,1,O15,35,2024-02-21,PWHL,2023/2024,Regular Season
+11,13:53,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v5,7,Laura Stacey,,,,,39,Abbey Levy,,,,,,,57.7,13.3,0.0959,-1,O16,35,2024-02-21,PWHL,2023/2024,Regular Season
+12,14:22,Block,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v5,12,Leah Lum,,,,,39,Abbey Levy,,,,,,,33.0,30.3,,-1,O26,35,2024-02-21,PWHL,2023/2024,Regular Season
+13,16:19,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v5,4,Catherine Daoust,,,,,39,Abbey Levy,,,,,,,71.0,25.5,0.0161,-1,O18,35,2024-02-21,PWHL,2023/2024,Regular Season
+14,16:33,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v5,4,Catherine Daoust,,,,,39,Abbey Levy,,,,,,,38.3,23.5,0.0277,-1,O26,35,2024-02-21,PWHL,2023/2024,Regular Season
+15,17:10,Block,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,5v5,11,Abby Roque,,,,,35,Ann-Renée Desbiens,,,,,,,62.3,-30.0,,1,O12,35,2024-02-21,PWHL,2023/2024,Regular Season
+16,17:25,Penalty,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,5v5,67,Emma Woods,,,,,,,,,,,,,,,,1,,35,2024-02-21,PWHL,2023/2024,Regular Season
+17,18:16,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v4,21,Tereza Vanišová,,,,,39,Abbey Levy,,,,,,,56.7,4.0,0.0956,-1,O21,35,2024-02-21,PWHL,2023/2024,Regular Season
+18,18:47,Goal,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,4v5,25,Alex Carpenter,11,Abby Roque,,,35,Ann-Renée Desbiens,,4 11 25 28,Taylor Baker - Abby Roque - Alex Carpenter - Micah Zandee-Hart,,7 21 23 28 29,Laura Stacey - Tereza Vanišová - Erin Ambrose - Catherine Dubois - Marie-Philip Poulin,70.7,0.8,0.1974,1,O15,35,2024-02-21,PWHL,2023/2024,Regular Season
+19,19:47,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,5v5,18,Élizabeth Giguère,,,,,35,Ann-Renée Desbiens,,,,,,,47.7,30.3,0.0232,2,O23,35,2024-02-21,PWHL,2023/2024,Regular Season
+20,1:11,Penalty,New York Sirens,Home,New York Sirens,Montréal Victoire,2,event,5v5,27,Jade Downie-Landry,,,,,,,,,,,,,,,,2,,35,2024-02-21,PWHL,2023/2024,Regular Season
+21,1:41,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,2,event,5v4,23,Erin Ambrose,,,,,39,Abbey Levy,,,,,,,56.7,22.4,0.0263,-2,O23,35,2024-02-21,PWHL,2023/2024,Regular Season
+22,2:02,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,2,event,5v4,28,Catherine Dubois,,,,,39,Abbey Levy,,,,,,,81.0,6.0,0.2002,-2,O11,35,2024-02-21,PWHL,2023/2024,Regular Season
+23,2:03,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,2,event,4v5,28,Micah Zandee-Hart,,,,,35,Ann-Renée Desbiens,,,,,,,-82.0,-4.2,0.1372,2,D11,35,2024-02-21,PWHL,2023/2024,Regular Season
+24,2:44,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,2,event,5v4,7,Laura Stacey,,,,,39,Abbey Levy,,,,,,,70.0,-13.9,0.0634,-2,O13,35,2024-02-21,PWHL,2023/2024,Regular Season
+25,3:01,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,2,event,5v4,15,Maureen Murphy,,,,,39,Abbey Levy,,,,,,,47.0,8.2,0.0965,-2,O21,35,2024-02-21,PWHL,2023/2024,Regular Season
+26,4:54,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,2,event,5v5,27,Jade Downie-Landry,,,,,35,Ann-Renée Desbiens,,,,,,,48.7,3.7,0.0858,2,O21,35,2024-02-21,PWHL,2023/2024,Regular Season
+27,7:40,Penalty,Montréal Victoire,Away,New York Sirens,Montréal Victoire,2,event,5v5,16,Sarah Lefort,,,,,,,,,,,,,,,,-2,,35,2024-02-21,PWHL,2023/2024,Regular Season
+28,15:12,Penalty,New York Sirens,Home,New York Sirens,Montréal Victoire,2,event,5v5,28,Micah Zandee-Hart,,,,,,,,,,,,,,,,2,,35,2024-02-21,PWHL,2023/2024,Regular Season
+29,16:04,Goal,Montréal Victoire,Away,New York Sirens,Montréal Victoire,2,event,5v4,7,Laura Stacey,28,Catherine Dubois,21,Tereza Vanišová,39,Abbey Levy,,11 17 25 59,Abby Roque - Ella Shelton - Alex Carpenter - Johanna Fällman,,7 21 23 28 29,Laura Stacey - Tereza Vanišová - Erin Ambrose - Catherine Dubois - Marie-Philip Poulin,61.0,26.9,0.0697,-2,O17,35,2024-02-21,PWHL,2023/2024,Regular Season
+30,17:25,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,2,event,5v5,14,Jillian Dempsey,,,,,39,Abbey Levy,,,,,,,-77.3,-17.6,0.0591,-1,D08,35,2024-02-21,PWHL,2023/2024,Regular Season
+31,19:24,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,2,event,5v5,29,Marie-Philip Poulin,,,,,39,Abbey Levy,,,,,,,53.3,-36.8,0.0341,-1,O19,35,2024-02-21,PWHL,2023/2024,Regular Season
+32,1:02,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,12,Chloé Aurard-Bushee,,,,,35,Ann-Renée Desbiens,,,,,,,53.7,-10.8,0.0546,1,O20,35,2024-02-21,PWHL,2023/2024,Regular Season
+33,3:04,Block,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,2,Mariah Keopple,,,,,39,Abbey Levy,,,,,,,-57.0,-24.6,,-1,D23,35,2024-02-21,PWHL,2023/2024,Regular Season
+34,4:00,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,10,Kayla Vespa,,,,,35,Ann-Renée Desbiens,,,,,,,50.0,-18.1,0.0546,1,O20,35,2024-02-21,PWHL,2023/2024,Regular Season
+35,5:17,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,7,Laura Stacey,,,,,39,Abbey Levy,,,,,,,44.3,-24.4,0.0491,-1,O20,35,2024-02-21,PWHL,2023/2024,Regular Season
+36,5:27,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,42,Claire Dalton,,,,,39,Abbey Levy,,,,,,,73.0,19.0,0.0758,-1,O08,35,2024-02-21,PWHL,2023/2024,Regular Season
+37,5:32,Penalty,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,4,Taylor Baker,,,,,,,,,,,,,,,,1,,35,2024-02-21,PWHL,2023/2024,Regular Season
+38,6:21,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v4,12,Leah Lum,,,,,39,Abbey Levy,,,,,,,30.7,2.5,0.0707,-1,O25,35,2024-02-21,PWHL,2023/2024,Regular Season
+39,6:44,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v4,21,Tereza Vanišová,,,,,39,Abbey Levy,,,,,,,65.3,17.8,0.0690,-1,O17,35,2024-02-21,PWHL,2023/2024,Regular Season
+40,8:29,Goal,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,15,Maureen Murphy,21,Tereza Vanišová,6,Madison Bizal,39,Abbey Levy,,6 9 12 14 27,Brooke Hobson - Jessie Eldridge - Chloé Aurard-Bushee - Jaime Bourbonnais - Jade Downie-Landry,,6 10 15 21 43,Madison Bizal - Brigitte Laganière - Maureen Murphy - Tereza Vanišová - Kristin O'Neill,64.7,-11.9,0.0838,-1,O14,35,2024-02-21,PWHL,2023/2024,Regular Season
+41,8:44,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,11,Abby Roque,,,,,35,Ann-Renée Desbiens,,,,,,,42.7,-25.2,0.0458,0,O20,35,2024-02-21,PWHL,2023/2024,Regular Season
+42,10:02,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,27,Jade Downie-Landry,,,,,35,Ann-Renée Desbiens,,,,,,,60.3,-13.9,0.0785,0,O14,35,2024-02-21,PWHL,2023/2024,Regular Season
+43,10:41,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,9,Jessie Eldridge,,,,,35,Ann-Renée Desbiens,,,,,,,77.0,12.8,0.0709,0,O08,35,2024-02-21,PWHL,2023/2024,Regular Season
+44,11:18,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,13,Alexandra Labelle,,,,,35,Ann-Renée Desbiens,,,,,,,45.0,26.4,0.0152,0,O23,35,2024-02-21,PWHL,2023/2024,Regular Season
+45,12:37,Block,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,12,Chloé Aurard-Bushee,,,,,35,Ann-Renée Desbiens,,,,,,,59.0,-18.7,,0,O14,35,2024-02-21,PWHL,2023/2024,Regular Season
+46,13:04,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,21,Tereza Vanišová,,,,,39,Abbey Levy,,,,,,,67.7,17.3,0.0409,0,O17,35,2024-02-21,PWHL,2023/2024,Regular Season
+47,13:25,Block,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,28,Catherine Dubois,,,,,39,Abbey Levy,,,,,,,67.0,26.4,,0,O17,35,2024-02-21,PWHL,2023/2024,Regular Season
+48,14:37,Block,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,29,Marie-Philip Poulin,,,,,39,Abbey Levy,,,,,,,63.7,4.2,,0,O15,35,2024-02-21,PWHL,2023/2024,Regular Season
+49,14:54,Block,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,23,Erin Ambrose,,,,,39,Abbey Levy,,,,,,,41.0,10.5,,0,O21,35,2024-02-21,PWHL,2023/2024,Regular Season
+50,15:22,Block,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,10,Brigitte Laganière,,,,,39,Abbey Levy,,,,,,,68.0,2.3,,0,O15,35,2024-02-21,PWHL,2023/2024,Regular Season
+51,15:42,Penalty,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,26,Sarah Bujold,,,,,,,,,,,,,,,,0,,35,2024-02-21,PWHL,2023/2024,Regular Season
+52,16:11,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v4,14,Jaime Bourbonnais,,,,,35,Ann-Renée Desbiens,,,,,,,48.3,22.1,0.0610,0,O22,35,2024-02-21,PWHL,2023/2024,Regular Season
+53,17:50,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,27,Jade Downie-Landry,,,,,35,Ann-Renée Desbiens,,,,,,,31.0,6.5,0.0420,0,O25,35,2024-02-21,PWHL,2023/2024,Regular Season
+54,17:53,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,9,Jessie Eldridge,,,,,35,Ann-Renée Desbiens,,,,,,,57.7,-3.4,0.1041,0,O15,35,2024-02-21,PWHL,2023/2024,Regular Season
+55,0:15,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,OT1,event,3v3,29,Marie-Philip Poulin,,,,,39,Abbey Levy,,,,,,,-75.0,9.3,0.0553,0,D11,35,2024-02-21,PWHL,2023/2024,Regular Season
+56,0:56,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,OT1,event,3v3,7,Laura Stacey,,,,,39,Abbey Levy,,,,,,,-74.7,11.9,0.0553,0,D06,35,2024-02-21,PWHL,2023/2024,Regular Season
+57,1:22,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,OT1,event,3v3,9,Jessie Eldridge,,,,,35,Ann-Renée Desbiens,,,,,,,-71.7,-2.8,0.0553,0,D16,35,2024-02-21,PWHL,2023/2024,Regular Season
+58,2:01,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,OT1,event,3v3,25,Alex Carpenter,,,,,35,Ann-Renée Desbiens,,,,,,,-52.3,-6.5,0.0553,0,D21,35,2024-02-21,PWHL,2023/2024,Regular Season
+59,2:09,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,OT1,event,3v3,25,Alex Carpenter,,,,,35,Ann-Renée Desbiens,,,,,,,87.7,-8.2,0.0659,0,O06,35,2024-02-21,PWHL,2023/2024,Regular Season
+60,4:40,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,OT1,event,3v3,29,Marie-Philip Poulin,,,,,39,Abbey Levy,,,,,,,-69.7,6.8,0.0553,0,D14,35,2024-02-21,PWHL,2023/2024,Regular Season
+61,4:52,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,OT1,event,3v3,42,Claire Dalton,,,,,39,Abbey Levy,,,,,,,-67.0,-24.9,0.0553,0,D17,35,2024-02-21,PWHL,2023/2024,Regular Season
+62,5:00,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,OT1,event,3v3,25,Alex Carpenter,,,,,35,Ann-Renée Desbiens,,,,,,,-21.0,-31.4,0.0553,0,N04,35,2024-02-21,PWHL,2023/2024,Regular Season
+63,,SO Miss,New York Sirens,Home,New York Sirens,Montréal Victoire,SO,event,1v0,18,Élizabeth Giguère,,,,,35,Ann-Renée Desbiens,,,,,,,,,,0,,35,2024-02-21,PWHL,2023/2024,Regular Season
+64,,SO Miss,Montréal Victoire,Away,New York Sirens,Montréal Victoire,SO,event,1v0,29,Marie-Philip Poulin,,,,,39,Abbey Levy,,,,,,,,,,0,,35,2024-02-21,PWHL,2023/2024,Regular Season
+65,,SO Miss,New York Sirens,Home,New York Sirens,Montréal Victoire,SO,event,1v0,25,Alex Carpenter,,,,,35,Ann-Renée Desbiens,,,,,,,,,,0,,35,2024-02-21,PWHL,2023/2024,Regular Season
+66,,SO Miss,Montréal Victoire,Away,New York Sirens,Montréal Victoire,SO,event,1v0,21,Tereza Vanišová,,,,,39,Abbey Levy,,,,,,,,,,0,,35,2024-02-21,PWHL,2023/2024,Regular Season
+67,,SO Goal,New York Sirens,Home,New York Sirens,Montréal Victoire,SO,event,1v0,,,,,,,35,Ann-Renée Desbiens,,,,,,,,,,0,,35,2024-02-21,PWHL,2023/2024,Regular Season
+68,,SO Miss,Montréal Victoire,Away,New York Sirens,Montréal Victoire,SO,event,1v0,29,Marie-Philip Poulin,,,,,39,Abbey Levy,,,,,,,,,,0,,35,2024-02-21,PWHL,2023/2024,Regular Season
+69,,SO Goal,New York Sirens,Home,New York Sirens,Montréal Victoire,SO,event,1v0,,,,,,,35,Ann-Renée Desbiens,,,,,,,,,,0,,35,2024-02-21,PWHL,2023/2024,Regular Season
+70,,SO Miss,Montréal Victoire,Away,New York Sirens,Montréal Victoire,SO,event,1v0,7,Laura Stacey,,,,,39,Abbey Levy,,,,,,,,,,0,,35,2024-02-21,PWHL,2023/2024,Regular Season

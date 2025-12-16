@@ -1,107 +1,107 @@
-id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
-1,1:06,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,13,Tereza Vanišová,,,,,35,Maddie Rooney,,,,,,,80.0,-34.3,209,2025-05-26,PWHL,2024/2025,Playoffs
-2,1:45,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,3,Brooke McQuigge,,,,,33,Gwyneth Philips,,,,,,,-48.0,28.1,209,2025-05-26,PWHL,2024/2025,Playoffs
-3,1:49,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,86,Michela Cava,,,,,33,Gwyneth Philips,,,,,,,-47.0,13.3,209,2025-05-26,PWHL,2024/2025,Playoffs
-4,2:44,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,92,Danielle Serdachny,,,,,35,Maddie Rooney,,,,,,,52.7,-19.6,209,2025-05-26,PWHL,2024/2025,Playoffs
-5,3:36,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,26,Kendall Coyne Schofield,,,,,33,Gwyneth Philips,,,,,,,-55.3,-0.3,209,2025-05-26,PWHL,2024/2025,Playoffs
-6,3:42,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,13,Grace Zumwinkle,,,,,33,Gwyneth Philips,,,,,,,-76.7,0.6,209,2025-05-26,PWHL,2024/2025,Playoffs
-7,3:53,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,21,Ashton Bell,,,,,35,Maddie Rooney,,,,,,,44.0,14.5,209,2025-05-26,PWHL,2024/2025,Playoffs
-8,4:00,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,12,Kelly Pannek,,,,,33,Gwyneth Philips,,,,,,,-57.0,-19.6,209,2025-05-26,PWHL,2024/2025,Playoffs
-9,5:03,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,6,Stephanie Markowski,,,,,35,Maddie Rooney,,,,,,,36.3,-5.7,209,2025-05-26,PWHL,2024/2025,Playoffs
-10,5:34,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,21,Ashton Bell,,,,,35,Maddie Rooney,,,,,,,50.3,0.6,209,2025-05-26,PWHL,2024/2025,Playoffs
-11,5:45,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,41,Denisa Křížová,,,,,33,Gwyneth Philips,,,,,,,-47.7,-6.8,209,2025-05-26,PWHL,2024/2025,Playoffs
-12,6:09,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,13,Tereza Vanišová,,,,,35,Maddie Rooney,,,,,,,73.0,1.4,209,2025-05-26,PWHL,2024/2025,Playoffs
-13,6:09,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,19,Brianne Jenner,,,,,35,Maddie Rooney,,,,,,,69.0,30.3,209,2025-05-26,PWHL,2024/2025,Playoffs
-14,6:21,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,23,Jocelyne Larocque,,,,,35,Maddie Rooney,,,,,,,33.0,-23.0,209,2025-05-26,PWHL,2024/2025,Playoffs
-15,7:07,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,16,Sophie Jaques,,,,,33,Gwyneth Philips,,,,,,,-32.3,-16.4,209,2025-05-26,PWHL,2024/2025,Playoffs
-16,7:46,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,94,Anna Meixner,,,,,35,Maddie Rooney,,,,,,,50.7,-12.8,209,2025-05-26,PWHL,2024/2025,Playoffs
-17,9:37,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,77,Britta Curl-Salemme,,,,,33,Gwyneth Philips,,,,,,,-69.3,4.8,209,2025-05-26,PWHL,2024/2025,Playoffs
-18,9:57,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,13,Grace Zumwinkle,,,,,33,Gwyneth Philips,,,,,,,-63.0,0.8,209,2025-05-26,PWHL,2024/2025,Playoffs
-19,11:16,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,23,Mellissa Channell-Watkins,,,,,33,Gwyneth Philips,,,,,,,-38.3,24.1,209,2025-05-26,PWHL,2024/2025,Playoffs
-20,11:21,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,16,Sophie Jaques,,,,,33,Gwyneth Philips,,,,,,,-44.7,18.1,209,2025-05-26,PWHL,2024/2025,Playoffs
-21,11:34,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,27,Shiann Darkangelo,,,,,35,Maddie Rooney,,,,,,,32.0,25.5,209,2025-05-26,PWHL,2024/2025,Playoffs
-22,12:05,Penalty,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,14,Dominique Petrie,,,,,,,,,,,,,,,209,2025-05-26,PWHL,2024/2025,Playoffs
-23,13:30,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,4v5,41,Denisa Křížová,,,,,33,Gwyneth Philips,,,,,,,-57.0,9.1,209,2025-05-26,PWHL,2024/2025,Playoffs
-24,14:05,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,18,Mannon McMahon,,,,,35,Maddie Rooney,,,,,,,36.7,29.5,209,2025-05-26,PWHL,2024/2025,Playoffs
-25,14:39,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,13,Grace Zumwinkle,,,,,33,Gwyneth Philips,,,,,,,-52.7,11.3,209,2025-05-26,PWHL,2024/2025,Playoffs
-26,14:59,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,13,Tereza Vanišová,,,,,35,Maddie Rooney,,,,,,,72.0,-34.9,209,2025-05-26,PWHL,2024/2025,Playoffs
-27,15:12,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,13,Grace Zumwinkle,,,,,33,Gwyneth Philips,,,,,,,-44.0,-5.1,209,2025-05-26,PWHL,2024/2025,Playoffs
-28,16:18,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,41,Denisa Křížová,,,,,33,Gwyneth Philips,,,,,,,-50.7,16.1,209,2025-05-26,PWHL,2024/2025,Playoffs
-29,16:39,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,19,Maggie Flaherty,,,,,33,Gwyneth Philips,,,,,,,-37.0,28.1,209,2025-05-26,PWHL,2024/2025,Playoffs
-30,16:51,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,16,Sophie Jaques,,,,,33,Gwyneth Philips,,,,,,,-37.0,-19.0,209,2025-05-26,PWHL,2024/2025,Playoffs
-31,17:03,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,92,Danielle Serdachny,,,,,35,Maddie Rooney,,,,,,,31.7,13.0,209,2025-05-26,PWHL,2024/2025,Playoffs
-32,17:16,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,6,Stephanie Markowski,,,,,35,Maddie Rooney,,,,,,,32.3,-0.8,209,2025-05-26,PWHL,2024/2025,Playoffs
-33,18:37,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,27,Shiann Darkangelo,,,,,35,Maddie Rooney,,,,,,,35.0,32.0,209,2025-05-26,PWHL,2024/2025,Playoffs
-34,18:55,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,16,Kateřina Mrázová,,,,,35,Maddie Rooney,,,,,,,69.0,-12.5,209,2025-05-26,PWHL,2024/2025,Playoffs
-35,19:42,Penalty,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,88,Ronja Savolainen,,,,,,,,,,,,,,,209,2025-05-26,PWHL,2024/2025,Playoffs
-36,1:01,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v4,13,Grace Zumwinkle,,,,,33,Gwyneth Philips,,,,,,,-45.0,-19.3,209,2025-05-26,PWHL,2024/2025,Playoffs
-37,1:48,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,88,Ronja Savolainen,,,,,35,Maddie Rooney,,,,,,,43.0,-23.8,209,2025-05-26,PWHL,2024/2025,Playoffs
-38,1:57,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,88,Ronja Savolainen,,,,,35,Maddie Rooney,,,,,,,37.3,-26.1,209,2025-05-26,PWHL,2024/2025,Playoffs
-39,2:21,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,37,Rebecca Leslie,,,,,35,Maddie Rooney,,,,,,,72.3,-2.3,209,2025-05-26,PWHL,2024/2025,Playoffs
-40,2:27,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,37,Rebecca Leslie,,,,,35,Maddie Rooney,,,,,,,34.0,5.1,209,2025-05-26,PWHL,2024/2025,Playoffs
-41,3:23,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,12,Kelly Pannek,,,,,33,Gwyneth Philips,,,,,,,-84.7,-9.3,209,2025-05-26,PWHL,2024/2025,Playoffs
-42,4:42,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,27,Taylor Heise,,,,,33,Gwyneth Philips,,,,,,,-81.0,23.8,209,2025-05-26,PWHL,2024/2025,Playoffs
-43,4:53,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,13,Grace Zumwinkle,,,,,33,Gwyneth Philips,,,,,,,-44.3,-32.6,209,2025-05-26,PWHL,2024/2025,Playoffs
-44,4:54,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,26,Kendall Coyne Schofield,,,,,33,Gwyneth Philips,,,,,,,-77.7,-4.2,209,2025-05-26,PWHL,2024/2025,Playoffs
-45,4:59,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,71,Klára Hymlárová,,,,,33,Gwyneth Philips,,,,,,,-49.7,-1.1,209,2025-05-26,PWHL,2024/2025,Playoffs
-46,5:15,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,16,Kateřina Mrázová,,,,,35,Maddie Rooney,,,,,,,78.3,6.0,209,2025-05-26,PWHL,2024/2025,Playoffs
-47,6:50,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,26,Emily Clark,,,,,35,Maddie Rooney,,,,,,,76.0,-19.3,209,2025-05-26,PWHL,2024/2025,Playoffs
-48,7:33,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,3,Zoe Boyd,,,,,35,Maddie Rooney,,,,,,,40.7,11.6,209,2025-05-26,PWHL,2024/2025,Playoffs
-49,7:50,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,71,Klára Hymlárová,,,,,33,Gwyneth Philips,,,,,,,-75.0,-3.7,209,2025-05-26,PWHL,2024/2025,Playoffs
-50,7:53,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,16,Sophie Jaques,,,,,33,Gwyneth Philips,,,,,,,-38.0,-24.1,209,2025-05-26,PWHL,2024/2025,Playoffs
-51,9:10,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,19,Maggie Flaherty,,,,,33,Gwyneth Philips,,,,,,,-17.0,1.1,209,2025-05-26,PWHL,2024/2025,Playoffs
-52,10:10,Goal,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,12,Kelly Pannek,42,Claire Thompson,13,Grace Zumwinkle,33,Gwyneth Philips,,2 3 12 13 42,Lee Stecklein - Brooke McQuigge - Kelly Pannek - Grace Zumwinkle - Claire Thompson,,13 19 21 23 27,Tereza Vanišová - Brianne Jenner - Ashton Bell - Jocelyne Larocque - Shiann Darkangelo,-81.0,-10.2,209,2025-05-26,PWHL,2024/2025,Playoffs
-53,10:47,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,17,Gabbie Hughes,,,,,35,Maddie Rooney,,,,,,,81.0,-7.1,209,2025-05-26,PWHL,2024/2025,Playoffs
-54,12:23,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,4v5,26,Kendall Coyne Schofield,,,,,33,Gwyneth Philips,,,,,,,-32.7,-4.5,209,2025-05-26,PWHL,2024/2025,Playoffs
-55,12:52,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,21,Ashton Bell,,,,,35,Maddie Rooney,,,,,,,35.7,21.5,209,2025-05-26,PWHL,2024/2025,Playoffs
-56,12:56,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v4,92,Danielle Serdachny,,,,,35,Maddie Rooney,,,,,,,55.0,0.8,209,2025-05-26,PWHL,2024/2025,Playoffs
-57,14:21,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,13,Tereza Vanišová,,,,,35,Maddie Rooney,,,,,,,81.3,4.5,209,2025-05-26,PWHL,2024/2025,Playoffs
-58,14:56,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,13,Grace Zumwinkle,,,,,33,Gwyneth Philips,,,,,,,-63.0,-26.1,209,2025-05-26,PWHL,2024/2025,Playoffs
-59,15:11,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,42,Claire Thompson,,,,,33,Gwyneth Philips,,,,,,,-39.7,31.4,209,2025-05-26,PWHL,2024/2025,Playoffs
-60,15:15,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,26,Kendall Coyne Schofield,,,,,33,Gwyneth Philips,,,,,,,-82.0,1.4,209,2025-05-26,PWHL,2024/2025,Playoffs
-61,16:08,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,41,Denisa Křížová,,,,,33,Gwyneth Philips,,,,,,,-69.7,12.8,209,2025-05-26,PWHL,2024/2025,Playoffs
-62,16:46,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,22,Natalie Buchbinder,,,,,33,Gwyneth Philips,,,,,,,-39.0,-13.6,209,2025-05-26,PWHL,2024/2025,Playoffs
-63,16:53,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,21,Liz Schepers,,,,,33,Gwyneth Philips,,,,,,,-50.3,-26.4,209,2025-05-26,PWHL,2024/2025,Playoffs
-64,18:05,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,19,Brianne Jenner,,,,,35,Maddie Rooney,,,,,,,49.3,11.9,209,2025-05-26,PWHL,2024/2025,Playoffs
-65,18:27,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,27,Shiann Darkangelo,,,,,35,Maddie Rooney,,,,,,,33.0,-29.5,209,2025-05-26,PWHL,2024/2025,Playoffs
-66,19:05,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,26,Emily Clark,,,,,35,Maddie Rooney,,,,,,,73.7,7.4,209,2025-05-26,PWHL,2024/2025,Playoffs
-67,19:11,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,94,Anna Meixner,,,,,35,Maddie Rooney,,,,,,,77.3,2.3,209,2025-05-26,PWHL,2024/2025,Playoffs
-68,19:58,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,12,Kelly Pannek,,,,,33,Gwyneth Philips,,,,,,,-73.0,3.1,209,2025-05-26,PWHL,2024/2025,Playoffs
-69,2:15,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,16,Sophie Jaques,,,,,33,Gwyneth Philips,,,,,,,-43.3,-13.9,209,2025-05-26,PWHL,2024/2025,Playoffs
-70,3:40,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,13,Grace Zumwinkle,,,,,33,Gwyneth Philips,,,,,,,-70.0,-13.0,209,2025-05-26,PWHL,2024/2025,Playoffs
-71,4:35,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,13,Grace Zumwinkle,,,,,33,Gwyneth Philips,,,,,,,-79.3,-15.0,209,2025-05-26,PWHL,2024/2025,Playoffs
-72,5:10,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,19,Brianne Jenner,,,,,35,Maddie Rooney,,,,,,,63.0,-33.7,209,2025-05-26,PWHL,2024/2025,Playoffs
-73,7:19,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,88,Ronja Savolainen,,,,,35,Maddie Rooney,,,,,,,11.0,-33.7,209,2025-05-26,PWHL,2024/2025,Playoffs
-74,7:47,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,18,Mannon McMahon,,,,,35,Maddie Rooney,,,,,,,66.0,-29.2,209,2025-05-26,PWHL,2024/2025,Playoffs
-75,8:44,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,88,Ronja Savolainen,,,,,35,Maddie Rooney,,,,,,,33.0,-3.7,209,2025-05-26,PWHL,2024/2025,Playoffs
-76,8:56,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,94,Anna Meixner,,,,,35,Maddie Rooney,,,,,,,43.3,-2.8,209,2025-05-26,PWHL,2024/2025,Playoffs
-77,9:26,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,26,Kendall Coyne Schofield,,,,,33,Gwyneth Philips,,,,,,,-43.3,16.7,209,2025-05-26,PWHL,2024/2025,Playoffs
-78,9:50,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,12,Kelly Pannek,,,,,33,Gwyneth Philips,,,,,,,-69.3,5.7,209,2025-05-26,PWHL,2024/2025,Playoffs
-79,10:09,Goal,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,13,Tereza Vanišová,92,Danielle Serdachny,23,Jocelyne Larocque,35,Maddie Rooney,,3 6 12 16 23,Brooke McQuigge - Katy Knoll - Kelly Pannek - Sophie Jaques - Mellissa Channell-Watkins,,6 13 16 23 92,Stephanie Markowski - Tereza Vanišová - Kateřina Mrázová - Jocelyne Larocque - Danielle Serdachny,71.0,-3.7,209,2025-05-26,PWHL,2024/2025,Playoffs
-80,10:59,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,41,Denisa Křížová,,,,,33,Gwyneth Philips,,,,,,,-57.0,3.4,209,2025-05-26,PWHL,2024/2025,Playoffs
-81,11:37,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,23,Jocelyne Larocque,,,,,35,Maddie Rooney,,,,,,,11.3,-31.4,209,2025-05-26,PWHL,2024/2025,Playoffs
-82,13:47,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v4,26,Emily Clark,,,,,35,Maddie Rooney,,,,,,,51.0,21.8,209,2025-05-26,PWHL,2024/2025,Playoffs
-83,13:55,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,6,Katy Knoll,,,,,33,Gwyneth Philips,,,,,,,-72.7,13.9,209,2025-05-26,PWHL,2024/2025,Playoffs
-84,14:10,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,3,Zoe Boyd,,,,,35,Maddie Rooney,,,,,,,32.7,26.4,209,2025-05-26,PWHL,2024/2025,Playoffs
-85,15:14,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,26,Kendall Coyne Schofield,,,,,33,Gwyneth Philips,,,,,,,-83.0,6.0,209,2025-05-26,PWHL,2024/2025,Playoffs
-86,15:14,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,13,Grace Zumwinkle,,,,,33,Gwyneth Philips,,,,,,,-80.3,6.0,209,2025-05-26,PWHL,2024/2025,Playoffs
-87,15:14,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,26,Kendall Coyne Schofield,,,,,33,Gwyneth Philips,,,,,,,-81.3,-4.2,209,2025-05-26,PWHL,2024/2025,Playoffs
-88,15:58,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,27,Shiann Darkangelo,,,,,35,Maddie Rooney,,,,,,,55.3,-0.8,209,2025-05-26,PWHL,2024/2025,Playoffs
-89,16:48,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,13,Grace Zumwinkle,,,,,33,Gwyneth Philips,,,,,,,-51.0,-11.1,209,2025-05-26,PWHL,2024/2025,Playoffs
-90,16:58,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,23,Mellissa Channell-Watkins,,,,,33,Gwyneth Philips,,,,,,,-35.7,26.9,209,2025-05-26,PWHL,2024/2025,Playoffs
-91,17:25,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,16,Kateřina Mrázová,,,,,35,Maddie Rooney,,,,,,,81.0,17.0,209,2025-05-26,PWHL,2024/2025,Playoffs
-92,18:56,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,18,Mannon McMahon,,,,,35,Maddie Rooney,,,,,,,55.3,-15.6,209,2025-05-26,PWHL,2024/2025,Playoffs
-93,19:00,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,21,Ashton Bell,,,,,35,Maddie Rooney,,,,,,,30.0,29.7,209,2025-05-26,PWHL,2024/2025,Playoffs
-94,19:01,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,16,Kateřina Mrázová,,,,,35,Maddie Rooney,,,,,,,45.3,21.5,209,2025-05-26,PWHL,2024/2025,Playoffs
-95,19:33,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,16,Kateřina Mrázová,,,,,35,Maddie Rooney,,,,,,,54.3,19.6,209,2025-05-26,PWHL,2024/2025,Playoffs
-96,2:57,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,OT1,event,5v5,88,Ronja Savolainen,,,,,35,Maddie Rooney,,,,,,,38.3,-28.1,209,2025-05-26,PWHL,2024/2025,Playoffs
-97,6:31,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,OT1,event,5v5,88,Ronja Savolainen,,,,,35,Maddie Rooney,,,,,,,34.3,-2.0,209,2025-05-26,PWHL,2024/2025,Playoffs
-98,6:50,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,OT1,event,5v5,3,Zoe Boyd,,,,,35,Maddie Rooney,,,,,,,39.0,15.3,209,2025-05-26,PWHL,2024/2025,Playoffs
-99,8:00,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,OT1,event,5v5,92,Danielle Serdachny,,,,,35,Maddie Rooney,,,,,,,43.3,10.8,209,2025-05-26,PWHL,2024/2025,Playoffs
-100,8:01,Penalty,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,OT1,event,5v5,22,Natalie Buchbinder,,,,,,,,,,,,,,,209,2025-05-26,PWHL,2024/2025,Playoffs
-101,8:01,Penalty,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,OT1,event,5v5,17,Gabbie Hughes,,,,,,,,,,,,,,,209,2025-05-26,PWHL,2024/2025,Playoffs
-102,8:13,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,OT1,event,5v5,23,Jocelyne Larocque,,,,,35,Maddie Rooney,,,,,,,75.7,-15.0,209,2025-05-26,PWHL,2024/2025,Playoffs
-103,10:26,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,OT1,event,5v5,86,Michela Cava,,,,,33,Gwyneth Philips,,,,,,,-83.0,11.1,209,2025-05-26,PWHL,2024/2025,Playoffs
-104,10:35,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,OT1,event,5v5,17,Gabbie Hughes,,,,,35,Maddie Rooney,,,,,,,58.7,-0.6,209,2025-05-26,PWHL,2024/2025,Playoffs
-105,11:21,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,OT1,event,5v5,88,Ronja Savolainen,,,,,35,Maddie Rooney,,,,,,,41.0,-16.7,209,2025-05-26,PWHL,2024/2025,Playoffs
-106,12:00,Goal,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,OT1,event,5v5,21,Liz Schepers,6,Katy Knoll,71,Klára Hymlárová,33,Gwyneth Philips,,6 16 21 23 71,Katy Knoll - Sophie Jaques - Liz Schepers - Mellissa Channell-Watkins - Klára Hymlárová,,2 6 13 19 27,Aneta Tejralová - Stephanie Markowski - Tereza Vanišová - Brianne Jenner - Shiann Darkangelo,-73.0,2.0,209,2025-05-26,PWHL,2024/2025,Playoffs
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,xG,ScoreState,BoxID,game_id,game_date,competition,season,state
+1,1:06,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,13,Tereza Vanišová,,,,,35,Maddie Rooney,,,,,,,80.0,-34.3,0.0191,0,O04,209,2025-05-26,PWHL,2024/2025,Playoffs
+2,1:45,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,3,Brooke McQuigge,,,,,33,Gwyneth Philips,,,,,,,48.0,-28.1,0.0318,0,O19,209,2025-05-26,PWHL,2024/2025,Playoffs
+3,1:49,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,86,Michela Cava,,,,,33,Gwyneth Philips,,,,,,,47.0,-13.3,0.0458,0,O20,209,2025-05-26,PWHL,2024/2025,Playoffs
+4,2:44,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,92,Danielle Serdachny,,,,,35,Maddie Rooney,,,,,,,52.7,-19.6,0.0458,0,O20,209,2025-05-26,PWHL,2024/2025,Playoffs
+5,3:36,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,26,Kendall Coyne Schofield,,,,,33,Gwyneth Philips,,,,,,,55.3,0.3,0.0573,0,O21,209,2025-05-26,PWHL,2024/2025,Playoffs
+6,3:42,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,13,Grace Zumwinkle,,,,,33,Gwyneth Philips,,,,,,,76.7,-0.6,0.1248,0,O11,209,2025-05-26,PWHL,2024/2025,Playoffs
+7,3:53,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,21,Ashton Bell,,,,,35,Maddie Rooney,,,,,,,44.0,14.5,0.0573,0,O21,209,2025-05-26,PWHL,2024/2025,Playoffs
+8,4:00,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,12,Kelly Pannek,,,,,33,Gwyneth Philips,,,,,,,57.0,19.6,0.0899,0,O16,209,2025-05-26,PWHL,2024/2025,Playoffs
+9,5:03,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,6,Stephanie Markowski,,,,,35,Maddie Rooney,,,,,,,36.3,-5.7,,0,O25,209,2025-05-26,PWHL,2024/2025,Playoffs
+10,5:34,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,21,Ashton Bell,,,,,35,Maddie Rooney,,,,,,,50.3,0.6,0.0573,0,O21,209,2025-05-26,PWHL,2024/2025,Playoffs
+11,5:45,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,41,Denisa Křížová,,,,,33,Gwyneth Philips,,,,,,,47.7,6.8,0.0573,0,O21,209,2025-05-26,PWHL,2024/2025,Playoffs
+12,6:09,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,13,Tereza Vanišová,,,,,35,Maddie Rooney,,,,,,,73.0,1.4,0.1248,0,O11,209,2025-05-26,PWHL,2024/2025,Playoffs
+13,6:09,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,19,Brianne Jenner,,,,,35,Maddie Rooney,,,,,,,69.0,30.3,0.0150,0,O18,209,2025-05-26,PWHL,2024/2025,Playoffs
+14,6:21,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,23,Jocelyne Larocque,,,,,35,Maddie Rooney,,,,,,,33.0,-23.0,,0,O24,209,2025-05-26,PWHL,2024/2025,Playoffs
+15,7:07,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,16,Sophie Jaques,,,,,33,Gwyneth Philips,,,,,,,32.3,16.4,,0,O25,209,2025-05-26,PWHL,2024/2025,Playoffs
+16,7:46,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,94,Anna Meixner,,,,,35,Maddie Rooney,,,,,,,50.7,-12.8,0.0458,0,O20,209,2025-05-26,PWHL,2024/2025,Playoffs
+17,9:37,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,77,Britta Curl-Salemme,,,,,33,Gwyneth Philips,,,,,,,69.3,-4.8,,0,O14,209,2025-05-26,PWHL,2024/2025,Playoffs
+18,9:57,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,13,Grace Zumwinkle,,,,,33,Gwyneth Philips,,,,,,,63.0,-0.8,,0,O15,209,2025-05-26,PWHL,2024/2025,Playoffs
+19,11:16,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,23,Mellissa Channell-Watkins,,,,,33,Gwyneth Philips,,,,,,,38.3,-24.1,0.0400,0,O24,209,2025-05-26,PWHL,2024/2025,Playoffs
+20,11:21,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,16,Sophie Jaques,,,,,33,Gwyneth Philips,,,,,,,44.7,-18.1,0.0458,0,O20,209,2025-05-26,PWHL,2024/2025,Playoffs
+21,11:34,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,27,Shiann Darkangelo,,,,,35,Maddie Rooney,,,,,,,32.0,25.5,0.0258,0,O26,209,2025-05-26,PWHL,2024/2025,Playoffs
+22,12:05,Penalty,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,14,Dominique Petrie,,,,,,,,,,,,,,,,0,,209,2025-05-26,PWHL,2024/2025,Playoffs
+23,13:30,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,4v5,41,Denisa Křížová,,,,,33,Gwyneth Philips,,,,,,,57.0,-9.1,0.1304,0,O14,209,2025-05-26,PWHL,2024/2025,Playoffs
+24,14:05,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,18,Mannon McMahon,,,,,35,Maddie Rooney,,,,,,,36.7,29.5,0.0258,0,O26,209,2025-05-26,PWHL,2024/2025,Playoffs
+25,14:39,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,13,Grace Zumwinkle,,,,,33,Gwyneth Philips,,,,,,,52.7,-11.3,0.0458,0,O20,209,2025-05-26,PWHL,2024/2025,Playoffs
+26,14:59,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,13,Tereza Vanišová,,,,,35,Maddie Rooney,,,,,,,72.0,-34.9,0.0138,0,O12,209,2025-05-26,PWHL,2024/2025,Playoffs
+27,15:12,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,13,Grace Zumwinkle,,,,,33,Gwyneth Philips,,,,,,,44.0,5.1,0.0573,0,O21,209,2025-05-26,PWHL,2024/2025,Playoffs
+28,16:18,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,41,Denisa Křížová,,,,,33,Gwyneth Philips,,,,,,,50.7,-16.1,,0,O20,209,2025-05-26,PWHL,2024/2025,Playoffs
+29,16:39,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,19,Maggie Flaherty,,,,,33,Gwyneth Philips,,,,,,,37.0,-28.1,0.0400,0,O24,209,2025-05-26,PWHL,2024/2025,Playoffs
+30,16:51,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,16,Sophie Jaques,,,,,33,Gwyneth Philips,,,,,,,37.0,19.0,,0,O26,209,2025-05-26,PWHL,2024/2025,Playoffs
+31,17:03,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,92,Danielle Serdachny,,,,,35,Maddie Rooney,,,,,,,31.7,13.0,0.0420,0,O25,209,2025-05-26,PWHL,2024/2025,Playoffs
+32,17:16,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,6,Stephanie Markowski,,,,,35,Maddie Rooney,,,,,,,32.3,-0.8,,0,O25,209,2025-05-26,PWHL,2024/2025,Playoffs
+33,18:37,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,27,Shiann Darkangelo,,,,,35,Maddie Rooney,,,,,,,35.0,32.0,0.0258,0,O26,209,2025-05-26,PWHL,2024/2025,Playoffs
+34,18:55,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,16,Kateřina Mrázová,,,,,35,Maddie Rooney,,,,,,,69.0,-12.5,,0,O14,209,2025-05-26,PWHL,2024/2025,Playoffs
+35,19:42,Penalty,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,88,Ronja Savolainen,,,,,,,,,,,,,,,,0,,209,2025-05-26,PWHL,2024/2025,Playoffs
+36,1:01,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v4,13,Grace Zumwinkle,,,,,33,Gwyneth Philips,,,,,,,45.0,19.3,0.0610,0,O22,209,2025-05-26,PWHL,2024/2025,Playoffs
+37,1:48,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,88,Ronja Savolainen,,,,,35,Maddie Rooney,,,,,,,43.0,-23.8,0.0458,0,O20,209,2025-05-26,PWHL,2024/2025,Playoffs
+38,1:57,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,88,Ronja Savolainen,,,,,35,Maddie Rooney,,,,,,,37.3,-26.1,,0,O24,209,2025-05-26,PWHL,2024/2025,Playoffs
+39,2:21,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,37,Rebecca Leslie,,,,,35,Maddie Rooney,,,,,,,72.3,-2.3,,0,O14,209,2025-05-26,PWHL,2024/2025,Playoffs
+40,2:27,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,37,Rebecca Leslie,,,,,35,Maddie Rooney,,,,,,,34.0,5.1,0.0420,0,O25,209,2025-05-26,PWHL,2024/2025,Playoffs
+41,3:23,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,12,Kelly Pannek,,,,,33,Gwyneth Philips,,,,,,,84.7,9.3,0.0709,0,O08,209,2025-05-26,PWHL,2024/2025,Playoffs
+42,4:42,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,27,Taylor Heise,,,,,33,Gwyneth Philips,,,,,,,81.0,-23.8,0.0177,0,O05,209,2025-05-26,PWHL,2024/2025,Playoffs
+43,4:53,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,13,Grace Zumwinkle,,,,,33,Gwyneth Philips,,,,,,,44.3,32.6,0.0152,0,O23,209,2025-05-26,PWHL,2024/2025,Playoffs
+44,4:54,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,26,Kendall Coyne Schofield,,,,,33,Gwyneth Philips,,,,,,,77.7,4.2,0.1248,0,O11,209,2025-05-26,PWHL,2024/2025,Playoffs
+45,4:59,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,71,Klára Hymlárová,,,,,33,Gwyneth Philips,,,,,,,49.7,1.1,0.0573,0,O21,209,2025-05-26,PWHL,2024/2025,Playoffs
+46,5:15,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,16,Kateřina Mrázová,,,,,35,Maddie Rooney,,,,,,,78.3,6.0,0.1248,0,O11,209,2025-05-26,PWHL,2024/2025,Playoffs
+47,6:50,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,26,Emily Clark,,,,,35,Maddie Rooney,,,,,,,76.0,-19.3,0.0659,0,O06,209,2025-05-26,PWHL,2024/2025,Playoffs
+48,7:33,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,3,Zoe Boyd,,,,,35,Maddie Rooney,,,,,,,40.7,11.6,,0,O25,209,2025-05-26,PWHL,2024/2025,Playoffs
+49,7:50,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,71,Klára Hymlárová,,,,,33,Gwyneth Philips,,,,,,,75.0,3.7,0.1248,0,O11,209,2025-05-26,PWHL,2024/2025,Playoffs
+50,7:53,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,16,Sophie Jaques,,,,,33,Gwyneth Philips,,,,,,,38.0,24.1,0.0258,0,O26,209,2025-05-26,PWHL,2024/2025,Playoffs
+51,9:10,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,19,Maggie Flaherty,,,,,33,Gwyneth Philips,,,,,,,17.0,-1.1,,0,N02,209,2025-05-26,PWHL,2024/2025,Playoffs
+52,10:10,Goal,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,12,Kelly Pannek,42,Claire Thompson,13,Grace Zumwinkle,33,Gwyneth Philips,,2 3 12 13 42,Lee Stecklein - Brooke McQuigge - Kelly Pannek - Grace Zumwinkle - Claire Thompson,,13 19 21 23 27,Tereza Vanišová - Brianne Jenner - Ashton Bell - Jocelyne Larocque - Shiann Darkangelo,81.0,10.2,0.0709,0,O08,209,2025-05-26,PWHL,2024/2025,Playoffs
+53,10:47,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,17,Gabbie Hughes,,,,,35,Maddie Rooney,,,,,,,81.0,-7.1,0.1328,-1,O11,209,2025-05-26,PWHL,2024/2025,Playoffs
+54,12:23,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,4v5,26,Kendall Coyne Schofield,,,,,33,Gwyneth Philips,,,,,,,32.7,4.5,,1,O25,209,2025-05-26,PWHL,2024/2025,Playoffs
+55,12:52,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,21,Ashton Bell,,,,,35,Maddie Rooney,,,,,,,35.7,21.5,0.0277,-1,O26,209,2025-05-26,PWHL,2024/2025,Playoffs
+56,12:56,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v4,92,Danielle Serdachny,,,,,35,Maddie Rooney,,,,,,,55.0,0.8,,-1,O21,209,2025-05-26,PWHL,2024/2025,Playoffs
+57,14:21,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,13,Tereza Vanišová,,,,,35,Maddie Rooney,,,,,,,81.3,4.5,0.1328,-1,O11,209,2025-05-26,PWHL,2024/2025,Playoffs
+58,14:56,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,13,Grace Zumwinkle,,,,,33,Gwyneth Philips,,,,,,,63.0,26.1,0.0488,1,O17,209,2025-05-26,PWHL,2024/2025,Playoffs
+59,15:11,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,42,Claire Thompson,,,,,33,Gwyneth Philips,,,,,,,39.7,-31.4,,1,O24,209,2025-05-26,PWHL,2024/2025,Playoffs
+60,15:15,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,26,Kendall Coyne Schofield,,,,,33,Gwyneth Philips,,,,,,,82.0,-1.4,0.1463,1,O11,209,2025-05-26,PWHL,2024/2025,Playoffs
+61,16:08,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,41,Denisa Křížová,,,,,33,Gwyneth Philips,,,,,,,69.7,-12.8,0.0929,1,O14,209,2025-05-26,PWHL,2024/2025,Playoffs
+62,16:46,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,22,Natalie Buchbinder,,,,,33,Gwyneth Philips,,,,,,,39.0,13.6,0.0500,1,O25,209,2025-05-26,PWHL,2024/2025,Playoffs
+63,16:53,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,21,Liz Schepers,,,,,33,Gwyneth Philips,,,,,,,50.3,26.4,,1,O23,209,2025-05-26,PWHL,2024/2025,Playoffs
+64,18:05,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,19,Brianne Jenner,,,,,35,Maddie Rooney,,,,,,,49.3,11.9,0.0414,-1,O22,209,2025-05-26,PWHL,2024/2025,Playoffs
+65,18:27,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,27,Shiann Darkangelo,,,,,35,Maddie Rooney,,,,,,,33.0,-29.5,0.0429,-1,O24,209,2025-05-26,PWHL,2024/2025,Playoffs
+66,19:05,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,26,Emily Clark,,,,,35,Maddie Rooney,,,,,,,73.7,7.4,0.1328,-1,O11,209,2025-05-26,PWHL,2024/2025,Playoffs
+67,19:11,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,2,event,5v5,94,Anna Meixner,,,,,35,Maddie Rooney,,,,,,,77.3,2.3,0.1328,-1,O11,209,2025-05-26,PWHL,2024/2025,Playoffs
+68,19:58,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,12,Kelly Pannek,,,,,33,Gwyneth Philips,,,,,,,73.0,-3.1,0.1463,1,O11,209,2025-05-26,PWHL,2024/2025,Playoffs
+69,2:15,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,16,Sophie Jaques,,,,,33,Gwyneth Philips,,,,,,,43.3,13.9,,1,O21,209,2025-05-26,PWHL,2024/2025,Playoffs
+70,3:40,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,13,Grace Zumwinkle,,,,,33,Gwyneth Philips,,,,,,,70.0,13.0,0.1061,1,O16,209,2025-05-26,PWHL,2024/2025,Playoffs
+71,4:35,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,13,Grace Zumwinkle,,,,,33,Gwyneth Philips,,,,,,,79.3,15.0,0.0841,1,O08,209,2025-05-26,PWHL,2024/2025,Playoffs
+72,5:10,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,19,Brianne Jenner,,,,,35,Maddie Rooney,,,,,,,63.0,-33.7,,-1,O12,209,2025-05-26,PWHL,2024/2025,Playoffs
+73,7:19,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,88,Ronja Savolainen,,,,,35,Maddie Rooney,,,,,,,11.0,-33.7,0.0591,-1,N01,209,2025-05-26,PWHL,2024/2025,Playoffs
+74,7:47,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,18,Mannon McMahon,,,,,35,Maddie Rooney,,,,,,,66.0,-29.2,,-1,O12,209,2025-05-26,PWHL,2024/2025,Playoffs
+75,8:44,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,88,Ronja Savolainen,,,,,35,Maddie Rooney,,,,,,,33.0,-3.7,,-1,O25,209,2025-05-26,PWHL,2024/2025,Playoffs
+76,8:56,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,94,Anna Meixner,,,,,35,Maddie Rooney,,,,,,,43.3,-2.8,,-1,O21,209,2025-05-26,PWHL,2024/2025,Playoffs
+77,9:26,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,26,Kendall Coyne Schofield,,,,,33,Gwyneth Philips,,,,,,,43.3,-16.7,0.0546,1,O20,209,2025-05-26,PWHL,2024/2025,Playoffs
+78,9:50,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,12,Kelly Pannek,,,,,33,Gwyneth Philips,,,,,,,69.3,-5.7,,1,O14,209,2025-05-26,PWHL,2024/2025,Playoffs
+79,10:09,Goal,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,13,Tereza Vanišová,92,Danielle Serdachny,23,Jocelyne Larocque,35,Maddie Rooney,,3 6 12 16 23,Brooke McQuigge - Katy Knoll - Kelly Pannek - Sophie Jaques - Mellissa Channell-Watkins,,6 13 16 23 92,Stephanie Markowski - Tereza Vanišová - Kateřina Mrázová - Jocelyne Larocque - Danielle Serdachny,71.0,-3.7,0.0838,-1,O14,209,2025-05-26,PWHL,2024/2025,Playoffs
+80,10:59,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,41,Denisa Křížová,,,,,33,Gwyneth Philips,,,,,,,57.0,-3.4,0.1041,0,O15,209,2025-05-26,PWHL,2024/2025,Playoffs
+81,11:37,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,23,Jocelyne Larocque,,,,,35,Maddie Rooney,,,,,,,11.3,-31.4,0.0553,0,N01,209,2025-05-26,PWHL,2024/2025,Playoffs
+82,13:47,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v4,26,Emily Clark,,,,,35,Maddie Rooney,,,,,,,51.0,21.8,,0,O22,209,2025-05-26,PWHL,2024/2025,Playoffs
+83,13:55,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,6,Katy Knoll,,,,,33,Gwyneth Philips,,,,,,,72.7,-13.9,0.0371,0,O13,209,2025-05-26,PWHL,2024/2025,Playoffs
+84,14:10,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,3,Zoe Boyd,,,,,35,Maddie Rooney,,,,,,,32.7,26.4,,0,O26,209,2025-05-26,PWHL,2024/2025,Playoffs
+85,15:14,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,26,Kendall Coyne Schofield,,,,,33,Gwyneth Philips,,,,,,,83.0,-6.0,0.2112,0,O07,209,2025-05-26,PWHL,2024/2025,Playoffs
+86,15:14,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,13,Grace Zumwinkle,,,,,33,Gwyneth Philips,,,,,,,80.3,-6.0,0.1248,0,O11,209,2025-05-26,PWHL,2024/2025,Playoffs
+87,15:14,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,26,Kendall Coyne Schofield,,,,,33,Gwyneth Philips,,,,,,,81.3,4.2,0.1248,0,O11,209,2025-05-26,PWHL,2024/2025,Playoffs
+88,15:58,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,27,Shiann Darkangelo,,,,,35,Maddie Rooney,,,,,,,55.3,-0.8,,0,O21,209,2025-05-26,PWHL,2024/2025,Playoffs
+89,16:48,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,13,Grace Zumwinkle,,,,,33,Gwyneth Philips,,,,,,,51.0,11.1,0.0386,0,O22,209,2025-05-26,PWHL,2024/2025,Playoffs
+90,16:58,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,23,Mellissa Channell-Watkins,,,,,33,Gwyneth Philips,,,,,,,35.7,-26.9,0.0400,0,O24,209,2025-05-26,PWHL,2024/2025,Playoffs
+91,17:25,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,16,Kateřina Mrázová,,,,,35,Maddie Rooney,,,,,,,81.0,17.0,0.0709,0,O08,209,2025-05-26,PWHL,2024/2025,Playoffs
+92,18:56,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,18,Mannon McMahon,,,,,35,Maddie Rooney,,,,,,,55.3,-15.6,,0,O20,209,2025-05-26,PWHL,2024/2025,Playoffs
+93,19:00,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,21,Ashton Bell,,,,,35,Maddie Rooney,,,,,,,30.0,29.7,0.0258,0,O26,209,2025-05-26,PWHL,2024/2025,Playoffs
+94,19:01,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,16,Kateřina Mrázová,,,,,35,Maddie Rooney,,,,,,,45.3,21.5,0.0386,0,O22,209,2025-05-26,PWHL,2024/2025,Playoffs
+95,19:33,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,16,Kateřina Mrázová,,,,,35,Maddie Rooney,,,,,,,54.3,19.6,0.0386,0,O22,209,2025-05-26,PWHL,2024/2025,Playoffs
+96,2:57,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,OT1,event,5v5,88,Ronja Savolainen,,,,,35,Maddie Rooney,,,,,,,38.3,-28.1,0.0400,0,O24,209,2025-05-26,PWHL,2024/2025,Playoffs
+97,6:31,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,OT1,event,5v5,88,Ronja Savolainen,,,,,35,Maddie Rooney,,,,,,,34.3,-2.0,0.0420,0,O25,209,2025-05-26,PWHL,2024/2025,Playoffs
+98,6:50,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,OT1,event,5v5,3,Zoe Boyd,,,,,35,Maddie Rooney,,,,,,,39.0,15.3,,0,O25,209,2025-05-26,PWHL,2024/2025,Playoffs
+99,8:00,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,OT1,event,5v5,92,Danielle Serdachny,,,,,35,Maddie Rooney,,,,,,,43.3,10.8,,0,O21,209,2025-05-26,PWHL,2024/2025,Playoffs
+100,8:01,Penalty,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,OT1,event,5v5,22,Natalie Buchbinder,,,,,,,,,,,,,,,,0,,209,2025-05-26,PWHL,2024/2025,Playoffs
+101,8:01,Penalty,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,OT1,event,5v5,17,Gabbie Hughes,,,,,,,,,,,,,,,,0,,209,2025-05-26,PWHL,2024/2025,Playoffs
+102,8:13,Block,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,OT1,event,5v5,23,Jocelyne Larocque,,,,,35,Maddie Rooney,,,,,,,75.7,-15.0,,0,O06,209,2025-05-26,PWHL,2024/2025,Playoffs
+103,10:26,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,OT1,event,5v5,86,Michela Cava,,,,,33,Gwyneth Philips,,,,,,,83.0,-11.1,0.0659,0,O06,209,2025-05-26,PWHL,2024/2025,Playoffs
+104,10:35,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,OT1,event,5v5,17,Gabbie Hughes,,,,,35,Maddie Rooney,,,,,,,58.7,-0.6,0.1041,0,O15,209,2025-05-26,PWHL,2024/2025,Playoffs
+105,11:21,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,OT1,event,5v5,88,Ronja Savolainen,,,,,35,Maddie Rooney,,,,,,,41.0,-16.7,0.0458,0,O20,209,2025-05-26,PWHL,2024/2025,Playoffs
+106,12:00,Goal,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,OT1,event,5v5,21,Liz Schepers,6,Katy Knoll,71,Klára Hymlárová,33,Gwyneth Philips,,6 16 21 23 71,Katy Knoll - Sophie Jaques - Liz Schepers - Mellissa Channell-Watkins - Klára Hymlárová,,2 6 13 19 27,Aneta Tejralová - Stephanie Markowski - Tereza Vanišová - Brianne Jenner - Shiann Darkangelo,73.0,-2.0,0.1248,0,O11,209,2025-05-26,PWHL,2024/2025,Playoffs

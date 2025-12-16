@@ -1,88 +1,88 @@
-id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
-1,0:23,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,20,Sarah Nurse,,,,,31,Aerin Frankel,,,,,,,-87.3,31.2,118,2024-12-27,PWHL,2024/2025,Regular Season
-2,1:55,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v5,77,Susanna Tapani,,,,,1,Raygan Kirk,,,,,,,33.0,-26.4,118,2024-12-27,PWHL,2024/2025,Regular Season
-3,2:11,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v5,5,Megan Keller,,,,,1,Raygan Kirk,,,,,,,35.7,-34.3,118,2024-12-27,PWHL,2024/2025,Regular Season
-4,2:12,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v5,27,Shay Maloney,,,,,1,Raygan Kirk,,,,,,,81.0,-0.3,118,2024-12-27,PWHL,2024/2025,Regular Season
-5,3:06,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,34,Hannah Miller,,,,,31,Aerin Frankel,,,,,,,-36.3,-26.9,118,2024-12-27,PWHL,2024/2025,Regular Season
-6,3:33,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v5,88,Lexie Adzija,,,,,1,Raygan Kirk,,,,,,,62.0,-23.0,118,2024-12-27,PWHL,2024/2025,Regular Season
-7,4:37,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v5,5,Megan Keller,,,,,1,Raygan Kirk,,,,,,,40.0,-28.9,118,2024-12-27,PWHL,2024/2025,Regular Season
-8,5:26,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,19,Lauren Bernard,,,,,31,Aerin Frankel,,,,,,,-46.7,18.4,118,2024-12-27,PWHL,2024/2025,Regular Season
-9,6:07,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,9,Daryl Watts,,,,,31,Aerin Frankel,,,,,,,-56.3,0.0,118,2024-12-27,PWHL,2024/2025,Regular Season
-10,6:20,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,34,Hannah Miller,,,,,31,Aerin Frankel,,,,,,,-39.0,-4.0,118,2024-12-27,PWHL,2024/2025,Regular Season
-11,7:27,Penalty,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v5,7,Sidney Morin,,,,,,,,,,,,,,,118,2024-12-27,PWHL,2024/2025,Regular Season
-12,8:51,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v4,88,Julia Gosling,,,,,31,Aerin Frankel,,,,,,,-69.3,-34.3,118,2024-12-27,PWHL,2024/2025,Regular Season
-13,10:50,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v5,20,Hannah Brandt,,,,,1,Raygan Kirk,,,,,,,73.0,-3.7,118,2024-12-27,PWHL,2024/2025,Regular Season
-14,11:19,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,8,Izzy Daniel,,,,,31,Aerin Frankel,,,,,,,-73.7,-22.1,118,2024-12-27,PWHL,2024/2025,Regular Season
-15,11:22,Penalty,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v5,5,Megan Keller,,,,,,,,,,,,,,,118,2024-12-27,PWHL,2024/2025,Regular Season
-16,11:32,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v4,8,Izzy Daniel,,,,,31,Aerin Frankel,,,,,,,-81.7,12.5,118,2024-12-27,PWHL,2024/2025,Regular Season
-17,12:10,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v4,34,Hannah Miller,,,,,31,Aerin Frankel,,,,,,,-72.7,26.6,118,2024-12-27,PWHL,2024/2025,Regular Season
-18,12:27,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v4,34,Hannah Miller,,,,,31,Aerin Frankel,,,,,,,-31.7,19.6,118,2024-12-27,PWHL,2024/2025,Regular Season
-19,13:12,Penalty,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,4v5,25,Emma Greco,,,,,,,,,,,,,,,118,2024-12-27,PWHL,2024/2025,Regular Season
-20,13:24,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v4,9,Daryl Watts,,,,,31,Aerin Frankel,,,,,,,-60.3,-17.6,118,2024-12-27,PWHL,2024/2025,Regular Season
-21,13:35,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v4,9,Daryl Watts,,,,,31,Aerin Frankel,,,,,,,-28.3,-18.4,118,2024-12-27,PWHL,2024/2025,Regular Season
-22,14:13,Goal,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v4,40,Blayre Turnbull,88,Julia Gosling,14,Renata Fast,31,Aerin Frankel,,9 14 27 40 88,Daryl Watts - Renata Fast - Emma Maltais - Blayre Turnbull - Julia Gosling,,2 5 16 20,Emily Brown - Megan Keller - Amanda Pelkey - Hannah Brandt,-75.0,9.6,118,2024-12-27,PWHL,2024/2025,Regular Season
-23,15:27,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,14,Renata Fast,,,,,31,Aerin Frankel,,,,,,,-36.0,-1.4,118,2024-12-27,PWHL,2024/2025,Regular Season
-24,16:51,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,51,Victoria Bach,,,,,31,Aerin Frankel,,,,,,,-71.0,4.0,118,2024-12-27,PWHL,2024/2025,Regular Season
-25,17:36,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v5,77,Susanna Tapani,,,,,1,Raygan Kirk,,,,,,,85.7,-6.5,118,2024-12-27,PWHL,2024/2025,Regular Season
-26,17:36,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,14,Renata Fast,,,,,,,,,,,,,,,118,2024-12-27,PWHL,2024/2025,Regular Season
-27,18:34,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v4,15,Sydney Bard,,,,,1,Raygan Kirk,,,,,,,83.0,-16.1,118,2024-12-27,PWHL,2024/2025,Regular Season
-28,19:13,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,4v5,40,Blayre Turnbull,,,,,31,Aerin Frankel,,,,,,,-61.0,-28.1,118,2024-12-27,PWHL,2024/2025,Regular Season
-29,19:53,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,15,Anneke Rankila,,,,,31,Aerin Frankel,,,,,,,-38.0,-14.7,118,2024-12-27,PWHL,2024/2025,Regular Season
-30,1:15,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,37,Theresa Schafzahl,,,,,1,Raygan Kirk,,,,,,,56.3,7.1,118,2024-12-27,PWHL,2024/2025,Regular Season
-31,1:56,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,77,Susanna Tapani,,,,,1,Raygan Kirk,,,,,,,-53.3,-20.4,118,2024-12-27,PWHL,2024/2025,Regular Season
-32,2:06,Goal,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,2,Jessica Kondas,9,Daryl Watts,20,Sarah Nurse,31,Aerin Frankel,,2 9 19 20 34,Jessica Kondas - Daryl Watts - Lauren Bernard - Sarah Nurse - Hannah Miller,,7 25 36 47 88,Sidney Morin - Emma Greco - Loren Gabel - Jamie Lee Rattray - Lexie Adzija,-72.0,-12.5,118,2024-12-27,PWHL,2024/2025,Regular Season
-33,2:26,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,18,Jesse Compher,,,,,31,Aerin Frankel,,,,,,,-82.0,20.4,118,2024-12-27,PWHL,2024/2025,Regular Season
-34,3:25,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,88,Julia Gosling,,,,,31,Aerin Frankel,,,,,,,-67.7,-26.4,118,2024-12-27,PWHL,2024/2025,Regular Season
-35,3:31,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,67,Emma Woods,,,,,31,Aerin Frankel,,,,,,,-81.0,-6.0,118,2024-12-27,PWHL,2024/2025,Regular Season
-36,4:01,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,9,Daryl Watts,,,,,,,,,,,,,,,118,2024-12-27,PWHL,2024/2025,Regular Season
-37,5:50,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v4,77,Susanna Tapani,,,,,1,Raygan Kirk,,,,,,,39.0,24.6,118,2024-12-27,PWHL,2024/2025,Regular Season
-38,6:37,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,6,Kali Flanagan,,,,,31,Aerin Frankel,,,,,,,-72.3,-28.1,118,2024-12-27,PWHL,2024/2025,Regular Season
-39,6:50,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,21,Hilary Knight,,,,,1,Raygan Kirk,,,,,,,62.3,26.4,118,2024-12-27,PWHL,2024/2025,Regular Season
-40,6:54,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,77,Susanna Tapani,,,,,1,Raygan Kirk,,,,,,,43.0,16.1,118,2024-12-27,PWHL,2024/2025,Regular Season
-41,7:32,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,9,Sophie Shirley,,,,,1,Raygan Kirk,,,,,,,54.7,9.3,118,2024-12-27,PWHL,2024/2025,Regular Season
-42,7:53,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,8,Izzy Daniel,,,,,31,Aerin Frankel,,,,,,,-83.0,8.8,118,2024-12-27,PWHL,2024/2025,Regular Season
-43,8:09,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,15,Anneke Rankila,,,,,31,Aerin Frankel,,,,,,,-76.7,1.4,118,2024-12-27,PWHL,2024/2025,Regular Season
-44,8:17,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v4,9,Daryl Watts,,,,,31,Aerin Frankel,,,,,,,-79.0,18.7,118,2024-12-27,PWHL,2024/2025,Regular Season
-45,8:27,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v4,20,Sarah Nurse,,,,,31,Aerin Frankel,,,,,,,-71.0,0.3,118,2024-12-27,PWHL,2024/2025,Regular Season
-46,8:54,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,5,Megan Keller,,,,,1,Raygan Kirk,,,,,,,46.7,28.3,118,2024-12-27,PWHL,2024/2025,Regular Season
-47,9:33,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,2,Emily Brown,,,,,1,Raygan Kirk,,,,,,,84.7,-16.7,118,2024-12-27,PWHL,2024/2025,Regular Season
-48,10:00,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,2,Emily Brown,,,,,1,Raygan Kirk,,,,,,,37.0,14.2,118,2024-12-27,PWHL,2024/2025,Regular Season
-49,10:46,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,67,Emma Woods,,,,,31,Aerin Frankel,,,,,,,-63.0,-8.2,118,2024-12-27,PWHL,2024/2025,Regular Season
-50,11:01,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,18,Jesse Compher,,,,,31,Aerin Frankel,,,,,,,-81.3,3.7,118,2024-12-27,PWHL,2024/2025,Regular Season
-51,11:02,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,18,Jesse Compher,,,,,31,Aerin Frankel,,,,,,,-85.0,4.8,118,2024-12-27,PWHL,2024/2025,Regular Season
-52,11:31,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,67,Emma Woods,,,,,31,Aerin Frankel,,,,,,,81.3,-36.5,118,2024-12-27,PWHL,2024/2025,Regular Season
-53,12:31,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v4,22,Maggie Connors,,,,,31,Aerin Frankel,,,,,,,-71.3,25.8,118,2024-12-27,PWHL,2024/2025,Regular Season
-54,14:25,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,7,Sidney Morin,,,,,1,Raygan Kirk,,,,,,,31.0,21.2,118,2024-12-27,PWHL,2024/2025,Regular Season
-55,14:40,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,40,Blayre Turnbull,,,,,31,Aerin Frankel,,,,,,,-76.3,0.6,118,2024-12-27,PWHL,2024/2025,Regular Season
-56,15:18,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,14,Renata Fast,,,,,,,,,,,,,,,118,2024-12-27,PWHL,2024/2025,Regular Season
-57,16:06,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v4,77,Susanna Tapani,,,,,1,Raygan Kirk,,,,,,,81.0,-6.0,118,2024-12-27,PWHL,2024/2025,Regular Season
-58,16:16,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v4,11,Alina Müller,,,,,1,Raygan Kirk,,,,,,,39.3,-24.6,118,2024-12-27,PWHL,2024/2025,Regular Season
-59,16:25,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,7,Sidney Morin,,,,,1,Raygan Kirk,,,,,,,38.3,2.8,118,2024-12-27,PWHL,2024/2025,Regular Season
-60,16:36,Goal,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v4,36,Loren Gabel,88,Lexie Adzija,,,1,Raygan Kirk,,6 8 12 20,Kali Flanagan - Izzy Daniel - Allie Munroe - Sarah Nurse,,7 9 11 36 88,Sidney Morin - Sophie Shirley - Alina Müller - Loren Gabel - Lexie Adzija,75.0,3.7,118,2024-12-27,PWHL,2024/2025,Regular Season
-61,18:28,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,4v5,20,Sarah Nurse,,,,,31,Aerin Frankel,,,,,,,-54.7,16.1,118,2024-12-27,PWHL,2024/2025,Regular Season
-62,0:25,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,27,Emma Maltais,,,,,31,Aerin Frankel,,,,,,,-66.0,-9.3,118,2024-12-27,PWHL,2024/2025,Regular Season
-63,2:23,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,7,Sidney Morin,,,,,1,Raygan Kirk,,,,,,,38.7,27.5,118,2024-12-27,PWHL,2024/2025,Regular Season
-64,4:11,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,11,Alina Müller,,,,,1,Raygan Kirk,,,,,,,71.3,15.9,118,2024-12-27,PWHL,2024/2025,Regular Season
-65,4:21,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,27,Emma Maltais,,,,,31,Aerin Frankel,,,,,,,-78.0,-9.9,118,2024-12-27,PWHL,2024/2025,Regular Season
-66,4:36,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,12,Allie Munroe,,,,,31,Aerin Frankel,,,,,,,-61.0,-25.2,118,2024-12-27,PWHL,2024/2025,Regular Season
-67,5:51,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,67,Emma Woods,,,,,31,Aerin Frankel,,,,,,,-62.7,-3.7,118,2024-12-27,PWHL,2024/2025,Regular Season
-68,7:03,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,37,Theresa Schafzahl,,,,,1,Raygan Kirk,,,,,,,81.0,-4.0,118,2024-12-27,PWHL,2024/2025,Regular Season
-69,7:24,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,34,Hannah Miller,,,,,31,Aerin Frankel,,,,,,,-80.0,7.6,118,2024-12-27,PWHL,2024/2025,Regular Season
-70,8:09,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,15,Sydney Bard,,,,,1,Raygan Kirk,,,,,,,34.0,25.8,118,2024-12-27,PWHL,2024/2025,Regular Season
-71,8:39,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v4,27,Emma Maltais,,,,,31,Aerin Frankel,,,,,,,-35.3,16.1,118,2024-12-27,PWHL,2024/2025,Regular Season
-72,9:11,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,12,Allie Munroe,,,,,31,Aerin Frankel,,,,,,,-44.7,29.5,118,2024-12-27,PWHL,2024/2025,Regular Season
-73,9:20,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v4,12,Allie Munroe,,,,,31,Aerin Frankel,,,,,,,-43.0,10.2,118,2024-12-27,PWHL,2024/2025,Regular Season
-74,9:47,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,34,Hannah Miller,,,,,31,Aerin Frankel,,,,,,,-81.3,-5.1,118,2024-12-27,PWHL,2024/2025,Regular Season
-75,12:37,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,22,Jessica DiGirolamo,,,,,1,Raygan Kirk,,,,,,,11.7,25.5,118,2024-12-27,PWHL,2024/2025,Regular Season
-76,12:41,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,22,Jessica DiGirolamo,,,,,1,Raygan Kirk,,,,,,,42.3,32.6,118,2024-12-27,PWHL,2024/2025,Regular Season
-77,12:49,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,4v5,22,Jessica DiGirolamo,,,,,1,Raygan Kirk,,,,,,,45.7,25.5,118,2024-12-27,PWHL,2024/2025,Regular Season
-78,12:58,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,77,Susanna Tapani,,,,,1,Raygan Kirk,,,,,,,37.0,3.4,118,2024-12-27,PWHL,2024/2025,Regular Season
-79,14:20,Goal,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,67,Emma Woods,18,Jesse Compher,88,Julia Gosling,31,Aerin Frankel,,6 12 18 67 88,Kali Flanagan - Allie Munroe - Jesse Compher - Emma Woods - Julia Gosling,,5 15 36 47 88,Megan Keller - Sydney Bard - Loren Gabel - Jamie Lee Rattray - Lexie Adzija,-51.0,-13.6,118,2024-12-27,PWHL,2024/2025,Regular Season
-80,15:00,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,40,Blayre Turnbull,,,,,31,Aerin Frankel,,,,,,,-74.7,-9.6,118,2024-12-27,PWHL,2024/2025,Regular Season
-81,15:21,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,16,Amanda Pelkey,,,,,1,Raygan Kirk,,,,,,,81.3,-0.3,118,2024-12-27,PWHL,2024/2025,Regular Season
-82,16:04,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,7,Sidney Morin,,,,,1,Raygan Kirk,,,,,,,32.0,33.1,118,2024-12-27,PWHL,2024/2025,Regular Season
-83,16:50,Goal,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,6,Kali Flanagan,,,,,31,Aerin Frankel,,6 12 18 67 88,Kali Flanagan - Allie Munroe - Jesse Compher - Emma Woods - Julia Gosling,,11 16 19 22 55 88,Alina Müller - Amanda Pelkey - Hannah Bilka - Jessica DiGirolamo - Daniela Pejšová - Lexie Adzija,-70.7,-22.1,118,2024-12-27,PWHL,2024/2025,Regular Season
-84,17:32,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,9,Daryl Watts,,,,,,,,,,,,,,,118,2024-12-27,PWHL,2024/2025,Regular Season
-85,18:05,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v4,21,Hilary Knight,,,,,1,Raygan Kirk,,,,,,,81.0,2.3,118,2024-12-27,PWHL,2024/2025,Regular Season
-86,18:26,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v4,15,Sydney Bard,,,,,1,Raygan Kirk,,,,,,,51.0,-19.8,118,2024-12-27,PWHL,2024/2025,Regular Season
-87,18:55,Goal,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v4,19,Hannah Bilka,5,Megan Keller,15,Sydney Bard,1,Raygan Kirk,,3 14 22 40,Jocelyne Larocque - Renata Fast - Maggie Connors - Blayre Turnbull,,5 15 19 21 77,Megan Keller - Sydney Bard - Hannah Bilka - Hilary Knight - Susanna Tapani,84.3,4.0,118,2024-12-27,PWHL,2024/2025,Regular Season
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,xG,ScoreState,BoxID,game_id,game_date,competition,season,state
+1,0:23,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,20,Sarah Nurse,,,,,31,Aerin Frankel,,,,,,,87.3,-31.2,0.0191,0,O04,118,2024-12-27,PWHL,2024/2025,Regular Season
+2,1:55,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v5,77,Susanna Tapani,,,,,1,Raygan Kirk,,,,,,,33.0,-26.4,0.0400,0,O24,118,2024-12-27,PWHL,2024/2025,Regular Season
+3,2:11,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v5,5,Megan Keller,,,,,1,Raygan Kirk,,,,,,,35.7,-34.3,0.0400,0,O24,118,2024-12-27,PWHL,2024/2025,Regular Season
+4,2:12,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v5,27,Shay Maloney,,,,,1,Raygan Kirk,,,,,,,81.0,-0.3,0.1248,0,O11,118,2024-12-27,PWHL,2024/2025,Regular Season
+5,3:06,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,34,Hannah Miller,,,,,31,Aerin Frankel,,,,,,,36.3,26.9,0.0258,0,O26,118,2024-12-27,PWHL,2024/2025,Regular Season
+6,3:33,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v5,88,Lexie Adzija,,,,,1,Raygan Kirk,,,,,,,62.0,-23.0,0.0371,0,O13,118,2024-12-27,PWHL,2024/2025,Regular Season
+7,4:37,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v5,5,Megan Keller,,,,,1,Raygan Kirk,,,,,,,40.0,-28.9,0.0400,0,O24,118,2024-12-27,PWHL,2024/2025,Regular Season
+8,5:26,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,19,Lauren Bernard,,,,,31,Aerin Frankel,,,,,,,46.7,-18.4,,0,O20,118,2024-12-27,PWHL,2024/2025,Regular Season
+9,6:07,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,9,Daryl Watts,,,,,31,Aerin Frankel,,,,,,,56.3,0.0,0.0573,0,O21,118,2024-12-27,PWHL,2024/2025,Regular Season
+10,6:20,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,34,Hannah Miller,,,,,31,Aerin Frankel,,,,,,,39.0,4.0,,0,O25,118,2024-12-27,PWHL,2024/2025,Regular Season
+11,7:27,Penalty,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v5,7,Sidney Morin,,,,,,,,,,,,,,,,0,,118,2024-12-27,PWHL,2024/2025,Regular Season
+12,8:51,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v4,88,Julia Gosling,,,,,31,Aerin Frankel,,,,,,,69.3,34.3,0.0240,0,O18,118,2024-12-27,PWHL,2024/2025,Regular Season
+13,10:50,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v5,20,Hannah Brandt,,,,,1,Raygan Kirk,,,,,,,73.0,-3.7,0.1248,0,O11,118,2024-12-27,PWHL,2024/2025,Regular Season
+14,11:19,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,8,Izzy Daniel,,,,,31,Aerin Frankel,,,,,,,73.7,22.1,,0,O08,118,2024-12-27,PWHL,2024/2025,Regular Season
+15,11:22,Penalty,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v5,5,Megan Keller,,,,,,,,,,,,,,,,0,,118,2024-12-27,PWHL,2024/2025,Regular Season
+16,11:32,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v4,8,Izzy Daniel,,,,,31,Aerin Frankel,,,,,,,81.7,-12.5,0.1024,0,O06,118,2024-12-27,PWHL,2024/2025,Regular Season
+17,12:10,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v4,34,Hannah Miller,,,,,31,Aerin Frankel,,,,,,,72.7,-26.6,,0,O12,118,2024-12-27,PWHL,2024/2025,Regular Season
+18,12:27,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v4,34,Hannah Miller,,,,,31,Aerin Frankel,,,,,,,31.7,-19.6,0.0661,0,O25,118,2024-12-27,PWHL,2024/2025,Regular Season
+19,13:12,Penalty,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,4v5,25,Emma Greco,,,,,,,,,,,,,,,,0,,118,2024-12-27,PWHL,2024/2025,Regular Season
+20,13:24,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v4,9,Daryl Watts,,,,,31,Aerin Frankel,,,,,,,60.3,17.6,0.1377,0,O16,118,2024-12-27,PWHL,2024/2025,Regular Season
+21,13:35,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v4,9,Daryl Watts,,,,,31,Aerin Frankel,,,,,,,28.3,18.4,0.0661,0,O25,118,2024-12-27,PWHL,2024/2025,Regular Season
+22,14:13,Goal,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v4,40,Blayre Turnbull,88,Julia Gosling,14,Renata Fast,31,Aerin Frankel,,9 14 27 40 88,Daryl Watts - Renata Fast - Emma Maltais - Blayre Turnbull - Julia Gosling,,2 5 16 20,Emily Brown - Megan Keller - Amanda Pelkey - Hannah Brandt,75.0,-9.6,0.1873,0,O11,118,2024-12-27,PWHL,2024/2025,Regular Season
+23,15:27,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,14,Renata Fast,,,,,31,Aerin Frankel,,,,,,,36.0,1.4,,1,O25,118,2024-12-27,PWHL,2024/2025,Regular Season
+24,16:51,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,51,Victoria Bach,,,,,31,Aerin Frankel,,,,,,,71.0,-4.0,,1,O14,118,2024-12-27,PWHL,2024/2025,Regular Season
+25,17:36,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v5,77,Susanna Tapani,,,,,1,Raygan Kirk,,,,,,,85.7,-6.5,0.0705,-1,O06,118,2024-12-27,PWHL,2024/2025,Regular Season
+26,17:36,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,14,Renata Fast,,,,,,,,,,,,,,,,1,,118,2024-12-27,PWHL,2024/2025,Regular Season
+27,18:34,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,1,event,5v4,15,Sydney Bard,,,,,1,Raygan Kirk,,,,,,,83.0,-16.1,0.1093,-1,O06,118,2024-12-27,PWHL,2024/2025,Regular Season
+28,19:13,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,4v5,40,Blayre Turnbull,,,,,31,Aerin Frankel,,,,,,,61.0,28.1,0.0829,1,O17,118,2024-12-27,PWHL,2024/2025,Regular Season
+29,19:53,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,1,event,5v5,15,Anneke Rankila,,,,,31,Aerin Frankel,,,,,,,38.0,14.7,,1,O25,118,2024-12-27,PWHL,2024/2025,Regular Season
+30,1:15,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,37,Theresa Schafzahl,,,,,1,Raygan Kirk,,,,,,,56.3,7.1,0.0614,-1,O21,118,2024-12-27,PWHL,2024/2025,Regular Season
+31,1:56,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,77,Susanna Tapani,,,,,1,Raygan Kirk,,,,,,,-53.3,-20.4,0.0591,-1,D22,118,2024-12-27,PWHL,2024/2025,Regular Season
+32,2:06,Goal,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,2,Jessica Kondas,9,Daryl Watts,20,Sarah Nurse,31,Aerin Frankel,,2 9 19 20 34,Jessica Kondas - Daryl Watts - Lauren Bernard - Sarah Nurse - Hannah Miller,,7 25 36 47 88,Sidney Morin - Emma Greco - Loren Gabel - Jamie Lee Rattray - Lexie Adzija,72.0,12.5,0.1061,1,O16,118,2024-12-27,PWHL,2024/2025,Regular Season
+33,2:26,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,18,Jesse Compher,,,,,31,Aerin Frankel,,,,,,,82.0,-20.4,0.0271,2,O05,118,2024-12-27,PWHL,2024/2025,Regular Season
+34,3:25,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,88,Julia Gosling,,,,,31,Aerin Frankel,,,,,,,67.7,26.4,0.0618,2,O17,118,2024-12-27,PWHL,2024/2025,Regular Season
+35,3:31,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,67,Emma Woods,,,,,31,Aerin Frankel,,,,,,,81.0,6.0,0.1803,2,O11,118,2024-12-27,PWHL,2024/2025,Regular Season
+36,4:01,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,9,Daryl Watts,,,,,,,,,,,,,,,,2,,118,2024-12-27,PWHL,2024/2025,Regular Season
+37,5:50,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v4,77,Susanna Tapani,,,,,1,Raygan Kirk,,,,,,,39.0,24.6,0.0445,-2,O26,118,2024-12-27,PWHL,2024/2025,Regular Season
+38,6:37,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,6,Kali Flanagan,,,,,31,Aerin Frankel,,,,,,,72.3,28.1,,2,O18,118,2024-12-27,PWHL,2024/2025,Regular Season
+39,6:50,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,21,Hilary Knight,,,,,1,Raygan Kirk,,,,,,,62.3,26.4,0.0443,-2,O17,118,2024-12-27,PWHL,2024/2025,Regular Season
+40,6:54,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,77,Susanna Tapani,,,,,1,Raygan Kirk,,,,,,,43.0,16.1,,-2,O22,118,2024-12-27,PWHL,2024/2025,Regular Season
+41,7:32,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,9,Sophie Shirley,,,,,1,Raygan Kirk,,,,,,,54.7,9.3,0.0418,-2,O22,118,2024-12-27,PWHL,2024/2025,Regular Season
+42,7:53,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,8,Izzy Daniel,,,,,31,Aerin Frankel,,,,,,,83.0,-8.8,0.0982,2,O06,118,2024-12-27,PWHL,2024/2025,Regular Season
+43,8:09,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,15,Anneke Rankila,,,,,31,Aerin Frankel,,,,,,,76.7,-1.4,0.1803,2,O11,118,2024-12-27,PWHL,2024/2025,Regular Season
+44,8:17,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v4,9,Daryl Watts,,,,,31,Aerin Frankel,,,,,,,79.0,-18.7,,2,O06,118,2024-12-27,PWHL,2024/2025,Regular Season
+45,8:27,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v4,20,Sarah Nurse,,,,,31,Aerin Frankel,,,,,,,71.0,-0.3,,2,O15,118,2024-12-27,PWHL,2024/2025,Regular Season
+46,8:54,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,5,Megan Keller,,,,,1,Raygan Kirk,,,,,,,46.7,28.3,0.0164,-2,O23,118,2024-12-27,PWHL,2024/2025,Regular Season
+47,9:33,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,2,Emily Brown,,,,,1,Raygan Kirk,,,,,,,84.7,-16.7,0.0712,-2,O06,118,2024-12-27,PWHL,2024/2025,Regular Season
+48,10:00,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,2,Emily Brown,,,,,1,Raygan Kirk,,,,,,,37.0,14.2,,-2,O25,118,2024-12-27,PWHL,2024/2025,Regular Season
+49,10:46,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,67,Emma Woods,,,,,31,Aerin Frankel,,,,,,,63.0,8.2,0.1322,2,O16,118,2024-12-27,PWHL,2024/2025,Regular Season
+50,11:01,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,18,Jesse Compher,,,,,31,Aerin Frankel,,,,,,,81.3,-3.7,0.1803,2,O11,118,2024-12-27,PWHL,2024/2025,Regular Season
+51,11:02,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,18,Jesse Compher,,,,,31,Aerin Frankel,,,,,,,85.0,-4.8,0.2924,2,O07,118,2024-12-27,PWHL,2024/2025,Regular Season
+52,11:31,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,67,Emma Woods,,,,,31,Aerin Frankel,,,,,,,-81.3,36.5,0.0828,2,D04,118,2024-12-27,PWHL,2024/2025,Regular Season
+53,12:31,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v4,22,Maggie Connors,,,,,31,Aerin Frankel,,,,,,,71.3,-25.8,,2,O12,118,2024-12-27,PWHL,2024/2025,Regular Season
+54,14:25,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,7,Sidney Morin,,,,,1,Raygan Kirk,,,,,,,31.0,21.2,,-2,O26,118,2024-12-27,PWHL,2024/2025,Regular Season
+55,14:40,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,40,Blayre Turnbull,,,,,31,Aerin Frankel,,,,,,,76.3,-0.6,0.1803,2,O11,118,2024-12-27,PWHL,2024/2025,Regular Season
+56,15:18,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,5v5,14,Renata Fast,,,,,,,,,,,,,,,,2,,118,2024-12-27,PWHL,2024/2025,Regular Season
+57,16:06,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v4,77,Susanna Tapani,,,,,1,Raygan Kirk,,,,,,,81.0,-6.0,0.2002,-2,O11,118,2024-12-27,PWHL,2024/2025,Regular Season
+58,16:16,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v4,11,Alina Müller,,,,,1,Raygan Kirk,,,,,,,39.3,-24.6,0.0682,-2,O24,118,2024-12-27,PWHL,2024/2025,Regular Season
+59,16:25,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v5,7,Sidney Morin,,,,,1,Raygan Kirk,,,,,,,38.3,2.8,,-2,O25,118,2024-12-27,PWHL,2024/2025,Regular Season
+60,16:36,Goal,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,2,event,5v4,36,Loren Gabel,88,Lexie Adzija,,,1,Raygan Kirk,,6 8 12 20,Kali Flanagan - Izzy Daniel - Allie Munroe - Sarah Nurse,,7 9 11 36 88,Sidney Morin - Sophie Shirley - Alina Müller - Loren Gabel - Lexie Adzija,75.0,3.7,0.2002,-2,O11,118,2024-12-27,PWHL,2024/2025,Regular Season
+61,18:28,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,2,event,4v5,20,Sarah Nurse,,,,,31,Aerin Frankel,,,,,,,54.7,-16.1,,1,O20,118,2024-12-27,PWHL,2024/2025,Regular Season
+62,0:25,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,27,Emma Maltais,,,,,31,Aerin Frankel,,,,,,,66.0,9.3,0.1061,1,O16,118,2024-12-27,PWHL,2024/2025,Regular Season
+63,2:23,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,7,Sidney Morin,,,,,1,Raygan Kirk,,,,,,,38.7,27.5,0.0277,-1,O26,118,2024-12-27,PWHL,2024/2025,Regular Season
+64,4:11,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,11,Alina Müller,,,,,1,Raygan Kirk,,,,,,,71.3,15.9,,-1,O17,118,2024-12-27,PWHL,2024/2025,Regular Season
+65,4:21,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,27,Emma Maltais,,,,,31,Aerin Frankel,,,,,,,78.0,9.9,0.0841,1,O08,118,2024-12-27,PWHL,2024/2025,Regular Season
+66,4:36,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,12,Allie Munroe,,,,,31,Aerin Frankel,,,,,,,61.0,25.2,,1,O17,118,2024-12-27,PWHL,2024/2025,Regular Season
+67,5:51,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,67,Emma Woods,,,,,31,Aerin Frankel,,,,,,,62.7,3.7,0.1225,1,O15,118,2024-12-27,PWHL,2024/2025,Regular Season
+68,7:03,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,37,Theresa Schafzahl,,,,,1,Raygan Kirk,,,,,,,81.0,-4.0,0.1328,-1,O11,118,2024-12-27,PWHL,2024/2025,Regular Season
+69,7:24,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,34,Hannah Miller,,,,,31,Aerin Frankel,,,,,,,80.0,-7.6,0.1463,1,O11,118,2024-12-27,PWHL,2024/2025,Regular Season
+70,8:09,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,15,Sydney Bard,,,,,1,Raygan Kirk,,,,,,,34.0,25.8,0.0277,-1,O26,118,2024-12-27,PWHL,2024/2025,Regular Season
+71,8:39,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v4,27,Emma Maltais,,,,,31,Aerin Frankel,,,,,,,35.3,-16.1,,1,O25,118,2024-12-27,PWHL,2024/2025,Regular Season
+72,9:11,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,12,Allie Munroe,,,,,31,Aerin Frankel,,,,,,,44.7,-29.5,0.0380,1,O19,118,2024-12-27,PWHL,2024/2025,Regular Season
+73,9:20,Block,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v4,12,Allie Munroe,,,,,31,Aerin Frankel,,,,,,,43.0,-10.2,,1,O21,118,2024-12-27,PWHL,2024/2025,Regular Season
+74,9:47,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,34,Hannah Miller,,,,,31,Aerin Frankel,,,,,,,81.3,5.1,0.1463,1,O11,118,2024-12-27,PWHL,2024/2025,Regular Season
+75,12:37,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,22,Jessica DiGirolamo,,,,,1,Raygan Kirk,,,,,,,11.7,25.5,0.0591,-1,N03,118,2024-12-27,PWHL,2024/2025,Regular Season
+76,12:41,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,22,Jessica DiGirolamo,,,,,1,Raygan Kirk,,,,,,,42.3,32.6,0.0163,-1,O23,118,2024-12-27,PWHL,2024/2025,Regular Season
+77,12:49,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,4v5,22,Jessica DiGirolamo,,,,,1,Raygan Kirk,,,,,,,45.7,25.5,,-1,O22,118,2024-12-27,PWHL,2024/2025,Regular Season
+78,12:58,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,77,Susanna Tapani,,,,,1,Raygan Kirk,,,,,,,37.0,3.4,0.0450,-1,O25,118,2024-12-27,PWHL,2024/2025,Regular Season
+79,14:20,Goal,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,67,Emma Woods,18,Jesse Compher,88,Julia Gosling,31,Aerin Frankel,,6 12 18 67 88,Kali Flanagan - Allie Munroe - Jesse Compher - Emma Woods - Julia Gosling,,5 15 36 47 88,Megan Keller - Sydney Bard - Loren Gabel - Jamie Lee Rattray - Lexie Adzija,51.0,13.6,0.0461,1,O22,118,2024-12-27,PWHL,2024/2025,Regular Season
+80,15:00,Shot,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,40,Blayre Turnbull,,,,,31,Aerin Frankel,,,,,,,74.7,9.6,0.1803,2,O11,118,2024-12-27,PWHL,2024/2025,Regular Season
+81,15:21,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,16,Amanda Pelkey,,,,,1,Raygan Kirk,,,,,,,81.3,-0.3,0.1341,-2,O11,118,2024-12-27,PWHL,2024/2025,Regular Season
+82,16:04,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v5,7,Sidney Morin,,,,,1,Raygan Kirk,,,,,,,32.0,33.1,0.0280,-2,O26,118,2024-12-27,PWHL,2024/2025,Regular Season
+83,16:50,Goal,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,6,Kali Flanagan,,,,,31,Aerin Frankel,,6 12 18 67 88,Kali Flanagan - Allie Munroe - Jesse Compher - Emma Woods - Julia Gosling,,11 16 19 22 55 88,Alina Müller - Amanda Pelkey - Hannah Bilka - Jessica DiGirolamo - Daniela Pejšová - Lexie Adzija,70.7,22.1,0.0618,2,O17,118,2024-12-27,PWHL,2024/2025,Regular Season
+84,17:32,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Boston Fleet,3,event,5v5,9,Daryl Watts,,,,,,,,,,,,,,,,3,,118,2024-12-27,PWHL,2024/2025,Regular Season
+85,18:05,Shot,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v4,21,Hilary Knight,,,,,1,Raygan Kirk,,,,,,,81.0,2.3,0.2002,-3,O11,118,2024-12-27,PWHL,2024/2025,Regular Season
+86,18:26,Block,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v4,15,Sydney Bard,,,,,1,Raygan Kirk,,,,,,,51.0,-19.8,,-3,O20,118,2024-12-27,PWHL,2024/2025,Regular Season
+87,18:55,Goal,Boston Fleet,Away,Toronto Sceptres,Boston Fleet,3,event,5v4,19,Hannah Bilka,5,Megan Keller,15,Sydney Bard,1,Raygan Kirk,,3 14 22 40,Jocelyne Larocque - Renata Fast - Maggie Connors - Blayre Turnbull,,5 15 19 21 77,Megan Keller - Sydney Bard - Hannah Bilka - Hilary Knight - Susanna Tapani,84.3,4.0,0.3199,-3,O07,118,2024-12-27,PWHL,2024/2025,Regular Season

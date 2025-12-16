@@ -1,78 +1,78 @@
-id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
-1,0:39,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,1,event,5v5,5,Lauriane Rougeau,,,,,39,Abigail Levy,,,,,,,82.0,-5.4,5,2024-01-05,PWHL,2023/2024,Regular Season
-2,0:45,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,1,event,5v5,12,Chloé Aurard,,,,,50,Kristen Campbell,,,,,,,-71.3,16.1,5,2024-01-05,PWHL,2023/2024,Regular Season
-3,2:12,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,1,event,5v5,10,Kayla Vespa,,,,,50,Kristen Campbell,,,,,,,-45.0,21.2,5,2024-01-05,PWHL,2023/2024,Regular Season
-4,3:58,Goal,New York Sirens,Home,New York Sirens,Toronto Sceptres,1,event,5v5,11,Abby Roque,12,Chloé Aurard,67,Emma Woods,50,Kristen Campbell,,6 11 12 59 67,Brooke Hobson - Abby Roque - Chloé Aurard - Johanna Fällman - Emma Woods,,12 14 18 20 40,Allie Munroe - Renata Fast - Jesse Compher - Sarah Nurse - Blayre Turnbull,-82.3,6.0,5,2024-01-05,PWHL,2023/2024,Regular Season
-5,10:01,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,1,event,5v5,9,Jessie Eldridge,,,,,50,Kristen Campbell,,,,,,,-79.0,-8.5,5,2024-01-05,PWHL,2023/2024,Regular Season
-6,11:16,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,1,event,5v5,11,Abby Roque,,,,,50,Kristen Campbell,,,,,,,-82.7,23.5,5,2024-01-05,PWHL,2023/2024,Regular Season
-7,11:23,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,1,event,5v5,11,Abby Roque,,,,,50,Kristen Campbell,,,,,,,-78.0,5.4,5,2024-01-05,PWHL,2023/2024,Regular Season
-8,11:29,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,1,event,5v5,67,Emma Woods,,,,,50,Kristen Campbell,,,,,,,-85.3,11.1,5,2024-01-05,PWHL,2023/2024,Regular Season
-9,14:21,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,1,event,5v5,9,Jessie Eldridge,,,,,50,Kristen Campbell,,,,,,,-69.0,7.6,5,2024-01-05,PWHL,2023/2024,Regular Season
-10,16:12,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,1,event,5v5,41,Brittany Howard,,,,,39,Abigail Levy,,,,,,,69.0,-7.9,5,2024-01-05,PWHL,2023/2024,Regular Season
-11,16:12,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,1,event,5v5,19,Rebecca Leslie,,,,,39,Abigail Levy,,,,,,,57.7,-2.3,5,2024-01-05,PWHL,2023/2024,Regular Season
-12,16:12,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,1,event,5v5,41,Brittany Howard,,,,,39,Abigail Levy,,,,,,,52.7,17.8,5,2024-01-05,PWHL,2023/2024,Regular Season
-13,16:12,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,1,event,5v5,6,Kali Flanagan,,,,,39,Abigail Levy,,,,,,,34.3,-0.3,5,2024-01-05,PWHL,2023/2024,Regular Season
-14,16:12,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,1,event,5v5,19,Rebecca Leslie,,,,,39,Abigail Levy,,,,,,,62.0,-11.3,5,2024-01-05,PWHL,2023/2024,Regular Season
-15,17:42,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,1,event,5v5,22,Maggie Connors,,,,,39,Abigail Levy,,,,,,,43.0,-26.9,5,2024-01-05,PWHL,2023/2024,Regular Season
-16,17:42,Penalty,New York Sirens,Home,New York Sirens,Toronto Sceptres,1,event,5v5,19,Paetyn Levis,,,,,,,,,,,,,,,5,2024-01-05,PWHL,2023/2024,Regular Season
-17,18:02,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,1,event,4v5,17,Ella Shelton,,,,,50,Kristen Campbell,,,,,,,-35.0,38.0,5,2024-01-05,PWHL,2023/2024,Regular Season
-18,18:58,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,1,event,5v4,41,Brittany Howard,,,,,39,Abigail Levy,,,,,,,63.0,-26.4,5,2024-01-05,PWHL,2023/2024,Regular Season
-19,18:58,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,1,event,5v4,3,Jocelyne Larocque,,,,,39,Abigail Levy,,,,,,,77.3,-6.2,5,2024-01-05,PWHL,2023/2024,Regular Season
-20,18:58,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,1,event,5v4,27,Emma Maltais,,,,,39,Abigail Levy,,,,,,,58.0,13.0,5,2024-01-05,PWHL,2023/2024,Regular Season
-21,18:58,Penalty,New York Sirens,Home,New York Sirens,Toronto Sceptres,1,event,4v5,14,Jaime Bourbonnais,,,,,,,,,,,,,,,5,2024-01-05,PWHL,2023/2024,Regular Season
-22,0:38,Goal,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v4,24,Natalie Spooner,20,Sarah Nurse,14,Renata Fast,39,Abigail Levy,,6 11 17 25,Brooke Hobson - Abby Roque - Ella Shelton - Alex Carpenter,,14 20 22 24 40,Renata Fast - Sarah Nurse - Maggie Connors - Natalie Spooner - Blayre Turnbull,78.3,1.1,5,2024-01-05,PWHL,2023/2024,Regular Season
-23,0:39,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v5,20,Sarah Nurse,,,,,39,Abigail Levy,,,,,,,32.3,-33.1,5,2024-01-05,PWHL,2023/2024,Regular Season
-24,0:39,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v5,24,Natalie Spooner,,,,,39,Abigail Levy,,,,,,,79.0,-3.7,5,2024-01-05,PWHL,2023/2024,Regular Season
-25,1:54,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v5,10,Alexa Vasko,,,,,39,Abigail Levy,,,,,,,57.0,-34.9,5,2024-01-05,PWHL,2023/2024,Regular Season
-26,2:53,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,2,event,5v5,17,Ella Shelton,,,,,50,Kristen Campbell,,,,,,,42.0,-0.8,5,2024-01-05,PWHL,2023/2024,Regular Season
-27,3:28,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v5,40,Blayre Turnbull,,,,,39,Abigail Levy,,,,,,,69.0,-32.3,5,2024-01-05,PWHL,2023/2024,Regular Season
-28,4:57,Goal,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v5,10,Alexa Vasko,19,Rebecca Leslie,41,Brittany Howard,39,Abigail Levy,,4 6 11 12 71,Taylor Baker - Brooke Hobson - Abby Roque - Chloé Aurard - Savannah Norcross,,7 10 12 19 41,Olivia Knowles - Alexa Vasko - Allie Munroe - Rebecca Leslie - Brittany Howard,73.3,-3.1,5,2024-01-05,PWHL,2023/2024,Regular Season
-29,5:16,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,2,event,5v5,13,Alexandra Labelle,,,,,50,Kristen Campbell,,,,,,,-28.7,36.3,5,2024-01-05,PWHL,2023/2024,Regular Season
-30,5:52,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v5,20,Sarah Nurse,,,,,39,Abigail Levy,,,,,,,68.3,-17.6,5,2024-01-05,PWHL,2023/2024,Regular Season
-31,7:19,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v5,27,Emma Maltais,,,,,39,Abigail Levy,,,,,,,75.0,8.5,5,2024-01-05,PWHL,2023/2024,Regular Season
-32,7:23,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v5,3,Jocelyne Larocque,,,,,39,Abigail Levy,,,,,,,73.0,-11.9,5,2024-01-05,PWHL,2023/2024,Regular Season
-33,7:24,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v5,27,Emma Maltais,,,,,39,Abigail Levy,,,,,,,81.3,-8.5,5,2024-01-05,PWHL,2023/2024,Regular Season
-34,9:52,Penalty,New York Sirens,Home,New York Sirens,Toronto Sceptres,2,event,5v5,18,Élizabeth Giguère,,,,,,,,,,,,,,,5,2024-01-05,PWHL,2023/2024,Regular Season
-35,11:47,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v4,27,Emma Maltais,,,,,39,Abigail Levy,,,,,,,55.3,-21.0,5,2024-01-05,PWHL,2023/2024,Regular Season
-36,11:58,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v5,3,Jocelyne Larocque,,,,,39,Abigail Levy,,,,,,,56.7,-23.0,5,2024-01-05,PWHL,2023/2024,Regular Season
-37,12:38,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v5,19,Rebecca Leslie,,,,,39,Abigail Levy,,,,,,,49.7,-18.7,5,2024-01-05,PWHL,2023/2024,Regular Season
-38,12:56,Penalty,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v5,7,Olivia Knowles,,,,,,,,,,,,,,,5,2024-01-05,PWHL,2023/2024,Regular Season
-39,14:36,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,4v5,14,Renata Fast,,,,,39,Abigail Levy,,,,,,,65.0,20.4,5,2024-01-05,PWHL,2023/2024,Regular Season
-40,14:53,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,4v5,12,Allie Munroe,,,,,39,Abigail Levy,,,,,,,61.7,-0.6,5,2024-01-05,PWHL,2023/2024,Regular Season
-41,15:20,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v5,20,Sarah Nurse,,,,,39,Abigail Levy,,,,,,,59.7,-14.5,5,2024-01-05,PWHL,2023/2024,Regular Season
-42,17:12,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,2,event,5v5,25,Alex Carpenter,,,,,50,Kristen Campbell,,,,,,,-49.0,0.8,5,2024-01-05,PWHL,2023/2024,Regular Season
-43,17:28,Goal,New York Sirens,Home,New York Sirens,Toronto Sceptres,2,event,5v5,25,Alex Carpenter,9,Jessie Eldridge,3,Olivia Zafuto,50,Kristen Campbell,,3 4 9 19 25,Olivia Zafuto - Taylor Baker - Jessie Eldridge - Paetyn Levis - Alex Carpenter,,7 12 18 20 40,Olivia Knowles - Allie Munroe - Jesse Compher - Sarah Nurse - Blayre Turnbull,-49.0,3.4,5,2024-01-05,PWHL,2023/2024,Regular Season
-44,18:04,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v5,18,Jesse Compher,,,,,39,Abigail Levy,,,,,,,88.3,-10.2,5,2024-01-05,PWHL,2023/2024,Regular Season
-45,18:06,Penalty,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v5,,,,,,,,,,,,,,,,,5,2024-01-05,PWHL,2023/2024,Regular Season
-46,18:50,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,2,event,5v4,44,Jill Saulnier,,,,,50,Kristen Campbell,,,,,,,-64.0,-8.2,5,2024-01-05,PWHL,2023/2024,Regular Season
-47,19:18,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,2,event,5v4,9,Jessie Eldridge,,,,,50,Kristen Campbell,,,,,,,-84.3,6.0,5,2024-01-05,PWHL,2023/2024,Regular Season
-48,19:19,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,2,event,5v4,25,Alex Carpenter,,,,,50,Kristen Campbell,,,,,,,-61.7,26.9,5,2024-01-05,PWHL,2023/2024,Regular Season
-49,19:53,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,2,event,5v4,25,Alex Carpenter,,,,,50,Kristen Campbell,,,,,,,-46.3,34.6,5,2024-01-05,PWHL,2023/2024,Regular Season
-50,2:24,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,3,event,5v5,20,Sarah Nurse,,,,,39,Abigail Levy,,,,,,,69.3,13.6,5,2024-01-05,PWHL,2023/2024,Regular Season
-51,2:24,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,3,event,5v5,41,Brittany Howard,,,,,39,Abigail Levy,,,,,,,67.0,-21.8,5,2024-01-05,PWHL,2023/2024,Regular Season
-52,3:02,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v5,12,Chloé Aurard,,,,,50,Kristen Campbell,,,,,,,-78.7,-0.8,5,2024-01-05,PWHL,2023/2024,Regular Season
-53,3:08,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,3,event,5v5,3,Jocelyne Larocque,,,,,39,Abigail Levy,,,,,,,77.0,-7.6,5,2024-01-05,PWHL,2023/2024,Regular Season
-54,4:10,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v5,17,Ella Shelton,,,,,50,Kristen Campbell,,,,,,,-11.0,-38.8,5,2024-01-05,PWHL,2023/2024,Regular Season
-55,5:44,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v5,11,Abby Roque,,,,,50,Kristen Campbell,,,,,,,-44.3,-31.4,5,2024-01-05,PWHL,2023/2024,Regular Season
-56,5:45,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v5,17,Ella Shelton,,,,,50,Kristen Campbell,,,,,,,-80.3,11.1,5,2024-01-05,PWHL,2023/2024,Regular Season
-57,5:45,Penalty,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,3,event,5v5,7,Olivia Knowles,,,,,,,,,,,,,,,5,2024-01-05,PWHL,2023/2024,Regular Season
-58,5:45,Penalty,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,3,event,5v5,12,Allie Munroe,,,,,,,,,,,,,,,5,2024-01-05,PWHL,2023/2024,Regular Season
-59,5:45,Penalty,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v5,17,Ella Shelton,,,,,,,,,,,,,,,5,2024-01-05,PWHL,2023/2024,Regular Season
-60,6:03,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,3,event,3v4,40,Blayre Turnbull,,,,,39,Abigail Levy,,,,,,,65.3,-3.4,5,2024-01-05,PWHL,2023/2024,Regular Season
-61,6:33,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,3,event,3v4,18,Jesse Compher,,,,,39,Abigail Levy,,,,,,,60.7,-15.0,5,2024-01-05,PWHL,2023/2024,Regular Season
-62,6:34,Goal,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,3,event,3v4,27,Emma Maltais,18,Jesse Compher,3,Jocelyne Larocque,39,Abigail Levy,,6 9 11 25 44,Brooke Hobson - Jessie Eldridge - Abby Roque - Alex Carpenter - Jill Saulnier,,5 6 18 27,Lauriane Rougeau - Kali Flanagan - Jesse Compher - Emma Maltais,78.3,7.4,5,2024-01-05,PWHL,2023/2024,Regular Season
-63,7:33,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v3,27,Jade Downie-Landry,,,,,50,Kristen Campbell,,,,,,,-36.7,-38.2,5,2024-01-05,PWHL,2023/2024,Regular Season
-64,9:39,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,3,event,5v5,18,Jesse Compher,,,,,39,Abigail Levy,,,,,,,78.0,22.4,5,2024-01-05,PWHL,2023/2024,Regular Season
-65,10:28,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v5,13,Alexandra Labelle,,,,,50,Kristen Campbell,,,,,,,-30.0,37.4,5,2024-01-05,PWHL,2023/2024,Regular Season
-66,11:57,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v5,67,Emma Woods,,,,,50,Kristen Campbell,,,,,,,-76.7,23.5,5,2024-01-05,PWHL,2023/2024,Regular Season
-67,12:23,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,3,event,5v5,19,Rebecca Leslie,,,,,39,Abigail Levy,,,,,,,77.7,4.8,5,2024-01-05,PWHL,2023/2024,Regular Season
-68,12:46,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,3,event,5v5,5,Lauriane Rougeau,,,,,39,Abigail Levy,,,,,,,40.0,-23.2,5,2024-01-05,PWHL,2023/2024,Regular Season
-69,13:02,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v5,18,Élizabeth Giguère,,,,,50,Kristen Campbell,,,,,,,-51.3,-26.4,5,2024-01-05,PWHL,2023/2024,Regular Season
-70,13:13,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,3,event,5v5,3,Jocelyne Larocque,,,,,39,Abigail Levy,,,,,,,31.0,-2.8,5,2024-01-05,PWHL,2023/2024,Regular Season
-71,15:57,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v5,9,Jessie Eldridge,,,,,50,Kristen Campbell,,,,,,,-75.7,12.2,5,2024-01-05,PWHL,2023/2024,Regular Season
-72,15:58,Penalty,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,3,event,5v5,40,Blayre Turnbull,,,,,,,,,,,,,,,5,2024-01-05,PWHL,2023/2024,Regular Season
-73,16:40,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v4,17,Ella Shelton,,,,,50,Kristen Campbell,,,,,,,-51.0,-27.2,5,2024-01-05,PWHL,2023/2024,Regular Season
-74,17:27,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v4,18,Élizabeth Giguère,,,,,50,Kristen Campbell,,,,,,,17.7,-38.2,5,2024-01-05,PWHL,2023/2024,Regular Season
-75,19:33,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v5,25,Alex Carpenter,,,,,50,Kristen Campbell,,,,,,,-67.0,4.2,5,2024-01-05,PWHL,2023/2024,Regular Season
-76,19:58,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v5,25,Alex Carpenter,,,,,50,Kristen Campbell,,,,,,,-83.7,-10.2,5,2024-01-05,PWHL,2023/2024,Regular Season
-77,20:00,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v5,14,Jaime Bourbonnais,,,,,50,Kristen Campbell,,,,,,,-72.0,-0.8,5,2024-01-05,PWHL,2023/2024,Regular Season
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,xG,ScoreState,BoxID,game_id,game_date,competition,season,state
+1,0:39,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,1,event,5v5,5,Lauriane Rougeau,,,,,39,Abbey Levy,,,,,,,82.0,-5.4,0.1248,0,O11,5,2024-01-05,PWHL,2023/2024,Regular Season
+2,0:45,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,1,event,5v5,12,Chloé Aurard-Bushee,,,,,50,Kristen Campbell,,,,,,,71.3,-16.1,0.0371,0,O13,5,2024-01-05,PWHL,2023/2024,Regular Season
+3,2:12,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,1,event,5v5,10,Kayla Vespa,,,,,50,Kristen Campbell,,,,,,,45.0,-21.2,0.0458,0,O20,5,2024-01-05,PWHL,2023/2024,Regular Season
+4,3:58,Goal,New York Sirens,Home,New York Sirens,Toronto Sceptres,1,event,5v5,11,Abby Roque,12,Chloé Aurard-Bushee,67,Emma Woods,50,Kristen Campbell,,6 11 12 59 67,Brooke Hobson - Abby Roque - Chloé Aurard-Bushee - Johanna Fällman - Emma Woods,,12 14 18 20 40,Allie Munroe - Renata Fast - Jesse Compher - Sarah Nurse - Blayre Turnbull,82.3,-6.0,0.1248,0,O11,5,2024-01-05,PWHL,2023/2024,Regular Season
+5,10:01,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,1,event,5v5,9,Jessie Eldridge,,,,,50,Kristen Campbell,,,,,,,79.0,8.5,0.1463,1,O11,5,2024-01-05,PWHL,2023/2024,Regular Season
+6,11:16,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,1,event,5v5,11,Abby Roque,,,,,50,Kristen Campbell,,,,,,,82.7,-23.5,0.0213,1,O05,5,2024-01-05,PWHL,2023/2024,Regular Season
+7,11:23,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,1,event,5v5,11,Abby Roque,,,,,50,Kristen Campbell,,,,,,,78.0,-5.4,0.1463,1,O11,5,2024-01-05,PWHL,2023/2024,Regular Season
+8,11:29,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,1,event,5v5,67,Emma Woods,,,,,50,Kristen Campbell,,,,,,,85.3,-11.1,0.0782,1,O06,5,2024-01-05,PWHL,2023/2024,Regular Season
+9,14:21,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,1,event,5v5,9,Jessie Eldridge,,,,,50,Kristen Campbell,,,,,,,69.0,-7.6,0.0929,1,O14,5,2024-01-05,PWHL,2023/2024,Regular Season
+10,16:12,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,1,event,5v5,41,Brittany Howard,,,,,39,Abbey Levy,,,,,,,69.0,-7.9,0.0838,-1,O14,5,2024-01-05,PWHL,2023/2024,Regular Season
+11,16:12,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,1,event,5v5,19,Rebecca Leslie,,,,,39,Abbey Levy,,,,,,,57.7,-2.3,0.1110,-1,O15,5,2024-01-05,PWHL,2023/2024,Regular Season
+12,16:12,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,1,event,5v5,41,Brittany Howard,,,,,39,Abbey Levy,,,,,,,52.7,17.8,0.0414,-1,O22,5,2024-01-05,PWHL,2023/2024,Regular Season
+13,16:12,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,1,event,5v5,6,Kali Flanagan,,,,,39,Abbey Levy,,,,,,,34.3,-0.3,0.0450,-1,O25,5,2024-01-05,PWHL,2023/2024,Regular Season
+14,16:12,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,1,event,5v5,19,Rebecca Leslie,,,,,39,Abbey Levy,,,,,,,62.0,-11.3,0.0838,-1,O14,5,2024-01-05,PWHL,2023/2024,Regular Season
+15,17:42,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,1,event,5v5,22,Maggie Connors,,,,,39,Abbey Levy,,,,,,,43.0,-26.9,0.0491,-1,O20,5,2024-01-05,PWHL,2023/2024,Regular Season
+16,17:42,Penalty,New York Sirens,Home,New York Sirens,Toronto Sceptres,1,event,5v5,19,Paetyn Levis,,,,,,,,,,,,,,,,1,,5,2024-01-05,PWHL,2023/2024,Regular Season
+17,18:02,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,1,event,4v5,17,Ella Shelton,,,,,50,Kristen Campbell,,,,,,,35.0,-38.0,0.0812,1,O24,5,2024-01-05,PWHL,2023/2024,Regular Season
+18,18:58,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,1,event,5v4,41,Brittany Howard,,,,,39,Abbey Levy,,,,,,,63.0,-26.4,0.0627,-1,O13,5,2024-01-05,PWHL,2023/2024,Regular Season
+19,18:58,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,1,event,5v4,3,Jocelyne Larocque,,,,,39,Abbey Levy,,,,,,,77.3,-6.2,0.1985,-1,O11,5,2024-01-05,PWHL,2023/2024,Regular Season
+20,18:58,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,1,event,5v4,27,Emma Maltais,,,,,39,Abbey Levy,,,,,,,58.0,13.0,0.1464,-1,O16,5,2024-01-05,PWHL,2023/2024,Regular Season
+21,18:58,Penalty,New York Sirens,Home,New York Sirens,Toronto Sceptres,1,event,4v5,14,Jaime Bourbonnais,,,,,,,,,,,,,,,,1,,5,2024-01-05,PWHL,2023/2024,Regular Season
+22,0:38,Goal,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v4,24,Natalie Spooner,20,Sarah Nurse,14,Renata Fast,39,Abbey Levy,,6 11 17 25,Brooke Hobson - Abby Roque - Ella Shelton - Alex Carpenter,,14 20 22 24 40,Renata Fast - Sarah Nurse - Maggie Connors - Natalie Spooner - Blayre Turnbull,78.3,1.1,0.1985,-1,O11,5,2024-01-05,PWHL,2023/2024,Regular Season
+23,0:39,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v5,20,Sarah Nurse,,,,,39,Abbey Levy,,,,,,,32.3,-33.1,0.0400,0,O24,5,2024-01-05,PWHL,2023/2024,Regular Season
+24,0:39,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v5,24,Natalie Spooner,,,,,39,Abbey Levy,,,,,,,79.0,-3.7,0.1248,0,O11,5,2024-01-05,PWHL,2023/2024,Regular Season
+25,1:54,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v5,10,Alexa Vasko,,,,,39,Abbey Levy,,,,,,,57.0,-34.9,0.0138,0,O12,5,2024-01-05,PWHL,2023/2024,Regular Season
+26,2:53,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,2,event,5v5,17,Ella Shelton,,,,,50,Kristen Campbell,,,,,,,-42.0,0.8,0.0553,0,D21,5,2024-01-05,PWHL,2023/2024,Regular Season
+27,3:28,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v5,40,Blayre Turnbull,,,,,39,Abbey Levy,,,,,,,69.0,-32.3,0.0138,0,O12,5,2024-01-05,PWHL,2023/2024,Regular Season
+28,4:57,Goal,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v5,10,Alexa Vasko,19,Rebecca Leslie,41,Brittany Howard,39,Abbey Levy,,4 6 11 12 71,Taylor Baker - Brooke Hobson - Abby Roque - Chloé Aurard-Bushee - Savannah Norcross,,7 10 12 19 41,Olivia Knowles - Alexa Vasko - Allie Munroe - Rebecca Leslie - Brittany Howard,73.3,-3.1,0.1248,0,O11,5,2024-01-05,PWHL,2023/2024,Regular Season
+29,5:16,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,2,event,5v5,13,Alexandra Labelle,,,,,50,Kristen Campbell,,,,,,,28.7,-36.3,0.0429,-1,O24,5,2024-01-05,PWHL,2023/2024,Regular Season
+30,5:52,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v5,20,Sarah Nurse,,,,,39,Abbey Levy,,,,,,,68.3,-17.6,0.0443,1,O13,5,2024-01-05,PWHL,2023/2024,Regular Season
+31,7:19,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v5,27,Emma Maltais,,,,,39,Abbey Levy,,,,,,,75.0,8.5,0.1463,1,O11,5,2024-01-05,PWHL,2023/2024,Regular Season
+32,7:23,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v5,3,Jocelyne Larocque,,,,,39,Abbey Levy,,,,,,,73.0,-11.9,0.1463,1,O11,5,2024-01-05,PWHL,2023/2024,Regular Season
+33,7:24,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v5,27,Emma Maltais,,,,,39,Abbey Levy,,,,,,,81.3,-8.5,0.0782,1,O06,5,2024-01-05,PWHL,2023/2024,Regular Season
+34,9:52,Penalty,New York Sirens,Home,New York Sirens,Toronto Sceptres,2,event,5v5,18,Élizabeth Giguère,,,,,,,,,,,,,,,,-1,,5,2024-01-05,PWHL,2023/2024,Regular Season
+35,11:47,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v4,27,Emma Maltais,,,,,39,Abbey Levy,,,,,,,55.3,-21.0,0.0601,1,O19,5,2024-01-05,PWHL,2023/2024,Regular Season
+36,11:58,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v5,3,Jocelyne Larocque,,,,,39,Abbey Levy,,,,,,,56.7,-23.0,0.0380,1,O19,5,2024-01-05,PWHL,2023/2024,Regular Season
+37,12:38,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v5,19,Rebecca Leslie,,,,,39,Abbey Levy,,,,,,,49.7,-18.7,0.0546,1,O20,5,2024-01-05,PWHL,2023/2024,Regular Season
+38,12:56,Penalty,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v5,7,Olivia Knowles,,,,,,,,,,,,,,,,1,,5,2024-01-05,PWHL,2023/2024,Regular Season
+39,14:36,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,4v5,14,Renata Fast,,,,,39,Abbey Levy,,,,,,,65.0,20.4,0.0829,1,O17,5,2024-01-05,PWHL,2023/2024,Regular Season
+40,14:53,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,4v5,12,Allie Munroe,,,,,39,Abbey Levy,,,,,,,61.7,-0.6,0.1974,1,O15,5,2024-01-05,PWHL,2023/2024,Regular Season
+41,15:20,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v5,20,Sarah Nurse,,,,,39,Abbey Levy,,,,,,,59.7,-14.5,0.0929,1,O14,5,2024-01-05,PWHL,2023/2024,Regular Season
+42,17:12,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,2,event,5v5,25,Alex Carpenter,,,,,50,Kristen Campbell,,,,,,,49.0,-0.8,0.0614,-1,O21,5,2024-01-05,PWHL,2023/2024,Regular Season
+43,17:28,Goal,New York Sirens,Home,New York Sirens,Toronto Sceptres,2,event,5v5,25,Alex Carpenter,9,Jessie Eldridge,3,Olivia Zafuto,50,Kristen Campbell,,3 4 9 19 25,Olivia Zafuto - Taylor Baker - Jessie Eldridge - Paetyn Levis - Alex Carpenter,,7 12 18 20 40,Olivia Knowles - Allie Munroe - Jesse Compher - Sarah Nurse - Blayre Turnbull,49.0,-3.4,0.0614,-1,O21,5,2024-01-05,PWHL,2023/2024,Regular Season
+44,18:04,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v5,18,Jesse Compher,,,,,39,Abbey Levy,,,,,,,88.3,-10.2,0.0659,0,O06,5,2024-01-05,PWHL,2023/2024,Regular Season
+45,18:06,Penalty,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,2,event,5v5,,,,,,,,,,,,,,,,,,0,,5,2024-01-05,PWHL,2023/2024,Regular Season
+46,18:50,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,2,event,5v4,44,Jill Saulnier,,,,,50,Kristen Campbell,,,,,,,64.0,8.2,0.1377,0,O16,5,2024-01-05,PWHL,2023/2024,Regular Season
+47,19:18,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,2,event,5v4,9,Jessie Eldridge,,,,,50,Kristen Campbell,,,,,,,84.3,-6.0,0.3021,0,O07,5,2024-01-05,PWHL,2023/2024,Regular Season
+48,19:19,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,2,event,5v4,25,Alex Carpenter,,,,,50,Kristen Campbell,,,,,,,61.7,-26.9,0.0586,0,O13,5,2024-01-05,PWHL,2023/2024,Regular Season
+49,19:53,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,2,event,5v4,25,Alex Carpenter,,,,,50,Kristen Campbell,,,,,,,46.3,-34.6,0.0505,0,O19,5,2024-01-05,PWHL,2023/2024,Regular Season
+50,2:24,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,3,event,5v5,20,Sarah Nurse,,,,,39,Abbey Levy,,,,,,,69.3,13.6,0.0899,0,O16,5,2024-01-05,PWHL,2023/2024,Regular Season
+51,2:24,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,3,event,5v5,41,Brittany Howard,,,,,39,Abbey Levy,,,,,,,67.0,-21.8,0.0371,0,O13,5,2024-01-05,PWHL,2023/2024,Regular Season
+52,3:02,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v5,12,Chloé Aurard-Bushee,,,,,50,Kristen Campbell,,,,,,,78.7,0.8,0.1248,0,O11,5,2024-01-05,PWHL,2023/2024,Regular Season
+53,3:08,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,3,event,5v5,3,Jocelyne Larocque,,,,,39,Abbey Levy,,,,,,,77.0,-7.6,0.1248,0,O11,5,2024-01-05,PWHL,2023/2024,Regular Season
+54,4:10,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v5,17,Ella Shelton,,,,,50,Kristen Campbell,,,,,,,11.0,38.8,0.0553,0,N03,5,2024-01-05,PWHL,2023/2024,Regular Season
+55,5:44,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v5,11,Abby Roque,,,,,50,Kristen Campbell,,,,,,,44.3,31.4,0.0152,0,O23,5,2024-01-05,PWHL,2023/2024,Regular Season
+56,5:45,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v5,17,Ella Shelton,,,,,50,Kristen Campbell,,,,,,,80.3,-11.1,0.0659,0,O06,5,2024-01-05,PWHL,2023/2024,Regular Season
+57,5:45,Penalty,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,3,event,5v5,7,Olivia Knowles,,,,,,,,,,,,,,,,0,,5,2024-01-05,PWHL,2023/2024,Regular Season
+58,5:45,Penalty,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,3,event,5v5,12,Allie Munroe,,,,,,,,,,,,,,,,0,,5,2024-01-05,PWHL,2023/2024,Regular Season
+59,5:45,Penalty,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v5,17,Ella Shelton,,,,,,,,,,,,,,,,0,,5,2024-01-05,PWHL,2023/2024,Regular Season
+60,6:03,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,3,event,3v4,40,Blayre Turnbull,,,,,39,Abbey Levy,,,,,,,65.3,-3.4,0.1699,0,O15,5,2024-01-05,PWHL,2023/2024,Regular Season
+61,6:33,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,3,event,3v4,18,Jesse Compher,,,,,39,Abbey Levy,,,,,,,60.7,-15.0,0.1304,0,O14,5,2024-01-05,PWHL,2023/2024,Regular Season
+62,6:34,Goal,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,3,event,3v4,27,Emma Maltais,18,Jesse Compher,3,Jocelyne Larocque,39,Abbey Levy,,6 9 11 25 44,Brooke Hobson - Jessie Eldridge - Abby Roque - Alex Carpenter - Jill Saulnier,,5 6 18 27,Lauriane Rougeau - Kali Flanagan - Jesse Compher - Emma Maltais,78.3,7.4,0.2007,0,O11,5,2024-01-05,PWHL,2023/2024,Regular Season
+63,7:33,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v3,27,Jade Downie-Landry,,,,,50,Kristen Campbell,,,,,,,36.7,38.2,0.0441,-1,O26,5,2024-01-05,PWHL,2023/2024,Regular Season
+64,9:39,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,3,event,5v5,18,Jesse Compher,,,,,39,Abbey Levy,,,,,,,78.0,22.4,0.0354,1,O09,5,2024-01-05,PWHL,2023/2024,Regular Season
+65,10:28,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v5,13,Alexandra Labelle,,,,,50,Kristen Campbell,,,,,,,30.0,-37.4,0.0429,-1,O24,5,2024-01-05,PWHL,2023/2024,Regular Season
+66,11:57,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v5,67,Emma Woods,,,,,50,Kristen Campbell,,,,,,,76.7,-23.5,0.0190,-1,O05,5,2024-01-05,PWHL,2023/2024,Regular Season
+67,12:23,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,3,event,5v5,19,Rebecca Leslie,,,,,39,Abbey Levy,,,,,,,77.7,4.8,0.1463,1,O11,5,2024-01-05,PWHL,2023/2024,Regular Season
+68,12:46,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,3,event,5v5,5,Lauriane Rougeau,,,,,39,Abbey Levy,,,,,,,40.0,-23.2,0.0477,1,O24,5,2024-01-05,PWHL,2023/2024,Regular Season
+69,13:02,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v5,18,Élizabeth Giguère,,,,,50,Kristen Campbell,,,,,,,51.3,26.4,0.0163,-1,O23,5,2024-01-05,PWHL,2023/2024,Regular Season
+70,13:13,Shot,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,3,event,5v5,3,Jocelyne Larocque,,,,,39,Abbey Levy,,,,,,,31.0,-2.8,0.0500,1,O25,5,2024-01-05,PWHL,2023/2024,Regular Season
+71,15:57,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v5,9,Jessie Eldridge,,,,,50,Kristen Campbell,,,,,,,75.7,-12.2,0.0705,-1,O06,5,2024-01-05,PWHL,2023/2024,Regular Season
+72,15:58,Penalty,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,3,event,5v5,40,Blayre Turnbull,,,,,,,,,,,,,,,,1,,5,2024-01-05,PWHL,2023/2024,Regular Season
+73,16:40,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v4,17,Ella Shelton,,,,,50,Kristen Campbell,,,,,,,51.0,27.2,0.0261,-1,O23,5,2024-01-05,PWHL,2023/2024,Regular Season
+74,17:27,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v4,18,Élizabeth Giguère,,,,,50,Kristen Campbell,,,,,,,-17.7,38.2,0.0922,-1,N06,5,2024-01-05,PWHL,2023/2024,Regular Season
+75,19:33,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v5,25,Alex Carpenter,,,,,50,Kristen Campbell,,,,,,,67.0,-4.2,0.0838,-1,O14,5,2024-01-05,PWHL,2023/2024,Regular Season
+76,19:58,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v5,25,Alex Carpenter,,,,,50,Kristen Campbell,,,,,,,83.7,10.2,0.0758,-1,O08,5,2024-01-05,PWHL,2023/2024,Regular Season
+77,20:00,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v5,14,Jaime Bourbonnais,,,,,50,Kristen Campbell,,,,,,,72.0,0.8,0.0959,-1,O16,5,2024-01-05,PWHL,2023/2024,Regular Season

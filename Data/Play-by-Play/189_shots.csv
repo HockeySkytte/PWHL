@@ -1,97 +1,97 @@
-id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
-1,1:01,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,11,Abby Roque,,,,,70,Carly Jackson,,,,,,,70.0,6.0,189,2025-04-29,PWHL,2024/2025,Regular Season
-2,2:32,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,88,Julia Gosling,,,,,82,Kayle Osborne,,,,,,,-55.0,-33.7,189,2025-04-29,PWHL,2024/2025,Regular Season
-3,2:42,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,19,Paetyn Levis,,,,,70,Carly Jackson,,,,,,,67.3,10.2,189,2025-04-29,PWHL,2024/2025,Regular Season
-4,3:43,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,34,Hannah Miller,,,,,82,Kayle Osborne,,,,,,,-42.3,-15.6,189,2025-04-29,PWHL,2024/2025,Regular Season
-5,4:15,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,16,Hayley Scamurra,,,,,82,Kayle Osborne,,,,,,,-78.0,-11.1,189,2025-04-29,PWHL,2024/2025,Regular Season
-6,4:27,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,14,Renata Fast,,,,,82,Kayle Osborne,,,,,,,-43.0,-21.2,189,2025-04-29,PWHL,2024/2025,Regular Season
-7,5:01,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,25,Alex Carpenter,,,,,70,Carly Jackson,,,,,,,58.0,-20.4,189,2025-04-29,PWHL,2024/2025,Regular Season
-8,5:18,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,24,Natalie Spooner,,,,,82,Kayle Osborne,,,,,,,-83.0,-2.8,189,2025-04-29,PWHL,2024/2025,Regular Season
-9,5:35,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,67,Emma Woods,,,,,82,Kayle Osborne,,,,,,,-17.0,-24.4,189,2025-04-29,PWHL,2024/2025,Regular Season
-10,6:07,Goal,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,9,Daryl Watts,15,Savannah Harmon,18,Jesse Compher,82,Kayle Osborne,,9 14 15 18 34,Daryl Watts - Renata Fast - Savannah Harmon - Jesse Compher - Hannah Miller,,9 11 14 17 71,Jessie Eldridge - Abby Roque - Jaime Bourbonnais - Ella Shelton - Taylor Girard,-58.0,-27.8,189,2025-04-29,PWHL,2024/2025,Regular Season
-11,7:05,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,19,Paetyn Levis,,,,,70,Carly Jackson,,,,,,,74.0,10.2,189,2025-04-29,PWHL,2024/2025,Regular Season
-12,7:56,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,40,Noora Tulus,,,,,70,Carly Jackson,,,,,,,57.0,-4.0,189,2025-04-29,PWHL,2024/2025,Regular Season
-13,8:10,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,14,Renata Fast,,,,,82,Kayle Osborne,,,,,,,-45.7,-13.9,189,2025-04-29,PWHL,2024/2025,Regular Season
-14,8:29,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,13,Elle Hartje,,,,,70,Carly Jackson,,,,,,,67.0,-15.3,189,2025-04-29,PWHL,2024/2025,Regular Season
-15,8:54,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,19,Paetyn Levis,,,,,70,Carly Jackson,,,,,,,78.3,-12.8,189,2025-04-29,PWHL,2024/2025,Regular Season
-16,9:05,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,17,Ella Shelton,,,,,70,Carly Jackson,,,,,,,-7.7,-0.6,189,2025-04-29,PWHL,2024/2025,Regular Season
-17,9:31,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,10,Sarah Fillier,,,,,70,Carly Jackson,,,,,,,62.3,-11.1,189,2025-04-29,PWHL,2024/2025,Regular Season
-18,9:38,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,24,Natalie Spooner,,,,,82,Kayle Osborne,,,,,,,-66.7,15.9,189,2025-04-29,PWHL,2024/2025,Regular Season
-19,9:50,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,20,Sarah Nurse,,,,,82,Kayle Osborne,,,,,,,-64.3,-2.3,189,2025-04-29,PWHL,2024/2025,Regular Season
-20,11:22,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,6,Kali Flanagan,,,,,82,Kayle Osborne,,,,,,,-31.0,-31.7,189,2025-04-29,PWHL,2024/2025,Regular Season
-21,11:29,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,15,Savannah Harmon,,,,,82,Kayle Osborne,,,,,,,-83.7,21.2,189,2025-04-29,PWHL,2024/2025,Regular Season
-22,12:32,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,29,Emmy Fecteau,,,,,70,Carly Jackson,,,,,,,44.7,-21.8,189,2025-04-29,PWHL,2024/2025,Regular Season
-23,13:51,Penalty,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,34,Hannah Miller,,,,,,,,,,,,,,,189,2025-04-29,PWHL,2024/2025,Regular Season
-24,14:47,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v4,25,Alex Carpenter,,,,,70,Carly Jackson,,,,,,,56.3,23.8,189,2025-04-29,PWHL,2024/2025,Regular Season
-25,14:56,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v4,17,Ella Shelton,,,,,70,Carly Jackson,,,,,,,31.7,-4.0,189,2025-04-29,PWHL,2024/2025,Regular Season
-26,15:37,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v4,28,Micah Zandee-Hart,,,,,70,Carly Jackson,,,,,,,35.3,-19.8,189,2025-04-29,PWHL,2024/2025,Regular Season
-27,18:08,Goal,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,17,Ella Shelton,20,Allyson Simpson,19,Paetyn Levis,70,Carly Jackson,,14 15 20 24 27,Renata Fast - Savannah Harmon - Sarah Nurse - Natalie Spooner - Emma Maltais,,10 17 19 20 25,Sarah Fillier - Ella Shelton - Paetyn Levis - Allyson Simpson - Alex Carpenter,64.7,11.1,189,2025-04-29,PWHL,2024/2025,Regular Season
-28,19:06,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,27,Jade Downie-Landry,,,,,70,Carly Jackson,,,,,,,48.0,-15.3,189,2025-04-29,PWHL,2024/2025,Regular Season
-29,19:46,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,34,Hannah Miller,,,,,82,Kayle Osborne,,,,,,,-40.0,4.8,189,2025-04-29,PWHL,2024/2025,Regular Season
-30,0:44,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,25,Alex Carpenter,,,,,70,Carly Jackson,,,,,,,8.0,-1.1,189,2025-04-29,PWHL,2024/2025,Regular Season
-31,1:22,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,16,Hayley Scamurra,,,,,82,Kayle Osborne,,,,,,,-55.0,18.4,189,2025-04-29,PWHL,2024/2025,Regular Season
-32,1:41,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,11,Abby Roque,,,,,70,Carly Jackson,,,,,,,32.7,13.0,189,2025-04-29,PWHL,2024/2025,Regular Season
-33,2:09,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,17,Ella Shelton,,,,,70,Carly Jackson,,,,,,,31.7,-10.5,189,2025-04-29,PWHL,2024/2025,Regular Season
-34,2:23,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,15,Gabby Rosenthal,,,,,70,Carly Jackson,,,,,,,82.3,-3.1,189,2025-04-29,PWHL,2024/2025,Regular Season
-35,4:12,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,9,Jessie Eldridge,,,,,70,Carly Jackson,,,,,,,69.3,-4.8,189,2025-04-29,PWHL,2024/2025,Regular Season
-36,4:18,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,28,Micah Zandee-Hart,,,,,70,Carly Jackson,,,,,,,28.7,0.3,189,2025-04-29,PWHL,2024/2025,Regular Season
-37,5:22,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,17,Ella Shelton,,,,,70,Carly Jackson,,,,,,,48.0,-5.7,189,2025-04-29,PWHL,2024/2025,Regular Season
-38,5:23,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,27,Jade Downie-Landry,,,,,70,Carly Jackson,,,,,,,80.0,2.5,189,2025-04-29,PWHL,2024/2025,Regular Season
-39,6:07,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,40,Blayre Turnbull,,,,,82,Kayle Osborne,,,,,,,-78.3,-16.7,189,2025-04-29,PWHL,2024/2025,Regular Season
-40,8:28,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,14,Jaime Bourbonnais,,,,,70,Carly Jackson,,,,,,,51.3,26.1,189,2025-04-29,PWHL,2024/2025,Regular Season
-41,9:44,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,16,Hayley Scamurra,,,,,82,Kayle Osborne,,,,,,,-45.7,14.2,189,2025-04-29,PWHL,2024/2025,Regular Season
-42,11:07,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,6,Brooke Hobson,,,,,70,Carly Jackson,,,,,,,41.0,-21.2,189,2025-04-29,PWHL,2024/2025,Regular Season
-43,11:50,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,9,Daryl Watts,,,,,82,Kayle Osborne,,,,,,,-53.0,33.7,189,2025-04-29,PWHL,2024/2025,Regular Season
-44,12:34,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,40,Blayre Turnbull,,,,,82,Kayle Osborne,,,,,,,-31.7,4.2,189,2025-04-29,PWHL,2024/2025,Regular Season
-45,12:43,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,6,Kali Flanagan,,,,,82,Kayle Osborne,,,,,,,-55.0,-34.6,189,2025-04-29,PWHL,2024/2025,Regular Season
-46,13:01,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,8,Izzy Daniel,,,,,82,Kayle Osborne,,,,,,,-55.7,-9.1,189,2025-04-29,PWHL,2024/2025,Regular Season
-47,13:30,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,19,Paetyn Levis,,,,,70,Carly Jackson,,,,,,,82.7,-3.4,189,2025-04-29,PWHL,2024/2025,Regular Season
-48,13:56,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,23,Megan Carter,,,,,82,Kayle Osborne,,,,,,,-7.7,33.4,189,2025-04-29,PWHL,2024/2025,Regular Season
-49,17:05,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,19,Paetyn Levis,,,,,70,Carly Jackson,,,,,,,38.3,24.4,189,2025-04-29,PWHL,2024/2025,Regular Season
-50,17:07,Penalty,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,19,Paetyn Levis,,,,,,,,,,,,,,,189,2025-04-29,PWHL,2024/2025,Regular Season
-51,19:04,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v4,24,Natalie Spooner,,,,,82,Kayle Osborne,,,,,,,-73.3,-12.8,189,2025-04-29,PWHL,2024/2025,Regular Season
-52,19:15,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,24,Natalie Spooner,,,,,82,Kayle Osborne,,,,,,,-72.3,10.8,189,2025-04-29,PWHL,2024/2025,Regular Season
-53,0:25,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,34,Hannah Miller,,,,,82,Kayle Osborne,,,,,,,-62.3,6.8,189,2025-04-29,PWHL,2024/2025,Regular Season
-54,1:08,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,12,Allie Munroe,,,,,82,Kayle Osborne,,,,,,,-49.7,21.2,189,2025-04-29,PWHL,2024/2025,Regular Season
-55,1:17,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,12,Allie Munroe,,,,,82,Kayle Osborne,,,,,,,-59.7,16.1,189,2025-04-29,PWHL,2024/2025,Regular Season
-56,1:19,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,17,Ella Shelton,,,,,70,Carly Jackson,,,,,,,68.7,3.1,189,2025-04-29,PWHL,2024/2025,Regular Season
-57,2:02,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,71,Taylor Girard,,,,,70,Carly Jackson,,,,,,,54.0,-19.8,189,2025-04-29,PWHL,2024/2025,Regular Season
-58,2:58,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,67,Emma Woods,,,,,82,Kayle Osborne,,,,,,,-46.3,-15.9,189,2025-04-29,PWHL,2024/2025,Regular Season
-59,3:52,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,18,Jesse Compher,,,,,82,Kayle Osborne,,,,,,,-63.0,7.6,189,2025-04-29,PWHL,2024/2025,Regular Season
-60,4:14,Penalty,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,14,Renata Fast,,,,,,,,,,,,,,,189,2025-04-29,PWHL,2024/2025,Regular Season
-61,7:21,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,20,Allyson Simpson,,,,,70,Carly Jackson,,,,,,,30.7,-6.0,189,2025-04-29,PWHL,2024/2025,Regular Season
-62,8:22,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,15,Savannah Harmon,,,,,82,Kayle Osborne,,,,,,,-33.7,30.9,189,2025-04-29,PWHL,2024/2025,Regular Season
-63,9:46,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,24,Natalie Spooner,,,,,82,Kayle Osborne,,,,,,,-80.7,2.5,189,2025-04-29,PWHL,2024/2025,Regular Season
-64,10:19,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,12,Allie Munroe,,,,,82,Kayle Osborne,,,,,,,-75.7,-17.3,189,2025-04-29,PWHL,2024/2025,Regular Season
-65,10:20,Penalty,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,6,Brooke Hobson,,,,,,,,,,,,,,,189,2025-04-29,PWHL,2024/2025,Regular Season
-66,10:37,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v4,34,Hannah Miller,,,,,82,Kayle Osborne,,,,,,,-48.3,22.7,189,2025-04-29,PWHL,2024/2025,Regular Season
-67,11:18,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,34,Hannah Miller,,,,,82,Kayle Osborne,,,,,,,-62.3,19.6,189,2025-04-29,PWHL,2024/2025,Regular Season
-68,11:32,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v4,14,Renata Fast,,,,,82,Kayle Osborne,,,,,,,-52.0,-12.5,189,2025-04-29,PWHL,2024/2025,Regular Season
-69,12:02,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v4,24,Natalie Spooner,,,,,82,Kayle Osborne,,,,,,,-77.3,-11.1,189,2025-04-29,PWHL,2024/2025,Regular Season
-70,12:17,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v4,6,Kali Flanagan,,,,,82,Kayle Osborne,,,,,,,-59.0,-22.7,189,2025-04-29,PWHL,2024/2025,Regular Season
-71,13:37,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,17,Ella Shelton,,,,,70,Carly Jackson,,,,,,,33.7,0.0,189,2025-04-29,PWHL,2024/2025,Regular Season
-72,15:01,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,17,Ella Shelton,,,,,70,Carly Jackson,,,,,,,68.7,-23.0,189,2025-04-29,PWHL,2024/2025,Regular Season
-73,15:30,Penalty,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,19,Paetyn Levis,,,,,,,,,,,,,,,189,2025-04-29,PWHL,2024/2025,Regular Season
-74,17:06,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v4,27,Emma Maltais,,,,,82,Kayle Osborne,,,,,,,-54.7,13.9,189,2025-04-29,PWHL,2024/2025,Regular Season
-75,17:23,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,15,Savannah Harmon,,,,,82,Kayle Osborne,,,,,,,-36.3,27.5,189,2025-04-29,PWHL,2024/2025,Regular Season
-76,17:25,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,4v5,6,Brooke Hobson,,,,,70,Carly Jackson,,,,,,,74.3,28.3,189,2025-04-29,PWHL,2024/2025,Regular Season
-77,17:49,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,13,Elle Hartje,,,,,70,Carly Jackson,,,,,,,71.0,7.6,189,2025-04-29,PWHL,2024/2025,Regular Season
-78,18:51,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,20,Sarah Nurse,,,,,82,Kayle Osborne,,,,,,,-69.3,22.7,189,2025-04-29,PWHL,2024/2025,Regular Season
-79,18:51,Penalty,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,28,Micah Zandee-Hart,,,,,,,,,,,,,,,189,2025-04-29,PWHL,2024/2025,Regular Season
-80,19:51,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,9,Daryl Watts,,,,,82,Kayle Osborne,,,,,,,-49.7,-33.1,189,2025-04-29,PWHL,2024/2025,Regular Season
-81,1:10,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,OT1,event,3v3,40,Blayre Turnbull,,,,,82,Kayle Osborne,,,,,,,-61.7,12.2,189,2025-04-29,PWHL,2024/2025,Regular Season
-82,1:43,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,OT1,event,3v3,20,Sarah Nurse,,,,,82,Kayle Osborne,,,,,,,-65.0,0.8,189,2025-04-29,PWHL,2024/2025,Regular Season
-83,2:11,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,OT1,event,3v3,12,Allie Munroe,,,,,82,Kayle Osborne,,,,,,,-69.0,14.5,189,2025-04-29,PWHL,2024/2025,Regular Season
-84,2:39,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,OT1,event,3v3,9,Jessie Eldridge,,,,,70,Carly Jackson,,,,,,,75.7,-8.8,189,2025-04-29,PWHL,2024/2025,Regular Season
-85,3:15,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,OT1,event,3v3,28,Micah Zandee-Hart,,,,,70,Carly Jackson,,,,,,,86.0,10.2,189,2025-04-29,PWHL,2024/2025,Regular Season
-86,3:26,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,OT1,event,3v3,9,Daryl Watts,,,,,82,Kayle Osborne,,,,,,,-73.0,-6.0,189,2025-04-29,PWHL,2024/2025,Regular Season
-87,3:53,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,OT1,event,3v3,27,Emma Maltais,,,,,82,Kayle Osborne,,,,,,,-85.0,-2.5,189,2025-04-29,PWHL,2024/2025,Regular Season
-88,4:28,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,OT1,event,5v5,20,Sarah Nurse,,,,,82,Kayle Osborne,,,,,,,-57.0,-0.8,189,2025-04-29,PWHL,2024/2025,Regular Season
-89,,SO Goal,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,SO,event,1v0,,,,,,,82,Kayle Osborne,,,,,,,,,189,2025-04-29,PWHL,2024/2025,Regular Season
-90,,SO Miss,New York Sirens,Away,Toronto Sceptres,New York Sirens,SO,event,1v0,9,Jessie Eldridge,,,,,70,Carly Jackson,,,,,,,,,189,2025-04-29,PWHL,2024/2025,Regular Season
-91,,SO Miss,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,SO,event,1v0,9,Daryl Watts,,,,,82,Kayle Osborne,,,,,,,,,189,2025-04-29,PWHL,2024/2025,Regular Season
-92,,SO Miss,New York Sirens,Away,Toronto Sceptres,New York Sirens,SO,event,1v0,25,Alex Carpenter,,,,,70,Carly Jackson,,,,,,,,,189,2025-04-29,PWHL,2024/2025,Regular Season
-93,,SO Miss,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,SO,event,1v0,88,Julia Gosling,,,,,82,Kayle Osborne,,,,,,,,,189,2025-04-29,PWHL,2024/2025,Regular Season
-94,,SO Miss,New York Sirens,Away,Toronto Sceptres,New York Sirens,SO,event,1v0,10,Sarah Fillier,,,,,70,Carly Jackson,,,,,,,,,189,2025-04-29,PWHL,2024/2025,Regular Season
-95,,SO Goal,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,SO,event,1v0,,,,,,,82,Kayle Osborne,,,,,,,,,189,2025-04-29,PWHL,2024/2025,Regular Season
-96,,SO Miss,New York Sirens,Away,Toronto Sceptres,New York Sirens,SO,event,1v0,25,Alex Carpenter,,,,,70,Carly Jackson,,,,,,,,,189,2025-04-29,PWHL,2024/2025,Regular Season
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,xG,ScoreState,BoxID,game_id,game_date,competition,season,state
+1,1:01,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,11,Abby Roque,,,,,70,Carly Jackson,,,,,,,70.0,6.0,0.0899,0,O16,189,2025-04-29,PWHL,2024/2025,Regular Season
+2,2:32,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,88,Julia Gosling,,,,,82,Kayle Osborne,,,,,,,55.0,33.7,0.0152,0,O23,189,2025-04-29,PWHL,2024/2025,Regular Season
+3,2:42,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,19,Paetyn Levis,,,,,70,Carly Jackson,,,,,,,67.3,10.2,0.0899,0,O16,189,2025-04-29,PWHL,2024/2025,Regular Season
+4,3:43,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,34,Hannah Miller,,,,,82,Kayle Osborne,,,,,,,42.3,15.6,,0,O22,189,2025-04-29,PWHL,2024/2025,Regular Season
+5,4:15,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,16,Hayley Scamurra,,,,,82,Kayle Osborne,,,,,,,78.0,11.1,0.0709,0,O08,189,2025-04-29,PWHL,2024/2025,Regular Season
+6,4:27,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,14,Renata Fast,,,,,82,Kayle Osborne,,,,,,,43.0,21.2,0.0386,0,O22,189,2025-04-29,PWHL,2024/2025,Regular Season
+7,5:01,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,25,Alex Carpenter,,,,,70,Carly Jackson,,,,,,,58.0,-20.4,0.0371,0,O13,189,2025-04-29,PWHL,2024/2025,Regular Season
+8,5:18,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,24,Natalie Spooner,,,,,82,Kayle Osborne,,,,,,,83.0,2.8,0.2112,0,O07,189,2025-04-29,PWHL,2024/2025,Regular Season
+9,5:35,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,67,Emma Woods,,,,,82,Kayle Osborne,,,,,,,17.0,24.4,0.0553,0,N03,189,2025-04-29,PWHL,2024/2025,Regular Season
+10,6:07,Goal,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,9,Daryl Watts,15,Savannah Harmon,18,Jesse Compher,82,Kayle Osborne,,9 14 15 18 34,Daryl Watts - Renata Fast - Savannah Harmon - Jesse Compher - Hannah Miller,,9 11 14 17 71,Jessie Eldridge - Abby Roque - Jaime Bourbonnais - Ella Shelton - Taylor Girard,58.0,27.8,0.0409,0,O17,189,2025-04-29,PWHL,2024/2025,Regular Season
+11,7:05,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,19,Paetyn Levis,,,,,70,Carly Jackson,,,,,,,74.0,10.2,0.1328,-1,O11,189,2025-04-29,PWHL,2024/2025,Regular Season
+12,7:56,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,40,Noora Tulus,,,,,70,Carly Jackson,,,,,,,57.0,-4.0,0.1110,-1,O15,189,2025-04-29,PWHL,2024/2025,Regular Season
+13,8:10,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,14,Renata Fast,,,,,82,Kayle Osborne,,,,,,,45.7,13.9,0.0461,1,O22,189,2025-04-29,PWHL,2024/2025,Regular Season
+14,8:29,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,13,Elle Hartje,,,,,70,Carly Jackson,,,,,,,67.0,-15.3,0.0398,-1,O13,189,2025-04-29,PWHL,2024/2025,Regular Season
+15,8:54,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,19,Paetyn Levis,,,,,70,Carly Jackson,,,,,,,78.3,-12.8,0.0705,-1,O06,189,2025-04-29,PWHL,2024/2025,Regular Season
+16,9:05,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,17,Ella Shelton,,,,,70,Carly Jackson,,,,,,,-7.7,-0.6,0.0591,-1,N05,189,2025-04-29,PWHL,2024/2025,Regular Season
+17,9:31,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,10,Sarah Fillier,,,,,70,Carly Jackson,,,,,,,62.3,-11.1,0.0838,-1,O14,189,2025-04-29,PWHL,2024/2025,Regular Season
+18,9:38,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,24,Natalie Spooner,,,,,82,Kayle Osborne,,,,,,,66.7,-15.9,,1,O13,189,2025-04-29,PWHL,2024/2025,Regular Season
+19,9:50,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,20,Sarah Nurse,,,,,82,Kayle Osborne,,,,,,,64.3,2.3,0.1225,1,O15,189,2025-04-29,PWHL,2024/2025,Regular Season
+20,11:22,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,6,Kali Flanagan,,,,,82,Kayle Osborne,,,,,,,31.0,31.7,0.0309,1,O26,189,2025-04-29,PWHL,2024/2025,Regular Season
+21,11:29,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,15,Savannah Harmon,,,,,82,Kayle Osborne,,,,,,,83.7,-21.2,0.0213,1,O05,189,2025-04-29,PWHL,2024/2025,Regular Season
+22,12:32,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,29,Emmy Fecteau,,,,,70,Carly Jackson,,,,,,,44.7,-21.8,,-1,O20,189,2025-04-29,PWHL,2024/2025,Regular Season
+23,13:51,Penalty,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,34,Hannah Miller,,,,,,,,,,,,,,,,1,,189,2025-04-29,PWHL,2024/2025,Regular Season
+24,14:47,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v4,25,Alex Carpenter,,,,,70,Carly Jackson,,,,,,,56.3,23.8,,-1,O23,189,2025-04-29,PWHL,2024/2025,Regular Season
+25,14:56,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v4,17,Ella Shelton,,,,,70,Carly Jackson,,,,,,,31.7,-4.0,0.0707,-1,O25,189,2025-04-29,PWHL,2024/2025,Regular Season
+26,15:37,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v4,28,Micah Zandee-Hart,,,,,70,Carly Jackson,,,,,,,35.3,-19.8,0.0676,-1,O24,189,2025-04-29,PWHL,2024/2025,Regular Season
+27,18:08,Goal,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,17,Ella Shelton,20,Allyson Simpson,19,Paetyn Levis,70,Carly Jackson,,14 15 20 24 27,Renata Fast - Savannah Harmon - Sarah Nurse - Natalie Spooner - Emma Maltais,,10 17 19 20 25,Sarah Fillier - Ella Shelton - Paetyn Levis - Allyson Simpson - Alex Carpenter,64.7,11.1,0.0959,-1,O16,189,2025-04-29,PWHL,2024/2025,Regular Season
+28,19:06,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,1,event,5v5,27,Jade Downie-Landry,,,,,70,Carly Jackson,,,,,,,48.0,-15.3,0.0458,0,O20,189,2025-04-29,PWHL,2024/2025,Regular Season
+29,19:46,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,1,event,5v5,34,Hannah Miller,,,,,82,Kayle Osborne,,,,,,,40.0,-4.8,0.0420,0,O25,189,2025-04-29,PWHL,2024/2025,Regular Season
+30,0:44,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,25,Alex Carpenter,,,,,70,Carly Jackson,,,,,,,8.0,-1.1,0.0553,0,N02,189,2025-04-29,PWHL,2024/2025,Regular Season
+31,1:22,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,16,Hayley Scamurra,,,,,82,Kayle Osborne,,,,,,,55.0,-18.4,0.0458,0,O20,189,2025-04-29,PWHL,2024/2025,Regular Season
+32,1:41,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,11,Abby Roque,,,,,70,Carly Jackson,,,,,,,32.7,13.0,0.0420,0,O25,189,2025-04-29,PWHL,2024/2025,Regular Season
+33,2:09,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,17,Ella Shelton,,,,,70,Carly Jackson,,,,,,,31.7,-10.5,,0,O25,189,2025-04-29,PWHL,2024/2025,Regular Season
+34,2:23,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,15,Gabby Rosenthal,,,,,70,Carly Jackson,,,,,,,82.3,-3.1,0.1248,0,O11,189,2025-04-29,PWHL,2024/2025,Regular Season
+35,4:12,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,9,Jessie Eldridge,,,,,70,Carly Jackson,,,,,,,69.3,-4.8,0.0785,0,O14,189,2025-04-29,PWHL,2024/2025,Regular Season
+36,4:18,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,28,Micah Zandee-Hart,,,,,70,Carly Jackson,,,,,,,28.7,0.3,,0,O25,189,2025-04-29,PWHL,2024/2025,Regular Season
+37,5:22,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,17,Ella Shelton,,,,,70,Carly Jackson,,,,,,,48.0,-5.7,,0,O21,189,2025-04-29,PWHL,2024/2025,Regular Season
+38,5:23,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,27,Jade Downie-Landry,,,,,70,Carly Jackson,,,,,,,80.0,2.5,0.1248,0,O11,189,2025-04-29,PWHL,2024/2025,Regular Season
+39,6:07,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,40,Blayre Turnbull,,,,,82,Kayle Osborne,,,,,,,78.3,16.7,0.0709,0,O08,189,2025-04-29,PWHL,2024/2025,Regular Season
+40,8:28,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,14,Jaime Bourbonnais,,,,,70,Carly Jackson,,,,,,,51.3,26.1,,0,O23,189,2025-04-29,PWHL,2024/2025,Regular Season
+41,9:44,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,16,Hayley Scamurra,,,,,82,Kayle Osborne,,,,,,,45.7,-14.2,,0,O20,189,2025-04-29,PWHL,2024/2025,Regular Season
+42,11:07,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,6,Brooke Hobson,,,,,70,Carly Jackson,,,,,,,41.0,-21.2,,0,O20,189,2025-04-29,PWHL,2024/2025,Regular Season
+43,11:50,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,9,Daryl Watts,,,,,82,Kayle Osborne,,,,,,,53.0,-33.7,0.0318,0,O19,189,2025-04-29,PWHL,2024/2025,Regular Season
+44,12:34,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,40,Blayre Turnbull,,,,,82,Kayle Osborne,,,,,,,31.7,-4.2,,0,O25,189,2025-04-29,PWHL,2024/2025,Regular Season
+45,12:43,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,6,Kali Flanagan,,,,,82,Kayle Osborne,,,,,,,55.0,34.6,0.0152,0,O23,189,2025-04-29,PWHL,2024/2025,Regular Season
+46,13:01,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,8,Izzy Daniel,,,,,82,Kayle Osborne,,,,,,,55.7,9.1,,0,O22,189,2025-04-29,PWHL,2024/2025,Regular Season
+47,13:30,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,19,Paetyn Levis,,,,,70,Carly Jackson,,,,,,,82.7,-3.4,0.1248,0,O11,189,2025-04-29,PWHL,2024/2025,Regular Season
+48,13:56,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,23,Megan Carter,,,,,82,Kayle Osborne,,,,,,,7.7,-33.4,0.0553,0,N01,189,2025-04-29,PWHL,2024/2025,Regular Season
+49,17:05,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,19,Paetyn Levis,,,,,70,Carly Jackson,,,,,,,38.3,24.4,0.0258,0,O26,189,2025-04-29,PWHL,2024/2025,Regular Season
+50,17:07,Penalty,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,19,Paetyn Levis,,,,,,,,,,,,,,,,0,,189,2025-04-29,PWHL,2024/2025,Regular Season
+51,19:04,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v4,24,Natalie Spooner,,,,,82,Kayle Osborne,,,,,,,73.3,12.8,0.1099,0,O08,189,2025-04-29,PWHL,2024/2025,Regular Season
+52,19:15,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,24,Natalie Spooner,,,,,82,Kayle Osborne,,,,,,,72.3,-10.8,0.0785,0,O14,189,2025-04-29,PWHL,2024/2025,Regular Season
+53,0:25,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,34,Hannah Miller,,,,,82,Kayle Osborne,,,,,,,62.3,-6.8,0.0785,0,O14,189,2025-04-29,PWHL,2024/2025,Regular Season
+54,1:08,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,12,Allie Munroe,,,,,82,Kayle Osborne,,,,,,,49.7,-21.2,0.0458,0,O20,189,2025-04-29,PWHL,2024/2025,Regular Season
+55,1:17,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,12,Allie Munroe,,,,,82,Kayle Osborne,,,,,,,59.7,-16.1,0.0785,0,O14,189,2025-04-29,PWHL,2024/2025,Regular Season
+56,1:19,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,17,Ella Shelton,,,,,70,Carly Jackson,,,,,,,68.7,3.1,,0,O16,189,2025-04-29,PWHL,2024/2025,Regular Season
+57,2:02,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,71,Taylor Girard,,,,,70,Carly Jackson,,,,,,,54.0,-19.8,0.0458,0,O20,189,2025-04-29,PWHL,2024/2025,Regular Season
+58,2:58,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,67,Emma Woods,,,,,82,Kayle Osborne,,,,,,,46.3,15.9,,0,O22,189,2025-04-29,PWHL,2024/2025,Regular Season
+59,3:52,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,18,Jesse Compher,,,,,82,Kayle Osborne,,,,,,,63.0,-7.6,0.0785,0,O14,189,2025-04-29,PWHL,2024/2025,Regular Season
+60,4:14,Penalty,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,14,Renata Fast,,,,,,,,,,,,,,,,0,,189,2025-04-29,PWHL,2024/2025,Regular Season
+61,7:21,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,20,Allyson Simpson,,,,,70,Carly Jackson,,,,,,,30.7,-6.0,,0,O25,189,2025-04-29,PWHL,2024/2025,Regular Season
+62,8:22,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,15,Savannah Harmon,,,,,82,Kayle Osborne,,,,,,,33.7,-30.9,,0,O24,189,2025-04-29,PWHL,2024/2025,Regular Season
+63,9:46,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,24,Natalie Spooner,,,,,82,Kayle Osborne,,,,,,,80.7,-2.5,0.1248,0,O11,189,2025-04-29,PWHL,2024/2025,Regular Season
+64,10:19,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,12,Allie Munroe,,,,,82,Kayle Osborne,,,,,,,75.7,17.3,0.0709,0,O08,189,2025-04-29,PWHL,2024/2025,Regular Season
+65,10:20,Penalty,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,6,Brooke Hobson,,,,,,,,,,,,,,,,0,,189,2025-04-29,PWHL,2024/2025,Regular Season
+66,10:37,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v4,34,Hannah Miller,,,,,82,Kayle Osborne,,,,,,,48.3,-22.7,0.0721,0,O20,189,2025-04-29,PWHL,2024/2025,Regular Season
+67,11:18,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,34,Hannah Miller,,,,,82,Kayle Osborne,,,,,,,62.3,-19.6,,0,O13,189,2025-04-29,PWHL,2024/2025,Regular Season
+68,11:32,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v4,14,Renata Fast,,,,,82,Kayle Osborne,,,,,,,52.0,12.5,0.0610,0,O22,189,2025-04-29,PWHL,2024/2025,Regular Season
+69,12:02,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v4,24,Natalie Spooner,,,,,82,Kayle Osborne,,,,,,,77.3,11.1,0.1099,0,O08,189,2025-04-29,PWHL,2024/2025,Regular Season
+70,12:17,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v4,6,Kali Flanagan,,,,,82,Kayle Osborne,,,,,,,59.0,22.7,0.0645,0,O17,189,2025-04-29,PWHL,2024/2025,Regular Season
+71,13:37,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,17,Ella Shelton,,,,,70,Carly Jackson,,,,,,,33.7,0.0,,0,O25,189,2025-04-29,PWHL,2024/2025,Regular Season
+72,15:01,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,17,Ella Shelton,,,,,70,Carly Jackson,,,,,,,68.7,-23.0,0.0371,0,O13,189,2025-04-29,PWHL,2024/2025,Regular Season
+73,15:30,Penalty,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,19,Paetyn Levis,,,,,,,,,,,,,,,,0,,189,2025-04-29,PWHL,2024/2025,Regular Season
+74,17:06,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v4,27,Emma Maltais,,,,,82,Kayle Osborne,,,,,,,54.7,-13.9,0.0721,0,O20,189,2025-04-29,PWHL,2024/2025,Regular Season
+75,17:23,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,15,Savannah Harmon,,,,,82,Kayle Osborne,,,,,,,36.3,-27.5,,0,O24,189,2025-04-29,PWHL,2024/2025,Regular Season
+76,17:25,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,4v5,6,Brooke Hobson,,,,,70,Carly Jackson,,,,,,,74.3,28.3,0.0511,0,O09,189,2025-04-29,PWHL,2024/2025,Regular Season
+77,17:49,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,13,Elle Hartje,,,,,70,Carly Jackson,,,,,,,71.0,7.6,0.0899,0,O16,189,2025-04-29,PWHL,2024/2025,Regular Season
+78,18:51,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,20,Sarah Nurse,,,,,82,Kayle Osborne,,,,,,,69.3,-22.7,0.0371,0,O13,189,2025-04-29,PWHL,2024/2025,Regular Season
+79,18:51,Penalty,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,28,Micah Zandee-Hart,,,,,,,,,,,,,,,,0,,189,2025-04-29,PWHL,2024/2025,Regular Season
+80,19:51,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,9,Daryl Watts,,,,,82,Kayle Osborne,,,,,,,49.7,33.1,,0,O23,189,2025-04-29,PWHL,2024/2025,Regular Season
+81,1:10,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,OT1,event,3v3,40,Blayre Turnbull,,,,,82,Kayle Osborne,,,,,,,61.7,-12.2,0.0785,0,O14,189,2025-04-29,PWHL,2024/2025,Regular Season
+82,1:43,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,OT1,event,3v3,20,Sarah Nurse,,,,,82,Kayle Osborne,,,,,,,65.0,-0.8,0.1041,0,O15,189,2025-04-29,PWHL,2024/2025,Regular Season
+83,2:11,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,OT1,event,3v3,12,Allie Munroe,,,,,82,Kayle Osborne,,,,,,,69.0,-14.5,0.0371,0,O13,189,2025-04-29,PWHL,2024/2025,Regular Season
+84,2:39,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,OT1,event,3v3,9,Jessie Eldridge,,,,,70,Carly Jackson,,,,,,,75.7,-8.8,0.1248,0,O11,189,2025-04-29,PWHL,2024/2025,Regular Season
+85,3:15,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,OT1,event,3v3,28,Micah Zandee-Hart,,,,,70,Carly Jackson,,,,,,,86.0,10.2,0.0709,0,O08,189,2025-04-29,PWHL,2024/2025,Regular Season
+86,3:26,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,OT1,event,3v3,9,Daryl Watts,,,,,82,Kayle Osborne,,,,,,,73.0,6.0,0.1248,0,O11,189,2025-04-29,PWHL,2024/2025,Regular Season
+87,3:53,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,OT1,event,3v3,27,Emma Maltais,,,,,82,Kayle Osborne,,,,,,,85.0,2.5,0.2112,0,O07,189,2025-04-29,PWHL,2024/2025,Regular Season
+88,4:28,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,OT1,event,5v5,20,Sarah Nurse,,,,,82,Kayle Osborne,,,,,,,57.0,0.8,,0,O15,189,2025-04-29,PWHL,2024/2025,Regular Season
+89,,SO Goal,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,SO,event,1v0,,,,,,,82,Kayle Osborne,,,,,,,,,,0,,189,2025-04-29,PWHL,2024/2025,Regular Season
+90,,SO Miss,New York Sirens,Away,Toronto Sceptres,New York Sirens,SO,event,1v0,9,Jessie Eldridge,,,,,70,Carly Jackson,,,,,,,,,,0,,189,2025-04-29,PWHL,2024/2025,Regular Season
+91,,SO Miss,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,SO,event,1v0,9,Daryl Watts,,,,,82,Kayle Osborne,,,,,,,,,,0,,189,2025-04-29,PWHL,2024/2025,Regular Season
+92,,SO Miss,New York Sirens,Away,Toronto Sceptres,New York Sirens,SO,event,1v0,25,Alex Carpenter,,,,,70,Carly Jackson,,,,,,,,,,0,,189,2025-04-29,PWHL,2024/2025,Regular Season
+93,,SO Miss,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,SO,event,1v0,88,Julia Gosling,,,,,82,Kayle Osborne,,,,,,,,,,0,,189,2025-04-29,PWHL,2024/2025,Regular Season
+94,,SO Miss,New York Sirens,Away,Toronto Sceptres,New York Sirens,SO,event,1v0,10,Sarah Fillier,,,,,70,Carly Jackson,,,,,,,,,,0,,189,2025-04-29,PWHL,2024/2025,Regular Season
+95,,SO Goal,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,SO,event,1v0,,,,,,,82,Kayle Osborne,,,,,,,,,,0,,189,2025-04-29,PWHL,2024/2025,Regular Season
+96,,SO Miss,New York Sirens,Away,Toronto Sceptres,New York Sirens,SO,event,1v0,25,Alex Carpenter,,,,,70,Carly Jackson,,,,,,,,,,0,,189,2025-04-29,PWHL,2024/2025,Regular Season
