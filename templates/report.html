@@ -932,7 +932,7 @@
     // Determine offensive and defensive ids from selection (pairing logic ensures <=1 pair)
     let offensiveId=null, defensiveId=null;
     selectedZoneIds.forEach(id=>{ if(id.startsWith('O')||id.startsWith('N')) offensiveId=id; else if(id.startsWith('D')) defensiveId=id; });
-  let CF=0,CA=0,FF=0,FA=0,SF=0,SA=0,GF=0,GA=0;
+  let CF=0,CA=0,FF=0,FA=0,SF=0,SA=0,GF=0,GA=0; let xGF=0,xGA=0;
     for(const a of latestAttempts){ if(a.forTeam!==team && a.againstTeam!==team) continue; const zid=pointZoneId(a, team); if(!zid) continue; const isFor=a.forTeam===team; const isAgainst=a.againstTeam===team; // Only count team offense in offensiveId AND opponent offense in defensiveId
       if(isFor){ if(!offensiveId || zid!==offensiveId) continue; } else if(isAgainst){ if(!defensiveId || zid!==defensiveId) continue; } else continue;
       if(['Shot','Goal','Miss','Block'].includes(a.event)){ if(isFor) CF++; if(isAgainst) CA++; }
@@ -945,6 +945,13 @@
         if(isFor){ GF++; }
         if(isAgainst){ GA++; }
       }
+      // xG accumulation (only Shots/Goals and only if xG present)
+      if(['Shot','Goal'].includes(a.event)){
+        const xv = (a.xG!==undefined && a.xG!==null && a.xG!=='')? parseFloat(a.xG) : NaN;
+        if(!isNaN(xv)){
+          if(isFor) xGF += xv; else if(isAgainst) xGA += xv;
+        }
+      }
     }
     const metrics={
       'CA':CA,'CF':CF,'CF%': (CF+CA)? (CF/(CF+CA)*100).toFixed(1):'—',
@@ -953,7 +960,11 @@
       'GA':GA,'GF':GF,'GF%': (GF+GA)? (GF/(GF+GA)*100).toFixed(1):'—',
       'Sh%': SF? (GF/SF*100).toFixed(1):'—',
       'Sv%': SA? ((1 - (GA/SA))*100).toFixed(1):'—',
-      'PDO': ( (SF? (GF/SF*100):0) + (SA? ((1 - GA/SA)*100):0) ).toFixed(1)
+      'PDO': ( (SF? (GF/SF*100):0) + (SA? ((1 - GA/SA)*100):0) ).toFixed(1),
+      // xG metrics with 1 decimal formatting
+      'xGF': xGF? xGF.toFixed(1): (xGF===0? '0.0':'—'),
+      'xGA': xGA? xGA.toFixed(1): (xGA===0? '0.0':'—'),
+      'xGF%': (xGF+xGA)? (xGF/(xGF+xGA)*100).toFixed(1): '—'
     };
     document.querySelectorAll('.kpi-metric').forEach(mEl=>{ const label=mEl.querySelector('.label')?.textContent; const valEl=mEl.querySelector('.value'); if(!label||!valEl) return; if(metrics[label]!==undefined) valEl.textContent=metrics[label]; });
   }
@@ -979,8 +990,7 @@
     clearTable();
     const byGameMode = window._tableByGameMode === true;
     let cols=TABLE_COLUMNS[type]||[];
-    // Override columns based on type and by_game mode
-    if(type==='goalies' && !byGameMode) cols=['Name','Team','Season','State','Strength','GP','TOI','SA','GA','Sv%'];
+    // Override columns based on by_game mode only for goalies (keep xG fields in both)
     if(type==='goalies' && byGameMode) cols=TABLE_COLUMNS['goalies_by_game'];
     if(type==='skaters' && byGameMode) cols=TABLE_COLUMNS['skaters_by_game'];
     try{ console.debug('[PWHL] renderTable type=', type, 'byGame=', byGameMode, 'cols=', cols); }catch(e){}
@@ -1114,7 +1124,7 @@
     const byGameMode = window._tableByGameMode === true;
     let cols=TABLE_COLUMNS[type]; 
     // Use appropriate columns based on mode
-    if(type==='goalies' && !byGameMode){ cols=['Name','Team','Season','State','Strength','GP','TOI','SA','GA','Sv%']; } 
+    // Keep xG fields for goalies totals; only switch schema for by-game
     if(type==='goalies' && byGameMode){ cols=TABLE_COLUMNS['goalies_by_game']; }
     if(type==='skaters' && byGameMode){ cols=TABLE_COLUMNS['skaters_by_game']; }
     if(type==='teams'){ cols=['Team','Season','State','Strength','GP','CF','CA','CF%','FF','FA','FF%','SF','SA','SF%','GF','GA','GF%','xGF','xGA','xGF%','Sh%','Sv%','PDO']; } 

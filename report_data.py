@@ -475,6 +475,9 @@ class ReportDataStore:
         else:
             xGF = _xg_sum(rows_for)
             xGA = _xg_sum(rows_against)
+        # Round xG values to 1 decimal for KPI display
+        xGF = round(xGF, 1)
+        xGA = round(xGA, 1)
         xgfpct = self._pct(xGF, xGF + xGA)
         return {
             'filters': {
@@ -576,6 +579,7 @@ class ReportDataStore:
                 'goalie': r.get('goalie'),
                 'season': r.get('season'),
                 'state': r.get('state'),
+                'xG': r.get('xG'),
             })
         return {'count': len(attempts), 'games': len(game_ids_ordered), 'attempts': attempts}
 
@@ -1229,8 +1233,8 @@ class ReportDataStore:
             xga = rec.get('xGA', 0.0) or 0.0
             rec['xGA'] = round(xga, 2)
             rec['xSv%'] = round((1 - (xga/sa))*100,1) if sa>0 else None
-            # dSv% = Sv% - xSv%
-            rec['dSv%'] = (rec['Sv%'] - rec['xSv%']) if (rec['Sv%'] is not None and rec['xSv%'] is not None) else None
+            # dSv% = Sv% - xSv% (round to 1 decimal)
+            rec['dSv%'] = round((rec['Sv%'] - rec['xSv%']), 1) if (rec['Sv%'] is not None and rec['xSv%'] is not None) else None
             # GSAx = xGA - GA
             rec['GSAx'] = round(xga - ga, 2)
             
