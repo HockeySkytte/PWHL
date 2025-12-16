@@ -757,7 +757,9 @@
         // Goals card
         'metric-ga':m['GA'],'metric-gfpct':m['GF%'],'metric-gf':m['GF'],
         // Shooting / Goaltending card
-        'metric-shpct':m['Sh%'],'metric-svpct':m['Sv%'],'metric-pdo':m['PDO']
+        'metric-shpct':m['Sh%'],'metric-svpct':m['Sv%'],'metric-pdo':m['PDO'],
+        // xG card
+        'metric-xga':m['xGA'],'metric-xgfpct':m['xGF%'],'metric-xgf':m['xGF']
       };
       console.log('Setting CF to:', map['metric-cf'], 'CA to:', map['metric-ca']); // DEBUG
       Object.entries(map).forEach(([id,val])=>{ const el=document.getElementById(id)?.querySelector('.value'); if(el) el.textContent=(val==null||val==='')?'—':val; });
@@ -963,9 +965,9 @@
   function clearTable(){ tableHeader.innerHTML=''; tableBody.innerHTML=''; }
   const TABLE_COLUMNS={
     // Skaters (individual production focus first, then on-ice)
-  skaters:['Name','Team','Season','State','Strength','GP','TOI','G','A','P','5v5 GF','5v5 GA','5v5 G+/-','Sh%','Shots','Misses','Shots in block','Blocks','PEN taken','PEN drawn','ixG'],
+  skaters:['Name','Team','Season','State','Strength','GP','TOI','G','A','P','ixG','5v5 GF','5v5 GA','5v5 G+/-','Sh%','Shots','Misses','Shots in block','Blocks','PEN taken','PEN drawn'],
     // Skaters by game
-  skaters_by_game:['Name','Team','Opponent','Season','State','Strength','Date','Venue','GameID','TOI','G','A','P','5v5 GF','5v5 GA','5v5 G+/-','Sh%','Shots','Misses','Shots in block','Blocks','PEN taken','PEN drawn','ixG'],
+  skaters_by_game:['Name','Team','Opponent','Season','State','Strength','Date','Venue','GameID','TOI','G','A','P','ixG','5v5 GF','5v5 GA','5v5 G+/-','Sh%','Shots','Misses','Shots in block','Blocks','PEN taken','PEN drawn'],
     // Goalies (lean set – usage + shot faced results)
   goalies:['Name','Team','Season','State','Strength','GP','TOI','SA','GA','Sv%','xGA','xSv%','dSv%','GSAx'],
     // Goalies by game
