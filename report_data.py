@@ -164,6 +164,15 @@ class ReportDataStore:
                             'on_ice_away': away_on,
                             'on_ice_all': on_ice_all,
                         }
+                        # Expected goals from CSV (string to float if present)
+                        xg_raw = row.get('xG')
+                        if xg_raw not in (None, ''):
+                            try:
+                                rec['xG'] = float(xg_raw)
+                            except Exception:
+                                rec['xG'] = None
+                        else:
+                            rec['xG'] = None
                         # Always add video_url and video_time keys, even if missing in CSV
                         rec['video_url'] = row.get('video_url') or row.get('Video URL') or ''
                         rec['video_time'] = row.get('video_time') or row.get('Video Time') or ''
