@@ -963,15 +963,15 @@
   function clearTable(){ tableHeader.innerHTML=''; tableBody.innerHTML=''; }
   const TABLE_COLUMNS={
     // Skaters (individual production focus first, then on-ice)
-  skaters:['Name','Team','Season','State','Strength','GP','TOI','G','A','P','5v5 GF','5v5 GA','5v5 G+/-','Sh%','Shots','Misses','Shots in block','Blocks','PEN taken','PEN drawn'],
+  skaters:['Name','Team','Season','State','Strength','GP','TOI','G','A','P','5v5 GF','5v5 GA','5v5 G+/-','Sh%','Shots','Misses','Shots in block','Blocks','PEN taken','PEN drawn','ixG'],
     // Skaters by game
-  skaters_by_game:['Name','Team','Opponent','Season','State','Strength','Date','Venue','GameID','TOI','G','A','P','5v5 GF','5v5 GA','5v5 G+/-','Sh%','Shots','Misses','Shots in block','Blocks','PEN taken','PEN drawn'],
+  skaters_by_game:['Name','Team','Opponent','Season','State','Strength','Date','Venue','GameID','TOI','G','A','P','5v5 GF','5v5 GA','5v5 G+/-','Sh%','Shots','Misses','Shots in block','Blocks','PEN taken','PEN drawn','ixG'],
     // Goalies (lean set – usage + shot faced results)
-  goalies:['Name','Team','Season','State','Strength','GP','TOI','SA','GA','Sv%'],
+  goalies:['Name','Team','Season','State','Strength','GP','TOI','SA','GA','Sv%','xGA','xSv%','dSv%','GSAx'],
     // Goalies by game
-  goalies_by_game:['Name','Team','Opponent','Season','State','Strength','Date','Venue','GameID','TOI','SA','GA','Sv%'],
+  goalies_by_game:['Name','Team','Opponent','Season','State','Strength','Date','Venue','GameID','TOI','SA','GA','Sv%','xGA','xSv%','dSv%','GSAx'],
     // Teams (drive & results + discipline)
-  teams:['Team','Season','State','Strength','GP','CF','CA','CF%','FF','FA','FF%','SF','SA','SF%','GF','GA','GF%','Sh%','Sv%','PDO']
+  teams:['Team','Season','State','Strength','GP','CF','CA','CF%','FF','FA','FF%','SF','SA','SF%','GF','GA','GF%','xGF','xGA','xGF%','Sh%','Sv%','PDO']
   };
   function renderTable(type, rows){
     clearTable();
@@ -1093,6 +1093,11 @@
       case 'GA': return row.GA ?? '';
       case 'SA': return row.SA ?? '';
       case 'Sv%': return (row['Sv%']!==undefined && row['Sv%']!==null)? row['Sv%'] : '';
+      case 'xGA': return row.xGA ?? '';
+      case 'xSv%': return (row['xSv%']!==undefined && row['xSv%']!==null)? row['xSv%'] : '';
+      case 'dSv%': return (row['dSv%']!==undefined && row['dSv%']!==null)? row['dSv%'] : '';
+      case 'GSAx': return row.GSAx ?? '';
+      case 'ixG': return row.ixG ?? '';
       case 'PEN taken': return row.PEN_taken||0;
       case 'PEN drawn': return row.PEN_drawn||0;
       case 'Shots in block': return row.Shots_in_block||0;
@@ -1110,7 +1115,7 @@
     if(type==='goalies' && !byGameMode){ cols=['Name','Team','Season','State','Strength','GP','TOI','SA','GA','Sv%']; } 
     if(type==='goalies' && byGameMode){ cols=TABLE_COLUMNS['goalies_by_game']; }
     if(type==='skaters' && byGameMode){ cols=TABLE_COLUMNS['skaters_by_game']; }
-    if(type==='teams'){ cols=['Team','Season','State','Strength','GP','CF','CA','CF%','FF','FA','FF%','SF','SA','SF%','GF','GA','GF%','Sh%','Sv%','PDO']; } 
+    if(type==='teams'){ cols=['Team','Season','State','Strength','GP','CF','CA','CF%','FF','FA','FF%','SF','SA','SF%','GF','GA','GF%','xGF','xGA','xGF%','Sh%','Sv%','PDO']; } 
     const lines=[]; 
     lines.push(cols.join(',')); 
     rows.forEach(r=>{ 
@@ -1157,7 +1162,11 @@
         TOI: r.TOI||0,
         SA: r.SA||0,
         GA: r.GA||0,
-        'Sv%': r['Sv%']
+        'Sv%': r['Sv%'],
+        xGA: r.xGA ?? 0,
+        'xSv%': r['xSv%'],
+        'dSv%': r['dSv%'],
+        GSAx: r.GSAx ?? 0
       }));
     }
     if(type==='skaters'){
@@ -1172,6 +1181,11 @@
             }
         }
       });
+      // Ensure ixG present as number
+      window._baseTableRows = window._baseTableRows.map(r=>({
+        ...r,
+        ixG: (r.ixG!==undefined && r.ixG!==null)? r.ixG : 0
+      }));
     }
     // IMPORTANT: set current table type BEFORE applying filters so header uses correct column schema
     window._currentTableType = type;

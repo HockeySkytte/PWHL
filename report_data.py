@@ -448,6 +448,25 @@ class ReportDataStore:
         shpct = round(GF/SF*100,1) if SF>0 else None
         svpct = round((1 - GA/SA)*100,1) if SA>0 else None
         pdo = round((shpct or 0)+(svpct or 0),1) if shpct is not None and svpct is not None else None
+        # xG aggregations
+        def _xg_sum(rows_list):
+            total = 0.0
+            for rr in rows_list:
+                xv = rr.get('xG')
+                if xv is None or xv == '':
+                    continue
+                try:
+                    total += float(xv)
+                except Exception:
+                    continue
+            return round(total, 2)
+        if team == 'All':
+            xGF = _xg_sum(rows)
+            xGA = xGF
+        else:
+            xGF = _xg_sum(rows_for)
+            xGA = _xg_sum(rows_against)
+        xgfpct = self._pct(xGF, xGF + xGA)
         return {
             'filters': {
                 'team': team,
@@ -466,7 +485,7 @@ class ReportDataStore:
                 'CF': CF, 'CA': CA, 'CF%': cfpct,
                 'FF': FF, 'FA': FA, 'FF%': ffpct,
                 'SF': SF, 'SA': SA, 'SF%': sfpct,
-                'xGF': None, 'xGA': None, 'xGF%': None,
+                'xGF': xGF, 'xGA': xGA, 'xGF%': xgfpct,
                 'GF': GF, 'GA': GA, 'GF%': gfpct,
                 'Sh%': shpct, 'Sv%': svpct, 'PDO': pdo
             }
@@ -755,6 +774,7 @@ class ReportDataStore:
                         'G':0,'A':0,'P':0,
                         'Shots':0,'Misses':0,'Shots_in_block':0,
                         'PEN_taken':0,'PEN_drawn':0,
+                        'ixG': 0.0,
                     }
                 return stats_by_game[key]
             else:
@@ -765,6 +785,7 @@ class ReportDataStore:
                     'G':0,'A':0,'P':0,
                     'Shots':0,'Misses':0,'Shots_in_block':0,
                     'PEN_taken':0,'PEN_drawn':0,
+                    'ixG': 0.0,
                 })
 
         goal_keys=set()
@@ -898,6 +919,12 @@ class ReportDataStore:
                 if not by_game:
                     s['GP'].add(gid)
                 s['Shots'] += 1
+                xv = r.get('xG')
+                if xv not in (None, ''):
+                    try:
+                        s['ixG'] += float(xv)
+                    except Exception:
+                        pass
             if r['is_miss']:
                 s = ensure_player(shooter, team, gid if by_game else None)
                 if not by_game:
@@ -916,6 +943,12 @@ class ReportDataStore:
                 if not by_game:
                     s['GP'].add(gid)
                 s['G'] += 1
+                xv = r.get('xG')
+                if xv not in (None, ''):
+                    try:
+                        s['ixG'] += float(xv)
+                    except Exception:
+                        pass
                 # Assists (only once per unique goal)
                 for a_field in ('assist1','assist2'):
                     a = r.get(a_field)
@@ -980,6 +1013,8 @@ class ReportDataStore:
             
             rec['P'] = rec['G'] + rec['A']
             rec['Sh%'] = round(rec['G']/rec['Shots']*100,1) if rec['Shots']>0 else 0
+            # Round ixG for display
+            rec['ixG'] = round(rec.get('ixG', 0.0), 2)
             # 5v5 on-ice derived: we compute GF_onice & GA_onice; present GF/GA as on-ice, and G+/- = GF_onice - GA_onice
             gf_on = rec.get('5v5_GF_onice', 0)
             ga_on = rec.get('5v5_GA_onice', 0)
@@ -1007,7 +1042,7 @@ class ReportDataStore:
     def tables_goalies(self, **kwargs):
         """Minimal goaltender table.
 
-        Columns: Name (goalie), Team, Season, State, Strength, GP, TOI, SA, GA, Sv%
+        Columns: Name (goalie), Team, Season, State, Strength, GP, TOI, SA, GA, Sv%, xGA, xSv%, dSv%, GSAx
         SA: all shots on goal (is_shot) faced by goalie (includes goals)
         GA: goals allowed (is_goal) faced by goalie
         Sv% = (SA-GA)/SA * 100
@@ -1054,6 +1089,7 @@ class ReportDataStore:
                         'venue': '',
                         'SA': 0,
                         'GA': 0,
+                        'xGA': 0.0,
                     }
                 return stats_by_game[key]
             else:
@@ -1063,6 +1099,7 @@ class ReportDataStore:
                     'GP': set(),
                     'SA': 0,
                     'GA': 0,
+                    'xGA': 0.0,
                 })
 
         # For by_game mode, pre-populate all goalies from lineup CSVs
@@ -1149,6 +1186,13 @@ class ReportDataStore:
                 rec['SA'] += 1
             if r.get('is_goal'):
                 rec['GA'] += 1
+            # Sum xGA from xG field on shots/goals against
+            xv = r.get('xG')
+            if xv not in (None, ''):
+                try:
+                    rec['xGA'] += float(xv)
+                except Exception:
+                    pass
 
         out=[]
         stats_to_iterate = stats_by_game if by_game else stats_agg
@@ -1172,6 +1216,14 @@ class ReportDataStore:
             sa = rec['SA']
             ga = rec['GA']
             rec['Sv%'] = round((sa-ga)/sa*100,1) if sa>0 else None
+            # xSv% and differentials
+            xga = rec.get('xGA', 0.0) or 0.0
+            rec['xGA'] = round(xga, 2)
+            rec['xSv%'] = round((1 - (xga/sa))*100,1) if sa>0 else None
+            # dSv% = Sv% - xSv%
+            rec['dSv%'] = (rec['Sv%'] - rec['xSv%']) if (rec['Sv%'] is not None and rec['xSv%'] is not None) else None
+            # GSAx = xGA - GA
+            rec['GSAx'] = round(xga - ga, 2)
             
             # Add placeholder fields the frontend may expect (consistent schema)
             if not by_game:
@@ -1189,7 +1241,7 @@ class ReportDataStore:
     def tables_teams(self, **kwargs):
         """Teams table aggregation.
 
-        Columns: Team, Season, State, Strength, GP, CF, CA, CF%, FF, FA, FF%, SF, SA, SF%, GF, GA, GF%, Sh%, Sv%, PDO
+        Columns: Team, Season, State, Strength, GP, CF, CA, CF%, FF, FA, FF%, SF, SA, SF%, GF, GA, GF%, xGF, xGA, xGF%, Sh%, Sv%, PDO
 
         Strength filter semantics:
           - season / season_state / strength passed in like other tables
@@ -1217,7 +1269,8 @@ class ReportDataStore:
                 'Season_State': season_state_filter,
                 'Strength': strength_filter,
                 'games': set(),
-                'CF':0,'CA':0,'FF':0,'FA':0,'SF':0,'SA':0,'GF':0,'GA':0
+                'CF':0,'CA':0,'FF':0,'FA':0,'SF':0,'SA':0,'GF':0,'GA':0,
+                'xGF':0.0,'xGA':0.0
             })
 
         for r in rows:
@@ -1248,6 +1301,12 @@ class ReportDataStore:
                         recf['SF'] += 1
                     if r['is_goal']:
                         recf['GF'] += 1
+                    xv = r.get('xG')
+                    if xv not in (None, ''):
+                        try:
+                            recf['xGF'] += float(xv)
+                        except Exception:
+                            pass
             # Team against side accumulation (mirrored stats as Against for that team)
             if team_against:
                 if row_ok(team_against, False):
@@ -1261,6 +1320,12 @@ class ReportDataStore:
                         reca['SA'] += 1
                     if r['is_goal']:
                         reca['GA'] += 1
+                    xv = r.get('xG')
+                    if xv not in (None, ''):
+                        try:
+                            reca['xGA'] += float(xv)
+                        except Exception:
+                            pass
 
         out=[]
         for rec in teams.values():
@@ -1272,6 +1337,9 @@ class ReportDataStore:
             sh_pct = round(GF/SF*100,1) if SF>0 else None
             sv_pct = round((1 - GA/SA)*100,1) if SA>0 else None
             pdo = round((sh_pct or 0)+(sv_pct or 0),1) if sh_pct is not None and sv_pct is not None else None
+            xGF = round(rec.get('xGF', 0.0), 2)
+            xGA = round(rec.get('xGA', 0.0), 2)
+            xgf_pct = self._pct(xGF, xGF + xGA)
             out.append({
                 'Team': rec['Team'],
                 'team': rec['Team'],  # duplicate lowercase key for frontend consistency
@@ -1283,6 +1351,7 @@ class ReportDataStore:
                 'FF': FF,'FA': FA,'FF%': ff_pct,
                 'SF': SF,'SA': SA,'SF%': sf_pct,
                 'GF': GF,'GA': GA,'GF%': gf_pct,
+                'xGF': xGF,'xGA': xGA,'xGF%': xgf_pct,
                 'Sh%': sh_pct,
                 'Sv%': sv_pct,
                 'PDO': pdo
