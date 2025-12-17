@@ -466,6 +466,11 @@ def report_page():
     """Prototype report dashboard (UI only)."""
     return render_template('report.html')
 
+@app.route('/data')
+def data_page():
+    """Data export page: filter and export Play-by-Play from CSVs."""
+    return render_template('data.html')
+
 @app.route('/api/report/kpis')
 def report_kpis():
     # Base single-value params
@@ -502,6 +507,8 @@ def report_kpis():
     if onice_multi: params['onice'] = ','.join(onice_multi)
     seasons_multi = _get_multi('seasons')
     if seasons_multi: params['seasons_multi'] = ','.join(seasons_multi)
+    season_states_multi = _get_multi('season_states')
+    if season_states_multi: params['season_states_multi'] = ','.join(season_states_multi)
     data = report_store.compute_kpis(**params)
     return jsonify(data)
 
@@ -539,6 +546,8 @@ def report_shotmap():
     if onice_multi: params['onice'] = ','.join(onice_multi)
     seasons_multi = _get_multi('seasons')
     if seasons_multi: params['seasons_multi'] = ','.join(seasons_multi)
+    season_states_multi = _get_multi('season_states')
+    if season_states_multi: params['season_states_multi'] = ','.join(season_states_multi)
     data = report_store.shotmap(**params)
     return jsonify(data)
 
@@ -579,6 +588,8 @@ def report_tables():
     if onice_multi: params['onice'] = ','.join(onice_multi)
     seasons_multi = _get_multi('seasons')
     if seasons_multi: params['seasons_multi'] = ','.join(seasons_multi)
+    season_states_multi = _get_multi('season_states')
+    if season_states_multi: params['season_states_multi'] = ','.join(season_states_multi)
     if table_type in ('skaters','skaters_individual'):
         data=report_store.tables_skaters_individual(**params)
     elif table_type=='goalies':
@@ -650,11 +661,14 @@ def report_games():
     goalies = _get_multi('goalies')
     onice_multi = _get_multi('onice')
     seasons_multi = _get_multi('seasons')
+    season_states_multi = _get_multi('season_states')
     date_from = request.args.get('date_from','')
     date_to = request.args.get('date_to','')
     # Apply filters analogous to shotmap
     if seasons_multi:
         rows = [r for r in rows if r['season'] in seasons_multi]
+    if season_states_multi:
+        rows = [r for r in rows if r.get('state') in season_states_multi]
     if players:
         rows = [r for r in rows if r.get('shooter') in players]
     if opponents:
@@ -741,6 +755,52 @@ def report_strengths():
         rows = [r for r in rows if r['team_for']==team or r['team_against']==team]
     strengths = sorted({r['strength'] for r in rows if r['strength']})
     return jsonify({'strengths': strengths})
+
+# -------- Data API (reuses report_store) --------
+@app.route('/api/data/pbp')
+def data_pbp():
+    """Return filtered Play-by-Play rows for Data page.
+
+    Accepts same filters as report endpoints, except 'team' means participation (either side).
+    """
+    params = {
+        'team': request.args.get('team','All'),
+        'season': request.args.get('season','All'),
+        'season_state': request.args.get('season_state','All'),
+        'date_from': request.args.get('date_from',''),
+        'date_to': request.args.get('date_to',''),
+        'segment': request.args.get('segment','all'),
+        'strength': request.args.get('strength','All'),
+    }
+    # Multi-select helpers
+    def _get_multi(name):
+        vals = request.args.getlist(name)
+        if len(vals)==1 and ',' in vals[0]:
+            vals = [v for v in vals[0].split(',') if v]
+        return [v for v in vals if v]
+    games = _get_multi('games')
+    if games: params['games'] = ','.join(games)
+    players = _get_multi('players')
+    if players: params['players'] = ','.join(players)
+    opponents = _get_multi('opponents')
+    if opponents: params['opponents'] = ','.join(opponents)
+    periods = _get_multi('periods')
+    if periods: params['periods'] = ','.join(periods)
+    events = _get_multi('events')
+    if events: params['events'] = ','.join(events)
+    strengths_multi = _get_multi('strengths')
+    if strengths_multi: params['strengths_multi'] = ','.join(strengths_multi)
+    goalies = _get_multi('goalies')
+    if goalies: params['goalies'] = ','.join(goalies)
+    onice_multi = _get_multi('onice')
+    if onice_multi: params['onice'] = ','.join(onice_multi)
+    seasons_multi = _get_multi('seasons')
+    if seasons_multi: params['seasons_multi'] = ','.join(seasons_multi)
+    season_states_multi = _get_multi('season_states')
+    if season_states_multi: params['season_states_multi'] = ','.join(season_states_multi)
+    # Execute
+    rows = report_store.pbp_rows(**params)
+    return jsonify({'rows': rows, 'count': len(rows)})
 
 @app.route('/favicon.ico')
 def favicon():

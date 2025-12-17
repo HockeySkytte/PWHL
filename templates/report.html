@@ -206,6 +206,7 @@
   <div class="tabs">
     <a class="tab" href="/">📅 Schedule</a>
     <a class="tab active" href="/report">📊 Report</a>
+    <a class="tab" href="/data">🗂️ Data</a>
   </div>
   <main>
     <div class="slicers-wrapper" id="slicersWrapper">
@@ -228,7 +229,7 @@
         </div>
         <div class="filter-group" data-filter="season_states">
           <label class="filter-label">Season State</label>
-          <div class="dropdown" id="seasonStatesDropdown"><button class="dropdown-toggle" type="button">Select States</button><div class="dropdown-menu" id="seasonStatesMenu"></div></div>
+          <div class="dropdown" id="season_statesDropdown"><button class="dropdown-toggle" type="button">Select States</button><div class="dropdown-menu" id="season_statesMenu"></div></div>
         </div>
       </div>
       <div class="slicers">
@@ -742,7 +743,8 @@
       computeAndDrawHeat();
     }
   }
-  function updateButtonLabel(id){ const selected=getMultiValues(id); const btn=document.querySelector(`#${id}Dropdown .dropdown-toggle`); if(!btn) return; if(selected.length===0){ btn.textContent=`Select ${id.charAt(0).toUpperCase()+id.slice(1)}`; } else if(selected.length===1){ btn.textContent=selected[0]; } else { btn.textContent=`${selected.length} selected`; } }
+  function prettyFilterName(id){ const map={ season_states:'Season State' }; if(map[id]) return map[id]; const s=id.replace(/_/g,' '); return s.charAt(0).toUpperCase()+s.slice(1); }
+  function updateButtonLabel(id){ const selected=getMultiValues(id); const btn=document.querySelector(`#${id}Dropdown .dropdown-toggle`); if(!btn) return; if(selected.length===0){ btn.textContent=`Select ${prettyFilterName(id)}`; } else if(selected.length===1){ btn.textContent=selected[0]; } else { btn.textContent=`${selected.length} selected`; } }
   function updatePills(id){ /* pills removed */ updateButtonLabel(id); }
     document.addEventListener('click',e=>{ const t=e.target.closest('.dropdown-toggle'); if(t){ toggleDropdown(t.parentElement); }});
   // external clear links removed
@@ -774,7 +776,7 @@
     async function drawZoneBases(){ const img=await loadRink(); const def=document.getElementById('defRinkBase'); const off=document.getElementById('offRinkBase'); if(!def||!off) return; const d=setupCanvas(def); const o=setupCanvas(off); d.clearRect(0,0,def.width,def.height); o.clearRect(0,0,off.width,off.height); const sw=img.naturalWidth, sh=img.naturalHeight; const zoneW=sw*0.375; d.drawImage(img,0,0,zoneW,sh,0,0,def.width,def.height); o.drawImage(img,sw-zoneW,0,zoneW,sh,0,0,off.width,off.height); }
   function normalizeZoneCoord(x,y,isFor){ return { zx: isFor ? (x-25)/75 : (x+100)/75, zy:(42.5 - y)/85 }; }
   async function fetchShotMap(){ const team=document.getElementById('teamSelect').value; if(!team) return; const date_from=dateFrom.value||''; const date_to=dateTo.value||''; const params=new URLSearchParams({team,perspective:'All',date_from,date_to}); multiIds.forEach(id=>{ getMultiValues(id).forEach(v=>params.append(id, v)); }); const r=await fetch(`/api/report/shotmap?${params.toString()}`); if(!r.ok) return; const data=await r.json(); drawShotMap(data.attempts||[], team); }
-  async function populateFilters(){ try{ const r=await fetch('/api/report/filters'); if(!r.ok) return; const data=await r.json(); buildMenu('seasons', data.seasons||[]); buildMenu('season_states', data.season_states||data.states||[]); buildMenu('games', []); buildMenu('players', data.players||[]); buildMenu('opponents', data.opponents||[]); buildMenu('periods', data.periods||[]); buildMenu('events', data.events||[]); buildMenu('strengths', data.strengths||[]); buildMenu('goalies', data.goalies||[]); buildMenu('onice', data.onice||[]); setTimeout(()=>{ restoreState(); multiIds.forEach(id=>updateButtonLabel(id)); refreshGames(); fetchKPIs(); fetchShotMap(); },0); }catch(e){} }
+  async function populateFilters(){ try{ const r=await fetch('/api/report/filters'); if(!r.ok) return; const data=await r.json(); buildMenu('seasons', data.seasons||[]); let states=data.season_states||data.states||[]; if(!states || states.length===0){ states=['Regular Season','Playoffs']; } buildMenu('season_states', states); buildMenu('games', []); buildMenu('players', data.players||[]); buildMenu('opponents', data.opponents||[]); buildMenu('periods', data.periods||[]); buildMenu('events', data.events||[]); buildMenu('strengths', data.strengths||[]); buildMenu('goalies', data.goalies||[]); buildMenu('onice', data.onice||[]); setTimeout(()=>{ restoreState(); multiIds.forEach(id=>updateButtonLabel(id)); refreshGames(); fetchKPIs(); fetchShotMap(); },0); }catch(e){} }
   async function refreshGames(){ const params=new URLSearchParams(); ['players','opponents','periods','events','strengths','goalies','seasons','season_states','onice'].forEach(id=>{ getMultiValues(id).forEach(v=>params.append(id,v)); }); const df=dateFrom.value||''; const dt=dateTo.value||''; if(df) params.set('date_from',df); if(dt) params.set('date_to',dt); const team=document.getElementById('teamSelect').value; if(team) params.set('team',team); const r=await fetch('/api/report/games?'+params.toString()); if(!r.ok) return; const data=await r.json(); buildMenu('games', data.games||[]); updateButtonLabel('games'); }
     // Team color lookup (quick parse of Teams.csv once)
     const teamColorCache = (function(){ let colors=null; return async function(team){ if(colors) return colors[team]||'#53b3ff'; try{ const resp=await fetch('/Teams.csv'); if(resp.ok){ colors={}; const txt=await resp.text(); const lines=txt.split(/\n/); const header=lines.shift(); lines.forEach(l=>{ const c=l.split(','); if(c.length>5){ colors[c[1]]=c[5]; }}); return colors[team]||'#53b3ff'; } }catch(e){} return '#53b3ff'; }; })();

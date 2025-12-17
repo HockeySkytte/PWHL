@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PWHL Analytics — Data</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=2">
+  <link rel="icon" href="/favicon.ico?v=2">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='PWHL_logo.png', v='2') }}">
+  <meta name="theme-color" content="#160A3A">
+  <style>
+    :root { --pwhl-bg-1:#160A3A; --pwhl-bg-2:#251055; --pwhl-bg-3:#3B1E7A; --pwhl-surface:rgba(19,13,46,.75); --pwhl-surface-strong:rgba(25,16,60,.85); --pwhl-border:rgba(142,124,214,.25); --pwhl-accent:#8E7CD6; --pwhl-accent-strong:#B9A7FF; }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:linear-gradient(135deg,var(--pwhl-bg-1),var(--pwhl-bg-2) 48%,var(--pwhl-bg-3));color:#fff;min-height:100vh;display:flex;flex-direction:column;}
+    header{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:var(--pwhl-surface-strong);border-bottom:1px solid var(--pwhl-border);} 
+    header h1{font-size:1.5rem;font-weight:700;display:inline-flex;align-items:center;gap:.75rem;}
+    .tabs{display:flex;background:var(--pwhl-surface-strong);border-bottom:1px solid var(--pwhl-border);} 
+    .tab{background:transparent;color:#d6d3e9;border:none;padding:1rem 2rem;cursor:pointer;border-bottom:3px solid transparent;transition:.2s;font-size:1.05rem;text-decoration:none;display:flex;align-items:center;gap:.4rem;font-weight:600;}
+    .tab:hover{color:#fff;text-decoration:none;}
+    .tab.active{color:var(--pwhl-accent-strong);border-bottom-color:var(--pwhl-accent-strong);text-decoration:none;}
+    main{flex:1;display:flex;flex-direction:column;gap:1rem;padding:0 0 2rem;}
+    /* Match Report filters styling */
+    .slicers-wrapper{background:var(--pwhl-surface-strong);border-bottom:1px solid var(--pwhl-border);padding:.75rem 2rem;display:flex;flex-direction:column;gap:.6rem;}
+    .team-row{display:flex;align-items:flex-end;gap:1rem;flex-wrap:wrap;}
+    .slicers{display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;}
+    .content{flex:1;display:flex;flex-direction:column;gap:.75rem;padding:0 2rem;}
+    .filter-group{display:flex;flex-direction:column;margin-bottom:.7rem;}
+    .filter-label{margin-bottom:.4rem;font-weight:600;color:#e2e8f0;font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;}
+    .filter-select{width:170px;background:#4a5568;border:1px solid #718096;border-radius:.375rem;padding:.45rem .6rem;color:#fff;font-size:.7rem;}
+    .dropdown{position:relative;}
+    .dropdown-toggle{position:relative;width:160px;background:#4a5568;border:1px solid #718096;border-radius:.375rem;padding:.45rem .85rem .45rem .6rem;color:#fff;font-size:.7rem;text-align:left;display:flex;justify-content:flex-start;align-items:center;cursor:pointer;-webkit-appearance:none;appearance:none;}
+    .dropdown-toggle:after{content:"";position:absolute;right:.55rem;top:50%;width:0;height:0;pointer-events:none;border-left:5px solid transparent;border-right:5px solid transparent;border-top:6px solid #e5e7eb;opacity:.9;transform:translateY(-50%);transition:.18s ease;}
+    .dropdown.open .dropdown-toggle:after{transform:translateY(-50%) rotate(180deg);} 
+    .dropdown-menu{position:absolute;top:100%;left:0;z-index:40;background:#2d3550;border:1px solid #718096;border-radius:.4rem;padding:.4rem;display:none;flex-direction:column;max-height:260px;overflow:auto;width:230px;box-shadow:0 4px 14px rgba(0,0,0,.5);} .dropdown.open .dropdown-menu{display:flex;}
+    .dropdown-menu .filter-actions{display:flex;justify-content:space-between;align-items:center;gap:.4rem;margin-bottom:.35rem;}
+    .dropdown-menu .filter-actions button{flex:1;background:#4a5568;border:1px solid #718096;color:#e2e8f0;font-size:.55rem;padding:.25rem .4rem;border-radius:.3rem;cursor:pointer;letter-spacing:.04em;}
+    .dropdown-menu .search-box{position:relative;margin-bottom:.35rem;}
+    .dropdown-menu .search-box input{width:100%;background:#394566;border:1px solid #556080;color:#fff;font-size:.6rem;padding:.3rem .5rem;border-radius:.3rem;}
+    .dropdown-menu label{display:flex;align-items:center;gap:.45rem;font-size:.65rem;padding:.28rem .35rem;border-radius:.3rem;cursor:pointer;}
+    .dropdown-menu label:hover{background:rgba(255,255,255,.08);}
+    .table-wrap{background:var(--pwhl-surface);border:1px solid var(--pwhl-border);border-radius:.75rem;overflow:auto;}
+    table{width:100%;border-collapse:separate;border-spacing:0;}
+    #pbpTable{min-width:1600px;}
+      thead th{position:sticky;top:0;background:rgba(25,28,48,.92);backdrop-filter:blur(4px);z-index:5;font-size:.75rem;letter-spacing:.03em;padding:.6rem .8rem;border-bottom:1px solid rgba(255,255,255,.08);white-space:nowrap;}
+      /* Center align body cells to match headers */
+      tbody td{ text-align:center; }
+    tbody td{padding:.55rem .8rem;border-bottom:1px solid rgba(255,255,255,.05);font-size:.8rem;white-space:nowrap;}
+    .actions{display:flex;gap:.5rem;}
+    .btn{background:#394566;color:#fff;border:1px solid #566080;padding:.5rem .9rem;border-radius:.55rem;font-size:.8rem;cursor:pointer;}
+    .btn:hover{background:#445273;}
+    .pager{display:flex;gap:.5rem;align-items:center;margin-top:.5rem;}
+    .pager select{background:#4a5568;border:1px solid #718096;color:#fff;border-radius:.375rem;padding:.35rem .6rem;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1><img src="{{ url_for('static', filename='PWHL_logo.png') }}" alt="PWHL" style="height:28px;width:auto;"> <span>Data Export</span></h1>
+  </header>
+  <div class="tabs">
+    <a class="tab" href="/">📅 Schedule</a>
+    <a class="tab" href="/report">📊 Report</a>
+    <a class="tab active" href="/data">🗂️ Data</a>
+  </div>
+  <main>
+    <div class="slicers-wrapper" id="slicersWrapper">
+      <div class="team-row" style="align-items:flex-end;">
+      <div class="filter-group">
+        <label class="filter-label" for="teamSelect">Team</label>
+        <select class="filter-select" id="teamSelect" style="width:170px;"></select>
+      </div>
+      <div class="filter-group">
+        <label class="filter-label" for="dateFrom">Date From</label>
+        <input id="dateFrom" type="date" class="filter-select" />
+      </div>
+      <div class="filter-group">
+        <label class="filter-label" for="dateTo">Date To</label>
+        <input id="dateTo" type="date" class="filter-select" />
+      </div>
+        <div class="filter-group" data-filter="seasons">
+          <label class="filter-label">Season</label>
+          <div class="dropdown" id="seasonsDropdown"><button class="dropdown-toggle" type="button">Select Seasons</button><div class="dropdown-menu" id="seasonsMenu"></div></div>
+        </div>
+        <div class="filter-group" data-filter="season_states">
+          <label class="filter-label">Season State</label>
+          <div class="dropdown" id="season_statesDropdown"><button class="dropdown-toggle" type="button">Select States</button><div class="dropdown-menu" id="season_statesMenu"></div></div>
+        </div>
+      </div>
+      <div class="slicers">
+        <div class="filter-group" data-filter="games">
+          <label class="filter-label">Games</label>
+          <div class="dropdown" id="gamesDropdown"><button class="dropdown-toggle" type="button">Select Games</button><div class="dropdown-menu" id="gamesMenu"></div></div>
+        </div>
+        <div class="filter-group" data-filter="players">
+          <label class="filter-label">Player</label>
+          <div class="dropdown" id="playersDropdown"><button class="dropdown-toggle" type="button">Select Players</button><div class="dropdown-menu" id="playersMenu"></div></div>
+        </div>
+        <div class="filter-group" data-filter="opponents">
+          <label class="filter-label">Against Team</label>
+          <div class="dropdown" id="opponentsDropdown"><button class="dropdown-toggle" type="button">Select Teams</button><div class="dropdown-menu" id="opponentsMenu"></div></div>
+        </div>
+        <div class="filter-group" data-filter="periods">
+          <label class="filter-label">Period</label>
+          <div class="dropdown" id="periodsDropdown"><button class="dropdown-toggle" type="button">Select Periods</button><div class="dropdown-menu" id="periodsMenu"></div></div>
+        </div>
+        <div class="filter-group" data-filter="events">
+          <label class="filter-label">Event</label>
+          <div class="dropdown" id="eventsDropdown"><button class="dropdown-toggle" type="button">Select Events</button><div class="dropdown-menu" id="eventsMenu"></div></div>
+        </div>
+        <div class="filter-group" data-filter="strengths">
+          <label class="filter-label">Strength</label>
+          <div class="dropdown" id="strengthsDropdown"><button class="dropdown-toggle" type="button">Select Strengths</button><div class="dropdown-menu" id="strengthsMenu"></div></div>
+        </div>
+        <div class="filter-group" data-filter="goalies">
+          <label class="filter-label">Goalie</label>
+          <div class="dropdown" id="goaliesDropdown"><button class="dropdown-toggle" type="button">Select Goalies</button><div class="dropdown-menu" id="goaliesMenu"></div></div>
+        </div>
+        <div class="filter-group" data-filter="onice">
+          <label class="filter-label">On-Ice</label>
+          <div class="dropdown" id="oniceDropdown"><button class="dropdown-toggle" type="button">Select Players</button><div class="dropdown-menu" id="oniceMenu"></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="actions" style="padding:0 2rem;">
+      <button class="btn" id="loadBtn">Load Rows</button>
+      <button class="btn" id="exportBtn">Export CSV</button>
+    </div>
+    <div class="content">
+      <div class="table-wrap">
+        <table id="pbpTable">
+          <thead><tr id="pbpHeader"></tr></thead>
+          <tbody id="pbpBody"><tr><td style="padding:.9rem;">Use filters and click Load Rows…</td></tr></tbody>
+        </table>
+      </div>
+      <div class="pager" id="pager" style="display:none;">
+        <button class="btn" id="prevPageBtn">Prev 100</button>
+        <button class="btn" id="nextPageBtn">Next 100</button>
+        <span id="pbpCountNote" style="font-size:.8rem;color:#b7b3cf;opacity:.9;"></span>
+        <label style="margin-left:.5rem;font-size:.8rem;">Page
+          <select id="pageSelect"></select>
+        </label>
+      </div>
+      <div style="font-size:.75rem;color:#b7b3cf;opacity:.9;">Tip: Team filter includes games where the selected team played (for or against).</div>
+    </div>
+  </main>
+  <script>
+    const multiIds=['seasons','season_states','games','players','opponents','periods','events','strengths','goalies','onice'];
+    function toggleDropdown(drop){ document.querySelectorAll('.dropdown').forEach(d=>{ if(d!==drop) d.classList.remove('open');}); drop.classList.toggle('open'); }
+    document.addEventListener('click',e=>{ const t=e.target.closest('.dropdown-toggle'); if(t){ toggleDropdown(t.parentElement); }});
+    document.addEventListener('click',e=>{ if(!e.target.closest('.dropdown')) document.querySelectorAll('.dropdown').forEach(d=>d.classList.remove('open')); });
+    function getMultiValues(id){ return Array.from(document.querySelectorAll(`#${id}Menu input:checked`)).map(i=>i.value); }
+    function prettyFilterName(id){ const map={ season_states:'Season State' }; if(map[id]) return map[id]; const s=id.replace(/_/g,' '); return s.charAt(0).toUpperCase()+s.slice(1); }
+    function updateButtonLabel(id){ const selected=getMultiValues(id); const btn=document.querySelector(`#${id}Dropdown .dropdown-toggle`); if(!btn) return; if(selected.length===0){ btn.textContent=`Select ${prettyFilterName(id)}`; } else if(selected.length===1){ btn.textContent=selected[0]; } else { btn.textContent=`${selected.length} selected`; } }
+    function buildMenu(id, items){ const menu=document.getElementById(id+'Menu'); if(!menu) return; menu.innerHTML='';
+      const searchWrap=document.createElement('div'); searchWrap.className='search-box'; const search=document.createElement('input'); search.type='text'; search.placeholder='Search...'; searchWrap.appendChild(search); menu.appendChild(searchWrap);
+      const actions=document.createElement('div'); actions.className='filter-actions'; const btnAll=document.createElement('button'); btnAll.type='button'; btnAll.textContent='All'; const btnNone=document.createElement('button'); btnNone.type='button'; btnNone.textContent='None'; actions.appendChild(btnAll); actions.appendChild(btnNone); menu.appendChild(actions);
+      const listWrap=document.createElement('div'); listWrap.className='option-list'; menu.appendChild(listWrap);
+      function render(filter=''){ listWrap.innerHTML=''; (items||[]).filter(v=>{ const labelTxt=(v.label||v).toLowerCase(); return !filter || labelTxt.includes(filter.toLowerCase()); }).forEach(v=>{ const label=document.createElement('label'); const cb=document.createElement('input'); cb.type='checkbox'; cb.value=v.value||v; label.appendChild(cb); const span=document.createElement('span'); span.textContent=v.label||v; label.appendChild(span); label.addEventListener('click',()=>{ setTimeout(()=>{ updateSelectionState(id); },0); }); listWrap.appendChild(label); }); restoreChecks(id); }
+      search.addEventListener('input',()=>render(search.value));
+      btnAll.addEventListener('click',()=>{ listWrap.querySelectorAll('input[type=checkbox]').forEach(cb=>cb.checked=true); updateSelectionState(id); });
+      btnNone.addEventListener('click',()=>{ listWrap.querySelectorAll('input[type=checkbox]').forEach(cb=>cb.checked=false); updateSelectionState(id); });
+      render(); }
+    function restoreChecks(id){ /* no persistence for now */ }
+    function updateSelectionState(id){ updateButtonLabel(id); if(id!=='games'){ refreshGames(); } }
+
+    async function populateTeams(){ try{ const r=await fetch('/api/report/teams'); if(!r.ok) return; const data=await r.json(); const sel=document.getElementById('teamSelect'); sel.innerHTML=''; const optAll=document.createElement('option'); optAll.value='All'; optAll.textContent='All'; sel.appendChild(optAll); (data.teams||[]).forEach(t=>{const o=document.createElement('option');o.value=t;o.textContent=t;sel.appendChild(o);}); }catch(e){} }
+    async function populateFilters(){
+      try{
+        const r=await fetch('/api/report/filters'); if(!r.ok) return; const data=await r.json();
+        buildMenu('seasons', data.seasons||[]);
+        let states = data.season_states||data.states||[];
+        if(!states || states.length===0){ states = ['Regular Season','Playoffs']; }
+        buildMenu('season_states', states);
+        buildMenu('games', []);
+        buildMenu('players', data.players||[]);
+        buildMenu('opponents', data.opponents||[]);
+        buildMenu('periods', data.periods||[]);
+        buildMenu('events', data.events||[]);
+        buildMenu('strengths', data.strengths||[]);
+        buildMenu('goalies', data.goalies||[]);
+        buildMenu('onice', data.onice||[]);
+        multiIds.forEach(updateButtonLabel);
+        refreshGames();
+      }catch(e){}
+    }
+    async function refreshGames(){ const params=new URLSearchParams(); ['players','opponents','periods','events','strengths','goalies','seasons','season_states','onice'].forEach(id=>{ getMultiValues(id).forEach(v=>params.append(id,v)); }); const df=document.getElementById('dateFrom').value||''; const dt=document.getElementById('dateTo').value||''; if(df) params.set('date_from',df); if(dt) params.set('date_to',dt); const team=document.getElementById('teamSelect').value; if(team) params.set('team',team); const r=await fetch('/api/report/games?'+params.toString()); if(!r.ok) return; const data=await r.json(); buildMenu('games', data.games||[]); updateButtonLabel('games'); }
+
+    async function fetchPBP(){ const team=document.getElementById('teamSelect').value||'All'; const df=document.getElementById('dateFrom').value||''; const dt=document.getElementById('dateTo').value||''; const params=new URLSearchParams({team, date_from:df, date_to:dt}); multiIds.forEach(id=>{ getMultiValues(id).forEach(v=>params.append(id, v)); }); const r=await fetch('/api/data/pbp?'+params.toString()); if(!r.ok) return; const data=await r.json(); renderRows(data.rows||[]); }
+
+    const COLS=[{key:'date', label:'Date'},{key:'game_id',label:'GameID'},{key:'season',label:'Season'},{key:'state',label:'State'},{key:'period',label:'Period'},{key:'timestamp',label:'Time'},{key:'strength',label:'Strength'},{key:'event',label:'Event'},{key:'team_for',label:'Team For'},{key:'team_against',label:'Team Against'},{key:'shooter',label:'Player 1'},{key:'assist1',label:'Player 2'},{key:'assist2',label:'Player 3'},{key:'goalie',label:'Goalie'},{key:'x',label:'x'},{key:'y',label:'y'},{key:'xG',label:'xG'},{key:'on_ice_home',label:'Home On-Ice'},{key:'on_ice_away',label:'Away On-Ice'}];
+    function updatePaginationUI(){ const rows=window._pbpRows||[]; const pager=document.getElementById('pager'); const note=document.getElementById('pbpCountNote'); const sel=document.getElementById('pageSelect'); if(!rows.length){ pager.style.display='none'; if(note) note.textContent=''; return; } const perPage=100; const totalPages=Math.max(1, Math.ceil(rows.length/perPage)); window._pbpPageIndex = Math.min(window._pbpPageIndex||0, totalPages-1); const pageIndex=window._pbpPageIndex; pager.style.display='flex'; if(note){ const start=pageIndex*perPage+1; const end=Math.min((pageIndex+1)*perPage, rows.length); note.textContent = `Showing ${start}-${end} of ${rows.length}`; } sel.innerHTML=''; for(let i=0;i<totalPages;i++){ const opt=document.createElement('option'); opt.value=String(i); opt.textContent=String(i+1); if(i===pageIndex) opt.selected=true; sel.appendChild(opt); } }
+    function goToPage(idx){ window._pbpPageIndex = Math.max(0, idx); renderRows(window._pbpRows||[]); }
+    function renderRows(rows){ const thead=document.getElementById('pbpHeader'); const tbody=document.getElementById('pbpBody'); thead.innerHTML=''; tbody.innerHTML=''; COLS.forEach(c=>{ const th=document.createElement('th'); th.textContent=c.label; thead.appendChild(th); }); if(!rows.length){ const tr=document.createElement('tr'); const td=document.createElement('td'); td.colSpan=COLS.length; td.style.padding='.9rem'; td.textContent='No rows match your filters.'; tr.appendChild(td); tbody.appendChild(tr); updatePaginationUI(); return; } const perPage=100; const pageIndex = window._pbpPageIndex || 0; const start = pageIndex * perPage; const displayRows = rows.slice(start, start + perPage); displayRows.forEach(r=>{ const tr=document.createElement('tr'); COLS.forEach(c=>{ const td=document.createElement('td'); let v=r[c.key]; td.textContent=(v==null||v==='')?'':v; tr.appendChild(td); }); tbody.appendChild(tr); }); window._pbpRows = rows; updatePaginationUI(); }
+    function exportCSV(){ const rows=window._pbpRows||[]; if(!rows.length){ alert('Nothing to export. Load rows first.'); return; } const lines=[]; lines.push(COLS.map(c=>c.label).join(',')); rows.forEach(r=>{ const line=COLS.map(c=>{ let v=r[c.key]; if(v==null) v=''; if(typeof v==='string' && (v.includes('"')||v.includes(',')||v.includes('\n'))) v='"'+v.replace(/"/g,'""')+'"'; return v; }).join(','); lines.push(line); }); const blob=new Blob([lines.join('\n')], {type:'text/csv;charset=utf-8'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); const team=document.getElementById('teamSelect').value||'All'; a.download=`pbp_${team||'All'}.csv`; a.click(); URL.revokeObjectURL(a.href); }
+
+    document.getElementById('loadBtn').addEventListener('click', ()=>{ window._pbpPageIndex=0; fetchPBP(); });
+    document.getElementById('exportBtn').addEventListener('click', exportCSV);
+    document.getElementById('teamSelect').addEventListener('change', refreshGames);
+    document.getElementById('dateFrom').addEventListener('change', refreshGames);
+    document.getElementById('dateTo').addEventListener('change', refreshGames);
+    document.getElementById('prevPageBtn').addEventListener('click', ()=>{ const rows=window._pbpRows||[]; if(!rows.length) return; window._pbpPageIndex=Math.max(0,(window._pbpPageIndex||0)-1); renderRows(rows); });
+    document.getElementById('nextPageBtn').addEventListener('click', ()=>{ const rows=window._pbpRows||[]; if(!rows.length) return; const perPage=100; const totalPages=Math.max(1, Math.ceil(rows.length/perPage)); window._pbpPageIndex=Math.min(totalPages-1,(window._pbpPageIndex||0)+1); renderRows(rows); });
+    document.getElementById('pageSelect').addEventListener('change', (e)=>{ const idx=parseInt(e.target.value||'0',10)||0; goToPage(idx); });
+    (async()=>{ await populateTeams(); await populateFilters(); })();
+  </script>
+</body>
+</html>

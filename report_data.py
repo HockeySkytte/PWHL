@@ -99,6 +99,7 @@ class ReportDataStore:
                         away = row.get('team_away') or ''
                         venue = row.get('venue') or ''
                         period = row.get('period') or ''
+                        timestamp = row.get('timestamp') or ''
                         shooter = row.get('p1_name') or ''
                         assist1 = row.get('p2_name') or ''
                         assist2 = row.get('p3_name') or ''
@@ -143,6 +144,7 @@ class ReportDataStore:
                             'date': self.game_meta[gid]['date'] if gid else '',
                             'season': self.game_meta[gid]['season'] if gid else '',
                             'state': self.game_meta[gid]['state'] if gid else '',
+                            'timestamp': timestamp,
                             'team_for': shooting_team,
                             'team_against': away if shooting_team == home else home if shooting_team == away else '',
                             'strength': strength,
@@ -307,7 +309,7 @@ class ReportDataStore:
         # Fallback to numeric comparison
         return 'PP' if for_n > against_n else 'SH'
 
-    def compute_kpis(self, team: str = 'All', strength: str = 'All', season: str = 'All', date_from: str = '', date_to: str = '', segment: str = 'all', perspective: str='For', games=None, players=None, opponents=None, periods=None, events=None, strengths_multi=None, goalies=None, seasons_multi=None, onice=None) -> Dict[str, Any]:
+    def compute_kpis(self, team: str = 'All', strength: str = 'All', season: str = 'All', date_from: str = '', date_to: str = '', segment: str = 'all', perspective: str='For', games=None, players=None, opponents=None, periods=None, events=None, strengths_multi=None, goalies=None, seasons_multi=None, onice=None, season_state: str='All', season_states_multi=None) -> Dict[str, Any]:
         """Compute KPI metrics.
 
         Added on-ice AND filter (onice list) – if provided, only retain rows where *all*
@@ -326,6 +328,7 @@ class ReportDataStore:
         strengths_multi = strengths_multi.split(',') if isinstance(strengths_multi, str) and strengths_multi else (strengths_multi or [])
         goalies = goalies.split(',') if isinstance(goalies, str) and goalies else (goalies or [])
         seasons_multi = seasons_multi.split(',') if isinstance(seasons_multi, str) and seasons_multi else (seasons_multi or [])
+        season_states_multi = season_states_multi.split(',') if isinstance(season_states_multi, str) and season_states_multi else (season_states_multi or [])
         # Support optional on-ice AND list (attribute injected by flask layer if present)
         onice = onice.split(',') if isinstance(onice, str) and onice else (onice or [])
         # When no specific team chosen we treat league aggregate (percentages become 50 by construction)
@@ -336,6 +339,11 @@ class ReportDataStore:
                 rows = [r for r in rows if r['season'] in seasons_multi]
             elif season != 'All':
                 rows = [r for r in rows if r['season'] == season]
+            # Season State filter
+            if season_states_multi:
+                rows = [r for r in rows if r.get('state') in season_states_multi]
+            elif season_state != 'All':
+                rows = [r for r in rows if r.get('state') == season_state]
             if games:
                 rows = [r for r in rows if r['game_id'] in games]
             if players:
@@ -388,6 +396,13 @@ class ReportDataStore:
             elif season != 'All':
                 rows_for = [r for r in rows_for if r['season'] == season]
                 rows_against = [r for r in rows_against if r['season'] == season]
+            # Season State filter
+            if season_states_multi:
+                rows_for = [r for r in rows_for if r.get('state') in season_states_multi]
+                rows_against = [r for r in rows_against if r.get('state') in season_states_multi]
+            elif season_state != 'All':
+                rows_for = [r for r in rows_for if r.get('state') == season_state]
+                rows_against = [r for r in rows_against if r.get('state') == season_state]
             if games:
                 rows_for = [r for r in rows_for if r['game_id'] in games]
                 rows_against = [r for r in rows_against if r['game_id'] in games]
@@ -503,7 +518,7 @@ class ReportDataStore:
             }
         }
 
-    def shotmap(self, team: str='All', strength: str='All', season: str='All', date_from: str='', date_to: str='', segment: str='all', perspective: str='For', games=None, players=None, opponents=None, periods=None, events=None, strengths_multi=None, goalies=None, seasons_multi=None, onice=None) -> Dict[str, Any]:
+    def shotmap(self, team: str='All', strength: str='All', season: str='All', date_from: str='', date_to: str='', segment: str='all', perspective: str='For', games=None, players=None, opponents=None, periods=None, events=None, strengths_multi=None, goalies=None, seasons_multi=None, onice=None, season_state: str='All', season_states_multi=None) -> Dict[str, Any]:
         self.load()
         # Convert comma-separated strings to lists (from Flask API)
         games = games.split(',') if isinstance(games, str) and games else (games or [])
@@ -514,6 +529,7 @@ class ReportDataStore:
         strengths_multi = strengths_multi.split(',') if isinstance(strengths_multi, str) and strengths_multi else (strengths_multi or [])
         goalies = goalies.split(',') if isinstance(goalies, str) and goalies else (goalies or [])
         seasons_multi = seasons_multi.split(',') if isinstance(seasons_multi, str) and seasons_multi else (seasons_multi or [])
+        season_states_multi = season_states_multi.split(',') if isinstance(season_states_multi, str) and season_states_multi else (season_states_multi or [])
         onice = onice.split(',') if isinstance(onice, str) and onice else (onice or [])
         rows = self.rows
         if team != 'All':
@@ -529,6 +545,11 @@ class ReportDataStore:
             rows = [r for r in rows if r['season'] in seasons_multi]
         elif season != 'All':
             rows = [r for r in rows if r['season'] == season]
+        # Season State filter
+        if season_states_multi:
+            rows = [r for r in rows if r.get('state') in season_states_multi]
+        elif season_state != 'All':
+            rows = [r for r in rows if r.get('state') == season_state]
         if games:
             rows = [r for r in rows if r['game_id'] in games]
         if players:
@@ -582,6 +603,93 @@ class ReportDataStore:
                 'xG': r.get('xG'),
             })
         return {'count': len(attempts), 'games': len(game_ids_ordered), 'attempts': attempts}
+
+    def pbp_rows(self, team: str='All', season: str='All', season_state: str='All', date_from: str='', date_to: str='', segment: str='all',
+                 games=None, players=None, opponents=None, periods=None, events=None, strengths_multi=None, goalies=None, seasons_multi=None,
+                 onice=None, strength: str='All', season_states_multi=None) -> List[Dict[str, Any]]:
+        """Return filtered Play-by-Play rows for the Data page export.
+
+        Team filter means participation: include rows where the selected team is either shooter (`team_for`) or opponent (`team_against`).
+        Strength filter supports aggregated classes using row's own perspective.
+        """
+        self.load()
+        # Normalize arrays from comma-separated strings
+        games = games.split(',') if isinstance(games, str) and games else (games or [])
+        players = players.split(',') if isinstance(players, str) and players else (players or [])
+        opponents = opponents.split(',') if isinstance(opponents, str) and opponents else (opponents or [])
+        periods = periods.split(',') if isinstance(periods, str) and periods else (periods or [])
+        events = events.split(',') if isinstance(events, str) and events else (events or [])
+        strengths_multi = strengths_multi.split(',') if isinstance(strengths_multi, str) and strengths_multi else (strengths_multi or [])
+        goalies = goalies.split(',') if isinstance(goalies, str) and goalies else (goalies or [])
+        seasons_multi = seasons_multi.split(',') if isinstance(seasons_multi, str) and seasons_multi else (seasons_multi or [])
+        onice = onice.split(',') if isinstance(onice, str) and onice else (onice or [])
+        season_states_multi = season_states_multi.split(',') if isinstance(season_states_multi, str) and season_states_multi else (season_states_multi or [])
+
+        # Base: scope to participation if team selected
+        rows = self.rows
+        if team != 'All':
+            rows = [r for r in rows if r['team_for'] == team or r['team_against'] == team]
+
+        # Apply remaining filters using common helper (row_strength_independent=True allows PP/SH/EV by row POV)
+        rows = self._apply_common_filters(
+            rows,
+            team=team,
+            season=season,
+            season_state=season_state,
+            date_from=date_from,
+            date_to=date_to,
+            games=games,
+            players=players,
+            opponents=opponents,
+            periods=periods,
+            events=events,
+            strengths_multi=strengths_multi,
+            goalies=goalies,
+            seasons_multi=seasons_multi,
+            season_states_multi=season_states_multi,
+            onice=onice,
+            strength=strength,
+            segment=segment,
+            row_strength_independent=True
+        )
+
+        # Shape output for export
+        out: List[Dict[str, Any]] = []
+        for r in rows:
+            out.append({
+                'date': r.get('date',''),
+                'season': r.get('season',''),
+                'state': r.get('state',''),
+                'game_id': r.get('game_id',''),
+                'period': r.get('period',''),
+                'timestamp': r.get('timestamp',''),
+                'strength': r.get('strength',''),
+                'event': r.get('event',''),
+                'team_for': r.get('team_for',''),
+                'team_against': r.get('team_against',''),
+                'shooter': r.get('shooter',''),
+                'assist1': r.get('assist1',''),
+                'assist2': r.get('assist2',''),
+                'goalie': r.get('goalie',''),
+                'x': r.get('x'),
+                'y': r.get('y'),
+                'adj_x': r.get('adj_x'),
+                'adj_y': r.get('adj_y'),
+                'xG': r.get('xG'),
+                'on_ice_home': ' - '.join(r.get('on_ice_home') or []),
+                'on_ice_away': ' - '.join(r.get('on_ice_away') or []),
+                'video_url': r.get('video_url',''),
+                'video_time': r.get('video_time','')
+            })
+        # Sort chronologically by game/date then by period order if possible
+        def _sort_key(item):
+            return (
+                self.game_meta.get(item.get('game_id',''),{}).get('date','') or item.get('date',''),
+                str(item.get('game_id','')),
+                str(item.get('period','')),
+            )
+        out.sort(key=_sort_key)
+        return out
 
     # ---------------- Video Events -----------------
     def video_events_list(self, team: str='All', season: str='All', season_state: str='All', games=None, periods=None, events=None, strengths=None, players=None, opponents=None, date_from: str='', date_to: str='') -> List[Dict[str, Any]]:
@@ -657,6 +765,7 @@ class ReportDataStore:
         strengths_multi = kwargs.get('strengths_multi') or []
         goalies = kwargs.get('goalies') or []
         seasons_multi = kwargs.get('seasons_multi') or []
+        season_states_multi = kwargs.get('season_states_multi') or []
         onice = kwargs.get('onice') or []
         strength = kwargs.get('strength','All')
         segment = kwargs.get('segment','all')
@@ -666,7 +775,10 @@ class ReportDataStore:
             rows=[r for r in rows if r['season'] in seasons_multi]
         elif season!='All':
             rows=[r for r in rows if r['season']==season]
-        if season_state != 'All':
+        # Season state: prefer multi if provided, else single
+        if season_states_multi:
+            rows=[r for r in rows if r.get('state') in season_states_multi]
+        elif season_state != 'All':
             rows=[r for r in rows if r.get('state')==season_state]
         if games:
             rows=[r for r in rows if r['game_id'] in games]
@@ -753,7 +865,10 @@ class ReportDataStore:
         rows = self.rows
         if season_filter != 'All':
             rows = [r for r in rows if r.get('season') == season_filter]
-        if season_state_filter != 'All':
+        season_states_multi = kwargs.get('season_states_multi') or []
+        if season_states_multi:
+            rows = [r for r in rows if r.get('state') in season_states_multi]
+        elif season_state_filter != 'All':
             rows = [r for r in rows if r.get('state') == season_state_filter]
         if strength_filter != 'All':
             tmp=[]
@@ -1071,7 +1186,10 @@ class ReportDataStore:
         rows = self.rows
         if season_filter != 'All':
             rows = [r for r in rows if r.get('season') == season_filter]
-        if season_state_filter != 'All':
+        season_states_multi = kwargs.get('season_states_multi') or []
+        if season_states_multi:
+            rows = [r for r in rows if r.get('state') in season_states_multi]
+        elif season_state_filter != 'All':
             rows = [r for r in rows if r.get('state') == season_state_filter]
         if strength_filter != 'All':
             tmp=[]
@@ -1270,7 +1388,10 @@ class ReportDataStore:
         rows = self.rows
         if season_filter != 'All':
             rows = [r for r in rows if r.get('season') == season_filter]
-        if season_state_filter != 'All':
+        season_states_multi = kwargs.get('season_states_multi') or []
+        if season_states_multi:
+            rows = [r for r in rows if r.get('state') in season_states_multi]
+        elif season_state_filter != 'All':
             rows = [r for r in rows if r.get('state') == season_state_filter]
 
         teams: Dict[str, Dict[str, Any]] = {}
