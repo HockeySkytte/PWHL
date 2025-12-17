@@ -104,6 +104,7 @@ class ReportDataStore:
                         assist1 = row.get('p2_name') or ''
                         assist2 = row.get('p3_name') or ''
                         goalie = row.get('goalie_name') or ''
+                        score_state = row.get('ScoreState') or ''
                         # On-ice player names (home / away) come as hyphen-separated in export (see export_utils)
                         def parse_onice(txt: str) -> List[str]:
                             """Parse on-ice players string.
@@ -145,6 +146,7 @@ class ReportDataStore:
                             'season': self.game_meta[gid]['season'] if gid else '',
                             'state': self.game_meta[gid]['state'] if gid else '',
                             'timestamp': timestamp,
+                            'score_state': score_state,
                             'team_for': shooting_team,
                             'team_against': away if shooting_team == home else home if shooting_team == away else '',
                             'strength': strength,
@@ -664,6 +666,7 @@ class ReportDataStore:
                 'period': r.get('period',''),
                 'timestamp': r.get('timestamp',''),
                 'strength': r.get('strength',''),
+                'score_state': r.get('score_state',''),
                 'event': r.get('event',''),
                 'team_for': r.get('team_for',''),
                 'team_against': r.get('team_against',''),
