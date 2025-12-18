@@ -1,1 +1,92 @@
-id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,xG,ScoreState,BoxID,game_id,game_date,competition,season,state
+1,0:13,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,18,Maddi Wheeler,,,,,31,Aerin Frankel,,,,,,,59.3,-17.8,0.0785,0,O14,228,2025-12-17,PWHL,2025/2026,Regular Season
+2,0:19,Block,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,18,Maddi Wheeler,,,,,31,Aerin Frankel,,,,,,,-78.0,29.7,,0,D05,228,2025-12-17,PWHL,2025/2026,Regular Season
+3,0:59,Block,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,8,Maja Nylen Persson,,,,,31,Aerin Frankel,,,,,,,33.0,11.1,,0,O25,228,2025-12-17,PWHL,2025/2026,Regular Season
+4,1:03,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,11,Alina Müller,,,,,82,Kayle Osborne,,,,,,,79.0,-7.1,0.1248,0,O11,228,2025-12-17,PWHL,2025/2026,Regular Season
+5,1:25,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,8,Haley Winn,,,,,82,Kayle Osborne,,,,,,,31.7,-3.7,0.0420,0,O25,228,2025-12-17,PWHL,2025/2026,Regular Season
+6,4:35,Block,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,8,Haley Winn,,,,,82,Kayle Osborne,,,,,,,33.3,21.5,,0,O26,228,2025-12-17,PWHL,2025/2026,Regular Season
+7,5:01,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,77,Susanna Tapani,,,,,82,Kayle Osborne,,,,,,,83.0,12.5,0.0709,0,O08,228,2025-12-17,PWHL,2025/2026,Regular Season
+8,6:00,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,44,Jill Saulnier,,,,,82,Kayle Osborne,,,,,,,22.3,-0.6,0.0553,0,N02,228,2025-12-17,PWHL,2025/2026,Regular Season
+9,6:16,Block,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,55,Daniela Pejšová,,,,,82,Kayle Osborne,,,,,,,32.0,-31.7,,0,O24,228,2025-12-17,PWHL,2025/2026,Regular Season
+10,7:53,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,22,Anna Bargman,,,,,31,Aerin Frankel,,,,,,,60.0,16.1,0.0899,0,O16,228,2025-12-17,PWHL,2025/2026,Regular Season
+11,8:14,Block,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,22,Anna Bargman,,,,,31,Aerin Frankel,,,,,,,63.3,-2.3,,0,O15,228,2025-12-17,PWHL,2025/2026,Regular Season
+12,8:25,Penalty,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,4,Elle Hartje,,,,,,,,,,,,,,,,0,,228,2025-12-17,PWHL,2025/2026,Regular Season
+13,9:38,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,11,Alina Müller,,,,,82,Kayle Osborne,,,,,,,64.3,-2.8,0.1041,0,O15,228,2025-12-17,PWHL,2025/2026,Regular Season
+14,10:45,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,27,Shay Maloney,,,,,82,Kayle Osborne,,,,,,,75.0,11.9,0.0709,0,O08,228,2025-12-17,PWHL,2025/2026,Regular Season
+15,11:24,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,55,Daniela Pejšová,,,,,82,Kayle Osborne,,,,,,,44.7,-27.2,0.0318,0,O19,228,2025-12-17,PWHL,2025/2026,Regular Season
+16,12:24,Block,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,18,Maddi Wheeler,,,,,31,Aerin Frankel,,,,,,,64.7,14.7,,0,O16,228,2025-12-17,PWHL,2025/2026,Regular Season
+17,12:45,Block,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,4,Elle Hartje,,,,,31,Aerin Frankel,,,,,,,75.0,-13.6,,0,O06,228,2025-12-17,PWHL,2025/2026,Regular Season
+18,13:59,Block,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,19,Abby Newhook,,,,,82,Kayle Osborne,,,,,,,41.3,-2.8,,0,O21,228,2025-12-17,PWHL,2025/2026,Regular Season
+19,14:41,Penalty,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,44,Jill Saulnier,,,,,,,,,,,,,,,,0,,228,2025-12-17,PWHL,2025/2026,Regular Season
+20,15:00,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,18,Maddi Wheeler,,,,,31,Aerin Frankel,,,,,,,78.0,-4.2,0.1248,0,O11,228,2025-12-17,PWHL,2025/2026,Regular Season
+21,15:18,Block,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,43,Kristin O'Neill,,,,,31,Aerin Frankel,,,,,,,57.3,-5.1,,0,O15,228,2025-12-17,PWHL,2025/2026,Regular Season
+22,15:43,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,8,Maja Nylen Persson,,,,,31,Aerin Frankel,,,,,,,30.3,-11.1,0.0420,0,O25,228,2025-12-17,PWHL,2025/2026,Regular Season
+23,16:27,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,71,Jincy Roese,,,,,31,Aerin Frankel,,,,,,,30.7,-24.6,0.0400,0,O24,228,2025-12-17,PWHL,2025/2026,Regular Season
+24,17:34,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,14,Jaime Bourbonnais,,,,,31,Aerin Frankel,,,,,,,66.7,0.3,0.1041,0,O15,228,2025-12-17,PWHL,2025/2026,Regular Season
+25,17:53,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,17,Taylor Girard,,,,,31,Aerin Frankel,,,,,,,53.0,-19.8,0.0458,0,O20,228,2025-12-17,PWHL,2025/2026,Regular Season
+26,18:01,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,16,Lauren Bernard,,,,,31,Aerin Frankel,,,,,,,53.0,9.6,0.0573,0,O21,228,2025-12-17,PWHL,2025/2026,Regular Season
+27,18:12,Block,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,98,Kristýna Kaltounková,,,,,31,Aerin Frankel,,,,,,,68.7,-17.3,,0,O13,228,2025-12-17,PWHL,2025/2026,Regular Season
+28,18:23,Block,New York Sirens,Home,New York Sirens,Boston Fleet,1,event,5v5,16,Lauren Bernard,,,,,31,Aerin Frankel,,,,,,,36.7,-21.0,,0,O24,228,2025-12-17,PWHL,2025/2026,Regular Season
+29,20:00,Block,Boston Fleet,Away,New York Sirens,Boston Fleet,1,event,5v5,5,Megan Keller,,,,,82,Kayle Osborne,,,,,,,73.0,0.6,,0,O11,228,2025-12-17,PWHL,2025/2026,Regular Season
+30,1:05,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,24,Anne Cherkowski,,,,,31,Aerin Frankel,,,,,,,84.7,-11.1,0.0659,0,O06,228,2025-12-17,PWHL,2025/2026,Regular Season
+31,1:12,Block,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,20,Allyson Simpson,,,,,31,Aerin Frankel,,,,,,,65.7,17.8,,0,O17,228,2025-12-17,PWHL,2025/2026,Regular Season
+32,1:18,Penalty,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,20,Allyson Simpson,,,,,,,,,,,,,,,,0,,228,2025-12-17,PWHL,2025/2026,Regular Season
+33,1:18,Penalty,Boston Fleet,Away,New York Sirens,Boston Fleet,2,event,5v5,26,Ella Huber,,,,,,,,,,,,,,,,0,,228,2025-12-17,PWHL,2025/2026,Regular Season
+34,2:52,Block,Boston Fleet,Away,New York Sirens,Boston Fleet,2,event,5v5,77,Susanna Tapani,,,,,82,Kayle Osborne,,,,,,,47.0,-17.8,,0,O20,228,2025-12-17,PWHL,2025/2026,Regular Season
+35,4:10,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,2,event,5v5,8,Haley Winn,,,,,82,Kayle Osborne,,,,,,,40.3,11.1,0.0420,0,O25,228,2025-12-17,PWHL,2025/2026,Regular Season
+36,5:27,Goal,Boston Fleet,Away,New York Sirens,Boston Fleet,2,event,5v5,26,Ella Huber,8,Haley Winn,,,82,Kayle Osborne,,4 14 16 17 26,Elle Hartje - Jaime Bourbonnais - Lauren Bernard - Taylor Girard - Casey O'Brien,,3 8 26 27 53 77,Zoe Boyd - Haley Winn - Ella Huber - Shay Maloney - Rylind MacKinnon - Susanna Tapani,73.0,13.9,0.0709,0,O08,228,2025-12-17,PWHL,2025/2026,Regular Season
+37,7:32,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,24,Anne Cherkowski,,,,,31,Aerin Frankel,,,,,,,71.3,1.7,0.0959,-1,O16,228,2025-12-17,PWHL,2025/2026,Regular Season
+38,7:41,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,98,Kristýna Kaltounková,,,,,31,Aerin Frankel,,,,,,,76.3,-6.8,0.1328,-1,O11,228,2025-12-17,PWHL,2025/2026,Regular Season
+39,7:52,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,2,event,5v5,11,Alina Müller,,,,,82,Kayle Osborne,,,,,,,65.0,-9.1,0.0929,1,O14,228,2025-12-17,PWHL,2025/2026,Regular Season
+40,8:14,Block,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,18,Maddi Wheeler,,,,,31,Aerin Frankel,,,,,,,71.3,21.2,,-1,O17,228,2025-12-17,PWHL,2025/2026,Regular Season
+41,9:24,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,8,Maja Nylen Persson,,,,,31,Aerin Frankel,,,,,,,49.0,21.0,0.0414,-1,O22,228,2025-12-17,PWHL,2025/2026,Regular Season
+42,9:32,Block,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,98,Kristýna Kaltounková,,,,,31,Aerin Frankel,,,,,,,64.3,-24.1,,-1,O13,228,2025-12-17,PWHL,2025/2026,Regular Season
+43,9:46,Goal,Boston Fleet,Away,New York Sirens,Boston Fleet,2,event,5v5,13,Liz Schepers,47,Jamie Lee Rattray,5,Megan Keller,82,Kayle Osborne,,8 10 24 28 98,Maja Nylen Persson - Sarah Fillier - Anne Cherkowski - Micah Zandee-Hart - Kristýna Kaltounková,,5 8 13 17 47,Megan Keller - Haley Winn - Liz Schepers - Theresa Schafzahl - Jamie Lee Rattray,-86.0,2.0,0.0657,1,D07,228,2025-12-17,PWHL,2025/2026,Regular Season
+44,10:01,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,18,Maddi Wheeler,,,,,31,Aerin Frankel,,,,,,,54.0,-26.4,0.0345,-2,O19,228,2025-12-17,PWHL,2025/2026,Regular Season
+45,10:17,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,19,Paetyn Levis,,,,,31,Aerin Frankel,,,,,,,51.3,0.8,0.0620,-2,O21,228,2025-12-17,PWHL,2025/2026,Regular Season
+46,10:50,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,2,event,5v5,26,Ella Huber,,,,,82,Kayle Osborne,,,,,,,-50.7,-1.4,0.0828,2,D21,228,2025-12-17,PWHL,2025/2026,Regular Season
+47,11:43,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,26,Casey O'Brien,,,,,31,Aerin Frankel,,,,,,,77.0,17.3,0.0766,-2,O08,228,2025-12-17,PWHL,2025/2026,Regular Season
+48,12:01,Block,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,17,Taylor Girard,,,,,31,Aerin Frankel,,,,,,,37.0,-23.5,,-2,O24,228,2025-12-17,PWHL,2025/2026,Regular Season
+49,12:36,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,26,Casey O'Brien,,,,,31,Aerin Frankel,,,,,,,89.3,12.2,0.1609,-2,O02,228,2025-12-17,PWHL,2025/2026,Regular Season
+50,12:48,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,4,Elle Hartje,,,,,31,Aerin Frankel,,,,,,,79.3,6.0,0.1341,-2,O11,228,2025-12-17,PWHL,2025/2026,Regular Season
+51,12:52,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,19,Paetyn Levis,,,,,31,Aerin Frankel,,,,,,,57.3,-10.2,0.0847,-2,O14,228,2025-12-17,PWHL,2025/2026,Regular Season
+52,13:20,Penalty,Boston Fleet,Away,New York Sirens,Boston Fleet,2,event,5v5,47,Jamie Lee Rattray,,,,,,,,,,,,,,,,2,,228,2025-12-17,PWHL,2025/2026,Regular Season
+53,13:20,Penalty,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,20,Allyson Simpson,,,,,,,,,,,,,,,,-2,,228,2025-12-17,PWHL,2025/2026,Regular Season
+54,14:28,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,2,event,5v5,26,Ella Huber,,,,,82,Kayle Osborne,,,,,,,57.0,27.5,0.0618,2,O17,228,2025-12-17,PWHL,2025/2026,Regular Season
+55,15:40,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,98,Kristýna Kaltounková,,,,,31,Aerin Frankel,,,,,,,49.0,13.3,0.0418,-2,O22,228,2025-12-17,PWHL,2025/2026,Regular Season
+56,16:42,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,10,Sarah Fillier,,,,,31,Aerin Frankel,,,,,,,55.7,14.5,0.0418,-2,O22,228,2025-12-17,PWHL,2025/2026,Regular Season
+57,18:20,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,2,event,5v5,29,Emmy Fecteau,,,,,31,Aerin Frankel,,,,,,,53.3,-14.7,0.0496,-2,O20,228,2025-12-17,PWHL,2025/2026,Regular Season
+58,19:00,Block,Boston Fleet,Away,New York Sirens,Boston Fleet,2,event,5v5,3,Zoe Boyd,,,,,82,Kayle Osborne,,,,,,,44.0,1.7,,2,O21,228,2025-12-17,PWHL,2025/2026,Regular Season
+59,19:06,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,2,event,5v5,16,Riley Brengman,,,,,82,Kayle Osborne,,,,,,,29.3,26.4,0.0393,2,O26,228,2025-12-17,PWHL,2025/2026,Regular Season
+60,1:28,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,14,Jaime Bourbonnais,,,,,31,Aerin Frankel,,,,,,,56.0,11.1,0.0418,-2,O22,228,2025-12-17,PWHL,2025/2026,Regular Season
+61,2:02,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,26,Casey O'Brien,,,,,31,Aerin Frankel,,,,,,,83.0,21.2,0.0321,-2,O09,228,2025-12-17,PWHL,2025/2026,Regular Season
+62,3:02,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,44,Jill Saulnier,,,,,82,Kayle Osborne,,,,,,,74.7,-24.6,0.0271,2,O05,228,2025-12-17,PWHL,2025/2026,Regular Season
+63,3:40,Penalty,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,9,Sophie Shirley,,,,,,,,,,,,,,,,2,,228,2025-12-17,PWHL,2025/2026,Regular Season
+64,3:58,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,10,Sarah Fillier,,,,,31,Aerin Frankel,,,,,,,78.7,5.7,0.1341,-2,O11,228,2025-12-17,PWHL,2025/2026,Regular Season
+65,4:58,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,43,Kristin O'Neill,,,,,31,Aerin Frankel,,,,,,,64.0,-0.6,0.1120,-2,O15,228,2025-12-17,PWHL,2025/2026,Regular Season
+66,6:31,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,47,Jamie Lee Rattray,,,,,82,Kayle Osborne,,,,,,,83.0,-15.9,0.0982,2,O06,228,2025-12-17,PWHL,2025/2026,Regular Season
+67,7:03,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,3,Zoe Boyd,,,,,82,Kayle Osborne,,,,,,,30.0,-31.2,0.0605,2,O24,228,2025-12-17,PWHL,2025/2026,Regular Season
+68,7:12,Block,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,77,Susanna Tapani,,,,,82,Kayle Osborne,,,,,,,46.0,-17.6,,2,O20,228,2025-12-17,PWHL,2025/2026,Regular Season
+69,7:25,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,53,Rylind MacKinnon,,,,,82,Kayle Osborne,,,,,,,49.0,0.8,0.0858,2,O21,228,2025-12-17,PWHL,2025/2026,Regular Season
+70,7:37,Block,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,53,Rylind MacKinnon,,,,,82,Kayle Osborne,,,,,,,38.3,1.1,,2,O25,228,2025-12-17,PWHL,2025/2026,Regular Season
+71,7:56,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,28,Micah Zandee-Hart,,,,,31,Aerin Frankel,,,,,,,33.0,-9.9,0.0454,-2,O25,228,2025-12-17,PWHL,2025/2026,Regular Season
+72,8:31,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,55,Daniela Pejšová,,,,,82,Kayle Osborne,,,,,,,33.0,-12.2,0.0633,2,O25,228,2025-12-17,PWHL,2025/2026,Regular Season
+73,9:19,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,44,Jill Saulnier,,,,,82,Kayle Osborne,,,,,,,87.0,6.5,0.1054,2,O08,228,2025-12-17,PWHL,2025/2026,Regular Season
+74,9:50,Block,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,98,Kristýna Kaltounková,,,,,31,Aerin Frankel,,,,,,,33.0,8.2,,-2,O25,228,2025-12-17,PWHL,2025/2026,Regular Season
+75,10:27,Block,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,16,Lauren Bernard,,,,,31,Aerin Frankel,,,,,,,38.7,-32.9,,-2,O24,228,2025-12-17,PWHL,2025/2026,Regular Season
+76,11:17,Block,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,55,Daniela Pejšová,,,,,82,Kayle Osborne,,,,,,,32.7,-36.5,,2,O24,228,2025-12-17,PWHL,2025/2026,Regular Season
+77,11:42,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,8,Maja Nylen Persson,,,,,31,Aerin Frankel,,,,,,,59.3,23.0,0.0443,-2,O17,228,2025-12-17,PWHL,2025/2026,Regular Season
+78,11:47,Block,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,98,Kristýna Kaltounková,,,,,31,Aerin Frankel,,,,,,,44.0,24.6,,-2,O22,228,2025-12-17,PWHL,2025/2026,Regular Season
+79,12:58,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,26,Casey O'Brien,,,,,31,Aerin Frankel,,,,,,,78.0,-15.6,0.0712,-2,O06,228,2025-12-17,PWHL,2025/2026,Regular Season
+80,13:38,Penalty,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,16,Riley Brengman,,,,,,,,,,,,,,,,2,,228,2025-12-17,PWHL,2025/2026,Regular Season
+81,14:24,Block,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,10,Sarah Fillier,,,,,31,Aerin Frankel,,,,,,,52.0,21.2,,-2,O22,228,2025-12-17,PWHL,2025/2026,Regular Season
+82,14:31,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,43,Kristin O'Neill,,,,,31,Aerin Frankel,,,,,,,62.3,4.0,0.1120,-2,O15,228,2025-12-17,PWHL,2025/2026,Regular Season
+83,14:45,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,43,Kristin O'Neill,,,,,31,Aerin Frankel,,,,,,,79.7,-6.0,0.1341,-2,O11,228,2025-12-17,PWHL,2025/2026,Regular Season
+84,14:49,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,98,Kristýna Kaltounková,,,,,31,Aerin Frankel,,,,,,,79.0,-8.8,0.1341,-2,O11,228,2025-12-17,PWHL,2025/2026,Regular Season
+85,15:29,Block,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,18,Maddi Wheeler,,,,,31,Aerin Frankel,,,,,,,42.3,6.5,,-2,O21,228,2025-12-17,PWHL,2025/2026,Regular Season
+86,17:19,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,13,Liz Schepers,,,,,82,Kayle Osborne,,,,,,,83.3,2.3,0.2924,2,O07,228,2025-12-17,PWHL,2025/2026,Regular Season
+87,17:34,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,98,Kristýna Kaltounková,,,,,31,Aerin Frankel,,,,,,,49.0,-0.8,0.0620,-2,O21,228,2025-12-17,PWHL,2025/2026,Regular Season
+88,18:07,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,98,Kristýna Kaltounková,,,,,31,Aerin Frankel,,,,,,,79.7,6.0,0.1341,-2,O11,228,2025-12-17,PWHL,2025/2026,Regular Season
+89,18:36,Block,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,10,Sarah Fillier,,,,,31,Aerin Frankel,,,,,,,45.0,10.8,,-2,O21,228,2025-12-17,PWHL,2025/2026,Regular Season
+90,18:52,Block,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,71,Jincy Roese,,,,,31,Aerin Frankel,,,,,,,53.0,-24.6,,-2,O19,228,2025-12-17,PWHL,2025/2026,Regular Season
+91,19:33,Block,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,71,Jincy Roese,,,,,31,Aerin Frankel,,,,,,,30.7,-24.4,,-2,O24,228,2025-12-17,PWHL,2025/2026,Regular Season

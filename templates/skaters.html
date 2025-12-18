@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>PWHL Analytics — Skaters</title>
+  <style>
+    :root { --pwhl-bg-1:#160A3A; --pwhl-bg-2:#251055; --pwhl-bg-3:#3B1E7A; --pwhl-surface:rgba(19,13,46,.75); --pwhl-surface-strong:rgba(25,16,60,.85); --pwhl-border:rgba(142,124,214,.25); --pwhl-accent:#8E7CD6; --pwhl-accent-strong:#B9A7FF; }
+    body{margin:0;background:linear-gradient(135deg,var(--pwhl-bg-1),var(--pwhl-bg-2) 48%,var(--pwhl-bg-3));color:#fff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;min-height:100vh;display:flex;flex-direction:column;}
+    header{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;border-bottom:1px solid var(--pwhl-border);background:var(--pwhl-surface-strong);} .brand{display:flex;align-items:center;gap:.75rem;font-weight:700;}
+    .tabs{display:flex;background:var(--pwhl-surface-strong);border-bottom:1px solid var(--pwhl-border);} .tab{background:transparent;color:#d6d3e9;border:none;padding:1rem 2rem;cursor:pointer;border-bottom:3px solid transparent;transition:.2s;font-size:1.05rem;text-decoration:none;display:flex;align-items:center;gap:.4rem;font-weight:600;} .tab:hover{color:#fff;text-decoration:none;} .tab.active{color:var(--pwhl-accent-strong);border-bottom-color:var(--pwhl-accent-strong);}
+    .container{display:grid;grid-template-columns:280px 1fr;gap:1rem;padding:1rem 2rem;}
+    .panel{background:var(--pwhl-surface);border:1px solid var(--pwhl-border);border-radius:.75rem;padding:1rem;}
+    .filters .dropdown{position:relative;margin-bottom:.75rem;}
+    .filters .dropdown .dropdown-toggle{width:100%;padding:.5rem .6rem;border:1px solid #374151;background:#0f172a;color:#e5e7eb;border-radius:.4rem;text-align:left;}
+    .filters .dropdown.open .dropdown-menu{display:block;}
+    .filters .dropdown .dropdown-menu{position:absolute;top:110%;left:0;right:0;background:#0b1220;border:1px solid #374151;border-radius:.4rem;display:none;max-height:260px;overflow:auto;z-index:50;padding:.4rem;}
+    .filters .search-box{margin-bottom:.45rem;}
+    .filters .search-box input{width:100%;padding:.45rem .55rem;border:1px solid #374151;background:#0f172a;color:#e5e7eb;border-radius:.35rem;}
+    .filters .option-list label{display:flex;align-items:center;gap:.5rem;padding:.35rem .25rem;}
+    .label{font-size:.8rem;color:#9ca3af;margin-bottom:.25rem;}
+    .player-header{display:flex;align-items:center;gap:1rem;}
+    .avatar{width:120px;height:120px;border-radius:.65rem;background:#111827;border:1px solid #374151;object-fit:cover;}
+    .player-title{font-size:1.85rem;font-weight:700;}
+    .player-meta{color:#9ca3af;font-size:1rem;margin-top:.15rem;}
+    /* Compact cards: aim to fit 9 cards in one row on desktop */
+    .stats-grid{display:grid;grid-template-columns:repeat(9, minmax(88px, 1fr));gap:.5rem;margin-top:1rem;}
+    .stat-card{background:#0f172a;border:1px solid #374151;border-radius:.5rem;padding:.5rem .45rem;text-align:center;}
+    .stat-card .value{font-size:1.1rem;font-weight:600;}
+    @media (max-width: 1100px){
+      .stats-grid{grid-template-columns:repeat(auto-fit, minmax(120px, 1fr));}
+    }
+    .stat-card .label{color:#9ca3af;font-size:.8rem;margin-bottom:.25rem;}
+    .stat-card .value{font-size:1.2rem;font-weight:600;}
+    .shot-area{display:grid;grid-template-columns:360px 1fr 1fr;gap:1rem;margin-top:1rem;align-items:start;}
+    .goalie-table-wrap{background:#0f172a;border:1px solid #374151;border-radius:.5rem;overflow:hidden;}
+    table{width:100%;border-collapse:collapse;font-size:.85rem;}
+    thead th{position:sticky;top:0;background:#0b1220;color:#cbd5e1;text-align:left;padding:.55rem .6rem;border-bottom:1px solid #374151;}
+    thead th.sortable{cursor:pointer;user-select:none;}
+    thead th.sortable:hover{color:#ffffff;}
+    tbody td{padding:.45rem .6rem;border-bottom:1px solid rgba(55,65,81,.55);color:#e5e7eb;}
+    tbody tr{cursor:pointer;}
+    tbody tr:hover{background:rgba(142,124,214,.12);}
+    tbody tr.active{background:rgba(142,124,214,.22);}
+    /* Offensive zone dimensions: 75 (wide) x 85 (high) */
+    .rink-wrap{position:relative;width:100%;max-width:560px;aspect-ratio:75 / 85;}
+    .rink-wrap canvas{display:block;width:100%;height:100%;border-radius:.5rem;border:1px solid var(--pwhl-border);}
+    #heatRinkBase,#offRinkBase{background:#0d0d18;}
+    #heatCanvas,#offShotCanvas{position:absolute;inset:0;background:transparent;border:none;}
+
+    @media (max-width: 1200px){
+      .shot-area{grid-template-columns:1fr;}
+      .rink-wrap{max-width:720px;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand"><img src="/static/PWHL_logo.png" alt="PWHL" style="height:28px"> <span>PWHL Analytics</span></div>
+  </header>
+  <div class="tabs">
+    <a class="tab" href="/">📅 Schedule</a>
+    <a class="tab" href="/report">📊 Report</a>
+    <a class="tab active" href="/skaters">🏒 Skaters</a>
+    <a class="tab" href="/data">🗂️ Data</a>
+  </div>
+  <div class="container">
+    <aside class="panel filters">
+      <div class="label">Player</div>
+      <div class="dropdown" id="playerDropdown">
+        <button class="dropdown-toggle" id="playerToggle" type="button">Select Player</button>
+        <div class="dropdown-menu" id="playerMenu"></div>
+      </div>
+      <div class="label">Season</div>
+      <div class="dropdown" id="seasonsDropdown"><button class="dropdown-toggle" type="button">Select Seasons</button><div class="dropdown-menu" id="seasonsMenu"></div></div>
+      <div class="label">Season State</div>
+      <div class="dropdown" id="season_statesDropdown"><button class="dropdown-toggle" type="button">Select Season State</button><div class="dropdown-menu" id="season_statesMenu"></div></div>
+      <div class="label">Strength State</div>
+      <div class="dropdown" id="strengthsDropdown"><button class="dropdown-toggle" type="button">Select Strength</button><div class="dropdown-menu" id="strengthsMenu"></div></div>
+    </aside>
+    <main class="panel">
+      <div class="player-header">
+        <img id="playerAvatar" class="avatar" src="/static/player-placeholder.png" alt="Player">
+        <div>
+          <div id="playerName" class="player-title">—</div>
+          <div id="playerMeta" class="player-meta">&nbsp;</div>
+        </div>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card"><div class="label">GP</div><div class="value" id="stat-gp">—</div></div>
+        <div class="stat-card"><div class="label">TOI</div><div class="value" id="stat-toi">—</div></div>
+        <div class="stat-card"><div class="label">Shots</div><div class="value" id="stat-shots">—</div></div>
+        <div class="stat-card"><div class="label">Goals</div><div class="value" id="stat-goals">—</div></div>
+        <div class="stat-card"><div class="label">A1</div><div class="value" id="stat-a1">—</div></div>
+        <div class="stat-card"><div class="label">A2</div><div class="value" id="stat-a2">—</div></div>
+        <div class="stat-card"><div class="label">Points</div><div class="value" id="stat-points">—</div></div>
+        <div class="stat-card"><div class="label">PIM</div><div class="value" id="stat-pim">—</div></div>
+        <div class="stat-card"><div class="label">xG</div><div class="value" id="stat-xg">—</div></div>
+      </div>
+      <div class="shot-area">
+        <div class="goalie-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th class="sortable" data-sort="Goaltender" style="width:42%">Goaltender</th>
+                <th class="sortable" data-sort="Goals" style="width:10%">G</th>
+                <th class="sortable" data-sort="Shots" style="width:12%">S</th>
+                <th class="sortable" data-sort="xG" style="width:14%">xG</th>
+                <th class="sortable" data-sort="Sh%" style="width:12%">Sh%</th>
+                <th class="sortable" data-sort="GAx" style="width:10%">GAx</th>
+              </tr>
+            </thead>
+            <tbody id="goalieTableBody"></tbody>
+          </table>
+        </div>
+        <div>
+          <h3 style="margin:0 0 .4rem">Heat Map</h3>
+          <div class="rink-wrap">
+            <canvas id="heatRinkBase"></canvas>
+            <canvas id="heatCanvas"></canvas>
+          </div>
+        </div>
+        <div>
+          <h3 style="margin:0 0 .4rem">Shot Map</h3>
+          <div class="rink-wrap">
+            <canvas id="offRinkBase"></canvas>
+            <canvas id="offShotCanvas"></canvas>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script>
+    // Dropdown helpers
+    const multiIds=['seasons','season_states','strengths'];
+    function getMultiValues(id){ return Array.from(document.querySelectorAll(`#${id}Menu input:checked`)).map(i=>i.value); }
+    function buildMenu(id, items){ const menu=document.getElementById(id+'Menu'); if(!menu) return; menu.innerHTML='';
+      const listWrap=document.createElement('div'); listWrap.className='option-list'; menu.appendChild(listWrap);
+      listWrap.innerHTML=''; (items||[]).forEach(v=>{ const label=document.createElement('label'); const cb=document.createElement('input'); cb.type='checkbox'; cb.value=v.value||v; label.appendChild(cb); const span=document.createElement('span'); span.textContent=v.label||v; label.appendChild(span); listWrap.appendChild(label); });
+    }
+    function updateButtonLabel(id){ const selected=getMultiValues(id); const btn=document.querySelector(`#${id}Dropdown .dropdown-toggle`); if(!btn) return; if(selected.length===0){ btn.textContent=`Select ${id.replace(/_/g,' ')}`; } else if(selected.length===1){ btn.textContent=selected[0]; } else { btn.textContent=`${selected.length} selected`; } }
+    function toggleDropdown(drop){ document.querySelectorAll('.dropdown').forEach(d=>{ if(d!==drop) d.classList.remove('open');}); drop.classList.toggle('open'); }
+    document.addEventListener('click',e=>{ const dd=e.target.closest('.dropdown'); if(!dd) document.querySelectorAll('.dropdown').forEach(d=>d.classList.remove('open')); const tog=e.target.closest('.dropdown-toggle'); if(tog){ toggleDropdown(tog.parentElement); }});
+
+    // Player dropdown (single select + search inside menu)
+    let allPlayers=[];
+    let selectedPlayer='';
+    function setSelectedPlayer(name){ selectedPlayer = name || ''; document.getElementById('playerToggle').textContent = selectedPlayer || 'Select Player'; }
+    function buildPlayerMenu(players){
+      const menu=document.getElementById('playerMenu');
+      menu.innerHTML='';
+      const searchWrap=document.createElement('div'); searchWrap.className='search-box';
+      const search=document.createElement('input'); search.type='text'; search.placeholder='Search player...';
+      searchWrap.appendChild(search); menu.appendChild(searchWrap);
+      const listWrap=document.createElement('div'); listWrap.className='option-list'; menu.appendChild(listWrap);
+      function render(q=''){
+        listWrap.innerHTML='';
+        const term=(q||'').trim().toLowerCase();
+        const items = term ? (players||[]).filter(p=>String(p).toLowerCase().includes(term)) : (players||[]);
+        items.forEach(n=>{
+          const label=document.createElement('label');
+          const rb=document.createElement('input'); rb.type='radio'; rb.name='playerRadio'; rb.value=n;
+          rb.checked = (n===selectedPlayer);
+          rb.addEventListener('change',()=>{
+            setSelectedPlayer(n);
+            document.getElementById('playerDropdown').classList.remove('open');
+            setSelectedGoalie('');
+            updateAvatar(); fetchStats(); fetchGoalies(); fetchShotMap();
+          });
+          label.appendChild(rb);
+          const span=document.createElement('span'); span.textContent=n; label.appendChild(span);
+          listWrap.appendChild(label);
+        });
+      }
+      search.addEventListener('input',()=>render(search.value));
+      render('');
+    }
+
+    // Team color cache
+    const teamColorCache = (function(){ let colors=null; return async function(team){ if(colors) return colors[team]||'#53b3ff'; try{ const resp=await fetch('/Teams.csv'); if(resp.ok){ colors={}; const txt=await resp.text(); const lines=txt.split(/\n/); lines.shift(); lines.forEach(l=>{ const c=l.split(','); if(c.length>5){ colors[c[1]]=c[5]; }}); return colors[team]||'#53b3ff'; } }catch(e){} return '#53b3ff'; }; })();
+
+    // Rink
+    function setupCanvas(c){ c.width=c.clientWidth; c.height=c.clientHeight; return c.getContext('2d'); }
+    const RINK_SRC='/hockey-rink.png'; let rinkImgPromise=null; function loadRink(){ if(rinkImgPromise) return rinkImgPromise; rinkImgPromise=new Promise(res=>{const i=new Image(); i.onload=()=>res(i); i.src=RINK_SRC;}); return rinkImgPromise; }
+    async function drawZoneBases(){
+      const img=await loadRink();
+      const sw=img.naturalWidth, sh=img.naturalHeight;
+      const zoneW=sw*0.375;
+      ['heatRinkBase','offRinkBase'].forEach(id=>{
+        const c=document.getElementById(id);
+        if(!c) return;
+        const ctx=setupCanvas(c);
+        ctx.clearRect(0,0,c.width,c.height);
+        ctx.drawImage(img,sw-zoneW,0,zoneW,sh,0,0,c.width,c.height);
+      });
+    }
+    // Offensive zone coordinate system (feet): x in [25, 100] => 75 wide, y in [-42.5, 42.5] => 85 high
+    const OFF_X_MIN = 25;
+    const OFF_X_MAX = 100;
+    const OFF_Y_MIN = -42.5;
+    const OFF_Y_MAX = 42.5;
+    function normalizeOffZoneCoord(x,y){ return { zx:(x-OFF_X_MIN)/75, zy:(OFF_Y_MAX - y)/85 }; }
+
+    /** ---------------- Heat Map (Zone Geometry) ---------------- */
+    // Offensive-zone polygons (O01..O26) copied from the Report page embedded geometry.
+    const SKATER_OFF_ZONES = {"type":"FeatureCollection","features":[
+      {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[89,-12.5],[100,-12.5],[100,-14],[99.9989034876783,-14.25],[99.99561369755,-14.5],[99.9901298698339,-14.75],[99.9824507372522,-15],[99.9725745235657,-15.25],[99.9604989415154,-15.5],[99.9462211901686,-15.75],[99.929737951659,-16],[99.9110453873137,-16.25],[99.8901391331568,-16.5],[99.8670142947755,-16.75],[99.8416654415368,-17],[99.814086600136,-17.25],[99.7842712474619,-17.5],[99.752212302756,-17.75],[99.7179021190449,-18],[99.6813324738203,-18.25],[99.6424945589406,-18.5],[99.6013789697232,-18.75],[99.5579756931964,-19],[99.5122740954747,-19.25],[99.4642629082191,-19.5],[99.4139302141422,-19.75],[99.3612634315101,-20],[99.306249297595,-20.25],[99.2488738510232,-20.5],[99.1891224129621,-20.75],[99.1269795670826,-21],[99.0624291382309,-21.25],[98.995454169735,-21.5],[98.9260368992678,-21.75],[98.8541587331799,-22],[98.7798002192098,-22.25],[98.7029410174709,-22.5],[98.6235598696041,-22.75],[98.5416345659799,-23],[98.4571419108184,-23.25],[98.3700576850888,-23.5],[98.2803566070357,-23.75],[98.188012290165,-24],[98.0929971985107,-24.25],[97.9952825989835,-24.5],[97.8948385105876,-24.75],[97.7916336502698,-25],[97.6856353751441,-25.25],[97.5768096208106,-25.5],[97.4651208354592,-25.75],[97.3505319094211,-26],[97.2330040997937,-26.25],[97.1124969497314,-26.5],[96.9889682019496,-26.75],[96.8623737059448,-27],[96.7326673183792,-27.25],[96.5998007960223,-27.5],[96.463723680573,-27.75],[96.3243831746128,-28],[96.1817240078565,-28.25],[96.0356882927706,-28.5],[95.8862153685233,-28.75],[95.7332416321053,-29],[95.5767003553228,-29.25],[95.4165214862028,-29.5],[95.2526314331697,-29.75],[95.0849528301415,-30],[94.9134042804544,-30.25],[94.7379000772445,-30.5],[94.5583498975967,-30.75],[94.3746584673957,-31],[94.1867251933813,-31.25],[93.994443758404,-31.5],[93.7977016752848,-31.75],[93.5963797939844,-32],[93.3903517559677,-32.25],[93.1794833886788,-32.5],[92.9636320318813,-32.75],[92.742645786248,-33],[92.516362672927,-33.25],[92.2846096908265,-33.5],[92.0472017559569,-33.75],[91.803940504247,-34],[91.5546129356814,-34.25],[91.2989898732233,-34.5],[91.036824204563,-34.75],[90.7678488679977,-35],[90.4917745353087,-35.25],[90.2082869338697,-35.5],[89.917043736713,-35.75],[89.6176709319934,-36],[89.3097585609688,-36.25],[89,-36.5],[89,-12.5]]]},"properties":{"id":"O01","ZONE":"O"},"id":"O01"},
+      {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[89,-12.5],[100,-12.5],[100,12.5],[89,12.5],[89,-12.5]]]},"properties":{"id":"O02","ZONE":"O"},"id":"O02"},
+      {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[89,12.5],[100,12.5],[100,14],[99.9989034876783,14.25],[99.99561369755,14.5],[99.9901298698339,14.75],[99.9824507372522,15],[99.9725745235657,15.25],[99.9604989415154,15.5],[99.9462211901686,15.75],[99.929737951659,16],[99.9110453873137,16.25],[99.8901391331568,16.5],[99.8670142947755,16.75],[99.8416654415368,17],[99.814086600136,17.25],[99.7842712474619,17.5],[99.752212302756,17.75],[99.7179021190449,18],[99.6813324738203,18.25],[99.6424945589406,18.5],[99.6013789697232,18.75],[99.5579756931964,19],[99.5122740954747,19.25],[99.4642629082191,19.5],[99.4139302141422,19.75],[99.3612634315101,20],[99.306249297595,20.25],[99.2488738510232,20.5],[99.1891224129621,20.75],[99.1269795670826,21],[99.0624291382309,21.25],[98.995454169735,21.5],[98.9260368992678,21.75],[98.8541587331799,22],[98.7798002192098,22.25],[98.7029410174709,22.5],[98.6235598696041,22.75],[98.5416345659799,23],[98.4571419108184,23.25],[98.3700576850888,23.5],[98.2803566070357,23.75],[98.188012290165,24],[98.0929971985107,24.25],[97.9952825989835,24.5],[97.8948385105876,24.75],[97.7916336502698,25],[97.6856353751441,25.25],[97.5768096208106,25.5],[97.4651208354592,25.75],[97.3505319094211,26],[97.2330040997937,26.25],[97.1124969497314,26.5],[96.9889682019496,26.75],[96.8623737059448,27],[96.7326673183792,27.25],[96.5998007960223,27.5],[96.463723680573,27.75],[96.3243831746128,28],[96.1817240078565,28.25],[96.0356882927706,28.5],[95.8862153685233,28.75],[95.7332416321053,29],[95.5767003553228,29.25],[95.4165214862028,29.5],[95.2526314331697,29.75],[95.0849528301415,30],[94.9134042804544,30.25],[94.7379000772445,30.5],[94.5583498975967,30.75],[94.3746584673957,31],[94.1867251933813,31.25],[93.994443758404,31.5],[93.7977016752848,31.75],[93.5963797939844,32],[93.3903517559677,32.25],[93.1794833886788,32.5],[92.9636320318813,32.75],[92.742645786248,33],[92.516362672927,33.25],[92.2846096908265,33.5],[92.0472017559569,33.75],[91.803940504247,34],[91.5546129356814,34.25],[91.2989898732233,34.5],[91.036824204563,34.75],[90.7678488679977,35],[90.4917745353087,35.25],[90.2082869338697,35.5],[89.917043736713,35.75],[89.6176709319934,36],[89.3097585609688,36.25],[89,36.5],[89,12.5]]]},"properties":{"id":"O03","ZONE":"O"},"id":"O03"},
+      {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[89,-36.5],[89,-28],[60,-42.5],[71.5,-42.5],[75.2666297933298,-42.25],[76.8150729063673,-42],[77.9951905283833,-41.75],[78.9833147735479,-41.5],[79.847903928532,-41.25],[80.6241437954473,-41],[81.3329802196486,-40.75],[81.9880884817015,-40.5],[82.5989864402116,-40.25],[83.1726175299288,-40],[83.7142335003061,-39.75],[84.2279220613579,-39.5],[84.7169398878863,-39.25],[85.183932183404,-39],[85.6310827610626,-38.75],[86.060219778561,-38.5],[86.472892172189,-38.25],[86.8704261489394,-38],[87.2539677541882,-37.75],[87.6245154965971,-37.5],[87.9829457318769,-37.25],[88.3300326797068,-37],[88.6664644001029,-36.75],[89,-36.5]]]},"properties":{"id":"O04","ZONE":"O"},"id":"O04"},
+      {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[89,-28],[89,-16],[73,-24],[73,-36],[89,-28]]]},"properties":{"id":"O05","ZONE":"O"},"id":"O05"},
+      {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[89,-16],[89,-4],[73,-12],[73,-24],[89,-16]]]},"properties":{"id":"O06","ZONE":"O"},"id":"O06"},
+      {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[89,-4],[89,4],[83,7],[83,-7],[89,-4]]]},"properties":{"id":"O07","ZONE":"O"},"id":"O07"},
+      {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[89,4],[89,16],[73,24],[73,12],[89,4]]]},"properties":{"id":"O08","ZONE":"O"},"id":"O08"},
+      {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[89,16],[89,28],[73,36],[73,24],[89,16]]]},"properties":{"id":"O09","ZONE":"O"},"id":"O09"},
+      {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[89,36.5],[89,28],[60,42.5],[71.5,42.5],[75.2666297933298,42.25],[76.8150729063673,42],[77.9951905283833,41.75],[78.9833147735479,41.5],[79.847903928532,41.25],[80.6241437954473,41],[81.3329802196486,40.75],[81.9880884817015,40.5],[82.5989864402116,40.25],[83.1726175299288,40],[83.7142335003061,39.75],[84.2279220613579,39.5],[84.7169398878863,39.25],[85.183932183404,39],[85.6310827610626,38.75],[86.060219778561,38.5],[86.472892172189,38.25],[86.8704261489394,38],[87.2539677541882,37.75],[87.6245154965971,37.5],[87.9829457318769,37.25],[88.3300326797068,37],[88.6664644001029,36.75],[89,36.5]]]},"properties":{"id":"O10","ZONE":"O"},"id":"O10"},
+      {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[83,-7],[83,7],[73,12],[73,-12],[83,-7]]]},"properties":{"id":"O11","ZONE":"O"},"id":"O11"},
+      {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[73,-36],[73,-24],[57,-32],[57,-42.5],[60,-42.5],[73,-36]]]},"properties":{"id":"O12","ZONE":"O"},"id":"O12"},
+      {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[73,-24],[73,-12],[57,-20],[57,-32],[73,-24]]]},"properties":{"id":"O13","ZONE":"O"},"id":"O13"},
+      {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[73,-12],[73,0],[57,-8],[57,-20],[73,-12]]]},"properties":{"id":"O14","ZONE":"O"},"id":"O14"},
+      {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[73,0],[57,8],[57,-8],[73,0]]]},"properties":{"id":"O15","ZONE":"O"},"id":"O15"},
+      {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[73,0],[73,12],[57,20],[57,8],[73,0]]]},"properties":{"id":"O16","ZONE":"O"},"id":"O16"},
+      {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[73,12],[73,24],[57,32],[57,20],[73,12]]]},"properties":{"id":"O17","ZONE":"O"},"id":"O17"},
+      {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[73,24],[73,36],[60,42.5],[57,42.5],[57,32],[73,24]]]},"properties":{"id":"O18","ZONE":"O"},"id":"O18"},
+      {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[57,-42.5],[57,-20],[41,-28],[41,-42.5],[57,-42.5]]]},"properties":{"id":"O19","ZONE":"O"},"id":"O19"},
+      {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[57,-20],[57,-8],[41,-16],[41,-28],[57,-20]]]},"properties":{"id":"O20","ZONE":"O"},"id":"O20"},
+      {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[57,-8],[57,8],[41,16],[41,-16],[57,-8]]]},"properties":{"id":"O21","ZONE":"O"},"id":"O21"},
+      {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[57,8],[57,20],[41,28],[41,16],[57,8]]]},"properties":{"id":"O22","ZONE":"O"},"id":"O22"},
+      {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[57,20],[57,42.5],[41,42.5],[41,28],[57,20]]]},"properties":{"id":"O23","ZONE":"O"},"id":"O23"},
+      {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[41,-42.5],[41,-16],[25,-24],[25,-42.5],[41,-42.5]]]},"properties":{"id":"O24","ZONE":"O"},"id":"O24"},
+      {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[41,-16],[41,16],[25,24],[25,-24],[41,-16]]]},"properties":{"id":"O25","ZONE":"O"},"id":"O25"},
+      {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[41,16],[41,42.5],[25,42.5],[25,24],[41,16]]]},"properties":{"id":"O26","ZONE":"O"},"id":"O26"}
+    ]};
+
+    function projectOffensivePoint(x,y){
+      const zx = (x - OFF_X_MIN) / 75;
+      const zy = (OFF_Y_MAX - y) / 85;
+      return [zx, zy];
+    }
+    function drawZonePathOff(ctx, feature){
+      const coords=feature.geometry.coordinates[0];
+      ctx.beginPath();
+      let started=false;
+      for(const pt of coords){
+        const x=pt[0], y=pt[1];
+        if(x < OFF_X_MIN) continue;
+        const [px,py]=projectOffensivePoint(x,y);
+        const cx=px*ctx.canvas.width;
+        const cy=py*ctx.canvas.height;
+        if(!started){ ctx.moveTo(cx,cy); started=true; }
+        else ctx.lineTo(cx,cy);
+      }
+      ctx.closePath();
+    }
+    function pointInPoly(poly,x,y){
+      let inside=false;
+      for(let i=0,j=poly.length-1;i<poly.length;j=i++){
+        const xi=poly[i][0], yi=poly[i][1];
+        const xj=poly[j][0], yj=poly[j][1];
+        const intersect=((yi>y)!==(yj>y)) && (x < (xj - xi)*(y - yi)/(yj - yi + 1e-9) + xi);
+        if(intersect) inside=!inside;
+      }
+      return inside;
+    }
+    function heatColor(val,minVal,maxVal){
+      if(maxVal<=minVal) return 'rgba(255,220,220,0.35)';
+      const t=(val-minVal)/(maxVal-minVal);
+      const r=255;
+      const g=Math.round(220*(1-t)+25*t);
+      const b=Math.round(220*(1-t)+40*t);
+      const a=0.25 + 0.55*t;
+      return `rgba(${r},${g},${b},${a})`;
+    }
+    function attemptZoneIdOff(a){
+      if(!a || a.adj_x==null || a.adj_y==null) return null;
+      const x=Number(a.adj_x), y=Number(a.adj_y);
+      if(!Number.isFinite(x) || !Number.isFinite(y)) return null;
+      if(x < OFF_X_MIN || x > OFF_X_MAX || y < OFF_Y_MIN || y > OFF_Y_MAX) return null;
+      for(const feat of (SKATER_OFF_ZONES.features||[])){
+        const poly=feat.geometry.coordinates[0];
+        if(pointInPoly(poly,x,y)) return feat.properties.id;
+      }
+      return null;
+    }
+    async function drawHeatMap(attempts){
+      const c=document.getElementById('heatCanvas');
+      if(!c) return;
+      const ctx=setupCanvas(c);
+      ctx.clearRect(0,0,c.width,c.height);
+
+      // Heat map always shows overall distribution (not goalie-filtered);
+      // clicking a zone will apply the zone filter to the table + shot map.
+      const counts={};
+      for(const a of (attempts||[])){
+        if(!a || a.adj_x==null || a.adj_y==null) continue;
+        if(a.event!=='Shot' && a.event!=='Goal' && a.event!=='Miss' && a.event!=='Block') continue;
+        const zid=attemptZoneIdOff(a);
+        if(!zid) continue;
+        counts[zid]=(counts[zid]||0)+1;
+      }
+
+      const vals = (SKATER_OFF_ZONES.features||[]).map(f=>counts[f.properties.id]||0);
+      const minVal = vals.length ? Math.min(...vals) : 0;
+      const maxVal = vals.length ? Math.max(...vals) : 1;
+
+      for(const feat of (SKATER_OFF_ZONES.features||[])){
+        const id=feat.properties.id;
+        drawZonePathOff(ctx, feat);
+        const v=counts[id]||0;
+        ctx.fillStyle=heatColor(v,minVal,maxVal);
+        ctx.fill();
+        const isSelected = (selectedZoneId && selectedZoneId === id);
+        ctx.lineWidth = isSelected ? 2 : 1;
+        ctx.strokeStyle = isSelected ? 'rgba(0,0,0,0.75)' : 'rgba(255,255,255,0.25)';
+        ctx.stroke();
+      }
+    }
+
+    // Heat-map click handling (single-zone selection)
+    let selectedZoneId = '';
+    function setSelectedZone(id){ selectedZoneId = id || ''; }
+    function attachHeatZoneEvents(){
+      const canvas=document.getElementById('heatCanvas');
+      if(!canvas || canvas._zoneEventsAttached) return;
+      canvas._zoneEventsAttached=true;
+      canvas.addEventListener('click', (e)=>{
+        const rect=canvas.getBoundingClientRect();
+        const x=(e.clientX-rect.left)/rect.width;
+        const y=(e.clientY-rect.top)/rect.height;
+        const ctx=canvas.getContext('2d');
+        let hitId='';
+        for(const feat of (SKATER_OFF_ZONES.features||[])){
+          ctx.beginPath();
+          drawZonePathOff(ctx, feat);
+          if(ctx.isPointInPath(x*canvas.width, y*canvas.height)) hitId = feat.properties.id;
+          ctx.closePath();
+          if(hitId) break;
+        }
+
+        if(hitId && selectedZoneId === hitId) hitId = ''; // toggle off
+        setSelectedZone(hitId);
+
+        // Recompute table (zone-filtered) + redraw heat highlight + redraw shot map
+        updateGoalieTableFromAttempts();
+        drawHeatMap(allAttempts);
+        drawShotMap(allAttempts);
+      });
+    }
+
+    function attemptsFilteredByZone(attempts){
+      if(!selectedZoneId) return (attempts||[]);
+      return (attempts||[]).filter(a=>attemptZoneIdOff(a) === selectedZoneId);
+    }
+
+    function computeGoalieRowsFromAttempts(attempts){
+      const byGoalie={};
+      for(const a of (attempts||[])){
+        if(!a || !a.goalie) continue;
+        const ev=a.event;
+        // Match backend: Shots are SOG only (Shot + Goal)
+        if(ev!=='Shot' && ev!=='Goal') continue;
+        const gname=String(a.goalie||'').trim();
+        if(!gname) continue;
+        const rec = byGoalie[gname] || (byGoalie[gname]={Goaltender:gname, Goals:0, Shots:0, xG:0});
+        rec.Shots += 1;
+        if(ev==='Goal') rec.Goals += 1;
+        const xv = (a.xG!==undefined && a.xG!==null && a.xG!=='') ? Number(a.xG) : 0;
+        if(Number.isFinite(xv)) rec.xG += xv;
+      }
+
+      const out=[];
+      Object.values(byGoalie).forEach(rec=>{
+        const shots=rec.Shots||0;
+        const goals=rec.Goals||0;
+        const xg=Math.round((rec.xG||0)*100)/100;
+        const shPct=Math.round(((shots? (goals/shots*100):0)*10))/10;
+        const gax=Math.round(((goals - xg)*100))/100;
+        out.push({
+          Goaltender: rec.Goaltender,
+          Goals: goals,
+          Shots: shots,
+          xG: xg,
+          'Sh%': shPct,
+          GAx: gax,
+        });
+      });
+
+      // Default sort by GAx desc
+      out.sort((a,b)=> (b.GAx - a.GAx) || (b.xG - a.xG) || (b.Shots - a.Shots) || String(a.Goaltender).localeCompare(String(b.Goaltender)));
+      return out;
+    }
+
+    function updateGoalieTableFromAttempts(){
+      // Table should be filtered by selected zone, but not by selected goalie.
+      const zoneAttempts = attemptsFilteredByZone(allAttempts);
+      goalieRows = computeGoalieRowsFromAttempts(zoneAttempts);
+
+      // If selected goalie no longer exists after zone filter, clear it.
+      if(selectedGoalie && !goalieRows.some(r=>r.Goaltender===selectedGoalie)){
+        setSelectedGoalie('');
+      }
+
+      renderGoalieTable(goalieRows);
+    }
+
+    function drawShape(ctx, shape, x, y, color){ ctx.save(); ctx.strokeStyle=color; ctx.fillStyle=color; ctx.lineWidth=1.4; switch(shape){ case 'goal': ctx.beginPath(); ctx.moveTo(x,y-5); ctx.lineTo(x+4.5,y+5); ctx.lineTo(x-4.5,y+1.5); ctx.lineTo(x+4.5,y+1.5); ctx.lineTo(x-4.5,y+5); ctx.closePath(); ctx.fill(); break; case 'shot': ctx.beginPath(); ctx.arc(x,y,5,0,Math.PI*2); ctx.stroke(); break; case 'miss': ctx.beginPath(); ctx.moveTo(x,y-5); ctx.lineTo(x+5,y+5); ctx.lineTo(x-5,y+5); ctx.closePath(); ctx.stroke(); break; case 'block': ctx.strokeRect(x-5,y-5,10,10); break; } ctx.restore(); }
+
+    // Tooltip (reuse styles from report)
+    const tooltip=document.createElement('div'); tooltip.style.cssText='position:absolute;pointer-events:none;background:rgba(20,24,38,.94);border:1px solid #6b7280;padding:.55rem .7rem;border-radius:.5rem;font-size:.7rem;line-height:1.25;z-index:200;display:none;max-width:210px;white-space:normal;font-weight:500;'; document.body.appendChild(tooltip);
+    function toHexColor(color){ try{ const c=document.createElement('canvas'); const ctx=c.getContext('2d'); ctx.fillStyle=color; const s=ctx.fillStyle; if(/^#[0-9a-fA-F]{6}$/.test(s)) return s; }catch(e){} return null; }
+    function ensureReadableOnDark(color, targetBrightness=185, maxFactor=0.45){ try{ const hex = toHexColor(color) || (typeof color==='string' && color.startsWith('#') && color.length===7 ? color : null); if(!hex) return color; const h=hex.slice(1); let r=parseInt(h.slice(0,2),16), g=parseInt(h.slice(2,4),16), b=parseInt(h.slice(4,6),16); const luminance = (0.2126*r + 0.7152*g + 0.0722*b); const denom = (0.2126*(255-r) + 0.7152*(255-g) + 0.0722*(255-b)); let f = denom>0 ? (targetBrightness - luminance) / denom : 0; f = Math.max(0, Math.min(f, maxFactor)); const lr=Math.round(r+(255-r)*f), lg=Math.round(g+(255-g)*f), lb=Math.round(b+(255-b)*f); const toHex=v=>('0'+v.toString(16)).slice(-2); return '#'+toHex(lr)+toHex(lg)+toHex(lb); }catch(e){ return color; } }
+    function showTooltip(evt, html){ tooltip.innerHTML=html; tooltip.style.display='block'; const pad=12; const x=(evt.clientX + window.scrollX) + pad; const y=(evt.clientY + window.scrollY) + pad; tooltip.style.left=x+'px'; tooltip.style.top=y+'px'; }
+    function hideTooltip(){ tooltip.style.display='none'; }
+
+    let allAttempts=[];
+    let selectedGoalie='';
+    function setSelectedGoalie(name){ selectedGoalie = name || ''; }
+
+    // Goalie table sorting
+    let goalieRows=[];
+    let goalieSortKey='GAx';
+    let goalieSortDir='desc';
+    function isNumericKey(key){ return key!=='Goaltender'; }
+    function normalizeSortVal(row, key){
+      const v = row ? row[key] : null;
+      if(key==='Goaltender') return String(v||'').toLowerCase();
+      const n = Number(v);
+      return Number.isFinite(n) ? n : (v==null ? -Infinity : Number(v));
+    }
+    function sortGoalieRows(rows){
+      const dir = goalieSortDir === 'desc' ? -1 : 1;
+      const key = goalieSortKey;
+      return (rows||[]).slice().sort((a,b)=>{
+        const av = normalizeSortVal(a,key);
+        const bv = normalizeSortVal(b,key);
+        if(av < bv) return -1*dir;
+        if(av > bv) return 1*dir;
+        // stable-ish tie-break
+        const an = String(a.Goaltender||'');
+        const bn = String(b.Goaltender||'');
+        return an.localeCompare(bn);
+      });
+    }
+    function renderGoalieSortIndicators(){
+      document.querySelectorAll('thead th.sortable').forEach(th=>{
+        const base = th.getAttribute('data-base') || th.textContent.replace(/[\s▲▼]+$/,'').trim();
+        th.setAttribute('data-base', base);
+        const key = th.getAttribute('data-sort');
+        if(key === goalieSortKey){
+          th.textContent = base + (goalieSortDir==='desc' ? ' ▼' : ' ▲');
+        } else {
+          th.textContent = base;
+        }
+      });
+    }
+    function initGoalieTableSorting(){
+      document.querySelectorAll('thead th.sortable').forEach(th=>{
+        th.addEventListener('click', ()=>{
+          const key = th.getAttribute('data-sort');
+          if(!key) return;
+          if(goalieSortKey === key){
+            goalieSortDir = (goalieSortDir === 'desc') ? 'asc' : 'desc';
+          } else {
+            goalieSortKey = key;
+            goalieSortDir = (key === 'Goaltender') ? 'asc' : 'desc';
+          }
+          renderGoalieSortIndicators();
+          renderGoalieTable(goalieRows);
+        });
+      });
+      renderGoalieSortIndicators();
+    }
+
+    async function drawShotMap(attempts){
+      const offC=document.getElementById('offShotCanvas');
+      const offCtx=setupCanvas(offC);
+      offCtx.clearRect(0,0,offC.width,offC.height);
+
+      const zoneAttempts = attemptsFilteredByZone(attempts||[]);
+      const filteredAttempts = selectedGoalie ? zoneAttempts.filter(a=>a.goalie===selectedGoalie) : zoneAttempts;
+
+      const teamsSet=new Set(); filteredAttempts.forEach(a=>{ if(a && a.forTeam) teamsSet.add(a.forTeam); });
+      const colorByTeam={}; for(const nm of teamsSet){ colorByTeam[nm]=await teamColorCache(nm); }
+
+      const pointIndex=[];
+      for(const a of filteredAttempts){
+        if(a.adj_x==null||a.adj_y==null) continue;
+        const x=a.adj_x, y=a.adj_y;
+        // Only offensive zone (75x85 feet)
+        if(x < OFF_X_MIN || x > OFF_X_MAX) continue;
+        if(y < OFF_Y_MIN || y > OFF_Y_MAX) continue;
+        const {zx,zy}=normalizeOffZoneCoord(x,y);
+        const shape = a.event==='Goal'?'goal': a.event==='Shot'?'shot': a.event==='Miss'?'miss': a.event==='Block'?'block':'shot';
+        const px=zx*offCtx.canvas.width; const py=zy*offCtx.canvas.height;
+        const col=colorByTeam[a.forTeam]||'#53b3ff';
+        drawShape(offCtx, shape, px, py, col);
+        pointIndex.push({canvas:offCtx.canvas,x:px,y:py,r:7,data:a,colorByTeam});
+      }
+
+      function handleMove(e){
+        let found=null;
+        for(const p of pointIndex){
+          const rect=p.canvas.getBoundingClientRect();
+          const mx=e.clientX, my=e.clientY;
+          if(mx<rect.left||mx>rect.right||my<rect.top||my>rect.bottom) continue;
+          const dx=mx- (rect.left + p.x/ p.canvas.width * rect.width);
+          const dy=my- (rect.top + p.y/ p.canvas.height * rect.height);
+          const dist=Math.hypot(dx,dy);
+          if(dist <= p.r){ found=p; break; }
+        }
+        if(found){
+          const d=found.data;
+          const tipColor=ensureReadableOnDark(colorByTeam[d.forTeam]||'#53b3ff');
+          const html=`<strong style='color:${tipColor}'>${d.forTeam}</strong><br>${d.event} (${d.strength||''})<br>Shooter: ${d.shooter||'—'}<br>Goalie: ${d.goalie||'—'}<br>Period: ${d.period}`;
+          showTooltip(e, html);
+        } else hideTooltip();
+      }
+
+      offC.onmousemove = handleMove;
+      offC.onmouseleave = hideTooltip;
+    }
+
+    // Data
+    async function populateFilters(){
+      const r=await fetch('/api/skaters/filters');
+      if(!r.ok) return;
+      const data=await r.json();
+      allPlayers = (data.players||[]);
+      if(!selectedPlayer && allPlayers.length){
+        setSelectedPlayer(allPlayers[0]);
+      }
+      buildPlayerMenu(allPlayers);
+      buildMenu('seasons', data.seasons||[]);
+      buildMenu('season_states', data.season_states||[]);
+      buildMenu('strengths', data.strengths||[]);
+      multiIds.forEach(updateButtonLabel);
+    }
+    function params(){ const p=new URLSearchParams(); p.set('player', selectedPlayer); multiIds.forEach(id=>{ getMultiValues(id).forEach(v=>p.append(id, v)); }); return p; }
+    async function fetchStats(){
+      const r=await fetch('/api/skaters/stats?'+params().toString());
+      if(!r.ok) return;
+      const data=await r.json();
+      document.getElementById('playerName').textContent=data.player||'—';
+      const p=data.profile||{};
+      const parts=[];
+      if(p.jersey) parts.push('#'+p.jersey);
+      if(p.position) parts.push(p.position);
+      if(p.age!=null && p.age!=='' && !Number.isNaN(Number(p.age))) parts.push('Age: '+p.age);
+      if(p.team) parts.push(p.team);
+      document.getElementById('playerMeta').textContent = parts.length ? parts.join(' • ') : '—';
+      const s=data.stats||{};
+      document.getElementById('stat-gp').textContent=s.GP??'—';
+      document.getElementById('stat-toi').textContent=s.TOI??'—';
+      document.getElementById('stat-shots').textContent=s.Shots??'—';
+      document.getElementById('stat-goals').textContent=s.Goals??'—';
+      document.getElementById('stat-a1').textContent=s.A1??'—';
+      document.getElementById('stat-a2').textContent=s.A2??'—';
+      document.getElementById('stat-points').textContent=s.Points??'—';
+      document.getElementById('stat-pim').textContent=s.PIM??'—';
+      document.getElementById('stat-xg').textContent=s.xG??'—';
+    }
+    async function fetchShotMap(){
+      const r=await fetch('/api/skaters/shotmap?'+params().toString());
+      if(!r.ok) return;
+      const data=await r.json();
+      allAttempts = (data.attempts||[]);
+      updateGoalieTableFromAttempts();
+      await drawHeatMap(allAttempts);
+      await drawShotMap(allAttempts);
+    }
+
+    function renderGoalieTable(rows){
+      const body=document.getElementById('goalieTableBody');
+      body.innerHTML='';
+      const sorted = sortGoalieRows(rows||[]);
+      (sorted||[]).forEach(row=>{
+        const tr=document.createElement('tr');
+        if(selectedGoalie && selectedGoalie===row.Goaltender) tr.classList.add('active');
+        tr.innerHTML = `
+          <td title="${row.Goaltender}">${row.Goaltender}</td>
+          <td>${row.Goals}</td>
+          <td>${row.Shots}</td>
+          <td>${row.xG}</td>
+          <td>${row['Sh%']}</td>
+          <td>${row.GAx}</td>
+        `;
+        tr.addEventListener('click',()=>{
+          if(selectedGoalie === row.Goaltender){
+            setSelectedGoalie('');
+          } else {
+            setSelectedGoalie(row.Goaltender);
+          }
+          // Re-render selection + redraw shots
+          renderGoalieTable(goalieRows);
+          drawShotMap(allAttempts);
+        });
+        body.appendChild(tr);
+      });
+    }
+
+    // Image: prefer API-provided player image URL, fallback to local static or placeholder
+    function localAvatarSrc(name){ const file = (name||'').toLowerCase().replace(/[^a-z0-9]+/g,'_') + '.jpg'; return '/static/players/'+file; }
+    async function updateAvatar(){ const name=selectedPlayer; const img=document.getElementById('playerAvatar');
+      try{
+        const resp=await fetch('/api/skaters/player_image?'+new URLSearchParams({player:name}).toString());
+        if(resp.ok){ const data=await resp.json(); const url=(data&&data.url)||''; if(url){ img.src=url; return; }
+        }
+      }catch(e){}
+      // Fallback to local static file
+      try{ const src=localAvatarSrc(name); const head=await fetch(src,{method:'HEAD'}); img.src = head.ok ? src : '/static/player-placeholder.png'; }catch(e){ img.src='/static/player-placeholder.png'; }
+    }
+
+    multiIds.forEach(id=>{
+      document.querySelector(`#${id}Menu`).addEventListener('change',()=>{
+        updateButtonLabel(id);
+        setSelectedGoalie('');
+        setSelectedZone('');
+        fetchStats();
+        fetchShotMap();
+      });
+    });
+
+    (async()=>{ await populateFilters(); await drawZoneBases(); initGoalieTableSorting(); attachHeatZoneEvents(); updateAvatar(); await fetchStats(); await fetchShotMap(); window.addEventListener('resize',()=>{ drawZoneBases(); fetchShotMap(); }); })();
+  </script>
+</body>
+</html>

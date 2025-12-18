@@ -471,6 +471,11 @@ def data_page():
     """Data export page: filter and export Play-by-Play from CSVs."""
     return render_template('data.html')
 
+@app.route('/skaters')
+def skaters_page():
+    """Skaters page: single-player view with filters and heat map."""
+    return render_template('skaters.html')
+
 @app.route('/api/report/kpis')
 def report_kpis():
     # Base single-value params
@@ -755,6 +760,354 @@ def report_strengths():
         rows = [r for r in rows if r['team_for']==team or r['team_against']==team]
     strengths = sorted({r['strength'] for r in rows if r['strength']})
     return jsonify({'strengths': strengths})
+
+# -------- Skaters API --------
+@app.route('/api/skaters/filters')
+def skaters_filters():
+    """Return players list and common filters for Skaters page."""
+    report_store.load()
+    rows = report_store.rows
+    players = sorted({str(r.get('shooter')) for r in rows if r.get('shooter')}, key=str)
+    seasons = sorted({str(r.get('season')) for r in rows if r.get('season')}, key=str)
+    season_states = sorted({str(r.get('state')) for r in rows if r.get('state')}, key=str)
+    strengths = sorted({str(r.get('strength')) for r in rows if r.get('strength')}, key=str)
+    return jsonify({'players': players, 'seasons': seasons, 'season_states': season_states, 'strengths': strengths})
+
+@app.route('/api/skaters/stats')
+def skaters_stats():
+    """Return basic stats for a single player given filters."""
+    player = request.args.get('player','').strip()
+    if not player:
+        return jsonify({'error':'player required'}), 400
+    # Note: we intentionally do NOT pass `players=player` into pbp filtering here because
+    # we need to count A1/A2 from goal rows where the player may be an assister.
+    params = {
+        'team': 'All',
+        'season': request.args.get('season','All'),
+        'season_state': request.args.get('season_state','All'),
+        'date_from': request.args.get('date_from',''),
+        'date_to': request.args.get('date_to',''),
+        'segment': request.args.get('segment','all'),
+        'strength': request.args.get('strength','All'),
+    }
+    def _get_multi(name):
+        vals = request.args.getlist(name)
+        if len(vals)==1 and ',' in vals[0]:
+            vals = [v for v in vals[0].split(',') if v]
+        return [v for v in vals if v]
+    strengths_multi = _get_multi('strengths')
+    if strengths_multi: params['strengths_multi'] = ','.join(strengths_multi)
+    seasons_multi = _get_multi('seasons')
+    if seasons_multi: params['seasons_multi'] = ','.join(seasons_multi)
+    season_states_multi = _get_multi('season_states')
+    if season_states_multi: params['season_states_multi'] = ','.join(season_states_multi)
+
+    report_store.load()
+    rows = report_store.pbp_rows(**params)
+
+    # Load lineup TOI for relevant games so GP/TOI are correct even if player has no shots.
+    game_ids = sorted({str(r.get('game_id')) for r in rows if r.get('game_id')}, key=str)
+    for gid in game_ids:
+        try:
+            report_store._load_lineups_for_game(gid)
+        except Exception:
+            pass
+
+    games_played = {gid for gid in game_ids if report_store.toi_lookup.get((gid, player), 0) > 0}
+    gp = len(games_played)
+    total_toi_secs = sum(
+        secs for (gid, name), secs in report_store.toi_lookup.items()
+        if name == player and gid in games_played
+    )
+    toi = round(total_toi_secs / 60, 1) if total_toi_secs else 0.0
+
+    # Shots + xG for player's own shot attempts
+    attempts = [r for r in rows if r.get('shooter') == player and r.get('event') in ('Shot', 'Goal')]
+    shots = len(attempts)
+    xg = round(sum(float(r.get('xG') or 0.0) for r in attempts), 2)
+
+    # Goals, primary assists, secondary assists (dedup goals)
+    def goal_key(r):
+        return (
+            r.get('game_id'), r.get('period'), r.get('timestamp'),
+            r.get('shooter'), r.get('assist1'), r.get('assist2'),
+            r.get('strength'), r.get('x'), r.get('y')
+        )
+
+    seen_goals = set()
+    goals = 0
+    a1 = 0
+    a2 = 0
+    for r in rows:
+        if r.get('event') != 'Goal':
+            continue
+        gk = goal_key(r)
+        if gk in seen_goals:
+            continue
+        seen_goals.add(gk)
+        if r.get('shooter') == player:
+            goals += 1
+        if r.get('assist1') == player:
+            a1 += 1
+        if r.get('assist2') == player:
+            a2 += 1
+
+    points = goals + a1 + a2
+    sh_pct = round((goals / shots * 100.0) if shots > 0 else 0.0, 1)
+
+    # PIM: minutes are not present in our exported PBP CSV right now.
+    # We approximate using 2 minutes per penalty taken.
+    penalties_taken = sum(1 for r in rows if r.get('event') == 'Penalty' and r.get('shooter') == player)
+    pim = penalties_taken * 2
+
+    # Best-effort team: use the most recent game the player actually played.
+    team = ''
+    latest_gid = ''
+    if games_played:
+        latest_gid = max(
+            games_played,
+            key=lambda g: (report_store.game_meta.get(str(g), {}).get('date', '') or '')
+        )
+    if latest_gid:
+        # Prefer lineup-derived team for that game
+        try:
+            lineups_dir = os.path.join(os.path.dirname(__file__), 'Data', 'Lineups')
+            lineup_file = os.path.join(lineups_dir, f"{latest_gid}_teams.csv")
+            if os.path.exists(lineup_file):
+                with open(lineup_file, 'r', encoding='utf-8') as f:
+                    reader = csv.DictReader(f)
+                    for row in reader:
+                        if (row.get('Name') or '').strip() == player:
+                            team = (row.get('Team') or '').strip()
+                            break
+        except Exception:
+            pass
+        # Fallback: infer from shot rows in that specific game
+        if not team:
+            for r in rows:
+                if r.get('game_id') == latest_gid and r.get('shooter') == player and r.get('team_for'):
+                    team = r.get('team_for')
+                    break
+    # Last resort: any team_for we see for shooter
+    if not team:
+        for r in rows:
+            if r.get('shooter') == player and r.get('team_for'):
+                team = r.get('team_for')
+                break
+
+    # Best-effort profile fields from Game Summary (jersey/position/birthDate/team)
+    def _calc_age(birth_date_str: str):
+        if not birth_date_str:
+            return None
+        try:
+            # Common format from API: YYYY-MM-DD
+            b = datetime.strptime(birth_date_str[:10], '%Y-%m-%d').date()
+            today = datetime.utcnow().date()
+            years = today.year - b.year - (1 if (today.month, today.day) < (b.month, b.day) else 0)
+            return max(0, years)
+        except Exception:
+            return None
+
+    profile = {'team': team, 'jersey': '', 'position': '', 'birthDate': '', 'age': None}
+    if games_played:
+        gids = sorted(games_played, key=lambda g: report_store.game_meta.get(str(g), {}).get('date', ''), reverse=True)
+        for gid in gids[:8]:
+            summary = data_api.fetch_game_summary(gid)
+            if not summary:
+                continue
+            try:
+                for side in ('homeTeam', 'visitingTeam'):
+                    t = summary.get(side) or {}
+                    tname = t.get('name') or ''
+                    for group in ('skaters', 'goalies'):
+                        for p in t.get(group, []):
+                            if p.get('name') != player:
+                                continue
+                            profile['jersey'] = str(p.get('jersey') or '')
+                            profile['position'] = str(p.get('position') or '')
+                            profile['birthDate'] = str(p.get('birthDate') or '')
+                            profile['age'] = _calc_age(profile['birthDate'])
+                            # Only override inferred team if API provides a real team name.
+                            if tname and tname not in ('Home Team', 'Visiting Team'):
+                                profile['team'] = tname
+                            raise StopIteration
+            except StopIteration:
+                break
+            except Exception:
+                continue
+
+    return jsonify({
+        'player': player,
+        'profile': profile,
+        'stats': {
+            'GP': gp,
+            'TOI': toi,
+            'Shots': shots,
+            'Goals': goals,
+            'A1': a1,
+            'A2': a2,
+            'Points': points,
+            'PIM': pim,
+            'xG': xg,
+            'Sh%': sh_pct,
+        }
+    })
+
+@app.route('/api/skaters/shotmap')
+def skaters_shotmap():
+    """Return player's shot attempts with coordinates for heat map."""
+    player = request.args.get('player','').strip()
+    if not player:
+        return jsonify({'attempts': []})
+    params = {
+        'team': 'All',
+        'season': request.args.get('season','All'),
+        'season_state': request.args.get('season_state','All'),
+        'date_from': request.args.get('date_from',''),
+        'date_to': request.args.get('date_to',''),
+        'segment': request.args.get('segment','all'),
+        'strength': request.args.get('strength','All'),
+        'players': player,
+    }
+    def _get_multi(name):
+        vals = request.args.getlist(name)
+        if len(vals)==1 and ',' in vals[0]:
+            vals = [v for v in vals[0].split(',') if v]
+        return [v for v in vals if v]
+    strengths_multi = _get_multi('strengths')
+    if strengths_multi: params['strengths_multi'] = ','.join(strengths_multi)
+    seasons_multi = _get_multi('seasons')
+    if seasons_multi: params['seasons_multi'] = ','.join(seasons_multi)
+    season_states_multi = _get_multi('season_states')
+    if season_states_multi: params['season_states_multi'] = ','.join(season_states_multi)
+    rows = report_store.pbp_rows(**params)
+    # Filter to player's events and only shot-related types
+    attempts = [
+        {
+            'adj_x': r.get('adj_x'), 'adj_y': r.get('adj_y'), 'event': r.get('event'),
+            'forTeam': r.get('team_for'), 'againstTeam': r.get('team_against'),
+            'strength': r.get('strength'), 'shooter': r.get('shooter'), 'goalie': r.get('goalie'),
+            'period': r.get('period')
+        }
+        for r in rows if r.get('shooter') == player and r.get('event') in ('Shot','Goal','Miss','Block')
+    ]
+    return jsonify({'attempts': attempts})
+
+
+@app.route('/api/skaters/goalies')
+def skaters_goalies():
+    """Return a goalie table for shots taken by a selected player.
+
+    Columns: Goaltender, Goals, Shots, xG, Sh%, GAx (Goals - xG)
+    Shots are SOG (Shot + Goal) taken by the player that have a goalie name.
+    """
+    player = request.args.get('player', '').strip()
+    if not player:
+        return jsonify({'goalies': []})
+
+    params = {
+        'team': 'All',
+        'season': request.args.get('season', 'All'),
+        'season_state': request.args.get('season_state', 'All'),
+        'date_from': request.args.get('date_from', ''),
+        'date_to': request.args.get('date_to', ''),
+        'segment': request.args.get('segment', 'all'),
+        'strength': request.args.get('strength', 'All'),
+    }
+
+    def _get_multi(name):
+        vals = request.args.getlist(name)
+        if len(vals) == 1 and ',' in vals[0]:
+            vals = [v for v in vals[0].split(',') if v]
+        return [v for v in vals if v]
+
+    strengths_multi = _get_multi('strengths')
+    if strengths_multi:
+        params['strengths_multi'] = ','.join(strengths_multi)
+    seasons_multi = _get_multi('seasons')
+    if seasons_multi:
+        params['seasons_multi'] = ','.join(seasons_multi)
+    season_states_multi = _get_multi('season_states')
+    if season_states_multi:
+        params['season_states_multi'] = ','.join(season_states_multi)
+
+    rows = report_store.pbp_rows(**params)
+    # Only shot attempts by this player, where a goalie is identified
+    rows = [r for r in rows if r.get('shooter') == player and r.get('goalie')]
+
+    by_goalie = {}
+    for r in rows:
+        ev = r.get('event')
+        if ev not in ('Shot', 'Goal'):
+            continue
+        gname = (r.get('goalie') or '').strip()
+        if not gname:
+            continue
+        rec = by_goalie.setdefault(gname, {'Goaltender': gname, 'Goals': 0, 'Shots': 0, 'xG': 0.0})
+        rec['Shots'] += 1
+        if ev == 'Goal':
+            rec['Goals'] += 1
+        try:
+            rec['xG'] += float(r.get('xG') or 0.0)
+        except Exception:
+            pass
+
+    out = []
+    for rec in by_goalie.values():
+        shots = rec['Shots']
+        goals = rec['Goals']
+        xg = round(rec.get('xG', 0.0), 2)
+        sh_pct = round((goals / shots * 100.0) if shots else 0.0, 1)
+        gax = round(goals - xg, 2)
+        out.append({
+            'Goaltender': rec['Goaltender'],
+            'Goals': goals,
+            'Shots': shots,
+            'xG': xg,
+            'Sh%': sh_pct,
+            'GAx': gax,
+        })
+
+    # Default sort: GAx (desc), then xG (desc), then Shots (desc)
+    out.sort(key=lambda r: (-r['GAx'], -r['xG'], -r['Shots'], r['Goaltender']))
+    return jsonify({'goalies': out})
+
+@app.route('/api/skaters/player_image')
+def skaters_player_image():
+    """Best-effort lookup of a player's image URL using recent game summaries.
+    Scans games where the player appears, fetches summary, and returns the first image URL found.
+    """
+    player = request.args.get('player','').strip()
+    if not player:
+        return jsonify({'url': ''})
+    report_store.load()
+    # Search for recent games involving the player
+    candidate_gids = [str(r.get('game_id')) for r in report_store.rows if r.get('game_id') and (r.get('shooter') == player or player in (r.get('on_ice_all') or []))]
+    # Sort by date descending using meta
+    unique_gids = sorted(set(candidate_gids), key=lambda g: report_store.game_meta.get(str(g), {}).get('date', ''), reverse=True)
+    for gid in unique_gids[:8]:  # check a few recent games
+        summary = data_api.fetch_game_summary(gid)
+        if not summary:
+            continue
+        try:
+            for side in ('homeTeam','visitingTeam'):
+                team = summary.get(side) or {}
+                for group in ('skaters','goalies'):
+                    for p in team.get(group, []):
+                        if p.get('name') == player:
+                            url = p.get('playerImageURL') or ''
+                            if url:
+                                # Prefer 240x240 assets if available
+                                if 'assets.leaguestat.com' in url and '/120x160/' in url:
+                                    url = url.replace('/120x160/', '/240x240/')
+                                return jsonify({'url': url})
+                            # Try constructing from player ID if available
+                            pid = p.get('playerId') or p.get('id') or ''
+                            if isinstance(pid, (int,str)) and str(pid).isdigit():
+                                return jsonify({'url': f"https://assets.leaguestat.com/pwhl/240x240/{pid}.jpg"})
+        except Exception:
+            continue
+    return jsonify({'url': ''})
 
 # -------- Data API (reuses report_store) --------
 @app.route('/api/data/pbp')
