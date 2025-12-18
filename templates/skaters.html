@@ -165,7 +165,10 @@
             setSelectedPlayer(n);
             document.getElementById('playerDropdown').classList.remove('open');
             setSelectedGoalie('');
-            updateAvatar(); fetchStats(); fetchGoalies(); fetchShotMap();
+            setSelectedZone('');
+            updateAvatar();
+            fetchStats();
+            fetchShotMap();
           });
           label.appendChild(rb);
           const span=document.createElement('span'); span.textContent=n; label.appendChild(span);
