@@ -987,7 +987,8 @@ def skaters_shotmap():
             'adj_x': r.get('adj_x'), 'adj_y': r.get('adj_y'), 'event': r.get('event'),
             'forTeam': r.get('team_for'), 'againstTeam': r.get('team_against'),
             'strength': r.get('strength'), 'shooter': r.get('shooter'), 'goalie': r.get('goalie'),
-            'period': r.get('period')
+            'period': r.get('period'),
+            'xG': r.get('xG'),
         }
         for r in rows if r.get('shooter') == player and r.get('event') in ('Shot','Goal','Miss','Block')
     ]
