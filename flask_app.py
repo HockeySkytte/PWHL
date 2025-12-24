@@ -765,9 +765,68 @@ def report_strengths():
 @app.route('/api/skaters/filters')
 def skaters_filters():
     """Return players list and common filters for Skaters page."""
+    import os
+    import csv
+
+    def _lineup_players_cached() -> list[str]:
+        """Return sorted unique player names from Data/Lineups CSVs.
+
+        Player slicer should be limited to players present in lineup exports.
+        """
+        # Cache lives on the function object to avoid module-level globals.
+        cache = getattr(_lineup_players_cached, '_cache', None)
+        sig = getattr(_lineup_players_cached, '_sig', None)
+
+        lineups_dir = os.path.join(os.path.dirname(__file__), 'Data', 'Lineups')
+        if not os.path.isdir(lineups_dir):
+            return []
+
+        # Build a cheap directory signature (count + max mtime) so we only re-scan
+        # when files change.
+        count = 0
+        max_mtime = 0.0
+        try:
+            for ent in os.scandir(lineups_dir):
+                if not ent.is_file() or not ent.name.endswith('.csv'):
+                    continue
+                count += 1
+                try:
+                    max_mtime = max(max_mtime, ent.stat().st_mtime)
+                except Exception:
+                    pass
+        except Exception:
+            return []
+
+        cur_sig = (count, int(max_mtime))
+        if cache is not None and sig == cur_sig:
+            return cache
+
+        players_set: set[str] = set()
+        for ent in os.scandir(lineups_dir):
+            if not ent.is_file() or not ent.name.endswith('.csv'):
+                continue
+            try:
+                with open(ent.path, 'r', encoding='utf-8') as f:
+                    reader = csv.DictReader(f)
+                    for row in reader:
+                        line_pos = (row.get('Line') or row.get('Position') or row.get('Pos') or '').strip().upper()
+                        # Goalies appear in lineup exports with Line=G.
+                        if line_pos == 'G' or line_pos == 'GOALIE':
+                            continue
+                        name = (row.get('Name') or row.get('player') or '').strip()
+                        if name:
+                            players_set.add(name)
+            except Exception:
+                continue
+
+        players = sorted(players_set, key=str)
+        setattr(_lineup_players_cached, '_cache', players)
+        setattr(_lineup_players_cached, '_sig', cur_sig)
+        return players
+
     report_store.load()
     rows = report_store.rows
-    players = sorted({str(r.get('shooter')) for r in rows if r.get('shooter')}, key=str)
+    players = _lineup_players_cached()
     seasons = sorted({str(r.get('season')) for r in rows if r.get('season')}, key=str)
     season_states = sorted({str(r.get('state')) for r in rows if r.get('state')}, key=str)
     strengths = sorted({str(r.get('strength')) for r in rows if r.get('strength')}, key=str)
@@ -993,6 +1052,180 @@ def skaters_shotmap():
         for r in rows if r.get('shooter') == player and r.get('event') in ('Shot','Goal','Miss','Block')
     ]
     return jsonify({'attempts': attempts})
+
+
+@app.route('/api/skaters/performance')
+def skaters_performance():
+    """Return per-game running totals for a single player.
+
+    X-axis concept: gameNumber (1..N), ordered by game date ascending.
+        Metrics returned:
+            - per_game: Goals, Assists, Points, Shots, xG, GAx, PIM, TOI (minutes)
+            - running:  running totals for the same metrics
+    Notes:
+      - Shots are SOG (Shot + Goal) for the player's own attempts.
+      - xG is summed across those attempts.
+      - GAx is computed as Goals - xG (shooting goals above expected).
+      - PIM approximated as 2 minutes per Penalty event where player is p1_name (stored as shooter field).
+    """
+    player = request.args.get('player', '').strip()
+    if not player:
+        return jsonify({'error': 'player required'}), 400
+
+    params = {
+        'team': 'All',
+        'season': request.args.get('season', 'All'),
+        'season_state': request.args.get('season_state', 'All'),
+        'date_from': request.args.get('date_from', ''),
+        'date_to': request.args.get('date_to', ''),
+        'segment': request.args.get('segment', 'all'),
+        'strength': request.args.get('strength', 'All'),
+    }
+
+    def _get_multi(name):
+        vals = request.args.getlist(name)
+        if len(vals) == 1 and ',' in vals[0]:
+            vals = [v for v in vals[0].split(',') if v]
+        return [v for v in vals if v]
+
+    strengths_multi = _get_multi('strengths')
+    if strengths_multi:
+        params['strengths_multi'] = ','.join(strengths_multi)
+    seasons_multi = _get_multi('seasons')
+    if seasons_multi:
+        params['seasons_multi'] = ','.join(seasons_multi)
+    season_states_multi = _get_multi('season_states')
+    if season_states_multi:
+        params['season_states_multi'] = ','.join(season_states_multi)
+
+    report_store.load()
+    rows = report_store.pbp_rows(**params)
+
+    # Load lineup TOI for relevant games so we can identify games played.
+    game_ids = sorted({str(r.get('game_id')) for r in rows if r.get('game_id')}, key=str)
+    for gid in game_ids:
+        try:
+            report_store._load_lineups_for_game(gid)
+        except Exception:
+            pass
+    games_played = [gid for gid in game_ids if report_store.toi_lookup.get((gid, player), 0) > 0]
+
+    # Order games by date ascending (fallback to game_id if missing date).
+    def _date_for(gid: str) -> str:
+        return (report_store.game_meta.get(str(gid), {}) or {}).get('date', '') or ''
+    games_played.sort(key=lambda g: (_date_for(str(g)) or '9999-99-99', int(str(g)) if str(g).isdigit() else str(g)))
+
+    # Build per-game stats.
+    by_game = {str(gid): {'Goals': 0, 'Assists': 0, 'Points': 0, 'Shots': 0, 'xG': 0.0, 'PIM': 0, 'TOI': 0.0} for gid in games_played}
+
+    # TOI per game from lineup exports (seconds -> minutes)
+    for gid in games_played:
+        try:
+            secs = int(report_store.toi_lookup.get((str(gid), player), 0) or 0)
+        except Exception:
+            secs = 0
+        by_game[str(gid)]['TOI'] = round(secs / 60.0, 1) if secs else 0.0
+
+    # Shots + xG per game (player's own attempts)
+    for r in rows:
+        gid = str(r.get('game_id') or '')
+        if gid not in by_game:
+            continue
+        if r.get('shooter') != player:
+            continue
+        ev = r.get('event')
+        if ev in ('Shot', 'Goal'):
+            by_game[gid]['Shots'] += 1
+            try:
+                by_game[gid]['xG'] += float(r.get('xG') or 0.0)
+            except Exception:
+                pass
+
+    # Goals + assists per game (dedup goal rows)
+    def _goal_key(r):
+        return (
+            r.get('game_id'), r.get('period'), r.get('timestamp'),
+            r.get('shooter'), r.get('assist1'), r.get('assist2'),
+            r.get('strength'), r.get('x'), r.get('y')
+        )
+
+    seen_goals = set()
+    for r in rows:
+        if r.get('event') != 'Goal':
+            continue
+        gid = str(r.get('game_id') or '')
+        if gid not in by_game:
+            continue
+        gk = _goal_key(r)
+        if gk in seen_goals:
+            continue
+        seen_goals.add(gk)
+        if r.get('shooter') == player:
+            by_game[gid]['Goals'] += 1
+        if r.get('assist1') == player:
+            by_game[gid]['Assists'] += 1
+        if r.get('assist2') == player:
+            by_game[gid]['Assists'] += 1
+
+    # PIM approximation: 2 minutes per Penalty event where player is p1_name (stored as shooter field)
+    for r in rows:
+        gid = str(r.get('game_id') or '')
+        if gid not in by_game:
+            continue
+        if r.get('event') == 'Penalty' and r.get('shooter') == player:
+            by_game[gid]['PIM'] += 2
+
+    # Finalize per-game rounding + derived fields
+    for gid in list(by_game.keys()):
+        by_game[gid]['xG'] = round(float(by_game[gid].get('xG') or 0.0), 2)
+        by_game[gid]['Points'] = int(by_game[gid].get('Goals') or 0) + int(by_game[gid].get('Assists') or 0)
+        by_game[gid]['GAx'] = round(float(by_game[gid].get('Goals') or 0) - float(by_game[gid].get('xG') or 0.0), 2)
+
+    # Build running totals series
+    running = {'Goals': 0, 'Assists': 0, 'Points': 0, 'Shots': 0, 'xG': 0.0, 'GAx': 0.0, 'PIM': 0, 'TOI': 0.0}
+    out_games = []
+    for idx, gid in enumerate(games_played, start=1):
+        g = by_game.get(str(gid), {})
+        running['Goals'] += int(g.get('Goals') or 0)
+        running['Assists'] += int(g.get('Assists') or 0)
+        running['Points'] += int(g.get('Points') or 0)
+        running['Shots'] += int(g.get('Shots') or 0)
+        running['xG'] = round(float(running['xG']) + float(g.get('xG') or 0.0), 2)
+        running['GAx'] = round(float(running['GAx']) + float(g.get('GAx') or 0.0), 2)
+        running['PIM'] += int(g.get('PIM') or 0)
+        running['TOI'] = round(float(running['TOI']) + float(g.get('TOI') or 0.0), 1)
+
+        meta = report_store.game_meta.get(str(gid), {}) or {}
+        season = str(meta.get('season') or '')
+
+        out_games.append({
+            'gameNumber': idx,
+            'gameId': str(gid),
+            'date': _date_for(str(gid)) or '',
+            'season': season,
+            'per_game': {
+                'Goals': int(g.get('Goals') or 0),
+                'Assists': int(g.get('Assists') or 0),
+                'Points': int(g.get('Points') or 0),
+                'Shots': int(g.get('Shots') or 0),
+                'xG': round(float(g.get('xG') or 0.0), 2),
+                'GAx': round(float(g.get('GAx') or 0.0), 2),
+                'PIM': int(g.get('PIM') or 0),
+                'TOI': round(float(g.get('TOI') or 0.0), 1),
+            },
+            'running': {
+                'Goals': running['Goals'],
+                'Assists': running['Assists'],
+                'Points': running['Points'],
+                'Shots': running['Shots'],
+                'xG': running['xG'],
+                'GAx': running['GAx'],
+                'PIM': running['PIM'],
+                'TOI': running['TOI'],
+            }
+        })
+
+    return jsonify({'player': player, 'games': out_games})
 
 
 @app.route('/api/skaters/goalies')

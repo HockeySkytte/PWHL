@@ -18,11 +18,19 @@
     .filters .search-box{margin-bottom:.45rem;}
     .filters .search-box input{width:100%;padding:.45rem .55rem;border:1px solid #374151;background:#0f172a;color:#e5e7eb;border-radius:.35rem;}
     .filters .option-list label{display:flex;align-items:center;gap:.5rem;padding:.35rem .25rem;}
+    .hidden{display:none !important;}
     .label{font-size:.8rem;color:#9ca3af;margin-bottom:.25rem;}
     .player-header{display:flex;align-items:center;gap:1rem;}
     .avatar{width:120px;height:120px;border-radius:.65rem;background:#111827;border:1px solid #374151;object-fit:cover;}
     .player-title{font-size:1.85rem;font-weight:700;}
     .player-meta{color:#9ca3af;font-size:1rem;margin-top:.15rem;}
+    /* Sub-tabs under player header */
+    .subtabs{display:flex;gap:.35rem;margin-top:.9rem;border-bottom:1px solid var(--pwhl-border);padding-bottom:.45rem;}
+    .subtab{background:transparent;border:1px solid transparent;color:#d6d3e9;padding:.5rem .75rem;border-radius:.5rem;cursor:pointer;font-weight:650;}
+    .subtab:hover{color:#fff;border-color:rgba(142,124,214,.25);}
+    .subtab.active{color:var(--pwhl-accent-strong);border-color:rgba(142,124,214,.45);background:rgba(142,124,214,.10);}
+    .subtab-panel{display:none;}
+    .subtab-panel.active{display:block;}
     /* Compact cards: aim to fit 9 cards in one row on desktop */
     .stats-grid{display:grid;grid-template-columns:repeat(9, minmax(88px, 1fr));gap:.5rem;margin-top:1rem;}
     .stat-card{background:#0f172a;border:1px solid #374151;border-radius:.5rem;padding:.5rem .45rem;text-align:center;}
@@ -52,6 +60,27 @@
       .shot-area{grid-template-columns:1fr;}
       .rink-wrap{max-width:720px;}
     }
+
+    /* Performance chart */
+    .perf-controls{display:flex;align-items:center;gap:.65rem;margin-top:1rem;}
+    .perf-controls .label{margin:0;}
+    .perf-controls select{padding:.45rem .55rem;border:1px solid #374151;background:#0f172a;color:#e5e7eb;border-radius:.4rem;}
+    .perf-controls input{padding:.45rem .55rem;border:1px solid #374151;background:#0f172a;color:#e5e7eb;border-radius:.4rem;width:88px;}
+    .perf-controls input:disabled{opacity:.55;}
+    .perf-chart-wrap{margin-top:.75rem;background:#0f172a;border:1px solid #374151;border-radius:.5rem;padding:.75rem;}
+    .perf-chart{width:100%;height:360px;display:block;}
+
+    /* EA charts */
+    .ea-charts{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem;align-items:start;}
+    .ea-chart-wrap{background:#0f172a;border:1px solid #374151;border-radius:.5rem;padding:.75rem;}
+    .ea-chart-controls{display:flex;align-items:center;gap:.55rem;margin:0 0 .55rem;}
+    .ea-chart-controls .label{margin:0;color:#9ca3af;font-size:.8rem;}
+    .ea-chart-controls select{padding:.4rem .5rem;border:1px solid #374151;background:#0f172a;color:#e5e7eb;border-radius:.4rem;}
+    .ea-chart{width:100%;height:480px;display:block;}
+    @media (max-width: 1200px){
+      .ea-charts{grid-template-columns:1fr;}
+      .ea-chart{height:480px;}
+    }
   </style>
 </head>
 <body>
@@ -71,12 +100,23 @@
         <button class="dropdown-toggle" id="playerToggle" type="button">Select Player</button>
         <div class="dropdown-menu" id="playerMenu"></div>
       </div>
-      <div class="label">Season</div>
-      <div class="dropdown" id="seasonsDropdown"><button class="dropdown-toggle" type="button">Select Seasons</button><div class="dropdown-menu" id="seasonsMenu"></div></div>
-      <div class="label">Season State</div>
-      <div class="dropdown" id="season_statesDropdown"><button class="dropdown-toggle" type="button">Select Season State</button><div class="dropdown-menu" id="season_statesMenu"></div></div>
-      <div class="label">Strength State</div>
-      <div class="dropdown" id="strengthsDropdown"><button class="dropdown-toggle" type="button">Select Strength</button><div class="dropdown-menu" id="strengthsMenu"></div></div>
+
+      <div id="eaOnlyFilters" class="hidden">
+        <div class="label">Game Version</div>
+        <div class="dropdown" id="gameVersionDropdown">
+          <button class="dropdown-toggle" id="gameVersionToggle" type="button">Select Game Version</button>
+          <div class="dropdown-menu" id="gameVersionMenu"></div>
+        </div>
+      </div>
+
+      <div id="nonEaFilters">
+        <div class="label">Season</div>
+        <div class="dropdown" id="seasonsDropdown"><button class="dropdown-toggle" type="button">Select Seasons</button><div class="dropdown-menu" id="seasonsMenu"></div></div>
+        <div class="label">Season State</div>
+        <div class="dropdown" id="season_statesDropdown"><button class="dropdown-toggle" type="button">Select Season State</button><div class="dropdown-menu" id="season_statesMenu"></div></div>
+        <div class="label">Strength State</div>
+        <div class="dropdown" id="strengthsDropdown"><button class="dropdown-toggle" type="button">Select Strength</button><div class="dropdown-menu" id="strengthsMenu"></div></div>
+      </div>
     </aside>
     <main class="panel">
       <div class="player-header">
@@ -86,7 +126,7 @@
           <div id="playerMeta" class="player-meta">&nbsp;</div>
         </div>
       </div>
-      <div class="stats-grid">
+      <div class="stats-grid" id="skaterStatCards">
         <div class="stat-card"><div class="label">GP</div><div class="value" id="stat-gp">—</div></div>
         <div class="stat-card"><div class="label">TOI</div><div class="value" id="stat-toi">—</div></div>
         <div class="stat-card"><div class="label">Shots</div><div class="value" id="stat-shots">—</div></div>
@@ -97,35 +137,106 @@
         <div class="stat-card"><div class="label">PIM</div><div class="value" id="stat-pim">—</div></div>
         <div class="stat-card"><div class="label">xG</div><div class="value" id="stat-xg">—</div></div>
       </div>
-      <div class="shot-area">
-        <div class="goalie-table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th class="sortable" data-sort="Goaltender" style="width:42%">Goaltender</th>
-                <th class="sortable" data-sort="Goals" style="width:10%">G</th>
-                <th class="sortable" data-sort="Shots" style="width:12%">S</th>
-                <th class="sortable" data-sort="xG" style="width:14%">xG</th>
-                <th class="sortable" data-sort="Sh%" style="width:12%">Sh%</th>
-                <th class="sortable" data-sort="GAx" style="width:10%">GAx</th>
-              </tr>
-            </thead>
-            <tbody id="goalieTableBody"></tbody>
-          </table>
-        </div>
-        <div>
-          <h3 style="margin:0 0 .4rem">Heat Map</h3>
-          <div class="rink-wrap">
-            <canvas id="heatRinkBase"></canvas>
-            <canvas id="heatCanvas"></canvas>
+
+      <div class="stats-grid hidden" id="eaCards">
+        <div class="stat-card" data-ea-card><div class="label">Overall</div><div class="value" id="ea-overall">—</div></div>
+        <div class="stat-card" data-ea-card><div class="label">Technique</div><div class="value" id="ea-technique">—</div></div>
+        <div class="stat-card" data-ea-card><div class="label">Passing</div><div class="value" id="ea-passing">—</div></div>
+        <div class="stat-card" data-ea-card><div class="label">Skating</div><div class="value" id="ea-skating">—</div></div>
+        <div class="stat-card" data-ea-card><div class="label">Shooting</div><div class="value" id="ea-shooting">—</div></div>
+        <div class="stat-card" data-ea-card><div class="label">Faceoffs</div><div class="value" id="ea-faceoffs">—</div></div>
+        <div class="stat-card" data-ea-card><div class="label">Physicality</div><div class="value" id="ea-physicality">—</div></div>
+        <div class="stat-card" data-ea-card><div class="label">Mentality</div><div class="value" id="ea-mentality">—</div></div>
+        <div class="stat-card" data-ea-card><div class="label">Defense</div><div class="value" id="ea-defense">—</div></div>
+      </div>
+
+      <div class="subtabs" id="skaterTabs" role="tablist" aria-label="Skaters tabs">
+        <button class="subtab" type="button" data-tab="ea" role="tab" aria-selected="false">EA Ratings</button>
+        <button class="subtab active" type="button" data-tab="shooting" role="tab" aria-selected="true">Shooting</button>
+        <button class="subtab" type="button" data-tab="performance" role="tab" aria-selected="false">Performance</button>
+      </div>
+
+      <div id="tab-ea" class="subtab-panel">
+        <div class="ea-charts">
+          <div class="ea-chart-wrap">
+            <div class="ea-chart-controls">
+              <div class="label">Radar</div>
+              <select id="eaRadarMode">
+                <option value="grouped" selected>Grouped</option>
+                <option value="detailed">Detailed</option>
+              </select>
+            </div>
+            <canvas id="eaRadar" class="ea-chart"></canvas>
+          </div>
+          <div class="ea-chart-wrap">
+            <div class="ea-chart-controls">
+              <div class="label">Line Metric</div>
+              <select id="eaLineMetric"></select>
+            </div>
+            <canvas id="eaOverallTrend" class="ea-chart"></canvas>
           </div>
         </div>
-        <div>
-          <h3 style="margin:0 0 .4rem">Shot Map</h3>
-          <div class="rink-wrap">
-            <canvas id="offRinkBase"></canvas>
-            <canvas id="offShotCanvas"></canvas>
+        <div id="eaMessage" class="label" style="margin-top:.65rem">&nbsp;</div>
+      </div>
+
+      <div id="tab-shooting" class="subtab-panel active">
+        <div class="shot-area">
+          <div class="goalie-table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th class="sortable" data-sort="Goaltender" style="width:42%">Goaltender</th>
+                  <th class="sortable" data-sort="Goals" style="width:10%">G</th>
+                  <th class="sortable" data-sort="Shots" style="width:12%">S</th>
+                  <th class="sortable" data-sort="xG" style="width:14%">xG</th>
+                  <th class="sortable" data-sort="Sh%" style="width:12%">Sh%</th>
+                  <th class="sortable" data-sort="GAx" style="width:10%">GAx</th>
+                </tr>
+              </thead>
+              <tbody id="goalieTableBody"></tbody>
+            </table>
           </div>
+          <div>
+            <h3 style="margin:0 0 .4rem">Heat Map</h3>
+            <div class="rink-wrap">
+              <canvas id="heatRinkBase"></canvas>
+              <canvas id="heatCanvas"></canvas>
+            </div>
+          </div>
+          <div>
+            <h3 style="margin:0 0 .4rem">Shot Map</h3>
+            <div class="rink-wrap">
+              <canvas id="offRinkBase"></canvas>
+              <canvas id="offShotCanvas"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab-performance" class="subtab-panel">
+        <div class="perf-controls">
+          <div class="label" style="margin:0">Metric</div>
+          <select id="perfMetric">
+            <option value="Goals">Goals</option>
+            <option value="Assists">Assists</option>
+            <option value="Points" selected>Points</option>
+            <option value="Shots">Shots</option>
+            <option value="xG">xG</option>
+            <option value="GAx">GAx</option>
+            <option value="PIM">PIM</option>
+            <option value="TOI">TOI</option>
+          </select>
+          <div class="label" style="margin:0 0 0 .25rem">Mode</div>
+          <select id="perfMode">
+            <option value="running" selected>Running Total</option>
+            <option value="ma">Moving Average</option>
+          </select>
+          <div class="label" style="margin:0 0 0 .25rem">MA games</div>
+          <input id="perfMaWindow" type="number" min="1" step="1" value="5" disabled>
+          </select>
+        </div>
+        <div class="perf-chart-wrap">
+          <canvas id="perfChart" class="perf-chart"></canvas>
         </div>
       </div>
     </main>
@@ -146,6 +257,55 @@
     let allPlayers=[];
     let selectedPlayer='';
     function setSelectedPlayer(name){ selectedPlayer = name || ''; document.getElementById('playerToggle').textContent = selectedPlayer || 'Select Player'; }
+
+    // Persistence (Skaters page)
+    const SKATERS_STATE_KEY = 'pwhl_skaters_state_v1';
+    let pendingRestoreState = null;
+    function safeJsonParse(s){ try{ return JSON.parse(s); }catch(e){ return null; } }
+    function loadSkatersState(){
+      try{ return safeJsonParse(localStorage.getItem(SKATERS_STATE_KEY) || ''); }catch(e){ return null; }
+    }
+    function saveSkatersState(){
+      try{
+        const radarModeSel = document.getElementById('eaRadarMode');
+        const lineMetricSel = document.getElementById('eaLineMetric');
+        const perfMetricSel = document.getElementById('perfMetric');
+        const perfModeSel = document.getElementById('perfMode');
+        const perfMaIn = document.getElementById('perfMaWindow');
+        const state = {
+          activeSkaterTab,
+          selectedPlayer,
+          selectedGameVersion,
+          selectedEaLineMetric,
+          eaRadarMode: radarModeSel ? radarModeSel.value : 'grouped',
+          multi: {
+            seasons: getMultiValues('seasons'),
+            season_states: getMultiValues('season_states'),
+            strengths: getMultiValues('strengths')
+          },
+          shooting: {
+            selectedGoalie,
+            selectedZoneId
+          },
+          performance: {
+            metric: perfMetricSel ? perfMetricSel.value : 'Points',
+            mode: perfModeSel ? perfModeSel.value : 'running',
+            maWindow: perfMaIn ? (Number(perfMaIn.value)||5) : 5
+          },
+          ea: {
+            lineMetric: lineMetricSel ? lineMetricSel.value : selectedEaLineMetric
+          }
+        };
+        localStorage.setItem(SKATERS_STATE_KEY, JSON.stringify(state));
+      }catch(e){}
+    }
+    function applyMultiSelections(id, values){
+      const set = new Set((values||[]).map(String));
+      document.querySelectorAll(`#${id}Menu input[type=checkbox]`).forEach(cb=>{
+        cb.checked = set.has(String(cb.value));
+      });
+      updateButtonLabel(id);
+    }
     function buildPlayerMenu(players){
       const menu=document.getElementById('playerMenu');
       menu.innerHTML='';
@@ -166,9 +326,11 @@
             document.getElementById('playerDropdown').classList.remove('open');
             setSelectedGoalie('');
             setSelectedZone('');
-            updateAvatar();
-            fetchStats();
-            fetchShotMap();
+            // When switching players, default the Game Version slicer to the newest available for that player.
+            setSelectedGameVersion('');
+            syncEaGameVersionsForPlayer();
+            saveSkatersState();
+            refreshActiveTab();
           });
           label.appendChild(rb);
           const span=document.createElement('span'); span.textContent=n; label.appendChild(span);
@@ -177,6 +339,764 @@
       }
       search.addEventListener('input',()=>render(search.value));
       render('');
+    }
+
+    /** ---------------- EA Ratings (CSV-backed) ---------------- */
+    let eaRows = null;
+    let eaByPlayer = null; // Map<Name_PWHL, Map<Game Version, row>>
+    let selectedGameVersion = '';
+    let selectedEaLineMetric = 'Overall';
+
+    function parseCsv(text){
+      const rows=[];
+      let cur=[];
+      let field='';
+      let inQuotes=false;
+
+      function pushField(){ cur.push(field); field=''; }
+      function pushRow(){
+        if(cur.length===1 && String(cur[0]||'').trim()===''){ cur=[]; return; }
+        rows.push(cur);
+        cur=[];
+      }
+
+      for(let i=0;i<text.length;i++){
+        const ch=text[i];
+        if(inQuotes){
+          if(ch==='"'){
+            const next=text[i+1];
+            if(next==='"'){ field+='"'; i++; }
+            else { inQuotes=false; }
+          } else {
+            field+=ch;
+          }
+        } else {
+          if(ch==='"') inQuotes=true;
+          else if(ch===',') pushField();
+          else if(ch==='\n'){ pushField(); pushRow(); }
+          else if(ch==='\r'){ /* ignore */ }
+          else field+=ch;
+        }
+      }
+      pushField();
+      pushRow();
+
+      if(!rows.length) return [];
+      const header = rows[0].map(h=>String(h||'').trim());
+      const out=[];
+      for(let r=1;r<rows.length;r++){
+        const obj={};
+        for(let c=0;c<header.length;c++) obj[header[c]] = rows[r][c] != null ? String(rows[r][c]) : '';
+        out.push(obj);
+      }
+      return out;
+    }
+
+    async function loadEaRows(){
+      if(eaRows) return eaRows;
+      try{
+        const resp = await fetch('/static/EA_Sports_Skaters.csv');
+        if(!resp.ok) return null;
+        const txt = await resp.text();
+        eaRows = parseCsv(txt);
+      }catch(e){ eaRows = null; }
+
+      if(!eaRows) return null;
+      eaByPlayer = new Map();
+      for(const row of eaRows){
+        const player = String(row['Name_PWHL']||'').trim();
+        const ver = String(row['Game Version']||'').trim();
+        if(!player || !ver) continue;
+        if(!eaByPlayer.has(player)) eaByPlayer.set(player, new Map());
+        const verMap = eaByPlayer.get(player);
+        if(!verMap.has(ver)) verMap.set(ver, row);
+      }
+      return eaRows;
+    }
+
+    function eaPlayersList(){
+      if(!eaByPlayer) return [];
+      return Array.from(eaByPlayer.keys()).sort((a,b)=>a.localeCompare(b));
+    }
+
+    function compareGameVersions(a, b){
+      const A = String(a ?? '');
+      const B = String(b ?? '');
+      if(A === B) return 0;
+      const aParts = A.match(/\d+|\D+/g) || [A];
+      const bParts = B.match(/\d+|\D+/g) || [B];
+      const n = Math.max(aParts.length, bParts.length);
+      for(let i=0;i<n;i++){
+        const ap = aParts[i];
+        const bp = bParts[i];
+        if(ap == null) return -1;
+        if(bp == null) return 1;
+        const aNum = /^\d+$/.test(ap);
+        const bNum = /^\d+$/.test(bp);
+        if(aNum && bNum){
+          const ai = Number(ap);
+          const bi = Number(bp);
+          if(ai !== bi) return ai - bi;
+        } else {
+          const c = String(ap).localeCompare(String(bp), undefined, { sensitivity: 'base' });
+          if(c !== 0) return c;
+        }
+      }
+      return A.localeCompare(B);
+    }
+
+    function versionsForPlayer(player){
+      if(!eaByPlayer) return [];
+      const m = eaByPlayer.get(player);
+      if(!m) return [];
+      return Array.from(m.keys()).sort(compareGameVersions);
+    }
+    function setSelectedGameVersion(v){
+      selectedGameVersion = v || '';
+      const btn = document.getElementById('gameVersionToggle');
+      if(btn) btn.textContent = selectedGameVersion || 'Select Game Version';
+    }
+    function buildGameVersionMenu(versions){
+      const menu = document.getElementById('gameVersionMenu');
+      if(!menu) return;
+      menu.innerHTML='';
+      const searchWrap=document.createElement('div'); searchWrap.className='search-box';
+      const search=document.createElement('input'); search.type='text'; search.placeholder='Search version...';
+      searchWrap.appendChild(search); menu.appendChild(searchWrap);
+      const listWrap=document.createElement('div'); listWrap.className='option-list'; menu.appendChild(listWrap);
+      function render(q=''){
+        listWrap.innerHTML='';
+        const term=(q||'').trim().toLowerCase();
+        const items = term ? (versions||[]).filter(v=>String(v).toLowerCase().includes(term)) : (versions||[]);
+        items.forEach(v=>{
+          const label=document.createElement('label');
+          const rb=document.createElement('input'); rb.type='radio'; rb.name='gameVersionRadio'; rb.value=v;
+          rb.checked = (v===selectedGameVersion);
+          rb.addEventListener('change',()=>{
+            setSelectedGameVersion(v);
+            document.getElementById('gameVersionDropdown').classList.remove('open');
+            saveSkatersState();
+            refreshActiveTab();
+          });
+          label.appendChild(rb);
+          const span=document.createElement('span'); span.textContent=v; label.appendChild(span);
+          listWrap.appendChild(label);
+        });
+      }
+      search.addEventListener('input',()=>render(search.value));
+      render('');
+    }
+    async function syncEaGameVersionsForPlayer(){
+      await loadEaRows();
+      const versions = versionsForPlayer(selectedPlayer);
+      if(versions.length){
+        if(!selectedGameVersion || !versions.includes(selectedGameVersion)){
+          setSelectedGameVersion(versions[versions.length-1]);
+        }
+        buildGameVersionMenu(versions);
+      } else {
+        setSelectedGameVersion('');
+        buildGameVersionMenu([]);
+      }
+    }
+
+    function numVal(row, key){
+      if(!row) return null;
+      const n = Number(String(row[key] ?? '').trim());
+      return Number.isFinite(n) ? n : null;
+    }
+    function avgInt(row, keys){
+      let sum=0, cnt=0;
+      for(const k of (keys||[])){
+        const v = numVal(row, k);
+        if(v==null) continue;
+        sum += v; cnt++;
+      }
+      if(!cnt) return null;
+      return Math.round(sum / cnt);
+    }
+    function setText(id, val){
+      const el=document.getElementById(id);
+      if(!el) return;
+      el.textContent = (val==null || val==='') ? '—' : String(val);
+    }
+
+    function clamp01(x){ return Math.max(0, Math.min(1, x)); }
+    function lerp(a,b,t){ return a + (b-a)*t; }
+    function ratingToRgb(val){
+      const v = Number(val);
+      if(!Number.isFinite(v)) return null;
+      const t = clamp01((v - 50) / 49);
+      const red = {r:239,g:68,b:68};     // worst
+      const blue = {r:59,g:130,b:246};   // best
+      return {
+        r: Math.round(lerp(red.r, blue.r, t)),
+        g: Math.round(lerp(red.g, blue.g, t)),
+        b: Math.round(lerp(red.b, blue.b, t)),
+        t
+      };
+    }
+    function resetEaCardStyles(){
+      const wrap = document.getElementById('eaCards');
+      if(!wrap) return;
+      wrap.querySelectorAll('[data-ea-card]').forEach(card=>{
+        card.style.background = '';
+        card.style.borderColor = '';
+        const v = card.querySelector('.value');
+        if(v) v.style.color = '';
+      });
+    }
+    function applyEaCardColors(){
+      const wrap = document.getElementById('eaCards');
+      if(!wrap) return;
+      wrap.querySelectorAll('[data-ea-card]').forEach(card=>{
+        const vEl = card.querySelector('.value');
+        const rgb = ratingToRgb(vEl ? vEl.textContent : null);
+        if(!rgb) return;
+        const {r,g,b} = rgb;
+        card.style.background = `rgba(${r},${g},${b},0.14)`;
+        card.style.borderColor = `rgba(${r},${g},${b},0.55)`;
+        if(vEl) vEl.style.color = `rgb(${r},${g},${b})`;
+      });
+    }
+
+    function setupCanvasToCss(canvas){
+      if(!canvas) return null;
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = Math.max(2, Math.floor(rect.width));
+      canvas.height = Math.max(2, Math.floor(rect.height));
+      return canvas.getContext('2d');
+    }
+
+    function axisClamp5099(v){
+      const n = Number(v);
+      if(!Number.isFinite(n)) return null;
+      return Math.max(50, Math.min(99, n));
+    }
+
+    function eaGroupedValuesFromRow(row){
+      // Groupings (excluding Overall)
+      return {
+        Technique: avgInt(row, ['Deking','Puck Control','Hand-Eye','Poise']),
+        Passing: avgInt(row, ['Passing','Off. Awareness']),
+        Skating: avgInt(row, ['Acceleration','Speed']),
+        Shooting: avgInt(row, ['Slap Shot Accuracy','Slap Shot Power','Wrist Shot Accuracy','Wrist Shot Power']),
+        Faceoffs: (function(){ const v=numVal(row,'Faceoffs'); return v==null ? null : Math.round(v); })(),
+        Physicality: avgInt(row, ['Strength','Durability','Endurance','Balance','Agility']),
+        Mentality: avgInt(row, ['Discipline','Aggressiveness']),
+        Defense: avgInt(row, ['Body Checking','Stick Checking','Def. Awareness'])
+      };
+    }
+
+    function eaLineMetricOptions(){
+      // Allow Overall plus the same grouped buckets shown in cards.
+      return ['Overall','Technique','Passing','Skating','Shooting','Faceoffs','Physicality','Mentality','Defense'];
+    }
+    function ensureEaLineMetricMenu(){
+      const sel = document.getElementById('eaLineMetric');
+      if(!sel) return;
+      if(sel.options && sel.options.length) return;
+      sel.innerHTML = '';
+      eaLineMetricOptions().forEach(m=>{
+        const opt=document.createElement('option');
+        opt.value = m; opt.textContent = m;
+        sel.appendChild(opt);
+      });
+      sel.value = selectedEaLineMetric || 'Overall';
+    }
+    function setSelectedEaLineMetric(m){
+      selectedEaLineMetric = m || 'Overall';
+      const sel = document.getElementById('eaLineMetric');
+      if(sel) sel.value = selectedEaLineMetric;
+    }
+
+    function eaDetailedMetricKeys(row){
+      if(!row) return [];
+      const excluded = new Set([
+        'Game Version','Name','Name_PWHL','PlayerID','Image','Team','Logo',
+        'Number','Position','Height','Weight','Age','Shoots','Player Type','Potential','Line Position',
+        'Overall','Fighting Skill'
+      ]);
+      const keys = Object.keys(row).filter(k=>k && !excluded.has(k) && numVal(row,k)!=null);
+      keys.sort((a,b)=>String(a).localeCompare(String(b)));
+      return keys;
+    }
+
+    // Hover models for EA charts
+    let eaRadarHoverModel = null; // { points:[{x,y,label,value}], threshold }
+    let eaTrendHoverModel = null; // { points:[{x,y,version,value,metric}], threshold }
+
+    function drawEaRadar(values, labelsOverride){
+      const canvas = document.getElementById('eaRadar');
+      const ctx = setupCanvasToCss(canvas);
+      if(!ctx) return;
+      const w = canvas.width, h = canvas.height;
+      ctx.clearRect(0,0,w,h);
+
+      // Background (slight depth)
+      const bg = ctx.createLinearGradient(0, 0, 0, h);
+      bg.addColorStop(0, '#0f172a');
+      bg.addColorStop(1, '#0b1220');
+      ctx.fillStyle = bg;
+      ctx.fillRect(0,0,w,h);
+
+      const labels = (labelsOverride && labelsOverride.length) ? labelsOverride : ['Technique','Passing','Skating','Shooting','Faceoffs','Physicality','Mentality','Defense'];
+      const n = labels.length;
+      const padding = 34;
+      const cx = Math.floor(w/2);
+      const cy = Math.floor(h/2);
+      const radius = Math.max(10, Math.min(cx, cy) - padding);
+      const minV = 50;
+      const maxV = 99;
+      function vToR(v){
+        const vv = axisClamp5099(v);
+        if(vv==null) return 0;
+        return ((vv - minV) / (maxV - minV)) * radius;
+      }
+
+      // Grid rings
+      const rings = [50, 60, 70, 80, 90, 99];
+      ctx.strokeStyle = 'rgba(148,163,184,.26)';
+      ctx.lineWidth = 1;
+      for(const rv of rings){
+        const rr = vToR(rv);
+        ctx.beginPath();
+        for(let i=0;i<n;i++){
+          const a = (-Math.PI/2) + (i * (2*Math.PI/n));
+          const x = cx + rr * Math.cos(a);
+          const y = cy + rr * Math.sin(a);
+          if(i===0) ctx.moveTo(x,y);
+          else ctx.lineTo(x,y);
+        }
+        ctx.closePath();
+        ctx.stroke();
+      }
+
+      // Axes + labels
+      ctx.font = (n > 14) ? '600 9px Segoe UI, Roboto, sans-serif' : (n > 10 ? '600 10px Segoe UI, Roboto, sans-serif' : '600 12px Segoe UI, Roboto, sans-serif');
+      ctx.fillStyle = 'rgba(248,250,252,.98)';
+      ctx.strokeStyle = 'rgba(203,213,225,.24)';
+      ctx.shadowColor = 'rgba(15,23,42,.85)';
+      ctx.shadowBlur = 6;
+      for(let i=0;i<n;i++){
+        const a = (-Math.PI/2) + (i * (2*Math.PI/n));
+        const x2 = cx + radius * Math.cos(a);
+        const y2 = cy + radius * Math.sin(a);
+        ctx.beginPath();
+        ctx.moveTo(cx, cy);
+        ctx.lineTo(x2, y2);
+        ctx.stroke();
+
+        const labelPad = (n > 10) ? 16 : 14;
+        const lx = cx + (radius + labelPad) * Math.cos(a);
+        const ly = cy + (radius + labelPad) * Math.sin(a);
+        const align = (Math.cos(a) > 0.35) ? 'left' : (Math.cos(a) < -0.35 ? 'right' : 'center');
+        const base = (Math.sin(a) > 0.35) ? 'top' : (Math.sin(a) < -0.35 ? 'bottom' : 'middle');
+        ctx.textAlign = align;
+        ctx.textBaseline = base;
+        ctx.fillText(labels[i], lx, ly);
+      }
+      ctx.shadowBlur = 0;
+
+      // Data polygon (brighter for readability)
+      const lineColor = 'rgba(226,232,240,.95)';
+      ctx.strokeStyle = lineColor;
+      ctx.lineWidth = 2.5;
+      ctx.lineJoin = 'round';
+      ctx.beginPath();
+
+      const hoverPoints = [];
+      for(let i=0;i<n;i++){
+        const lab = labels[i];
+        const rr = vToR(values ? values[lab] : null);
+        const a = (-Math.PI/2) + (i * (2*Math.PI/n));
+        const x = cx + rr * Math.cos(a);
+        const y = cy + rr * Math.sin(a);
+        hoverPoints.push({ x, y, label: lab, value: values ? values[lab] : null });
+        if(i===0) ctx.moveTo(x,y);
+        else ctx.lineTo(x,y);
+      }
+      ctx.closePath();
+      ctx.fillStyle = 'rgba(185,167,255,.22)';
+      ctx.fill();
+      ctx.stroke();
+
+      // Points
+      ctx.fillStyle = lineColor;
+      for(let i=0;i<n;i++){
+        const lab = labels[i];
+        const rr = vToR(values ? values[lab] : null);
+        const a = (-Math.PI/2) + (i * (2*Math.PI/n));
+        const x = cx + rr * Math.cos(a);
+        const y = cy + rr * Math.sin(a);
+        ctx.beginPath();
+        ctx.arc(x, y, 3.4, 0, Math.PI*2);
+        ctx.fill();
+      }
+
+      // Store hover hit-test model
+      eaRadarHoverModel = { points: hoverPoints, threshold: (n > 10 ? 12 : 10) };
+
+      // (No min/max annotation — keep clean.)
+    }
+
+    const eaLogoCache = new Map();
+    function getCachedLogoImage(url){
+      const u = String(url||'').trim();
+      if(!u) return null;
+      const existing = eaLogoCache.get(u);
+      if(existing){
+        return existing.loaded ? existing.img : null;
+      }
+      const img = new Image();
+      // First try with CORS enabled; if the host doesn't allow it, we'll retry without.
+      img.crossOrigin = 'anonymous';
+      const entry = { img, loaded:false, error:false, retried:false };
+      eaLogoCache.set(u, entry);
+      img.onload = ()=>{
+        entry.loaded = true;
+        if(typeof activeSkaterTab !== 'undefined' && activeSkaterTab === 'ea'){
+          // Redraw to swap placeholders for logos.
+          drawEaOverallTrend(selectedPlayer, selectedEaLineMetric);
+        }
+      };
+      img.onerror = ()=>{
+        if(entry.retried) { entry.error = true; return; }
+        // Retry without crossOrigin. Drawing cross-origin images is fine for our use
+        // case as long as we don't read pixels back from the canvas.
+        entry.retried = true;
+        const img2 = new Image();
+        entry.img = img2;
+        img2.onload = ()=>{
+          entry.loaded = true;
+          if(typeof activeSkaterTab !== 'undefined' && activeSkaterTab === 'ea'){
+            drawEaOverallTrend(selectedPlayer, selectedEaLineMetric);
+          }
+        };
+        img2.onerror = ()=>{ entry.error = true; };
+        img2.src = u;
+      };
+      img.src = u;
+      return null;
+    }
+
+    function sortGameVersions(versions){
+      const toNum = (s)=>{
+        const m = String(s||'').match(/(\d+)/);
+        return m ? Number(m[1]) : NaN;
+      };
+      return (versions||[]).slice().sort((a,b)=>{
+        const an = toNum(a);
+        const bn = toNum(b);
+        if(Number.isFinite(an) && Number.isFinite(bn) && an!==bn) return an - bn;
+        return String(a).localeCompare(String(b));
+      });
+    }
+
+    function drawEaOverallTrend(player, metricName){
+      const canvas = document.getElementById('eaOverallTrend');
+      const ctx = setupCanvasToCss(canvas);
+      if(!ctx) return;
+      const w = canvas.width, h = canvas.height;
+      ctx.clearRect(0,0,w,h);
+      const bg = ctx.createLinearGradient(0, 0, 0, h);
+      bg.addColorStop(0, '#0f172a');
+      bg.addColorStop(1, '#0b1220');
+      ctx.fillStyle = bg;
+      ctx.fillRect(0,0,w,h);
+
+      if(!eaByPlayer || !player || !eaByPlayer.get(player)){
+        ctx.fillStyle = 'rgba(203,213,225,.75)';
+        ctx.font = '12px Segoe UI, Roboto, sans-serif';
+        ctx.textAlign = 'left';
+        ctx.textBaseline = 'top';
+        ctx.fillText('No EA data for player.', 12, 12);
+        return;
+      }
+
+      const verMap = eaByPlayer.get(player);
+      const versions = sortGameVersions(Array.from(verMap.keys()));
+      const points = versions.map(v=>{
+        const row = verMap.get(v);
+        let yVal = null;
+        const m = String(metricName||'Overall');
+        if(m === 'Overall') yVal = numVal(row, 'Overall');
+        else {
+          const g = eaGroupedValuesFromRow(row);
+          yVal = (g && g[m]!=null) ? Number(g[m]) : null;
+        }
+        return {v, y: yVal, logo: (row ? (row['Logo']||'') : '')};
+      }).filter(p=>p.y!=null);
+
+      if(points.length < 1){
+        ctx.fillStyle = 'rgba(203,213,225,.75)';
+        ctx.font = '12px Segoe UI, Roboto, sans-serif';
+        ctx.textAlign = 'left';
+        ctx.textBaseline = 'top';
+        ctx.fillText('No values found for selected metric.', 12, 12);
+        return;
+      }
+
+      const padding = {l:46, r:16, t:16, b:104};
+      const plotW = Math.max(1, w - padding.l - padding.r);
+      const plotH = Math.max(1, h - padding.t - padding.b);
+      const minY = 50;
+      const maxY = 99;
+      function xToPx(i){
+        if(points.length===1) return padding.l + plotW * 0.5;
+        const t = i / (points.length - 1);
+        const xPad = Math.max(10, Math.min(26, plotW * 0.06));
+        return padding.l + xPad + t * Math.max(1, (plotW - 2*xPad));
+      }
+      function yToPx(val){
+        const t = (val - minY) / (maxY - minY);
+        return padding.t + plotH - t * plotH;
+      }
+
+      // Axes
+      ctx.strokeStyle = 'rgba(203,213,225,.48)';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(padding.l, padding.t);
+      ctx.lineTo(padding.l, padding.t + plotH);
+      ctx.lineTo(padding.l + plotW, padding.t + plotH);
+      ctx.stroke();
+
+      // Y ticks
+      ctx.font = '12px Segoe UI, Roboto, sans-serif';
+      ctx.fillStyle = 'rgba(203,213,225,.86)';
+      ctx.textAlign = 'right';
+      ctx.textBaseline = 'middle';
+      const yTicks = [50, 60, 70, 80, 90, 99];
+      for(const tv of yTicks){
+        const py = yToPx(tv);
+        ctx.strokeStyle = 'rgba(148,163,184,.20)';
+        ctx.beginPath();
+        ctx.moveTo(padding.l, py);
+        ctx.lineTo(padding.l + plotW, py);
+        ctx.stroke();
+        ctx.fillText(String(tv), padding.l - 8, py);
+      }
+
+      // Line
+      const lineColor = 'rgba(185,167,255,.95)';
+      ctx.strokeStyle = lineColor;
+      ctx.lineWidth = 2.5;
+      ctx.lineJoin = 'round';
+      ctx.lineCap = 'round';
+      ctx.beginPath();
+      for(let i=0;i<points.length;i++){
+        const px = xToPx(i);
+        const py = yToPx(axisClamp5099(points[i].y) ?? 50);
+        if(i===0) ctx.moveTo(px, py);
+        else ctx.lineTo(px, py);
+      }
+      ctx.stroke();
+
+      // Points
+      ctx.fillStyle = lineColor;
+      const trendHoverPoints = [];
+      for(let i=0;i<points.length;i++){
+        const px = xToPx(i);
+        const py = yToPx(axisClamp5099(points[i].y) ?? 50);
+        trendHoverPoints.push({ x: px, y: py, version: points[i].v, value: points[i].y, metric: String(metricName||'Overall') });
+        const logoImg = getCachedLogoImage(points[i].logo);
+        if(logoImg){
+          const size = 34;
+          ctx.save();
+          ctx.beginPath();
+          ctx.arc(px, py, size/2, 0, Math.PI*2);
+          ctx.clip();
+          ctx.drawImage(logoImg, px - size/2, py - size/2, size, size);
+          ctx.restore();
+          ctx.strokeStyle = 'rgba(15,23,42,.9)';
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.arc(px, py, size/2, 0, Math.PI*2);
+          ctx.stroke();
+        } else {
+          ctx.beginPath();
+          ctx.arc(px, py, 3.2, 0, Math.PI*2);
+          ctx.fill();
+        }
+      }
+
+      eaTrendHoverModel = { points: trendHoverPoints, threshold: 18 };
+
+      // X ticks + labels (every Game Version)
+      const xBase = padding.t + plotH;
+      ctx.strokeStyle = 'rgba(203,213,225,.28)';
+      ctx.lineWidth = 1;
+      for(let i=0;i<points.length;i++){
+        const px = xToPx(i);
+        ctx.beginPath();
+        ctx.moveTo(px, xBase);
+        ctx.lineTo(px, xBase + 7);
+        ctx.stroke();
+      }
+      ctx.fillStyle = 'rgba(203,213,225,.88)';
+      ctx.font = '600 12px Segoe UI, Roboto, sans-serif';
+      for(let i=0;i<points.length;i++){
+        const px = xToPx(i);
+        const label = String(points[i].v||'');
+        ctx.save();
+        ctx.translate(px, xBase + 16);
+        ctx.shadowColor = 'rgba(15,23,42,.85)';
+        ctx.shadowBlur = 6;
+        ctx.rotate(-Math.PI/6);
+        ctx.textAlign = 'right';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(label, 0, 0);
+        ctx.restore();
+      }
+    }
+
+    function fmtMetricValue(v){
+      const n = Number(v);
+      if(!Number.isFinite(n)) return '—';
+      return String(Math.round(n));
+    }
+
+    function initEaChartHover(){
+      const radar = document.getElementById('eaRadar');
+      const trend = document.getElementById('eaOverallTrend');
+
+      function getLocalPos(canvas, evt){
+        const rect = canvas.getBoundingClientRect();
+        const sx = canvas.width / Math.max(1, rect.width);
+        const sy = canvas.height / Math.max(1, rect.height);
+        const x = (evt.clientX - rect.left) * sx;
+        const y = (evt.clientY - rect.top) * sy;
+        return { x, y };
+      }
+
+      function findNearest(model, x, y){
+        if(!model || !model.points || !model.points.length) return null;
+        const thr = model.threshold || 12;
+        const thr2 = thr*thr;
+        let best = null;
+        let bestD = Infinity;
+        for(const p of model.points){
+          const dx = p.x - x;
+          const dy = p.y - y;
+          const d2 = dx*dx + dy*dy;
+          if(d2 <= thr2 && d2 < bestD){ best = p; bestD = d2; }
+        }
+        return best;
+      }
+
+      if(radar){
+        radar.addEventListener('mousemove', (evt)=>{
+          if(activeSkaterTab !== 'ea') return;
+          const {x,y} = getLocalPos(radar, evt);
+          const hit = findNearest(eaRadarHoverModel, x, y);
+          if(!hit){ hideTooltip(); return; }
+          showTooltip(evt, `<div style="font-weight:650;margin-bottom:.15rem">${hit.label}</div><div>Value: ${fmtMetricValue(hit.value)}</div>`);
+        });
+        radar.addEventListener('mouseleave', ()=>hideTooltip());
+      }
+
+      if(trend){
+        trend.addEventListener('mousemove', (evt)=>{
+          if(activeSkaterTab !== 'ea') return;
+          const {x,y} = getLocalPos(trend, evt);
+          const hit = findNearest(eaTrendHoverModel, x, y);
+          if(!hit){ hideTooltip(); return; }
+          showTooltip(evt, `<div style="font-weight:650;margin-bottom:.15rem">${hit.metric}</div><div>${hit.version}: ${fmtMetricValue(hit.value)}</div>`);
+        });
+        trend.addEventListener('mouseleave', ()=>hideTooltip());
+      }
+    }
+
+    function clearEaCharts(){
+      const r=document.getElementById('eaRadar');
+      if(r){ const ctx=setupCanvasToCss(r); if(ctx){ ctx.clearRect(0,0,r.width,r.height); } }
+      const t=document.getElementById('eaOverallTrend');
+      if(t){ const ctx=setupCanvasToCss(t); if(ctx){ ctx.clearRect(0,0,t.width,t.height); } }
+    }
+
+    async function renderEaTab(){
+      const msg=document.getElementById('eaMessage');
+      if(msg) msg.textContent='';
+      ensureEaLineMetricMenu();
+      await loadEaRows();
+      if(!eaByPlayer){
+        if(msg) msg.textContent='EA ratings file could not be loaded.';
+        clearEaCharts();
+        return;
+      }
+      const verMap = eaByPlayer.get(selectedPlayer);
+      if(!verMap){
+        if(msg) msg.textContent='No EA ratings found for this player.';
+        ['ea-overall','ea-technique','ea-passing','ea-skating','ea-shooting','ea-faceoffs','ea-physicality','ea-mentality','ea-defense'].forEach(id=>setText(id,'—'));
+        resetEaCardStyles();
+        document.getElementById('playerName').textContent = selectedPlayer || '—';
+        document.getElementById('playerMeta').textContent = '—';
+        clearEaCharts();
+        return;
+      }
+
+      const versions = versionsForPlayer(selectedPlayer);
+      if(!selectedGameVersion || !versions.includes(selectedGameVersion)) setSelectedGameVersion(versions[versions.length-1] || '');
+      buildGameVersionMenu(versions);
+
+      const row = (selectedGameVersion && verMap.get(selectedGameVersion)) ? verMap.get(selectedGameVersion) : (verMap.get(versions[versions.length-1]) || null);
+      if(!row){
+        if(msg) msg.textContent='No EA ratings found for this player/version.';
+        clearEaCharts();
+        return;
+      }
+
+      document.getElementById('playerName').textContent = String(row['Name_PWHL']||selectedPlayer||'—');
+      const metaParts=[];
+      if(row['Number']) metaParts.push('#'+row['Number']);
+      if(row['Position']) metaParts.push(row['Position']);
+      if(row['Age']) metaParts.push('Age: '+row['Age']);
+      if(row['Team']) metaParts.push(row['Team']);
+      if(row['Height']) metaParts.push(row['Height']);
+      if(row['Weight']) metaParts.push(row['Weight']);
+      if(row['Shoots']) metaParts.push('Shoots: '+row['Shoots']);
+      if(row['Player Type']) metaParts.push(row['Player Type']);
+      if(row['Potential']) metaParts.push(row['Potential']);
+      document.getElementById('playerMeta').textContent = metaParts.length ? metaParts.join(' • ') : '—';
+
+      const imgUrl = String(row['Image']||'').trim();
+      if(imgUrl){
+        const img=document.getElementById('playerAvatar');
+        if(img) img.src = imgUrl;
+      } else {
+        updateAvatar();
+      }
+
+      // Cards (remember these groupings)
+      const overall = numVal(row, 'Overall');
+      setText('ea-overall', overall==null ? '—' : Math.round(overall));
+      setText('ea-technique', avgInt(row, ['Deking','Puck Control','Hand-Eye','Poise']) ?? '—');
+      setText('ea-passing', avgInt(row, ['Passing','Off. Awareness']) ?? '—');
+      setText('ea-skating', avgInt(row, ['Acceleration','Speed']) ?? '—');
+      setText('ea-shooting', avgInt(row, ['Slap Shot Accuracy','Slap Shot Power','Wrist Shot Accuracy','Wrist Shot Power']) ?? '—');
+      const faceoffs = numVal(row, 'Faceoffs');
+      setText('ea-faceoffs', faceoffs==null ? '—' : Math.round(faceoffs));
+      setText('ea-physicality', avgInt(row, ['Strength','Durability','Endurance','Balance','Agility']) ?? '—');
+      setText('ea-mentality', avgInt(row, ['Discipline','Aggressiveness']) ?? '—');
+      setText('ea-defense', avgInt(row, ['Body Checking','Stick Checking','Def. Awareness']) ?? '—');
+
+      resetEaCardStyles();
+      applyEaCardColors();
+
+      // Charts
+      const radarModeSel = document.getElementById('eaRadarMode');
+      const radarMode = radarModeSel ? radarModeSel.value : 'grouped';
+      if(radarMode === 'detailed'){
+        const labels = eaDetailedMetricKeys(row);
+        const values = {};
+        for(const k of labels) values[k] = numVal(row, k);
+        drawEaRadar(values, labels);
+      } else {
+        drawEaRadar(eaGroupedValuesFromRow(row));
+      }
+      // Trend ignores the Game Version slicer (uses all versions for the selected player)
+      drawEaOverallTrend(selectedPlayer, selectedEaLineMetric);
     }
 
     // Team color cache
@@ -342,6 +1262,7 @@
 
         if(hitId && selectedZoneId === hitId) hitId = ''; // toggle off
         setSelectedZone(hitId);
+        saveSkatersState();
 
         // Recompute table (zone-filtered) + redraw heat highlight + redraw shot map
         updateGoalieTableFromAttempts();
@@ -418,6 +1339,46 @@
     let allAttempts=[];
     let selectedGoalie='';
     function setSelectedGoalie(name){ selectedGoalie = name || ''; }
+
+    // Sub-tabs (EA Ratings / Shooting / Performance)
+    let activeSkaterTab = 'shooting';
+    function updateFilterVisibilityForTab(){
+      const eaOnly = document.getElementById('eaOnlyFilters');
+      const nonEa = document.getElementById('nonEaFilters');
+      const statCards = document.getElementById('skaterStatCards');
+      const eaCards = document.getElementById('eaCards');
+      const isEa = (activeSkaterTab === 'ea');
+      if(eaOnly) eaOnly.classList.toggle('hidden', !isEa);
+      if(nonEa) nonEa.classList.toggle('hidden', isEa);
+      if(statCards) statCards.classList.toggle('hidden', isEa);
+      if(eaCards) eaCards.classList.toggle('hidden', !isEa);
+    }
+    function setSkaterTab(tab){
+      activeSkaterTab = tab || 'shooting';
+      document.querySelectorAll('#skaterTabs .subtab').forEach(btn=>{
+        const t = btn.getAttribute('data-tab');
+        const isActive = (t === activeSkaterTab);
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+      document.querySelectorAll('.subtab-panel').forEach(p=>p.classList.remove('active'));
+      const panel = document.getElementById('tab-' + activeSkaterTab);
+      if(panel) panel.classList.add('active');
+      updateFilterVisibilityForTab();
+      // Ensure view is updated immediately when switching tabs.
+      saveSkatersState();
+      refreshActiveTab();
+    }
+    function initSkaterTabs(){
+      const wrap = document.getElementById('skaterTabs');
+      if(!wrap) return;
+      wrap.querySelectorAll('.subtab').forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          const tab = btn.getAttribute('data-tab') || 'shooting';
+          setSkaterTab(tab);
+        });
+      });
+    }
 
     // Goalie table sorting
     let goalieRows=[];
@@ -529,14 +1490,22 @@
       if(!r.ok) return;
       const data=await r.json();
       allPlayers = (data.players||[]);
-      if(!selectedPlayer && allPlayers.length){
+      if((!selectedPlayer || !allPlayers.includes(selectedPlayer)) && allPlayers.length){
         setSelectedPlayer(allPlayers[0]);
       }
       buildPlayerMenu(allPlayers);
       buildMenu('seasons', data.seasons||[]);
       buildMenu('season_states', data.season_states||[]);
       buildMenu('strengths', data.strengths||[]);
-      multiIds.forEach(updateButtonLabel);
+      // Restore multi-select filter state (if present)
+      if(pendingRestoreState && pendingRestoreState.multi){
+        applyMultiSelections('seasons', pendingRestoreState.multi.seasons);
+        applyMultiSelections('season_states', pendingRestoreState.multi.season_states);
+        applyMultiSelections('strengths', pendingRestoreState.multi.strengths);
+      } else {
+        multiIds.forEach(updateButtonLabel);
+      }
+      await syncEaGameVersionsForPlayer();
     }
     function params(){ const p=new URLSearchParams(); p.set('player', selectedPlayer); multiIds.forEach(id=>{ getMultiValues(id).forEach(v=>p.append(id, v)); }); return p; }
     async function fetchStats(){
@@ -572,6 +1541,261 @@
       await drawShotMap(allAttempts);
     }
 
+    // Performance
+    let performanceData = null;
+    function metricIsFloat(metric){ return metric==='xG' || metric==='GAx'; }
+    function yFmt(metric, v, mode){
+      const num = Number(v);
+      if(!Number.isFinite(num)) return '0';
+      if(metricIsFloat(metric)) return (Math.round(num*100)/100).toFixed(2);
+      // Moving average can be fractional even for integer metrics
+      if(mode==='ma') return (Math.round(num*100)/100).toFixed(2);
+      return String(Math.round(num));
+    }
+    function setupChartCanvas(canvas){
+      if(!canvas) return null;
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = Math.max(2, Math.floor(rect.width));
+      canvas.height = Math.max(2, Math.floor(rect.height));
+      return canvas.getContext('2d');
+    }
+    function drawPerformanceChart(){
+      const canvas = document.getElementById('perfChart');
+      const ctx = setupChartCanvas(canvas);
+      if(!ctx) return;
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+
+      const metricSel = document.getElementById('perfMetric');
+      const metric = metricSel ? metricSel.value : 'Points';
+      const modeSel = document.getElementById('perfMode');
+      const mode = modeSel ? modeSel.value : 'running';
+      const maIn = document.getElementById('perfMaWindow');
+      const maWindow = Math.max(1, Math.floor(Number(maIn ? maIn.value : 5) || 5));
+      const games = (performanceData && performanceData.games) ? performanceData.games : [];
+      const xs = games.map(g=>Number(g.gameNumber||0)).filter(n=>Number.isFinite(n) && n>0);
+      const perGame = games.map(g=>{
+        const pv = (g.per_game && g.per_game[metric] != null) ? g.per_game[metric] : 0;
+        const n = Number(pv);
+        return Number.isFinite(n) ? n : 0;
+      });
+      const running = games.map(g=>{
+        const rv = (g.running && g.running[metric] != null) ? g.running[metric] : 0;
+        const n = Number(rv);
+        return Number.isFinite(n) ? n : 0;
+      });
+      const ys = (mode === 'ma') ? (function(){
+        const out=[];
+        for(let i=0;i<perGame.length;i++){
+          const start=Math.max(0, i - maWindow + 1);
+          let sum=0;
+          for(let j=start;j<=i;j++) sum += perGame[j];
+          out.push(sum / (i - start + 1));
+        }
+        return out;
+      })() : running;
+
+      // If no data, render an empty frame.
+      const padding = {l:56, r:18, t:28, b:38};
+      const w = canvas.width, h = canvas.height;
+      const plotW = Math.max(1, w - padding.l - padding.r);
+      const plotH = Math.max(1, h - padding.t - padding.b);
+
+      // Background
+      ctx.fillStyle = '#0f172a';
+      ctx.fillRect(0,0,w,h);
+
+      // (Intentionally no chart title/header; controls already show metric + mode.)
+
+      // Axes
+      ctx.strokeStyle = 'rgba(203,213,225,.45)';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(padding.l, padding.t);
+      ctx.lineTo(padding.l, padding.t + plotH);
+      ctx.lineTo(padding.l + plotW, padding.t + plotH);
+      ctx.stroke();
+
+      if(!xs.length){
+        ctx.fillStyle = 'rgba(203,213,225,.75)';
+        ctx.font = '12px Segoe UI, Roboto, sans-serif';
+        ctx.fillText('No games found for current filters.', padding.l, padding.t + 18);
+        return;
+      }
+
+      const xMin = 1;
+      const xMax = Math.max(...xs);
+      const yMin = Math.min(0, Math.min(...ys));
+      const yMax = Math.max(yMin + 1e-6, Math.max(...ys));
+
+      function xToPx(x){
+        const t = (xMax === xMin) ? 0 : ((x - xMin) / (xMax - xMin));
+        return padding.l + t * plotW;
+      }
+      function yToPx(y){
+        const t = (yMax === yMin) ? 0 : ((y - yMin) / (yMax - yMin));
+        return padding.t + plotH - t * plotH;
+      }
+
+      // Season shading + boundaries + labels
+      const seasons = games.map(g=>String(g.season||''));
+      const segments=[];
+      let curStart=1;
+      for(let i=0;i<seasons.length;i++){
+        const s = seasons[i];
+        const prev = (i===0) ? s : seasons[i-1];
+        if(i>0 && s !== prev){
+          segments.push({season: prev, start: curStart, end: i});
+          curStart = i+1;
+        }
+      }
+      segments.push({season: seasons[seasons.length-1] || '', start: curStart, end: seasons.length});
+
+      for(let si=0; si<segments.length; si++){
+        const seg=segments[si];
+        const x0 = xToPx(seg.start);
+        const x1 = xToPx(seg.end);
+        ctx.fillStyle = (si % 2 === 0) ? 'rgba(185,167,255,.05)' : 'rgba(255,255,255,.03)';
+        ctx.fillRect(x0, padding.t, (x1 - x0), plotH);
+        if(si>0){
+          const boundaryX = xToPx(seg.start - 0.5);
+          ctx.strokeStyle = 'rgba(203,213,225,.32)';
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(boundaryX, padding.t);
+          ctx.lineTo(boundaryX, padding.t + plotH);
+          ctx.stroke();
+        }
+
+        // Season label (above plot area)
+        const label = seg.season || '';
+        if(label){
+          const midX = (x0 + x1) / 2;
+          ctx.save();
+          ctx.font = '600 13px Segoe UI, Roboto, sans-serif';
+          ctx.fillStyle = 'rgba(203,213,225,.82)';
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'top';
+          const labelY = Math.max(2, padding.t - 16);
+          ctx.fillText(label, midX, labelY);
+          ctx.restore();
+        }
+      }
+
+      // Grid + y ticks
+      const yTicks = 5;
+      ctx.font = '11px Segoe UI, Roboto, sans-serif';
+      for(let i=0;i<=yTicks;i++){
+        const tv = yMin + (yMax - yMin) * (i / yTicks);
+        const py = yToPx(tv);
+        ctx.strokeStyle = 'rgba(148,163,184,.18)';
+        ctx.beginPath();
+        ctx.moveTo(padding.l, py);
+        ctx.lineTo(padding.l + plotW, py);
+        ctx.stroke();
+        ctx.fillStyle = 'rgba(203,213,225,.75)';
+        ctx.textAlign = 'right';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(yFmt(metric, tv, mode), padding.l - 8, py);
+      }
+
+      // X label ticks (start, mid, end)
+      const xTicks = [1, Math.ceil(xMax/2), xMax].filter((v,i,a)=>a.indexOf(v)===i);
+      ctx.fillStyle = 'rgba(203,213,225,.75)';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'top';
+      for(const xv of xTicks){
+        const px = xToPx(xv);
+        ctx.fillText(String(xv), px, padding.t + plotH + 8);
+      }
+      ctx.textAlign = 'left';
+      ctx.textBaseline = 'top';
+      ctx.fillText('Game #', padding.l + plotW - 48, padding.t + plotH + 8);
+
+      // Baseline (y=0) if range includes negatives
+      if(yMin < 0 && yMax > 0){
+        const y0 = yToPx(0);
+        ctx.strokeStyle = 'rgba(229,231,235,.22)';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(padding.l, y0);
+        ctx.lineTo(padding.l + plotW, y0);
+        ctx.stroke();
+      }
+
+      // Line + subtle area fill
+      const lineColor = 'rgba(185,167,255,.95)';
+      const fillGrad = ctx.createLinearGradient(0, padding.t, 0, padding.t + plotH);
+      fillGrad.addColorStop(0, 'rgba(185,167,255,.18)');
+      fillGrad.addColorStop(1, 'rgba(185,167,255,0)');
+
+      ctx.lineJoin = 'round';
+      ctx.lineCap = 'round';
+
+      // Area
+      ctx.beginPath();
+      for(let i=0;i<ys.length;i++){
+        const x = i+1;
+        const y = ys[i];
+        const px = xToPx(x);
+        const py = yToPx(y);
+        if(i===0) ctx.moveTo(px,py);
+        else ctx.lineTo(px,py);
+      }
+      const lastX = xToPx(ys.length);
+      const baseY = yToPx(Math.max(yMin, 0));
+      ctx.lineTo(lastX, baseY);
+      ctx.lineTo(xToPx(1), baseY);
+      ctx.closePath();
+      ctx.fillStyle = fillGrad;
+      ctx.fill();
+
+      // Stroke
+      ctx.strokeStyle = lineColor;
+      ctx.lineWidth = 2.25;
+      ctx.beginPath();
+      for(let i=0;i<ys.length;i++){
+        const x = i+1;
+        const y = ys[i];
+        const px = xToPx(x);
+        const py = yToPx(y);
+        if(i===0) ctx.moveTo(px,py);
+        else ctx.lineTo(px,py);
+      }
+      ctx.stroke();
+
+      // Emphasize last point
+      const lastY = ys[ys.length-1];
+      const lpX = xToPx(ys.length);
+      const lpY = yToPx(lastY);
+      ctx.fillStyle = lineColor;
+      ctx.beginPath();
+      ctx.arc(lpX, lpY, 3.5, 0, Math.PI*2);
+      ctx.fill();
+      // (No end-value label; keeps chart cleaner.)
+    }
+
+    async function fetchPerformance(){
+      const r = await fetch('/api/skaters/performance?' + params().toString());
+      if(!r.ok) return;
+      performanceData = await r.json();
+      drawPerformanceChart();
+    }
+
+    function refreshActiveTab(){
+      // Always update player identity card immediately.
+      if(activeSkaterTab === 'ea'){
+        renderEaTab();
+        return;
+      }
+      updateAvatar();
+      fetchStats();
+      if(activeSkaterTab === 'performance'){
+        fetchPerformance();
+      } else if(activeSkaterTab === 'shooting'){
+        fetchShotMap();
+      }
+    }
+
     function renderGoalieTable(rows){
       const body=document.getElementById('goalieTableBody');
       body.innerHTML='';
@@ -593,6 +1817,7 @@
           } else {
             setSelectedGoalie(row.Goaltender);
           }
+          saveSkatersState();
           // Re-render selection + redraw shots
           renderGoalieTable(goalieRows);
           drawShotMap(allAttempts);
@@ -618,12 +1843,98 @@
         updateButtonLabel(id);
         setSelectedGoalie('');
         setSelectedZone('');
-        fetchStats();
-        fetchShotMap();
+        saveSkatersState();
+        refreshActiveTab();
       });
     });
 
-    (async()=>{ await populateFilters(); await drawZoneBases(); initGoalieTableSorting(); attachHeatZoneEvents(); updateAvatar(); await fetchStats(); await fetchShotMap(); window.addEventListener('resize',()=>{ drawZoneBases(); fetchShotMap(); }); })();
+    function syncPerfControls(){
+      const modeSel=document.getElementById('perfMode');
+      const ma=document.getElementById('perfMaWindow');
+      if(!modeSel || !ma) return;
+      ma.disabled = (modeSel.value !== 'ma');
+    }
+    document.addEventListener('change', (e)=>{
+      if(!e || !e.target) return;
+      if(e.target.id === 'perfMetric' || e.target.id === 'perfMode'){
+        syncPerfControls();
+        saveSkatersState();
+        drawPerformanceChart();
+      }
+    });
+    document.addEventListener('input', (e)=>{
+      if(e && e.target && e.target.id === 'perfMaWindow'){
+        saveSkatersState();
+        drawPerformanceChart();
+      }
+    });
+
+    document.addEventListener('change', (e)=>{
+      if(!e || !e.target) return;
+      if(e.target.id === 'eaRadarMode'){
+        saveSkatersState();
+        if(activeSkaterTab === 'ea') renderEaTab();
+      }
+      if(e.target.id === 'eaLineMetric'){
+        setSelectedEaLineMetric(e.target.value);
+        saveSkatersState();
+        if(activeSkaterTab === 'ea'){
+          drawEaOverallTrend(selectedPlayer, selectedEaLineMetric);
+        }
+      }
+    });
+
+    (async()=>{
+      // Load persisted state before initial fetches
+      pendingRestoreState = loadSkatersState();
+      if(pendingRestoreState){
+        if(pendingRestoreState.selectedPlayer) setSelectedPlayer(pendingRestoreState.selectedPlayer);
+        if(pendingRestoreState.selectedGameVersion) setSelectedGameVersion(pendingRestoreState.selectedGameVersion);
+        if(pendingRestoreState.selectedEaLineMetric) setSelectedEaLineMetric(pendingRestoreState.selectedEaLineMetric);
+        if(pendingRestoreState.shooting){
+          if(pendingRestoreState.shooting.selectedGoalie) setSelectedGoalie(pendingRestoreState.shooting.selectedGoalie);
+          if(pendingRestoreState.shooting.selectedZoneId) setSelectedZone(pendingRestoreState.shooting.selectedZoneId);
+        }
+      }
+      await populateFilters();
+      await drawZoneBases();
+      initGoalieTableSorting();
+      attachHeatZoneEvents();
+      initSkaterTabs();
+      initEaChartHover();
+      // Restore control selections (EA + Performance) after DOM is ready
+      if(pendingRestoreState){
+        const radarModeSel = document.getElementById('eaRadarMode');
+        if(radarModeSel && pendingRestoreState.eaRadarMode) radarModeSel.value = pendingRestoreState.eaRadarMode;
+        const lineMetricSel = document.getElementById('eaLineMetric');
+        if(lineMetricSel && (pendingRestoreState.ea && pendingRestoreState.ea.lineMetric)){
+          setSelectedEaLineMetric(pendingRestoreState.ea.lineMetric);
+          lineMetricSel.value = pendingRestoreState.ea.lineMetric;
+        }
+        const perfMetricSel = document.getElementById('perfMetric');
+        const perfModeSel = document.getElementById('perfMode');
+        const perfMaIn = document.getElementById('perfMaWindow');
+        if(perfMetricSel && pendingRestoreState.performance && pendingRestoreState.performance.metric) perfMetricSel.value = pendingRestoreState.performance.metric;
+        if(perfModeSel && pendingRestoreState.performance && pendingRestoreState.performance.mode) perfModeSel.value = pendingRestoreState.performance.mode;
+        if(perfMaIn && pendingRestoreState.performance && pendingRestoreState.performance.maWindow!=null) perfMaIn.value = String(pendingRestoreState.performance.maWindow);
+      }
+
+      // Restore tab and trigger initial render
+      const tabToUse = (pendingRestoreState && pendingRestoreState.activeSkaterTab) ? pendingRestoreState.activeSkaterTab : 'shooting';
+      pendingRestoreState = null;
+      setSkaterTab(tabToUse);
+      syncPerfControls();
+      window.addEventListener('resize',()=>{
+        if(activeSkaterTab === 'shooting'){
+          drawZoneBases();
+          fetchShotMap();
+        } else if(activeSkaterTab === 'ea'){
+          renderEaTab();
+        } else if(activeSkaterTab === 'performance'){
+          drawPerformanceChart();
+        }
+      });
+    })();
   </script>
 </body>
 </html>

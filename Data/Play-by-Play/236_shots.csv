@@ -1,1 +1,106 @@
-id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,xG,ScoreState,BoxID,game_id,game_date,competition,season,state
+1,0:07,Shot,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,1,event,5v5,3,Cayla Barnes,,,,,35,Ann-Renée Desbiens,,,,,,,41.0,23.5,0.0386,0,O22,236,2025-12-23,PWHL,2025/2026,Regular Season
+2,0:54,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,1,event,5v5,27,Shiann Darkangelo,,,,,83,Hannah Murphy,,,,,,,61.3,31.4,0.0150,0,O18,236,2025-12-23,PWHL,2025/2026,Regular Season
+3,1:06,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,1,event,5v5,96,Natálie Mlýnková,,,,,83,Hannah Murphy,,,,,,,43.0,-34.0,0.0318,0,O19,236,2025-12-23,PWHL,2025/2026,Regular Season
+4,1:39,Block,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,1,event,5v5,88,Skylar Irving,,,,,83,Hannah Murphy,,,,,,,47.0,-21.2,,0,O20,236,2025-12-23,PWHL,2025/2026,Regular Season
+5,1:58,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,1,event,5v5,88,Skylar Irving,,,,,83,Hannah Murphy,,,,,,,35.7,-12.5,0.0420,0,O25,236,2025-12-23,PWHL,2025/2026,Regular Season
+6,2:35,Block,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,1,event,5v5,27,Megan Carter,,,,,35,Ann-Renée Desbiens,,,,,,,30.7,22.1,,0,O26,236,2025-12-23,PWHL,2025/2026,Regular Season
+7,2:41,Shot,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,1,event,5v5,17,Brooke Bryant,,,,,35,Ann-Renée Desbiens,,,,,,,80.3,0.6,0.1248,0,O11,236,2025-12-23,PWHL,2025/2026,Regular Season
+8,2:54,Penalty,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,1,event,5v5,2,Aneta Tejralová,,,,,,,,,,,,,,,,0,,236,2025-12-23,PWHL,2025/2026,Regular Season
+9,3:57,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,1,event,5v4,27,Shiann Darkangelo,,,,,83,Hannah Murphy,,,,,,,86.7,9.3,0.1099,0,O08,236,2025-12-23,PWHL,2025/2026,Regular Season
+10,5:35,Shot,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,1,event,5v5,21,Hilary Knight,,,,,35,Ann-Renée Desbiens,,,,,,,84.3,8.2,0.0709,0,O08,236,2025-12-23,PWHL,2025/2026,Regular Season
+11,6:32,Shot,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,1,event,5v5,78,Lexie Adzija,,,,,35,Ann-Renée Desbiens,,,,,,,64.7,-24.4,0.0371,0,O13,236,2025-12-23,PWHL,2025/2026,Regular Season
+12,6:44,Block,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,1,event,5v5,61,Nicole Gosling,,,,,83,Hannah Murphy,,,,,,,77.7,-23.8,,0,O05,236,2025-12-23,PWHL,2025/2026,Regular Season
+13,8:35,Shot,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,1,event,5v5,17,Brooke Bryant,,,,,35,Ann-Renée Desbiens,,,,,,,65.0,12.8,0.0899,0,O16,236,2025-12-23,PWHL,2025/2026,Regular Season
+14,9:07,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,1,event,5v5,61,Nicole Gosling,,,,,83,Hannah Murphy,,,,,,,31.3,-32.9,0.0400,0,O24,236,2025-12-23,PWHL,2025/2026,Regular Season
+15,10:05,Shot,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,1,event,5v5,9,Jessie Eldridge,,,,,35,Ann-Renée Desbiens,,,,,,,76.7,-9.6,0.1248,0,O11,236,2025-12-23,PWHL,2025/2026,Regular Season
+16,10:23,Block,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,1,event,5v5,25,Alex Carpenter,,,,,35,Ann-Renée Desbiens,,,,,,,71.0,0.0,,0,O15,236,2025-12-23,PWHL,2025/2026,Regular Season
+17,11:28,Penalty,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,1,event,5v5,4,Maya Labad,,,,,,,,,,,,,,,,0,,236,2025-12-23,PWHL,2025/2026,Regular Season
+18,11:36,Block,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,1,event,5v4,88,Julia Gosling,,,,,35,Ann-Renée Desbiens,,,,,,,51.7,29.7,,0,O23,236,2025-12-23,PWHL,2025/2026,Regular Season
+19,12:33,Shot,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,1,event,5v4,88,Julia Gosling,,,,,35,Ann-Renée Desbiens,,,,,,,55.0,-0.3,0.0895,0,O21,236,2025-12-23,PWHL,2025/2026,Regular Season
+20,12:43,Shot,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,1,event,5v4,3,Cayla Barnes,,,,,35,Ann-Renée Desbiens,,,,,,,45.3,-3.1,0.0895,0,O21,236,2025-12-23,PWHL,2025/2026,Regular Season
+21,13:16,Block,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,1,event,5v4,92,Danielle Serdachny,,,,,35,Ann-Renée Desbiens,,,,,,,71.0,-22.4,,0,O13,236,2025-12-23,PWHL,2025/2026,Regular Season
+22,13:56,Block,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,1,event,5v5,20,Mariah Keopple,,,,,35,Ann-Renée Desbiens,,,,,,,81.3,-21.8,,0,O05,236,2025-12-23,PWHL,2025/2026,Regular Season
+23,14:02,Block,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,1,event,5v5,92,Danielle Serdachny,,,,,35,Ann-Renée Desbiens,,,,,,,55.7,8.2,,0,O21,236,2025-12-23,PWHL,2025/2026,Regular Season
+24,14:38,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,1,event,5v5,7,Laura Stacey,,,,,83,Hannah Murphy,,,,,,,81.3,12.5,0.0709,0,O08,236,2025-12-23,PWHL,2025/2026,Regular Season
+25,15:05,Shot,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,1,event,5v5,66,Marah Wagner,,,,,35,Ann-Renée Desbiens,,,,,,,52.0,-24.6,0.0318,0,O19,236,2025-12-23,PWHL,2025/2026,Regular Season
+26,16:42,Block,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,1,event,5v5,21,Maureen Murphy,,,,,83,Hannah Murphy,,,,,,,55.0,-24.9,,0,O19,236,2025-12-23,PWHL,2025/2026,Regular Season
+27,17:02,Shot,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,1,event,5v5,19,Hannah Bilka,,,,,35,Ann-Renée Desbiens,,,,,,,72.3,-18.4,0.0371,0,O13,236,2025-12-23,PWHL,2025/2026,Regular Season
+28,17:21,Shot,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,1,event,5v5,20,Mariah Keopple,,,,,35,Ann-Renée Desbiens,,,,,,,50.3,-35.7,0.0318,0,O19,236,2025-12-23,PWHL,2025/2026,Regular Season
+29,17:56,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,1,event,5v5,16,Hayley Scamurra,,,,,83,Hannah Murphy,,,,,,,84.0,-4.8,0.2112,0,O07,236,2025-12-23,PWHL,2025/2026,Regular Season
+30,18:06,Block,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,1,event,5v5,16,Hayley Scamurra,,,,,83,Hannah Murphy,,,,,,,65.3,-0.8,,0,O15,236,2025-12-23,PWHL,2025/2026,Regular Season
+31,18:14,Block,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,1,event,5v5,22,Jessica DiGirolamo,,,,,83,Hannah Murphy,,,,,,,76.0,-7.4,,0,O11,236,2025-12-23,PWHL,2025/2026,Regular Season
+32,18:42,Block,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,1,event,5v5,91,Maggie Flaherty,,,,,83,Hannah Murphy,,,,,,,60.3,-8.5,,0,O14,236,2025-12-23,PWHL,2025/2026,Regular Season
+33,18:57,Goal,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,1,event,5v5,11,Abby Roque,7,Laura Stacey,29,Marie-Philip Poulin,83,Hannah Murphy,,2 13 21 27 88,Aneta Tejralová - Mikyla Grant-Mentis - Hilary Knight - Megan Carter - Julia Gosling,,7 9 11 29 91,Laura Stacey - Kati Tabin - Abby Roque - Marie-Philip Poulin - Maggie Flaherty,53.0,-11.9,0.0458,0,O20,236,2025-12-23,PWHL,2025/2026,Regular Season
+34,19:13,Shot,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,1,event,5v5,88,Julia Gosling,,,,,35,Ann-Renée Desbiens,,,,,,,31.0,-2.3,0.0450,-1,O25,236,2025-12-23,PWHL,2025/2026,Regular Season
+35,0:14,Block,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,2,event,5v5,5,Anna Wilgren,,,,,35,Ann-Renée Desbiens,,,,,,,39.0,-19.8,,-1,O24,236,2025-12-23,PWHL,2025/2026,Regular Season
+36,1:13,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v5,21,Maureen Murphy,,,,,83,Hannah Murphy,,,,,,,76.3,-2.5,0.1463,1,O11,236,2025-12-23,PWHL,2025/2026,Regular Season
+37,1:18,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v5,21,Maureen Murphy,,,,,83,Hannah Murphy,,,,,,,84.3,-6.8,0.0782,1,O06,236,2025-12-23,PWHL,2025/2026,Regular Season
+38,1:22,Block,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v5,91,Maggie Flaherty,,,,,83,Hannah Murphy,,,,,,,45.0,-27.5,,1,O19,236,2025-12-23,PWHL,2025/2026,Regular Season
+39,1:28,Block,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v5,9,Kati Tabin,,,,,83,Hannah Murphy,,,,,,,32.3,11.9,,1,O25,236,2025-12-23,PWHL,2025/2026,Regular Season
+40,1:39,Shot,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,2,event,5v5,27,Megan Carter,,,,,35,Ann-Renée Desbiens,,,,,,,38.7,-25.2,0.0429,-1,O24,236,2025-12-23,PWHL,2025/2026,Regular Season
+41,2:07,Block,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,2,event,5v5,78,Lexie Adzija,,,,,35,Ann-Renée Desbiens,,,,,,,33.3,23.0,,-1,O26,236,2025-12-23,PWHL,2025/2026,Regular Season
+42,2:44,Block,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v5,61,Nicole Gosling,,,,,83,Hannah Murphy,,,,,,,41.0,-27.2,,1,O20,236,2025-12-23,PWHL,2025/2026,Regular Season
+43,3:32,Goal,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,2,event,5v5,25,Alex Carpenter,88,Julia Gosling,9,Jessie Eldridge,35,Ann-Renée Desbiens,,3 5 9 25 88,Cayla Barnes - Anna Wilgren - Jessie Eldridge - Alex Carpenter - Julia Gosling,,9 11 29 88 91,Kati Tabin - Abby Roque - Marie-Philip Poulin - Skylar Irving - Maggie Flaherty,82.7,-4.5,0.1328,-1,O11,236,2025-12-23,PWHL,2025/2026,Regular Season
+44,3:33,Shot,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,2,event,5v5,88,Julia Gosling,,,,,35,Ann-Renée Desbiens,,,,,,,67.7,10.8,0.0899,0,O16,236,2025-12-23,PWHL,2025/2026,Regular Season
+45,3:52,Block,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v4,27,Shiann Darkangelo,,,,,83,Hannah Murphy,,,,,,,71.3,-2.0,,0,O14,236,2025-12-23,PWHL,2025/2026,Regular Season
+46,3:59,Block,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v4,22,Jessica DiGirolamo,,,,,83,Hannah Murphy,,,,,,,41.7,-24.1,,0,O20,236,2025-12-23,PWHL,2025/2026,Regular Season
+47,4:17,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v5,27,Shiann Darkangelo,,,,,83,Hannah Murphy,,,,,,,81.3,-7.6,0.1248,0,O11,236,2025-12-23,PWHL,2025/2026,Regular Season
+48,4:17,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v5,27,Shiann Darkangelo,,,,,83,Hannah Murphy,,,,,,,78.0,-4.5,0.1248,0,O11,236,2025-12-23,PWHL,2025/2026,Regular Season
+49,4:25,Block,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v4,23,Erin Ambrose,,,,,83,Hannah Murphy,,,,,,,46.0,28.6,,0,O23,236,2025-12-23,PWHL,2025/2026,Regular Season
+50,4:47,Shot,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,2,event,5v5,5,Anna Wilgren,,,,,35,Ann-Renée Desbiens,,,,,,,33.3,-29.7,0.0400,0,O24,236,2025-12-23,PWHL,2025/2026,Regular Season
+51,5:08,Block,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v5,29,Marie-Philip Poulin,,,,,83,Hannah Murphy,,,,,,,30.0,-35.7,,0,O24,236,2025-12-23,PWHL,2025/2026,Regular Season
+52,7:15,Shot,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,2,event,5v5,20,Mariah Keopple,,,,,35,Ann-Renée Desbiens,,,,,,,43.3,-34.3,0.0318,0,O19,236,2025-12-23,PWHL,2025/2026,Regular Season
+53,7:27,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v5,13,Alexandra Labelle,,,,,83,Hannah Murphy,,,,,,,38.3,-29.5,0.0400,0,O24,236,2025-12-23,PWHL,2025/2026,Regular Season
+54,9:12,Shot,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,2,event,5v5,21,Hilary Knight,,,,,35,Ann-Renée Desbiens,,,,,,,73.3,-0.8,0.1248,0,O11,236,2025-12-23,PWHL,2025/2026,Regular Season
+55,9:12,Penalty,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v5,7,Laura Stacey,,,,,,,,,,,,,,,,0,,236,2025-12-23,PWHL,2025/2026,Regular Season
+56,9:21,Shot,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,2,event,5v4,25,Alex Carpenter,,,,,35,Ann-Renée Desbiens,,,,,,,53.0,-12.5,0.0721,0,O20,236,2025-12-23,PWHL,2025/2026,Regular Season
+57,10:19,Block,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v5,16,Hayley Scamurra,,,,,83,Hannah Murphy,,,,,,,66.7,-29.2,,0,O12,236,2025-12-23,PWHL,2025/2026,Regular Season
+58,10:44,Shot,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,2,event,5v4,5,Anna Wilgren,,,,,35,Ann-Renée Desbiens,,,,,,,45.0,-17.8,0.0721,0,O20,236,2025-12-23,PWHL,2025/2026,Regular Season
+59,11:56,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v5,7,Laura Stacey,,,,,83,Hannah Murphy,,,,,,,59.0,14.2,0.0899,0,O16,236,2025-12-23,PWHL,2025/2026,Regular Season
+60,12:10,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v5,23,Erin Ambrose,,,,,83,Hannah Murphy,,,,,,,70.7,27.2,0.0150,0,O18,236,2025-12-23,PWHL,2025/2026,Regular Season
+61,15:08,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v5,21,Maureen Murphy,,,,,83,Hannah Murphy,,,,,,,68.0,9.1,0.0899,0,O16,236,2025-12-23,PWHL,2025/2026,Regular Season
+62,15:10,Penalty,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,2,event,5v5,27,Megan Carter,,,,,,,,,,,,,,,,0,,236,2025-12-23,PWHL,2025/2026,Regular Season
+63,16:03,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v4,23,Erin Ambrose,,,,,83,Hannah Murphy,,,,,,,30.0,-2.0,0.0661,0,O25,236,2025-12-23,PWHL,2025/2026,Regular Season
+64,16:06,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v4,96,Natálie Mlýnková,,,,,83,Hannah Murphy,,,,,,,80.3,0.6,0.1873,0,O11,236,2025-12-23,PWHL,2025/2026,Regular Season
+65,16:29,Block,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v5,11,Abby Roque,,,,,83,Hannah Murphy,,,,,,,47.3,-14.5,,0,O20,236,2025-12-23,PWHL,2025/2026,Regular Season
+66,16:31,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v4,9,Kati Tabin,,,,,83,Hannah Murphy,,,,,,,85.7,-18.7,0.0284,0,O05,236,2025-12-23,PWHL,2025/2026,Regular Season
+67,16:45,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v4,9,Kati Tabin,,,,,83,Hannah Murphy,,,,,,,41.0,16.4,0.0610,0,O22,236,2025-12-23,PWHL,2025/2026,Regular Season
+68,17:08,Block,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v5,21,Maureen Murphy,,,,,83,Hannah Murphy,,,,,,,75.0,-2.8,,0,O11,236,2025-12-23,PWHL,2025/2026,Regular Season
+69,17:44,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v5,13,Alexandra Labelle,,,,,83,Hannah Murphy,,,,,,,71.7,-5.1,0.0785,0,O14,236,2025-12-23,PWHL,2025/2026,Regular Season
+70,18:26,Block,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v5,7,Laura Stacey,,,,,83,Hannah Murphy,,,,,,,76.0,-1.4,,0,O11,236,2025-12-23,PWHL,2025/2026,Regular Season
+71,18:30,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v5,7,Laura Stacey,,,,,83,Hannah Murphy,,,,,,,74.3,-17.3,0.0659,0,O06,236,2025-12-23,PWHL,2025/2026,Regular Season
+72,18:46,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v5,7,Laura Stacey,,,,,83,Hannah Murphy,,,,,,,70.3,-4.2,0.0785,0,O14,236,2025-12-23,PWHL,2025/2026,Regular Season
+73,19:03,Block,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v5,29,Marie-Philip Poulin,,,,,83,Hannah Murphy,,,,,,,68.3,-15.9,,0,O13,236,2025-12-23,PWHL,2025/2026,Regular Season
+74,0:39,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,3,event,5v5,29,Marie-Philip Poulin,,,,,83,Hannah Murphy,,,,,,,74.7,-15.0,0.0659,0,O06,236,2025-12-23,PWHL,2025/2026,Regular Season
+75,0:59,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,3,event,5v5,21,Maureen Murphy,,,,,83,Hannah Murphy,,,,,,,82.0,-4.2,0.1248,0,O11,236,2025-12-23,PWHL,2025/2026,Regular Season
+76,2:26,Block,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,3,event,5v5,27,Megan Carter,,,,,35,Ann-Renée Desbiens,,,,,,,37.0,-31.4,,0,O24,236,2025-12-23,PWHL,2025/2026,Regular Season
+77,2:44,Block,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,3,event,5v5,78,Lexie Adzija,,,,,35,Ann-Renée Desbiens,,,,,,,34.7,-24.4,,0,O24,236,2025-12-23,PWHL,2025/2026,Regular Season
+78,3:23,Goal,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,3,event,5v5,88,Julia Gosling,21,Hilary Knight,5,Anna Wilgren,35,Ann-Renée Desbiens,,3 5 21 25 88,Cayla Barnes - Anna Wilgren - Hilary Knight - Alex Carpenter - Julia Gosling,,7 23 29 61 91,Laura Stacey - Erin Ambrose - Marie-Philip Poulin - Nicole Gosling - Maggie Flaherty,73.0,8.2,0.1248,0,O11,236,2025-12-23,PWHL,2025/2026,Regular Season
+79,4:31,Shot,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,3,event,5v5,92,Danielle Serdachny,,,,,35,Ann-Renée Desbiens,,,,,,,82.0,5.4,0.1463,1,O11,236,2025-12-23,PWHL,2025/2026,Regular Season
+80,4:52,Block,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,3,event,5v4,16,Hayley Scamurra,,,,,83,Hannah Murphy,,,,,,,79.7,8.2,,-1,O11,236,2025-12-23,PWHL,2025/2026,Regular Season
+81,7:57,Penalty,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,3,event,5v5,92,Danielle Serdachny,,,,,,,,,,,,,,,,1,,236,2025-12-23,PWHL,2025/2026,Regular Season
+82,8:50,Block,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,3,event,5v5,7,Laura Stacey,,,,,83,Hannah Murphy,,,,,,,49.7,-8.8,,-1,O21,236,2025-12-23,PWHL,2025/2026,Regular Season
+83,9:56,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,3,event,5v4,9,Kati Tabin,,,,,83,Hannah Murphy,,,,,,,77.0,8.2,0.1985,-1,O11,236,2025-12-23,PWHL,2025/2026,Regular Season
+84,11:09,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,3,event,5v5,44,Amanda Boulier,,,,,83,Hannah Murphy,,,,,,,-30.3,34.9,0.0591,-1,D24,236,2025-12-23,PWHL,2025/2026,Regular Season
+85,11:53,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,3,event,5v5,21,Maureen Murphy,,,,,83,Hannah Murphy,,,,,,,84.3,-32.3,0.0205,-1,O04,236,2025-12-23,PWHL,2025/2026,Regular Season
+86,12:34,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,3,event,5v5,27,Shiann Darkangelo,,,,,83,Hannah Murphy,,,,,,,77.3,5.7,0.1328,-1,O11,236,2025-12-23,PWHL,2025/2026,Regular Season
+87,12:41,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,3,event,5v5,7,Laura Stacey,,,,,83,Hannah Murphy,,,,,,,72.7,11.1,0.0959,-1,O16,236,2025-12-23,PWHL,2025/2026,Regular Season
+88,12:47,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,3,event,5v5,9,Kati Tabin,,,,,83,Hannah Murphy,,,,,,,31.3,33.1,0.0277,-1,O26,236,2025-12-23,PWHL,2025/2026,Regular Season
+89,12:59,Shot,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,3,event,5v5,25,Alex Carpenter,,,,,35,Ann-Renée Desbiens,,,,,,,50.7,-29.7,0.0380,1,O19,236,2025-12-23,PWHL,2025/2026,Regular Season
+90,13:41,Block,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,3,event,5v5,44,Amanda Boulier,,,,,83,Hannah Murphy,,,,,,,35.0,26.9,,-1,O26,236,2025-12-23,PWHL,2025/2026,Regular Season
+91,14:29,Block,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,3,event,5v5,61,Nicole Gosling,,,,,83,Hannah Murphy,,,,,,,44.3,-23.0,,-1,O20,236,2025-12-23,PWHL,2025/2026,Regular Season
+92,14:31,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,3,event,5v5,29,Marie-Philip Poulin,,,,,83,Hannah Murphy,,,,,,,64.0,-11.3,0.0838,-1,O14,236,2025-12-23,PWHL,2025/2026,Regular Season
+93,14:34,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,3,event,5v5,11,Abby Roque,,,,,83,Hannah Murphy,,,,,,,88.3,-5.7,0.0705,-1,O06,236,2025-12-23,PWHL,2025/2026,Regular Season
+94,14:37,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,3,event,5v5,29,Marie-Philip Poulin,,,,,83,Hannah Murphy,,,,,,,42.3,-9.3,0.0614,-1,O21,236,2025-12-23,PWHL,2025/2026,Regular Season
+95,15:11,Block,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,3,event,5v5,29,Marie-Philip Poulin,,,,,83,Hannah Murphy,,,,,,,70.7,-17.3,,-1,O13,236,2025-12-23,PWHL,2025/2026,Regular Season
+96,16:24,Block,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,3,event,5v5,21,Maureen Murphy,,,,,83,Hannah Murphy,,,,,,,76.3,-2.5,,-1,O11,236,2025-12-23,PWHL,2025/2026,Regular Season
+97,17:05,Block,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,3,event,5v5,96,Natálie Mlýnková,,,,,83,Hannah Murphy,,,,,,,61.0,26.1,,-1,O17,236,2025-12-23,PWHL,2025/2026,Regular Season
+98,17:17,Penalty,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,3,event,5v5,27,Megan Carter,,,,,,,,,,,,,,,,1,,236,2025-12-23,PWHL,2025/2026,Regular Season
+99,17:26,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,3,event,5v4,29,Marie-Philip Poulin,,,,,83,Hannah Murphy,,,,,,,55.0,24.1,0.0261,-1,O23,236,2025-12-23,PWHL,2025/2026,Regular Season
+100,17:32,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,3,event,5v4,23,Erin Ambrose,,,,,83,Hannah Murphy,,,,,,,33.3,25.8,0.0441,-1,O26,236,2025-12-23,PWHL,2025/2026,Regular Season
+101,17:46,Block,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,3,event,5v5,29,Marie-Philip Poulin,,,,,83,Hannah Murphy,,,,,,,45.0,3.7,,-1,O21,236,2025-12-23,PWHL,2025/2026,Regular Season
+102,17:55,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,3,event,5v4,7,Laura Stacey,,,,,83,Hannah Murphy,,,,,,,44.7,-31.7,0.0540,-1,O19,236,2025-12-23,PWHL,2025/2026,Regular Season
+103,18:08,Block,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,3,event,5v5,11,Abby Roque,,,,,83,Hannah Murphy,,,,,,,52.0,-23.5,,-1,O19,236,2025-12-23,PWHL,2025/2026,Regular Season
+104,18:38,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,3,event,5v4,11,Abby Roque,,,,,83,Hannah Murphy,,,,,,,61.3,-16.1,0.1289,-1,O14,236,2025-12-23,PWHL,2025/2026,Regular Season
+105,20:00,Penalty,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,3,event,5v5,11,Abby Roque,,,,,,,,,,,,,,,,-1,,236,2025-12-23,PWHL,2025/2026,Regular Season
