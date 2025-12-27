@@ -43,6 +43,36 @@ python flask_app.py
 
 The app will be available at: **http://localhost:8501**
 
+## ☕ **Buy Me a Coffee (Stripe)**
+
+This app includes a **/coffee** page that starts a **Stripe Checkout** session for a one-time tip.
+
+### **1) Create / get your Stripe keys**
+- In Stripe Dashboard → **Developers** → **API keys**
+- Copy your **Secret key** (starts with `sk_...`)
+
+### **2) Configure environment variables**
+Required:
+- `STRIPE_SECRET_KEY` (your Stripe secret key)
+
+Optional:
+- `STRIPE_CURRENCY` (default: `usd`)
+- `STRIPE_PRODUCT_NAME` (default: `PWHL Analytics - Coffee`)
+
+PowerShell example (dev):
+```powershell
+$env:STRIPE_SECRET_KEY = "sk_test_..."
+$env:STRIPE_CURRENCY = "usd"
+$env:STRIPE_PRODUCT_NAME = "PWHL Analytics - Coffee"
+```
+
+### **3) Run the app and open the page**
+- Go to: `http://localhost:8501/coffee`
+
+Notes:
+- The page currently offers fixed tip amounts ($3 / $5 / $10).
+- For production deployments (Render/Heroku/etc.), set the env vars in your hosting provider.
+
 ## 🎨 **Design Philosophy**
 
 The app is designed to match your Shot Plotter application with:

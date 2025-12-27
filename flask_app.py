@@ -1,5 +1,5 @@
 
-from flask import Flask, render_template, jsonify, request, send_from_directory, Response
+from flask import Flask, render_template, jsonify, request, send_from_directory, Response, url_for
 from flask_cors import CORS
 import requests
 import json
@@ -8,6 +8,11 @@ from datetime import datetime
 import csv
 import os
 from typing import Dict, Any, List
+
+try:
+    import stripe  # type: ignore
+except Exception:
+    stripe = None
 
 app = Flask(__name__)
 CORS(app)
@@ -603,6 +608,69 @@ def goalies_page():
 def teams_page():
     """Teams page: team-level view with filters, standings, charts, and performance."""
     return render_template('teams.html')
+
+
+@app.route('/coffee')
+def coffee_page():
+    """Buy me a coffee page (Stripe Checkout)."""
+    success = request.args.get('success') == '1'
+    canceled = request.args.get('canceled') == '1'
+    stripe_enabled = (stripe is not None) and bool(os.environ.get('STRIPE_SECRET_KEY'))
+    return render_template('coffee.html', success=success, canceled=canceled, stripe_enabled=stripe_enabled)
+
+
+@app.route('/api/stripe/create-checkout-session', methods=['POST'])
+def stripe_create_checkout_session():
+    """Create a Stripe Checkout Session for a one-time 'coffee' payment.
+
+    Expects JSON: {"amount": 3|5|10}
+    Returns: {"url": "https://checkout.stripe.com/..."}
+    """
+    if stripe is None:
+        return jsonify({'error': 'Stripe is not installed on the server.'}), 501
+    secret = os.environ.get('STRIPE_SECRET_KEY', '').strip()
+    if not secret:
+        return jsonify({'error': 'Stripe is not configured (missing STRIPE_SECRET_KEY).'}), 501
+
+    payload = request.get_json(silent=True) or {}
+    try:
+        amount_dollars = int(payload.get('amount') or 0)
+    except Exception:
+        amount_dollars = 0
+
+    allowed_amounts = {3, 5, 10, 20, 50}
+    if amount_dollars not in allowed_amounts:
+        return jsonify({'error': 'Invalid amount. Choose 3, 5, 10, 20, or 50.'}), 400
+
+    currency = (os.environ.get('STRIPE_CURRENCY') or 'usd').strip().lower()
+    product_name = (os.environ.get('STRIPE_PRODUCT_NAME') or 'PWHL Analytics - Coffee').strip()
+
+    stripe.api_key = secret
+    try:
+        session = stripe.checkout.Session.create(
+            mode='payment',
+            line_items=[
+                {
+                    'price_data': {
+                        'currency': currency,
+                        'unit_amount': amount_dollars * 100,
+                        'product_data': {
+                            'name': product_name,
+                        },
+                    },
+                    'quantity': 1,
+                }
+            ],
+            success_url=url_for('coffee_page', _external=True) + '?success=1',
+            cancel_url=url_for('coffee_page', _external=True) + '?canceled=1',
+            metadata={
+                'kind': 'coffee',
+                'amount_dollars': str(amount_dollars),
+            },
+        )
+        return jsonify({'url': session.url})
+    except Exception:
+        return jsonify({'error': 'Unable to create Stripe checkout session.'}), 500
 
 
 @app.route('/api/teams/filters')

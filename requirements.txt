@@ -5,6 +5,7 @@ flask-cors
 gunicorn
 python-dateutil
 beautifulsoup4
+stripe
 
 # NOTE: Heavy dev-only packages (matplotlib, seaborn, jupyter) removed for production build speed.
 # If you need them on Render, add back explicitly or use app_requirements_dev.txt.
