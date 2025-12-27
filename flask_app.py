@@ -673,6 +673,54 @@ def stripe_create_checkout_session():
         return jsonify({'error': 'Unable to create Stripe checkout session.'}), 500
 
 
+@app.route('/api/stripe/webhook', methods=['POST'])
+def stripe_webhook():
+    """Stripe webhook receiver.
+
+    Configure this endpoint in Stripe Dashboard and set:
+      - STRIPE_WEBHOOK_SECRET (required for signature verification)
+
+    Optional:
+      - STRIPE_NOTIFY_WEBHOOK_URL: post a short message to a Discord/Slack webhook.
+    """
+    if stripe is None:
+        return ('stripe not installed', 501)
+    secret = (os.environ.get('STRIPE_WEBHOOK_SECRET') or '').strip()
+    if not secret:
+        return ('missing STRIPE_WEBHOOK_SECRET', 501)
+
+    sig_header = request.headers.get('Stripe-Signature', '')
+    payload = request.get_data(cache=False, as_text=False)
+    try:
+        event = stripe.Webhook.construct_event(payload=payload, sig_header=sig_header, secret=secret)
+    except Exception:
+        return ('invalid signature', 400)
+
+    try:
+        et = str(event.get('type') or '')
+        if et in ('checkout.session.completed', 'checkout.session.async_payment_succeeded'):
+            obj = (event.get('data') or {}).get('object') or {}
+            amount_total = obj.get('amount_total')
+            currency = (obj.get('currency') or '').upper()
+            session_id = obj.get('id')
+            created = obj.get('created')
+            kind = (obj.get('metadata') or {}).get('kind')
+
+            msg = f"[Stripe] Payment succeeded: kind={kind or 'unknown'} amount={amount_total} {currency} session={session_id} created={created}"
+            print(msg, flush=True)
+
+            notify_url = (os.environ.get('STRIPE_NOTIFY_WEBHOOK_URL') or '').strip()
+            if notify_url:
+                try:
+                    # Keep payload simple so it works with Discord/Slack-style webhooks.
+                    requests.post(notify_url, json={'content': msg}, timeout=3)
+                except Exception:
+                    pass
+        return ('ok', 200)
+    except Exception:
+        return ('error', 500)
+
+
 @app.route('/api/teams/filters')
 def teams_filters():
     """Return teams + common filters for Teams page."""
