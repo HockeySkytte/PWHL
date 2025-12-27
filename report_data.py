@@ -1387,9 +1387,13 @@ class ReportDataStore:
         season_filter = kwargs.get('season','All')
         season_state_filter = kwargs.get('season_state','All')
         strength_filter = kwargs.get('strength','All')
+        seasons_multi = kwargs.get('seasons_multi') or []
+        strengths_multi = kwargs.get('strengths_multi') or []
         # We'll build per-team stats iterating once through rows and applying season/state filters up front
         rows = self.rows
-        if season_filter != 'All':
+        if seasons_multi and 'All' not in seasons_multi:
+            rows = [r for r in rows if r.get('season') in seasons_multi]
+        elif season_filter != 'All':
             rows = [r for r in rows if r.get('season') == season_filter]
         season_states_multi = kwargs.get('season_states_multi') or []
         if season_states_multi:
@@ -1402,9 +1406,9 @@ class ReportDataStore:
         def ensure(team: str):
             return teams.setdefault(team, {
                 'Team': team,
-                'Season': season_filter,
-                'Season_State': season_state_filter,
-                'Strength': strength_filter,
+                'Season': 'All' if seasons_multi else season_filter,
+                'Season_State': 'All' if season_states_multi else season_state_filter,
+                'Strength': 'All' if strengths_multi else strength_filter,
                 'games': set(),
                 'CF':0,'CA':0,'FF':0,'FA':0,'SF':0,'SA':0,'GF':0,'GA':0,
                 'xGF':0.0,'xGA':0.0
@@ -1415,16 +1419,22 @@ class ReportDataStore:
             team_against = r['team_against']
             gid = r['game_id']
             # Strength filtering per vantage team; we may need to know if row qualifies for team_for and team_against separately
-            def row_ok(v_team: str, is_for: bool) -> bool:
-                if strength_filter == 'All':
+            def _row_ok_for_strength(sf: str, v_team: str, is_for: bool) -> bool:
+                if sf == 'All':
                     return True
                 s_class = self._classify_strength(r.get('strength',''), v_team, is_for)
-                if strength_filter == 'EV':
+                if sf == 'EV':
                     return s_class in ('5v5','EV')
-                if strength_filter in ('PP','SH','5v5'):
-                    return s_class == strength_filter
-                # Fallback raw match
-                return r.get('strength') == strength_filter
+                if sf in ('PP','SH','5v5'):
+                    return s_class == sf
+                return r.get('strength') == sf
+
+            def row_ok(v_team: str, is_for: bool) -> bool:
+                if strengths_multi:
+                    if 'All' in strengths_multi:
+                        return True
+                    return any(_row_ok_for_strength(sf, v_team, is_for) for sf in strengths_multi)
+                return _row_ok_for_strength(strength_filter, v_team, is_for)
             # Team for side accumulation
             if team_for:
                 if row_ok(team_for, True):

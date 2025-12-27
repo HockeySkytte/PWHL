@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>PWHL Analytics — Skaters</title>
+  <title>PWHL Analytics — Goalies</title>
   <style>
     :root { --pwhl-bg-1:#160A3A; --pwhl-bg-2:#251055; --pwhl-bg-3:#3B1E7A; --pwhl-surface:rgba(19,13,46,.75); --pwhl-surface-strong:rgba(25,16,60,.85); --pwhl-border:rgba(142,124,214,.25); --pwhl-accent:#8E7CD6; --pwhl-accent-strong:#B9A7FF; }
     body{margin:0;background:linear-gradient(135deg,var(--pwhl-bg-1),var(--pwhl-bg-2) 48%,var(--pwhl-bg-3));color:#fff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;min-height:100vh;display:flex;flex-direction:column;}
@@ -100,8 +100,8 @@
   <div class="tabs">
     <a class="tab" href="/">📅 Schedule</a>
     <a class="tab" href="/report">📊 Report</a>
-    <a class="tab active" href="/skaters">🏒 Skaters</a>
-    <a class="tab" href="/goalies" aria-label="Goalies">
+    <a class="tab" href="/skaters">🏒 Skaters</a>
+    <a class="tab active" href="/goalies" aria-label="Goalies">
       <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" focusable="false" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
         <!-- Helmet outline -->
         <path d="M12 3c4.4 0 7.8 2.6 7.8 7.2 0 6-4.2 11-7.8 11.3C8.4 21.2 4.2 16.2 4.2 10.2 4.2 5.6 7.6 3 12 3z"/>
@@ -162,31 +162,28 @@
           <div id="playerMeta" class="player-meta">&nbsp;</div>
         </div>
       </div>
-      <div class="stats-grid" id="skaterStatCards">
+      <div class="stats-grid" id="goalieStatCards">
         <div class="stat-card"><div class="label">GP</div><div class="value" id="stat-gp">—</div></div>
         <div class="stat-card"><div class="label">TOI</div><div class="value" id="stat-toi">—</div></div>
-        <div class="stat-card"><div class="label">Shots</div><div class="value" id="stat-shots">—</div></div>
-        <div class="stat-card"><div class="label">Goals</div><div class="value" id="stat-goals">—</div></div>
-        <div class="stat-card"><div class="label">A1</div><div class="value" id="stat-a1">—</div></div>
-        <div class="stat-card"><div class="label">A2</div><div class="value" id="stat-a2">—</div></div>
-        <div class="stat-card"><div class="label">Points</div><div class="value" id="stat-points">—</div></div>
-        <div class="stat-card"><div class="label">PIM</div><div class="value" id="stat-pim">—</div></div>
-        <div class="stat-card"><div class="label">xG</div><div class="value" id="stat-xg">—</div></div>
+        <div class="stat-card"><div class="label">SA</div><div class="value" id="stat-sa">—</div></div>
+        <div class="stat-card"><div class="label">GA</div><div class="value" id="stat-ga">—</div></div>
+        <div class="stat-card"><div class="label">Sv%</div><div class="value" id="stat-sv">—</div></div>
+        <div class="stat-card"><div class="label">xGA</div><div class="value" id="stat-xga">—</div></div>
+        <div class="stat-card"><div class="label">xSv%</div><div class="value" id="stat-xsv">—</div></div>
+        <div class="stat-card"><div class="label">dSv%</div><div class="value" id="stat-dsv">—</div></div>
+        <div class="stat-card"><div class="label">GSAx</div><div class="value" id="stat-gsax">—</div></div>
       </div>
 
       <div class="stats-grid hidden" id="eaCards">
         <div class="stat-card" data-ea-card><div class="label">Overall</div><div class="value" id="ea-overall">—</div></div>
-        <div class="stat-card" data-ea-card><div class="label">Puck Skills</div><div class="value" id="ea-puck-skills">—</div></div>
-        <div class="stat-card" data-ea-card><div class="label">Senses</div><div class="value" id="ea-senses">—</div></div>
-        <div class="stat-card" data-ea-card><div class="label">Shooting</div><div class="value" id="ea-shooting">—</div></div>
-        <div class="stat-card" data-ea-card><div class="label">Defense</div><div class="value" id="ea-defense">—</div></div>
-        <div class="stat-card" data-ea-card><div class="label">Skating</div><div class="value" id="ea-skating">—</div></div>
-        <div class="stat-card" data-ea-card><div class="label">Physical</div><div class="value" id="ea-physical">—</div></div>
+        <div class="stat-card" data-ea-card><div class="label">Reflexes</div><div class="value" id="ea-reflexes">—</div></div>
+        <div class="stat-card" data-ea-card><div class="label">Puck Control</div><div class="value" id="ea-puck-control">—</div></div>
+        <div class="stat-card" data-ea-card><div class="label">Athletic</div><div class="value" id="ea-athletic">—</div></div>
       </div>
 
-      <div class="subtabs" id="skaterTabs" role="tablist" aria-label="Skaters tabs">
+      <div class="subtabs" id="skaterTabs" role="tablist" aria-label="Goalies tabs">
         <button class="subtab" type="button" data-tab="ea" role="tab" aria-selected="false">EA Ratings</button>
-        <button class="subtab active" type="button" data-tab="shooting" role="tab" aria-selected="true">Shooting</button>
+        <button class="subtab active" type="button" data-tab="shooting" role="tab" aria-selected="true">Goaltending</button>
         <button class="subtab" type="button" data-tab="performance" role="tab" aria-selected="false">Performance</button>
       </div>
 
@@ -220,12 +217,12 @@
             <table>
               <thead>
                 <tr>
-                  <th class="sortable" data-sort="Goaltender" style="width:42%">Goaltender</th>
+                  <th class="sortable" data-sort="Shooter" style="width:42%">Skater</th>
                   <th class="sortable" data-sort="Goals" style="width:10%">G</th>
                   <th class="sortable" data-sort="Shots" style="width:12%">S</th>
                   <th class="sortable" data-sort="xG" style="width:14%">xG</th>
                   <th class="sortable" data-sort="Sh%" style="width:12%">Sh%</th>
-                  <th class="sortable" data-sort="GAx" style="width:10%">GAx</th>
+                  <th class="sortable" data-sort="GSAx" style="width:10%">GSAx</th>
                 </tr>
               </thead>
               <tbody id="goalieTableBody"></tbody>
@@ -252,13 +249,10 @@
         <div class="perf-controls">
           <div class="label" style="margin:0">Metric</div>
           <select id="perfMetric">
-            <option value="Goals">Goals</option>
-            <option value="Assists">Assists</option>
-            <option value="Points" selected>Points</option>
-            <option value="Shots">Shots</option>
-            <option value="xG">xG</option>
-            <option value="GAx">GAx</option>
-            <option value="PIM">PIM</option>
+            <option value="GSAx" selected>GSAx</option>
+            <option value="GA">GA</option>
+            <option value="SA">SA</option>
+            <option value="xGA">xGA</option>
             <option value="TOI">TOI</option>
           </select>
           <div class="label" style="margin:0 0 0 .25rem">Mode</div>
@@ -293,12 +287,12 @@
     let selectedPlayer='';
     function setSelectedPlayer(name){ selectedPlayer = name || ''; document.getElementById('playerToggle').textContent = selectedPlayer || 'Select Player'; }
 
-    // Persistence (Skaters page)
-    const SKATERS_STATE_KEY = 'pwhl_skaters_state_v1';
+    // Persistence (Goalies page)
+    const GOALIES_STATE_KEY = 'pwhl_goalies_state_v1';
     let pendingRestoreState = null;
     function safeJsonParse(s){ try{ return JSON.parse(s); }catch(e){ return null; } }
     function loadSkatersState(){
-      try{ return safeJsonParse(localStorage.getItem(SKATERS_STATE_KEY) || ''); }catch(e){ return null; }
+      try{ return safeJsonParse(localStorage.getItem(GOALIES_STATE_KEY) || ''); }catch(e){ return null; }
     }
     function saveSkatersState(){
       try{
@@ -319,11 +313,11 @@
             strengths: getMultiValues('strengths')
           },
           shooting: {
-            selectedGoalie,
+            selectedShooter,
             selectedZoneId
           },
           performance: {
-            metric: perfMetricSel ? perfMetricSel.value : 'Points',
+            metric: perfMetricSel ? perfMetricSel.value : 'GSAx',
             mode: perfModeSel ? perfModeSel.value : 'running',
             maWindow: perfMaIn ? (Number(perfMaIn.value)||5) : 5
           },
@@ -331,7 +325,7 @@
             lineMetric: lineMetricSel ? lineMetricSel.value : selectedEaLineMetric
           }
         };
-        localStorage.setItem(SKATERS_STATE_KEY, JSON.stringify(state));
+        localStorage.setItem(GOALIES_STATE_KEY, JSON.stringify(state));
       }catch(e){}
     }
     function applyMultiSelections(id, values){
@@ -359,7 +353,7 @@
           rb.addEventListener('change',()=>{
             setSelectedPlayer(n);
             document.getElementById('playerDropdown').classList.remove('open');
-            setSelectedGoalie('');
+            setSelectedShooter('');
             setSelectedZone('');
             // When switching players, default the Game Version slicer to the newest available for that player.
             setSelectedGameVersion('');
@@ -417,7 +411,15 @@
       pushRow();
 
       if(!rows.length) return [];
-      const header = rows[0].map(h=>String(h||'').trim());
+      // De-dupe headers (Goalies CSV currently contains duplicate columns like "Overall")
+      const rawHeader = rows[0].map(h=>String(h||'').trim());
+      const seen = new Map();
+      const header = rawHeader.map((h)=>{
+        const key = h || '';
+        const n = (seen.get(key) || 0) + 1;
+        seen.set(key, n);
+        return n === 1 ? key : `${key}__${n}`;
+      });
       const out=[];
       for(let r=1;r<rows.length;r++){
         const obj={};
@@ -430,7 +432,7 @@
     async function loadEaRows(){
       if(eaRows) return eaRows;
       try{
-        const resp = await fetch('/static/EA_Sports_Skaters.csv');
+        const resp = await fetch('/static/EA_Sports_Goalies.csv');
         if(!resp.ok) return null;
         const txt = await resp.text();
         eaRows = parseCsv(txt);
@@ -537,7 +539,9 @@
 
     function numVal(row, key){
       if(!row) return null;
-      const n = Number(String(row[key] ?? '').trim());
+      const raw = String(row[key] ?? '').trim();
+      if(raw === '') return null;
+      const n = Number(raw);
       return Number.isFinite(n) ? n : null;
     }
     function avgInt(row, keys){
@@ -610,20 +614,17 @@
     }
 
     function eaGroupedValuesFromRow(row){
-      // Groupings (excluding Overall)
+      // Goalie groupings (excluding Overall)
       return {
-        'Puck Skills': avgInt(row, ['Deking','Hand-Eye','Passing','Puck Control']),
-        'Senses': avgInt(row, ['Discipline','Off. Awareness','Poise']),
-        'Shooting': avgInt(row, ['Slap Shot Accuracy','Slap Shot Power','Wrist Shot Accuracy','Wrist Shot Power']),
-        'Defense': avgInt(row, ['Def. Awareness','Faceoffs','Shot Blocking','Stick Checking']),
-        'Skating': avgInt(row, ['Acceleration','Agility','Balance','Endurance','Speed']),
-        'Physical': avgInt(row, ['Aggressiveness','Body Checking','Durability','Strength'])
+        'Reflexes': avgInt(row, ['Breakaway','Five Hole','Glove High','Glove Low','Stick High','Stick Low','Rebound Control','Recover']),
+        'Puck Control': avgInt(row, ['Passing','Poise','Poke Check','Puck Playing Freq.','Vision']),
+        'Athletic': avgInt(row, ['Angles','Aggressiveness','Agility','Speed','Endurance','Durability'])
       };
     }
 
     function eaLineMetricOptions(){
       // Allow Overall plus the same grouped buckets shown in cards.
-      return ['Overall','Puck Skills','Senses','Shooting','Defense','Skating','Physical'];
+      return ['Overall','Reflexes','Puck Control','Athletic'];
     }
     function ensureEaLineMetricMenu(){
       const sel = document.getElementById('eaLineMetric');
@@ -648,8 +649,8 @@
       if(!row) return [];
       const excluded = new Set([
         'Game Version','Name','Name_PWHL','PlayerID','Image','Team','Logo',
-        'Number','Position','Height','Weight','Age','Shoots','Player Type','Potential','Line Position',
-        'Overall','Fighting Skill'
+        'Number','Position','Height','Weight','Age','Gloves','Player Type','Potential','Line Position',
+        'Overall'
       ]);
       const keys = Object.keys(row).filter(k=>k && !excluded.has(k) && numVal(row,k)!=null);
       keys.sort((a,b)=>String(a).localeCompare(String(b)));
@@ -657,12 +658,9 @@
     }
 
     const EA_DETAILED_CATEGORY_GROUPS = [
-      { name: 'Puck Skills', metrics: ['Deking','Hand-Eye','Passing','Puck Control'] },
-      { name: 'Senses', metrics: ['Discipline','Off. Awareness','Poise'] },
-      { name: 'Shooting', metrics: ['Slap Shot Accuracy','Slap Shot Power','Wrist Shot Accuracy','Wrist Shot Power'] },
-      { name: 'Defense', metrics: ['Def. Awareness','Faceoffs','Shot Blocking','Stick Checking'] },
-      { name: 'Skating', metrics: ['Acceleration','Agility','Balance','Endurance','Speed'] },
-      { name: 'Physical', metrics: ['Aggressiveness','Body Checking','Durability','Strength'] }
+      { name: 'Reflexes', metrics: ['Breakaway','Five Hole','Glove High','Glove Low','Stick High','Stick Low','Rebound Control','Recover'] },
+      { name: 'Puck Control', metrics: ['Passing','Poise','Poke Check','Puck Playing Freq.','Vision'] },
+      { name: 'Athletic', metrics: ['Angles','Aggressiveness','Agility','Speed','Endurance','Durability'] }
     ];
 
     function drawSmoothClosedPath(ctx, points){
@@ -751,7 +749,14 @@
       const sectorSpan = (2*Math.PI) / sectorCount;
       const startBase = -Math.PI/2;
 
-      // Alternating category wedges (higher contrast)
+      // Category wedges (3 distinct background colors)
+      const wedgeFillFor = (catName)=>{
+        const n = String(catName||'');
+        if(n === 'Reflexes') return 'rgba(59,130,246,.18)';          // blue
+        if(n === 'Puck Control') return 'rgba(142,124,214,.16)';     // lavender accent
+        if(n === 'Athletic') return 'rgba(148,163,184,.12)';         // slate
+        return 'rgba(148,163,184,.10)';
+      };
       for(let i=0;i<sectorCount;i++){
         const a0 = startBase + i * sectorSpan;
         const a1 = a0 + sectorSpan;
@@ -759,7 +764,7 @@
         ctx.moveTo(cx, cy);
         ctx.arc(cx, cy, radius + 6, a0, a1);
         ctx.closePath();
-        ctx.fillStyle = (i % 2 === 0) ? 'rgba(59,130,246,.20)' : 'rgba(148,163,184,.12)';
+        ctx.fillStyle = wedgeFillFor(cats[i] ? cats[i].name : '');
         ctx.fill();
 
         // Subtle divider
@@ -834,7 +839,7 @@
       for(let ci=0; ci<sectorCount; ci++){
         const cat = cats[ci];
         const mid = startBase + ci * sectorSpan + sectorSpan/2;
-        const rotateCats = (cat.name === 'Shooting' || cat.name === 'Skating' || cat.name === 'Physical');
+        const rotateCats = (cat.name === 'Puck Control' || cat.name === 'Athletic');
         drawTangentialText(ctx, cat.name, cx, cy, catLabelR, mid, rotateCats ? Math.PI : 0);
       }
       ctx.shadowBlur = 0;
@@ -880,7 +885,7 @@
       ctx.fillStyle = bg;
       ctx.fillRect(0,0,w,h);
 
-      const labels = (labelsOverride && labelsOverride.length) ? labelsOverride : ['Puck Skills','Senses','Shooting','Defense','Skating','Physical'];
+      const labels = (labelsOverride && labelsOverride.length) ? labelsOverride : ['Reflexes','Puck Control','Athletic'];
       const n = labels.length;
       const padding = 34;
       const cx = Math.floor(w/2);
@@ -1268,7 +1273,7 @@
       const verMap = eaByPlayer.get(selectedPlayer);
       if(!verMap){
         if(msg) msg.textContent='No EA ratings found for this player.';
-        ['ea-overall','ea-puck-skills','ea-senses','ea-shooting','ea-defense','ea-skating','ea-physical'].forEach(id=>setText(id,'—'));
+        ['ea-overall','ea-reflexes','ea-puck-control','ea-athletic'].forEach(id=>setText(id,'—'));
         resetEaCardStyles();
         document.getElementById('playerName').textContent = selectedPlayer || '—';
         document.getElementById('playerMeta').textContent = '—';
@@ -1295,7 +1300,7 @@
       if(row['Team']) metaParts.push(row['Team']);
       if(row['Height']) metaParts.push(row['Height']);
       if(row['Weight']) metaParts.push(row['Weight']);
-      if(row['Shoots']) metaParts.push('Shoots: '+row['Shoots']);
+      if(row['Gloves']) metaParts.push('Gloves: '+row['Gloves']);
       if(row['Player Type']) metaParts.push(row['Player Type']);
       if(row['Potential']) metaParts.push(row['Potential']);
       document.getElementById('playerMeta').textContent = metaParts.length ? metaParts.join(' • ') : '—';
@@ -1311,12 +1316,9 @@
       // Cards (remember these groupings)
       const overall = numVal(row, 'Overall');
       setText('ea-overall', overall==null ? '—' : Math.round(overall));
-      setText('ea-puck-skills', avgInt(row, ['Deking','Hand-Eye','Passing','Puck Control']) ?? '—');
-      setText('ea-senses', avgInt(row, ['Discipline','Off. Awareness','Poise']) ?? '—');
-      setText('ea-shooting', avgInt(row, ['Slap Shot Accuracy','Slap Shot Power','Wrist Shot Accuracy','Wrist Shot Power']) ?? '—');
-      setText('ea-defense', avgInt(row, ['Def. Awareness','Faceoffs','Shot Blocking','Stick Checking']) ?? '—');
-      setText('ea-skating', avgInt(row, ['Acceleration','Agility','Balance','Endurance','Speed']) ?? '—');
-      setText('ea-physical', avgInt(row, ['Aggressiveness','Body Checking','Durability','Strength']) ?? '—');
+      setText('ea-reflexes', avgInt(row, ['Breakaway','Five Hole','Glove High','Glove Low','Stick High','Stick Low','Rebound Control','Recover']) ?? '—');
+      setText('ea-puck-control', avgInt(row, ['Passing','Poise','Poke Check','Puck Playing Freq.','Vision']) ?? '—');
+      setText('ea-athletic', avgInt(row, ['Angles','Aggressiveness','Agility','Speed','Endurance','Durability']) ?? '—');
 
       resetEaCardStyles();
       applyEaCardColors();
@@ -1510,16 +1512,16 @@
       return (attempts||[]).filter(a=>attemptZoneIdOff(a) === selectedZoneId);
     }
 
-    function computeGoalieRowsFromAttempts(attempts){
-      const byGoalie={};
+    function computeShooterRowsFromAttempts(attempts){
+      const byShooter={};
       for(const a of (attempts||[])){
-        if(!a || !a.goalie) continue;
+        if(!a || !a.shooter) continue;
         const ev=a.event;
         // Match backend: Shots are SOG only (Shot + Goal)
         if(ev!=='Shot' && ev!=='Goal') continue;
-        const gname=String(a.goalie||'').trim();
-        if(!gname) continue;
-        const rec = byGoalie[gname] || (byGoalie[gname]={Goaltender:gname, Goals:0, Shots:0, xG:0});
+        const sname=String(a.shooter||'').trim();
+        if(!sname) continue;
+        const rec = byShooter[sname] || (byShooter[sname]={Shooter:sname, Goals:0, Shots:0, xG:0});
         rec.Shots += 1;
         if(ev==='Goal') rec.Goals += 1;
         const xv = (a.xG!==undefined && a.xG!==null && a.xG!=='') ? Number(a.xG) : 0;
@@ -1527,38 +1529,38 @@
       }
 
       const out=[];
-      Object.values(byGoalie).forEach(rec=>{
+      Object.values(byShooter).forEach(rec=>{
         const shots=rec.Shots||0;
         const goals=rec.Goals||0;
         const xg=Math.round((rec.xG||0)*100)/100;
         const shPct=Math.round(((shots? (goals/shots*100):0)*10))/10;
-        const gax=Math.round(((goals - xg)*100))/100;
+        const gsax=Math.round(((xg - goals)*100))/100;
         out.push({
-          Goaltender: rec.Goaltender,
+          Shooter: rec.Shooter,
           Goals: goals,
           Shots: shots,
           xG: xg,
           'Sh%': shPct,
-          GAx: gax,
+          GSAx: gsax,
         });
       });
 
-      // Default sort by GAx desc
-      out.sort((a,b)=> (b.GAx - a.GAx) || (b.xG - a.xG) || (b.Shots - a.Shots) || String(a.Goaltender).localeCompare(String(b.Goaltender)));
+      // Default sort by GSAx desc
+      out.sort((a,b)=> (b.GSAx - a.GSAx) || (b.xG - a.xG) || (b.Shots - a.Shots) || String(a.Shooter).localeCompare(String(b.Shooter)));
       return out;
     }
 
     function updateGoalieTableFromAttempts(){
-      // Table should be filtered by selected zone, but not by selected goalie.
+      // Table should be filtered by selected zone, but not by selected shooter.
       const zoneAttempts = attemptsFilteredByZone(allAttempts);
-      goalieRows = computeGoalieRowsFromAttempts(zoneAttempts);
+      shooterRows = computeShooterRowsFromAttempts(zoneAttempts);
 
-      // If selected goalie no longer exists after zone filter, clear it.
-      if(selectedGoalie && !goalieRows.some(r=>r.Goaltender===selectedGoalie)){
-        setSelectedGoalie('');
+      // If selected shooter no longer exists after zone filter, clear it.
+      if(selectedShooter && !shooterRows.some(r=>r.Shooter===selectedShooter)){
+        setSelectedShooter('');
       }
 
-      renderGoalieTable(goalieRows);
+      renderGoalieTable(shooterRows);
     }
 
     function drawShape(ctx, shape, x, y, color){ ctx.save(); ctx.strokeStyle=color; ctx.fillStyle=color; ctx.lineWidth=1.4; switch(shape){ case 'goal': ctx.beginPath(); ctx.moveTo(x,y-5); ctx.lineTo(x+4.5,y+5); ctx.lineTo(x-4.5,y+1.5); ctx.lineTo(x+4.5,y+1.5); ctx.lineTo(x-4.5,y+5); ctx.closePath(); ctx.fill(); break; case 'shot': ctx.beginPath(); ctx.arc(x,y,5,0,Math.PI*2); ctx.stroke(); break; case 'miss': ctx.beginPath(); ctx.moveTo(x,y-5); ctx.lineTo(x+5,y+5); ctx.lineTo(x-5,y+5); ctx.closePath(); ctx.stroke(); break; case 'block': ctx.strokeRect(x-5,y-5,10,10); break; } ctx.restore(); }
@@ -1571,15 +1573,15 @@
     function hideTooltip(){ tooltip.style.display='none'; }
 
     let allAttempts=[];
-    let selectedGoalie='';
-    function setSelectedGoalie(name){ selectedGoalie = name || ''; }
+    let selectedShooter='';
+    function setSelectedShooter(name){ selectedShooter = name || ''; }
 
     // Sub-tabs (EA Ratings / Shooting / Performance)
     let activeSkaterTab = 'shooting';
     function updateFilterVisibilityForTab(){
       const eaOnly = document.getElementById('eaOnlyFilters');
       const nonEa = document.getElementById('nonEaFilters');
-      const statCards = document.getElementById('skaterStatCards');
+      const statCards = document.getElementById('goalieStatCards');
       const eaCards = document.getElementById('eaCards');
       const isEa = (activeSkaterTab === 'ea');
       if(eaOnly) eaOnly.classList.toggle('hidden', !isEa);
@@ -1614,14 +1616,14 @@
       });
     }
 
-    // Goalie table sorting
-    let goalieRows=[];
-    let goalieSortKey='GAx';
+    // Shooter table sorting
+    let shooterRows=[];
+    let goalieSortKey='GSAx';
     let goalieSortDir='desc';
-    function isNumericKey(key){ return key!=='Goaltender'; }
+    function isNumericKey(key){ return key!=='Shooter'; }
     function normalizeSortVal(row, key){
       const v = row ? row[key] : null;
-      if(key==='Goaltender') return String(v||'').toLowerCase();
+      if(key==='Shooter') return String(v||'').toLowerCase();
       const n = Number(v);
       return Number.isFinite(n) ? n : (v==null ? -Infinity : Number(v));
     }
@@ -1634,8 +1636,8 @@
         if(av < bv) return -1*dir;
         if(av > bv) return 1*dir;
         // stable-ish tie-break
-        const an = String(a.Goaltender||'');
-        const bn = String(b.Goaltender||'');
+        const an = String(a.Shooter||'');
+        const bn = String(b.Shooter||'');
         return an.localeCompare(bn);
       });
     }
@@ -1660,10 +1662,10 @@
             goalieSortDir = (goalieSortDir === 'desc') ? 'asc' : 'desc';
           } else {
             goalieSortKey = key;
-            goalieSortDir = (key === 'Goaltender') ? 'asc' : 'desc';
+            goalieSortDir = (key === 'Shooter') ? 'asc' : 'desc';
           }
           renderGoalieSortIndicators();
-          renderGoalieTable(goalieRows);
+          renderGoalieTable(shooterRows);
         });
       });
       renderGoalieSortIndicators();
@@ -1675,7 +1677,7 @@
       offCtx.clearRect(0,0,offC.width,offC.height);
 
       const zoneAttempts = attemptsFilteredByZone(attempts||[]);
-      const filteredAttempts = selectedGoalie ? zoneAttempts.filter(a=>a.goalie===selectedGoalie) : zoneAttempts;
+      const filteredAttempts = selectedShooter ? zoneAttempts.filter(a=>a.shooter===selectedShooter) : zoneAttempts;
 
       const teamsSet=new Set(); filteredAttempts.forEach(a=>{ if(a && a.forTeam) teamsSet.add(a.forTeam); });
       const colorByTeam={}; for(const nm of teamsSet){ colorByTeam[nm]=await teamColorCache(nm); }
@@ -1720,7 +1722,7 @@
 
     // Data
     async function populateFilters(){
-      const r=await fetch('/api/skaters/filters');
+      const r=await fetch('/api/goalies/filters');
       if(!r.ok) return;
       const data=await r.json();
       allPlayers = (data.players||[]);
@@ -1743,7 +1745,7 @@
     }
     function params(){ const p=new URLSearchParams(); p.set('player', selectedPlayer); multiIds.forEach(id=>{ getMultiValues(id).forEach(v=>p.append(id, v)); }); return p; }
     async function fetchStats(){
-      const r=await fetch('/api/skaters/stats?'+params().toString());
+      const r=await fetch('/api/goalies/stats?'+params().toString());
       if(!r.ok) return;
       const data=await r.json();
       document.getElementById('playerName').textContent=data.player||'—';
@@ -1757,16 +1759,16 @@
       const s=data.stats||{};
       document.getElementById('stat-gp').textContent=s.GP??'—';
       document.getElementById('stat-toi').textContent=s.TOI??'—';
-      document.getElementById('stat-shots').textContent=s.Shots??'—';
-      document.getElementById('stat-goals').textContent=s.Goals??'—';
-      document.getElementById('stat-a1').textContent=s.A1??'—';
-      document.getElementById('stat-a2').textContent=s.A2??'—';
-      document.getElementById('stat-points').textContent=s.Points??'—';
-      document.getElementById('stat-pim').textContent=s.PIM??'—';
-      document.getElementById('stat-xg').textContent=s.xG??'—';
+      document.getElementById('stat-sa').textContent=s.SA??'—';
+      document.getElementById('stat-ga').textContent=s.GA??'—';
+      document.getElementById('stat-sv').textContent=s['Sv%']??'—';
+      document.getElementById('stat-xga').textContent=s.xGA??'—';
+      document.getElementById('stat-xsv').textContent=s['xSv%']??'—';
+      document.getElementById('stat-dsv').textContent=s['dSv%']??'—';
+      document.getElementById('stat-gsax').textContent=s.GSAx??'—';
     }
     async function fetchShotMap(){
-      const r=await fetch('/api/skaters/shotmap?'+params().toString());
+      const r=await fetch('/api/goalies/shotmap?'+params().toString());
       if(!r.ok) return;
       const data=await r.json();
       allAttempts = (data.attempts||[]);
@@ -1777,7 +1779,7 @@
 
     // Performance
     let performanceData = null;
-    function metricIsFloat(metric){ return metric==='xG' || metric==='GAx'; }
+    function metricIsFloat(metric){ return metric==='xGA' || metric==='GSAx' || metric==='TOI'; }
     function yFmt(metric, v, mode){
       const num = Number(v);
       if(!Number.isFinite(num)) return '0';
@@ -1800,7 +1802,7 @@
       ctx.clearRect(0,0,canvas.width,canvas.height);
 
       const metricSel = document.getElementById('perfMetric');
-      const metric = metricSel ? metricSel.value : 'Points';
+      const metric = metricSel ? metricSel.value : 'GSAx';
       const modeSel = document.getElementById('perfMode');
       const mode = modeSel ? modeSel.value : 'running';
       const maIn = document.getElementById('perfMaWindow');
@@ -2009,19 +2011,19 @@
     }
 
     async function fetchPerformance(){
-      const r = await fetch('/api/skaters/performance?' + params().toString());
+      const r = await fetch('/api/goalies/performance?' + params().toString());
       if(!r.ok) return;
       performanceData = await r.json();
       drawPerformanceChart();
     }
 
     function refreshActiveTab(){
+      updateAvatar();
       // Always update player identity card immediately.
       if(activeSkaterTab === 'ea'){
         renderEaTab();
         return;
       }
-      updateAvatar();
       fetchStats();
       if(activeSkaterTab === 'performance'){
         fetchPerformance();
@@ -2036,24 +2038,24 @@
       const sorted = sortGoalieRows(rows||[]);
       (sorted||[]).forEach(row=>{
         const tr=document.createElement('tr');
-        if(selectedGoalie && selectedGoalie===row.Goaltender) tr.classList.add('active');
+        if(selectedShooter && selectedShooter===row.Shooter) tr.classList.add('active');
         tr.innerHTML = `
-          <td title="${row.Goaltender}">${row.Goaltender}</td>
+          <td title="${row.Shooter}">${row.Shooter}</td>
           <td>${row.Goals}</td>
           <td>${row.Shots}</td>
           <td>${row.xG}</td>
           <td>${row['Sh%']}</td>
-          <td>${row.GAx}</td>
+          <td>${row.GSAx}</td>
         `;
         tr.addEventListener('click',()=>{
-          if(selectedGoalie === row.Goaltender){
-            setSelectedGoalie('');
+          if(selectedShooter === row.Shooter){
+            setSelectedShooter('');
           } else {
-            setSelectedGoalie(row.Goaltender);
+            setSelectedShooter(row.Shooter);
           }
           saveSkatersState();
           // Re-render selection + redraw shots
-          renderGoalieTable(goalieRows);
+          renderGoalieTable(shooterRows);
           drawShotMap(allAttempts);
         });
         body.appendChild(tr);
@@ -2064,7 +2066,7 @@
     function localAvatarSrc(name){ const file = (name||'').toLowerCase().replace(/[^a-z0-9]+/g,'_') + '.jpg'; return '/static/players/'+file; }
     async function updateAvatar(){ const name=selectedPlayer; const img=document.getElementById('playerAvatar');
       try{
-        const resp=await fetch('/api/skaters/player_image?'+new URLSearchParams({player:name}).toString());
+        const resp=await fetch('/api/goalies/player_image?'+new URLSearchParams({player:name}).toString());
         if(resp.ok){ const data=await resp.json(); const url=(data&&data.url)||''; if(url){ img.src=url; return; }
         }
       }catch(e){}
@@ -2075,7 +2077,7 @@
     multiIds.forEach(id=>{
       document.querySelector(`#${id}Menu`).addEventListener('change',()=>{
         updateButtonLabel(id);
-        setSelectedGoalie('');
+        setSelectedShooter('');
         setSelectedZone('');
         saveSkatersState();
         refreshActiveTab();
@@ -2126,7 +2128,7 @@
         if(pendingRestoreState.selectedGameVersion) setSelectedGameVersion(pendingRestoreState.selectedGameVersion);
         if(pendingRestoreState.selectedEaLineMetric) setSelectedEaLineMetric(pendingRestoreState.selectedEaLineMetric);
         if(pendingRestoreState.shooting){
-          if(pendingRestoreState.shooting.selectedGoalie) setSelectedGoalie(pendingRestoreState.shooting.selectedGoalie);
+          if(pendingRestoreState.shooting.selectedShooter) setSelectedShooter(pendingRestoreState.shooting.selectedShooter);
           if(pendingRestoreState.shooting.selectedZoneId) setSelectedZone(pendingRestoreState.shooting.selectedZoneId);
         }
       }

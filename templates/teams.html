@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>PWHL Analytics — Teams</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=2">
+  <link rel="icon" href="/favicon.ico?v=2">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='PWHL_logo.png', v='2') }}">
+  <meta name="theme-color" content="#160A3A">
+  <style>
+    :root { --pwhl-bg-1:#160A3A; --pwhl-bg-2:#251055; --pwhl-bg-3:#3B1E7A; --pwhl-surface:rgba(19,13,46,.75); --pwhl-surface-strong:rgba(25,16,60,.85); --pwhl-border:rgba(142,124,214,.25); --pwhl-accent:#8E7CD6; --pwhl-accent-strong:#B9A7FF; }
+    body{margin:0;background:linear-gradient(135deg,var(--pwhl-bg-1),var(--pwhl-bg-2) 48%,var(--pwhl-bg-3));color:#fff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;min-height:100vh;display:flex;flex-direction:column;}
+    header{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;border-bottom:1px solid var(--pwhl-border);background:var(--pwhl-surface-strong);} .brand{display:flex;align-items:center;gap:.75rem;font-weight:700;}
+    .tabs{display:flex;background:var(--pwhl-surface-strong);border-bottom:1px solid var(--pwhl-border);} .tab{background:transparent;color:#d6d3e9;border:none;padding:1rem 2rem;cursor:pointer;border-bottom:3px solid transparent;transition:.2s;font-size:1.05rem;text-decoration:none;display:flex;align-items:center;gap:.4rem;font-weight:600;} .tab:hover{color:#fff;text-decoration:none;} .tab.active{color:var(--pwhl-accent-strong);border-bottom-color:var(--pwhl-accent-strong);}
+    .container{display:grid;grid-template-columns:280px 1fr;gap:1rem;padding:1rem 2rem;}
+    .panel{background:var(--pwhl-surface);border:1px solid var(--pwhl-border);border-radius:.75rem;padding:1rem;}
+    .filters .dropdown{position:relative;margin-bottom:.75rem;}
+    .filters .dropdown .dropdown-toggle{width:100%;padding:.5rem .6rem;border:1px solid #374151;background:#0f172a;color:#e5e7eb;border-radius:.4rem;text-align:left;}
+    .filters .dropdown.open .dropdown-menu{display:block;}
+    .filters .dropdown .dropdown-menu{position:absolute;top:110%;left:0;right:0;background:#0b1220;border:1px solid #374151;border-radius:.4rem;display:none;max-height:260px;overflow:auto;z-index:50;padding:.4rem;}
+    .filters .search-box{margin-bottom:.45rem;}
+    .filters .search-box input{width:100%;padding:.45rem .55rem;border:1px solid #374151;background:#0f172a;color:#e5e7eb;border-radius:.35rem;}
+    .filters .option-list label{display:flex;align-items:center;gap:.5rem;padding:.35rem .25rem;}
+    .hidden{display:none !important;}
+    .label{font-size:.8rem;color:#9ca3af;margin-bottom:.25rem;}
+
+    .filters .logo-section{margin-top:1rem;padding-top:1rem;border-top:1px solid var(--pwhl-border);text-align:center;}
+    .filters .logo-link{display:inline-block;transition:opacity .2s;}
+    .filters .logo-link:hover{opacity:.85;}
+    .filters .logo-link img{width:120px;height:auto;border-radius:8px;}
+    .filters .logo-attribution{margin-top:.6rem;font-size:.9rem;font-style:italic;color:rgba(255,255,255,.7);letter-spacing:.05em;}
+
+    .player-header{display:flex;align-items:center;gap:1rem;}
+    .avatar{width:120px;height:120px;border-radius:.65rem;background:#111827;border:1px solid #374151;object-fit:contain;padding:.35rem;}
+    .player-title{font-size:1.85rem;font-weight:700;}
+    .player-meta{color:#9ca3af;font-size:1rem;margin-top:.15rem;}
+
+    .subtabs{display:flex;gap:.35rem;margin-top:.9rem;border-bottom:1px solid var(--pwhl-border);padding-bottom:.45rem;}
+    .subtab{background:transparent;border:1px solid transparent;color:#d6d3e9;padding:.5rem .75rem;border-radius:.5rem;cursor:pointer;font-weight:650;}
+    .subtab:hover{color:#fff;border-color:rgba(142,124,214,.25);}
+    .subtab.active{color:var(--pwhl-accent-strong);border-color:rgba(142,124,214,.45);background:rgba(142,124,214,.10);}
+    .subtab-panel{display:none;}
+    .subtab-panel.active{display:block;}
+
+    .stats-grid{display:grid;grid-template-columns:repeat(9, minmax(88px, 1fr));gap:.5rem;margin-top:1rem;}
+    .stats-grid.teams-grid{grid-template-columns:repeat(7, minmax(88px, 1fr));}
+    .stat-card{background:#0f172a;border:1px solid #374151;border-radius:.5rem;padding:.5rem .45rem;text-align:center;}
+    .stat-card .label{color:#9ca3af;font-size:.8rem;margin-bottom:.25rem;}
+    .stat-card .value{font-size:1.2rem;font-weight:600;}
+
+    .goalie-table-wrap{background:#0f172a;border:1px solid #374151;border-radius:.5rem;overflow:hidden;}
+    table{width:100%;border-collapse:collapse;font-size:.85rem;table-layout:fixed;}
+    thead th{position:sticky;top:0;background:#0b1220;color:#cbd5e1;text-align:left;padding:.55rem .6rem;border-bottom:1px solid #374151;white-space:nowrap;}
+    thead th.sortable{cursor:pointer;user-select:none;}
+    thead th.sortable:hover{color:#ffffff;}
+    tbody td{padding:.45rem .6rem;border-bottom:1px solid rgba(55,65,81,.55);color:#e5e7eb;white-space:nowrap;}
+    tbody tr{cursor:pointer;}
+    tbody tr:hover{background:rgba(142,124,214,.12);}
+    tbody tr.active{background:rgba(142,124,214,.22);}
+
+    .team-cell{display:flex;align-items:center;gap:.6rem;min-width:0;}
+    .team-cell span{overflow:hidden;text-overflow:ellipsis;}
+    .team-cell img{width:26px;height:26px;border-radius:6px;object-fit:contain;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.10);padding:3px;}
+
+    /* Standings table column sizing + alignment */
+    #tab-standings thead th:first-child,
+    #tab-standings tbody td:first-child{width:26%;}
+    #tab-standings thead th:not(:first-child),
+    #tab-standings tbody td:not(:first-child){width:7.4%;text-align:center;}
+
+    .perf-controls{display:flex;align-items:center;gap:.65rem;margin-top:1rem;}
+    .perf-controls .label{margin:0;}
+    .perf-controls select{padding:.45rem .55rem;border:1px solid #374151;background:#0f172a;color:#e5e7eb;border-radius:.4rem;}
+    .perf-chart-wrap{margin-top:.75rem;background:#0f172a;border:1px solid #374151;border-radius:.5rem;padding:1.05rem;}
+    .perf-chart{width:100%;height:360px;display:block;}
+
+    /* Charts tab: two square charts side-by-side */
+    .charts-row{display:flex;gap:1.35rem;}
+    .chart-col{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;}
+    .chart-title{margin:.15rem 0 .45rem 0;font-size:1.05rem;font-weight:700;color:#e5e7eb;}
+    .chart-slicer{margin:0 0 .65rem 0;display:flex;align-items:center;gap:.5rem;}
+    .chart-slicer select{padding:.45rem .55rem;border:1px solid #374151;background:#0f172a;color:#e5e7eb;border-radius:.4rem;}
+    .square-chart{position:relative;width:min(100%, 420px);aspect-ratio:1 / 1;}
+    .square-chart canvas{position:absolute;inset:0;width:100%;height:100%;display:block;}
+
+    @media (max-width: 1100px){
+      .stats-grid{grid-template-columns:repeat(auto-fit, minmax(120px, 1fr));}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand"><img src="/static/PWHL_logo.png" alt="PWHL" style="height:28px"> <span>PWHL Analytics</span></div>
+  </header>
+  <div class="tabs">
+    <a class="tab" href="/">📅 Schedule</a>
+    <a class="tab" href="/report">📊 Report</a>
+    <a class="tab" href="/skaters">🏒 Skaters</a>
+    <a class="tab" href="/goalies" aria-label="Goalies">
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" focusable="false" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3c4.4 0 7.8 2.6 7.8 7.2 0 6-4.2 11-7.8 11.3C8.4 21.2 4.2 16.2 4.2 10.2 4.2 5.6 7.6 3 12 3z"/>
+        <path d="M7.2 10.4c.1-3 2.1-5 4.8-5s4.7 2 4.8 5"/>
+        <path d="M9 4.7h6"/>
+        <path d="M8.1 6.2h1.4M14.5 6.2h1.4"/>
+        <path d="M8 11.2c1.2 1 2.7 1.6 4 1.6s2.8-.6 4-1.6"/>
+        <path d="M8.2 13.1h7.6"/>
+        <path d="M9.1 15h5.8"/>
+        <path d="M12 10.6v5.2"/>
+        <path d="M10.2 10.9v4.8"/>
+        <path d="M13.8 10.9v4.8"/>
+      </svg>
+      Goalies
+    </a>
+    <a class="tab active" href="/teams">🏟️ Teams</a>
+    <a class="tab" href="/data">🗂️ Data</a>
+  </div>
+  <div class="container">
+    <aside class="panel filters">
+      <div class="label">Team</div>
+      <div class="dropdown" id="teamDropdown">
+        <button class="dropdown-toggle" id="teamToggle" type="button">Select Team</button>
+        <div class="dropdown-menu" id="teamMenu"></div>
+      </div>
+
+      <div class="label">Season</div>
+      <div class="dropdown" id="seasonsDropdown"><button class="dropdown-toggle" type="button">Select Seasons</button><div class="dropdown-menu" id="seasonsMenu"></div></div>
+      <div class="label">Season State</div>
+      <div class="dropdown" id="season_statesDropdown"><button class="dropdown-toggle" type="button">Select Season State</button><div class="dropdown-menu" id="season_statesMenu"></div></div>
+      <div class="label">Strength State</div>
+      <div class="dropdown" id="strengthsDropdown"><button class="dropdown-toggle" type="button">Select Strength</button><div class="dropdown-menu" id="strengthsMenu"></div></div>
+
+      <div class="logo-section">
+        <a href="https://hockey-statistics.com/" target="_blank" rel="noopener noreferrer" class="logo-link">
+          <img src="{{ url_for('static', filename='Logo.png') }}" alt="Hockey Statistics Logo">
+        </a>
+        <div class="logo-attribution">App by HockeySkytte</div>
+      </div>
+    </aside>
+
+    <main class="panel">
+      <div class="player-header">
+        <img id="teamAvatar" class="avatar" src="/static/Thumbnail.png" alt="Team">
+        <div>
+          <div id="teamName" class="player-title">—</div>
+          <div id="teamMeta" class="player-meta">&nbsp;</div>
+        </div>
+      </div>
+
+      <div class="stats-grid teams-grid" id="teamKpiCards">
+        <div class="stat-card"><div class="label">GP</div><div class="value" id="stat-gp">—</div></div>
+        <div class="stat-card"><div class="label">SF%</div><div class="value" id="stat-sf">—</div></div>
+        <div class="stat-card"><div class="label">GF%</div><div class="value" id="stat-gf">—</div></div>
+        <div class="stat-card"><div class="label">xGF%</div><div class="value" id="stat-xgf">—</div></div>
+        <div class="stat-card"><div class="label">Sh%</div><div class="value" id="stat-sh">—</div></div>
+        <div class="stat-card"><div class="label">Sv%</div><div class="value" id="stat-sv">—</div></div>
+        <div class="stat-card"><div class="label">PDO</div><div class="value" id="stat-pdo">—</div></div>
+      </div>
+
+      <div class="subtabs" id="teamTabs" role="tablist" aria-label="Teams tabs">
+        <button class="subtab active" type="button" data-tab="standings" role="tab" aria-selected="true">Standings</button>
+        <button class="subtab" type="button" data-tab="charts" role="tab" aria-selected="false">Charts</button>
+        <button class="subtab" type="button" data-tab="performance" role="tab" aria-selected="false">Performance</button>
+      </div>
+
+      <div id="tab-standings" class="subtab-panel active">
+        <div class="goalie-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th class="sortable" data-sort="Team">Team</th>
+                <th class="sortable" data-sort="GP">GP</th>
+                <th class="sortable" data-sort="Points">Points</th>
+                <th class="sortable" data-sort="W">W</th>
+                <th class="sortable" data-sort="OTW">OTW</th>
+                <th class="sortable" data-sort="OTL">OTL</th>
+                <th class="sortable" data-sort="L">L</th>
+                <th class="sortable" data-sort="Pct">Pct</th>
+                <th class="sortable" data-sort="GF%">GF%</th>
+                <th class="sortable" data-sort="xGF%">xGF%</th>
+                <th class="sortable" data-sort="PDO">PDO</th>
+              </tr>
+            </thead>
+            <tbody id="standingsBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="tab-charts" class="subtab-panel">
+        <div class="perf-chart-wrap charts-row">
+          <div class="chart-col">
+            <div class="chart-title">Play Driving</div>
+            <div class="chart-slicer">
+              <select id="playDrivingChartSelect" aria-label="Play Driving chart">
+                <option value="xgf_gf_pct">xGF% vs GF%</option>
+                <option value="xg_per_game">xG per game</option>
+                <option value="g_per_game">Goals per game</option>
+                <option value="s_per_game">Shots per game</option>
+                <option value="offense">Offense</option>
+                <option value="defense">Defense</option>
+              </select>
+            </div>
+            <div class="square-chart"><canvas id="playDrivingScatter"></canvas></div>
+          </div>
+          <div class="chart-col">
+            <div class="chart-title">Shooting/Goaltending</div>
+            <div class="chart-slicer">
+              <select id="shootGoaltendChartSelect" aria-label="Shooting/Goaltending chart">
+                <option value="sh_sv">Sh% vs Sv%</option>
+                <option value="gax_gsax">GAx vs GSAx</option>
+              </select>
+            </div>
+            <div class="square-chart"><canvas id="shSvScatter"></canvas></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab-performance" class="subtab-panel">
+        <div class="perf-controls">
+          <div class="label">Metric</div>
+          <select id="perfMetric">
+            <option value="xg_pm">xG+/-</option>
+            <option value="g_pm">G+/-</option>
+            <option value="gdax">GDAx</option>
+            <option value="gax">GAx</option>
+            <option value="gsax">GSAx</option>
+          </select>
+        </div>
+        <div class="perf-chart-wrap">
+          <canvas id="teamPerf" class="perf-chart"></canvas>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Dropdown helpers (match Skaters/Goalies)
+    const multiIds=['seasons','season_states','strengths'];
+    function getMultiValues(id){ return Array.from(document.querySelectorAll(`#${id}Menu input:checked`)).map(i=>i.value); }
+    function buildMenu(id, items){ const menu=document.getElementById(id+'Menu'); if(!menu) return; menu.innerHTML='';
+      const listWrap=document.createElement('div'); listWrap.className='option-list'; menu.appendChild(listWrap);
+      listWrap.innerHTML=''; (items||[]).forEach(v=>{ const label=document.createElement('label'); const cb=document.createElement('input'); cb.type='checkbox'; cb.value=v.value||v; label.appendChild(cb); const span=document.createElement('span'); span.textContent=v.label||v; label.appendChild(span); listWrap.appendChild(label); });
+    }
+    function updateButtonLabel(id){ const selected=getMultiValues(id); const btn=document.querySelector(`#${id}Dropdown .dropdown-toggle`); if(!btn) return; if(selected.length===0){ btn.textContent=`Select ${id.replace(/_/g,' ')}`; } else if(selected.length===1){ btn.textContent=selected[0]; } else { btn.textContent=`${selected.length} selected`; } }
+    function toggleDropdown(drop){ document.querySelectorAll('.dropdown').forEach(d=>{ if(d!==drop) d.classList.remove('open');}); drop.classList.toggle('open'); }
+    document.addEventListener('click',e=>{ const dd=e.target.closest('.dropdown'); if(!dd) document.querySelectorAll('.dropdown').forEach(d=>d.classList.remove('open')); const tog=e.target.closest('.dropdown-toggle'); if(tog){ toggleDropdown(tog.parentElement); }});
+
+    // Team dropdown (single select + search inside menu)
+    let allTeams=[];
+    let selectedTeam='';
+    function setSelectedTeam(name){ selectedTeam = name || ''; document.getElementById('teamToggle').textContent = selectedTeam || 'Select Team'; }
+
+    // Persistence (Teams page)
+    const TEAMS_STATE_KEY = 'pwhl_teams_state_v2';
+    function safeJsonParse(s){ try{ return JSON.parse(s); }catch(e){ return null; } }
+    function loadTeamsState(){
+      try{ return safeJsonParse(localStorage.getItem(TEAMS_STATE_KEY) || ''); }catch(e){ return null; }
+    }
+    function saveTeamsState(){
+      try{
+        const perfMetricSel = document.getElementById('perfMetric');
+        const playSel = document.getElementById('playDrivingChartSelect');
+        const shootSel = document.getElementById('shootGoaltendChartSelect');
+        const state = {
+          activeTab,
+          selectedTeam,
+          multi: {
+            seasons: getMultiValues('seasons'),
+            season_states: getMultiValues('season_states'),
+            strengths: getMultiValues('strengths')
+          },
+          charts: {
+            playDriving: playSel ? playSel.value : 'xg_per_game',
+            shooting: shootSel ? shootSel.value : 'sh_sv'
+          },
+          performance: {
+            metric: perfMetricSel ? perfMetricSel.value : 'xg_pm'
+          }
+        };
+        localStorage.setItem(TEAMS_STATE_KEY, JSON.stringify(state));
+      }catch(e){}
+    }
+    function applyMultiSelections(id, values){
+      const set = new Set((values||[]).map(String));
+      document.querySelectorAll(`#${id}Menu input[type=checkbox]`).forEach(cb=>{ cb.checked = set.has(String(cb.value)); });
+      updateButtonLabel(id);
+    }
+    function buildTeamMenu(teams){
+      const menu=document.getElementById('teamMenu');
+      menu.innerHTML='';
+      const searchWrap=document.createElement('div'); searchWrap.className='search-box';
+      const search=document.createElement('input'); search.type='text'; search.placeholder='Search team...';
+      searchWrap.appendChild(search); menu.appendChild(searchWrap);
+      const listWrap=document.createElement('div'); listWrap.className='option-list'; menu.appendChild(listWrap);
+      function render(q=''){
+        listWrap.innerHTML='';
+        const term=(q||'').trim().toLowerCase();
+        const items = term ? (teams||[]).filter(t=>String(t).toLowerCase().includes(term)) : (teams||[]);
+        items.forEach(n=>{
+          const label=document.createElement('label');
+          const rb=document.createElement('input'); rb.type='radio'; rb.name='teamRadio'; rb.value=n;
+          rb.checked = (n===selectedTeam);
+          rb.addEventListener('change',()=>{
+            setSelectedTeam(n);
+            document.getElementById('teamDropdown').classList.remove('open');
+            saveTeamsState();
+            refreshActiveTab();
+          });
+          label.appendChild(rb);
+          const span=document.createElement('span'); span.textContent=n; label.appendChild(span);
+          listWrap.appendChild(label);
+        });
+      }
+      search.addEventListener('input',()=>render(search.value));
+      render('');
+    }
+
+    // Page state
+    let teamLogos = {};
+    let activeTab = 'standings';
+
+    function currentQuery(){
+      const p = new URLSearchParams();
+      p.set('team', selectedTeam || '');
+      multiIds.forEach(id=>{
+        getMultiValues(id).forEach(v=>p.append(id, v));
+      });
+      return p;
+    }
+
+    function setText(id, val){ const el=document.getElementById(id); if(el) el.textContent = val; }
+    function fmtPct1(v){
+      if(v===null||v===undefined||v==='') return '—';
+      const n=Number(v);
+      if(!Number.isFinite(n)) return '—';
+      return `${n.toFixed(1)}%`;
+    }
+    function fmtDec1(v){
+      if(v===null||v===undefined||v==='') return '—';
+      const n=Number(v);
+      if(!Number.isFinite(n)) return String(v);
+      return n.toFixed(1);
+    }
+    function fmtInt(v){
+      if(v===null||v===undefined||v==='') return '—';
+      const n=Number(v);
+      if(!Number.isFinite(n)) return String(v);
+      return String(Math.trunc(n));
+    }
+    function fmtPctRatio(v){
+      if(v===null||v===undefined||v==='') return '—';
+      const n=Number(v);
+      if(!Number.isFinite(n)) return '—';
+      return n.toFixed(3);
+    }
+
+    function updateHeader(){
+      setText('teamName', selectedTeam || '—');
+      setText('teamMeta', '\u00A0');
+      const img=document.getElementById('teamAvatar');
+      const url = selectedTeam ? (teamLogos[selectedTeam] || '') : '';
+      img.src = url || '/static/Thumbnail.png';
+    }
+
+    // Standings sorting
+    let standingsRows=[];
+    let standingsSortKey='Points';
+    let standingsSortDir='desc';
+    function standingsNormalizeVal(row, key){
+      const v = row ? row[key] : null;
+      if(key==='Team') return String(v||'').toLowerCase();
+      const n = Number(v);
+      return Number.isFinite(n) ? n : (v==null ? -Infinity : Number(v));
+    }
+    function sortStandingsRows(rows){
+      const dir = standingsSortDir === 'desc' ? -1 : 1;
+      const key = standingsSortKey;
+      return (rows||[]).slice().sort((a,b)=>{
+        const av = standingsNormalizeVal(a,key);
+        const bv = standingsNormalizeVal(b,key);
+        if(av < bv) return -1*dir;
+        if(av > bv) return 1*dir;
+        return String(a.Team||'').localeCompare(String(b.Team||''));
+      });
+    }
+    function renderStandingsSortIndicators(){
+      document.querySelectorAll('#tab-standings thead th.sortable').forEach(th=>{
+        const base = th.getAttribute('data-base') || th.textContent.replace(/[\s▲▼]+$/,'').trim();
+        th.setAttribute('data-base', base);
+        const key = th.getAttribute('data-sort');
+        if(key === standingsSortKey){
+          th.textContent = base + (standingsSortDir==='desc' ? ' ▼' : ' ▲');
+        } else {
+          th.textContent = base;
+        }
+      });
+    }
+    function initStandingsTableSorting(){
+      document.querySelectorAll('#tab-standings thead th.sortable').forEach(th=>{
+        th.addEventListener('click', ()=>{
+          const key = th.getAttribute('data-sort');
+          if(!key) return;
+          if(standingsSortKey === key){
+            standingsSortDir = (standingsSortDir === 'desc') ? 'asc' : 'desc';
+          } else {
+            standingsSortKey = key;
+            standingsSortDir = (key === 'Team') ? 'asc' : 'desc';
+          }
+          renderStandingsSortIndicators();
+          renderStandingsTable();
+        });
+      });
+      renderStandingsSortIndicators();
+    }
+
+    async function fetchKPIs(){
+      if(!selectedTeam){
+        ['stat-gp','stat-sf','stat-gf','stat-xgf','stat-sh','stat-sv','stat-pdo'].forEach(id=>setText(id,'—'));
+        updateHeader();
+        return;
+      }
+      const p = currentQuery();
+      const r = await fetch('/api/teams/kpis?' + p.toString());
+      if(!r.ok) return;
+      const data = await r.json();
+      updateHeader();
+      if(data && data.logo){
+        const img=document.getElementById('teamAvatar');
+        if(img) img.src = data.logo;
+      }
+      setText('stat-gp', fmtInt(data.GP));
+      setText('stat-sf', fmtPct1(data['SF%']));
+      setText('stat-gf', fmtPct1(data['GF%']));
+      setText('stat-xgf', fmtPct1(data['xGF%']));
+      setText('stat-sh', fmtPct1(data['Sh%']));
+      setText('stat-sv', fmtPct1(data['Sv%']));
+      setText('stat-pdo', fmtDec1(data.PDO));
+    }
+
+    async function fetchStandings(){
+      const p = currentQuery();
+      p.delete('team');
+      const r = await fetch('/api/teams/standings?' + p.toString());
+      if(!r.ok) return;
+      const data = await r.json();
+      standingsRows = (data.rows||[]);
+      renderStandingsSortIndicators();
+      renderStandingsTable();
+    }
+
+    function renderStandingsTable(){
+      const body = document.getElementById('standingsBody');
+      body.innerHTML = '';
+      const rows = sortStandingsRows(standingsRows);
+      rows.forEach(row=>{
+        const tr=document.createElement('tr');
+        if(selectedTeam && row.Team === selectedTeam) tr.classList.add('active');
+        const logo = row.Logo || teamLogos[row.Team] || '';
+        tr.innerHTML = `
+          <td><div class="team-cell">${logo ? `<img alt="" src="${logo}">` : ''}<span>${row.Team}</span></div></td>
+          <td>${fmtInt(row.GP)}</td>
+          <td>${fmtInt(row.Points)}</td>
+          <td>${fmtInt(row.W)}</td>
+          <td>${fmtInt(row.OTW)}</td>
+          <td>${fmtInt(row.OTL)}</td>
+          <td>${fmtInt(row.L)}</td>
+          <td>${fmtPctRatio(row.Pct)}</td>
+          <td>${fmtPct1(row['GF%'])}</td>
+          <td>${fmtPct1(row['xGF%'])}</td>
+          <td>${fmtDec1(row.PDO)}</td>
+        `;
+        tr.addEventListener('click', ()=>{
+          setSelectedTeam(row.Team);
+          buildTeamMenu(allTeams);
+          saveTeamsState();
+          refreshActiveTab();
+        });
+        body.appendChild(tr);
+      });
+    }
+
+    function setupCanvasToCss(canvas){
+      if(!canvas) return null;
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = Math.max(2, Math.floor(rect.width));
+      canvas.height = Math.max(2, Math.floor(rect.height));
+      return canvas.getContext('2d');
+    }
+
+    // Scatter charts (Charts tab)
+    const logoImgCache = {};
+    function getLogoImage(url){
+      if(!url) return null;
+      if(logoImgCache[url]) return logoImgCache[url];
+      const img = new Image();
+      img.decoding = 'async';
+      img.loading = 'lazy';
+      img.src = url;
+      logoImgCache[url] = img;
+      return img;
+    }
+
+    function niceDomain(minV, maxV){
+      if(!Number.isFinite(minV) || !Number.isFinite(maxV)) return {min:0,max:1};
+      if(minV === maxV) return {min:minV-1, max:maxV+1};
+      const pad = (maxV - minV) * 0.06;
+      return {min: minV - pad, max: maxV + pad};
+    }
+
+    function formatTick(v){
+      if(!Number.isFinite(v)) return '';
+      const s = v.toFixed(2);
+      return s.replace(/\.00$/,'').replace(/(\.\d)0$/,'$1');
+    }
+
+    function fmtPctTooltip(v){
+      const n = Number(v);
+      if(!Number.isFinite(n)) return '—';
+      return `${n.toFixed(1)}%`;
+    }
+    function niceStep(range){
+      if(!Number.isFinite(range) || range <= 0) return 1;
+      const exp = Math.floor(Math.log10(range));
+      const base = Math.pow(10, exp);
+      const frac = range / base;
+      let stepFrac;
+      if(frac <= 1.2) stepFrac = 0.2;
+      else if(frac <= 2.4) stepFrac = 0.5;
+      else if(frac <= 6) stepFrac = 1;
+      else if(frac <= 12) stepFrac = 2;
+      else stepFrac = 2.5;
+      return stepFrac * base;
+    }
+    function buildTicks(minV, maxV){
+      const range = maxV - minV;
+      const step = niceStep(range);
+      const start = Math.floor(minV / step) * step;
+      const end = Math.ceil(maxV / step) * step;
+      const ticks=[];
+      for(let v=start; v<=end+step*0.5; v+=step){
+        ticks.push(Math.round(v*1000)/1000);
+        if(ticks.length>30) break;
+      }
+      return {ticks, min:start, max:end};
+    }
+
+    function drawScatter(canvas, points, opts){
+      const ctx = setupCanvasToCss(canvas);
+      if(!ctx) return;
+      const w=canvas.width,h=canvas.height;
+      ctx.clearRect(0,0,w,h);
+      ctx.fillStyle='#0b1220';
+      ctx.fillRect(0,0,w,h);
+
+      const pad={l:52,r:18,t:18,b:44};
+      const plotW=w-pad.l-pad.r;
+      const plotH=h-pad.t-pad.b;
+
+      const xs = points.map(p=>p.x).filter(Number.isFinite);
+      const ys = points.map(p=>p.y).filter(Number.isFinite);
+      if(!xs.length || !ys.length) return;
+      const xDomRaw = niceDomain(Math.min(...xs), Math.max(...xs));
+      const yDomRaw = niceDomain(Math.min(...ys), Math.max(...ys));
+      const xTickPack = buildTicks(xDomRaw.min, xDomRaw.max);
+      const yTickPack = buildTicks(yDomRaw.min, yDomRaw.max);
+      const xDom = {min:xTickPack.min, max:xTickPack.max};
+      const yDom = {min:yTickPack.min, max:yTickPack.max};
+
+      const xToPx = (x)=>{
+        const t = (x - xDom.min) / (xDom.max - xDom.min);
+        const u = (opts && opts.xReversed) ? (1 - t) : t;
+        return pad.l + u * plotW;
+      };
+      const yToPx = (y)=>{
+        if(opts && opts.yReversed){
+          // reversed axis: smaller values are higher (top)
+          return pad.t + ((y - yDom.min) / (yDom.max - yDom.min)) * plotH;
+        }
+        // normal axis: larger values are higher (top)
+        return pad.t + (1 - ((y - yDom.min) / (yDom.max - yDom.min))) * plotH;
+      };
+
+      // grid + tick labels
+      ctx.strokeStyle='rgba(203,213,225,.14)';
+      ctx.lineWidth=1;
+      for(const xv of xTickPack.ticks){
+        const tx = xToPx(xv);
+        ctx.beginPath(); ctx.moveTo(tx,pad.t); ctx.lineTo(tx,pad.t+plotH); ctx.stroke();
+      }
+      for(const yv of yTickPack.ticks){
+        const ty = yToPx(yv);
+        ctx.beginPath(); ctx.moveTo(pad.l,ty); ctx.lineTo(pad.l+plotW,ty); ctx.stroke();
+      }
+
+      // axes labels
+      ctx.fillStyle='rgba(203,213,225,.85)';
+      ctx.font='600 12px Segoe UI, Roboto, sans-serif';
+      ctx.textAlign='center';
+      ctx.textBaseline='top';
+      ctx.fillText(opts?.xLabel || '', pad.l + plotW/2, pad.t + plotH + 18);
+
+      ctx.save();
+      ctx.translate(16, pad.t + plotH/2);
+      ctx.rotate(-Math.PI/2);
+      ctx.textAlign='center';
+      ctx.textBaseline='top';
+      ctx.fillText(opts?.yLabel || '', 0, 0);
+      ctx.restore();
+
+      // y tick labels
+      ctx.fillStyle='rgba(203,213,225,.70)';
+      ctx.font='11px Segoe UI, Roboto, sans-serif';
+      ctx.textAlign='right';
+      ctx.textBaseline='middle';
+      for(const yv of yTickPack.ticks){
+        const ty = yToPx(yv);
+        ctx.fillText(formatTick(yv), pad.l-8, ty);
+      }
+
+      // x tick labels
+      ctx.textAlign='center';
+      ctx.textBaseline='top';
+      for(const xv of xTickPack.ticks){
+        const tx = xToPx(xv);
+        ctx.fillText(formatTick(xv), tx, pad.t+plotH+4);
+      }
+
+      // Average lines
+      const avgX = xs.reduce((a,b)=>a+b,0) / xs.length;
+      const avgY = ys.reduce((a,b)=>a+b,0) / ys.length;
+      if(Number.isFinite(avgX) && Number.isFinite(avgY)){
+        const ax = xToPx(avgX);
+        const ay = yToPx(avgY);
+        ctx.save();
+        ctx.strokeStyle='rgba(185,167,255,.70)';
+        ctx.lineWidth=1.6;
+        ctx.beginPath(); ctx.moveTo(ax, pad.t); ctx.lineTo(ax, pad.t+plotH); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(pad.l, ay); ctx.lineTo(pad.l+plotW, ay); ctx.stroke();
+        ctx.restore();
+      }
+
+      // points (logos)
+      const size = 36;
+      const hoverPoints=[];
+      points.forEach(p=>{
+        if(!Number.isFinite(p.x) || !Number.isFinite(p.y)) return;
+        const px = xToPx(p.x);
+        const py = yToPx(p.y);
+        const img = getLogoImage(p.logo || '');
+        if(img && img.complete && img.naturalWidth > 0){
+          ctx.drawImage(img, px - size/2, py - size/2, size, size);
+        } else {
+          ctx.fillStyle='rgba(185,167,255,.85)';
+          ctx.beginPath(); ctx.arc(px,py,4.2,0,Math.PI*2); ctx.fill();
+        }
+        hoverPoints.push({ x:px, y:py, team: p.team || p.Team || '', rawX: p.x, rawY: p.y, extras: p.extras || null });
+      });
+
+      canvas._scatterHover = {
+        points: hoverPoints,
+        threshold: Math.max(14, size*0.55),
+        xLabel: opts?.xLabel || 'X',
+        yLabel: opts?.yLabel || 'Y',
+        xFormat: opts?.xFormat || ((v)=>formatTick(v)),
+        yFormat: opts?.yFormat || ((v)=>formatTick(v)),
+        tooltipLines: opts?.tooltipLines || null,
+      };
+    }
+
+    // Scatter tooltips
+    const scatterTooltip = (()=>{
+      const el=document.createElement('div');
+      el.style.cssText='position:absolute;pointer-events:none;background:rgba(20,24,38,.94);border:1px solid #6b7280;padding:.55rem .7rem;border-radius:.5rem;font-size:.72rem;line-height:1.25;z-index:220;display:none;max-width:240px;white-space:normal;font-weight:600;';
+      document.body.appendChild(el);
+      return el;
+    })();
+
+    function attachScatterTooltip(canvas){
+      if(!canvas || canvas._scatterTooltipAttached) return;
+      canvas._scatterTooltipAttached = true;
+
+      function hide(){ scatterTooltip.style.display='none'; }
+
+      canvas.addEventListener('mouseleave', hide);
+      canvas.addEventListener('mousemove', (e)=>{
+        const model = canvas._scatterHover;
+        if(!model || !model.points || !model.points.length){ hide(); return; }
+        const rect = canvas.getBoundingClientRect();
+        const mx = (e.clientX - rect.left) * (canvas.width / rect.width);
+        const my = (e.clientY - rect.top) * (canvas.height / rect.height);
+
+        let best=null;
+        let bestD=1e9;
+        for(const p of model.points){
+          const dx = mx - p.x;
+          const dy = my - p.y;
+          const d = Math.hypot(dx,dy);
+          if(d < bestD){ bestD=d; best=p; }
+        }
+        if(!best || bestD > model.threshold){ hide(); return; }
+
+        const team = best.team || '';
+        const xTxt = model.xFormat(best.rawX);
+        const yTxt = model.yFormat(best.rawY);
+        let extraHtml = '';
+        if(typeof model.tooltipLines === 'function'){
+          try{
+            const lines = model.tooltipLines({ team, x: best.rawX, y: best.rawY, extras: best.extras || null }) || [];
+            extraHtml = lines.map(li=>`<div style="color:rgba(203,213,225,.88)">${li.label}: <span style="color:#ffffff">${li.value}</span></div>`).join('');
+          }catch(err){ extraHtml = ''; }
+        }
+        scatterTooltip.innerHTML = `${team ? `<div style="color:#ffffff;margin-bottom:.25rem;">${team}</div>` : ''}` +
+          `<div style="color:rgba(203,213,225,.88)">${model.xLabel}: <span style="color:#ffffff">${xTxt}</span></div>` +
+          `<div style="color:rgba(203,213,225,.88)">${model.yLabel}: <span style="color:#ffffff">${yTxt}</span></div>` +
+          extraHtml;
+
+        scatterTooltip.style.display='block';
+        scatterTooltip.style.left = `${Math.min(window.innerWidth-20, e.clientX + 14)}px`;
+        scatterTooltip.style.top = `${Math.min(window.innerHeight-20, e.clientY + 14)}px`;
+      });
+    }
+
+    async function renderCharts(){
+      const rows = standingsRows && standingsRows.length ? standingsRows : [];
+      const playCanvas = document.getElementById('playDrivingScatter');
+      const shsvCanvas = document.getElementById('shSvScatter');
+      const playSel = document.getElementById('playDrivingChartSelect');
+      const shootSel = document.getElementById('shootGoaltendChartSelect');
+      if(!playCanvas || !shsvCanvas) return;
+
+      const playMode = playSel ? playSel.value : 'xg_per_game';
+      const shootMode = shootSel ? shootSel.value : 'sh_sv';
+
+      function num(v){
+        const n = Number(v);
+        return Number.isFinite(n) ? n : null;
+      }
+      function perGame(total, gp){
+        const t = num(total);
+        const g = num(gp);
+        if(t === null || g === null || g <= 0) return null;
+        return t / g;
+      }
+
+      function buildPlay(){
+        if(playMode === 'xgf_gf_pct'){
+          return {
+            points: rows.map(r=>({
+              team: r.Team,
+              x: num(r['xGF%']),
+              y: num(r['GF%']),
+              logo: r.Logo || teamLogos[r.Team] || ''
+            })).filter(p=>p.x!==null && p.y!==null),
+            opts: {
+              xLabel: 'xGF%',
+              yLabel: 'GF%',
+              xFormat: fmtPctTooltip,
+              yFormat: fmtPctTooltip,
+              xReversed: false,
+              yReversed: false,
+            }
+          };
+        }
+
+        if(playMode === 'g_per_game'){
+          return {
+            points: rows.map(r=>({
+              team: r.Team,
+              x: perGame(r.GF, r.GP_metrics),
+              y: perGame(r.GA, r.GP_metrics),
+              logo: r.Logo || teamLogos[r.Team] || ''
+            })).filter(p=>p.x!==null && p.y!==null),
+            opts: { xLabel: 'GF / GP', yLabel: 'GA / GP', xReversed:false, yReversed:true, xFormat:formatTick, yFormat:formatTick }
+          };
+        }
+
+        if(playMode === 's_per_game'){
+          return {
+            points: rows.map(r=>({
+              team: r.Team,
+              x: perGame(r.SF, r.GP_metrics),
+              y: perGame(r.SA, r.GP_metrics),
+              logo: r.Logo || teamLogos[r.Team] || ''
+            })).filter(p=>p.x!==null && p.y!==null),
+            opts: { xLabel: 'SF / GP', yLabel: 'SA / GP', xReversed:false, yReversed:true, xFormat:formatTick, yFormat:formatTick }
+          };
+        }
+
+        if(playMode === 'offense'){
+          return {
+            points: rows.map(r=>({
+              team: r.Team,
+              x: perGame(r.xGF, r.GP_metrics),
+              y: perGame(r.GF, r.GP_metrics),
+              logo: r.Logo || teamLogos[r.Team] || ''
+            })).filter(p=>p.x!==null && p.y!==null),
+            opts: { xLabel: 'xGF / GP', yLabel: 'GF / GP', xReversed:false, yReversed:false, xFormat:formatTick, yFormat:formatTick }
+          };
+        }
+
+        if(playMode === 'defense'){
+          return {
+            points: rows.map(r=>({
+              team: r.Team,
+              x: perGame(r.xGA, r.GP_metrics),
+              y: perGame(r.GA, r.GP_metrics),
+              logo: r.Logo || teamLogos[r.Team] || ''
+            })).filter(p=>p.x!==null && p.y!==null),
+            opts: { xLabel: 'xGA / GP', yLabel: 'GA / GP', xReversed:true, yReversed:true, xFormat:formatTick, yFormat:formatTick }
+          };
+        }
+
+        // default: xG per game
+        return {
+          points: rows.map(r=>({
+            team: r.Team,
+            x: perGame(r.xGF, r.GP_metrics),
+            y: perGame(r.xGA, r.GP_metrics),
+            logo: r.Logo || teamLogos[r.Team] || ''
+          })).filter(p=>p.x!==null && p.y!==null),
+          opts: { xLabel: 'xGF / GP', yLabel: 'xGA / GP', xReversed:false, yReversed:true, xFormat:formatTick, yFormat:formatTick }
+        };
+      }
+
+      function buildShoot(){
+        if(shootMode === 'gax_gsax'){
+          const pts = rows.map(r=>{
+            const gf = num(r.GF);
+            const ga = num(r.GA);
+            const xgf = num(r.xGF);
+            const xga = num(r.xGA);
+            const gax = (gf!==null && xgf!==null) ? (gf - xgf) : null;
+            const gsax = (xga!==null && ga!==null) ? (xga - ga) : null;
+            const gdax = (gax!==null && gsax!==null) ? (gax + gsax) : null;
+            return {
+              team: r.Team,
+              x: gax,
+              y: gsax,
+              logo: r.Logo || teamLogos[r.Team] || '',
+              extras: { GDAx: gdax }
+            };
+          }).filter(p=>p.x!==null && p.y!==null);
+
+          return {
+            points: pts,
+            opts: {
+              xLabel: 'GAx',
+              yLabel: 'GSAx',
+              xReversed:false,
+              yReversed:false,
+              xFormat: (v)=>formatTick(v),
+              yFormat: (v)=>formatTick(v),
+              tooltipLines: (p)=>{
+                const gdax = Number(p?.extras?.GDAx);
+                if(!Number.isFinite(gdax)) return [];
+                return [{ label:'GDAx', value: formatTick(gdax) }];
+              }
+            }
+          };
+        }
+
+        // Sh% vs Sv% (tooltip also shows PDO)
+        const pts = rows.map(r=>({
+          team: r.Team,
+          x: num(r['Sh%']),
+          y: num(r['Sv%']),
+          logo: r.Logo || teamLogos[r.Team] || '',
+          extras: { PDO: num(r.PDO) }
+        })).filter(p=>p.x!==null && p.y!==null);
+
+        return {
+          points: pts,
+          opts: {
+            xLabel: 'Sh%',
+            yLabel: 'Sv%',
+            xReversed:false,
+            yReversed:false,
+            xFormat: fmtPctTooltip,
+            yFormat: fmtPctTooltip,
+            tooltipLines: (p)=>{
+              const pdo = Number(p?.extras?.PDO);
+              if(!Number.isFinite(pdo)) return [];
+              return [{ label:'PDO', value: pdo.toFixed(1) }];
+            }
+          }
+        };
+      }
+
+      const playBuilt = buildPlay();
+      const shootBuilt = buildShoot();
+
+      drawScatter(playCanvas, playBuilt.points, playBuilt.opts);
+      drawScatter(shsvCanvas, shootBuilt.points, shootBuilt.opts);
+
+      attachScatterTooltip(playCanvas);
+      attachScatterTooltip(shsvCanvas);
+
+      // repaint once logos load
+      const logoUrls = Array.from(new Set(rows.map(r=>r.Logo || teamLogos[r.Team] || '').filter(Boolean)));
+      await Promise.all(logoUrls.map(u=>new Promise(res=>{
+        const img=getLogoImage(u);
+        if(!img) return res(true);
+        if(img.complete) return res(true);
+        img.onload=()=>res(true);
+        img.onerror=()=>res(true);
+      })));
+      drawScatter(playCanvas, playBuilt.points, playBuilt.opts);
+      drawScatter(shsvCanvas, shootBuilt.points, shootBuilt.opts);
+    }
+
+    let perfSeries=[];
+    function drawPerformance(){
+      const metricSel=document.getElementById('perfMetric');
+      const metricKey = metricSel ? metricSel.value : 'xg_pm';
+      const canvas=document.getElementById('teamPerf');
+      const ctx=setupCanvasToCss(canvas);
+      if(!ctx) return;
+      const w=canvas.width,h=canvas.height;
+      ctx.clearRect(0,0,w,h);
+
+      ctx.fillStyle='#0b1220';
+      ctx.fillRect(0,0,w,h);
+
+
+      const labelByKey = {
+        xg_pm: 'xG+/-',
+        g_pm: 'G+/-',
+        gdax: 'GDAx',
+        gax: 'GAx',
+        gsax: 'GSAx',
+      };
+      const metricLabel = labelByKey[metricKey] || 'xG+/-';
+
+      const games = (perfSeries || []).slice();
+      const deltas=[];
+      for(const g of games){
+        const gf = Number(g?.GF);
+        const ga = Number(g?.GA);
+        const xgf = Number(g?.xGF);
+        const xga = Number(g?.xGA);
+        if(!Number.isFinite(gf) || !Number.isFinite(ga) || !Number.isFinite(xgf) || !Number.isFinite(xga)){
+          deltas.push(null);
+          continue;
+        }
+        const xgpm = xgf - xga;
+        const gpm = gf - ga;
+        const gax = gf - xgf;
+        const gsax = xga - ga;
+        const gdax = gax + gsax;
+        let d;
+        if(metricKey === 'g_pm') d = gpm;
+        else if(metricKey === 'gdax') d = gdax;
+        else if(metricKey === 'gax') d = gax;
+        else if(metricKey === 'gsax') d = gsax;
+        else d = xgpm;
+        deltas.push(d);
+      }
+
+      const ys=[];
+      let run=0;
+      for(const d of deltas){
+        if(Number.isFinite(d)) run += d;
+        ys.push(run);
+      }
+
+      const finiteYs = ys.filter(Number.isFinite);
+      if(!finiteYs.length){
+        ctx.fillStyle='rgba(203,213,225,.75)';
+        ctx.font='12px Segoe UI, Roboto, sans-serif';
+        ctx.fillText('No performance data for selection.', 12, 16);
+        return;
+      }
+
+      const pad={l:44,r:18,t:18,b:34};
+      const plotW=w-pad.l-pad.r;
+      const plotH=h-pad.t-pad.b;
+
+      const maxAbs = Math.max(1, ...finiteYs.map(v=>Math.abs(v)));
+      const yMax = maxAbs * 1.08;
+      const yMin = -yMax;
+
+      const n = ys.length;
+      const xTo = (i)=>{
+        if(n <= 1) return pad.l;
+        return pad.l + (i/(n-1)) * plotW;
+      };
+      const xToGameFloat = (gNo)=>{
+        if(n <= 1) return pad.l;
+        const t = (Number(gNo) - 1) / (n - 1);
+        return pad.l + t * plotW;
+      };
+      const yTo = (v)=> pad.t + (yMax - v) / (yMax - yMin) * plotH;
+      const yZero = yTo(0);
+
+      // Season shading + boundaries + labels (like Goalies Performance)
+      const seasons = games.map(g=>String(g?.season || ''));
+      if(seasons.some(Boolean)){
+        const segments=[];
+        let curStart=1;
+        for(let i=0;i<seasons.length;i++){
+          const s = seasons[i];
+          const prev = (i===0) ? s : seasons[i-1];
+          if(i>0 && s !== prev){
+            segments.push({season: prev, start: curStart, end: i});
+            curStart = i+1;
+          }
+        }
+        segments.push({season: seasons[seasons.length-1] || '', start: curStart, end: seasons.length});
+
+        for(let si=0; si<segments.length; si++){
+          const seg = segments[si];
+          const x0 = Math.max(pad.l, xToGameFloat(seg.start - 0.5));
+          const x1 = Math.min(pad.l + plotW, xToGameFloat(seg.end + 0.5));
+          ctx.fillStyle = (si % 2 === 0) ? 'rgba(185,167,255,.05)' : 'rgba(255,255,255,.03)';
+          ctx.fillRect(x0, pad.t, (x1 - x0), plotH);
+
+          if(si > 0){
+            const boundaryX = xToGameFloat(seg.start - 0.5);
+            ctx.strokeStyle = 'rgba(203,213,225,.32)';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(boundaryX, pad.t);
+            ctx.lineTo(boundaryX, pad.t + plotH);
+            ctx.stroke();
+          }
+
+          const label = seg.season || '';
+          if(label){
+            const midX = (x0 + x1) / 2;
+            ctx.save();
+            ctx.font = '600 13px Segoe UI, Roboto, sans-serif';
+            ctx.fillStyle = 'rgba(203,213,225,.82)';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'top';
+            const labelY = Math.max(2, pad.t - 16);
+            ctx.fillText(label, midX, labelY);
+            ctx.restore();
+          }
+        }
+      }
+
+      // y-axis ticks symmetric around 0
+      const yTickPack = buildTicks(yMin, yMax);
+      ctx.strokeStyle='rgba(203,213,225,.14)';
+      ctx.lineWidth=1;
+      for(const v of yTickPack.ticks){
+        const y=yTo(v);
+        ctx.beginPath(); ctx.moveTo(pad.l,y); ctx.lineTo(pad.l+plotW,y); ctx.stroke();
+        ctx.fillStyle='rgba(203,213,225,.65)';
+        ctx.font='11px Segoe UI, Roboto, sans-serif';
+        ctx.textAlign='right'; ctx.textBaseline='middle';
+        ctx.fillText(formatTick(v), pad.l-8, y);
+      }
+
+      // x-axis ticks (Game No)
+      const xMaxGame = Math.max(1, n);
+      const xTickPack = buildTicks(1, xMaxGame);
+
+      // zero line
+      ctx.save();
+      ctx.strokeStyle='rgba(185,167,255,.65)';
+      ctx.lineWidth=1.8;
+      ctx.beginPath(); ctx.moveTo(pad.l, yZero); ctx.lineTo(pad.l+plotW, yZero); ctx.stroke();
+      ctx.restore();
+
+      // axis labels
+      ctx.fillStyle='rgba(203,213,225,.85)';
+      ctx.font='600 12px Segoe UI, Roboto, sans-serif';
+      ctx.textAlign='center';
+      ctx.textBaseline='top';
+      ctx.fillText('Game No', pad.l + plotW/2, pad.t + plotH + 18);
+
+      // No y-axis title (match requested Teams Performance styling)
+
+      // x tick labels
+      ctx.fillStyle='rgba(203,213,225,.70)';
+      ctx.font='11px Segoe UI, Roboto, sans-serif';
+      ctx.textAlign='center';
+      ctx.textBaseline='top';
+      for(const gv of xTickPack.ticks){
+        const gNo = Math.round(gv);
+        if(gNo < 1 || gNo > xMaxGame) continue;
+        const x = xTo(gNo-1);
+        ctx.fillText(String(gNo), x, pad.t + plotH + 4);
+      }
+
+      // filled areas split by 0
+      const posFill='rgba(185,167,255,.32)';
+      const negFill='rgba(251,113,133,.22)';
+      for(let i=1;i<n;i++){
+        const v0 = Number(ys[i-1]);
+        const v1 = Number(ys[i]);
+        if(!Number.isFinite(v0) || !Number.isFinite(v1)) continue;
+        const x0 = xTo(i-1), x1 = xTo(i);
+        const y0 = yTo(v0), y1 = yTo(v1);
+
+        // both >= 0
+        if(v0 >= 0 && v1 >= 0){
+          ctx.fillStyle = posFill;
+          ctx.beginPath();
+          ctx.moveTo(x0, y0);
+          ctx.lineTo(x1, y1);
+          ctx.lineTo(x1, yZero);
+          ctx.lineTo(x0, yZero);
+          ctx.closePath();
+          ctx.fill();
+          continue;
+        }
+        // both <= 0
+        if(v0 <= 0 && v1 <= 0){
+          ctx.fillStyle = negFill;
+          ctx.beginPath();
+          ctx.moveTo(x0, yZero);
+          ctx.lineTo(x1, yZero);
+          ctx.lineTo(x1, y1);
+          ctx.lineTo(x0, y0);
+          ctx.closePath();
+          ctx.fill();
+          continue;
+        }
+
+        // crossing 0
+        const t = (0 - v0) / (v1 - v0);
+        const xc = x0 + t * (x1 - x0);
+        const yc = yZero;
+        if(v0 > 0){
+          // positive then negative
+          ctx.fillStyle = posFill;
+          ctx.beginPath();
+          ctx.moveTo(x0, y0);
+          ctx.lineTo(xc, yc);
+          ctx.lineTo(xc, yZero);
+          ctx.lineTo(x0, yZero);
+          ctx.closePath();
+          ctx.fill();
+
+          ctx.fillStyle = negFill;
+          ctx.beginPath();
+          ctx.moveTo(xc, yZero);
+          ctx.lineTo(x1, yZero);
+          ctx.lineTo(x1, y1);
+          ctx.lineTo(xc, yc);
+          ctx.closePath();
+          ctx.fill();
+        } else {
+          // negative then positive
+          ctx.fillStyle = negFill;
+          ctx.beginPath();
+          ctx.moveTo(x0, yZero);
+          ctx.lineTo(xc, yZero);
+          ctx.lineTo(xc, yc);
+          ctx.lineTo(x0, y0);
+          ctx.closePath();
+          ctx.fill();
+
+          ctx.fillStyle = posFill;
+          ctx.beginPath();
+          ctx.moveTo(xc, yc);
+          ctx.lineTo(x1, y1);
+          ctx.lineTo(x1, yZero);
+          ctx.lineTo(xc, yZero);
+          ctx.closePath();
+          ctx.fill();
+        }
+      }
+
+      const line='rgba(185,167,255,.95)';
+      ctx.strokeStyle=line;
+      ctx.lineWidth=2.25;
+      ctx.lineJoin='round';
+      ctx.lineCap='round';
+
+      ctx.beginPath();
+      for(let i=0;i<ys.length;i++){
+        const v=Number(ys[i]);
+        if(!Number.isFinite(v)) continue;
+        const x=xTo(i);
+        const y=yTo(v);
+        if(i===0) ctx.moveTo(x,y);
+        else ctx.lineTo(x,y);
+      }
+      ctx.stroke();
+
+      const lastIdx = ys.length-1;
+      const lastV = Number(ys[lastIdx]);
+      if(Number.isFinite(lastV)){
+        ctx.fillStyle=line;
+        ctx.beginPath();
+        ctx.arc(xTo(lastIdx), yTo(lastV), 3.5, 0, Math.PI*2);
+        ctx.fill();
+      }
+
+      // No in-plot title text (keeps header clean like Goalies)
+    }
+
+    async function fetchPerformance(){
+      if(!selectedTeam){ perfSeries=[]; drawPerformance(); return; }
+      const p=currentQuery();
+      const r=await fetch('/api/teams/performance?'+p.toString());
+      if(!r.ok) return;
+      const data=await r.json();
+      perfSeries=data.series||[];
+      drawPerformance();
+    }
+
+    function setTab(tab){
+      activeTab = tab || 'standings';
+      document.querySelectorAll('#teamTabs .subtab').forEach(btn=>{
+        const t=btn.getAttribute('data-tab');
+        const isActive = (t===activeTab);
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+      ['standings','charts','performance'].forEach(t=>{
+        const el=document.getElementById('tab-'+t);
+        if(el) el.classList.toggle('active', t===activeTab);
+      });
+      saveTeamsState();
+      refreshActiveTab();
+    }
+
+    async function refreshActiveTab(){
+      updateHeader();
+      await fetchStandings();
+      await fetchKPIs();
+      if(activeTab==='charts'){
+        await renderCharts();
+      }
+      if(activeTab==='performance'){
+        await fetchPerformance();
+      }
+    }
+
+    async function init(){
+      // Tabs
+      document.querySelectorAll('#teamTabs .subtab').forEach(btn=>{
+        btn.addEventListener('click', ()=>setTab(btn.getAttribute('data-tab')));
+      });
+
+      const perfSel=document.getElementById('perfMetric');
+      if(perfSel){
+        perfSel.addEventListener('change', ()=>{ saveTeamsState(); drawPerformance(); });
+      }
+
+      // Load filters
+      const r = await fetch('/api/teams/filters');
+      if(!r.ok) return;
+      const data = await r.json();
+      allTeams = data.teams || [];
+      teamLogos = data.team_logos || {};
+
+      // Build menus
+      buildMenu('seasons', data.seasons || []);
+      buildMenu('season_states', data.season_states || []);
+      buildMenu('strengths', data.strengths || []);
+      ['seasons','season_states','strengths'].forEach(id=>{
+        document.querySelectorAll(`#${id}Menu input[type=checkbox]`).forEach(cb=>{
+          cb.addEventListener('change', ()=>{ updateButtonLabel(id); saveTeamsState(); refreshActiveTab(); });
+        });
+      });
+
+      // Defaults: select all for multi filters
+      applyMultiSelections('seasons', (data.seasons || []).map(String));
+      applyMultiSelections('season_states', (data.season_states || []).map(String));
+      applyMultiSelections('strengths', (data.strengths || []).map(String));
+      ['seasons','season_states','strengths'].forEach(id=>updateButtonLabel(id));
+
+      // Team
+      const restored = loadTeamsState();
+      if(restored && typeof restored==='object'){
+        if(restored.selectedTeam) selectedTeam = restored.selectedTeam;
+        if(restored.multi){
+          if(Array.isArray(restored.multi.seasons)) applyMultiSelections('seasons', restored.multi.seasons);
+          if(Array.isArray(restored.multi.season_states)) applyMultiSelections('season_states', restored.multi.season_states);
+          if(Array.isArray(restored.multi.strengths)) applyMultiSelections('strengths', restored.multi.strengths);
+        }
+        if(restored.activeTab) activeTab = restored.activeTab;
+        if(restored.performance && restored.performance.metric){
+          const perfSel=document.getElementById('perfMetric');
+          if(perfSel){
+            const val = restored.performance.metric;
+            if(Array.from(perfSel.options || []).some(o=>o.value===val)){
+              perfSel.value = val;
+            }
+          }
+        }
+      }
+
+      // Chart slicers
+      const playSel = document.getElementById('playDrivingChartSelect');
+      const shootSel = document.getElementById('shootGoaltendChartSelect');
+      if(playSel){
+        playSel.value = (restored && restored.charts && restored.charts.playDriving) ? restored.charts.playDriving : 'xg_per_game';
+        if(!playSel._wired){
+          playSel._wired = true;
+          playSel.addEventListener('change', ()=>{ saveTeamsState(); if(activeTab==='charts') renderCharts(); });
+        }
+      }
+      if(shootSel){
+        shootSel.value = (restored && restored.charts && restored.charts.shooting) ? restored.charts.shooting : 'sh_sv';
+        if(!shootSel._wired){
+          shootSel._wired = true;
+          shootSel.addEventListener('change', ()=>{ saveTeamsState(); if(activeTab==='charts') renderCharts(); });
+        }
+      }
+
+      if(!selectedTeam && allTeams.length) selectedTeam = allTeams[0];
+      setSelectedTeam(selectedTeam);
+      buildTeamMenu(allTeams);
+
+      // Activate correct tab
+      initStandingsTableSorting();
+      setTab(activeTab);
+    }
+
+    window.addEventListener('DOMContentLoaded', init);
+    window.addEventListener('resize', ()=>{
+      if(activeTab==='charts') renderCharts();
+      if(activeTab==='performance') drawPerformance();
+    });
+  </script>
+</body>
+</html>

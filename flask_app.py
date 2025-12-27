@@ -7,9 +7,127 @@ import pandas as pd
 from datetime import datetime
 import csv
 import os
+from typing import Dict, Any, List
 
 app = Flask(__name__)
 CORS(app)
+
+
+def _team_logo_url(team_name: str) -> str:
+    """Resolve a team's logo URL from Teams.csv-loaded metadata.
+
+    Supports both full team names (e.g., 'Boston Fleet') and common
+    city-name aliases (e.g., 'Boston') via data_api.city_to_full_name.
+    """
+    try:
+        if not team_name:
+            return ''
+        teams = getattr(data_api, 'teams', {}) or {}
+        if team_name in teams:
+            return (teams.get(team_name, {}) or {}).get('logo', '') or ''
+        city_map = getattr(data_api, 'city_to_full_name', {}) or {}
+        full = city_map.get(team_name)
+        if full and full in teams:
+            return (teams.get(full, {}) or {}).get('logo', '') or ''
+        return ''
+    except Exception:
+        return ''
+
+
+_SCHEDULE_GAMES_CACHE: Dict[int, List[Dict[str, Any]]] = {}
+
+
+def _get_parsed_schedule_games(season_id: int) -> List[Dict[str, Any]]:
+    """Return parsed schedule games for a given API season id (cached)."""
+    try:
+        sid = int(season_id)
+    except Exception:
+        return []
+    if sid in _SCHEDULE_GAMES_CACHE:
+        return _SCHEDULE_GAMES_CACHE[sid]
+    try:
+        raw = data_api.fetch_schedule_data(sid)
+        games = data_api.parse_games_data(raw, sid) or []
+        _SCHEDULE_GAMES_CACHE[sid] = games
+        return games
+    except Exception:
+        _SCHEDULE_GAMES_CACHE[sid] = []
+        return []
+
+
+def _season_ids_for_filters(season_year: str, season_state: str) -> List[int]:
+    """Map UI season/year + season_state to HockeyTech season ids."""
+    ids: List[int] = []
+    mapping = getattr(data_api, 'season_mapping', {}) or {}
+
+    if season_year == 'All' and season_state == 'All':
+        return [int(s) for s in (getattr(data_api, 'all_seasons', []) or []) if str(s).isdigit()]
+
+    if season_year != 'All' and season_state != 'All':
+        sid = (mapping.get(season_year, {}) or {}).get(season_state)
+        if sid is not None:
+            ids.append(int(sid))
+        return ids
+
+    if season_year != 'All' and season_state == 'All':
+        for sid in (mapping.get(season_year, {}) or {}).values():
+            if sid is not None:
+                ids.append(int(sid))
+        return ids
+
+    # season_year == 'All' and season_state != 'All'
+    for yr, states in mapping.items():
+        sid = (states or {}).get(season_state)
+        if sid is not None:
+            ids.append(int(sid))
+    return ids
+
+
+def _compute_team_points_table(season_year: str, season_state: str) -> Dict[str, Dict[str, Any]]:
+    """Compute standings-style points (3-2-1-0) from schedule results."""
+    results: Dict[str, Dict[str, Any]] = {}
+    season_ids = _season_ids_for_filters(season_year, season_state)
+    for sid in season_ids:
+        for g in _get_parsed_schedule_games(sid):
+            status = (g.get('status') or '').strip()
+            if not status.startswith('Final'):
+                continue
+            home = (g.get('home_team') or '').strip()
+            away = (g.get('away_team') or '').strip()
+            if not home or not away:
+                continue
+            try:
+                hs = int(g.get('home_score') or 0)
+                as_ = int(g.get('away_score') or 0)
+            except Exception:
+                continue
+            if hs == as_:
+                continue
+
+            is_otso = ('OT' in status) or ('SO' in status)
+            winner = home if hs > as_ else away
+            loser = away if winner == home else home
+
+            for t in (home, away):
+                results.setdefault(t, {'GP': 0, 'W': 0, 'OTW': 0, 'OTL': 0, 'L': 0, 'Points': 0})
+                results[t]['GP'] += 1
+
+            if is_otso:
+                results[winner]['OTW'] += 1
+                results[winner]['Points'] += 2
+                results[loser]['OTL'] += 1
+                results[loser]['Points'] += 1
+            else:
+                results[winner]['W'] += 1
+                results[winner]['Points'] += 3
+                results[loser]['L'] += 1
+
+    # Add Pct
+    for t, rec in results.items():
+        gp = int(rec.get('GP') or 0)
+        pts = int(rec.get('Points') or 0)
+        rec['Pct'] = (pts / (gp * 3)) if gp > 0 else None
+    return results
 
 # Allow embedding the app inside hockey-statistics.com/pwhl via iframe by setting
 # a permissive frame-ancestors policy for that domain and removing X-Frame-Options.
@@ -476,6 +594,387 @@ def skaters_page():
     """Skaters page: single-player view with filters and heat map."""
     return render_template('skaters.html')
 
+@app.route('/goalies')
+def goalies_page():
+    """Goalies page: single-goalie view with filters and heat map."""
+    return render_template('goalies.html')
+
+@app.route('/teams')
+def teams_page():
+    """Teams page: team-level view with filters, standings, charts, and performance."""
+    return render_template('teams.html')
+
+
+@app.route('/api/teams/filters')
+def teams_filters():
+    """Return teams + common filters for Teams page."""
+    report_store.load()
+    rows = report_store.rows
+    teams = sorted({str(r.get('team_for')) for r in rows if r.get('team_for')}, key=str)
+    if not teams and hasattr(data_api, 'teams') and data_api.teams:
+        teams = sorted(data_api.teams.keys())
+    seasons = sorted({str(r.get('season')) for r in rows if r.get('season')}, key=str)
+    season_states = sorted({str(r.get('state')) for r in rows if r.get('state')}, key=str)
+    strengths = sorted({str(r.get('strength')) for r in rows if r.get('strength')}, key=str)
+
+    team_logos = {t: _team_logo_url(t) for t in teams}
+
+    return jsonify({
+        'teams': teams,
+        'team_logos': team_logos,
+        'seasons': seasons,
+        'season_states': season_states,
+        'strengths': strengths,
+    })
+
+
+@app.route('/api/teams/kpis')
+def teams_kpis():
+    """Return team KPIs for a selected team and filters.
+
+    KPIs: GP, SF%, GF%, xGF%, Sh%, Sv%, PDO
+    """
+    team = request.args.get('team', '').strip()
+    if not team:
+        return jsonify({'error': 'team required'}), 400
+
+    def _get_multi(name: str) -> List[str]:
+        vals = request.args.getlist(name)
+        if len(vals) == 1 and ',' in (vals[0] or ''):
+            vals = [v for v in vals[0].split(',') if v]
+        return [v for v in vals if v]
+
+    seasons_multi = _get_multi('seasons')
+    season_states_multi = _get_multi('season_states')
+    strengths_multi = _get_multi('strengths')
+
+    season = request.args.get('season', 'All')
+    season_state = request.args.get('season_state', 'All')
+    strength = request.args.get('strength', 'All')
+
+    # Back-compat: if multi params are present, prefer them.
+    if seasons_multi:
+        season = 'All'
+    if season_states_multi:
+        season_state = 'All'
+    if strengths_multi:
+        strength = 'All'
+
+    report_store.load()
+    rows = report_store.tables_teams(
+        season=season,
+        season_state=season_state,
+        strength=strength,
+        seasons_multi=seasons_multi,
+        season_states_multi=season_states_multi,
+        strengths_multi=strengths_multi,
+    )
+    rec = next((r for r in rows if r.get('Team') == team or r.get('team') == team), None)
+    if not rec:
+        return jsonify({
+            'team': team,
+            'logo': _team_logo_url(team),
+            'GP': 0,
+            'SF%': None,
+            'GF%': None,
+            'xGF%': None,
+            'Sh%': None,
+            'Sv%': None,
+            'PDO': None,
+        })
+
+    logo = _team_logo_url(team)
+    return jsonify({
+        'team': team,
+        'logo': logo,
+        'GP': rec.get('GP'),
+        'SF%': rec.get('SF%'),
+        'GF%': rec.get('GF%'),
+        'xGF%': rec.get('xGF%'),
+        'Sh%': rec.get('Sh%'),
+        'Sv%': rec.get('Sv%'),
+        'PDO': rec.get('PDO'),
+    })
+
+
+@app.route('/api/teams/standings')
+def teams_standings():
+    """Return standings table for Teams page.
+
+    Columns: Team, GP, Points (3-2-1-0), W, OTW, OTL, L, Pct, GF%, xGF%, PDO
+    """
+    def _get_multi(name: str) -> List[str]:
+        vals = request.args.getlist(name)
+        if len(vals) == 1 and ',' in (vals[0] or ''):
+            vals = [v for v in vals[0].split(',') if v]
+        return [v for v in vals if v]
+
+    seasons_multi = _get_multi('seasons')
+    season_states_multi = _get_multi('season_states')
+    strengths_multi = _get_multi('strengths')
+
+    season = request.args.get('season', 'All')
+    season_state = request.args.get('season_state', 'All')
+    strength = request.args.get('strength', 'All')
+
+    if seasons_multi:
+        season = 'All'
+    if season_states_multi:
+        season_state = 'All'
+    if strengths_multi:
+        strength = 'All'
+
+    report_store.load()
+    rows = report_store.tables_teams(
+        season=season,
+        season_state=season_state,
+        strength=strength,
+        seasons_multi=seasons_multi,
+        season_states_multi=season_states_multi,
+        strengths_multi=strengths_multi,
+    )
+
+    def _norm(vals: List[str], fallback: str) -> List[str]:
+        if not vals:
+            return [fallback]
+        if 'All' in vals:
+            return ['All']
+        # preserve order while unique
+        out: List[str] = []
+        seen = set()
+        for v in vals:
+            if v in seen:
+                continue
+            seen.add(v)
+            out.append(v)
+        return out
+
+    yrs = _norm(seasons_multi, season)
+    sts = _norm(season_states_multi, season_state)
+    points_by_team: Dict[str, Dict[str, Any]] = {}
+    for yr in yrs:
+        for st in sts:
+            part = _compute_team_points_table(yr, st)
+            for team_name, rec in (part or {}).items():
+                agg = points_by_team.setdefault(team_name, {'GP': 0, 'W': 0, 'OTW': 0, 'OTL': 0, 'L': 0, 'Points': 0})
+                for k in ('GP', 'W', 'OTW', 'OTL', 'L', 'Points'):
+                    try:
+                        agg[k] += int(rec.get(k) or 0)
+                    except Exception:
+                        pass
+
+    for t, rec in points_by_team.items():
+        gp = int(rec.get('GP') or 0)
+        pts = int(rec.get('Points') or 0)
+        rec['Pct'] = (pts / (gp * 3)) if gp > 0 else None
+
+    out = []
+    for r in rows:
+        t = r.get('Team')
+        pts_rec = points_by_team.get(t, {})
+        gp_points = pts_rec.get('GP', 0)
+        points = pts_rec.get('Points', 0)
+        pct = pts_rec.get('Pct')
+        out.append({
+            'Team': t,
+            'Logo': _team_logo_url(t),
+            'GP': gp_points,
+            'Points': points,
+            'W': pts_rec.get('W', 0),
+            'OTW': pts_rec.get('OTW', 0),
+            'OTL': pts_rec.get('OTL', 0),
+            'L': pts_rec.get('L', 0),
+            'Pct': pct,
+            'GF%': r.get('GF%'),
+            'xGF%': r.get('xGF%'),
+            'PDO': r.get('PDO'),
+            # Extra metrics for charts (not displayed in standings table)
+            'GP_metrics': r.get('GP'),
+            'SF': r.get('SF'),
+            'SA': r.get('SA'),
+            'GF': r.get('GF'),
+            'GA': r.get('GA'),
+            'xGF': r.get('xGF'),
+            'xGA': r.get('xGA'),
+            'SF%': r.get('SF%'),
+            'Sh%': r.get('Sh%'),
+            'Sv%': r.get('Sv%'),
+        })
+
+    out.sort(key=lambda rr: (-(rr.get('Points') or 0), -(rr.get('Pct') or 0), rr.get('Team') or ''))
+    return jsonify({'rows': out})
+
+
+@app.route('/api/teams/performance')
+def teams_performance():
+    """Return per-game performance series for a selected team.
+
+    Metrics per game: SF%, GF%, xGF%, Sh%, Sv%, PDO, plus raw counts.
+    """
+    team = request.args.get('team', '').strip()
+    if not team:
+        return jsonify({'error': 'team required'}), 400
+
+    def _get_multi(name: str) -> List[str]:
+        vals = request.args.getlist(name)
+        if len(vals) == 1 and ',' in (vals[0] or ''):
+            vals = [v for v in vals[0].split(',') if v]
+        return [v for v in vals if v]
+
+    seasons_multi = _get_multi('seasons')
+    season_states_multi = _get_multi('season_states')
+    strengths_multi = _get_multi('strengths')
+
+    season = request.args.get('season', 'All')
+    season_state = request.args.get('season_state', 'All')
+    strength_filter = request.args.get('strength', 'All')
+
+    if seasons_multi:
+        season = 'All'
+    if season_states_multi:
+        season_state = 'All'
+    if strengths_multi:
+        strength_filter = 'All'
+
+    report_store.load()
+    rows = report_store.rows
+    if seasons_multi and 'All' not in seasons_multi:
+        rows = [r for r in rows if r.get('season') in seasons_multi]
+    elif season != 'All':
+        rows = [r for r in rows if r.get('season') == season]
+
+    if season_states_multi and 'All' not in season_states_multi:
+        rows = [r for r in rows if r.get('state') in season_states_multi]
+    elif season_state != 'All':
+        rows = [r for r in rows if r.get('state') == season_state]
+    # Only games where team participates
+    rows = [r for r in rows if r.get('team_for') == team or r.get('team_against') == team]
+
+    def _row_ok_for_strength(r, v_team: str, is_for: bool, sf: str) -> bool:
+        if sf == 'All':
+            return True
+        s_class = report_store._classify_strength(r.get('strength', ''), v_team, is_for)
+        if sf == 'EV':
+            return s_class in ('5v5', 'EV')
+        if sf in ('PP', 'SH', '5v5'):
+            return s_class == sf
+        return r.get('strength') == sf
+
+    def row_ok(r, v_team: str, is_for: bool) -> bool:
+        if strengths_multi:
+            if 'All' in strengths_multi:
+                return True
+            return any(_row_ok_for_strength(r, v_team, is_for, sf) for sf in strengths_multi)
+        return _row_ok_for_strength(r, v_team, is_for, strength_filter)
+
+    by_game = {}
+
+    def _infer_season_label(date_str: str) -> str:
+        """Infer season label (e.g. '2023/2024') from an ISO-like date string."""
+        if not date_str:
+            return ''
+        try:
+            # Accept 'YYYY-MM-DD' or full ISO timestamps
+            dt = datetime.fromisoformat(str(date_str)[:19])
+            yr = int(dt.year)
+            mo = int(dt.month)
+            start = yr if mo >= 7 else (yr - 1)
+            return f"{start}/{start+1}"
+        except Exception:
+            return ''
+
+    for r in rows:
+        gid = str(r.get('game_id') or '')
+        if not gid:
+            continue
+        meta = (report_store.game_meta.get(gid, {}) or {})
+        date = meta.get('date', '') or r.get('date', '') or ''
+        season_label = meta.get('season', '') or r.get('season', '') or _infer_season_label(date)
+        state_label = meta.get('state', '') or r.get('state', '') or ''
+        rec = by_game.setdefault(gid, {
+            'game_id': gid,
+            'date': date,
+            'season': season_label,
+            'state': state_label,
+            'opponent': '',
+            'SF': 0, 'SA': 0, 'GF': 0, 'GA': 0,
+            'xGF': 0.0, 'xGA': 0.0,
+        })
+
+        team_for = r.get('team_for')
+        team_against = r.get('team_against')
+
+        if team_for == team and row_ok(r, team, True):
+            if r.get('is_shot'):
+                rec['SF'] += 1
+            if r.get('is_goal'):
+                rec['GF'] += 1
+            xv = r.get('xG')
+            if xv not in (None, ''):
+                try:
+                    rec['xGF'] += float(xv)
+                except Exception:
+                    pass
+            if not rec['opponent']:
+                rec['opponent'] = str(team_against or '')
+
+        if team_against == team and row_ok(r, team, False):
+            if r.get('is_shot'):
+                rec['SA'] += 1
+            if r.get('is_goal'):
+                rec['GA'] += 1
+            xv = r.get('xG')
+            if xv not in (None, ''):
+                try:
+                    rec['xGA'] += float(xv)
+                except Exception:
+                    pass
+            if not rec['opponent']:
+                rec['opponent'] = str(team_for or '')
+
+    def pct(n, d):
+        try:
+            if d and d != 0:
+                return round((float(n) / float(d)) * 100.0, 1)
+        except Exception:
+            return None
+        return None
+
+    series = []
+    for gid, rec in by_game.items():
+        sf, sa, gf, ga = rec['SF'], rec['SA'], rec['GF'], rec['GA']
+        xgf = float(rec.get('xGF') or 0.0)
+        xga = float(rec.get('xGA') or 0.0)
+        sf_pct = pct(sf, sf + sa)
+        gf_pct = pct(gf, gf + ga)
+        xgf_pct = pct(xgf, xgf + xga)
+        sh_pct = pct(gf, sf)
+        sv_pct = pct((sa - ga), sa)
+        pdo = round((sh_pct or 0) + (sv_pct or 0), 1) if (sh_pct is not None and sv_pct is not None) else None
+        series.append({
+            'game_id': gid,
+            'date': rec.get('date', ''),
+            'season': rec.get('season', ''),
+            'state': rec.get('state', ''),
+            'opponent': rec.get('opponent', ''),
+            'SF': sf,
+            'SA': sa,
+            'GF': gf,
+            'GA': ga,
+            'xGF': round(xgf, 2),
+            'xGA': round(xga, 2),
+            'SF%': sf_pct,
+            'GF%': gf_pct,
+            'xGF%': xgf_pct,
+            'Sh%': sh_pct,
+            'Sv%': sv_pct,
+            'PDO': pdo,
+        })
+
+    # Sort by date asc, then game_id
+    series.sort(key=lambda r: (r.get('date', '') or '', r.get('game_id', '')))
+    return jsonify({'team': team, 'series': series})
+
 @app.route('/api/report/kpis')
 def report_kpis():
     # Base single-value params
@@ -831,6 +1330,393 @@ def skaters_filters():
     season_states = sorted({str(r.get('state')) for r in rows if r.get('state')}, key=str)
     strengths = sorted({str(r.get('strength')) for r in rows if r.get('strength')}, key=str)
     return jsonify({'players': players, 'seasons': seasons, 'season_states': season_states, 'strengths': strengths})
+
+
+# -------- Goalies API --------
+@app.route('/api/goalies/filters')
+def goalies_filters():
+    """Return goalies list and common filters for Goalies page."""
+    import os
+    import csv
+
+    def _lineup_goalies_cached() -> list[str]:
+        """Return sorted unique goalie names from Data/Lineups CSVs."""
+        cache = getattr(_lineup_goalies_cached, '_cache', None)
+        sig = getattr(_lineup_goalies_cached, '_sig', None)
+
+        lineups_dir = os.path.join(os.path.dirname(__file__), 'Data', 'Lineups')
+        if not os.path.isdir(lineups_dir):
+            return []
+
+        count = 0
+        max_mtime = 0.0
+        try:
+            for ent in os.scandir(lineups_dir):
+                if not ent.is_file() or not ent.name.endswith('.csv'):
+                    continue
+                count += 1
+                try:
+                    max_mtime = max(max_mtime, ent.stat().st_mtime)
+                except Exception:
+                    pass
+        except Exception:
+            return []
+
+        cur_sig = (count, int(max_mtime))
+        if cache is not None and sig == cur_sig:
+            return cache
+
+        goalies_set: set[str] = set()
+        for ent in os.scandir(lineups_dir):
+            if not ent.is_file() or not ent.name.endswith('.csv'):
+                continue
+            try:
+                with open(ent.path, 'r', encoding='utf-8') as f:
+                    reader = csv.DictReader(f)
+                    for row in reader:
+                        line_pos = (row.get('Line') or row.get('Position') or row.get('Pos') or '').strip().upper()
+                        if line_pos != 'G' and line_pos != 'GOALIE':
+                            continue
+                        name = (row.get('Name') or row.get('player') or '').strip()
+                        if name:
+                            goalies_set.add(name)
+            except Exception:
+                continue
+
+        goalies = sorted(goalies_set, key=str)
+        setattr(_lineup_goalies_cached, '_cache', goalies)
+        setattr(_lineup_goalies_cached, '_sig', cur_sig)
+        return goalies
+
+    report_store.load()
+    rows = report_store.rows
+    goalies = _lineup_goalies_cached()
+    seasons = sorted({str(r.get('season')) for r in rows if r.get('season')}, key=str)
+    season_states = sorted({str(r.get('state')) for r in rows if r.get('state')}, key=str)
+    strengths = sorted({str(r.get('strength')) for r in rows if r.get('strength')}, key=str)
+    return jsonify({'players': goalies, 'seasons': seasons, 'season_states': season_states, 'strengths': strengths})
+
+
+@app.route('/api/goalies/stats')
+def goalies_stats():
+    """Return basic goalie stats given filters.
+
+    KPIs:
+      GP, TOI, SA, GA, Sv%, xGA, xSv%, dSv%, GSAx
+    Definitions:
+      SA counts SOG only (Shot + Goal) where goalie matches.
+      xGA is sum of xG for those SA events.
+      GSAx = xGA - GA.
+    """
+    goalie = request.args.get('player', '').strip()
+    if not goalie:
+        return jsonify({'error': 'player required'}), 400
+
+    params = {
+        'team': 'All',
+        'season': request.args.get('season', 'All'),
+        'season_state': request.args.get('season_state', 'All'),
+        'date_from': request.args.get('date_from', ''),
+        'date_to': request.args.get('date_to', ''),
+        'segment': request.args.get('segment', 'all'),
+        'strength': request.args.get('strength', 'All'),
+    }
+
+    def _get_multi(name):
+        vals = request.args.getlist(name)
+        if len(vals) == 1 and ',' in vals[0]:
+            vals = [v for v in vals[0].split(',') if v]
+        return [v for v in vals if v]
+
+    strengths_multi = _get_multi('strengths')
+    if strengths_multi:
+        params['strengths_multi'] = ','.join(strengths_multi)
+    seasons_multi = _get_multi('seasons')
+    if seasons_multi:
+        params['seasons_multi'] = ','.join(seasons_multi)
+    season_states_multi = _get_multi('season_states')
+    if season_states_multi:
+        params['season_states_multi'] = ','.join(season_states_multi)
+
+    report_store.load()
+    rows = report_store.pbp_rows(**params)
+
+    # Load lineup TOI for relevant games
+    game_ids = sorted({str(r.get('game_id')) for r in rows if r.get('game_id')}, key=str)
+    for gid in game_ids:
+        try:
+            report_store._load_lineups_for_game(gid)
+        except Exception:
+            pass
+
+    games_played = {gid for gid in game_ids if report_store.toi_lookup.get((gid, goalie), 0) > 0}
+    gp = len(games_played)
+    total_toi_secs = sum(
+        secs for (gid, name), secs in report_store.toi_lookup.items()
+        if name == goalie and gid in games_played
+    )
+    toi = round(total_toi_secs / 60, 1) if total_toi_secs else 0.0
+
+    faced = [r for r in rows if r.get('goalie') == goalie and r.get('event') in ('Shot', 'Goal')]
+    sa = len(faced)
+    ga = sum(1 for r in faced if r.get('event') == 'Goal')
+    xga = round(sum(float(r.get('xG') or 0.0) for r in faced), 2)
+
+    sv_pct = round(((sa - ga) / sa * 100.0) if sa else 0.0, 1)
+    xsv_pct = round(((1.0 - (xga / sa)) * 100.0) if sa else 0.0, 1)
+    dsv_pct = round(sv_pct - xsv_pct, 1)
+    gsax = round(xga - ga, 2)
+
+    # Best-effort team: use the most recent game the goalie actually played.
+    team = ''
+    latest_gid = ''
+    if games_played:
+        latest_gid = max(
+            games_played,
+            key=lambda g: (report_store.game_meta.get(str(g), {}).get('date', '') or '')
+        )
+    if latest_gid:
+        try:
+            import os
+            import csv
+            lineups_dir = os.path.join(os.path.dirname(__file__), 'Data', 'Lineups')
+            lineup_file = os.path.join(lineups_dir, f"{latest_gid}_teams.csv")
+            if os.path.exists(lineup_file):
+                with open(lineup_file, 'r', encoding='utf-8') as f:
+                    reader = csv.DictReader(f)
+                    for row in reader:
+                        if (row.get('Name') or '').strip() == goalie:
+                            team = (row.get('Team') or '').strip()
+                            break
+        except Exception:
+            pass
+
+    def _calc_age(birth_date_str: str):
+        if not birth_date_str:
+            return None
+        try:
+            b = datetime.strptime(birth_date_str[:10], '%Y-%m-%d').date()
+            today = datetime.utcnow().date()
+            years = today.year - b.year - (1 if (today.month, today.day) < (b.month, b.day) else 0)
+            return max(0, years)
+        except Exception:
+            return None
+
+    profile = {'team': team, 'jersey': '', 'position': 'G', 'birthDate': '', 'age': None}
+    if games_played:
+        gids = sorted(games_played, key=lambda g: report_store.game_meta.get(str(g), {}).get('date', ''), reverse=True)
+        for gid in gids[:8]:
+            summary = data_api.fetch_game_summary(gid)
+            if not summary:
+                continue
+            try:
+                for side in ('homeTeam', 'visitingTeam'):
+                    t = summary.get(side) or {}
+                    tname = t.get('name') or ''
+                    for group in ('goalies', 'skaters'):
+                        for p in t.get(group, []):
+                            if p.get('name') != goalie:
+                                continue
+                            profile['jersey'] = str(p.get('jersey') or '')
+                            profile['position'] = str(p.get('position') or 'G')
+                            profile['birthDate'] = str(p.get('birthDate') or '')
+                            profile['age'] = _calc_age(profile['birthDate'])
+                            if tname and tname not in ('Home Team', 'Visiting Team'):
+                                profile['team'] = tname
+                            raise StopIteration
+            except StopIteration:
+                break
+            except Exception:
+                continue
+
+    return jsonify({
+        'player': goalie,
+        'profile': profile,
+        'stats': {
+            'GP': gp,
+            'TOI': toi,
+            'SA': sa,
+            'GA': ga,
+            'Sv%': sv_pct,
+            'xGA': xga,
+            'xSv%': xsv_pct,
+            'dSv%': dsv_pct,
+            'GSAx': gsax,
+        }
+    })
+
+
+@app.route('/api/goalies/shotmap')
+def goalies_shotmap():
+    """Return goalie shot attempts against with coordinates for heat map."""
+    goalie = request.args.get('player', '').strip()
+    if not goalie:
+        return jsonify({'attempts': []})
+
+    params = {
+        'team': 'All',
+        'season': request.args.get('season', 'All'),
+        'season_state': request.args.get('season_state', 'All'),
+        'date_from': request.args.get('date_from', ''),
+        'date_to': request.args.get('date_to', ''),
+        'segment': request.args.get('segment', 'all'),
+        'strength': request.args.get('strength', 'All'),
+        'goalies': goalie,
+    }
+
+    def _get_multi(name):
+        vals = request.args.getlist(name)
+        if len(vals) == 1 and ',' in vals[0]:
+            vals = [v for v in vals[0].split(',') if v]
+        return [v for v in vals if v]
+
+    strengths_multi = _get_multi('strengths')
+    if strengths_multi:
+        params['strengths_multi'] = ','.join(strengths_multi)
+    seasons_multi = _get_multi('seasons')
+    if seasons_multi:
+        params['seasons_multi'] = ','.join(seasons_multi)
+    season_states_multi = _get_multi('season_states')
+    if season_states_multi:
+        params['season_states_multi'] = ','.join(season_states_multi)
+
+    rows = report_store.pbp_rows(**params)
+    attempts = [
+        {
+            'adj_x': r.get('adj_x'),
+            'adj_y': r.get('adj_y'),
+            'event': r.get('event'),
+            'forTeam': r.get('team_for'),
+            'againstTeam': r.get('team_against'),
+            'strength': r.get('strength'),
+            'shooter': r.get('shooter'),
+            'goalie': r.get('goalie'),
+            'period': r.get('period'),
+            'xG': r.get('xG'),
+        }
+        for r in rows if r.get('goalie') == goalie and r.get('event') in ('Shot', 'Goal', 'Miss', 'Block')
+    ]
+    return jsonify({'attempts': attempts})
+
+
+@app.route('/api/goalies/performance')
+def goalies_performance():
+    """Return per-game running totals for a single goalie.
+
+    Metrics returned:
+      - per_game: GA, SA, xGA, GSAx, TOI (minutes)
+      - running:  running totals for the same metrics
+    """
+    goalie = request.args.get('player', '').strip()
+    if not goalie:
+        return jsonify({'error': 'player required'}), 400
+
+    params = {
+        'team': 'All',
+        'season': request.args.get('season', 'All'),
+        'season_state': request.args.get('season_state', 'All'),
+        'date_from': request.args.get('date_from', ''),
+        'date_to': request.args.get('date_to', ''),
+        'segment': request.args.get('segment', 'all'),
+        'strength': request.args.get('strength', 'All'),
+    }
+
+    def _get_multi(name):
+        vals = request.args.getlist(name)
+        if len(vals) == 1 and ',' in vals[0]:
+            vals = [v for v in vals[0].split(',') if v]
+        return [v for v in vals if v]
+
+    strengths_multi = _get_multi('strengths')
+    if strengths_multi:
+        params['strengths_multi'] = ','.join(strengths_multi)
+    seasons_multi = _get_multi('seasons')
+    if seasons_multi:
+        params['seasons_multi'] = ','.join(seasons_multi)
+    season_states_multi = _get_multi('season_states')
+    if season_states_multi:
+        params['season_states_multi'] = ','.join(season_states_multi)
+
+    report_store.load()
+    rows = report_store.pbp_rows(**params)
+
+    game_ids = sorted({str(r.get('game_id')) for r in rows if r.get('game_id')}, key=str)
+    for gid in game_ids:
+        try:
+            report_store._load_lineups_for_game(gid)
+        except Exception:
+            pass
+    games_played = [gid for gid in game_ids if report_store.toi_lookup.get((gid, goalie), 0) > 0]
+
+    def _date_for(gid: str) -> str:
+        return (report_store.game_meta.get(str(gid), {}) or {}).get('date', '') or ''
+
+    games_played.sort(key=lambda g: (_date_for(str(g)) or '9999-99-99', int(str(g)) if str(g).isdigit() else str(g)))
+
+    by_game = {str(gid): {'GA': 0, 'SA': 0, 'xGA': 0.0, 'GSAx': 0.0, 'TOI': 0.0} for gid in games_played}
+
+    for gid in games_played:
+        try:
+            secs = int(report_store.toi_lookup.get((str(gid), goalie), 0) or 0)
+        except Exception:
+            secs = 0
+        by_game[str(gid)]['TOI'] = round(secs / 60.0, 1) if secs else 0.0
+
+    for r in rows:
+        gid = str(r.get('game_id') or '')
+        if gid not in by_game:
+            continue
+        if r.get('goalie') != goalie:
+            continue
+        ev = r.get('event')
+        if ev in ('Shot', 'Goal'):
+            by_game[gid]['SA'] += 1
+            try:
+                by_game[gid]['xGA'] += float(r.get('xG') or 0.0)
+            except Exception:
+                pass
+        if ev == 'Goal':
+            by_game[gid]['GA'] += 1
+
+    for gid in list(by_game.keys()):
+        by_game[gid]['xGA'] = round(float(by_game[gid].get('xGA') or 0.0), 2)
+        by_game[gid]['GSAx'] = round(float(by_game[gid].get('xGA') or 0.0) - float(by_game[gid].get('GA') or 0.0), 2)
+
+    running = {'GA': 0, 'SA': 0, 'xGA': 0.0, 'GSAx': 0.0, 'TOI': 0.0}
+    out_games = []
+    for idx, gid in enumerate(games_played, start=1):
+        g = by_game.get(str(gid), {})
+        running['GA'] += int(g.get('GA') or 0)
+        running['SA'] += int(g.get('SA') or 0)
+        running['xGA'] = round(float(running['xGA']) + float(g.get('xGA') or 0.0), 2)
+        running['GSAx'] = round(float(running['GSAx']) + float(g.get('GSAx') or 0.0), 2)
+        running['TOI'] = round(float(running['TOI']) + float(g.get('TOI') or 0.0), 1)
+
+        meta = report_store.game_meta.get(str(gid), {}) or {}
+        season = str(meta.get('season') or '')
+
+        out_games.append({
+            'gameNumber': idx,
+            'gameId': str(gid),
+            'date': _date_for(str(gid)) or '',
+            'season': season,
+            'per_game': {
+                'GA': int(g.get('GA') or 0),
+                'SA': int(g.get('SA') or 0),
+                'xGA': round(float(g.get('xGA') or 0.0), 2),
+                'GSAx': round(float(g.get('GSAx') or 0.0), 2),
+                'TOI': round(float(g.get('TOI') or 0.0), 1),
+            },
+            'running': {
+                'GA': running['GA'],
+                'SA': running['SA'],
+                'xGA': running['xGA'],
+                'GSAx': running['GSAx'],
+                'TOI': running['TOI'],
+            }
+        })
+
+    return jsonify({'player': goalie, 'games': out_games})
 
 @app.route('/api/skaters/stats')
 def skaters_stats():
@@ -1316,7 +2202,16 @@ def skaters_player_image():
         return jsonify({'url': ''})
     report_store.load()
     # Search for recent games involving the player
-    candidate_gids = [str(r.get('game_id')) for r in report_store.rows if r.get('game_id') and (r.get('shooter') == player or player in (r.get('on_ice_all') or []))]
+    candidate_gids = [
+        str(r.get('game_id'))
+        for r in report_store.rows
+        if r.get('game_id')
+        and (
+            r.get('shooter') == player
+            or r.get('goalie') == player
+            or player in (r.get('on_ice_all') or [])
+        )
+    ]
     # Sort by date descending using meta
     unique_gids = sorted(set(candidate_gids), key=lambda g: report_store.game_meta.get(str(g), {}).get('date', ''), reverse=True)
     for gid in unique_gids[:8]:  # check a few recent games
@@ -1342,6 +2237,12 @@ def skaters_player_image():
         except Exception:
             continue
     return jsonify({'url': ''})
+
+
+@app.route('/api/goalies/player_image')
+def goalies_player_image():
+    """Alias for player image lookup used by Goalies page."""
+    return skaters_player_image()
 
 # -------- Data API (reuses report_store) --------
 @app.route('/api/data/pbp')
