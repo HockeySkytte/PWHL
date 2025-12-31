@@ -56,6 +56,7 @@
         .roster-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem; margin-top: 1rem; }
         .player-card { background-color: #2d3748; border: 1px solid #4a5568; border-radius: 0.375rem; padding: 1rem; min-width: 300px; transition: transform 0.2s, box-shadow 0.2s; }
         .player-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+        .lineup-avatar { width: 80px; height: 80px; border-radius: 0.375rem; flex-shrink: 0; object-fit: cover; object-position: center top; background-color: #1a202c; border: 1px solid #4a5568; }
         .play-by-play { display: flex; flex-direction: column; gap: 1rem; }
         .pbp-table { width: 100%; border-collapse: collapse; font-size: 12px; }
         .pbp-table th, .pbp-table td { padding: 6px 8px; border-bottom: 1px solid #4a5568; white-space: nowrap; }
@@ -910,7 +911,7 @@
                         const stats = player.stats || {};
                         const playerImage = player.playerImageURL || 'https://lscluster.hockeytech.com/statview-1.4.1/img/headshot-default.jpg';
                         html += `<div class="player-card" style="display: flex; align-items: flex-start; gap: 1rem;">
-                            <img src="${playerImage}" alt="${player.name}" onerror="this.onerror=null;this.src='https://lscluster.hockeytech.com/statview-1.4.1/img/headshot-default.jpg';" style="width: 80px; height: 80px; border-radius: 0.375rem; flex-shrink: 0;">
+                            <img class="lineup-avatar" src="${playerImage}" alt="${player.name}" loading="lazy" onerror="this.onerror=null;this.src='https://lscluster.hockeytech.com/statview-1.4.1/img/headshot-default.jpg';">
                             <div style="flex: 1;">
                                 <strong>#${player.jersey || 'N/A'} ${player.name || 'Unknown'}</strong><br>
                                 <small>${player.position || 'G'}${stats.timeOnIce ? ` | TOI: ${stats.timeOnIce}` : ''}</small><br>
@@ -929,7 +930,7 @@
                         const stats = player.stats || {};
                         const playerImage = player.playerImageURL || 'https://lscluster.hockeytech.com/statview-1.4.1/img/headshot-default.jpg';
                         html += `<div class="player-card" style="display: flex; align-items: flex-start; gap: 1rem;">
-                            <img src="${playerImage}" alt="${player.name}" onerror="this.onerror=null;this.src='https://lscluster.hockeytech.com/statview-1.4.1/img/headshot-default.jpg';" style="width: 80px; height: 80px; border-radius: 0.375rem; flex-shrink: 0;">
+                            <img class="lineup-avatar" src="${playerImage}" alt="${player.name}" loading="lazy" onerror="this.onerror=null;this.src='https://lscluster.hockeytech.com/statview-1.4.1/img/headshot-default.jpg';">
                             <div style="flex: 1;">
                                 <strong>#${player.jersey || 'N/A'} ${player.name || 'Unknown'}</strong><br>
                                 <small>${player.position || 'Skater'}${stats.toi ? ` | TOI: ${stats.toi}` : ''}</small><br>
@@ -957,7 +958,7 @@
                         const stats = player.stats || {};
                         const playerImage = player.playerImageURL || 'https://lscluster.hockeytech.com/statview-1.4.1/img/headshot-default.jpg';
                         html += `<div class="player-card" style="display: flex; align-items: flex-start; gap: 1rem;">
-                            <img src="${playerImage}" alt="${player.name}" onerror="this.onerror=null;this.src='https://lscluster.hockeytech.com/statview-1.4.1/img/headshot-default.jpg';" style="width: 80px; height: 80px; border-radius: 0.375rem; flex-shrink: 0;">
+                            <img class="lineup-avatar" src="${playerImage}" alt="${player.name}" loading="lazy" onerror="this.onerror=null;this.src='https://lscluster.hockeytech.com/statview-1.4.1/img/headshot-default.jpg';">
                             <div style="flex: 1;">
                                 <strong>#${player.jersey || 'N/A'} ${player.name || 'Unknown'}</strong><br>
                                 <small>${player.position || 'G'}${stats.timeOnIce ? ` | TOI: ${stats.timeOnIce}` : ''}</small><br>
@@ -976,7 +977,7 @@
                         const stats = player.stats || {};
                         const playerImage = player.playerImageURL || 'https://lscluster.hockeytech.com/statview-1.4.1/img/headshot-default.jpg';
                         html += `<div class="player-card" style="display: flex; align-items: flex-start; gap: 1rem;">
-                            <img src="${playerImage}" alt="${player.name}" onerror="this.onerror=null;this.src='https://lscluster.hockeytech.com/statview-1.4.1/img/headshot-default.jpg';" style="width: 80px; height: 80px; border-radius: 0.375rem; flex-shrink: 0;">
+                            <img class="lineup-avatar" src="${playerImage}" alt="${player.name}" loading="lazy" onerror="this.onerror=null;this.src='https://lscluster.hockeytech.com/statview-1.4.1/img/headshot-default.jpg';">
                             <div style="flex: 1;">
                                 <strong>#${player.jersey || 'N/A'} ${player.name || 'Unknown'}</strong><br>
                                 <small>${player.position || 'Skater'}${stats.toi ? ` | TOI: ${stats.toi}` : ''}</small><br>

@@ -70,32 +70,8 @@ $env:STRIPE_PRODUCT_NAME = "PWHL Analytics - Coffee"
 - Go to: `http://localhost:8501/coffee`
 
 Notes:
-- The page currently offers fixed tip amounts ($3 / $5 / $10).
+- The page currently offers fixed tip amounts ($3 / $5 / $10 / $20 / $50).
 - For production deployments (Render/Heroku/etc.), set the env vars in your hosting provider.
-
-## ✅ **Payment Notifications (Stripe Webhook)**
-
-If you want a reliable signal that a payment actually succeeded (and optionally a real-time notification), use a **Stripe webhook**.
-
-### Render env vars
-Required:
-- `STRIPE_WEBHOOK_SECRET` (from the webhook endpoint in Stripe)
-
-Optional:
-- `STRIPE_NOTIFY_WEBHOOK_URL` (Discord/Slack webhook URL; if set, the app posts a short message when a payment succeeds)
-
-### Stripe Dashboard setup
-1) Stripe Dashboard → **Developers** → **Webhooks** → **Add endpoint**
-2) Endpoint URL:
-- `https://<your-render-domain>/api/stripe/webhook`
-3) Events to listen for:
-- `checkout.session.completed`
-- `checkout.session.async_payment_succeeded`
-4) Copy the webhook **Signing secret** and set it in Render as `STRIPE_WEBHOOK_SECRET`
-
-### Where to see the result
-- Render → your service → **Logs** will show a line like:
-  `Payment succeeded: ...`
 
 ## 🎨 **Design Philosophy**
 
