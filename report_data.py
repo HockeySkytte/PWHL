@@ -1387,15 +1387,24 @@ class ReportDataStore:
         season_filter = kwargs.get('season','All')
         season_state_filter = kwargs.get('season_state','All')
         strength_filter = kwargs.get('strength','All')
-        seasons_multi = kwargs.get('seasons_multi') or []
-        strengths_multi = kwargs.get('strengths_multi') or []
+        def _norm_multi(val) -> List[str]:
+            if not val:
+                return []
+            if isinstance(val, str):
+                return [v for v in val.split(',') if v]
+            # assume list-like
+            return [v for v in val if v]
+
+        seasons_multi = _norm_multi(kwargs.get('seasons_multi'))
+        strengths_multi = _norm_multi(kwargs.get('strengths_multi'))
         # We'll build per-team stats iterating once through rows and applying season/state filters up front
         rows = self.rows
         if seasons_multi and 'All' not in seasons_multi:
             rows = [r for r in rows if r.get('season') in seasons_multi]
         elif season_filter != 'All':
             rows = [r for r in rows if r.get('season') == season_filter]
-        season_states_multi = kwargs.get('season_states_multi') or []
+
+        season_states_multi = _norm_multi(kwargs.get('season_states_multi'))
         if season_states_multi:
             rows = [r for r in rows if r.get('state') in season_states_multi]
         elif season_state_filter != 'All':
@@ -1404,11 +1413,19 @@ class ReportDataStore:
         teams: Dict[str, Dict[str, Any]] = {}
 
         def ensure(team: str):
+            def _display_single_or_all(multi_vals: List[str], fallback: str) -> str:
+                vals = [v for v in (multi_vals or []) if v and v != 'All']
+                if len(vals) == 1:
+                    return vals[0]
+                if len(vals) > 1:
+                    return 'All'
+                return fallback
+
             return teams.setdefault(team, {
                 'Team': team,
-                'Season': 'All' if seasons_multi else season_filter,
-                'Season_State': 'All' if season_states_multi else season_state_filter,
-                'Strength': 'All' if strengths_multi else strength_filter,
+                'Season': _display_single_or_all(seasons_multi, season_filter),
+                'Season_State': _display_single_or_all(season_states_multi, season_state_filter),
+                'Strength': _display_single_or_all(strengths_multi, strength_filter),
                 'games': set(),
                 'CF':0,'CA':0,'FF':0,'FA':0,'SF':0,'SA':0,'GF':0,'GA':0,
                 'xGF':0.0,'xGA':0.0
