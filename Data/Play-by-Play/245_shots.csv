@@ -1,1 +1,111 @@
-id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,xG,ScoreState,BoxID,game_id,game_date,competition,season,state
+1,0:20,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,1,event,5v5,3,Cayla Barnes,,,,,1,Raygan Kirk,,,,,,,-41.7,-27.2,0.0553,0,D22,245,2026-01-03,PWHL,2025/2026,Regular Season
+2,0:24,Shot,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,1,event,5v5,9,Daryl Watts,,,,,30,Corinne Schroeder,,,,,,,-46.7,28.6,0.0553,0,D19,245,2026-01-03,PWHL,2025/2026,Regular Season
+3,1:08,Block,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,1,event,5v5,11,Emily Brown,,,,,1,Raygan Kirk,,,,,,,-41.0,23.0,,0,D24,245,2026-01-03,PWHL,2025/2026,Regular Season
+4,1:49,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,1,event,5v5,78,Lexie Adzija,,,,,1,Raygan Kirk,,,,,,,-64.3,22.7,0.0553,0,D13,245,2026-01-03,PWHL,2025/2026,Regular Season
+5,2:57,Shot,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,1,event,5v5,17,Ella Shelton,,,,,30,Corinne Schroeder,,,,,,,-30.0,29.7,0.0553,0,D24,245,2026-01-03,PWHL,2025/2026,Regular Season
+6,3:31,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,1,event,5v5,25,Alex Carpenter,,,,,1,Raygan Kirk,,,,,,,-69.7,-19.0,0.0553,0,D17,245,2026-01-03,PWHL,2025/2026,Regular Season
+7,4:18,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,1,event,5v5,3,Cayla Barnes,,,,,1,Raygan Kirk,,,,,,,-39.0,-34.0,0.0553,0,D26,245,2026-01-03,PWHL,2025/2026,Regular Season
+8,5:09,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,1,event,5v5,78,Lexie Adzija,,,,,1,Raygan Kirk,,,,,,,-76.3,-0.8,0.0553,0,D11,245,2026-01-03,PWHL,2025/2026,Regular Season
+9,5:10,Goal,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,1,event,5v5,78,Lexie Adzija,13,Mikyla Grant-Mentis,20,Mariah Keopple,1,Raygan Kirk,,8 11 13 20 78,Natalie Snodgrass - Emily Brown - Mikyla Grant-Mentis - Mariah Keopple - Lexie Adzija,,2 20 22 42 71,Jessica Kondas - Emma Gentry - Maggie Connors - Claire Dalton - Anna Kjellbin,-80.7,1.7,0.0553,0,D11,245,2026-01-03,PWHL,2025/2026,Regular Season
+10,6:40,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,1,event,5v5,3,Cayla Barnes,,,,,1,Raygan Kirk,,,,,,,-6.3,-34.0,0.0657,1,N04,245,2026-01-03,PWHL,2025/2026,Regular Season
+11,7:45,Block,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,1,event,5v5,27,Megan Carter,,,,,1,Raygan Kirk,,,,,,,-65.0,16.1,,1,D13,245,2026-01-03,PWHL,2025/2026,Regular Season
+12,8:04,Shot,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,1,event,5v5,22,Maggie Connors,,,,,30,Corinne Schroeder,,,,,,,-81.0,21.0,0.0591,-1,D05,245,2026-01-03,PWHL,2025/2026,Regular Season
+13,8:15,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,1,event,5v5,8,Natalie Snodgrass,,,,,1,Raygan Kirk,,,,,,,-68.7,-28.3,0.0657,1,D18,245,2026-01-03,PWHL,2025/2026,Regular Season
+14,9:02,Block,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,1,event,5v5,15,Savannah Harmon,,,,,30,Corinne Schroeder,,,,,,,-51.7,20.4,,-1,D20,245,2026-01-03,PWHL,2025/2026,Regular Season
+15,9:47,Block,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,1,event,5v5,17,Ella Shelton,,,,,30,Corinne Schroeder,,,,,,,-50.3,-15.6,,-1,D22,245,2026-01-03,PWHL,2025/2026,Regular Season
+16,11:08,Shot,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,1,event,5v5,22,Maggie Connors,,,,,30,Corinne Schroeder,,,,,,,-68.3,17.6,0.0591,-1,D13,245,2026-01-03,PWHL,2025/2026,Regular Season
+17,11:34,Penalty,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,1,event,5v5,2,Jessica Kondas,,,,,,,,,,,,,,,,-1,,245,2026-01-03,PWHL,2025/2026,Regular Season
+18,11:54,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,1,event,5v4,21,Hilary Knight,,,,,1,Raygan Kirk,,,,,,,-73.0,12.8,0.1021,1,D13,245,2026-01-03,PWHL,2025/2026,Regular Season
+19,12:19,Block,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,1,event,5v4,88,Julia Gosling,,,,,1,Raygan Kirk,,,,,,,-51.7,-29.7,,1,D23,245,2026-01-03,PWHL,2025/2026,Regular Season
+20,13:09,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,1,event,5v4,8,Natalie Snodgrass,,,,,1,Raygan Kirk,,,,,,,-61.0,-30.6,0.1021,1,D18,245,2026-01-03,PWHL,2025/2026,Regular Season
+21,13:23,Block,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,1,event,5v4,5,Anna Wilgren,,,,,1,Raygan Kirk,,,,,,,-39.7,-12.8,,1,D25,245,2026-01-03,PWHL,2025/2026,Regular Season
+22,14:25,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,1,event,5v5,13,Mikyla Grant-Mentis,,,,,1,Raygan Kirk,,,,,,,-44.0,18.4,0.0657,1,D20,245,2026-01-03,PWHL,2025/2026,Regular Season
+23,14:37,Block,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,1,event,5v5,27,Megan Carter,,,,,1,Raygan Kirk,,,,,,,-38.7,21.2,,1,D24,245,2026-01-03,PWHL,2025/2026,Regular Season
+24,15:26,Block,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,1,event,5v5,21,Hilary Knight,,,,,1,Raygan Kirk,,,,,,,-53.0,-11.1,,1,D22,245,2026-01-03,PWHL,2025/2026,Regular Season
+25,15:50,Block,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,1,event,5v5,17,Ella Shelton,,,,,30,Corinne Schroeder,,,,,,,-43.0,35.7,,-1,D19,245,2026-01-03,PWHL,2025/2026,Regular Season
+26,16:18,Block,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,1,event,5v5,15,Savannah Harmon,,,,,30,Corinne Schroeder,,,,,,,-50.7,35.4,,-1,D19,245,2026-01-03,PWHL,2025/2026,Regular Season
+27,17:45,Block,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,1,event,5v5,27,Megan Carter,,,,,1,Raygan Kirk,,,,,,,-51.7,17.6,,1,D20,245,2026-01-03,PWHL,2025/2026,Regular Season
+28,17:49,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,1,event,5v5,21,Hilary Knight,,,,,1,Raygan Kirk,,,,,,,-60.7,7.6,0.0657,1,D14,245,2026-01-03,PWHL,2025/2026,Regular Season
+29,18:04,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,1,event,5v5,24,Lyndie Lobdell,,,,,1,Raygan Kirk,,,,,,,-42.0,-1.7,0.0657,1,D21,245,2026-01-03,PWHL,2025/2026,Regular Season
+30,18:20,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,1,event,5v5,27,Megan Carter,,,,,1,Raygan Kirk,,,,,,,-72.7,8.8,0.0657,1,D14,245,2026-01-03,PWHL,2025/2026,Regular Season
+31,19:45,Shot,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,1,event,5v5,9,Daryl Watts,,,,,30,Corinne Schroeder,,,,,,,-47.3,-6.0,0.0591,-1,D21,245,2026-01-03,PWHL,2025/2026,Regular Season
+32,19:59,Shot,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,1,event,5v5,9,Daryl Watts,,,,,30,Corinne Schroeder,,,,,,,-59.0,16.7,0.0591,-1,D14,245,2026-01-03,PWHL,2025/2026,Regular Season
+33,0:55,Goal,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,2,event,5v5,24,Natalie Spooner,27,Emma Maltais,9,Daryl Watts,30,Corinne Schroeder,,3 20 21 25 88,Cayla Barnes - Mariah Keopple - Hilary Knight - Alex Carpenter - Julia Gosling,,6 11 24 27 71,Kali Flanagan - Kiara Zanon - Natalie Spooner - Emma Maltais - Anna Kjellbin,-75.7,-9.3,0.0591,-1,D11,245,2026-01-03,PWHL,2025/2026,Regular Season
+34,2:31,Shot,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,2,event,5v5,22,Maggie Connors,,,,,30,Corinne Schroeder,,,,,,,-74.3,7.6,0.0553,0,D11,245,2026-01-03,PWHL,2025/2026,Regular Season
+35,3:23,Shot,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,2,event,5v5,18,Jesse Compher,,,,,30,Corinne Schroeder,,,,,,,-71.0,4.5,0.0553,0,D14,245,2026-01-03,PWHL,2025/2026,Regular Season
+36,3:28,Shot,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,2,event,5v5,24,Natalie Spooner,,,,,30,Corinne Schroeder,,,,,,,-61.7,-4.2,0.0553,0,D15,245,2026-01-03,PWHL,2025/2026,Regular Season
+37,3:31,Block,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,2,event,5v5,6,Kali Flanagan,,,,,30,Corinne Schroeder,,,,,,,-37.0,-21.8,,0,D26,245,2026-01-03,PWHL,2025/2026,Regular Season
+38,4:26,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,2,event,5v5,13,Mikyla Grant-Mentis,,,,,1,Raygan Kirk,,,,,,,-78.7,15.0,0.0553,0,D06,245,2026-01-03,PWHL,2025/2026,Regular Season
+39,4:54,Shot,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,2,event,5v5,17,Ella Shelton,,,,,30,Corinne Schroeder,,,,,,,-73.0,-20.4,0.0553,0,D17,245,2026-01-03,PWHL,2025/2026,Regular Season
+40,6:06,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,2,event,5v5,5,Anna Wilgren,,,,,1,Raygan Kirk,,,,,,,-39.7,-15.6,0.0553,0,D25,245,2026-01-03,PWHL,2025/2026,Regular Season
+41,6:11,Block,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,2,event,5v5,5,Anna Wilgren,,,,,1,Raygan Kirk,,,,,,,-53.0,20.1,,0,D20,245,2026-01-03,PWHL,2025/2026,Regular Season
+42,7:11,Shot,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,2,event,5v5,11,Kiara Zanon,,,,,30,Corinne Schroeder,,,,,,,-66.3,-11.9,0.0553,0,D16,245,2026-01-03,PWHL,2025/2026,Regular Season
+43,7:16,Shot,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,2,event,5v5,24,Natalie Spooner,,,,,30,Corinne Schroeder,,,,,,,-68.7,0.8,0.0553,0,D15,245,2026-01-03,PWHL,2025/2026,Regular Season
+44,7:26,Block,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,2,event,5v5,27,Emma Maltais,,,,,30,Corinne Schroeder,,,,,,,-77.3,-13.6,,0,D08,245,2026-01-03,PWHL,2025/2026,Regular Season
+45,7:49,Shot,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,2,event,5v5,15,Savannah Harmon,,,,,30,Corinne Schroeder,,,,,,,-81.3,9.3,0.0553,0,D06,245,2026-01-03,PWHL,2025/2026,Regular Season
+46,8:21,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,2,event,5v5,13,Mikyla Grant-Mentis,,,,,1,Raygan Kirk,,,,,,,-62.7,9.9,0.0553,0,D14,245,2026-01-03,PWHL,2025/2026,Regular Season
+47,8:49,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,2,event,5v5,13,Mikyla Grant-Mentis,,,,,1,Raygan Kirk,,,,,,,-51.0,26.4,0.0553,0,D19,245,2026-01-03,PWHL,2025/2026,Regular Season
+48,9:25,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,2,event,5v5,3,Cayla Barnes,,,,,1,Raygan Kirk,,,,,,,-51.0,-20.4,0.0553,0,D22,245,2026-01-03,PWHL,2025/2026,Regular Season
+49,9:31,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,2,event,5v5,5,Anna Wilgren,,,,,1,Raygan Kirk,,,,,,,-44.0,15.0,0.0553,0,D20,245,2026-01-03,PWHL,2025/2026,Regular Season
+50,11:18,Shot,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,2,event,5v5,11,Kiara Zanon,,,,,30,Corinne Schroeder,,,,,,,-66.3,-15.6,0.0553,0,D17,245,2026-01-03,PWHL,2025/2026,Regular Season
+51,11:28,Block,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,2,event,5v5,14,Renata Fast,,,,,30,Corinne Schroeder,,,,,,,-53.0,2.0,,0,D21,245,2026-01-03,PWHL,2025/2026,Regular Season
+52,11:57,Block,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,2,event,4v5,24,Natalie Spooner,,,,,30,Corinne Schroeder,,,,,,,-63.0,-18.1,,0,D17,245,2026-01-03,PWHL,2025/2026,Regular Season
+53,12:12,Shot,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,2,event,5v5,18,Jesse Compher,,,,,30,Corinne Schroeder,,,,,,,-83.0,-6.5,0.0553,0,D11,245,2026-01-03,PWHL,2025/2026,Regular Season
+54,12:17,Shot,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,2,event,5v5,18,Jesse Compher,,,,,30,Corinne Schroeder,,,,,,,-91.7,-8.8,0.0553,0,D02,245,2026-01-03,PWHL,2025/2026,Regular Season
+55,12:41,Block,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,2,event,4v5,9,Daryl Watts,,,,,30,Corinne Schroeder,,,,,,,-34.0,-25.2,,0,D26,245,2026-01-03,PWHL,2025/2026,Regular Season
+56,12:53,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,2,event,5v5,8,Natalie Snodgrass,,,,,1,Raygan Kirk,,,,,,,-58.0,21.8,0.0553,0,D13,245,2026-01-03,PWHL,2025/2026,Regular Season
+57,13:08,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,2,event,5v5,7,Lily Delianedis,,,,,,,,,,,,,,,,0,,245,2026-01-03,PWHL,2025/2026,Regular Season
+58,13:17,Shot,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,2,event,5v4,9,Daryl Watts,,,,,30,Corinne Schroeder,,,,,,,-68.0,25.2,0.0864,0,D13,245,2026-01-03,PWHL,2025/2026,Regular Season
+59,13:31,Shot,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,2,event,5v4,14,Renata Fast,,,,,30,Corinne Schroeder,,,,,,,-43.0,-20.4,0.0864,0,D22,245,2026-01-03,PWHL,2025/2026,Regular Season
+60,13:53,Block,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,2,event,5v5,14,Renata Fast,,,,,30,Corinne Schroeder,,,,,,,-53.0,-26.1,,0,D23,245,2026-01-03,PWHL,2025/2026,Regular Season
+61,14:27,Shot,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,2,event,5v4,19,Sara Hjalmarsson,,,,,30,Corinne Schroeder,,,,,,,-56.3,25.5,0.0864,0,D19,245,2026-01-03,PWHL,2025/2026,Regular Season
+62,17:29,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,2,event,5v5,92,Danielle Serdachny,,,,,1,Raygan Kirk,,,,,,,-59.3,-7.6,0.0553,0,D16,245,2026-01-03,PWHL,2025/2026,Regular Season
+63,0:27,Block,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,3,event,5v5,40,Blayre Turnbull,,,,,30,Corinne Schroeder,,,,,,,-60.3,-13.3,,0,D16,245,2026-01-03,PWHL,2025/2026,Regular Season
+64,1:36,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,3,event,5v5,19,Hannah Bilka,,,,,1,Raygan Kirk,,,,,,,-74.0,-12.8,0.0553,0,D08,245,2026-01-03,PWHL,2025/2026,Regular Season
+65,1:51,Shot,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,3,event,5v5,27,Emma Maltais,,,,,30,Corinne Schroeder,,,,,,,-83.0,-6.5,0.0553,0,D11,245,2026-01-03,PWHL,2025/2026,Regular Season
+66,2:22,Penalty,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,3,event,5v5,10,Hanna Baskin,,,,,,,,,,,,,,,,0,,245,2026-01-03,PWHL,2025/2026,Regular Season
+67,3:26,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,3,event,5v4,21,Hilary Knight,,,,,1,Raygan Kirk,,,,,,,-59.0,-15.3,0.0864,0,D16,245,2026-01-03,PWHL,2025/2026,Regular Season
+68,3:43,Block,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,3,event,5v5,25,Alex Carpenter,,,,,1,Raygan Kirk,,,,,,,-45.7,-19.6,,0,D22,245,2026-01-03,PWHL,2025/2026,Regular Season
+69,4:04,Block,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,3,event,5v5,25,Alex Carpenter,,,,,1,Raygan Kirk,,,,,,,-74.3,-19.6,,0,D08,245,2026-01-03,PWHL,2025/2026,Regular Season
+70,4:31,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,3,event,5v5,21,Hilary Knight,,,,,1,Raygan Kirk,,,,,,,-66.3,23.0,0.0553,0,D13,245,2026-01-03,PWHL,2025/2026,Regular Season
+71,4:35,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,3,event,5v5,88,Julia Gosling,,,,,1,Raygan Kirk,,,,,,,-34.3,-6.8,0.0553,0,D25,245,2026-01-03,PWHL,2025/2026,Regular Season
+72,4:52,Block,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,3,event,5v5,11,Emily Brown,,,,,1,Raygan Kirk,,,,,,,-53.0,-20.7,,0,D22,245,2026-01-03,PWHL,2025/2026,Regular Season
+73,5:01,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,3,event,5v5,9,Jessie Eldridge,,,,,1,Raygan Kirk,,,,,,,-42.0,3.4,0.0553,0,D21,245,2026-01-03,PWHL,2025/2026,Regular Season
+74,5:42,Block,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,3,event,5v5,8,Natalie Snodgrass,,,,,1,Raygan Kirk,,,,,,,-75.7,7.6,,0,D11,245,2026-01-03,PWHL,2025/2026,Regular Season
+75,6:14,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,3,event,5v5,13,Mikyla Grant-Mentis,,,,,1,Raygan Kirk,,,,,,,-78.7,30.9,0.0553,0,D05,245,2026-01-03,PWHL,2025/2026,Regular Season
+76,7:20,Block,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,3,event,5v5,88,Julia Gosling,,,,,1,Raygan Kirk,,,,,,,-80.7,13.3,,0,D06,245,2026-01-03,PWHL,2025/2026,Regular Season
+77,7:44,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,3,event,5v5,9,Jessie Eldridge,,,,,1,Raygan Kirk,,,,,,,-79.0,-2.3,0.0553,0,D11,245,2026-01-03,PWHL,2025/2026,Regular Season
+78,7:49,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,3,event,5v5,19,Hannah Bilka,,,,,1,Raygan Kirk,,,,,,,-79.3,5.7,0.0553,0,D11,245,2026-01-03,PWHL,2025/2026,Regular Season
+79,9:03,Shot,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,3,event,5v5,6,Kali Flanagan,,,,,30,Corinne Schroeder,,,,,,,-60.3,-35.4,0.0553,0,D18,245,2026-01-03,PWHL,2025/2026,Regular Season
+80,9:06,Shot,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,3,event,5v5,15,Savannah Harmon,,,,,30,Corinne Schroeder,,,,,,,-70.0,39.1,0.0553,0,D04,245,2026-01-03,PWHL,2025/2026,Regular Season
+81,9:14,Block,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,3,event,5v5,6,Kali Flanagan,,,,,30,Corinne Schroeder,,,,,,,-45.3,-13.3,,0,D21,245,2026-01-03,PWHL,2025/2026,Regular Season
+82,9:54,Shot,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,3,event,5v5,40,Blayre Turnbull,,,,,30,Corinne Schroeder,,,,,,,-34.7,-1.4,0.0553,0,D25,245,2026-01-03,PWHL,2025/2026,Regular Season
+83,9:55,Goal,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,3,event,5v5,9,Daryl Watts,40,Blayre Turnbull,14,Renata Fast,30,Corinne Schroeder,,3 5 24 25 66,Cayla Barnes - Anna Wilgren - Lyndie Lobdell - Alex Carpenter - Marah Wagner,,9 14 17 40 42,Daryl Watts - Renata Fast - Ella Shelton - Blayre Turnbull - Claire Dalton,-82.0,6.5,0.0553,0,D11,245,2026-01-03,PWHL,2025/2026,Regular Season
+84,9:57,Shot,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,3,event,5v5,40,Blayre Turnbull,,,,,30,Corinne Schroeder,,,,,,,-77.3,-0.3,0.0657,1,D11,245,2026-01-03,PWHL,2025/2026,Regular Season
+85,13:01,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,3,event,5v5,3,Cayla Barnes,,,,,1,Raygan Kirk,,,,,,,-30.7,-21.5,0.0591,-1,D26,245,2026-01-03,PWHL,2025/2026,Regular Season
+86,14:36,Shot,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,3,event,5v5,17,Ella Shelton,,,,,30,Corinne Schroeder,,,,,,,6.3,-4.2,0.0657,1,N02,245,2026-01-03,PWHL,2025/2026,Regular Season
+87,14:55,Block,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,3,event,5v5,18,Jesse Compher,,,,,30,Corinne Schroeder,,,,,,,-68.0,18.7,,1,D13,245,2026-01-03,PWHL,2025/2026,Regular Season
+88,15:38,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,3,event,5v5,88,Julia Gosling,,,,,1,Raygan Kirk,,,,,,,-73.7,-30.0,0.0591,-1,D09,245,2026-01-03,PWHL,2025/2026,Regular Season
+89,15:39,Goal,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,3,event,5v5,25,Alex Carpenter,88,Julia Gosling,5,Anna Wilgren,1,Raygan Kirk,,3 5 21 25 88,Cayla Barnes - Anna Wilgren - Hilary Knight - Alex Carpenter - Julia Gosling,,6 9 15 18 19,Kali Flanagan - Daryl Watts - Savannah Harmon - Jesse Compher - Sara Hjalmarsson,-81.7,-2.0,0.0591,-1,D11,245,2026-01-03,PWHL,2025/2026,Regular Season
+90,16:18,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,3,event,5v5,20,Mariah Keopple,,,,,1,Raygan Kirk,,,,,,,-52.0,14.2,0.0553,0,D20,245,2026-01-03,PWHL,2025/2026,Regular Season
+91,16:53,Shot,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,3,event,5v5,40,Blayre Turnbull,,,,,30,Corinne Schroeder,,,,,,,-80.7,-22.4,0.0553,0,D09,245,2026-01-03,PWHL,2025/2026,Regular Season
+92,17:19,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,3,event,5v5,88,Julia Gosling,,,,,1,Raygan Kirk,,,,,,,-55.3,26.4,0.0553,0,D19,245,2026-01-03,PWHL,2025/2026,Regular Season
+93,17:36,Block,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,3,event,5v5,5,Anna Wilgren,,,,,1,Raygan Kirk,,,,,,,-39.3,26.9,,0,D24,245,2026-01-03,PWHL,2025/2026,Regular Season
+94,18:41,Block,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,3,event,5v5,17,Ella Shelton,,,,,30,Corinne Schroeder,,,,,,,-41.0,28.1,,0,D24,245,2026-01-03,PWHL,2025/2026,Regular Season
+95,19:07,Shot,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,3,event,5v5,11,Kiara Zanon,,,,,30,Corinne Schroeder,,,,,,,-67.3,-19.8,0.0553,0,D17,245,2026-01-03,PWHL,2025/2026,Regular Season
+96,1:11,Block,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,OT1,event,5v5,17,Ella Shelton,,,,,30,Corinne Schroeder,,,,,,,-58.0,-17.3,,0,D16,245,2026-01-03,PWHL,2025/2026,Regular Season
+97,1:35,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,OT1,event,3v3,19,Hannah Bilka,,,,,1,Raygan Kirk,,,,,,,-81.0,-9.3,0.0553,0,D08,245,2026-01-03,PWHL,2025/2026,Regular Season
+98,1:48,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,OT1,event,3v3,19,Hannah Bilka,,,,,1,Raygan Kirk,,,,,,,-86.3,-9.9,0.0553,0,D08,245,2026-01-03,PWHL,2025/2026,Regular Season
+99,3:05,Block,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,OT1,event,5v5,3,Cayla Barnes,,,,,1,Raygan Kirk,,,,,,,-63.3,-16.1,,0,D16,245,2026-01-03,PWHL,2025/2026,Regular Season
+100,3:21,Block,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,OT1,event,5v5,8,Natalie Snodgrass,,,,,1,Raygan Kirk,,,,,,,-37.7,-16.4,,0,D25,245,2026-01-03,PWHL,2025/2026,Regular Season
+101,3:45,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,OT1,event,3v3,21,Hilary Knight,,,,,1,Raygan Kirk,,,,,,,-72.0,-14.2,0.0553,0,D17,245,2026-01-03,PWHL,2025/2026,Regular Season
+102,4:45,Shot,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,OT1,event,3v3,13,Mikyla Grant-Mentis,,,,,1,Raygan Kirk,,,,,,,-78.7,5.7,0.0553,0,D11,245,2026-01-03,PWHL,2025/2026,Regular Season
+103,,SO Goal,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,SO,event,1v0,,,,,,,1,Raygan Kirk,,,,,,,,,,0,,245,2026-01-03,PWHL,2025/2026,Regular Season
+104,,SO Miss,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,SO,event,1v0,19,Sara Hjalmarsson,,,,,30,Corinne Schroeder,,,,,,,,,,0,,245,2026-01-03,PWHL,2025/2026,Regular Season
+105,,SO Goal,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,SO,event,1v0,,,,,,,1,Raygan Kirk,,,,,,,,,,0,,245,2026-01-03,PWHL,2025/2026,Regular Season
+106,,SO Miss,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,SO,event,1v0,24,Natalie Spooner,,,,,30,Corinne Schroeder,,,,,,,,,,0,,245,2026-01-03,PWHL,2025/2026,Regular Season
+107,,SO Miss,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,SO,event,1v0,19,Hannah Bilka,,,,,1,Raygan Kirk,,,,,,,,,,0,,245,2026-01-03,PWHL,2025/2026,Regular Season
+108,,SO Miss,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,SO,event,1v0,9,Daryl Watts,,,,,30,Corinne Schroeder,,,,,,,,,,0,,245,2026-01-03,PWHL,2025/2026,Regular Season
+109,,SO Miss,Seattle Torrent,Away,Toronto Sceptres,Seattle Torrent,SO,event,1v0,25,Alex Carpenter,,,,,1,Raygan Kirk,,,,,,,,,,0,,245,2026-01-03,PWHL,2025/2026,Regular Season
+110,,SO Miss,Toronto Sceptres,Home,Toronto Sceptres,Seattle Torrent,SO,event,1v0,42,Claire Dalton,,,,,30,Corinne Schroeder,,,,,,,,,,0,,245,2026-01-03,PWHL,2025/2026,Regular Season
