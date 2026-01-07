@@ -38,6 +38,8 @@ pip-wheel-metadata/
 !hockey-rink.png
 !favicon.png
 !PWHL_logo.png
+!.github/
+!.github/**
 !Data/
 !Data/Play-by-Play/
 !Data/Play-by-Play/**

@@ -43,6 +43,15 @@ python flask_app.py
 
 The app will be available at: **http://localhost:8501**
 
+## 🤖 Automated daily CSV updates (GitHub Actions)
+
+This repo includes a scheduled workflow at `.github/workflows/daily_export.yml` that:
+- Runs hourly, but only executes around **12:xx Europe/Copenhagen** (handles DST)
+- Runs `python export_all_csvs.py --start-date <yesterday> --end-date <today>` to refresh recent games
+- Commits and pushes updated CSVs back to the repo
+
+To enable it, add `PWHL_BASE_URL` as a GitHub **Secret** (recommended) or **Repository Variable**, pointing at your deployed app base URL (the one that serves `/api/schedule`, `/api/game/summary/<id>`, etc.).
+
 ## ☕ **Buy Me a Coffee (Stripe)**
 
 This app includes a **/coffee** page that starts a **Stripe Checkout** session for a one-time tip.

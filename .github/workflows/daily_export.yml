@@ -1,0 +1,90 @@
+name: Daily PWHL export (previous night)
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Runs hourly; we gate execution to ~12:xx Europe/Copenhagen (handles DST)
+    - cron: "7 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-export
+  cancel-in-progress: false
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Gate to noon Denmark time
+        id: gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          HOUR=$(TZ=Europe/Copenhagen date +%H)
+          if [ "$HOUR" != "12" ]; then
+            echo "Not noon in Europe/Copenhagen (hour=$HOUR); skipping."
+            echo "run_export=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "run_export=true" >> "$GITHUB_OUTPUT"
+
+      - name: Export games from previous night
+        if: steps.gate.outputs.run_export == 'true'
+        env:
+          # Prefer repository secret; fall back to repository variable.
+          PWHL_BASE_URL_SECRET: ${{ secrets.PWHL_BASE_URL }}
+          PWHL_BASE_URL_VAR: ${{ vars.PWHL_BASE_URL }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          PWHL_BASE_URL="${PWHL_BASE_URL_SECRET:-${PWHL_BASE_URL_VAR:-}}"
+          export PWHL_BASE_URL
+
+          if [ -z "${PWHL_BASE_URL:-}" ]; then
+            echo "PWHL_BASE_URL is not set. Add it as a GitHub Secret (recommended) or Repo Variable."
+            exit 1
+          fi
+
+          TODAY=$(TZ=Europe/Copenhagen date +%F)
+          YESTERDAY=$(TZ=Europe/Copenhagen date -d 'yesterday' +%F)
+          echo "Exporting date range: $YESTERDAY -> $TODAY (Europe/Copenhagen)"
+
+          python export_all_csvs.py --start-date "$YESTERDAY" --end-date "$TODAY"
+
+      - name: Commit and push changes
+        if: steps.gate.outputs.run_export == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if git diff --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add -A
+          TODAY=$(TZ=Europe/Copenhagen date +%F)
+          git commit -m "Daily export: ${TODAY}"
+          git push
