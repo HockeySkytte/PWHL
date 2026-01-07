@@ -76,7 +76,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          if git diff --quiet; then
+          if [ -z "$(git status --porcelain)" ]; then
             echo "No changes to commit."
             exit 0
           fi
