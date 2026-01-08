@@ -763,6 +763,14 @@
     if(currentView==='heat-map'){
       computeAndDrawHeat();
     }
+    // Ensure Tables view stays in sync with slicers (Season/State/etc.)
+    if(currentView==='tables'){
+      try{
+        // Coalesce rapid multi-select clicks into a single fetch
+        if(window._tableRefreshTimer) clearTimeout(window._tableRefreshTimer);
+        window._tableRefreshTimer = setTimeout(()=>{ try{ fetchCurrentTable(); }catch(e){} }, 0);
+      }catch(e){}
+    }
   }
   function prettyFilterName(id){ const map={ season_states:'Season State' }; if(map[id]) return map[id]; const s=id.replace(/_/g,' '); return s.charAt(0).toUpperCase()+s.slice(1); }
   function updateButtonLabel(id){ const selected=getMultiValues(id); const btn=document.querySelector(`#${id}Dropdown .dropdown-toggle`); if(!btn) return; if(selected.length===0){ btn.textContent=`Select ${prettyFilterName(id)}`; } else if(selected.length===1){ btn.textContent=selected[0]; } else { btn.textContent=`${selected.length} selected`; } }
@@ -1197,7 +1205,15 @@
   const seasonOverride=document.getElementById('tfSeason')?.value; if(seasonOverride && seasonOverride!=='All') params.set('season', seasonOverride);
   const seasonStateOverride=document.getElementById('tfSeasonState')?.value; if(seasonStateOverride && seasonStateOverride!=='All') params.set('season_state', seasonStateOverride);
   const strengthOverride=document.getElementById('tfStrength')?.value; if(strengthOverride && strengthOverride!=='All') params.set('strength', strengthOverride);
-    multiIds.forEach(id=>{ getMultiValues(id).forEach(v=>params.append(id,v)); });
+
+    // If table-specific overrides are set, don't also send the global multi-slicers for those fields.
+    // Backend logic prioritizes *_multi when present, which can make tfSeason/etc look "broken".
+    const skip = new Set();
+    if(seasonOverride && seasonOverride !== 'All') skip.add('seasons');
+    if(seasonStateOverride && seasonStateOverride !== 'All') skip.add('season_states');
+    if(strengthOverride && strengthOverride !== 'All') skip.add('strengths');
+
+    multiIds.forEach(id=>{ if(skip.has(id)) return; getMultiValues(id).forEach(v=>params.append(id,v)); });
     const r=await fetch('/api/report/tables?'+params.toString()); if(!r.ok) return; const data=await r.json();
     // Shallow copy raw rows
     window._baseTableRows = (data.rows||[]).map(o=>({...o}));
