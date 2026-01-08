@@ -40,6 +40,9 @@ pip-wheel-metadata/
 !PWHL_logo.png
 !.github/
 !.github/**
+!scripts/
+!scripts/export_all_csvs.py
+!scripts/__init__.py
 !Data/
 !Data/Play-by-Play/
 !Data/Play-by-Play/**
