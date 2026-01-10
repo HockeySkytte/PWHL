@@ -359,13 +359,16 @@ def main():
             # Filter by date
             filtered_games = []
             for g in games_to_process:
-                game_date = g.get('date') or g.get('game_date') or ''
-                if game_date:
+                # Prefer server-provided ISO date if available (full_date/date_parsed).
+                # Fall back to computing from the human-readable label + season_year.
+                iso_date = g.get('full_date') or g.get('date_parsed') or g.get('game_date') or ''
+                date_label = g.get('date') or g.get('date_label') or ''
+                if iso_date or date_label:
                     # Normalize to YYYY-MM-DD if needed
                     date_str = normalize_game_date(
-                        g.get('date_label', ''),
+                        date_label,
                         g.get('season_year', ''),
-                        game_date
+                        iso_date
                     )
                     
                     # Check date range

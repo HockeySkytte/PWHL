@@ -39,6 +39,12 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          # Always allow manual runs from the Actions UI.
+          if [ "${GITHUB_EVENT_NAME:-}" = "workflow_dispatch" ]; then
+            echo "Manual workflow_dispatch run; bypassing noon gate."
+            echo "run_export=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
           HOUR=$(TZ=Europe/Copenhagen date +%H)
           if [ "$HOUR" != "12" ]; then
             echo "Not noon in Europe/Copenhagen (hour=$HOUR); skipping."
