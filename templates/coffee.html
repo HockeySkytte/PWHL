@@ -50,12 +50,59 @@
     .fineprint a{color:var(--pwhl-accent-strong);text-decoration:underline;}
 
     footer{padding:.4rem .9rem;font-size:.6rem;color:#8684a3;text-align:center;border-top:1px solid var(--pwhl-border);background:var(--pwhl-surface-strong);margin-top:.25rem;}
+
+    /* Mobile top menu + (optional) slicers toggle (mobile-only) */
+    .mobile-actions{display:none;align-items:center;gap:.6rem;}
+    .mobile-icon-btn{width:44px;height:44px;border-radius:12px;background:rgba(142,124,214,.85);border:1px solid rgba(255,255,255,.18);color:#0b0b14;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;}
+    .mobile-icon-btn svg{width:22px;height:22px;stroke:#0b0b14;}
+    .mobile-icon-btn.active{outline:2px solid rgba(255,255,255,.95);outline-offset:2px;}
+    .mobile-menu-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:999;}
+    .mobile-menu-panel{display:none;position:fixed;top:76px;left:1rem;right:1rem;background:var(--pwhl-surface-strong);border:1px solid var(--pwhl-border);border-radius:1rem;overflow:hidden;z-index:1000;}
+    .mobile-menu-list{list-style:none;margin:0;padding:0;}
+    .mobile-menu-list a{display:block;padding:1rem 1rem;color:#fff;text-decoration:none;border-top:1px solid rgba(255,255,255,.08);font-weight:650;font-size:1.1rem;}
+    .mobile-menu-list a:first-child{border-top:none;}
+    .mobile-menu-list a.active{background:rgba(142,124,214,.18);}
+    body.mobile-menu-open .mobile-menu-backdrop{display:block;}
+    body.mobile-menu-open .mobile-menu-panel{display:block;}
+    /* Treat "mobile" as coarse-pointer devices (phones/tablets), regardless of rotation */
+    @media (max-width: 1100px) and (hover: none) and (pointer: coarse){
+      .tabs{display:none !important;}
+      header{padding:.75rem 1rem;}
+      .mobile-actions{display:flex;}
+      main{padding:1.1rem .75rem 2.5rem;}
+    }
   </style>
 </head>
 <body>
   <header>
     <h1><img src="{{ url_for('static', filename='PWHL_logo.png') }}" alt="PWHL" style="height:28px;width:auto;"> <span>PWHL Analytics</span></h1>
+    <div class="mobile-actions" aria-label="Mobile controls">
+      <button class="mobile-icon-btn" id="mobileMenuBtn" type="button" aria-label="Menu" aria-expanded="false">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16" /><path d="M4 12h16" /><path d="M4 18h16" />
+        </svg>
+      </button>
+      <button class="mobile-icon-btn" id="mobileSlicersBtn" type="button" aria-label="Slicers" aria-expanded="false">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16" /><path d="M7 12h10" /><path d="M10 18h4" />
+        </svg>
+      </button>
+    </div>
   </header>
+
+  <!-- Mobile menu overlay (mobile-only via CSS) -->
+  <div class="mobile-menu-backdrop" id="mobileBackdrop" aria-hidden="true"></div>
+  <nav class="mobile-menu-panel" id="mobileMenuPanel" aria-label="Menu" aria-hidden="true">
+    <ul class="mobile-menu-list">
+      <li><a href="/">Schedule</a></li>
+      <li><a href="/report">Report</a></li>
+      <li><a href="/skaters">Skaters</a></li>
+      <li><a href="/goalies">Goalies</a></li>
+      <li><a href="/teams">Teams</a></li>
+      <li><a href="/data">Data</a></li>
+      <li><a class="active" href="/coffee">Buy me a coffee</a></li>
+    </ul>
+  </nav>
 
   <div class="tabs">
     <a class="tab" href="/">📅 Schedule</a>
@@ -149,6 +196,37 @@
         alert('Unable to start checkout.');
       }
     }
+  </script>
+
+  <script>
+    // Mobile: menu toggle (slicers button auto-hides on pages without slicers)
+    (function setupMobileToggles(){
+      const menuBtn=document.getElementById('mobileMenuBtn');
+      const slicersBtn=document.getElementById('mobileSlicersBtn');
+      const backdrop=document.getElementById('mobileBackdrop');
+      const menuPanel=document.getElementById('mobileMenuPanel');
+
+      function setMenuOpen(open){
+        document.body.classList.toggle('mobile-menu-open', open);
+        if(menuBtn) menuBtn.classList.toggle('active', open);
+        if(menuBtn) menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if(menuPanel) menuPanel.setAttribute('aria-hidden', open ? 'false' : 'true');
+        if(backdrop) backdrop.setAttribute('aria-hidden', open ? 'false' : 'true');
+      }
+      function closeAll(){ setMenuOpen(false); }
+
+      // No global slicers on this page
+      if(slicersBtn) slicersBtn.style.display='none';
+
+      if(menuBtn){
+        menuBtn.addEventListener('click', ()=>{
+          const next=!document.body.classList.contains('mobile-menu-open');
+          setMenuOpen(next);
+        });
+      }
+      if(backdrop) backdrop.addEventListener('click', closeAll);
+      document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeAll(); });
+    })();
   </script>
 </body>
 </html>

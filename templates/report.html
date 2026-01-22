@@ -31,17 +31,15 @@
     header{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:var(--pwhl-surface-strong);border-bottom:1px solid var(--pwhl-border);} 
     header h1{font-size:1.5rem;font-weight:700;display:inline-flex;align-items:center;gap:.75rem;}
     .tabs{display:flex;background:var(--pwhl-surface-strong);border-bottom:1px solid var(--pwhl-border);margin-top:.75rem;}
-  .tab{background:transparent;color:#d6d3e9;border:none;padding:1rem 2rem;cursor:pointer;border-bottom:3px solid transparent;transition:.2s;font-size:1.05rem;text-decoration:none;display:flex;align-items:center;gap:.4rem;font-weight:600;}
-  .tab:hover{color:#fff;text-decoration:none;}
-  .tab.active{color:var(--pwhl-accent-strong);border-bottom-color:var(--pwhl-accent-strong);text-decoration:none;}
+    .tab{background:transparent;color:#d6d3e9;border:none;padding:1.1rem 2.2rem;cursor:pointer;border-bottom:3px solid transparent;transition:.2s;font-size:1.25rem;text-decoration:none;display:flex;align-items:center;gap:.4rem;}
+    .tab.active{color:var(--pwhl-accent-strong);border-bottom-color:var(--pwhl-accent-strong);} 
     main{flex:1;display:flex;flex-direction:column;padding:0 0 2rem;}
     .slicers-wrapper{background:var(--pwhl-surface-strong);border-bottom:1px solid var(--pwhl-border);padding:.75rem 2rem;display:flex;flex-direction:column;gap:.6rem;}
     .team-row{display:flex;align-items:flex-end;gap:1rem;flex-wrap:wrap;}
     .slicers{display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;}
-    .filter-group{display:flex;flex-direction:column;min-width:170px;position:relative;}
-    .filter-label{margin-bottom:.4rem;font-weight:600;color:#e2e8f0;font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;}
-    .filter-select{width:170px;background:#4a5568;border:1px solid #718096;border-radius:.375rem;padding:.45rem .6rem;color:#fff;font-size:.7rem;}
-    .dropdown-toggle{width:170px;}
+    .filter-group{display:flex;flex-direction:column;min-width:160px;position:relative;}
+    .filter-label{margin-bottom:.4rem;font-weight:600;color:#e2e8f0;font-size:.75rem;letter-spacing:.05em;text-transform:uppercase;}
+    .filter-select{width:160px;background:#4a5568;border:1px solid #718096;border-radius:.375rem;padding:.45rem .6rem;color:#fff;font-size:.7rem;}
   .dropdown{position:relative;}
   .dropdown-toggle{position:relative;width:160px;background:#4a5568;border:1px solid #718096;border-radius:.375rem;padding:.45rem .85rem .45rem .6rem;color:#fff;font-size:.7rem;text-align:left;display:flex;justify-content:flex-start;align-items:center;cursor:pointer;-webkit-appearance:none;appearance:none;}
   .dropdown-toggle:after{content:"";position:absolute;right:.55rem;top:50%;width:0;height:0;pointer-events:none;border-left:5px solid transparent;border-right:5px solid transparent;border-top:6px solid #e5e7eb;opacity:.9;transform:translateY(-50%);transition:.18s ease;}
@@ -60,11 +58,28 @@
   .clear-link{color:var(--pwhl-accent-strong);font-size:.55rem;margin-top:.3rem;cursor:pointer;text-decoration:underline;align-self:flex-start;}
     .filter-select:focus{outline:none;border-color:var(--pwhl-accent);box-shadow:0 0 0 2px rgba(142,124,214,.25);} input[type=date].filter-select{color-scheme:dark;}
     .sub-tabs{display:flex;gap:.25rem;margin-top:.25rem;}
-    .sub-tab{background:transparent;color:#d6d3e9;border:none;padding:.65rem 1.15rem;font-size:1.1rem;cursor:pointer;border-bottom:3px solid transparent;transition:.2s;border-radius:.25rem .25rem 0 0;}
+    .sub-tab{background:transparent;color:#d6d3e9;border:none;padding:.75rem 1.35rem;font-size:1.05rem;cursor:pointer;border-bottom:3px solid transparent;transition:.2s;border-radius:.25rem .25rem 0 0;}
     .sub-tab.active{color:var(--pwhl-accent-strong);border-bottom-color:var(--pwhl-accent-strong);background:rgba(255,255,255,.02);} 
-  .rink-row{display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;padding:.4rem 2rem 0;align-items:stretch;}
+  /* Desktop/tablet: 3-column Shot/Heat layout with a full-width legend row */
+  .rink-row{
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+    grid-template-areas:
+      "metric metric metric"
+      "def kpi off"
+      "legend legend legend";
+    gap:1rem;
+    padding:.4rem 2rem 0;
+    align-items:stretch;
+  }
   .rink{background:var(--pwhl-surface);border:1px solid var(--pwhl-border);border-radius:.9rem;padding:.55rem;display:flex;flex-direction:column;}
   #defRinkWrap,#offRinkWrap{display:flex;flex-direction:column;}
+  /* Grid-area hooks for responsive reordering */
+  #topMetricBar{grid-area:metric;}
+  #defRinkWrap{grid-area:def;}
+  #offRinkWrap{grid-area:off;}
+  #kpiColumn{grid-area:kpi;}
+  #legendPanel{grid-area:legend;}
   .zone-wrap{flex:1;}
   .rink h2{font-size:.95rem;margin:0 0 .35rem;font-weight:600;letter-spacing:.03em;color:var(--pwhl-accent-strong);text-align:center;}
   .zone-wrap{position:relative;width:100%;max-width:560px;aspect-ratio:75/85;overflow:hidden;border-radius:.65rem;background:#0d0d18;display:flex;align-items:center;justify-content:center;margin:0 auto;}
@@ -99,39 +114,118 @@
   #videoEventsTable .col-team{width:125px;}
   #videoEventsTable .col-player{width:155px;}
   #videoEventsTable tbody td{background:transparent;font-size:.8rem;}
+
+  /* Video tab layout (desktop/default) */
+  #videoTabWrapper{width:100%;}
+  #videoTabWrapper{display:grid;grid-template-columns:1.4fr .6fr;grid-template-areas:"vcontrols vcontrols" "vplayer vtable";gap:1rem;align-items:start;}
+  #videoControlsBar{grid-area:vcontrols;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
+  #videoPlayerOuter{grid-area:vplayer;min-width:520px;display:flex;}
+  #videoTableOuter{grid-area:vtable;min-width:300px;max-width:420px;display:flex;flex-direction:column;}
   footer{padding:.4rem .9rem;font-size:.6rem;color:#8684a3;text-align:center;border-top:1px solid var(--pwhl-border);background:var(--pwhl-surface-strong);margin-top:.25rem;}
-    @media (max-width:1400px){.rink-row{grid-template-columns:1fr;} .kpi-column{flex-direction:row;flex-wrap:wrap;} .kpi-card{width:calc(50% - .5rem);} }
-    @media (max-width:900px){.kpi-card{width:100%;} }
-    /* Compact mobile landscape layout: put both zones and KPIs in a single responsive grid */
-    /* Landscape narrow: force 3-column layout (def rink, KPIs, off rink) */
-      @media (max-width:1100px){
-        .rink-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;padding:.6rem 1rem 0;}
-        #defRinkWrap,#offRinkWrap{max-width:100%;}
-        .kpi-column{grid-column:1 / -1;order:3;flex-direction:row;flex-wrap:wrap;justify-content:center;}
-      }
-      /* Table responsiveness */
-      @media (max-width:1100px){
-        #tablesWrapper{padding:0.75rem 1rem!important;}
-        #tablesWrapper #tablesFlex{flex-direction:column;}
-        #tableFilterPanel{width:100%!important;flex:0 0 auto!important;order:0;}
-        #tablesWrapper .table-scroll{overflow:auto;max-height:60vh;}
-      }
-      @media (max-width:900px){
-        #statsTable{min-width:900px;}
-      }
-    @media (max-width:820px){
-      .rink-row{grid-template-columns:1fr 1fr;}
-      .zone-wrap{max-width:100%;aspect-ratio:75/85;}
-      .kpi-column{grid-column:1 / -1;}
-      .kpi-card{width:calc(50% - .5rem);min-width:150px;padding:.55rem;}
-      .kpi-card h3{font-size:.75rem;}
-      .kpi-metric{min-height:44px;padding:.3rem .25rem;}
-      .kpi-metric .value{font-size:.9rem;}
-      .kpi-metric .label{font-size:.5rem;}
-      #topMetricBar button{padding:.4rem .6rem;font-size:.6rem;}
+
+  /* Desktop/tablet: legend should be a full-width bottom bar */
+  #legendPanel{
+    grid-column:1 / -1;
+    background:transparent;
+    border:none;
+    padding:.25rem 0 0;
+  }
+  #legendPanel h2{
+    margin:0 0 .25rem;
+    font-size:.7rem;
+    font-weight:700;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:#d6d3e9;
+    opacity:.9;
+  }
+  #heatLegend{
+    width:min(560px, 70vw);
+  }
+     /* Keep the Shot/Heat 3-column layout on desktop/tablet.
+       Phone-only layout changes are handled by the coarse-pointer media queries below. */
+    /* Phone-only responsive behavior (exclude tablets): portrait width or landscape short height */
+    @media (hover: none) and (pointer: coarse) and (max-width: 600px), (hover: none) and (pointer: coarse) and (max-height: 520px){
+      .rink-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;padding:.6rem 1rem 0;}
+      #defRinkWrap,#offRinkWrap{max-width:100%;}
+      .kpi-column{grid-column:1 / -1;order:3;flex-direction:row;flex-wrap:wrap;justify-content:center;}
+      #tablesWrapper{padding:0.75rem 1rem!important;}
+      #exportTableCsvBtn{display:none !important;}
+      #tablesWrapper #tablesFlex{flex-direction:column;}
+      #tableFilterPanel{width:100%!important;flex:0 0 auto!important;order:0;}
+      #tablesWrapper .table-scroll{overflow:auto;max-height:60vh;}
+      #statsTable{min-width:900px;}
+    }
+
+
+    /* Mobile top menu + slicers toggle (mobile-only) */
+    .mobile-actions{display:none;align-items:center;gap:.6rem;}
+    .mobile-icon-btn{width:44px;height:44px;border-radius:12px;background:rgba(142,124,214,.85);border:1px solid rgba(255,255,255,.18);color:#0b0b14;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;}
+    .mobile-icon-btn svg{width:22px;height:22px;stroke:#0b0b14;}
+    .mobile-icon-btn.active{outline:2px solid rgba(255,255,255,.95);outline-offset:2px;}
+    .mobile-menu-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:999;}
+    .mobile-menu-panel{display:none;position:fixed;top:76px;left:1rem;right:1rem;background:var(--pwhl-surface-strong);border:1px solid var(--pwhl-border);border-radius:1rem;overflow:hidden;z-index:1000;}
+    .mobile-menu-list{list-style:none;margin:0;padding:0;}
+    .mobile-menu-list a{display:block;padding:1rem 1rem;color:#fff;text-decoration:none;border-top:1px solid rgba(255,255,255,.08);font-weight:650;font-size:1.1rem;}
+    .mobile-menu-list a:first-child{border-top:none;}
+    .mobile-menu-list a.active{background:rgba(142,124,214,.18);}
+    body.mobile-menu-open .mobile-menu-backdrop{display:block;}
+    body.mobile-menu-open .mobile-menu-panel{display:block;}
+    /* Treat "mobile" as phones: coarse-pointer + small width (portrait) OR small height (landscape) */
+    @media (hover: none) and (pointer: coarse) and (max-width: 600px), (hover: none) and (pointer: coarse) and (max-height: 520px){
+      .tabs{display:none !important;}
+      header{padding:.75rem 1rem;}
+      .mobile-actions{display:flex;}
+
+      /* Keep the wrapper visible so view tabs never disappear; collapse only filters */
       .slicers-wrapper{padding:.6rem 1rem;}
-      header{padding:.7rem 1rem;}
-      .tabs .tab{padding:.7rem 1rem;font-size:.9rem;}
+      .slicers-wrapper .team-row,
+      .slicers-wrapper .slicers{display:none;}
+      body.mobile-slicers-open .slicers-wrapper .team-row,
+      body.mobile-slicers-open .slicers-wrapper .slicers{display:flex;}
+
+      /* Make view tabs usable on small screens */
+      .sub-tabs{overflow-x:auto;-webkit-overflow-scrolling:touch;gap:.5rem;}
+      .sub-tab{white-space:nowrap;flex:0 0 auto;font-size:.9rem;padding:.5rem .7rem;}
+
+      /* Denser slicers: allow 2-up layout */
+      .slicers-wrapper{padding:.55rem .75rem;}
+      body.mobile-slicers-open .slicers-wrapper .team-row,
+      body.mobile-slicers-open .slicers-wrapper .slicers{gap:.6rem;}
+      body.mobile-slicers-open .slicers-wrapper .team-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:end;}
+      body.mobile-slicers-open .slicers-wrapper .slicers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;}
+      .filter-group{min-width:0 !important;}
+      .filter-select{width:100% !important;}
+      .dropdown-toggle{width:100% !important;}
+      .dropdown-menu{left:0;right:0;width:auto;min-width:0;max-width:none;}
+
+      /* Table view: collapsible filter panel */
+      #tfCollapseBtn{display:inline-flex !important;}
+      /* tfContent has an inline display:flex; so we must override with !important */
+      #tableFilterPanel.tf-collapsed #tfContent{display:none !important;}
+
+      /* Video view layout: table -> controls -> player */
+      #videoTabWrapper{display:grid;grid-template-columns:1fr;grid-template-areas:"vtable" "vcontrols" "vplayer";gap:.75rem;}
+      #videoControlsBar{grid-area:vcontrols;flex-wrap:wrap;gap:.6rem;margin:0 !important;}
+      #videoPlayerOuter{grid-area:vplayer;min-width:0 !important;}
+      #videoTableOuter{grid-area:vtable;min-width:0 !important;max-width:none !important;}
+      #videoTableScroll{max-height:32vh !important;height:auto !important;}
+    }
+
+    /* Shot/Heat: portrait ordering = KPI -> Def -> Off -> Legend */
+    @media (hover: none) and (pointer: coarse) and (max-width: 600px) and (orientation: portrait){
+      /* Heat Map metric bar ("Corsi/Fenwick/...") should sit below KPIs on mobile */
+      .rink-row{grid-template-columns:1fr;grid-template-areas:"kpi" "metric" "def" "off" "legend";gap:.75rem;padding:.6rem .75rem 0;}
+      .kpi-column{flex-direction:row;flex-wrap:wrap;justify-content:center;}
+      .kpi-card{width:calc(50% - .5rem);min-width:150px;}
+    }
+
+    /* Shot/Heat: landscape keeps zones side-by-side */
+    @media (hover: none) and (pointer: coarse) and (max-height: 520px) and (orientation: landscape){
+      /* Heat Map metric bar below KPIs (still above zones) */
+      .rink-row{grid-template-columns:1fr 1fr;grid-template-areas:"kpi kpi" "metric metric" "def off" "legend legend";gap:.75rem;padding:.6rem .75rem 0;}
+      .kpi-column{flex-direction:row;flex-wrap:wrap;justify-content:center;}
+      .kpi-card{width:calc(50% - .5rem);min-width:150px;}
     }
   </style>
   <script>
@@ -140,24 +234,6 @@
     const vpObserver=new MutationObserver(()=>{ const pc=document.getElementById('videoPlayerContainer'); if(pc){ const ifr=pc.querySelector('iframe'); if(ifr){ ifr.style.width='100%'; ifr.style.height='100%'; ifr.style.objectFit='cover'; } } });
     vpObserver.observe(document.body,{childList:true,subtree:true});
   });
-    // Soft prompt users to rotate if in portrait on small devices
-    function checkOrientation(){
-      const warnId='rotateWarning';
-      let el=document.getElementById(warnId);
-      const isSmall= window.innerWidth < 900 && window.innerHeight > window.innerWidth + 40;
-      if(isSmall){
-        if(!el){
-          el=document.createElement('div');
-          el.id=warnId;
-          el.style.cssText='position:fixed;inset:auto 0 0 0;background:#0d1120;color:#fff;padding:.6rem .9rem;font-size:.7rem;letter-spacing:.05em;text-align:center;z-index:400;border-top:1px solid rgba(255,255,255,.15);';
-          el.innerHTML='Best viewed in landscape – rotate your device for full rink view.';
-          document.body.appendChild(el);
-        }
-      } else if(el){ el.remove(); }
-    }
-    window.addEventListener('load',checkOrientation);
-    window.addEventListener('resize',checkOrientation);
-    window.addEventListener('orientationchange',()=>setTimeout(checkOrientation,200));
       // Re-render canvases on orientation change to ensure correct sizing
       window.addEventListener('orientationchange',()=>{
         setTimeout(()=>{
@@ -202,7 +278,33 @@
 <body>
   <header>
     <h1><img src="{{ url_for('static', filename='PWHL_logo.png') }}" alt="PWHL" style="height:28px;width:auto;"> <span>PWHL Analytics</span></h1>
+    <div class="mobile-actions" aria-label="Mobile controls">
+      <button class="mobile-icon-btn" id="mobileMenuBtn" type="button" aria-label="Menu" aria-expanded="false">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16" /><path d="M4 12h16" /><path d="M4 18h16" />
+        </svg>
+      </button>
+      <button class="mobile-icon-btn" id="mobileSlicersBtn" type="button" aria-label="Slicers" aria-expanded="false">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16" /><path d="M7 12h10" /><path d="M10 18h4" />
+        </svg>
+      </button>
+    </div>
   </header>
+
+  <!-- Mobile menu overlay (mobile-only via CSS) -->
+  <div class="mobile-menu-backdrop" id="mobileBackdrop" aria-hidden="true"></div>
+  <nav class="mobile-menu-panel" id="mobileMenuPanel" aria-label="Menu" aria-hidden="true">
+    <ul class="mobile-menu-list">
+      <li><a href="/">Schedule</a></li>
+      <li><a class="active" href="/report">Report</a></li>
+      <li><a href="/skaters">Skaters</a></li>
+      <li><a href="/goalies">Goalies</a></li>
+      <li><a href="/teams">Teams</a></li>
+      <li><a href="/data">Data</a></li>
+      <li><a href="/coffee">Buy me a coffee</a></li>
+    </ul>
+  </nav>
   <div class="tabs">
     <a class="tab" href="/">📅 Schedule</a>
     <a class="tab active" href="/report">📊 Report</a>
@@ -303,34 +405,34 @@
         <button class="sub-tab" data-view="video">Video</button>
       </div>
       <!-- Video Tab Section -->
-  <div id="videoTabWrapper" style="display:none;width:100%;">
-        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.7rem;">
+      <div id="videoTabWrapper" style="display:none;">
+        <div id="videoControlsBar">
           <button id="videoPrevBtn" class="metric-btn">← Prev</button>
           <button id="videoNextBtn" class="metric-btn">Next →</button>
-          <label style="font-size:.9rem;margin-left:1.2rem;">Before <input id="videoBefore" type="number" value="7" min="0" style="width:2.5em;margin:0 .3em;" /></label>
+          <label style="font-size:.9rem;">Before <input id="videoBefore" type="number" value="7" min="0" style="width:2.5em;margin:0 .3em;" /></label>
           <label style="font-size:.9rem;">After <input id="videoAfter" type="number" value="3" min="0" style="width:2.5em;margin:0 .3em;" /></label>
-          <label style="font-size:.9rem;display:flex;align-items:center;gap:.4em;margin-left:1.2rem;"><input id="videoPlayAll" type="checkbox" style="margin-right:.3em;" /> Play All</label>
+          <label style="font-size:.9rem;display:flex;align-items:center;gap:.4em;"><input id="videoPlayAll" type="checkbox" style="margin-right:.3em;" /> Play All</label>
         </div>
-        <div id="videoRow" style="display:flex;gap:1.2rem;align-items:flex-start;width:100%;">
-          <div style="flex:1.4;min-width:520px;display:flex;">
-            <div id="videoPlayerContainer" style="background:#222;border-radius:.7rem;flex:1;display:flex;align-items:center;justify-content:center;overflow:hidden;">
-              <div id="videoPlayer"></div>
-            </div>
+
+        <div id="videoPlayerOuter">
+          <div id="videoPlayerContainer" style="background:#222;border-radius:.7rem;flex:1;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+            <div id="videoPlayer"></div>
           </div>
-          <div style="flex:0.6;min-width:300px;max-width:420px;display:flex;flex-direction:column;">
-            <div id="videoTableScroll" style="flex:1;overflow:auto;border-radius:.7rem;position:relative;border:1px solid var(--pwhl-border);background:var(--pwhl-surface);scrollbar-gutter:stable both-edges;">
-              <table id="videoEventsTable" style="width:100%;border-collapse:separate;border-spacing:0;font-size:.85rem;table-layout:fixed;">
-                <thead style="background:rgba(255,255,255,.06);position:sticky;top:0;z-index:5;">
-                    <tr>
-                      <th class="col-time">Time</th>
-                      <th class="col-team">Team</th>
-                      <th class="col-event">Event</th>
-                      <th class="col-player">Player</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-              </table>
-            </div>
+        </div>
+
+        <div id="videoTableOuter">
+          <div id="videoTableScroll" style="flex:1;overflow:auto;border-radius:.7rem;position:relative;border:1px solid var(--pwhl-border);background:var(--pwhl-surface);scrollbar-gutter:stable both-edges;">
+            <table id="videoEventsTable" style="width:100%;border-collapse:separate;border-spacing:0;font-size:.85rem;table-layout:fixed;">
+              <thead style="background:rgba(255,255,255,.06);position:sticky;top:0;z-index:5;">
+                <tr>
+                  <th class="col-time">Time</th>
+                  <th class="col-team">Team</th>
+                  <th class="col-event">Event</th>
+                  <th class="col-player">Player</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -360,26 +462,6 @@
   <div class="kpi-card" data-group="xg"><h3>xG</h3><div class="kpi-metrics"><div class="kpi-metric" id="metric-xga"><span class="label">xGA</span><span class="value">—</span></div><div class="kpi-metric middle" id="metric-xgfpct"><span class="label">xGF%</span><span class="value">—</span></div><div class="kpi-metric" id="metric-xgf"><span class="label">xGF</span><span class="value">—</span></div></div></div>
     <div class="kpi-card" data-group="goals"><h3>Goals</h3><div class="kpi-metrics"><div class="kpi-metric" id="metric-ga"><span class="label">GA</span><span class="value">—</span></div><div class="kpi-metric middle" id="metric-gfpct"><span class="label">GF%</span><span class="value">—</span></div><div class="kpi-metric" id="metric-gf"><span class="label">GF</span><span class="value">—</span></div></div></div>
         <div class="kpi-card" data-group="goaltending-shooting"><h3>Shooting / Goaltending</h3><div class="kpi-metrics"><div class="kpi-metric" id="metric-svpct"><span class="label">Sv%</span><span class="value">—</span></div><div class="kpi-metric middle" id="metric-pdo"><span class="label">PDO</span><span class="value">—</span></div><div class="kpi-metric" id="metric-shpct"><span class="label">Sh%</span><span class="value">—</span></div></div></div>
-        <div id="markerLegend" style="margin-top:auto;display:flex;flex-direction:column;gap:.55rem;padding-top:.25rem;">
-          <div style="font-size:.7rem;letter-spacing:.07em;font-weight:600;color:#b7b3cf;text-transform:uppercase;text-align:center;">Legend</div>
-          <div style="display:flex;flex-wrap:wrap;gap:.9rem;justify-content:center;align-items:center;">
-            <div style="display:flex;align-items:center;gap:.35rem;font-size:.7rem;">
-              <canvas data-icon="shot" width="14" height="14" style="background:transparent;"></canvas><span>Shot</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:.35rem;font-size:.7rem;">
-              <canvas data-icon="goal" width="14" height="14" style="background:transparent;"></canvas><span>Goal</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:.35rem;font-size:.7rem;">
-              <canvas data-icon="miss" width="14" height="14" style="background:transparent;"></canvas><span>Miss</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:.35rem;font-size:.7rem;">
-              <canvas data-icon="block" width="14" height="14" style="background:transparent;"></canvas><span>Block</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:.35rem;font-size:.7rem;">
-              <canvas data-icon="penalty" width="14" height="14" style="background:transparent;"></canvas><span>Penalty</span>
-            </div>
-          </div>
-        </div>
       </div>
       <div class="rink offensive-zone" id="offRinkWrap">
         <h2>Offensive Zone</h2>
@@ -390,67 +472,100 @@
           <canvas id="offHeatCanvas" class="zone-canvas" style="display:none;"></canvas>
         </div>
       </div>
-    </div>
-    <!-- Heat Map controls (gradient legend only) -->
-    <div id="heatControls" style="display:none;flex-direction:column;align-items:center;gap:.5rem;margin-top:.35rem;">
-      <div id="heatGradientWrapper" style="display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;justify-content:center;">
-        <canvas id="heatLegend" width="280" height="14" style="border-radius:6px;border:1px solid #24315b;background:#fff;"></canvas>
+
+      <!-- Legend (used by Shot Map and Heat Map) -->
+      <div class="rink" id="legendPanel">
+        <h2>Legend</h2>
+        <div id="markerLegend" style="display:flex;flex-direction:column;gap:.55rem;">
+          <div style="display:flex;flex-wrap:wrap;gap:.9rem;justify-content:center;align-items:center;">
+            <div style="display:flex;align-items:center;gap:.35rem;font-size:.8rem;">
+              <canvas data-icon="shot" width="14" height="14" style="background:transparent;"></canvas><span>Shot</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:.35rem;font-size:.8rem;">
+              <canvas data-icon="goal" width="14" height="14" style="background:transparent;"></canvas><span>Goal</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:.35rem;font-size:.8rem;">
+              <canvas data-icon="miss" width="14" height="14" style="background:transparent;"></canvas><span>Miss</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:.35rem;font-size:.8rem;">
+              <canvas data-icon="block" width="14" height="14" style="background:transparent;"></canvas><span>Block</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:.35rem;font-size:.8rem;">
+              <canvas data-icon="penalty" width="14" height="14" style="background:transparent;"></canvas><span>Penalty</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Heat Map controls (gradient legend only) -->
+        <div id="heatControls" style="display:none;flex-direction:column;align-items:center;gap:.5rem;margin-top:.35rem;">
+          <div id="heatGradientWrapper" style="display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;justify-content:center;">
+            <canvas id="heatLegend" width="280" height="14" style="border-radius:6px;border:1px solid #24315b;background:#fff;"></canvas>
+          </div>
+        </div>
       </div>
     </div>
     <div id="shotAimPlaceholder" style="display:none;text-align:center;padding:2.5rem 1rem;font-size:1rem;font-weight:600;letter-spacing:.03em;color:#b7b3cf;">Shot Aim: coming later.</div>
     <div id="tablesWrapper" style="display:none;padding:1rem 2rem;">
-      <div style="display:flex;gap:.6rem;margin-bottom:.75rem;flex-wrap:wrap;">
-        <button type="button" class="metric-btn tbl-sub-btn active" data-table="skaters">Skaters</button>
-        <button type="button" class="metric-btn tbl-sub-btn" data-table="goalies">Goaltenders</button>
-        <button type="button" class="metric-btn tbl-sub-btn" data-table="teams">Teams</button>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:.6rem;margin-bottom:.75rem;flex-wrap:wrap;">
+        <div style="display:flex;gap:.6rem;flex-wrap:wrap;">
+          <button type="button" class="metric-btn tbl-sub-btn active" data-table="skaters">Skaters</button>
+          <button type="button" class="metric-btn tbl-sub-btn" data-table="goalies">Goaltenders</button>
+          <button type="button" class="metric-btn tbl-sub-btn" data-table="teams">Teams</button>
+        </div>
+        <button id="exportTableCsvBtn" type="button" class="metric-btn">Export CSV</button>
       </div>
       <div id="tablesFlex" style="display:flex;align-items:stretch;gap:1rem;">
         <!-- Table Filters Side Panel -->
         <div id="tableFilterPanel" style="width:220px;flex:0 0 220px;display:flex;flex-direction:column;gap:.75rem;background:var(--pwhl-surface);border:1px solid var(--pwhl-border);border-radius:.75rem;padding:.75rem;">
-          <div style="font-size:.75rem;font-weight:600;letter-spacing:.07em;color:#b7b3cf;text-transform:uppercase;">Table Filters</div>
-          <div style="display:flex;gap:.5rem;">
-            <button id="tfModePerGame" type="button" class="metric-btn" style="flex:1;">Per Game</button>
-            <button id="tfModeTotals" type="button" class="metric-btn" style="flex:1;">Totals</button>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:.5rem;">
+            <div style="font-size:.75rem;font-weight:600;letter-spacing:.07em;color:#b7b3cf;text-transform:uppercase;">Table Filters</div>
+            <button id="tfCollapseBtn" type="button" class="metric-btn" style="display:none;padding:.35rem .6rem;" aria-expanded="true" aria-controls="tfContent">Hide</button>
           </div>
-          <div style="display:flex;gap:.5rem;">
-            <button id="tfModeByGame" type="button" class="metric-btn" style="flex:1;">By Game</button>
+          <div id="tfContent" style="display:flex;flex-direction:column;gap:.75rem;">
+            <div style="display:flex;gap:.5rem;">
+              <button id="tfModePerGame" type="button" class="metric-btn" style="flex:1;">Per Game</button>
+              <button id="tfModeTotals" type="button" class="metric-btn" style="flex:1;">Totals</button>
+            </div>
+            <div style="display:flex;gap:.5rem;">
+              <button id="tfModeByGame" type="button" class="metric-btn" style="flex:1;">By Game</button>
+            </div>
+            <label style="display:flex;flex-direction:column;gap:.3rem;font-size:.7rem;">
+              <span style="font-weight:500;letter-spacing:.05em;">Search (Name)</span>
+              <input id="tfSearch" type="text" placeholder="Type to filter..." style="background:#394566;border:1px solid #566080;color:#fff;border-radius:.45rem;padding:.4rem .55rem;font-size:.75rem;" />
+            </label>
+            <label style="display:flex;flex-direction:column;gap:.25rem;font-size:.7rem;">
+              <span style="font-weight:500;letter-spacing:.05em;">Min GP</span>
+              <input id="tfMinGP" type="number" min="0" placeholder="0" style="background:#394566;border:1px solid #566080;color:#fff;border-radius:.4rem;padding:.35rem .45rem;font-size:.75rem;" />
+            </label>
+            <label style="display:flex;flex-direction:column;gap:.3rem;font-size:.7rem;">
+              <span style="font-weight:500;letter-spacing:.05em;">Season</span>
+              <select id="tfSeason" style="background:#394566;border:1px solid #566080;color:#fff;border-radius:.45rem;padding:.4rem .55rem;font-size:.75rem;">
+                <option value="All">All</option>
+              </select>
+            </label>
+            <label style="display:flex;flex-direction:column;gap:.3rem;font-size:.7rem;">
+              <span style="font-weight:500;letter-spacing:.05em;">Season State</span>
+              <select id="tfSeasonState" style="background:#394566;border:1px solid #566080;color:#fff;border-radius:.45rem;padding:.4rem .55rem;font-size:.75rem;">
+                <option value="All">All</option>
+                <option value="Regular Season">Regular Season</option>
+                <option value="Playoffs">Playoffs</option>
+              </select>
+            </label>
+            <label style="display:flex;flex-direction:column;gap:.3rem;font-size:.7rem;">
+              <span style="font-weight:500;letter-spacing:.05em;">Strength</span>
+              <select id="tfStrength" style="background:#394566;border:1px solid #566080;color:#fff;border-radius:.45rem;padding:.4rem .55rem;font-size:.75rem;">
+                <option value="All">All</option>
+                <option value="5v5">5v5</option>
+                <option value="EV">EV</option>
+                <option value="PP">PP</option>
+                <option value="SH">SH</option>
+              </select>
+            </label>
+            <div style="display:flex;gap:.5rem;margin-top:.6rem;padding-top:.6rem;border-top:1px solid var(--pwhl-border);">
+              <button id="tfReset" type="button" class="metric-btn" style="flex:1;">Reset</button>
+            </div>
+            <div id="tfSummary" style="font-size:.7rem;color:#b7b3cf;letter-spacing:.04em;margin-top:.25rem;">—</div>
           </div>
-          <label style="display:flex;flex-direction:column;gap:.3rem;font-size:.7rem;">
-            <span style="font-weight:500;letter-spacing:.05em;">Search (Name)</span>
-            <input id="tfSearch" type="text" placeholder="Type to filter..." style="background:#394566;border:1px solid #566080;color:#fff;border-radius:.45rem;padding:.4rem .55rem;font-size:.75rem;" />
-          </label>
-          <label style="display:flex;flex-direction:column;gap:.25rem;font-size:.7rem;">
-            <span style="font-weight:500;letter-spacing:.05em;">Min GP</span>
-            <input id="tfMinGP" type="number" min="0" placeholder="0" style="background:#394566;border:1px solid #566080;color:#fff;border-radius:.4rem;padding:.35rem .45rem;font-size:.75rem;" />
-          </label>
-          <label style="display:flex;flex-direction:column;gap:.3rem;font-size:.7rem;">
-            <span style="font-weight:500;letter-spacing:.05em;">Season</span>
-            <select id="tfSeason" style="background:#394566;border:1px solid #566080;color:#fff;border-radius:.45rem;padding:.4rem .55rem;font-size:.75rem;">
-              <option value="All">All</option>
-            </select>
-          </label>
-          <label style="display:flex;flex-direction:column;gap:.3rem;font-size:.7rem;">
-            <span style="font-weight:500;letter-spacing:.05em;">Season State</span>
-            <select id="tfSeasonState" style="background:#394566;border:1px solid #566080;color:#fff;border-radius:.45rem;padding:.4rem .55rem;font-size:.75rem;">
-              <option value="All">All</option>
-              <option value="Regular Season">Regular Season</option>
-              <option value="Playoffs">Playoffs</option>
-            </select>
-          </label>
-          <label style="display:flex;flex-direction:column;gap:.3rem;font-size:.7rem;">
-            <span style="font-weight:500;letter-spacing:.05em;">Strength</span>
-            <select id="tfStrength" style="background:#394566;border:1px solid #566080;color:#fff;border-radius:.45rem;padding:.4rem .55rem;font-size:.75rem;">
-              <option value="All">All</option>
-              <option value="5v5">5v5</option>
-              <option value="EV">EV</option>
-              <option value="PP">PP</option>
-              <option value="SH">SH</option>
-            </select>
-          </label>
-          <div style="display:flex;gap:.5rem;margin-top:.6rem;padding-top:.6rem;border-top:1px solid var(--pwhl-border);">
-            <button id="tfReset" type="button" class="metric-btn" style="flex:1;">Reset</button>
-          </div>
-          <div id="tfSummary" style="font-size:.7rem;color:#b7b3cf;letter-spacing:.04em;margin-top:.25rem;">—</div>
         </div>
         <!-- Table Scrollable Area -->
         <div style="flex:1;display:flex;flex-direction:column;min-width:0;">
@@ -516,11 +631,11 @@
     }
   }
   function layoutVideoRow(){
-    const row=document.getElementById('videoRow');
     const player=document.getElementById('videoPlayerContainer');
     const tableScroll=document.getElementById('videoTableScroll');
-    if(!row||!player||!tableScroll) return;
-    // Use player container width for aspect ratio height to avoid table column shrinking issues
+    if(!player||!tableScroll) return;
+
+    // Use player container width for aspect ratio height
     const w=player.parentElement ? player.parentElement.clientWidth : player.clientWidth;
     if(!w) return;
     let h=Math.round(w * 9/16);
@@ -528,8 +643,18 @@
     if(h>maxH) h=maxH;
     player.style.height=h+'px';
     player.style.minHeight=h+'px';
-    tableScroll.style.height=h+'px';
-    tableScroll.style.maxHeight=h+'px';
+
+    const isCoarse = window.matchMedia && window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+    if(isCoarse){
+      // Mobile: table sits above controls; keep it compact
+      const tableMax=Math.min(Math.round(window.innerHeight*0.32), 280);
+      tableScroll.style.height='auto';
+      tableScroll.style.maxHeight=tableMax+'px';
+    } else {
+      // Desktop: align table height with player for balanced columns
+      tableScroll.style.height=h+'px';
+      tableScroll.style.maxHeight=h+'px';
+    }
   }
   window.addEventListener('resize', ()=>{ if(currentView==='video'){ layoutVideoRow(); } });
   function renderVideoEventsTable(){
@@ -1195,8 +1320,6 @@
     a.click(); 
     setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); },0); 
   }
-  // Inject export button next to table selector buttons
-  (function addExportBtn(){ const wrap=document.querySelector('#tablesWrapper > div:first-child'); if(!wrap) return; const btn=document.createElement('button'); btn.type='button'; btn.textContent='Export CSV'; btn.className='metric-btn'; btn.style.marginLeft='auto'; btn.addEventListener('click',exportCurrentTable); wrap.appendChild(btn); })();
   async function fetchCurrentTable(){
     const active=document.querySelector('.tbl-sub-btn.active'); if(!active) return; const type=active.dataset.table; const team=document.getElementById('teamSelect').value||'All';
   const byGameMode = window._tableByGameMode === true;
@@ -1318,6 +1441,22 @@
     const btnTotals=document.getElementById('tfModeTotals');
     const btnPerGame=document.getElementById('tfModePerGame');
     const btnByGame=document.getElementById('tfModeByGame');
+
+    // Mobile: collapse/expand the table filter panel
+    const collapseBtn=document.getElementById('tfCollapseBtn');
+    const panel=document.getElementById('tableFilterPanel');
+    function setCollapsed(collapsed){
+      if(!panel||!collapseBtn) return;
+      panel.classList.toggle('tf-collapsed', collapsed);
+      collapseBtn.textContent = collapsed ? 'Show' : 'Hide';
+      collapseBtn.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+    }
+    if(collapseBtn && panel){
+      collapseBtn.addEventListener('click', ()=>{
+        const next = !panel.classList.contains('tf-collapsed');
+        setCollapsed(next);
+      });
+    }
     function updateModeButtons(){
       [btnTotals,btnPerGame].forEach(b=>{ if(!b) return; b.classList.remove('active'); });
       if(btnByGame) btnByGame.classList.remove('active');
@@ -1339,8 +1478,53 @@
     fetch('/api/report/filters').then(r=>r.json()).then(data=>{ if(seasonSel && data.seasons){ const existing=new Set(Array.from(seasonSel.options).map(o=>o.value)); (data.seasons||[]).forEach(s=>{ if(!existing.has(s.value||s)){ const opt=document.createElement('option'); opt.value=s.value||s; opt.textContent=s.label||s; seasonSel.appendChild(opt); } }); }}).catch(()=>{});
   })();
   document.querySelectorAll('.tbl-sub-btn').forEach(btn=>{ btn.addEventListener('click',()=>{ document.querySelectorAll('.tbl-sub-btn').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); saveState(getState()); fetchCurrentTable(); }); });
+  document.getElementById('exportTableCsvBtn')?.addEventListener('click', ()=>{ try{ exportCurrentTable(); }catch(e){} });
   // Ensure a fresh fetch when leaving Per Game mode to reset any derived rounding drift
   document.getElementById('tfModeTotals')?.addEventListener('click',()=>{ fetchCurrentTable(); });
+  </script>
+
+  <script>
+    // Mobile: menu + slicers toggles (mobile-only via CSS)
+    (function setupMobileToggles(){
+      const menuBtn=document.getElementById('mobileMenuBtn');
+      const slicersBtn=document.getElementById('mobileSlicersBtn');
+      const backdrop=document.getElementById('mobileBackdrop');
+      const menuPanel=document.getElementById('mobileMenuPanel');
+
+      function setMenuOpen(open){
+        document.body.classList.toggle('mobile-menu-open', open);
+        if(menuBtn) menuBtn.classList.toggle('active', open);
+        if(menuBtn) menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if(menuPanel) menuPanel.setAttribute('aria-hidden', open ? 'false' : 'true');
+        if(backdrop) backdrop.setAttribute('aria-hidden', open ? 'false' : 'true');
+      }
+      function setSlicersOpen(open){
+        document.body.classList.toggle('mobile-slicers-open', open);
+        if(slicersBtn) slicersBtn.classList.toggle('active', open);
+        if(slicersBtn) slicersBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      }
+      function closeAll(){ setMenuOpen(false); setSlicersOpen(false); }
+
+      const hasSlicers=!!document.getElementById('slicersWrapper');
+      if(slicersBtn && !hasSlicers) slicersBtn.style.display='none';
+
+      if(menuBtn){
+        menuBtn.addEventListener('click', ()=>{
+          const next=!document.body.classList.contains('mobile-menu-open');
+          setSlicersOpen(false);
+          setMenuOpen(next);
+        });
+      }
+      if(slicersBtn){
+        slicersBtn.addEventListener('click', ()=>{
+          const next=!document.body.classList.contains('mobile-slicers-open');
+          setMenuOpen(false);
+          setSlicersOpen(next);
+        });
+      }
+      if(backdrop) backdrop.addEventListener('click', closeAll);
+      document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeAll(); });
+    })();
   </script>
 </body>
 </html>

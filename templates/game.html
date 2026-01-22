@@ -32,7 +32,7 @@
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; background: linear-gradient(135deg, var(--pwhl-bg-1) 0%, var(--pwhl-bg-2) 48%, var(--pwhl-bg-3) 100%); color: #ffffff; line-height: 1.6; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 1rem; }
+        .container { max-width: none; margin: 0 auto; padding: 1rem; }
         .header { background: var(--pwhl-surface-strong); border: 1px solid var(--pwhl-border); border-radius: 0.5rem; padding: 1.5rem; margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center; }
         .back-btn { background-color: #4a5568; color: #ffffff; border: none; padding: 0.5rem 1rem; border-radius: 0.375rem; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; transition: background-color 0.2s; }
         .back-btn:hover { background-color: #718096; }
@@ -46,7 +46,7 @@
     .tab-list { display: flex; background: transparent; }
     .tab { background-color: transparent; color: #d6d3e9; border: none; padding: 1rem 2rem; cursor: pointer; border-bottom: 3px solid transparent; transition: all 0.2s; flex: 1; text-align: center; font-size: 1.125rem; }
     .tab.active { background-color: transparent; color: var(--pwhl-accent-strong); border-bottom-color: var(--pwhl-accent-strong); }
-        .tab-content { padding: 2rem; min-height: 400px; }
+        .tab-content { padding: 1.25rem; min-height: 400px; }
         .loading { text-align: center; padding: 4rem 2rem; color: #a0aec0; }
         .error { text-align: center; padding: 4rem 2rem; color: #f56565; }
         .game-summary { display: flex; flex-direction: column; gap: 2rem; }
@@ -76,10 +76,39 @@
     .tab-list .csv-btn { margin-top: 6px; }
     .pbp-scroll { max-height: 70vh; overflow-y: auto; }
         @media (max-width: 768px) {
-            .header { flex-direction: column; text-align: center; gap: 1rem; }
+            .header { flex-direction: column; text-align: center; gap: 1rem; border-radius: 0; border-left: none; border-right: none; }
             .game-info { margin: 0; }
-            .tab-list { flex-direction: column; }
+            /* Keep tabs on a single row; allow horizontal scroll if needed */
+            .tab-list { flex-direction: row; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+            .tab { padding: .7rem .8rem; font-size: .9rem; flex: 0 0 auto; }
+            .tab-content { padding: .75rem; }
             .roster-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Phone-only: hide Export CSV buttons (keep on desktop/tablet) */
+        @media (hover: none) and (pointer: coarse) and (max-width: 600px), (hover: none) and (pointer: coarse) and (max-height: 520px){
+            .tab-list .csv-btn{display:none !important;}
+        }
+
+        /* Mobile full-width + Game Report layout ordering (coarse pointer devices) */
+        @media (max-width: 1100px) and (hover: none) and (pointer: coarse){
+            .container{padding:0;}
+            .tabs{border-radius:0;border-left:none;border-right:none;margin-bottom:1rem;}
+            /* Override inline slicer sizing so multiple can sit on one row */
+            #gamereport-content .slicers-wrapper{padding:.75rem .75rem !important;}
+            #gamereport-content .slicers{gap:.65rem !important;}
+            #gamereport-content .filter-group{min-width:140px !important;flex:1 1 140px !important;}
+            #gamereport-content .filter-select{width:100% !important;}
+
+            /* Order: KPIs -> Defensive -> Offensive; table already last */
+            #gamereport-shotmap-wrapper{display:grid !important;grid-template-columns:1fr;grid-template-areas:"kpis" "def" "off";gap:.9rem !important;}
+            #gamereport-kpis{grid-area:kpis !important;flex:none !important;width:100% !important;max-width:none !important;flex-direction:row !important;flex-wrap:wrap !important;justify-content:center;}
+            #gamereport-shotmap-wrapper .defensive-zone{grid-area:def !important;max-width:none !important;}
+            #gamereport-shotmap-wrapper .offensive-zone{grid-area:off !important;max-width:none !important;}
+        }
+        @media (max-width: 1100px) and (hover: none) and (pointer: coarse) and (orientation: landscape){
+            /* Rotated mobile: show Defensive + Offensive side-by-side */
+            #gamereport-shotmap-wrapper{grid-template-columns:1fr 1fr;grid-template-areas:"kpis kpis" "def off";}
         }
     </style>
 </head>
@@ -325,7 +354,7 @@
             });
             document.getElementById(`${tabName}-content`).style.display = 'block';
 
-            // Show/hide appropriate export buttons
+            // Show/hide appropriate export buttons (desktop/tablet; hidden on phones via CSS)
             if (tabName === 'lineups') {
                 document.getElementById('export-lineups-btn').style.display = 'inline-block';
                 document.getElementById('export-playbyplay-btn').style.display = 'none';

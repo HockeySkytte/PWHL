@@ -325,16 +325,91 @@
             font-size: 1rem;
         }
 
-        @media (max-width: 768px) {
+        /* Mobile top menu + slicers toggle (mobile-only) */
+        .mobile-actions { display: none; align-items: center; gap: 0.6rem; }
+        .mobile-icon-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: rgba(142, 124, 214, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            color: #0b0b14;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .mobile-icon-btn svg { width: 22px; height: 22px; stroke: #0b0b14; }
+        .mobile-icon-btn.active { outline: 2px solid rgba(255, 255, 255, 0.95); outline-offset: 2px; }
+        .mobile-menu-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 999;
+        }
+        .mobile-menu-panel {
+            display: none;
+            position: fixed;
+            top: 76px;
+            left: 1rem;
+            right: 1rem;
+            background: var(--pwhl-surface-strong);
+            border: 1px solid var(--pwhl-border);
+            border-radius: 1rem;
+            overflow: hidden;
+            z-index: 1000;
+        }
+        .mobile-menu-list { list-style: none; margin: 0; padding: 0; }
+        .mobile-menu-list a {
+            display: block;
+            padding: 1rem 1rem;
+            color: #ffffff;
+            text-decoration: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            font-weight: 650;
+            font-size: 1.1rem;
+        }
+        .mobile-menu-list a:first-child { border-top: none; }
+        .mobile-menu-list a.active { background: rgba(142, 124, 214, 0.18); }
+        body.mobile-menu-open .mobile-menu-backdrop { display: block; }
+        body.mobile-menu-open .mobile-menu-panel { display: block; }
+
+        /* Treat "mobile" as coarse-pointer devices (phones/tablets), regardless of rotation */
+        @media (max-width: 1100px) and (hover: none) and (pointer: coarse) {
             .container {
                 flex-direction: column;
-            }
-            
-            .sidebar {
-                width: 100%;
                 height: auto;
-                max-height: 300px;
             }
+
+            .header { padding: 0.75rem 1rem; }
+            .header-actions .btn { display: none; }
+            .mobile-actions { display: inline-flex; }
+
+            /* Edge-to-edge content on mobile */
+            .content { padding: 0; }
+            .tab-content { padding: 0.75rem 0.75rem 1rem; }
+            .table-container { border-radius: 0; border-left: none; border-right: none; }
+            .table { font-size: 0.8rem; }
+            .table th, .table td { padding: 0.55rem 0.4rem; }
+            .table th { font-size: 0.65rem; letter-spacing: 0.04em; }
+            .score { font-size: 0.9rem; }
+
+            /* Hide less-important columns to fit the screen */
+            .table th:nth-child(2), .table td:nth-child(2),
+            .table th:nth-child(3), .table td:nth-child(3) {
+                display: none;
+            }
+
+            /* Hide desktop tabs; use the mobile menu instead */
+            .tabs { display: none; }
+
+            /* Collapsible slicers (left sidebar) */
+            .sidebar { display: none; width: 100%; height: auto; max-height: none; }
+            body.mobile-slicers-open .sidebar { display: block; }
+
+            /* Remove KPI cards on mobile (Schedule only) */
+            .kpi-cards { display: none !important; }
         }
 
         /* Modal styles */
@@ -492,25 +567,6 @@
             color: #ffffff;
         }
     </style>
-    <script>
-        function checkOrientation(){
-            const warnId='rotateWarning';
-            let el=document.getElementById(warnId);
-            const isSmall= window.innerWidth < 900 && window.innerHeight > window.innerWidth + 40;
-            if(isSmall){
-                if(!el){
-                    el=document.createElement('div');
-                    el.id=warnId;
-                    el.style.cssText='position:fixed;inset:auto 0 0 0;background:#0d1120;color:#fff;padding:.6rem .9rem;font-size:.7rem;letter-spacing:.05em;text-align:center;z-index:400;border-top:1px solid rgba(255,255,255,.15);';
-                    el.innerHTML='Best viewed in landscape – rotate your device for full schedule & rink view.';
-                    document.body.appendChild(el);
-                }
-            } else if(el){ el.remove(); }
-        }
-        window.addEventListener('load',checkOrientation);
-        window.addEventListener('resize',checkOrientation);
-        window.addEventListener('orientationchange',()=>setTimeout(checkOrientation,200));
-    </script>
 </head>
 <body>
     <div class="header">
@@ -521,8 +577,39 @@
         <div class="header-actions">
             <button class="btn btn-secondary" onclick="exportCSV()">Export CSV</button>
             <button class="btn" onclick="refreshData()">Refresh</button>
+
+            <div class="mobile-actions" aria-label="Mobile controls">
+                <button class="mobile-icon-btn" id="mobileMenuBtn" type="button" aria-label="Menu" aria-expanded="false">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 6h16" />
+                        <path d="M4 12h16" />
+                        <path d="M4 18h16" />
+                    </svg>
+                </button>
+                <button class="mobile-icon-btn" id="mobileSlicersBtn" type="button" aria-label="Slicers" aria-expanded="false">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 6h16" />
+                        <path d="M7 12h10" />
+                        <path d="M10 18h4" />
+                    </svg>
+                </button>
+            </div>
         </div>
     </div>
+
+    <!-- Mobile menu overlay (mobile-only via CSS) -->
+    <div class="mobile-menu-backdrop" id="mobileBackdrop" aria-hidden="true"></div>
+    <nav class="mobile-menu-panel" id="mobileMenuPanel" aria-label="Menu" aria-hidden="true">
+        <ul class="mobile-menu-list">
+            <li><a class="active" href="/">Schedule</a></li>
+            <li><a href="/report">Report</a></li>
+            <li><a href="/skaters">Skaters</a></li>
+            <li><a href="/goalies">Goalies</a></li>
+            <li><a href="/teams">Teams</a></li>
+            <li><a href="/data">Data</a></li>
+            <li><a href="/coffee">Buy me a coffee</a></li>
+        </ul>
+    </nav>
 
     <div class="container">
         <div class="sidebar">
@@ -606,7 +693,7 @@
             </div>
 
             <div class="tab-content">
-                <div class="stats-grid">
+                <div class="stats-grid kpi-cards">
                     <div class="stat-card">
                         <div class="stat-value" id="totalGames">-</div>
                         <div class="stat-label">Total Games</div>
@@ -635,13 +722,12 @@
                                 <th>Away Team</th>
                                 <th>Home Team</th>
                                 <th>Status</th>
-                                <th>Away Score</th>
-                                <th>Home Score</th>
+                                <th>Score</th>
                             </tr>
                         </thead>
                         <tbody id="scheduleTableBody">
                             <tr>
-                                <td colspan="8" class="loading">Loading schedule data...</td>
+                                <td colspan="7" class="loading">Loading schedule data...</td>
                             </tr>
                         </tbody>
                     </table>
@@ -719,6 +805,51 @@
             if (state.team && state.team !== 'All') teamEl.value = state.team;
             if (state.status && state.status !== 'All') statusEl.value = state.status;
         }
+
+        // Mobile: menu + slicers toggles (mobile-only via CSS)
+        (function setupMobileToggles(){
+            const menuBtn = document.getElementById('mobileMenuBtn');
+            const slicersBtn = document.getElementById('mobileSlicersBtn');
+            const backdrop = document.getElementById('mobileBackdrop');
+            const menuPanel = document.getElementById('mobileMenuPanel');
+
+            function setMenuOpen(open){
+                document.body.classList.toggle('mobile-menu-open', open);
+                if(menuBtn) menuBtn.classList.toggle('active', open);
+                if(menuBtn) menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                if(menuPanel) menuPanel.setAttribute('aria-hidden', open ? 'false' : 'true');
+                if(backdrop) backdrop.setAttribute('aria-hidden', open ? 'false' : 'true');
+            }
+            function setSlicersOpen(open){
+                document.body.classList.toggle('mobile-slicers-open', open);
+                if(slicersBtn) slicersBtn.classList.toggle('active', open);
+                if(slicersBtn) slicersBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            }
+            function closeAll(){ setMenuOpen(false); setSlicersOpen(false); }
+
+            // Hide slicers button if there is no sidebar
+            const hasSidebar = !!document.querySelector('.sidebar');
+            if(slicersBtn && !hasSidebar) slicersBtn.style.display = 'none';
+
+            if(menuBtn){
+                menuBtn.addEventListener('click', ()=>{
+                    const next = !document.body.classList.contains('mobile-menu-open');
+                    setSlicersOpen(false);
+                    setMenuOpen(next);
+                });
+            }
+            if(slicersBtn){
+                slicersBtn.addEventListener('click', ()=>{
+                    const next = !document.body.classList.contains('mobile-slicers-open');
+                    setMenuOpen(false);
+                    setSlicersOpen(next);
+                });
+            }
+            if(backdrop){
+                backdrop.addEventListener('click', closeAll);
+            }
+            document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeAll(); });
+        })();
 
         // Initialize the app
         document.addEventListener('DOMContentLoaded', function() {
@@ -818,7 +949,7 @@
 
             // If we get here and either no cache or not preferring cache, show loading
             document.getElementById('scheduleTableBody').innerHTML = 
-                '<tr><td colspan="8" class="loading">Loading schedule data...</td></tr>';
+                '<tr><td colspan="7" class="loading">Loading schedule data...</td></tr>';
 
             try {
                 const response = await fetch(url, { cache: force ? 'reload' : 'default' });
@@ -833,7 +964,7 @@
             } catch (error) {
                 console.error('Error applying filters:', error);
                 document.getElementById('scheduleTableBody').innerHTML = 
-                    '<tr><td colspan="8" class="no-data">Error loading schedule data</td></tr>';
+                    '<tr><td colspan="7" class="no-data">Error loading schedule data</td></tr>';
             }
         }
 
@@ -861,7 +992,7 @@
             const tbody = document.getElementById('scheduleTableBody');
             
             if (games.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="8" class="no-data">No games found for the selected filters</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="7" class="no-data">No games found for the selected filters</td></tr>';
                 return;
             }
 
@@ -869,6 +1000,7 @@
                 const statusClass = game.status.includes('Final') ? 'status-final' : 'status-pending';
                 const awayScore = game.away_score || '';
                 const homeScore = game.home_score || '';
+                const combinedScore = (awayScore !== '' || homeScore !== '') ? `${awayScore}-${homeScore}` : '';
                 
                 // Format team logos (just logo, no text as requested)
                 const awayTeamDisplay = game.away_team_logo ? 
@@ -888,8 +1020,7 @@
                         <td>${awayTeamDisplay}</td>
                         <td>${homeTeamDisplay}</td>
                         <td><span class="status-badge ${statusClass}">${game.status}</span></td>
-                        <td class="score">${awayScore}</td>
-                        <td class="score">${homeScore}</td>
+                        <td class="score">${combinedScore}</td>
                     </tr>
                 `;
             }).join('');
@@ -1157,7 +1288,7 @@
 
             // Build CSV string with UTF-8 BOM so Excel respects encoding (handles accents like Montréal)
             const header = "Date,Season,State,Away Team,Home Team,Status,Away Score,Home Score,Game ID\n";
-            const rows = currentData.map(game => 
+            const rows = currentData.map(game =>
                 `"${game.date}","${game.season_year}","${game.season_state}","${game.away_team}","${game.home_team}","${game.status}","${game.away_score}","${game.home_score}","${game.game_id}"`
             ).join('\n');
             const csvString = '\ufeff' + header + rows; // Keep BOM for schedule export (helps Excel)

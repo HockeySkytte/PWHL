@@ -50,12 +50,70 @@
     .btn:hover{background:#445273;}
     .pager{display:flex;gap:.5rem;align-items:center;margin-top:.5rem;}
     .pager select{background:#4a5568;border:1px solid #718096;color:#fff;border-radius:.375rem;padding:.35rem .6rem;}
+
+    /* Mobile top menu + slicers toggle (mobile-only) */
+    .mobile-actions{display:none;align-items:center;gap:.6rem;}
+    .mobile-icon-btn{width:44px;height:44px;border-radius:12px;background:rgba(142,124,214,.85);border:1px solid rgba(255,255,255,.18);color:#0b0b14;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;}
+    .mobile-icon-btn svg{width:22px;height:22px;stroke:#0b0b14;}
+    .mobile-icon-btn.active{outline:2px solid rgba(255,255,255,.95);outline-offset:2px;}
+    .mobile-menu-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:999;}
+    .mobile-menu-panel{display:none;position:fixed;top:76px;left:1rem;right:1rem;background:var(--pwhl-surface-strong);border:1px solid var(--pwhl-border);border-radius:1rem;overflow:hidden;z-index:1000;}
+    .mobile-menu-list{list-style:none;margin:0;padding:0;}
+    .mobile-menu-list a{display:block;padding:1rem 1rem;color:#fff;text-decoration:none;border-top:1px solid rgba(255,255,255,.08);font-weight:650;font-size:1.1rem;}
+    .mobile-menu-list a:first-child{border-top:none;}
+    .mobile-menu-list a.active{background:rgba(142,124,214,.18);}
+    body.mobile-menu-open .mobile-menu-backdrop{display:block;}
+    body.mobile-menu-open .mobile-menu-panel{display:block;}
+    /* Treat "mobile" as coarse-pointer devices (phones/tablets), regardless of rotation */
+    @media (max-width: 1100px) and (hover: none) and (pointer: coarse) {
+      .tabs{display:none !important;}
+      header{padding:.75rem 1rem;}
+      .mobile-actions{display:flex;}
+      .slicers-wrapper{display:none;}
+      body.mobile-slicers-open .slicers-wrapper{display:flex;}
+      /* Denser slicers: allow 2-up layout */
+      .slicers-wrapper{padding:.55rem .75rem;gap:.6rem;}
+      body.mobile-slicers-open .team-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem;align-items:end;}
+      body.mobile-slicers-open .slicers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem;align-items:start;}
+      .filter-group{min-width:0;margin-bottom:0;}
+      .filter-select{width:100% !important;}
+      .dropdown-toggle{width:100% !important;}
+      .dropdown-menu{left:0;right:0;width:auto;min-width:0;max-width:none;}
+      .content{padding:0 .75rem;}
+      .actions{padding:0 .75rem !important;}
+    }
   </style>
 </head>
 <body>
   <header>
     <h1><img src="{{ url_for('static', filename='PWHL_logo.png') }}" alt="PWHL" style="height:28px;width:auto;"> <span>Data Export</span></h1>
+    <div class="mobile-actions" aria-label="Mobile controls">
+      <button class="mobile-icon-btn" id="mobileMenuBtn" type="button" aria-label="Menu" aria-expanded="false">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16" /><path d="M4 12h16" /><path d="M4 18h16" />
+        </svg>
+      </button>
+      <button class="mobile-icon-btn" id="mobileSlicersBtn" type="button" aria-label="Slicers" aria-expanded="false">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16" /><path d="M7 12h10" /><path d="M10 18h4" />
+        </svg>
+      </button>
+    </div>
   </header>
+
+  <!-- Mobile menu overlay (mobile-only via CSS) -->
+  <div class="mobile-menu-backdrop" id="mobileBackdrop" aria-hidden="true"></div>
+  <nav class="mobile-menu-panel" id="mobileMenuPanel" aria-label="Menu" aria-hidden="true">
+    <ul class="mobile-menu-list">
+      <li><a href="/">Schedule</a></li>
+      <li><a href="/report">Report</a></li>
+      <li><a href="/skaters">Skaters</a></li>
+      <li><a href="/goalies">Goalies</a></li>
+      <li><a href="/teams">Teams</a></li>
+      <li><a class="active" href="/data">Data</a></li>
+      <li><a href="/coffee">Buy me a coffee</a></li>
+    </ul>
+  </nav>
   <div class="tabs">
     <a class="tab" href="/">📅 Schedule</a>
     <a class="tab" href="/report">📊 Report</a>
@@ -222,6 +280,50 @@
     document.getElementById('nextPageBtn').addEventListener('click', ()=>{ const rows=window._pbpRows||[]; if(!rows.length) return; const perPage=100; const totalPages=Math.max(1, Math.ceil(rows.length/perPage)); window._pbpPageIndex=Math.min(totalPages-1,(window._pbpPageIndex||0)+1); renderRows(rows); });
     document.getElementById('pageSelect').addEventListener('change', (e)=>{ const idx=parseInt(e.target.value||'0',10)||0; goToPage(idx); });
     (async()=>{ await populateTeams(); await populateFilters(); })();
+  </script>
+
+  <script>
+    // Mobile: menu + slicers toggles (mobile-only via CSS)
+    (function setupMobileToggles(){
+      const menuBtn=document.getElementById('mobileMenuBtn');
+      const slicersBtn=document.getElementById('mobileSlicersBtn');
+      const backdrop=document.getElementById('mobileBackdrop');
+      const menuPanel=document.getElementById('mobileMenuPanel');
+
+      function setMenuOpen(open){
+        document.body.classList.toggle('mobile-menu-open', open);
+        if(menuBtn) menuBtn.classList.toggle('active', open);
+        if(menuBtn) menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if(menuPanel) menuPanel.setAttribute('aria-hidden', open ? 'false' : 'true');
+        if(backdrop) backdrop.setAttribute('aria-hidden', open ? 'false' : 'true');
+      }
+      function setSlicersOpen(open){
+        document.body.classList.toggle('mobile-slicers-open', open);
+        if(slicersBtn) slicersBtn.classList.toggle('active', open);
+        if(slicersBtn) slicersBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      }
+      function closeAll(){ setMenuOpen(false); setSlicersOpen(false); }
+
+      const hasSlicers=!!document.getElementById('slicersWrapper');
+      if(slicersBtn && !hasSlicers) slicersBtn.style.display='none';
+
+      if(menuBtn){
+        menuBtn.addEventListener('click', ()=>{
+          const next=!document.body.classList.contains('mobile-menu-open');
+          setSlicersOpen(false);
+          setMenuOpen(next);
+        });
+      }
+      if(slicersBtn){
+        slicersBtn.addEventListener('click', ()=>{
+          const next=!document.body.classList.contains('mobile-slicers-open');
+          setMenuOpen(false);
+          setSlicersOpen(next);
+        });
+      }
+      if(backdrop) backdrop.addEventListener('click', closeAll);
+      document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeAll(); });
+    })();
   </script>
 </body>
 </html>

@@ -51,7 +51,8 @@
     .stat-card .label{color:#9ca3af;font-size:.8rem;margin-bottom:.25rem;}
     .stat-card .value{font-size:1.2rem;font-weight:600;}
     .shot-area{display:grid;grid-template-columns:360px 1fr 1fr;gap:1rem;margin-top:1rem;align-items:start;}
-    .goalie-table-wrap{background:#0f172a;border:1px solid #374151;border-radius:.5rem;overflow:hidden;}
+    .shot-area .goalie-table-wrap{max-height:520px;}
+    .goalie-table-wrap{background:#0f172a;border:1px solid #374151;border-radius:.5rem;overflow:auto;}
     table{width:100%;border-collapse:collapse;font-size:.85rem;}
     thead th{position:sticky;top:0;background:#0b1220;color:#cbd5e1;text-align:left;padding:.55rem .6rem;border-bottom:1px solid #374151;}
     thead th.sortable{cursor:pointer;user-select:none;}
@@ -72,10 +73,11 @@
     }
 
     /* Performance chart */
-    .perf-controls{display:flex;align-items:center;gap:.65rem;margin-top:1rem;}
-    .perf-controls .label{margin:0;}
-    .perf-controls select{padding:.45rem .55rem;border:1px solid #374151;background:#0f172a;color:#e5e7eb;border-radius:.4rem;}
-    .perf-controls input{padding:.45rem .55rem;border:1px solid #374151;background:#0f172a;color:#e5e7eb;border-radius:.4rem;width:88px;}
+    .perf-controls{display:flex;align-items:center;flex-wrap:wrap;gap:.55rem .85rem;margin-top:1rem;}
+    .perf-slicer{display:flex;align-items:center;gap:.5rem;min-width:0;}
+    .perf-slicer .label{margin:0;white-space:nowrap;}
+    .perf-slicer select{padding:.45rem .55rem;border:1px solid #374151;background:#0f172a;color:#e5e7eb;border-radius:.4rem;min-width:140px;}
+    .perf-slicer input{padding:.45rem .55rem;border:1px solid #374151;background:#0f172a;color:#e5e7eb;border-radius:.4rem;width:88px;}
     .perf-controls input:disabled{opacity:.55;}
     .perf-chart-wrap{margin-top:.75rem;background:#0f172a;border:1px solid #374151;border-radius:.5rem;padding:.75rem;}
     .perf-chart{width:100%;height:360px;display:block;}
@@ -91,12 +93,77 @@
       .ea-charts{grid-template-columns:1fr;}
       .ea-chart{height:480px;}
     }
+
+    /* Mobile top menu + slicers toggle (mobile-only) */
+    .mobile-actions{display:none;align-items:center;gap:.6rem;}
+    .mobile-icon-btn{width:44px;height:44px;border-radius:12px;background:rgba(142,124,214,.85);border:1px solid rgba(255,255,255,.18);color:#0b0b14;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;}
+    .mobile-icon-btn svg{width:22px;height:22px;stroke:#0b0b14;}
+    .mobile-icon-btn.active{outline:2px solid rgba(255,255,255,.95);outline-offset:2px;}
+    .mobile-menu-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:999;}
+    .mobile-menu-panel{display:none;position:fixed;top:76px;left:1rem;right:1rem;background:var(--pwhl-surface-strong);border:1px solid var(--pwhl-border);border-radius:1rem;overflow:hidden;z-index:1000;}
+    .mobile-menu-list{list-style:none;margin:0;padding:0;}
+    .mobile-menu-list a{display:block;padding:1rem 1rem;color:#fff;text-decoration:none;border-top:1px solid rgba(255,255,255,.08);font-weight:650;font-size:1.1rem;}
+    .mobile-menu-list a:first-child{border-top:none;}
+    .mobile-menu-list a.active{background:rgba(142,124,214,.18);}
+    body.mobile-menu-open .mobile-menu-backdrop{display:block;}
+    body.mobile-menu-open .mobile-menu-panel{display:block;}
+    /* Treat "mobile" as coarse-pointer devices (phones/tablets), regardless of rotation */
+    /* Phone-only mobile behavior (exclude tablets): portrait width or landscape short height */
+    @media (hover: none) and (pointer: coarse) and (max-width: 600px), (hover: none) and (pointer: coarse) and (max-height: 520px){
+      .tabs{display:none !important;}
+      header{padding:.75rem 1rem;}
+      .mobile-actions{display:flex;}
+      /* Remove side padding on mobile to fit more content */
+      .container{display:flex;flex-direction:column;gap:.85rem;padding:.65rem 0;}
+      .panel{border-radius:0;border-left:none;border-right:none;}
+      aside.panel.filters{display:none;}
+      body.mobile-slicers-open aside.panel.filters{display:block;}
+
+      /* Performance controls: smaller min widths on mobile */
+      .perf-slicer select{min-width:120px;}
+
+      /* EA Ratings: hide radar mode on mobile */
+      .ea-radar-mode{display:none !important;}
+
+      /* EA Ratings: constrain chart heights on mobile */
+      .ea-charts{gap:.75rem;}
+      .ea-chart{height:320px !important;}
+
+      /* Goaltending: constrain table height */
+      .shot-area .goalie-table-wrap{max-height:32vh;}
+    }
   </style>
 </head>
 <body>
   <header>
     <div class="brand"><img src="/static/PWHL_logo.png" alt="PWHL" style="height:28px"> <span>PWHL Analytics</span></div>
+    <div class="mobile-actions" aria-label="Mobile controls">
+      <button class="mobile-icon-btn" id="mobileMenuBtn" type="button" aria-label="Menu" aria-expanded="false">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16" /><path d="M4 12h16" /><path d="M4 18h16" />
+        </svg>
+      </button>
+      <button class="mobile-icon-btn" id="mobileSlicersBtn" type="button" aria-label="Slicers" aria-expanded="false">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16" /><path d="M7 12h10" /><path d="M10 18h4" />
+        </svg>
+      </button>
+    </div>
   </header>
+
+  <!-- Mobile menu overlay (mobile-only via CSS) -->
+  <div class="mobile-menu-backdrop" id="mobileBackdrop" aria-hidden="true"></div>
+  <nav class="mobile-menu-panel" id="mobileMenuPanel" aria-label="Menu" aria-hidden="true">
+    <ul class="mobile-menu-list">
+      <li><a href="/">Schedule</a></li>
+      <li><a href="/report">Report</a></li>
+      <li><a href="/skaters">Skaters</a></li>
+      <li><a class="active" href="/goalies">Goalies</a></li>
+      <li><a href="/teams">Teams</a></li>
+      <li><a href="/data">Data</a></li>
+      <li><a href="/coffee">Buy me a coffee</a></li>
+    </ul>
+  </nav>
   <div class="tabs">
     <a class="tab" href="/">📅 Schedule</a>
     <a class="tab" href="/report">📊 Report</a>
@@ -157,7 +224,7 @@
     </aside>
     <main class="panel">
       <div class="player-header">
-        <img id="playerAvatar" class="avatar" src="/static/Thumbnail.png" alt="Player">
+        <img id="playerAvatar" class="avatar" src="/static/PWHL_logo.png" alt="Player">
         <div>
           <div id="playerName" class="player-title">—</div>
           <div id="playerMeta" class="player-meta">&nbsp;</div>
@@ -193,7 +260,7 @@
           <div class="ea-chart-wrap">
             <div class="ea-chart-controls">
               <div class="label">Radar</div>
-              <select id="eaRadarMode">
+              <select id="eaRadarMode" class="ea-radar-mode">
                 <option value="grouped" selected>Grouped</option>
                 <option value="detailed">Detailed</option>
               </select>
@@ -248,22 +315,27 @@
 
       <div id="tab-performance" class="subtab-panel">
         <div class="perf-controls">
-          <div class="label" style="margin:0">Metric</div>
-          <select id="perfMetric">
-            <option value="GSAx" selected>GSAx</option>
-            <option value="GA">GA</option>
-            <option value="SA">SA</option>
-            <option value="xGA">xGA</option>
-            <option value="TOI">TOI</option>
-          </select>
-          <div class="label" style="margin:0 0 0 .25rem">Mode</div>
-          <select id="perfMode">
-            <option value="running" selected>Running Total</option>
-            <option value="ma">Moving Average</option>
-          </select>
-          <div class="label" style="margin:0 0 0 .25rem">MA games</div>
-          <input id="perfMaWindow" type="number" min="1" step="1" value="5" disabled>
-          </select>
+          <div class="perf-slicer">
+            <div class="label">Metric</div>
+            <select id="perfMetric">
+              <option value="GSAx" selected>GSAx</option>
+              <option value="GA">GA</option>
+              <option value="SA">SA</option>
+              <option value="xGA">xGA</option>
+              <option value="TOI">TOI</option>
+            </select>
+          </div>
+          <div class="perf-slicer">
+            <div class="label">Mode</div>
+            <select id="perfMode">
+              <option value="running" selected>Running Total</option>
+              <option value="ma">Moving Average</option>
+            </select>
+          </div>
+          <div class="perf-slicer">
+            <div class="label">MA games</div>
+            <input id="perfMaWindow" type="number" min="1" step="1" value="5" disabled>
+          </div>
         </div>
         <div class="perf-chart-wrap">
           <canvas id="perfChart" class="perf-chart"></canvas>
@@ -721,7 +793,8 @@
 
       const cx = Math.floor(w/2);
       const cy = Math.floor(h/2);
-      const padding = 44;
+      const compact = Math.min(w, h) < 420;
+      const padding = compact ? 62 : 44;
       const radius = Math.max(10, Math.min(cx, cy) - padding);
       const minV = 50;
       const maxV = 99;
@@ -813,9 +886,10 @@
           ctx.stroke();
 
           // metric label (outer)
-          const lx = cx + (radius + 16) * Math.cos(angle);
-          const ly = cy + (radius + 16) * Math.sin(angle);
-          ctx.font = '10px Segoe UI, Roboto, sans-serif';
+          const labelOffset = compact ? 10 : 16;
+          const lx = cx + (radius + labelOffset) * Math.cos(angle);
+          const ly = cy + (radius + labelOffset) * Math.sin(angle);
+          ctx.font = compact ? '9px Segoe UI, Roboto, sans-serif' : '10px Segoe UI, Roboto, sans-serif';
           ctx.fillStyle = 'rgba(226,232,240,.88)';
           ctx.textAlign = (Math.cos(angle) > 0.35) ? 'left' : (Math.cos(angle) < -0.35 ? 'right' : 'center');
           ctx.textBaseline = (Math.sin(angle) > 0.35) ? 'top' : (Math.sin(angle) < -0.35 ? 'bottom' : 'middle');
@@ -833,7 +907,7 @@
 
       // Category labels (inside the plot, following the circle)
       ctx.fillStyle = 'rgba(248,250,252,.94)';
-      ctx.font = '650 12px Segoe UI, Roboto, sans-serif';
+      ctx.font = compact ? '650 11px Segoe UI, Roboto, sans-serif' : '650 12px Segoe UI, Roboto, sans-serif';
       ctx.shadowColor = 'rgba(15,23,42,.85)';
       ctx.shadowBlur = 6;
       const catLabelR = Math.max(10, radius - 8);
@@ -888,7 +962,8 @@
 
       const labels = (labelsOverride && labelsOverride.length) ? labelsOverride : ['Reflexes','Puck Control','Athletic'];
       const n = labels.length;
-      const padding = 34;
+      const compact = Math.min(w, h) < 420;
+      const padding = compact ? 46 : 34;
       const cx = Math.floor(w/2);
       const cy = Math.floor(h/2);
       const radius = Math.max(10, Math.min(cx, cy) - padding);
@@ -919,11 +994,15 @@
       }
 
       // Axes + labels
-      ctx.font = (n > 14) ? '600 9px Segoe UI, Roboto, sans-serif' : (n > 10 ? '600 10px Segoe UI, Roboto, sans-serif' : '600 12px Segoe UI, Roboto, sans-serif');
+      ctx.font = (n > 14) ? (compact ? '600 8px Segoe UI, Roboto, sans-serif' : '600 9px Segoe UI, Roboto, sans-serif') : (n > 10 ? (compact ? '600 9px Segoe UI, Roboto, sans-serif' : '600 10px Segoe UI, Roboto, sans-serif') : (compact ? '600 10px Segoe UI, Roboto, sans-serif' : '600 12px Segoe UI, Roboto, sans-serif'));
       ctx.fillStyle = 'rgba(248,250,252,.98)';
       ctx.strokeStyle = 'rgba(203,213,225,.24)';
       ctx.shadowColor = 'rgba(15,23,42,.85)';
       ctx.shadowBlur = 6;
+      const fontPx = (()=>{
+        const m = String(ctx.font||'').match(/(\d+)px/);
+        return m ? Number(m[1]) : 12;
+      })();
       for(let i=0;i<n;i++){
         const a = (-Math.PI/2) + (i * (2*Math.PI/n));
         const x2 = cx + radius * Math.cos(a);
@@ -933,14 +1012,31 @@
         ctx.lineTo(x2, y2);
         ctx.stroke();
 
-        const labelPad = (n > 10) ? 16 : 14;
-        const lx = cx + (radius + labelPad) * Math.cos(a);
-        const ly = cy + (radius + labelPad) * Math.sin(a);
+        const labelPad = (n > 10) ? (compact ? 12 : 16) : (compact ? 10 : 14);
+        let lx = cx + (radius + labelPad) * Math.cos(a);
+        let ly = cy + (radius + labelPad) * Math.sin(a);
         const align = (Math.cos(a) > 0.35) ? 'left' : (Math.cos(a) < -0.35 ? 'right' : 'center');
         const base = (Math.sin(a) > 0.35) ? 'top' : (Math.sin(a) < -0.35 ? 'bottom' : 'middle');
         ctx.textAlign = align;
         ctx.textBaseline = base;
-        ctx.fillText(labels[i], lx, ly);
+        const text = String(labels[i]||'');
+        const tw = ctx.measureText(text).width || 0;
+        // Clamp labels inside canvas (prevents truncation on small screens).
+        const padEdge = 6;
+        if(align === 'left'){
+          if(lx + tw > w - padEdge) lx = Math.max(padEdge, (w - padEdge) - tw);
+        } else if(align === 'right'){
+          if(lx - tw < padEdge) lx = Math.min(w - padEdge, padEdge + tw);
+        } else {
+          if(lx - tw/2 < padEdge) lx = padEdge + tw/2;
+          if(lx + tw/2 > w - padEdge) lx = (w - padEdge) - tw/2;
+        }
+        if(base === 'top'){
+          if(ly + fontPx > h - padEdge) ly = (h - padEdge) - fontPx;
+        } else if(base === 'bottom'){
+          if(ly - fontPx < padEdge) ly = padEdge + fontPx;
+        }
+        ctx.fillText(text, lx, ly);
       }
       ctx.shadowBlur = 0;
 
@@ -2072,7 +2168,7 @@
         }
       }catch(e){}
       // Fallback to local static file
-      try{ const src=localAvatarSrc(name); const head=await fetch(src,{method:'HEAD'}); img.src = head.ok ? src : '/static/Thumbnail.png'; }catch(e){ img.src='/static/Thumbnail.png'; }
+      try{ const src=localAvatarSrc(name); const head=await fetch(src,{method:'HEAD'}); img.src = head.ok ? src : '/static/PWHL_logo.png'; }catch(e){ img.src='/static/PWHL_logo.png'; }
     }
 
     multiIds.forEach(id=>{
@@ -2171,6 +2267,50 @@
           drawPerformanceChart();
         }
       });
+    })();
+  </script>
+
+  <script>
+    // Mobile: menu + slicers toggles (mobile-only via CSS)
+    (function setupMobileToggles(){
+      const menuBtn=document.getElementById('mobileMenuBtn');
+      const slicersBtn=document.getElementById('mobileSlicersBtn');
+      const backdrop=document.getElementById('mobileBackdrop');
+      const menuPanel=document.getElementById('mobileMenuPanel');
+
+      function setMenuOpen(open){
+        document.body.classList.toggle('mobile-menu-open', open);
+        if(menuBtn) menuBtn.classList.toggle('active', open);
+        if(menuBtn) menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if(menuPanel) menuPanel.setAttribute('aria-hidden', open ? 'false' : 'true');
+        if(backdrop) backdrop.setAttribute('aria-hidden', open ? 'false' : 'true');
+      }
+      function setSlicersOpen(open){
+        document.body.classList.toggle('mobile-slicers-open', open);
+        if(slicersBtn) slicersBtn.classList.toggle('active', open);
+        if(slicersBtn) slicersBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      }
+      function closeAll(){ setMenuOpen(false); setSlicersOpen(false); }
+
+      const hasFilters=!!document.querySelector('aside.panel.filters');
+      if(slicersBtn && !hasFilters) slicersBtn.style.display='none';
+
+      if(menuBtn){
+        menuBtn.addEventListener('click', ()=>{
+          const next=!document.body.classList.contains('mobile-menu-open');
+          setSlicersOpen(false);
+          setMenuOpen(next);
+        });
+      }
+      if(slicersBtn){
+        slicersBtn.addEventListener('click', ()=>{
+          const next=!document.body.classList.contains('mobile-slicers-open');
+          setMenuOpen(false);
+          setSlicersOpen(next);
+        });
+      }
+      if(backdrop) backdrop.addEventListener('click', closeAll);
+      document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeAll(); });
     })();
   </script>
 </body>
