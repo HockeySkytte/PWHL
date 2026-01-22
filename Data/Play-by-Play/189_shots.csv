@@ -71,13 +71,13 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 70,12:17,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v4,6,Kali Flanagan,,,,,82,Kayle Osborne,,,,,,,59.0,22.7,0.0645,0,O17,189,2025-04-29,PWHL,2024/2025,Regular Season
 71,13:37,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,17,Ella Shelton,,,,,70,Carly Jackson,,,,,,,33.7,0.0,,0,O25,189,2025-04-29,PWHL,2024/2025,Regular Season
 72,15:01,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,17,Ella Shelton,,,,,70,Carly Jackson,,,,,,,68.7,-23.0,0.0371,0,O13,189,2025-04-29,PWHL,2024/2025,Regular Season
-73,15:30,Penalty,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,19,Paetyn Levis,,,,,,,,,,,,,,,,0,,189,2025-04-29,PWHL,2024/2025,Regular Season
+73,15:30,Penalty,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,ENA,19,Paetyn Levis,,,,,,,,,,,,,,,,0,,189,2025-04-29,PWHL,2024/2025,Regular Season
 74,17:06,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v4,27,Emma Maltais,,,,,82,Kayle Osborne,,,,,,,54.7,-13.9,0.0721,0,O20,189,2025-04-29,PWHL,2024/2025,Regular Season
 75,17:23,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,15,Savannah Harmon,,,,,82,Kayle Osborne,,,,,,,36.3,-27.5,,0,O24,189,2025-04-29,PWHL,2024/2025,Regular Season
 76,17:25,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,4v5,6,Brooke Hobson,,,,,70,Carly Jackson,,,,,,,74.3,28.3,0.0511,0,O09,189,2025-04-29,PWHL,2024/2025,Regular Season
 77,17:49,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,13,Elle Hartje,,,,,70,Carly Jackson,,,,,,,71.0,7.6,0.0899,0,O16,189,2025-04-29,PWHL,2024/2025,Regular Season
-78,18:51,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,20,Sarah Nurse,,,,,82,Kayle Osborne,,,,,,,69.3,-22.7,0.0371,0,O13,189,2025-04-29,PWHL,2024/2025,Regular Season
-79,18:51,Penalty,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,28,Micah Zandee-Hart,,,,,,,,,,,,,,,,0,,189,2025-04-29,PWHL,2024/2025,Regular Season
+78,18:51,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,ENF,20,Sarah Nurse,,,,,82,Kayle Osborne,,,,,,,69.3,-22.7,0.0371,0,O13,189,2025-04-29,PWHL,2024/2025,Regular Season
+79,18:51,Penalty,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,ENA,28,Micah Zandee-Hart,,,,,,,,,,,,,,,,0,,189,2025-04-29,PWHL,2024/2025,Regular Season
 80,19:51,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,9,Daryl Watts,,,,,82,Kayle Osborne,,,,,,,49.7,33.1,,0,O23,189,2025-04-29,PWHL,2024/2025,Regular Season
 81,1:10,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,OT1,event,3v3,40,Blayre Turnbull,,,,,82,Kayle Osborne,,,,,,,61.7,-12.2,0.0785,0,O14,189,2025-04-29,PWHL,2024/2025,Regular Season
 82,1:43,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,OT1,event,3v3,20,Sarah Nurse,,,,,82,Kayle Osborne,,,,,,,65.0,-0.8,0.1041,0,O15,189,2025-04-29,PWHL,2024/2025,Regular Season

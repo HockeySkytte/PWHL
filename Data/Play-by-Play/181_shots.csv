@@ -6,7 +6,7 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 5,6:41,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,26,Emily Clark,,,,,35,Maddie Rooney,,,,,,,47.3,3.1,0.0614,-1,O21,181,2025-03-07,PWHL,2024/2025,Regular Season
 6,7:35,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,27,Taylor Heise,,,,,38,Emerance Maschmeyer,,,,,,,56.7,14.5,0.0461,1,O22,181,2025-03-07,PWHL,2024/2025,Regular Season
 7,7:40,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,3,Brooke McQuigge,,,,,38,Emerance Maschmeyer,,,,,,,62.0,1.7,,1,O15,181,2025-03-07,PWHL,2024/2025,Regular Season
-8,8:18,Penalty,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,13,Tereza Vanišová,,,,,,,,,,,,,,,,-1,,181,2025-03-07,PWHL,2024/2025,Regular Season
+8,8:18,Penalty,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,ENA,13,Tereza Vanišová,,,,,,,,,,,,,,,,-1,,181,2025-03-07,PWHL,2024/2025,Regular Season
 9,10:30,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,1,event,5v5,94,Anna Meixner,,,,,35,Maddie Rooney,,,,,,,85.0,-35.4,0.0205,-1,O04,181,2025-03-07,PWHL,2024/2025,Regular Season
 10,11:33,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,2,Lee Stecklein,,,,,38,Emerance Maschmeyer,,,,,,,30.3,-9.3,0.0500,1,O25,181,2025-03-07,PWHL,2024/2025,Regular Season
 11,13:26,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,1,event,5v5,9,Mae Batherson,,,,,38,Emerance Maschmeyer,,,,,,,46.0,-4.2,,1,O21,181,2025-03-07,PWHL,2024/2025,Regular Season
@@ -22,7 +22,7 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 21,5:14,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,71,Klára Hymlárová,,,,,33,Gwyneth Philips,,,,,,,51.0,14.7,0.0584,3,O22,181,2025-03-07,PWHL,2024/2025,Regular Season
 22,6:02,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,13,Grace Zumwinkle,,,,,33,Gwyneth Philips,,,,,,,56.0,-1.1,0.0858,3,O21,181,2025-03-07,PWHL,2024/2025,Regular Season
 23,8:08,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,23,Mellissa Channell-Watkins,,,,,33,Gwyneth Philips,,,,,,,4.3,0.3,0.0828,3,N02,181,2025-03-07,PWHL,2024/2025,Regular Season
-24,8:13,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5 ENF,23,Mellissa Channell-Watkins,,,,,33,Gwyneth Philips,,,,,,,32.3,-36.3,,3,O24,181,2025-03-07,PWHL,2024/2025,Regular Season
+24,8:13,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,ENF,23,Mellissa Channell-Watkins,,,,,33,Gwyneth Philips,,,,,,,32.3,-36.3,,3,O24,181,2025-03-07,PWHL,2024/2025,Regular Season
 25,8:38,Penalty,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,16,Sophie Jaques,,,,,,,,,,,,,,,,3,,181,2025-03-07,PWHL,2024/2025,Regular Season
 26,10:55,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,22,Natalie Buchbinder,,,,,33,Gwyneth Philips,,,,,,,35.7,6.8,,3,O25,181,2025-03-07,PWHL,2024/2025,Regular Season
 27,11:14,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,2,event,5v5,12,Kelly Pannek,,,,,33,Gwyneth Philips,,,,,,,54.0,2.3,0.0858,3,O21,181,2025-03-07,PWHL,2024/2025,Regular Season
@@ -62,8 +62,8 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 61,15:11,Penalty,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,3,Brooke McQuigge,,,,,,,,,,,,,,,,4,,181,2025-03-07,PWHL,2024/2025,Regular Season
 62,15:13,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,4v5,77,Britta Curl-Salemme,,,,,33,Gwyneth Philips,,,,,,,73.3,10.5,0.2793,4,O11,181,2025-03-07,PWHL,2024/2025,Regular Season
 63,15:42,Block,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,27,Taylor Heise,,,,,33,Gwyneth Philips,,,,,,,48.0,23.0,,4,O22,181,2025-03-07,PWHL,2024/2025,Regular Season
-64,18:03,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5 ENF,92,Danielle Serdachny,,,,,35,Maddie Rooney,,,,,,,87.7,-17.8,0.0192,-4,O05,181,2025-03-07,PWHL,2024/2025,Regular Season
-65,18:16,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5 ENF,2,Aneta Tejralová,,,,,35,Maddie Rooney,,,,,,,32.0,30.6,0.0280,-4,O26,181,2025-03-07,PWHL,2024/2025,Regular Season
-66,18:27,Goal,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5 ENA,86,Michela Cava,77,Britta Curl-Salemme,,,,,,9 27 42 77 86,Mae Batherson - Taylor Heise - Claire Thompson - Britta Curl-Salemme - Michela Cava,,13 17 23 26 71 94,Tereza Vanišová - Gabbie Hughes - Jocelyne Larocque - Emily Clark - Jincy Roese - Anna Meixner,44.0,17.6,1.0000,4,O22,181,2025-03-07,PWHL,2024/2025,Regular Season
-67,19:03,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5 ENF,92,Danielle Serdachny,,,,,35,Maddie Rooney,,,,,,,40.3,24.6,0.0280,-5,O26,181,2025-03-07,PWHL,2024/2025,Regular Season
-68,19:37,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5 ENF,22,Taylor House,,,,,35,Maddie Rooney,,,,,,,40.3,-19.6,0.0433,-5,O24,181,2025-03-07,PWHL,2024/2025,Regular Season
+64,18:03,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,ENF,92,Danielle Serdachny,,,,,35,Maddie Rooney,,,,,,,87.7,-17.8,0.0192,-4,O05,181,2025-03-07,PWHL,2024/2025,Regular Season
+65,18:16,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,ENF,2,Aneta Tejralová,,,,,35,Maddie Rooney,,,,,,,32.0,30.6,0.0280,-4,O26,181,2025-03-07,PWHL,2024/2025,Regular Season
+66,18:27,Goal,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,ENA,86,Michela Cava,77,Britta Curl-Salemme,,,,,,9 27 42 77 86,Mae Batherson - Taylor Heise - Claire Thompson - Britta Curl-Salemme - Michela Cava,,13 17 23 26 71 94,Tereza Vanišová - Gabbie Hughes - Jocelyne Larocque - Emily Clark - Jincy Roese - Anna Meixner,44.0,17.6,1.0000,4,O22,181,2025-03-07,PWHL,2024/2025,Regular Season
+67,19:03,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,ENF,92,Danielle Serdachny,,,,,35,Maddie Rooney,,,,,,,40.3,24.6,0.0280,-5,O26,181,2025-03-07,PWHL,2024/2025,Regular Season
+68,19:37,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,ENF,22,Taylor House,,,,,35,Maddie Rooney,,,,,,,40.3,-19.6,0.0433,-5,O24,181,2025-03-07,PWHL,2024/2025,Regular Season

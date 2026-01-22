@@ -67,7 +67,7 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 66,13:44,Shot,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,3,event,5v5,22,Maggie Connors,,,,,35,Maddie Rooney,,,,,,,65.0,4.2,0.0969,-2,O16,203,2025-05-11,PWHL,2024/2025,Playoffs
 67,14:00,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,5v5,26,Kendall Coyne Schofield,,,,,50,Kristen Campbell,,,,,,,74.7,-0.6,0.1803,2,O11,203,2025-05-11,PWHL,2024/2025,Playoffs
 68,17:38,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,5v5,26,Kendall Coyne Schofield,,,,,50,Kristen Campbell,,,,,,,61.7,-13.3,0.1161,2,O14,203,2025-05-11,PWHL,2024/2025,Playoffs
-69,18:18,Shot,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,3,event,5v5 ENF,24,Natalie Spooner,,,,,35,Maddie Rooney,,,,,,,55.0,35.7,0.0164,-2,O23,203,2025-05-11,PWHL,2024/2025,Playoffs
-70,18:33,Shot,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,3,event,5v5 ENF,24,Natalie Spooner,,,,,35,Maddie Rooney,,,,,,,75.3,-8.2,0.1341,-2,O11,203,2025-05-11,PWHL,2024/2025,Playoffs
+69,18:18,Shot,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,3,event,ENF,24,Natalie Spooner,,,,,35,Maddie Rooney,,,,,,,55.0,35.7,0.0164,-2,O23,203,2025-05-11,PWHL,2024/2025,Playoffs
+70,18:33,Shot,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,3,event,ENF,24,Natalie Spooner,,,,,35,Maddie Rooney,,,,,,,75.3,-8.2,0.1341,-2,O11,203,2025-05-11,PWHL,2024/2025,Playoffs
 71,19:41,Block,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,3,event,5v5,9,Daryl Watts,,,,,35,Maddie Rooney,,,,,,,57.0,26.6,,-2,O17,203,2025-05-11,PWHL,2024/2025,Playoffs
 72,19:54,Block,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,3,event,5v5,14,Renata Fast,,,,,35,Maddie Rooney,,,,,,,30.7,-2.3,,-2,O25,203,2025-05-11,PWHL,2024/2025,Playoffs

@@ -66,8 +66,8 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 65,15:08,Block,Boston Fleet,Home,Boston Fleet,Ottawa Charge,3,event,5v5,47,Jamie Lee Rattray,,,,,38,Emerance Maschmeyer,,,,,,,73.3,-21.2,,1,O06,113,2024-12-17,PWHL,2024/2025,Regular Season
 66,16:46,Shot,Ottawa Charge,Away,Boston Fleet,Ottawa Charge,3,event,5v5,15,Savannah Harmon,,,,,31,Aerin Frankel,,,,,,,46.7,-40.2,0.0341,-1,O19,113,2024-12-17,PWHL,2024/2025,Regular Season
 67,16:56,Block,Ottawa Charge,Away,Boston Fleet,Ottawa Charge,3,event,5v5,26,Emily Clark,,,,,31,Aerin Frankel,,,,,,,74.3,23.8,,-1,O09,113,2024-12-17,PWHL,2024/2025,Regular Season
-68,18:05,Shot,Ottawa Charge,Away,Boston Fleet,Ottawa Charge,3,event,5v5 ENF,27,Shiann Darkangelo,,,,,31,Aerin Frankel,,,,,,,61.0,-6.2,0.0838,-1,O14,113,2024-12-17,PWHL,2024/2025,Regular Season
-69,18:46,Shot,Ottawa Charge,Away,Boston Fleet,Ottawa Charge,3,event,5v5 ENF,13,Tereza Vanišová,,,,,31,Aerin Frankel,,,,,,,48.3,-12.5,0.0491,-1,O20,113,2024-12-17,PWHL,2024/2025,Regular Season
+68,18:05,Shot,Ottawa Charge,Away,Boston Fleet,Ottawa Charge,3,event,5v5,27,Shiann Darkangelo,,,,,31,Aerin Frankel,,,,,,,61.0,-6.2,0.0838,-1,O14,113,2024-12-17,PWHL,2024/2025,Regular Season
+69,18:46,Shot,Ottawa Charge,Away,Boston Fleet,Ottawa Charge,3,event,ENF,13,Tereza Vanišová,,,,,31,Aerin Frankel,,,,,,,48.3,-12.5,0.0491,-1,O20,113,2024-12-17,PWHL,2024/2025,Regular Season
 70,19:14,Block,Ottawa Charge,Away,Boston Fleet,Ottawa Charge,3,event,5v5,13,Tereza Vanišová,,,,,31,Aerin Frankel,,,,,,,49.0,-21.2,,-1,O20,113,2024-12-17,PWHL,2024/2025,Regular Season
 71,19:26,Block,Ottawa Charge,Away,Boston Fleet,Ottawa Charge,3,event,5v5,2,Aneta Tejralová,,,,,31,Aerin Frankel,,,,,,,51.0,-3.7,,-1,O21,113,2024-12-17,PWHL,2024/2025,Regular Season
 72,19:43,Block,Ottawa Charge,Away,Boston Fleet,Ottawa Charge,3,event,5v5,13,Tereza Vanišová,,,,,31,Aerin Frankel,,,,,,,67.0,14.2,,-1,O16,113,2024-12-17,PWHL,2024/2025,Regular Season

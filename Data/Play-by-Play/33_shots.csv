@@ -32,9 +32,9 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 31,6:28,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v4,13,Grace Zumwinkle,,,,,20,Elaine Chuli,,,,,,,83.7,-5.7,0.3021,0,O07,33,2024-02-18,PWHL,2023/2024,Regular Season
 32,6:29,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,14,Clair DeGeorge,,,,,20,Elaine Chuli,,,,,,,82.7,-3.7,,0,O11,33,2024-02-18,PWHL,2023/2024,Regular Season
 33,10:49,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,5v5,24,Ann-Sophie Bettez,,,,,35,Maddie Rooney,,,,,,,75.0,-19.6,0.0659,0,O06,33,2024-02-18,PWHL,2023/2024,Regular Season
-34,11:33,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,5v5 ENF,4,Catherine Daoust,,,,,35,Maddie Rooney,,,,,,,36.0,34.0,0.0258,0,O26,33,2024-02-18,PWHL,2023/2024,Regular Season
+34,11:33,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,ENF,4,Catherine Daoust,,,,,35,Maddie Rooney,,,,,,,36.0,34.0,0.0258,0,O26,33,2024-02-18,PWHL,2023/2024,Regular Season
 35,11:48,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,5v5,8,Gabrielle David,,,,,35,Maddie Rooney,,,,,,,74.3,-11.1,,0,O11,33,2024-02-18,PWHL,2023/2024,Regular Season
-36,11:48,Penalty,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,16,Sophie Jaques,,,,,,,,,,,,,,,,0,,33,2024-02-18,PWHL,2023/2024,Regular Season
+36,11:48,Penalty,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,ENA,16,Sophie Jaques,,,,,,,,,,,,,,,,0,,33,2024-02-18,PWHL,2023/2024,Regular Season
 37,12:19,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,5v5,29,Marie-Philip Poulin,,,,,35,Maddie Rooney,,,,,,,45.7,34.9,,0,O23,33,2024-02-18,PWHL,2023/2024,Regular Season
 38,13:24,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,5v4,15,Maureen Murphy,,,,,35,Maddie Rooney,,,,,,,36.0,28.9,0.0411,0,O26,33,2024-02-18,PWHL,2023/2024,Regular Season
 39,13:41,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,5v5,9,Kati Tabin,,,,,35,Maddie Rooney,,,,,,,57.0,24.1,,0,O17,33,2024-02-18,PWHL,2023/2024,Regular Season
@@ -76,9 +76,9 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 75,14:09,Block,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,5v5,16,Sarah Lefort,,,,,35,Maddie Rooney,,,,,,,75.0,-13.0,,1,O06,33,2024-02-18,PWHL,2023/2024,Regular Season
 76,15:12,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,5v5,24,Ann-Sophie Bettez,,,,,35,Maddie Rooney,,,,,,,74.0,-13.3,0.0782,1,O06,33,2024-02-18,PWHL,2023/2024,Regular Season
 77,18:04,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,18,Brittyn Fleming,,,,,20,Elaine Chuli,,,,,,,52.0,17.8,0.0414,-1,O22,33,2024-02-18,PWHL,2023/2024,Regular Season
-78,18:10,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5 ENF,11,Sophia Kunin,,,,,20,Elaine Chuli,,,,,,,70.7,-35.1,0.0148,-1,O12,33,2024-02-18,PWHL,2023/2024,Regular Season
+78,18:10,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,11,Sophia Kunin,,,,,20,Elaine Chuli,,,,,,,70.7,-35.1,0.0148,-1,O12,33,2024-02-18,PWHL,2023/2024,Regular Season
 79,19:19,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,41.3,-21.2,,-1,O20,33,2024-02-18,PWHL,2023/2024,Regular Season
 80,19:28,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,37.7,-5.1,,-1,O25,33,2024-02-18,PWHL,2023/2024,Regular Season
 81,19:51,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,33.0,-1.1,,-1,O25,33,2024-02-18,PWHL,2023/2024,Regular Season
 82,19:53,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,16,Sophie Jaques,,,,,20,Elaine Chuli,,,,,,,34.0,33.1,,-1,O26,33,2024-02-18,PWHL,2023/2024,Regular Season
-83,19:55,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5 ENA,13,Grace Zumwinkle,,,,,20,Elaine Chuli,,,,,,,31.0,24.6,,-1,O26,33,2024-02-18,PWHL,2023/2024,Regular Season
+83,19:55,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,ENA,13,Grace Zumwinkle,,,,,,,,,,,,,31.0,24.6,,-1,O26,33,2024-02-18,PWHL,2023/2024,Regular Season

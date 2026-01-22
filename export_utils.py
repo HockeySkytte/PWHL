@@ -217,8 +217,13 @@ def generate_pbp_csv(
         logo_id_to_name[str(aid)] = an
 
     def get_team_ids() -> Tuple[str, str]:
-        home = str(game.get('home_team_id') or '')
-        away = str(game.get('away_team_id') or '')
+        home = str(game.get('home_team_id') or '').strip()
+        away = str(game.get('away_team_id') or '').strip()
+        # Many schedule sources omit numeric team IDs for older seasons; infer from logo URLs when needed.
+        if not home:
+            home = extract_logo_id(game.get('home_team_logo'))
+        if not away:
+            away = extract_logo_id(game.get('away_team_logo'))
         return home, away
 
     def get_team_name_by_id(tid: str) -> str:
@@ -428,10 +433,8 @@ def generate_pbp_csv(
     def _compute_empty_net_tags(events: List[Dict[str, Any]], pbp_all: List[Dict[str, Any]]) -> List[str]:
         """Return list of tags ('' | 'ENF' | 'ENA' | 'ENF+ENA') for each final event.
 
-        Uses goalie_change events (GoalieComingIn/GoalieComingOut) to track whether each team has a goalie.
-        At any event time:
-          - if event team has no goalie -> ENF
-          - if opposing team has no goalie -> ENA
+        Key rule: when events share the same timestamp as goalie_change(s), we honor the
+        raw PWHL ordering (index in the raw PBP array), not an assumed goalie-change-first/last rule.
         """
 
         def to_seconds(ts: str) -> int:
@@ -461,36 +464,71 @@ def generate_pbp_csv(
                 return 1
 
         home_id, away_id = get_team_ids()
-        goalie_present: Dict[str, bool] = {
-            str(home_id): True,
-            str(away_id): True,
-        }
 
-        timeline: List[Tuple[int, int, int, int, Dict[str, Any] | None]] = []
-        # (pi, ts, kind, stable, finalEventOrNone)
+        # If schedule-derived ids are missing, infer the two team ids from the raw PBP feed.
+        inferred_ids: List[str] = []
+        if not str(home_id) or not str(away_id):
+            seen: List[str] = []
+            for ev0 in pbp_all or []:
+                if not isinstance(ev0, dict):
+                    continue
+                d0 = ev0.get('details') or {}
+                for key in ('team', 'againstTeam'):
+                    t = d0.get(key)
+                    if isinstance(t, dict):
+                        tid = str(t.get('id') or '').strip()
+                        if tid and tid not in seen:
+                            seen.append(tid)
+                stid = d0.get('shooterTeamId')
+                if stid is not None:
+                    tid = str(stid).strip()
+                    if tid and tid not in seen:
+                        seen.append(tid)
+            inferred_ids = [tid for tid in seen if tid][:2]
+            if not str(home_id) and len(inferred_ids) >= 1:
+                home_id = inferred_ids[0]
+            if not str(away_id) and len(inferred_ids) >= 2:
+                away_id = inferred_ids[1]
+
+        team_ids_known = [str(home_id).strip(), str(away_id).strip()]
+        team_ids_known = [t for t in team_ids_known if t]
+        if len(set(team_ids_known)) != 2 and len(inferred_ids) == 2:
+            team_ids_known = inferred_ids
+            home_id, away_id = inferred_ids[0], inferred_ids[1]
+
+        goalie_present: Dict[str, bool] = {tid: True for tid in team_ids_known}
+
+        # Build unified timeline honoring raw order within the same timestamp.
+        # (pi, ts, raw_index, kind, stable_index, ev)
         # kind: 0 goalie_change, 1 final_event
-        for j, ev0 in enumerate(pbp_all or []):
+        timeline: List[Tuple[int, int, int, int, int, Dict[str, Any]]] = []
+        for raw_i, ev0 in enumerate(pbp_all or []):
             et0 = str(ev0.get('event') or '').lower()
             if et0 not in ('goalie_change', 'goalie-change'):
                 continue
             d0 = ev0.get('details') or {}
             pi = period_index_from_details(d0)
             ts = to_seconds(str(d0.get('time') or '0:00'))
-            timeline.append((pi, ts, 0, j, ev0))
+            timeline.append((pi, ts, raw_i, 0, -1, ev0))
 
-        for i2, ev2 in enumerate(events):
+        for stable_i, ev2 in enumerate(events):
+            if not isinstance(ev2, dict):
+                continue
             d2 = ev2.get('details') or {}
             pi = period_index_from_details(d2)
             ts = to_seconds(str(d2.get('time') or '0:00'))
-            timeline.append((pi, ts, 1, i2, ev2))
+            raw_i = ev2.get('_raw_index')
+            try:
+                raw_i_int = int(raw_i) if raw_i is not None else (10**9 + stable_i)
+            except Exception:
+                raw_i_int = 10**9 + stable_i
+            timeline.append((pi, ts, raw_i_int, 1, stable_i, ev2))
 
         timeline.sort(key=lambda x: (x[0], x[1], x[2], x[3]))
 
         tags = ['' for _ in range(len(events))]
-        for pi, ts, kind, stable, evx in timeline:
+        for _pi, _ts, _raw_i, kind, stable_i, evx in timeline:
             if kind == 0:
-                if not isinstance(evx, dict):
-                    continue
                 d0 = evx.get('details') or {}
                 team_id = _goalie_change_team_id(evx)
                 if not team_id:
@@ -502,32 +540,41 @@ def generate_pbp_csv(
                     'goalieComingOut',
                     'goalie_coming_out',
                     'goalie_out',
-                    # HockeyTech uses goalieGoingOut for goalie pulls
                     'goalieGoingOut',
                     'GoalieGoingOut',
                     'goalie_going_out',
                 )
+                # If both present, treat as out then in.
+                if _has_meaningful(coming_out):
+                    goalie_present[team_id] = False
                 if _has_meaningful(coming_in):
                     goalie_present[team_id] = True
-                elif _has_meaningful(coming_out):
-                    goalie_present[team_id] = False
                 continue
 
             # final event
-            if not isinstance(evx, dict):
-                continue
             team_id = str(evx.get('_computedTeamId') or '').strip()
-            if team_id not in (str(home_id), str(away_id)):
+            if team_id not in team_ids_known:
                 continue
-            opp = str(away_id) if team_id == str(home_id) else str(home_id)
+            opp = ''
+            if len(team_ids_known) == 2:
+                opp = team_ids_known[1] if team_id == team_ids_known[0] else team_ids_known[0]
+            else:
+                opp = str(away_id) if team_id == str(home_id) else str(home_id)
+
+            d2 = evx.get('details') or {}
+            props = d2.get('properties') or {}
+            ena_flag = boolish(props.get('isEmptyNet') or d2.get('isEmptyNet') or d2.get('is_empty_net'))
+
             enf = not goalie_present.get(team_id, True)
-            ena = not goalie_present.get(opp, True)
+            ena = ena_flag or (not goalie_present.get(opp, True))
+            if stable_i < 0 or stable_i >= len(tags):
+                continue
             if enf and ena:
-                tags[stable] = 'ENF+ENA'
+                tags[stable_i] = 'ENF+ENA'
             elif enf:
-                tags[stable] = 'ENF'
+                tags[stable_i] = 'ENF'
             elif ena:
-                tags[stable] = 'ENA'
+                tags[stable_i] = 'ENA'
         return tags
 
     # Flatten with merge rules
@@ -559,6 +606,7 @@ def generate_pbp_csv(
             shotd = shot_ev.get('details') if isinstance(shot_ev, dict) else {}
             final_events.append({
                 **ev,
+                '_raw_index': idx,
                 '_computedTeamId': goal_team_id,
                 '_mergedScorer': (shotd or {}).get('shooter') or d.get('scoredBy') or d.get('scorer') or d.get('player') or None,
                 '_mergedAssists': list(d.get('assists') or [])[:2],
@@ -580,20 +628,20 @@ def generate_pbp_csv(
                     break
             if has_matching_goal:
                 continue
-            final_events.append({ **ev, '_computedTeamId': shooter_team_id, '_x': d.get('xLocation'), '_y': d.get('yLocation') })
+            final_events.append({ **ev, '_raw_index': idx, '_computedTeamId': shooter_team_id, '_x': d.get('xLocation'), '_y': d.get('yLocation') })
             continue
 
         if etype == 'shootout':
             team_resolved = resolve_shootout_team(d)
             so_goal = boolish(d.get('isGoal') or (d.get('properties') or {}).get('isGoal'))
-            final_events.append({ **ev, '_computedTeamId': str(team_resolved or ''), '_overrideEvent': 'SO_goal' if so_goal else 'SO_miss' })
+            final_events.append({ **ev, '_raw_index': idx, '_computedTeamId': str(team_resolved or ''), '_overrideEvent': 'SO_goal' if so_goal else 'SO_miss' })
             continue
 
         if etype == 'penalty':
             commit_id = str((d.get('againstTeam') or {}).get('id') or '')
             if not commit_id:
                 commit_id = str(d.get('teamId') or d.get('team_id') or '')
-            final_events.append({ **ev, '_computedTeamId': commit_id })
+            final_events.append({ **ev, '_raw_index': idx, '_computedTeamId': commit_id })
             continue
 
         # Treat blocked shots like other shot attempts for strength orientation:
@@ -615,12 +663,12 @@ def generate_pbp_csv(
                     home_id, away_id = get_team_ids()
                     shooter_team_id = home_id if str(g_team) == str(away_id) else (away_id if str(g_team) == str(home_id) else '')
             computed = shooter_team_id or str(d.get('teamId') or d.get('team_id') or (d.get('team') or {}).get('id') or '')
-            final_events.append({ **ev, '_computedTeamId': computed, '_x': d.get('xLocation'), '_y': d.get('yLocation') })
+            final_events.append({ **ev, '_raw_index': idx, '_computedTeamId': computed, '_x': d.get('xLocation'), '_y': d.get('yLocation') })
             continue
 
         # Default: carry team id from details
         computed = str(d.get('teamId') or d.get('team_id') or d.get('shooterTeamId') or d.get('scorerTeamId') or (d.get('team') or {}).get('id') or '')
-        final_events.append({ **ev, '_computedTeamId': computed })
+        final_events.append({ **ev, '_raw_index': idx, '_computedTeamId': computed })
 
     # Ensure shootout events alternate when team missing
     def fix_shootout_teams(events: List[Dict[str, Any]]):
@@ -930,14 +978,14 @@ def generate_pbp_csv(
 
         return [results.get(ii, '') for ii in range(len(events))]
 
-    strengths = compute_strengths(final_events)
+    strengths_base = compute_strengths(final_events)
     empty_net_tags = _compute_empty_net_tags(final_events, pbp)
+    strengths = list(strengths_base)
     if len(empty_net_tags) == len(strengths):
         for i_tag, tag in enumerate(empty_net_tags):
-            if not tag:
-                continue
-            base = strengths[i_tag] or ''
-            strengths[i_tag] = (f"{base} {tag}".strip() if base else tag)
+            if tag:
+                # Output strength is ONLY the empty-net state when present.
+                strengths[i_tag] = tag
 
     # --- xG model helpers ---
     _XG_MODEL: Dict[str, Any] | None = None
@@ -1421,7 +1469,13 @@ def generate_pbp_csv(
             if i < len(empty_net_tags) and ('ENA' in (empty_net_tags[i] or '')):
                 xg_val = '1.0000'
             else:
-                xg_val = xg_for(strengths[i] or '', score_state, box_id)
+                # Keep xG based on manpower state, even if we output ENF/ENA.
+                xg_val = xg_for(strengths_base[i] or '', score_state, box_id)
+
+        # For ENA events there is no goalie to shoot against.
+        if i < len(empty_net_tags) and ('ENA' in (empty_net_tags[i] or '')):
+            g_no = ''
+            goalie_name = ''
 
         row = [
             str(eid),

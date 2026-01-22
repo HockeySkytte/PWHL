@@ -85,7 +85,7 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 84,14:55,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,OT1,event,5v5,13,Grace Zumwinkle,,,,,31,Aerin Frankel,,,,,,,72.3,2.5,0.0899,0,O16,97,2024-05-26,PWHL,2023/2024,Playoffs
 85,15:09,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,OT1,event,5v5,21,Hilary Knight,,,,,29,Nicole Hensley,,,,,,,75.0,9.6,0.1248,0,O11,97,2024-05-26,PWHL,2023/2024,Playoffs
 86,15:32,Block,Boston Fleet,Away,Minnesota Frost,Boston Fleet,OT1,event,5v5,21,Hilary Knight,,,,,29,Nicole Hensley,,,,,,,62.3,14.5,,0,O16,97,2024-05-26,PWHL,2023/2024,Playoffs
-87,15:48,Penalty,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,OT1,event,5v5,14,Clair DeGeorge,,,,,,,,,,,,,,,,0,,97,2024-05-26,PWHL,2023/2024,Playoffs
+87,15:48,Penalty,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,OT1,event,ENF,14,Clair DeGeorge,,,,,,,,,,,,,,,,0,,97,2024-05-26,PWHL,2023/2024,Playoffs
 88,17:47,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,OT1,event,5v4,8,Lexie Adzija,,,,,29,Nicole Hensley,,,,,,,73.7,0.6,0.1873,0,O11,97,2024-05-26,PWHL,2023/2024,Playoffs
 89,17:58,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,OT1,event,5v5,9,Sophie Shirley,,,,,29,Nicole Hensley,,,,,,,75.3,-3.4,0.1248,0,O11,97,2024-05-26,PWHL,2023/2024,Playoffs
 90,18:27,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,OT1,event,5v5,27,Taylor Heise,,,,,31,Aerin Frankel,,,,,,,54.3,14.5,0.0386,0,O22,97,2024-05-26,PWHL,2023/2024,Playoffs

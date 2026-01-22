@@ -126,6 +126,8 @@
                                     <option value="5v5">5v5</option>
                                     <option value="PP">PP</option>
                                     <option value="SH">SH</option>
+                                    <option value="ENA">ENA</option>
+                                    <option value="ENF">ENF</option>
                                 </select>
                             </div>
                             <div class="filter-group" style="display:flex;flex-direction:column;min-width:170px;">
@@ -394,11 +396,13 @@
 
                 // Filter helper by selected strength
                 const passStrength=(s)=>{
-                    if(!s) return strength==='All';
-                    const m=s.match(/^(\d+)v(\d+)$/i);
-                    if(!m) return strength==='All';
-                    const a=parseInt(m[1],10), b=parseInt(m[2],10);
+                    const ss = String(s||'');
                     if(strength==='All') return true;
+                    if(strength==='ENA') return ss.includes('ENA');
+                    if(strength==='ENF') return ss.includes('ENF');
+                    const m=ss.match(/^(\d+)v(\d+)$/i);
+                    if(!m) return false;
+                    const a=parseInt(m[1],10), b=parseInt(m[2],10);
                     if(strength==='EV') return a===b;
                     if(strength==='5v5') return a===5 && b===5;
                     if(strength==='PP') return a>b;
@@ -1076,6 +1080,7 @@
                     const shotD = shotEv ? (shotEv.details || {}) : {};
                     finalEvents.push({
                         ...ev,
+                        _raw_index: idx,
                         _computedTeamId: goalTeamId,
                         _mergedScorer: shotD.shooter || d.scoredBy || d.scorer || d.player || null,
                         _mergedAssists: Array.isArray(d.assists) ? d.assists.slice(0, 2) : [],
@@ -1094,7 +1099,7 @@
                         return String(gd.team?.id || '') === shooterTeamId;
                     });
                     if (hasMatchingGoal) return;
-                    finalEvents.push({ ...ev, _computedTeamId: shooterTeamId, _x: d.xLocation, _y: d.yLocation });
+                    finalEvents.push({ ...ev, _raw_index: idx, _computedTeamId: shooterTeamId, _x: d.xLocation, _y: d.yLocation });
                     return;
                 }
                 if (type === 'shootout') {
@@ -1105,7 +1110,7 @@
                         const via = getPlayerTeamIdFromLineups(d.scoredBy, lineupIndex, gameInfo);
                         if (via) teamIdForSO = via;
                     }
-                    finalEvents.push({ ...ev, _computedTeamId: String(teamIdForSO||''), _overrideEvent: soIsGoal ? 'SO_goal' : 'SO_miss' });
+                    finalEvents.push({ ...ev, _raw_index: idx, _computedTeamId: String(teamIdForSO||''), _overrideEvent: soIsGoal ? 'SO_goal' : 'SO_miss' });
                     return;
                 }
                 if (type === 'penalty') {
@@ -1118,11 +1123,11 @@
                         const candidates = [d.team?.id, d.committingTeam?.id, d.penaltyTeam?.id, d.penalizedTeam?.id, d.offendingTeam?.id, d.teamId, d.team_id];
                         commitId = String(candidates.find(v => v !== undefined && v !== null && String(v) !== '') || '');
                     }
-                    finalEvents.push({ ...ev, _computedTeamId: commitId });
+                    finalEvents.push({ ...ev, _raw_index: idx, _computedTeamId: commitId });
                     return;
                 }
                 const computed = String(d.teamId || d.team_id || d.shooterTeamId || d.scorerTeamId || (d.team && d.team.id) || '');
-                finalEvents.push({ ...ev, _computedTeamId: computed });
+                finalEvents.push({ ...ev, _raw_index: idx, _computedTeamId: computed });
             });
 
             const escapeHTML = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c]));
@@ -1170,7 +1175,7 @@
             let idCounter = 1;
             // Ensure shootout events have teams; alternate if some are missing
             fixShootoutTeams(finalEvents, gameInfo);
-            const strengths = computeStrengths(finalEvents, gameInfo);
+                const strengths = computeStrengths(finalEvents, gameInfo, window.currentPlayByPlayData||[]);
             finalEvents.forEach((ev, idx) => {
                 const details = ev.details || {};
                 const eventType = getEventLabel(ev);
@@ -1192,6 +1197,7 @@
 
                 // players
                 let p1_no='',p1_name='',p2_no='',p2_name='',p3_no='',p3_name='',g_no='',goalie_name='';
+                const strengthHere = strengths[idx] || '';
                 if (eventType === 'goal') {
                     const scorer = ev._mergedScorer || details.scoredBy || details.scorer || details.player;
                     if (scorer) { p1_no = scorer.jerseyNumber || scorer.id || ''; p1_name = `${scorer.firstName||''} ${scorer.lastName||''}`.trim(); }
@@ -1205,6 +1211,12 @@
                 } else {
                     const player = details.shooter || details.player; if (player) { p1_no = player.jerseyNumber || player.id || ''; p1_name = `${player.firstName||''} ${player.lastName||''}`.trim(); }
                     if (details.goalie) { g_no = details.goalie.jerseyNumber || details.goalie.id || ''; goalie_name = `${details.goalie.firstName||''} ${details.goalie.lastName||''}`.trim(); }
+                }
+
+                // Empty net against: do not show a goalie.
+                if (strengthHere.includes('ENA')) {
+                    g_no = '';
+                    goalie_name = '';
                 }
 
                 // On-ice players from plus/minus style fields
@@ -1241,7 +1253,7 @@
                     {v:gameInfo.away_team||'', cls:'pbp-col-left'},
                     {v:period, cls:'pbp-col-center'},
                     {v:'event', cls:'pbp-col-left'},
-                    {v: strengths[idx] || '', cls:'pbp-col-left'},
+                    {v: strengthHere, cls:'pbp-col-left'},
                     {v:p1_no, cls:'pbp-col-right'},
                     {v:p1_name, cls:'pbp-col-left'},
                     {v:p2_no, cls:'pbp-col-right'},
@@ -1312,6 +1324,7 @@
                     const shotD = shotEv ? (shotEv.details || {}) : {};
                     finalEvents.push({
                         ...ev,
+                        _raw_index: idx,
                         _computedTeamId: goalTeamId,
                         _mergedScorer: shotD.shooter || d.scoredBy || d.scorer || d.player || null,
                         _mergedAssists: Array.isArray(d.assists) ? d.assists.slice(0, 2) : [],
@@ -1330,7 +1343,7 @@
                         return String(gd.team?.id || '') === shooterTeamId;
                     });
                     if (hasMatchingGoal) return;
-                    finalEvents.push({ ...ev, _computedTeamId: shooterTeamId, _x: d.xLocation, _y: d.yLocation });
+                    finalEvents.push({ ...ev, _raw_index: idx, _computedTeamId: shooterTeamId, _x: d.xLocation, _y: d.yLocation });
                     return;
                 }
                 if (type === 'shootout') {
@@ -1341,7 +1354,7 @@
                         const via = getPlayerTeamIdFromLineups(d.scoredBy, lineupIndex, gameInfo);
                         if (via) teamIdForSO = via;
                     }
-                    finalEvents.push({ ...ev, _computedTeamId: String(teamIdForSO||''), _overrideEvent: soIsGoal ? 'SO_goal' : 'SO_miss' });
+                    finalEvents.push({ ...ev, _raw_index: idx, _computedTeamId: String(teamIdForSO||''), _overrideEvent: soIsGoal ? 'SO_goal' : 'SO_miss' });
                     return;
                 }
                 if (type === 'penalty') {
@@ -1353,7 +1366,7 @@
                         const candidates = [d.team?.id, d.committingTeam?.id, d.penaltyTeam?.id, d.penalizedTeam?.id, d.offendingTeam?.id, d.teamId, d.team_id];
                         commitId = String(candidates.find(v => v !== undefined && v !== null && String(v) !== '') || '');
                     }
-                    finalEvents.push({ ...ev, _computedTeamId: commitId });
+                    finalEvents.push({ ...ev, _raw_index: idx, _computedTeamId: commitId });
                     return;
                 }
                 if (type === 'blocked-shot' || type === 'blocked_shot' || type === 'block') {
@@ -1367,16 +1380,16 @@
                             shooterTid = goalieTid === ids.homeId ? ids.awayId : ids.homeId;
                         }
                     }
-                    finalEvents.push({ ...ev, _computedTeamId: String(shooterTid||''), _x: d.xLocation, _y: d.yLocation });
+                    finalEvents.push({ ...ev, _raw_index: idx, _computedTeamId: String(shooterTid||''), _x: d.xLocation, _y: d.yLocation });
                     return;
                 }
                 const computed = String(d.teamId || d.team_id || d.shooterTeamId || d.scorerTeamId || (d.team && d.team.id) || '');
-                finalEvents.push({ ...ev, _computedTeamId: computed });
+                finalEvents.push({ ...ev, _raw_index: idx, _computedTeamId: computed });
             });
 
             // Ensure shootout teams are filled/alternated
             fixShootoutTeams(finalEvents, gameInfo);
-            const strengths = computeStrengths(finalEvents, gameInfo);
+            const strengths = computeStrengths(finalEvents, gameInfo, data);
             return { finalEvents, strengths };
         }
 
@@ -1570,6 +1583,12 @@
                     g_no = details.goalie.jerseyNumber || details.goalie.id || '';
                     goalie_name = `${details.goalie.firstName || ''} ${details.goalie.lastName || ''}`.trim();
                 }
+            }
+
+            // Empty net against: do not show a goalie.
+            if (String(strengthOverride||'').includes('ENA')) {
+                g_no = '';
+                goalie_name = '';
             }
 
             let period = details.period ? details.period.shortName || details.period.id || '' : '';
@@ -1838,7 +1857,7 @@
         }
 
         // Compute Strength strings per event per the rules
-        function computeStrengths(events, gameInfo) {
+        function computeStrengths(events, gameInfo, rawPbpEvents=[]) {
             // Normalize sort: by period index and time ascending
             const toSeconds = (t) => {
                 if (!t) return 0;
@@ -1882,14 +1901,94 @@
             };
             const isRegularSeason = (gameInfo.season_state||'').toLowerCase() === 'regular season';
 
-            // Copy and sort with original index
-            const list = events.map((e,i)=>({e,i,pi:periodIndex(e.details||{}),ts:toSeconds((e.details||{}).time||'0:00')}))
-                .sort((a,b)=> a.pi===b.pi ? (a.ts===b.ts ? a.i-b.i : a.ts-b.ts) : a.pi-b.pi);
+            // --- Empty net tracking via goalie_change events ---
+            const normKey = (k) => String(k||'').toLowerCase().replace(/[\s_-]/g,'');
+            const getCi = (obj, ...candidates) => {
+                if (!obj) return undefined;
+                const map = {};
+                for (const [k,v] of Object.entries(obj)) map[normKey(k)] = v;
+                for (const c of candidates) {
+                    const key = normKey(c);
+                    if (Object.prototype.hasOwnProperty.call(map, key)) return map[key];
+                }
+                return undefined;
+            };
+            const hasMeaningful = (v) => {
+                if (v === undefined || v === null) return false;
+                if (typeof v === 'object') return Object.keys(v).length > 0;
+                return String(v).trim() !== '';
+            };
+            const goalieChangeTeamId = (ev) => {
+                const d = ev?.details || {};
+                return String(d.team?.id || getCi(d,'teamId','team_id','goalieTeamId','goalie_team_id') || '').trim();
+            };
+            // Build goalie-change timeline honoring raw order within identical timestamps.
+            const goalieChanges = [];
+            (rawPbpEvents||[]).forEach((ev, rawIdx) => {
+                const type = String(ev?.event||'').toLowerCase();
+                if (type !== 'goalie_change' && type !== 'goalie-change') return;
+                const d = ev?.details || {};
+                const pi = periodIndex(d);
+                const ts = toSeconds(d.time||'0:00');
+                const teamId = goalieChangeTeamId(ev);
+                if (!teamId) return;
+                const comingIn = getCi(d, 'GoalieComingIn','goalieComingIn','goalie_coming_in','goalie_in');
+                const goingOut = getCi(d, 'goalieGoingOut','GoalieGoingOut','goalieComingOut','GoalieComingOut','goalie_coming_out','goalie_out','goalie_going_out');
+                goalieChanges.push({ pi, ts, rawIdx, teamId, comingIn, goingOut });
+            });
+            goalieChanges.sort((a,b)=> a.pi===b.pi ? (a.ts===b.ts ? a.rawIdx-b.rawIdx : a.ts-b.ts) : a.pi-b.pi);
+
+            // Copy and sort with raw index (tie-breaker) to match the upstream PBP ordering.
+            const list = events
+                .map((e,i)=>({
+                    e,
+                    i,
+                    pi: periodIndex(e.details||{}),
+                    ts: toSeconds((e.details||{}).time||'0:00'),
+                    rawIdx: Number.isFinite(parseInt(String(e._raw_index),10)) ? parseInt(String(e._raw_index),10) : (1e9 + i)
+                }))
+                .sort((a,b)=> a.pi===b.pi ? (a.ts===b.ts ? a.rawIdx-b.rawIdx : a.ts-b.ts) : a.pi-b.pi);
 
             // Resolve team IDs robustly
             const ids0 = getGameTeamIds(gameInfo);
-            const gameHomeId = ids0.homeId;
-            const gameAwayId = ids0.awayId;
+            let gameHomeId = ids0.homeId;
+            let gameAwayId = ids0.awayId;
+            if (!gameHomeId || !gameAwayId) {
+                // Infer the two team ids from the raw feed.
+                const seen = [];
+                for (const ev of (rawPbpEvents||[])) {
+                    const d = ev?.details || {};
+                    for (const key of ['team','againstTeam']) {
+                        const t = d[key];
+                        const tid = String(t?.id||'').trim();
+                        if (tid && !seen.includes(tid)) seen.push(tid);
+                    }
+                    const stid = String(d.shooterTeamId||'').trim();
+                    if (stid && !seen.includes(stid)) seen.push(stid);
+                    if (seen.length >= 2) break;
+                }
+                if (!gameHomeId && seen[0]) gameHomeId = seen[0];
+                if (!gameAwayId && seen[1]) gameAwayId = seen[1];
+            }
+
+            // Goalie presence state (assume both start present)
+            const goaliePresent = {};
+            if (gameHomeId) goaliePresent[String(gameHomeId)] = true;
+            if (gameAwayId) goaliePresent[String(gameAwayId)] = true;
+
+            // Interleave goalie changes using raw order.
+            let gcPtr = 0;
+            const applyGoalieChangesBefore = (pi, ts, rawIdx) => {
+                while (gcPtr < goalieChanges.length) {
+                    const g = goalieChanges[gcPtr];
+                    const before = (g.pi < pi) || (g.pi === pi && (g.ts < ts || (g.ts === ts && g.rawIdx < rawIdx)));
+                    if (!before) break;
+                    // If both present, treat as out then in.
+                    if (hasMeaningful(g.goingOut)) goaliePresent[String(g.teamId)] = false;
+                    if (hasMeaningful(g.comingIn)) goaliePresent[String(g.teamId)] = true;
+                    gcPtr++;
+                }
+            };
 
             // Active penalties: track array of {teamId, duration, endPi, endTs}; pending: penalties waiting to start due to 3-skater minimum
             const active = [];
@@ -1958,6 +2057,9 @@
                     const ev = row.e; const d = ev.details||{}; const type=(ev.event||'').toLowerCase();
                     const teamId = String(ev._computedTeamId||'');
 
+                    // Update goalie state using true raw feed ordering before this event.
+                    applyGoalieChangesBefore(pi, ts, row.rawIdx);
+
                     let homeBase=5, awayBase=5;
                     const isOT = (pi===4);
                     if (isOT && isRegularSeason) { homeBase=3; awayBase=3; }
@@ -1982,7 +2084,21 @@
 
                     const isHome = teamId && teamId === homeId;
                     const strengthStr = isHome ? `${homeBase}v${awayBase}` : `${awayBase}v${homeBase}`;
-                    resultsByIdx[row.i] = strengthStr;
+
+                    // Empty net tagging: output ENA/ENF (or ENF+ENA) instead of manpower string.
+                    let outStr = strengthStr;
+                    if (teamId === homeId || teamId === awayId) {
+                        const oppId = (teamId === homeId) ? awayId : homeId;
+                        const isEmptyNet = toBool(d?.properties?.isEmptyNet) || toBool(d?.isEmptyNet) || toBool(d?.is_empty_net);
+                        const enf = goaliePresent[String(teamId)] === false;
+                        const ena = isEmptyNet || (goaliePresent[String(oppId)] === false);
+                        let tag = '';
+                        if (enf && ena) tag = 'ENF+ENA';
+                        else if (enf) tag = 'ENF';
+                        else if (ena) tag = 'ENA';
+                        if (tag) outStr = tag;
+                    }
+                    resultsByIdx[row.i] = outStr;
                 }
 
                 // Apply state changes after the entire timestamp group

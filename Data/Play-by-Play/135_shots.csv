@@ -67,9 +67,9 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 66,12:14,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,3,event,5v5,18,Mannon McMahon,,,,,82,Kayle Osborne,,,,,,,66.7,29.5,0.0162,-3,O18,135,2025-01-27,PWHL,2024/2025,Regular Season
 67,12:59,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,3,event,5v5,3,Zoe Boyd,,,,,82,Kayle Osborne,,,,,,,-50.7,-9.6,0.0597,-3,D21,135,2025-01-27,PWHL,2024/2025,Regular Season
 68,14:20,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,3,event,5v5,92,Danielle Serdachny,,,,,82,Kayle Osborne,,,,,,,47.0,-8.2,0.0620,-3,O21,135,2025-01-27,PWHL,2024/2025,Regular Season
-69,16:08,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,3,event,5v5 ENF,26,Emily Clark,,,,,82,Kayle Osborne,,,,,,,71.0,6.2,0.0969,-3,O16,135,2025-01-27,PWHL,2024/2025,Regular Season
-70,17:43,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,3,event,5v5 ENF,26,Emily Clark,,,,,82,Kayle Osborne,,,,,,,47.3,8.2,0.0620,-3,O21,135,2025-01-27,PWHL,2024/2025,Regular Season
-71,17:44,Penalty,New York Sirens,Away,Ottawa Charge,New York Sirens,3,event,5v5 ENA,27,Jade Downie-Landry,,,,,,,,,,,,,,,,3,,135,2025-01-27,PWHL,2024/2025,Regular Season
+69,16:08,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,3,event,5v5,26,Emily Clark,,,,,82,Kayle Osborne,,,,,,,71.0,6.2,0.0969,-3,O16,135,2025-01-27,PWHL,2024/2025,Regular Season
+70,17:43,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,3,event,ENF,26,Emily Clark,,,,,82,Kayle Osborne,,,,,,,47.3,8.2,0.0620,-3,O21,135,2025-01-27,PWHL,2024/2025,Regular Season
+71,17:44,Penalty,New York Sirens,Away,Ottawa Charge,New York Sirens,3,event,ENA,27,Jade Downie-Landry,,,,,,,,,,,,,,,,3,,135,2025-01-27,PWHL,2024/2025,Regular Season
 72,17:53,Block,Ottawa Charge,Home,Ottawa Charge,New York Sirens,3,event,5v5,23,Jocelyne Larocque,,,,,82,Kayle Osborne,,,,,,,67.3,-28.1,,-3,O12,135,2025-01-27,PWHL,2024/2025,Regular Season
-73,19:23,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,3,event,5v4 ENF,26,Emily Clark,,,,,82,Kayle Osborne,,,,,,,68.0,-31.7,0.0240,-3,O12,135,2025-01-27,PWHL,2024/2025,Regular Season
-74,19:33,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,3,event,5v4 ENF,71,Jincy Roese,,,,,82,Kayle Osborne,,,,,,,31.3,-2.3,0.0714,-3,O25,135,2025-01-27,PWHL,2024/2025,Regular Season
+73,19:23,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,3,event,ENF,26,Emily Clark,,,,,82,Kayle Osborne,,,,,,,68.0,-31.7,0.0240,-3,O12,135,2025-01-27,PWHL,2024/2025,Regular Season
+74,19:33,Shot,Ottawa Charge,Home,Ottawa Charge,New York Sirens,3,event,ENF,71,Jincy Roese,,,,,82,Kayle Osborne,,,,,,,31.3,-2.3,0.0714,-3,O25,135,2025-01-27,PWHL,2024/2025,Regular Season

@@ -70,6 +70,6 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 69,16:26,Goal,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,3,event,5v3,9,Daryl Watts,34,Hannah Miller,,,31,Aerin Frankel,,2 20 47,Emily Brown - Hannah Brandt - Jamie Lee Rattray,,9 14 20 24 34,Daryl Watts - Renata Fast - Sarah Nurse - Natalie Spooner - Hannah Miller,57.0,3.1,0.1842,1,O15,184,2025-03-26,PWHL,2024/2025,Regular Season
 70,17:27,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,3,event,5v4,20,Sarah Nurse,,,,,31,Aerin Frankel,,,,,,,75.7,4.8,0.2623,2,O11,184,2025-03-26,PWHL,2024/2025,Regular Season
 71,18:10,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,3,event,5v5,22,Maggie Connors,,,,,31,Aerin Frankel,,,,,,,73.7,2.5,0.1803,2,O11,184,2025-03-26,PWHL,2024/2025,Regular Season
-72,19:45,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,3,event,5v5 ENF,21,Hilary Knight,,,,,50,Kristen Campbell,,,,,,,51.7,-15.6,0.0496,-2,O20,184,2025-03-26,PWHL,2024/2025,Regular Season
-73,19:49,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,3,event,5v5 ENF,88,Lexie Adzija,,,,,50,Kristen Campbell,,,,,,,58.7,-15.6,0.0847,-2,O14,184,2025-03-26,PWHL,2024/2025,Regular Season
-74,19:57,Penalty,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,3,event,5v5,8,Kelly Babstock,,,,,,,,,,,,,,,,-2,,184,2025-03-26,PWHL,2024/2025,Regular Season
+72,19:45,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,3,event,ENF,21,Hilary Knight,,,,,50,Kristen Campbell,,,,,,,51.7,-15.6,0.0496,-2,O20,184,2025-03-26,PWHL,2024/2025,Regular Season
+73,19:49,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,3,event,ENF,88,Lexie Adzija,,,,,50,Kristen Campbell,,,,,,,58.7,-15.6,0.0847,-2,O14,184,2025-03-26,PWHL,2024/2025,Regular Season
+74,19:57,Penalty,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,3,event,ENF,8,Kelly Babstock,,,,,,,,,,,,,,,,-2,,184,2025-03-26,PWHL,2024/2025,Regular Season

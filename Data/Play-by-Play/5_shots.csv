@@ -73,6 +73,6 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 72,15:58,Penalty,Toronto Sceptres,Away,New York Sirens,Toronto Sceptres,3,event,5v5,40,Blayre Turnbull,,,,,,,,,,,,,,,,1,,5,2024-01-05,PWHL,2023/2024,Regular Season
 73,16:40,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v4,17,Ella Shelton,,,,,50,Kristen Campbell,,,,,,,51.0,27.2,0.0261,-1,O23,5,2024-01-05,PWHL,2023/2024,Regular Season
 74,17:27,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v4,18,Élizabeth Giguère,,,,,50,Kristen Campbell,,,,,,,-17.7,38.2,0.0922,-1,N06,5,2024-01-05,PWHL,2023/2024,Regular Season
-75,19:33,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v5 ENF,25,Alex Carpenter,,,,,50,Kristen Campbell,,,,,,,67.0,-4.2,0.0838,-1,O14,5,2024-01-05,PWHL,2023/2024,Regular Season
-76,19:58,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v5 ENF,25,Alex Carpenter,,,,,50,Kristen Campbell,,,,,,,83.7,10.2,0.0758,-1,O08,5,2024-01-05,PWHL,2023/2024,Regular Season
-77,20:00,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,5v5 ENF,14,Jaime Bourbonnais,,,,,50,Kristen Campbell,,,,,,,72.0,0.8,0.0959,-1,O16,5,2024-01-05,PWHL,2023/2024,Regular Season
+75,19:33,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,ENF,25,Alex Carpenter,,,,,50,Kristen Campbell,,,,,,,67.0,-4.2,0.0838,-1,O14,5,2024-01-05,PWHL,2023/2024,Regular Season
+76,19:58,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,ENF,25,Alex Carpenter,,,,,50,Kristen Campbell,,,,,,,83.7,10.2,0.0758,-1,O08,5,2024-01-05,PWHL,2023/2024,Regular Season
+77,20:00,Shot,New York Sirens,Home,New York Sirens,Toronto Sceptres,3,event,ENF,14,Jaime Bourbonnais,,,,,50,Kristen Campbell,,,,,,,72.0,0.8,0.0959,-1,O16,5,2024-01-05,PWHL,2023/2024,Regular Season

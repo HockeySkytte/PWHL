@@ -19,9 +19,9 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 18,11:58,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v5,42,Claire Thompson,,,,,35,Ann-Renée Desbiens,,,,,,,-49.3,-16.1,0.0553,0,D22,156,2025-03-04,PWHL,2024/2025,Regular Season
 19,14:02,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v5,16,Sophie Jaques,,,,,35,Ann-Renée Desbiens,,,,,,,55.3,7.1,0.0573,0,O21,156,2025-03-04,PWHL,2024/2025,Regular Season
 20,14:18,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v5,16,Sophie Jaques,,,,,35,Ann-Renée Desbiens,,,,,,,41.3,32.3,,0,O23,156,2025-03-04,PWHL,2024/2025,Regular Season
-21,16:31,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v5 ENF,19,Maggie Flaherty,,,,,35,Ann-Renée Desbiens,,,,,,,45.0,13.9,0.0573,0,O21,156,2025-03-04,PWHL,2024/2025,Regular Season
-22,16:33,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v5 ENF,77,Britta Curl-Salemme,,,,,35,Ann-Renée Desbiens,,,,,,,72.7,11.3,0.0899,0,O16,156,2025-03-04,PWHL,2024/2025,Regular Season
-23,16:34,Penalty,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,5v5,25,Lina Ljungblom,,,,,,,,,,,,,,,,0,,156,2025-03-04,PWHL,2024/2025,Regular Season
+21,16:31,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,ENF,19,Maggie Flaherty,,,,,35,Ann-Renée Desbiens,,,,,,,45.0,13.9,0.0573,0,O21,156,2025-03-04,PWHL,2024/2025,Regular Season
+22,16:33,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,ENF,77,Britta Curl-Salemme,,,,,35,Ann-Renée Desbiens,,,,,,,72.7,11.3,0.0899,0,O16,156,2025-03-04,PWHL,2024/2025,Regular Season
+23,16:34,Penalty,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,1,event,ENA,25,Lina Ljungblom,,,,,,,,,,,,,,,,0,,156,2025-03-04,PWHL,2024/2025,Regular Season
 24,16:46,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v4,13,Grace Zumwinkle,,,,,35,Ann-Renée Desbiens,,,,,,,43.3,-7.4,,0,O21,156,2025-03-04,PWHL,2024/2025,Regular Season
 25,16:55,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v4,13,Grace Zumwinkle,,,,,35,Ann-Renée Desbiens,,,,,,,61.7,-23.5,,0,O13,156,2025-03-04,PWHL,2024/2025,Regular Season
 26,17:03,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,1,event,5v4,12,Kelly Pannek,,,,,35,Ann-Renée Desbiens,,,,,,,57.0,19.8,,0,O16,156,2025-03-04,PWHL,2024/2025,Regular Season
@@ -49,8 +49,8 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 48,9:26,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,42,Claire Thompson,,,,,35,Ann-Renée Desbiens,,,,,,,59.3,-6.8,0.1110,-1,O15,156,2025-03-04,PWHL,2024/2025,Regular Season
 49,9:34,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,16,Sophie Jaques,,,,,35,Ann-Renée Desbiens,,,,,,,37.3,26.4,0.0277,-1,O26,156,2025-03-04,PWHL,2024/2025,Regular Season
 50,9:39,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,16,Sophie Jaques,,,,,35,Ann-Renée Desbiens,,,,,,,37.3,4.2,,-1,O25,156,2025-03-04,PWHL,2024/2025,Regular Season
-51,10:07,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,26,Kendall Coyne Schofield,,,,,35,Ann-Renée Desbiens,,,,,,,65.7,12.8,0.0959,-1,O16,156,2025-03-04,PWHL,2024/2025,Regular Season
-52,10:07,Penalty,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,5v5,9,Kati Tabin,,,,,,,,,,,,,,,,1,,156,2025-03-04,PWHL,2024/2025,Regular Season
+51,10:07,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,ENF,26,Kendall Coyne Schofield,,,,,35,Ann-Renée Desbiens,,,,,,,65.7,12.8,0.0959,-1,O16,156,2025-03-04,PWHL,2024/2025,Regular Season
+52,10:07,Penalty,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,ENA,9,Kati Tabin,,,,,,,,,,,,,,,,1,,156,2025-03-04,PWHL,2024/2025,Regular Season
 53,11:11,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,16,Sophie Jaques,,,,,35,Ann-Renée Desbiens,,,,,,,29.7,-3.4,,-1,O25,156,2025-03-04,PWHL,2024/2025,Regular Season
 54,11:27,Penalty,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,2,event,4v5,29,Marie-Philip Poulin,,,,,,,,,,,,,,,,1,,156,2025-03-04,PWHL,2024/2025,Regular Season
 55,11:36,Block,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,2,event,5v5,16,Sophie Jaques,,,,,35,Ann-Renée Desbiens,,,,,,,44.7,-10.8,,-1,O21,156,2025-03-04,PWHL,2024/2025,Regular Season

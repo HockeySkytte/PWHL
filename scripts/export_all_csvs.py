@@ -63,15 +63,41 @@ def jget(d: Dict[str, Any], *path, default=""):
 
 
 def fetch_json(url: str) -> Any:
-    try:
-        r = requests.get(url, timeout=30)
-        r.raise_for_status()
-        return r.json()
-    except requests.exceptions.ConnectionError as e:
-        raise SystemExit(
-            f"Cannot connect to {url}. Make sure your Flask app is running (python flask_app.py) "
-            f"or set PWHL_BASE_URL to your deployed URL.\nOriginal error: {e}"
-        )
+    r = requests.get(url, timeout=30)
+    r.raise_for_status()
+    return r.json()
+
+
+def _direct_data_api():
+    """Fallback path: call the upstream PWHL/HockeyTech feed directly.
+
+    We reuse the project’s `PWHLDataAPI` implementation to avoid duplicating parsing logic.
+    """
+    # Import lazily so normal use (with BASE_URL) stays lightweight.
+    from flask_app import PWHLDataAPI  # type: ignore
+    return PWHLDataAPI()
+
+
+def list_all_games_direct() -> List[Dict[str, Any]]:
+    api = _direct_data_api()
+    seasons = [1, 3, 5, 6, 8]
+    games: List[Dict[str, Any]] = []
+    for season in seasons:
+        try:
+            raw = api.fetch_schedule_data(season)
+            games.extend(api.parse_games_data(raw, season))
+        except Exception:
+            continue
+    # Deduplicate by game_id (keep first)
+    seen: set[str] = set()
+    out: List[Dict[str, Any]] = []
+    for g in games:
+        gid = str(g.get('game_id') or '').strip()
+        if not gid or gid in seen:
+            continue
+        seen.add(gid)
+        out.append(g)
+    return out
 
 
 def normalize_game_date(date_label: str, season_year: str, full_date: str = "") -> str:
@@ -114,8 +140,13 @@ def get_seasons(base_url: str) -> List[str]:
 def list_all_games(base_url: str) -> List[Dict[str, Any]]:
     # Fetch across all seasons
     url = f"{base_url}/api/schedule?season_year=All&season_state=All&team=All&status=All"
-    data = fetch_json(url)
-    return data.get("games", [])
+    try:
+        data = fetch_json(url)
+        if isinstance(data, dict):
+            return data.get("games", [])
+    except Exception:
+        pass
+    return []
 
 
 def expand_summary(summary: Dict[str, Any]) -> Dict[str, Any]:
@@ -330,6 +361,21 @@ def fetch_summary_and_pbp(game_id: str) -> Tuple[Dict[str, Any] | None, List[Dic
                 pbp = data
     except Exception:
         pass
+
+    # Fallback: if the local server isn't available, call upstream directly.
+    if summary is None or pbp is None:
+        try:
+            api = _direct_data_api()
+            if summary is None:
+                summary = api.fetch_game_summary(game_id)
+            if pbp is None:
+                pbp_raw = api.fetch_play_by_play(game_id)
+                if isinstance(pbp_raw, dict):
+                    pbp = pbp_raw.get('events') or pbp_raw.get('pbp') or []
+                elif isinstance(pbp_raw, list):
+                    pbp = pbp_raw
+        except Exception:
+            pass
     return summary, pbp
 
 
@@ -345,6 +391,9 @@ def main():
         # Fetch that single game by scanning schedule
         print(f"Fetching game {args.game_id} from {BASE_URL}…")
         games = list_all_games(BASE_URL)
+        if not games:
+            print(f"Local API not reachable at {BASE_URL}; fetching schedule directly from PWHL feed…")
+            games = list_all_games_direct()
         game = next((g for g in games if str(g.get('game_id')) == str(args.game_id)), None)
         if not game:
             raise SystemExit(f"Game {args.game_id} not found in schedule.")
@@ -352,6 +401,9 @@ def main():
     else:
         print(f"Fetching all games from {BASE_URL}…")
         games_to_process = list_all_games(BASE_URL)
+        if not games_to_process:
+            print(f"Local API not reachable at {BASE_URL}; fetching schedule directly from PWHL feed…")
+            games_to_process = list_all_games_direct()
         
         # Apply filters
         if args.season:

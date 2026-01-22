@@ -94,7 +94,7 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 93,16:58,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v5,7,Sidney Morin,,,,,35,Ann-Renée Desbiens,,,,,,,33.0,24.9,,-2,O26,121,2024-12-30,PWHL,2024/2025,Regular Season
 94,17:04,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v5,2,Emily Brown,,,,,35,Ann-Renée Desbiens,,,,,,,29.3,-21.2,,-2,O25,121,2024-12-30,PWHL,2024/2025,Regular Season
 95,17:19,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v5,7,Sidney Morin,,,,,35,Ann-Renée Desbiens,,,,,,,78.0,22.7,,-2,O09,121,2024-12-30,PWHL,2024/2025,Regular Season
-96,17:27,Penalty,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,3,event,5v5 ENA,9,Kati Tabin,,,,,,,,,,,,,,,,2,,121,2024-12-30,PWHL,2024/2025,Regular Season
-97,18:39,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v4 ENF,22,Jessica DiGirolamo,,,,,35,Ann-Renée Desbiens,,,,,,,68.0,-17.8,0.0634,-2,O13,121,2024-12-30,PWHL,2024/2025,Regular Season
+96,17:27,Penalty,Montréal Victoire,Home,Montréal Victoire,Boston Fleet,3,event,ENA,9,Kati Tabin,,,,,,,,,,,,,,,,2,,121,2024-12-30,PWHL,2024/2025,Regular Season
+97,18:39,Shot,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,ENF,22,Jessica DiGirolamo,,,,,35,Ann-Renée Desbiens,,,,,,,68.0,-17.8,0.0634,-2,O13,121,2024-12-30,PWHL,2024/2025,Regular Season
 98,19:39,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v5,77,Susanna Tapani,,,,,35,Ann-Renée Desbiens,,,,,,,58.7,-12.2,,-2,O14,121,2024-12-30,PWHL,2024/2025,Regular Season
 99,19:44,Block,Boston Fleet,Away,Montréal Victoire,Boston Fleet,3,event,5v5,55,Daniela Pejšová,,,,,35,Ann-Renée Desbiens,,,,,,,51.0,-13.9,,-2,O20,121,2024-12-30,PWHL,2024/2025,Regular Season

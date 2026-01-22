@@ -56,5 +56,5 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 55,16:25,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,9,Daryl Watts,,,,,35,Maddie Rooney,,,,,,,72.0,-15.0,0.0398,-1,O13,28,2024-02-14,PWHL,2023/2024,Regular Season
 56,17:19,Shot,Minnesota Frost,Home,Minnesota Frost,Ottawa Charge,3,event,5v5,26,Kendall Coyne Schofield,,,,,38,Emerance Maschmeyer,,,,,,,80.3,13.3,0.0841,1,O08,28,2024-02-14,PWHL,2023/2024,Regular Season
 57,18:19,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5,15,Savannah Harmon,,,,,35,Maddie Rooney,,,,,,,71.0,-35.4,0.0148,-1,O12,28,2024-02-14,PWHL,2023/2024,Regular Season
-58,19:20,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5 ENF,9,Daryl Watts,,,,,35,Maddie Rooney,,,,,,,82.7,-21.2,0.0190,-1,O05,28,2024-02-14,PWHL,2023/2024,Regular Season
-59,19:46,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,5v5 ENF,15,Savannah Harmon,,,,,35,Maddie Rooney,,,,,,,80.3,-10.2,0.0705,-1,O06,28,2024-02-14,PWHL,2023/2024,Regular Season
+58,19:20,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,ENF,9,Daryl Watts,,,,,35,Maddie Rooney,,,,,,,82.7,-21.2,0.0190,-1,O05,28,2024-02-14,PWHL,2023/2024,Regular Season
+59,19:46,Shot,Ottawa Charge,Away,Minnesota Frost,Ottawa Charge,3,event,ENF,15,Savannah Harmon,,,,,35,Maddie Rooney,,,,,,,80.3,-10.2,0.0705,-1,O06,28,2024-02-14,PWHL,2023/2024,Regular Season

@@ -55,7 +55,7 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 54,5:37,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,26,Kendall Coyne Schofield,,,,,39,Abbey Levy,,,,,,,71.3,-24.6,0.0371,0,O13,24,2024-01-28,PWHL,2023/2024,Regular Season
 55,6:47,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,77,Susanna Tapani,,,,,39,Abbey Levy,,,,,,,86.3,9.6,0.0709,0,O08,24,2024-01-28,PWHL,2023/2024,Regular Season
 56,6:55,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,2,Lee Stecklein,,,,,39,Abbey Levy,,,,,,,66.7,-12.5,0.0785,0,O14,24,2024-01-28,PWHL,2023/2024,Regular Season
-57,8:10,Penalty,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,21,Liz Schepers,,,,,,,,,,,,,,,,0,,24,2024-01-28,PWHL,2023/2024,Regular Season
+57,8:10,Penalty,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,ENA,21,Liz Schepers,,,,,,,,,,,,,,,,0,,24,2024-01-28,PWHL,2023/2024,Regular Season
 58,10:48,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,86,Michela Cava,,,,,39,Abbey Levy,,,,,,,76.3,-9.3,0.1248,0,O11,24,2024-01-28,PWHL,2023/2024,Regular Season
 59,10:48,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,86,Michela Cava,,,,,39,Abbey Levy,,,,,,,75.0,-4.2,0.1248,0,O11,24,2024-01-28,PWHL,2023/2024,Regular Season
 60,12:26,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,24,Abby Boreen,,,,,39,Abbey Levy,,,,,,,77.7,0.6,0.1248,0,O11,24,2024-01-28,PWHL,2023/2024,Regular Season

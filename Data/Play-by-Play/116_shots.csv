@@ -9,7 +9,7 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 8,6:16,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,1,event,5v5,13,Alexandra Labelle,,,,,1,Raygan Kirk,,,,,,,81.3,6.2,0.1248,0,O11,116,2024-12-21,PWHL,2024/2025,Regular Season
 9,6:23,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,1,event,5v5,44,Amanda Boulier,,,,,1,Raygan Kirk,,,,,,,84.0,7.1,0.0709,0,O08,116,2024-12-21,PWHL,2024/2025,Regular Season
 10,6:32,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,1,event,5v5,7,Laura Stacey,,,,,1,Raygan Kirk,,,,,,,69.3,4.5,0.0899,0,O16,116,2024-12-21,PWHL,2024/2025,Regular Season
-11,7:58,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,1,event,5v5,9,Daryl Watts,,,,,,,,,,,,,,,,0,,116,2024-12-21,PWHL,2024/2025,Regular Season
+11,7:58,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,1,event,ENA,9,Daryl Watts,,,,,,,,,,,,,,,,0,,116,2024-12-21,PWHL,2024/2025,Regular Season
 12,8:06,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,1,event,5v4,29,Marie-Philip Poulin,,,,,1,Raygan Kirk,,,,,,,57.7,19.0,0.1377,0,O16,116,2024-12-21,PWHL,2024/2025,Regular Season
 13,8:48,Shot,Montréal Victoire,Away,Toronto Sceptres,Montréal Victoire,1,event,5v4,7,Laura Stacey,,,,,1,Raygan Kirk,,,,,,,47.0,-16.4,0.0721,0,O20,116,2024-12-21,PWHL,2024/2025,Regular Season
 14,9:03,Block,Toronto Sceptres,Home,Toronto Sceptres,Montréal Victoire,1,event,4v5,18,Jesse Compher,,,,,20,Elaine Chuli,,,,,,,59.3,23.8,,0,O17,116,2024-12-21,PWHL,2024/2025,Regular Season

@@ -59,7 +59,7 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 58,18:27,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,2,event,5v5,19,Brianne Jenner,,,,,82,Kayle Osborne,,,,,,,87.0,-7.9,0.0982,2,O06,125,2025-01-07,PWHL,2024/2025,Regular Season
 59,18:55,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,2,event,5v5,19,Brianne Jenner,,,,,82,Kayle Osborne,,,,,,,46.3,34.0,0.0232,2,O23,125,2025-01-07,PWHL,2024/2025,Regular Season
 60,19:26,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,2,event,5v5,28,Micah Zandee-Hart,,,,,38,Emerance Maschmeyer,,,,,,,65.0,31.4,0.0162,-2,O18,125,2025-01-07,PWHL,2024/2025,Regular Season
-61,0:21,Penalty,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,5v5,17,Gabbie Hughes,,,,,,,,,,,,,,,,2,,125,2025-01-07,PWHL,2024/2025,Regular Season
+61,0:21,Penalty,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,ENA,17,Gabbie Hughes,,,,,,,,,,,,,,,,2,,125,2025-01-07,PWHL,2024/2025,Regular Season
 62,1:00,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v4,10,Sarah Fillier,,,,,38,Emerance Maschmeyer,,,,,,,54.7,-32.3,0.0546,-2,O19,125,2025-01-07,PWHL,2024/2025,Regular Season
 63,1:16,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v4,10,Sarah Fillier,,,,,38,Emerance Maschmeyer,,,,,,,60.0,21.2,0.0697,-2,O17,125,2025-01-07,PWHL,2024/2025,Regular Season
 64,2:03,Block,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5,40,Noora Tulus,,,,,38,Emerance Maschmeyer,,,,,,,66.0,2.8,,-2,O15,125,2025-01-07,PWHL,2024/2025,Regular Season
@@ -80,6 +80,6 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 79,15:56,Block,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5,14,Jaime Bourbonnais,,,,,38,Emerance Maschmeyer,,,,,,,76.7,14.5,,-1,O08,125,2025-01-07,PWHL,2024/2025,Regular Season
 80,16:41,Block,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,5v5,19,Brianne Jenner,,,,,82,Kayle Osborne,,,,,,,67.0,5.7,,1,O16,125,2025-01-07,PWHL,2024/2025,Regular Season
 81,18:22,Block,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5,20,Allyson Simpson,,,,,38,Emerance Maschmeyer,,,,,,,77.7,17.6,,-1,O08,125,2025-01-07,PWHL,2024/2025,Regular Season
-82,18:24,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5 ENF,13,Elle Hartje,,,,,38,Emerance Maschmeyer,,,,,,,82.7,0.3,0.1328,-1,O11,125,2025-01-07,PWHL,2024/2025,Regular Season
-83,19:14,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5 ENF,13,Elle Hartje,,,,,38,Emerance Maschmeyer,,,,,,,78.3,3.1,0.1328,-1,O11,125,2025-01-07,PWHL,2024/2025,Regular Season
+82,18:24,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,ENF,13,Elle Hartje,,,,,38,Emerance Maschmeyer,,,,,,,82.7,0.3,0.1328,-1,O11,125,2025-01-07,PWHL,2024/2025,Regular Season
+83,19:14,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,ENF,13,Elle Hartje,,,,,38,Emerance Maschmeyer,,,,,,,78.3,3.1,0.1328,-1,O11,125,2025-01-07,PWHL,2024/2025,Regular Season
 84,19:46,Block,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5,17,Ella Shelton,,,,,38,Emerance Maschmeyer,,,,,,,53.0,1.7,,-1,O21,125,2025-01-07,PWHL,2024/2025,Regular Season

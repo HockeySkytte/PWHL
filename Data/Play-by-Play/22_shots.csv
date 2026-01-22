@@ -55,7 +55,7 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 54,5:35,Penalty,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v5,9,Kati Tabin,,,,,,,,,,,,,,,,1,,22,2024-01-27,PWHL,2023/2024,Regular Season
 55,6:10,Goal,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,3,event,5v4,14,Hayley Scamurra,19,Brianne Jenner,15,Savannah Harmon,35,Ann-Renée Desbiens,,2 7 23 43,Mariah Keopple - Laura Stacey - Erin Ambrose - Kristin O'Neill,,14 15 16 19 88,Hayley Scamurra - Savannah Harmon - Kateřina Mrázová - Brianne Jenner - Lexie Adzija,67.7,12.8,0.1464,-1,O16,22,2024-01-27,PWHL,2023/2024,Regular Season
 56,6:47,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v5,9,Kati Tabin,,,,,38,Emerance Maschmeyer,,,,,,,50.7,-16.1,0.0458,0,O20,22,2024-01-27,PWHL,2023/2024,Regular Season
-57,6:54,Penalty,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v5,26,Sarah Bujold,,,,,,,,,,,,,,,,0,,22,2024-01-27,PWHL,2023/2024,Regular Season
+57,6:54,Penalty,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,ENA,26,Sarah Bujold,,,,,,,,,,,,,,,,0,,22,2024-01-27,PWHL,2023/2024,Regular Season
 58,7:17,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,3,event,5v4,19,Brianne Jenner,,,,,35,Ann-Renée Desbiens,,,,,,,60.0,16.4,0.1377,0,O16,22,2024-01-27,PWHL,2023/2024,Regular Season
 59,8:15,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,3,event,5v4,26,Emily Clark,,,,,35,Ann-Renée Desbiens,,,,,,,76.7,5.1,0.1873,0,O11,22,2024-01-27,PWHL,2023/2024,Regular Season
 60,8:22,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,3,event,5v4,9,Daryl Watts,,,,,35,Ann-Renée Desbiens,,,,,,,62.0,-12.5,0.1210,0,O14,22,2024-01-27,PWHL,2023/2024,Regular Season

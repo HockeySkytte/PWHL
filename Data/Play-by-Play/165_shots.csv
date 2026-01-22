@@ -13,8 +13,8 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 12,12:14,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,1,event,5v5,14,Jaime Bourbonnais,,,,,33,Gwyneth Philips,,,,,,,34.3,25.8,0.0258,0,O26,165,2025-03-22,PWHL,2024/2025,Regular Season
 13,12:14,Penalty,Ottawa Charge,Away,New York Sirens,Ottawa Charge,1,event,5v5,2,Aneta Tejralová,,,,,,,,,,,,,,,,0,,165,2025-03-22,PWHL,2024/2025,Regular Season
 14,13:18,Block,New York Sirens,Home,New York Sirens,Ottawa Charge,1,event,5v4,17,Ella Shelton,,,,,33,Gwyneth Philips,,,,,,,61.7,-2.0,,0,O15,165,2025-03-22,PWHL,2024/2025,Regular Season
-15,13:38,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,1,event,5v4,9,Jessie Eldridge,,,,,33,Gwyneth Philips,,,,,,,68.7,-21.0,0.0586,0,O13,165,2025-03-22,PWHL,2024/2025,Regular Season
-16,13:38,Penalty,New York Sirens,Home,New York Sirens,Ottawa Charge,1,event,5v4,10,Sarah Fillier,,,,,,,,,,,,,,,,0,,165,2025-03-22,PWHL,2024/2025,Regular Season
+15,13:38,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,1,event,ENA,9,Jessie Eldridge,,,,,,,,,,,,,68.7,-21.0,1.0000,0,O13,165,2025-03-22,PWHL,2024/2025,Regular Season
+16,13:38,Penalty,New York Sirens,Home,New York Sirens,Ottawa Charge,1,event,ENA,10,Sarah Fillier,,,,,,,,,,,,,,,,0,,165,2025-03-22,PWHL,2024/2025,Regular Season
 17,14:17,Block,Ottawa Charge,Away,New York Sirens,Ottawa Charge,1,event,5v4,27,Shiann Darkangelo,,,,,30,Corinne Schroeder,,,,,,,39.3,-1.7,,0,O25,165,2025-03-22,PWHL,2024/2025,Regular Season
 18,15:03,Block,New York Sirens,Home,New York Sirens,Ottawa Charge,1,event,4v5,27,Jade Downie-Landry,,,,,33,Gwyneth Philips,,,,,,,-57.0,21.5,,0,D19,165,2025-03-22,PWHL,2024/2025,Regular Season
 19,15:24,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,1,event,5v4,13,Tereza Vanišová,,,,,30,Corinne Schroeder,,,,,,,88.7,-23.5,0.0284,0,O05,165,2025-03-22,PWHL,2024/2025,Regular Season
@@ -89,12 +89,12 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 88,14:03,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,5v5,8,Natalie Snodgrass,,,,,30,Corinne Schroeder,,,,,,,57.3,16.4,0.1322,3,O16,165,2025-03-22,PWHL,2024/2025,Regular Season
 89,14:16,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,5v5,27,Shiann Darkangelo,,,,,30,Corinne Schroeder,,,,,,,78.7,-12.8,0.0982,3,O06,165,2025-03-22,PWHL,2024/2025,Regular Season
 90,14:20,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,5v5,71,Jincy Roese,,,,,30,Corinne Schroeder,,,,,,,56.7,2.5,0.0858,3,O21,165,2025-03-22,PWHL,2024/2025,Regular Season
-91,15:04,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5 ENF,25,Alex Carpenter,,,,,33,Gwyneth Philips,,,,,,,79.3,15.0,0.0766,-3,O08,165,2025-03-22,PWHL,2024/2025,Regular Season
-92,16:04,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5 ENF,10,Sarah Fillier,,,,,33,Gwyneth Philips,,,,,,,36.0,21.5,0.0280,-3,O26,165,2025-03-22,PWHL,2024/2025,Regular Season
-93,16:16,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5 ENF,9,Jessie Eldridge,,,,,33,Gwyneth Philips,,,,,,,84.0,4.0,0.2253,-3,O07,165,2025-03-22,PWHL,2024/2025,Regular Season
-94,16:33,Penalty,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,5v5 ENA,71,Jincy Roese,,,,,,,,,,,,,,,,3,,165,2025-03-22,PWHL,2024/2025,Regular Season
-95,16:40,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v4 ENF,28,Micah Zandee-Hart,,,,,33,Gwyneth Philips,,,,,,,40.7,-21.8,0.0682,-3,O24,165,2025-03-22,PWHL,2024/2025,Regular Season
-96,18:38,Penalty,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,5v5 ENA,3,Zoe Boyd,,,,,,,,,,,,,,,,3,,165,2025-03-22,PWHL,2024/2025,Regular Season
-97,19:44,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v4,10,Sarah Fillier,,,,,33,Gwyneth Philips,,,,,,,45.7,30.0,0.0263,-3,O23,165,2025-03-22,PWHL,2024/2025,Regular Season
+91,15:04,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,ENF,25,Alex Carpenter,,,,,33,Gwyneth Philips,,,,,,,79.3,15.0,0.0766,-3,O08,165,2025-03-22,PWHL,2024/2025,Regular Season
+92,16:04,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,ENF,10,Sarah Fillier,,,,,33,Gwyneth Philips,,,,,,,36.0,21.5,0.0280,-3,O26,165,2025-03-22,PWHL,2024/2025,Regular Season
+93,16:16,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,ENF,9,Jessie Eldridge,,,,,33,Gwyneth Philips,,,,,,,84.0,4.0,0.2253,-3,O07,165,2025-03-22,PWHL,2024/2025,Regular Season
+94,16:33,Penalty,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,ENA,71,Jincy Roese,,,,,,,,,,,,,,,,3,,165,2025-03-22,PWHL,2024/2025,Regular Season
+95,16:40,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,ENF,28,Micah Zandee-Hart,,,,,33,Gwyneth Philips,,,,,,,40.7,-21.8,0.0682,-3,O24,165,2025-03-22,PWHL,2024/2025,Regular Season
+96,18:38,Penalty,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,ENA,3,Zoe Boyd,,,,,,,,,,,,,,,,3,,165,2025-03-22,PWHL,2024/2025,Regular Season
+97,19:44,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,ENF,10,Sarah Fillier,,,,,33,Gwyneth Philips,,,,,,,45.7,30.0,0.0263,-3,O23,165,2025-03-22,PWHL,2024/2025,Regular Season
 98,19:53,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v4,15,Gabby Rosenthal,,,,,33,Gwyneth Philips,,,,,,,79.7,-2.0,0.2002,-3,O11,165,2025-03-22,PWHL,2024/2025,Regular Season
 99,19:59,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v4,14,Jaime Bourbonnais,,,,,33,Gwyneth Philips,,,,,,,27.0,-0.3,0.0714,-3,O25,165,2025-03-22,PWHL,2024/2025,Regular Season

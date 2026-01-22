@@ -29,8 +29,8 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 28,19:20,Block,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,25,Emma Greco,,,,,20,Elaine Chuli,,,,,,,34.3,21.8,,-2,O26,55,2024-03-24,PWHL,2023/2024,Regular Season
 29,19:21,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,1,event,5v5,25,Emma Greco,,,,,20,Elaine Chuli,,,,,,,50.0,-28.3,0.0345,-2,O19,55,2024-03-24,PWHL,2023/2024,Regular Season
 30,19:51,Block,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,1,event,5v5,23,Erin Ambrose,,,,,29,Nicole Hensley,,,,,,,57.0,18.1,,2,O16,55,2024-03-24,PWHL,2023/2024,Regular Season
-31,2:22,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v5 ENF,6,Madison Bizal,,,,,29,Nicole Hensley,,,,,,,70.3,-11.6,0.1161,2,O14,55,2024-03-24,PWHL,2023/2024,Regular Season
-32,2:26,Penalty,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,5v5,10,Sydney Brodt,,,,,,,,,,,,,,,,-2,,55,2024-03-24,PWHL,2023/2024,Regular Season
+31,2:22,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,ENF,6,Madison Bizal,,,,,29,Nicole Hensley,,,,,,,70.3,-11.6,0.1161,2,O14,55,2024-03-24,PWHL,2023/2024,Regular Season
+32,2:26,Penalty,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,ENA,10,Sydney Brodt,,,,,,,,,,,,,,,,-2,,55,2024-03-24,PWHL,2023/2024,Regular Season
 33,2:55,Shot,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v4,18,Mikyla Grant-Mentis,,,,,29,Nicole Hensley,,,,,,,66.7,0.3,0.2247,2,O15,55,2024-03-24,PWHL,2023/2024,Regular Season
 34,3:37,Shot,Minnesota Frost,Home,Minnesota Frost,Montréal Victoire,2,event,4v5,13,Grace Zumwinkle,,,,,20,Elaine Chuli,,,,,,,77.3,7.9,0.2143,-2,O11,55,2024-03-24,PWHL,2023/2024,Regular Season
 35,5:02,Block,Montréal Victoire,Away,Minnesota Frost,Montréal Victoire,2,event,5v5,43,Kristin O'Neill,,,,,29,Nicole Hensley,,,,,,,76.3,26.1,,2,O09,55,2024-03-24,PWHL,2023/2024,Regular Season

@@ -62,8 +62,8 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 61,12:37,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,3,event,5v5,26,Kendall Coyne Schofield,,,,,31,Aerin Frankel,,,,,,,77.0,-4.2,0.1803,2,O11,96,2024-05-24,PWHL,2023/2024,Playoffs
 62,13:27,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,5v5,47,Jamie Lee Rattray,,,,,29,Nicole Hensley,,,,,,,55.7,-0.3,0.0620,-2,O21,96,2024-05-24,PWHL,2023/2024,Playoffs
 63,14:11,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,5v5,7,Sidney Morin,,,,,29,Nicole Hensley,,,,,,,64.0,32.9,0.0162,-2,O18,96,2024-05-24,PWHL,2023/2024,Playoffs
-64,15:37,Penalty,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,3,event,5v5 ENA,7,Claire Butorac,,,,,,,,,,,,,,,,2,,96,2024-05-24,PWHL,2023/2024,Playoffs
+64,15:37,Penalty,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,3,event,5v5,7,Claire Butorac,,,,,,,,,,,,,,,,2,,96,2024-05-24,PWHL,2023/2024,Playoffs
 65,15:54,Block,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,5v5,88,Susanna Tapani,,,,,29,Nicole Hensley,,,,,,,51.0,26.6,,-2,O23,96,2024-05-24,PWHL,2023/2024,Playoffs
-66,16:10,Goal,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,3,event,4v5 ENA,13,Grace Zumwinkle,,,,,,,,2 12 13 25,Lee Stecklein - Kelly Pannek - Grace Zumwinkle - Emma Greco,,5 9 12 21 88,Megan Keller - Sophie Shirley - Taylor Wenczkowski - Hilary Knight - Susanna Tapani,80.7,-5.4,1.0000,2,O11,96,2024-05-24,PWHL,2023/2024,Playoffs
+66,16:10,Goal,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,3,event,ENA,13,Grace Zumwinkle,,,,,,,,2 12 13 25,Lee Stecklein - Kelly Pannek - Grace Zumwinkle - Emma Greco,,5 9 12 21 88,Megan Keller - Sophie Shirley - Taylor Wenczkowski - Hilary Knight - Susanna Tapani,80.7,-5.4,1.0000,2,O11,96,2024-05-24,PWHL,2023/2024,Playoffs
 67,19:12,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,5v5,47,Jamie Lee Rattray,,,,,29,Nicole Hensley,,,,,,,52.0,17.8,0.0418,-3,O22,96,2024-05-24,PWHL,2023/2024,Playoffs
 68,19:18,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,5v5,13,Kaleigh Fratkin,,,,,29,Nicole Hensley,,,,,,,36.7,-15.3,0.0454,-3,O25,96,2024-05-24,PWHL,2023/2024,Playoffs

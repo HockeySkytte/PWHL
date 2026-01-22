@@ -64,10 +64,10 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 63,16:43,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v4,8,Maja Nylen Persson,,,,,35,Ann-Renée Desbiens,,,,,,,43.7,24.6,0.0652,-1,O22,141,2025-02-02,PWHL,2024/2025,Regular Season
 64,17:16,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v4,8,Maja Nylen Persson,,,,,35,Ann-Renée Desbiens,,,,,,,38.3,16.7,0.0707,-1,O25,141,2025-02-02,PWHL,2024/2025,Regular Season
 65,17:26,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,27,Jade Downie-Landry,,,,,35,Ann-Renée Desbiens,,,,,,,72.3,4.0,0.0959,-1,O16,141,2025-02-02,PWHL,2024/2025,Regular Season
-66,17:39,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5 ENF,10,Sarah Fillier,,,,,35,Ann-Renée Desbiens,,,,,,,62.3,-26.6,0.0398,-1,O13,141,2025-02-02,PWHL,2024/2025,Regular Season
-67,18:01,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5 ENF,10,Sarah Fillier,,,,,35,Ann-Renée Desbiens,,,,,,,83.3,-11.1,0.0705,-1,O06,141,2025-02-02,PWHL,2024/2025,Regular Season
+66,17:39,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,10,Sarah Fillier,,,,,35,Ann-Renée Desbiens,,,,,,,62.3,-26.6,0.0398,-1,O13,141,2025-02-02,PWHL,2024/2025,Regular Season
+67,18:01,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,ENF,10,Sarah Fillier,,,,,35,Ann-Renée Desbiens,,,,,,,83.3,-11.1,0.0705,-1,O06,141,2025-02-02,PWHL,2024/2025,Regular Season
 68,19:03,Block,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,27,Jade Downie-Landry,,,,,35,Ann-Renée Desbiens,,,,,,,34.0,-0.8,,-1,O25,141,2025-02-02,PWHL,2024/2025,Regular Season
 69,19:15,Block,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,42,Claire Dalton,,,,,82,Kayle Osborne,,,,,,,71.0,13.0,,1,O16,141,2025-02-02,PWHL,2024/2025,Regular Season
-70,19:46,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5 ENF,12,Chloé Aurard-Bushee,,,,,35,Ann-Renée Desbiens,,,,,,,84.3,7.4,0.0758,-1,O08,141,2025-02-02,PWHL,2024/2025,Regular Season
+70,19:46,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,ENF,12,Chloé Aurard-Bushee,,,,,35,Ann-Renée Desbiens,,,,,,,84.3,7.4,0.0758,-1,O08,141,2025-02-02,PWHL,2024/2025,Regular Season
 71,19:50,Block,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,17,Ella Shelton,,,,,35,Ann-Renée Desbiens,,,,,,,40.0,24.6,,-1,O26,141,2025-02-02,PWHL,2024/2025,Regular Season
 72,19:59,Block,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,9,Jessie Eldridge,,,,,35,Ann-Renée Desbiens,,,,,,,31.0,2.0,,-1,O25,141,2025-02-02,PWHL,2024/2025,Regular Season

@@ -62,5 +62,5 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 61,17:15,Block,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v5,47,Jamie Lee Rattray,,,,,35,Maddie Rooney,,,,,,,51.3,-15.6,,1,O20,94,2024-05-19,PWHL,2023/2024,Playoffs
 62,17:25,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,3,event,5v5,16,Sophie Jaques,,,,,31,Aerin Frankel,,,,,,,77.3,-18.1,0.0705,-1,O06,94,2024-05-19,PWHL,2023/2024,Playoffs
 63,17:41,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,3,event,5v5,12,Kelly Pannek,,,,,31,Aerin Frankel,,,,,,,54.3,17.0,0.0414,-1,O22,94,2024-05-19,PWHL,2023/2024,Playoffs
-64,18:25,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,3,event,5v5 ENF,16,Sophie Jaques,,,,,31,Aerin Frankel,,,,,,,38.0,17.3,0.0450,-1,O25,94,2024-05-19,PWHL,2023/2024,Playoffs
+64,18:25,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,3,event,5v5,16,Sophie Jaques,,,,,31,Aerin Frankel,,,,,,,38.0,17.3,0.0450,-1,O25,94,2024-05-19,PWHL,2023/2024,Playoffs
 65,19:25,Block,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,3,event,5v5,16,Sophie Jaques,,,,,31,Aerin Frankel,,,,,,,47.0,11.1,,-1,O21,94,2024-05-19,PWHL,2023/2024,Playoffs

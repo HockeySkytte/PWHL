@@ -85,8 +85,8 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 84,14:49,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v4,98,Kristýna Kaltounková,,,,,31,Aerin Frankel,,,,,,,79.0,-8.8,0.2002,-2,O11,228,2025-12-17,PWHL,2025/2026,Regular Season
 85,15:29,Block,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v4,18,Maddi Wheeler,,,,,31,Aerin Frankel,,,,,,,42.3,6.5,,-2,O21,228,2025-12-17,PWHL,2025/2026,Regular Season
 86,17:19,Shot,Boston Fleet,Away,New York Sirens,Boston Fleet,3,event,5v5,13,Liz Schepers,,,,,82,Kayle Osborne,,,,,,,83.3,2.3,0.2924,2,O07,228,2025-12-17,PWHL,2025/2026,Regular Season
-87,17:34,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5 ENF,98,Kristýna Kaltounková,,,,,31,Aerin Frankel,,,,,,,49.0,-0.8,0.0620,-2,O21,228,2025-12-17,PWHL,2025/2026,Regular Season
-88,18:07,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5 ENF,98,Kristýna Kaltounková,,,,,31,Aerin Frankel,,,,,,,79.7,6.0,0.1341,-2,O11,228,2025-12-17,PWHL,2025/2026,Regular Season
+87,17:34,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,ENF,98,Kristýna Kaltounková,,,,,31,Aerin Frankel,,,,,,,49.0,-0.8,0.0620,-2,O21,228,2025-12-17,PWHL,2025/2026,Regular Season
+88,18:07,Shot,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,ENF,98,Kristýna Kaltounková,,,,,31,Aerin Frankel,,,,,,,79.7,6.0,0.1341,-2,O11,228,2025-12-17,PWHL,2025/2026,Regular Season
 89,18:36,Block,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,10,Sarah Fillier,,,,,31,Aerin Frankel,,,,,,,45.0,10.8,,-2,O21,228,2025-12-17,PWHL,2025/2026,Regular Season
 90,18:52,Block,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,71,Jincy Roese,,,,,31,Aerin Frankel,,,,,,,53.0,-24.6,,-2,O19,228,2025-12-17,PWHL,2025/2026,Regular Season
 91,19:33,Block,New York Sirens,Home,New York Sirens,Boston Fleet,3,event,5v5,71,Jincy Roese,,,,,31,Aerin Frankel,,,,,,,30.7,-24.4,,-2,O24,228,2025-12-17,PWHL,2025/2026,Regular Season

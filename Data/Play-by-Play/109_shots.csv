@@ -63,7 +63,7 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 62,15:41,Block,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v5,88,Lexie Adzija,,,,,35,Maddie Rooney,,,,,,,45.0,-2.5,,-1,O21,109,2024-12-04,PWHL,2024/2025,Regular Season
 63,18:28,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,3,event,5v5,16,Sophie Jaques,,,,,31,Aerin Frankel,,,,,,,-60.0,37.4,0.0657,1,D12,109,2024-12-04,PWHL,2024/2025,Regular Season
 64,18:36,Shot,Minnesota Frost,Away,Boston Fleet,Minnesota Frost,3,event,5v5,86,Michela Cava,,,,,31,Aerin Frankel,,,,,,,52.3,-16.7,0.0546,1,O20,109,2024-12-04,PWHL,2024/2025,Regular Season
-65,19:11,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v5 ENF,47,Jamie Lee Rattray,,,,,35,Maddie Rooney,,,,,,,73.0,33.4,0.0318,-1,O09,109,2024-12-04,PWHL,2024/2025,Regular Season
-66,19:13,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v5 ENF,77,Susanna Tapani,,,,,35,Maddie Rooney,,,,,,,82.7,11.6,0.0758,-1,O08,109,2024-12-04,PWHL,2024/2025,Regular Season
-67,19:19,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v5 ENF,21,Hilary Knight,,,,,35,Maddie Rooney,,,,,,,33.0,-10.2,0.0450,-1,O25,109,2024-12-04,PWHL,2024/2025,Regular Season
+65,19:11,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,ENF,47,Jamie Lee Rattray,,,,,35,Maddie Rooney,,,,,,,73.0,33.4,0.0318,-1,O09,109,2024-12-04,PWHL,2024/2025,Regular Season
+66,19:13,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,ENF,77,Susanna Tapani,,,,,35,Maddie Rooney,,,,,,,82.7,11.6,0.0758,-1,O08,109,2024-12-04,PWHL,2024/2025,Regular Season
+67,19:19,Shot,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,ENF,21,Hilary Knight,,,,,35,Maddie Rooney,,,,,,,33.0,-10.2,0.0450,-1,O25,109,2024-12-04,PWHL,2024/2025,Regular Season
 68,19:50,Block,Boston Fleet,Home,Boston Fleet,Minnesota Frost,3,event,5v5,21,Hilary Knight,,,,,35,Maddie Rooney,,,,,,,41.0,-7.1,,-1,O21,109,2024-12-04,PWHL,2024/2025,Regular Season

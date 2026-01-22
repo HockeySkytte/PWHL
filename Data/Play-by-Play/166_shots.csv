@@ -49,7 +49,7 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 48,5:58,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5,18,Mikyla Grant-Mentis,,,,,50,Kristen Campbell,,,,,,,81.0,2.5,0.1328,-1,O11,166,2025-03-23,PWHL,2024/2025,Regular Season
 49,5:59,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5,28,Catherine Dubois,,,,,50,Kristen Campbell,,,,,,,80.7,-0.3,0.1328,-1,O11,166,2025-03-23,PWHL,2024/2025,Regular Season
 50,6:35,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,16,Hayley Scamurra,,,,,20,Elaine Chuli,,,,,,,71.7,-21.5,0.0443,1,O13,166,2025-03-23,PWHL,2024/2025,Regular Season
-51,8:55,Penalty,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,20,Sarah Nurse,,,,,,,,,,,,,,,,1,,166,2025-03-23,PWHL,2024/2025,Regular Season
+51,8:55,Penalty,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,ENA,20,Sarah Nurse,,,,,,,,,,,,,,,,1,,166,2025-03-23,PWHL,2024/2025,Regular Season
 52,9:15,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v4,3,Cayla Barnes,,,,,50,Kristen Campbell,,,,,,,50.0,30.0,0.0261,-1,O23,166,2025-03-23,PWHL,2024/2025,Regular Season
 53,9:34,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v4,7,Laura Stacey,,,,,50,Kristen Campbell,,,,,,,56.7,-21.2,0.0540,-1,O19,166,2025-03-23,PWHL,2024/2025,Regular Season
 54,9:35,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v4,29,Marie-Philip Poulin,,,,,50,Kristen Campbell,,,,,,,59.3,1.7,,-1,O15,166,2025-03-23,PWHL,2024/2025,Regular Season

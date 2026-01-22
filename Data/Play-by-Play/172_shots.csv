@@ -75,6 +75,6 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 74,16:40,Block,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v5,7,Laura Stacey,,,,,38,Emerance Maschmeyer,,,,,,,52.7,12.2,,1,O22,172,2024-12-06,PWHL,2024/2025,Regular Season
 75,16:56,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v5,2,Mariah Keopple,,,,,38,Emerance Maschmeyer,,,,,,,55.3,19.0,0.0461,1,O22,172,2024-12-06,PWHL,2024/2025,Regular Season
 76,17:39,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,15,Savannah Harmon,,,,,20,Elaine Chuli,,,,,,,58.7,-23.2,,-1,O13,172,2024-12-06,PWHL,2024/2025,Regular Season
-77,18:36,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5 ENF,17,Gabbie Hughes,,,,,20,Elaine Chuli,,,,,,,73.7,13.9,0.0758,-1,O08,172,2024-12-06,PWHL,2024/2025,Regular Season
+77,18:36,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,ENF,17,Gabbie Hughes,,,,,20,Elaine Chuli,,,,,,,73.7,13.9,0.0758,-1,O08,172,2024-12-06,PWHL,2024/2025,Regular Season
 78,18:52,Block,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,13,Tereza Vanišová,,,,,20,Elaine Chuli,,,,,,,65.0,-25.5,,-1,O13,172,2024-12-06,PWHL,2024/2025,Regular Season
-79,19:01,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5 ENF,15,Savannah Harmon,,,,,20,Elaine Chuli,,,,,,,43.0,-24.9,0.0491,-1,O20,172,2024-12-06,PWHL,2024/2025,Regular Season
+79,19:01,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,ENF,15,Savannah Harmon,,,,,20,Elaine Chuli,,,,,,,43.0,-24.9,0.0491,-1,O20,172,2024-12-06,PWHL,2024/2025,Regular Season

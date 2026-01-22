@@ -26,7 +26,7 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 25,5:39,Shot,Minnesota Frost,Home,Minnesota Frost,New York Sirens,2,event,5v5,27,Taylor Heise,,,,,30,Corinne Schroeder,,,,,,,79.7,-17.0,0.0982,2,O06,107,2024-12-01,PWHL,2024/2025,Regular Season
 26,6:39,Shot,Minnesota Frost,Home,Minnesota Frost,New York Sirens,2,event,5v5,21,Liz Schepers,,,,,30,Corinne Schroeder,,,,,,,14.3,30.9,0.0828,2,N03,107,2024-12-01,PWHL,2024/2025,Regular Season
 27,8:05,Block,New York Sirens,Away,Minnesota Frost,New York Sirens,2,event,5v5,18,Élizabeth Giguère,,,,,29,Nicole Hensley,,,,,,,51.0,-1.1,,-2,O21,107,2024-12-01,PWHL,2024/2025,Regular Season
-28,9:15,Penalty,Minnesota Frost,Home,Minnesota Frost,New York Sirens,2,event,5v5,19,Maggie Flaherty,,,,,,,,,,,,,,,,2,,107,2024-12-01,PWHL,2024/2025,Regular Season
+28,9:15,Penalty,Minnesota Frost,Home,Minnesota Frost,New York Sirens,2,event,ENF,19,Maggie Flaherty,,,,,,,,,,,,,,,,2,,107,2024-12-01,PWHL,2024/2025,Regular Season
 29,10:01,Goal,New York Sirens,Away,Minnesota Frost,New York Sirens,2,event,5v4,9,Jessie Eldridge,25,Alex Carpenter,17,Ella Shelton,29,Nicole Hensley,,16 41 42 71,Sophie Jaques - Denisa Křížová - Claire Thompson - Klára Hymlárová,,9 10 11 17 25,Jessie Eldridge - Sarah Fillier - Abby Roque - Ella Shelton - Alex Carpenter,40.7,21.2,0.0445,-2,O26,107,2024-12-01,PWHL,2024/2025,Regular Season
 30,11:37,Shot,New York Sirens,Away,Minnesota Frost,New York Sirens,2,event,5v5,25,Alex Carpenter,,,,,29,Nicole Hensley,,,,,,,78.0,17.8,0.0758,-1,O08,107,2024-12-01,PWHL,2024/2025,Regular Season
 31,11:56,Shot,Minnesota Frost,Home,Minnesota Frost,New York Sirens,2,event,5v5,42,Claire Thompson,,,,,30,Corinne Schroeder,,,,,,,45.0,-24.1,0.0546,1,O20,107,2024-12-01,PWHL,2024/2025,Regular Season

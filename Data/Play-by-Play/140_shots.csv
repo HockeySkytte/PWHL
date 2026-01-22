@@ -10,7 +10,7 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 9,7:45,Shot,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,55,Rylind MacKinnon,,,,,38,Emerance Maschmeyer,,,,,,,39.3,12.8,0.0420,0,O25,140,2025-02-01,PWHL,2024/2025,Regular Season
 10,8:41,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v5,37,Rebecca Leslie,,,,,1,Raygan Kirk,,,,,,,41.7,-4.2,0.0573,0,O21,140,2025-02-01,PWHL,2024/2025,Regular Season
 11,9:29,Block,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,9,Daryl Watts,,,,,38,Emerance Maschmeyer,,,,,,,42.0,19.3,,0,O22,140,2025-02-01,PWHL,2024/2025,Regular Season
-12,9:44,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,5v5,14,Renata Fast,,,,,,,,,,,,,,,,0,,140,2025-02-01,PWHL,2024/2025,Regular Season
+12,9:44,Penalty,Toronto Sceptres,Home,Toronto Sceptres,Ottawa Charge,1,event,ENA,14,Renata Fast,,,,,,,,,,,,,,,,0,,140,2025-02-01,PWHL,2024/2025,Regular Season
 13,9:45,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v4,2,Aneta Tejralová,,,,,1,Raygan Kirk,,,,,,,71.0,-25.2,0.0222,0,O12,140,2025-02-01,PWHL,2024/2025,Regular Season
 14,9:58,Penalty,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,5v4,19,Brianne Jenner,,,,,,,,,,,,,,,,0,,140,2025-02-01,PWHL,2024/2025,Regular Season
 15,10:46,Shot,Ottawa Charge,Away,Toronto Sceptres,Ottawa Charge,1,event,4v4,92,Danielle Serdachny,,,,,1,Raygan Kirk,,,,,,,51.0,3.1,0.0573,0,O21,140,2025-02-01,PWHL,2024/2025,Regular Season

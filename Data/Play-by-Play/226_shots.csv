@@ -85,5 +85,5 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 84,16:18,Shot,Ottawa Charge,Away,Vancouver Goldeneyes,Ottawa Charge,3,event,5v5,29,Peyton Hemp,,,,,50,Kristen Campbell,,,,,,,69.0,27.2,0.0161,-1,O18,226,2025-12-16,PWHL,2025/2026,Regular Season
 85,16:29,Shot,Ottawa Charge,Away,Vancouver Goldeneyes,Ottawa Charge,3,event,5v5,19,Brianne Jenner,,,,,50,Kristen Campbell,,,,,,,72.0,25.2,0.0161,-1,O18,226,2025-12-16,PWHL,2025/2026,Regular Season
 86,19:14,Block,Ottawa Charge,Away,Vancouver Goldeneyes,Ottawa Charge,3,event,5v5,16,Kateřina Mrázová,,,,,50,Kristen Campbell,,,,,,,46.3,-17.0,,-1,O20,226,2025-12-16,PWHL,2025/2026,Regular Season
-87,19:37,Shot,Ottawa Charge,Away,Vancouver Goldeneyes,Ottawa Charge,3,event,5v5 ENF,37,Rebecca Leslie,,,,,50,Kristen Campbell,,,,,,,51.0,34.6,0.0163,-1,O23,226,2025-12-16,PWHL,2025/2026,Regular Season
+87,19:37,Shot,Ottawa Charge,Away,Vancouver Goldeneyes,Ottawa Charge,3,event,ENF,37,Rebecca Leslie,,,,,50,Kristen Campbell,,,,,,,51.0,34.6,0.0163,-1,O23,226,2025-12-16,PWHL,2025/2026,Regular Season
 88,20:00,Block,Ottawa Charge,Away,Vancouver Goldeneyes,Ottawa Charge,3,event,5v5,19,Brianne Jenner,,,,,50,Kristen Campbell,,,,,,,83.3,8.2,,-1,O08,226,2025-12-16,PWHL,2025/2026,Regular Season

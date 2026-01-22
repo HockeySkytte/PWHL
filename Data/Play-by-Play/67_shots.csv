@@ -95,7 +95,7 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 94,2:42,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,24,Natalie Spooner,,,,,35,Ann-Renée Desbiens,,,,,,,67.7,-4.5,0.0785,0,O14,67,2024-04-20,PWHL,2023/2024,Regular Season
 95,2:47,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,6,Kali Flanagan,,,,,35,Ann-Renée Desbiens,,,,,,,52.0,-14.5,,0,O20,67,2024-04-20,PWHL,2023/2024,Regular Season
 96,3:08,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5,4,Catherine Daoust,,,,,50,Kristen Campbell,,,,,,,31.0,34.9,0.0258,0,O26,67,2024-04-20,PWHL,2023/2024,Regular Season
-97,3:18,Penalty,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,7,Olivia Knowles,,,,,,,,,,,,,,,,0,,67,2024-04-20,PWHL,2023/2024,Regular Season
+97,3:18,Penalty,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,ENA,7,Olivia Knowles,,,,,,,,,,,,,,,,0,,67,2024-04-20,PWHL,2023/2024,Regular Season
 98,5:29,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5,15,Maureen Murphy,,,,,50,Kristen Campbell,,,,,,,67.0,-1.4,0.1041,0,O15,67,2024-04-20,PWHL,2023/2024,Regular Season
 99,5:45,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5,2,Mariah Keopple,,,,,50,Kristen Campbell,,,,,,,29.0,-37.4,,0,O24,67,2024-04-20,PWHL,2023/2024,Regular Season
 100,6:13,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5,16,Sarah Lefort,,,,,50,Kristen Campbell,,,,,,,49.7,-39.9,0.0318,0,O19,67,2024-04-20,PWHL,2023/2024,Regular Season

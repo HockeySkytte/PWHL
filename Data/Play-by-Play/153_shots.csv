@@ -65,7 +65,7 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 64,12:38,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,5v5,41,Denisa Křížová,,,,,50,Kristen Campbell,,,,,,,80.0,2.5,0.1328,-1,O11,153,2025-02-23,PWHL,2024/2025,Regular Season
 65,12:51,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,5v5,23,Mellissa Channell-Watkins,,,,,50,Kristen Campbell,,,,,,,62.0,-25.2,0.0398,-1,O13,153,2025-02-23,PWHL,2024/2025,Regular Season
 66,17:05,Block,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,3,event,5v5,40,Blayre Turnbull,,,,,35,Maddie Rooney,,,,,,,55.0,0.0,,1,O21,153,2025-02-23,PWHL,2024/2025,Regular Season
-67,19:05,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,5v5 ENF,42,Claire Thompson,,,,,50,Kristen Campbell,,,,,,,44.3,-24.4,0.0491,-1,O20,153,2025-02-23,PWHL,2024/2025,Regular Season
-68,19:24,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,5v5 ENF,27,Taylor Heise,,,,,50,Kristen Campbell,,,,,,,57.0,-25.2,0.0398,-1,O13,153,2025-02-23,PWHL,2024/2025,Regular Season
-69,19:31,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,5v5 ENF,42,Claire Thompson,,,,,50,Kristen Campbell,,,,,,,47.3,-13.0,0.0491,-1,O20,153,2025-02-23,PWHL,2024/2025,Regular Season
+67,19:05,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,ENF,42,Claire Thompson,,,,,50,Kristen Campbell,,,,,,,44.3,-24.4,0.0491,-1,O20,153,2025-02-23,PWHL,2024/2025,Regular Season
+68,19:24,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,ENF,27,Taylor Heise,,,,,50,Kristen Campbell,,,,,,,57.0,-25.2,0.0398,-1,O13,153,2025-02-23,PWHL,2024/2025,Regular Season
+69,19:31,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,ENF,42,Claire Thompson,,,,,50,Kristen Campbell,,,,,,,47.3,-13.0,0.0491,-1,O20,153,2025-02-23,PWHL,2024/2025,Regular Season
 70,19:55,Block,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,5v5,42,Claire Thompson,,,,,50,Kristen Campbell,,,,,,,55.0,-11.1,,-1,O20,153,2025-02-23,PWHL,2024/2025,Regular Season

@@ -66,5 +66,5 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 65,15:38,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,3,event,5v5,41,Denisa Křížová,,,,,38,Emerance Maschmeyer,,,,,,,59.7,21.2,0.0488,1,O17,31,2024-02-17,PWHL,2023/2024,Regular Season
 66,17:45,Block,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,3,event,5v5,41,Denisa Křížová,,,,,38,Emerance Maschmeyer,,,,,,,57.7,14.7,,1,O16,31,2024-02-17,PWHL,2023/2024,Regular Season
 67,17:56,Shot,Minnesota Frost,Away,Ottawa Charge,Minnesota Frost,3,event,5v5,13,Grace Zumwinkle,,,,,38,Emerance Maschmeyer,,,,,,,77.0,-19.6,0.0782,1,O06,31,2024-02-17,PWHL,2023/2024,Regular Season
-68,18:49,Shot,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,3,event,5v5 ENF,19,Brianne Jenner,,,,,29,Nicole Hensley,,,,,,,58.7,0.3,0.1110,-1,O15,31,2024-02-17,PWHL,2023/2024,Regular Season
-69,19:21,Shot,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,3,event,5v5 ENF,26,Emily Clark,,,,,29,Nicole Hensley,,,,,,,30.7,22.4,0.0277,-1,O26,31,2024-02-17,PWHL,2023/2024,Regular Season
+68,18:49,Shot,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,3,event,ENF,19,Brianne Jenner,,,,,29,Nicole Hensley,,,,,,,58.7,0.3,0.1110,-1,O15,31,2024-02-17,PWHL,2023/2024,Regular Season
+69,19:21,Shot,Ottawa Charge,Home,Ottawa Charge,Minnesota Frost,3,event,ENF,26,Emily Clark,,,,,29,Nicole Hensley,,,,,,,30.7,22.4,0.0277,-1,O26,31,2024-02-17,PWHL,2023/2024,Regular Season
