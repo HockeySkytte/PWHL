@@ -77,6 +77,6 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 76,11:48,Block,Boston Fleet,Home,Boston Fleet,Montréal Victoire,3,event,5v5,19,Abby Newhook,,,,,35,Ann-Renée Desbiens,,,,,,,48.3,-7.6,,2,O21,213,2025-11-23,PWHL,2025/2026,Regular Season
 77,13:26,Block,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,9,Kati Tabin,,,,,31,Aerin Frankel,,,,,,,54.0,26.9,,-2,O23,213,2025-11-23,PWHL,2025/2026,Regular Season
 78,13:52,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,96,Natálie Mlýnková,,,,,31,Aerin Frankel,,,,,,,41.3,-26.4,0.0496,-2,O20,213,2025-11-23,PWHL,2025/2026,Regular Season
-79,17:09,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,21,Maureen Murphy,,,,,31,Aerin Frankel,,,,,,,46.7,29.7,0.0164,-2,O23,213,2025-11-23,PWHL,2025/2026,Regular Season
-80,17:16,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,27,Shiann Darkangelo,,,,,31,Aerin Frankel,,,,,,,82.7,5.4,0.1341,-2,O11,213,2025-11-23,PWHL,2025/2026,Regular Season
+79,17:09,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5 ENF,21,Maureen Murphy,,,,,31,Aerin Frankel,,,,,,,46.7,29.7,0.0164,-2,O23,213,2025-11-23,PWHL,2025/2026,Regular Season
+80,17:16,Shot,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5 ENF,27,Shiann Darkangelo,,,,,31,Aerin Frankel,,,,,,,82.7,5.4,0.1341,-2,O11,213,2025-11-23,PWHL,2025/2026,Regular Season
 81,18:15,Block,Montréal Victoire,Away,Boston Fleet,Montréal Victoire,3,event,5v5,23,Erin Ambrose,,,,,31,Aerin Frankel,,,,,,,51.0,-18.7,,-2,O20,213,2025-11-23,PWHL,2025/2026,Regular Season

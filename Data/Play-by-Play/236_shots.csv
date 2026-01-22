@@ -45,8 +45,8 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 44,3:33,Shot,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,2,event,5v5,88,Julia Gosling,,,,,35,Ann-Renée Desbiens,,,,,,,67.7,10.8,0.0899,0,O16,236,2025-12-23,PWHL,2025/2026,Regular Season
 45,3:52,Block,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v4,27,Shiann Darkangelo,,,,,83,Hannah Murphy,,,,,,,71.3,-2.0,,0,O14,236,2025-12-23,PWHL,2025/2026,Regular Season
 46,3:59,Block,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v4,22,Jessica DiGirolamo,,,,,83,Hannah Murphy,,,,,,,41.7,-24.1,,0,O20,236,2025-12-23,PWHL,2025/2026,Regular Season
-47,4:17,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v5,27,Shiann Darkangelo,,,,,83,Hannah Murphy,,,,,,,81.3,-7.6,0.1248,0,O11,236,2025-12-23,PWHL,2025/2026,Regular Season
-48,4:17,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v5,27,Shiann Darkangelo,,,,,83,Hannah Murphy,,,,,,,78.0,-4.5,0.1248,0,O11,236,2025-12-23,PWHL,2025/2026,Regular Season
+47,4:17,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v5,27,Shiann Darkangelo,,,,,83,Hannah Murphy,,,,,,,78.0,-4.5,0.1248,0,O11,236,2025-12-23,PWHL,2025/2026,Regular Season
+48,4:17,Shot,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v5,27,Shiann Darkangelo,,,,,83,Hannah Murphy,,,,,,,81.3,-7.6,0.1248,0,O11,236,2025-12-23,PWHL,2025/2026,Regular Season
 49,4:25,Block,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v4,23,Erin Ambrose,,,,,83,Hannah Murphy,,,,,,,46.0,28.6,,0,O23,236,2025-12-23,PWHL,2025/2026,Regular Season
 50,4:47,Shot,Seattle Torrent,Home,Seattle Torrent,Montréal Victoire,2,event,5v5,5,Anna Wilgren,,,,,35,Ann-Renée Desbiens,,,,,,,33.3,-29.7,0.0400,0,O24,236,2025-12-23,PWHL,2025/2026,Regular Season
 51,5:08,Block,Montréal Victoire,Away,Seattle Torrent,Montréal Victoire,2,event,5v5,29,Marie-Philip Poulin,,,,,83,Hannah Murphy,,,,,,,30.0,-35.7,,0,O24,236,2025-12-23,PWHL,2025/2026,Regular Season

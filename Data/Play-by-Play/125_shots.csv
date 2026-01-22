@@ -80,6 +80,6 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 79,15:56,Block,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5,14,Jaime Bourbonnais,,,,,38,Emerance Maschmeyer,,,,,,,76.7,14.5,,-1,O08,125,2025-01-07,PWHL,2024/2025,Regular Season
 80,16:41,Block,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,5v5,19,Brianne Jenner,,,,,82,Kayle Osborne,,,,,,,67.0,5.7,,1,O16,125,2025-01-07,PWHL,2024/2025,Regular Season
 81,18:22,Block,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5,20,Allyson Simpson,,,,,38,Emerance Maschmeyer,,,,,,,77.7,17.6,,-1,O08,125,2025-01-07,PWHL,2024/2025,Regular Season
-82,18:24,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5,13,Elle Hartje,,,,,38,Emerance Maschmeyer,,,,,,,82.7,0.3,0.1328,-1,O11,125,2025-01-07,PWHL,2024/2025,Regular Season
-83,19:14,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5,13,Elle Hartje,,,,,38,Emerance Maschmeyer,,,,,,,78.3,3.1,0.1328,-1,O11,125,2025-01-07,PWHL,2024/2025,Regular Season
+82,18:24,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5 ENF,13,Elle Hartje,,,,,38,Emerance Maschmeyer,,,,,,,82.7,0.3,0.1328,-1,O11,125,2025-01-07,PWHL,2024/2025,Regular Season
+83,19:14,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5 ENF,13,Elle Hartje,,,,,38,Emerance Maschmeyer,,,,,,,78.3,3.1,0.1328,-1,O11,125,2025-01-07,PWHL,2024/2025,Regular Season
 84,19:46,Block,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5,17,Ella Shelton,,,,,38,Emerance Maschmeyer,,,,,,,53.0,1.7,,-1,O21,125,2025-01-07,PWHL,2024/2025,Regular Season

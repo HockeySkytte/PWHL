@@ -82,8 +82,8 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 81,13:56,Block,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5,25,Alex Carpenter,,,,,38,Emerance Maschmeyer,,,,,,,71.0,2.8,,-2,O16,120,2024-12-29,PWHL,2024/2025,Regular Season
 82,14:00,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5,14,Jaime Bourbonnais,,,,,38,Emerance Maschmeyer,,,,,,,80.0,2.5,0.1341,-2,O11,120,2024-12-29,PWHL,2024/2025,Regular Season
 83,14:11,Shot,Ottawa Charge,Away,New York Sirens,Ottawa Charge,3,event,5v5,16,Kateřina Mrázová,,,,,30,Corinne Schroeder,,,,,,,72.0,2.0,0.1322,2,O16,120,2024-12-29,PWHL,2024/2025,Regular Season
-84,18:36,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5,9,Jessie Eldridge,,,,,38,Emerance Maschmeyer,,,,,,,51.3,12.2,0.0418,-2,O22,120,2024-12-29,PWHL,2024/2025,Regular Season
-85,18:53,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5,10,Sarah Fillier,,,,,38,Emerance Maschmeyer,,,,,,,76.7,7.6,0.1341,-2,O11,120,2024-12-29,PWHL,2024/2025,Regular Season
+84,18:36,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5 ENF,9,Jessie Eldridge,,,,,38,Emerance Maschmeyer,,,,,,,51.3,12.2,0.0418,-2,O22,120,2024-12-29,PWHL,2024/2025,Regular Season
+85,18:53,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5 ENF,10,Sarah Fillier,,,,,38,Emerance Maschmeyer,,,,,,,76.7,7.6,0.1341,-2,O11,120,2024-12-29,PWHL,2024/2025,Regular Season
 86,18:57,Block,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5,9,Jessie Eldridge,,,,,38,Emerance Maschmeyer,,,,,,,79.3,6.8,,-2,O11,120,2024-12-29,PWHL,2024/2025,Regular Season
 87,19:35,Block,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5,18,Élizabeth Giguère,,,,,38,Emerance Maschmeyer,,,,,,,89.0,-14.5,,-2,O01,120,2024-12-29,PWHL,2024/2025,Regular Season
-88,19:50,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5,10,Sarah Fillier,,,,,38,Emerance Maschmeyer,,,,,,,91.3,-11.1,0.1609,-2,O02,120,2024-12-29,PWHL,2024/2025,Regular Season
+88,19:50,Shot,New York Sirens,Home,New York Sirens,Ottawa Charge,3,event,5v5 ENF,10,Sarah Fillier,,,,,38,Emerance Maschmeyer,,,,,,,91.3,-11.1,0.1609,-2,O02,120,2024-12-29,PWHL,2024/2025,Regular Season

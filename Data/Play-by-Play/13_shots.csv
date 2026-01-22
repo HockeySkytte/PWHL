@@ -69,4 +69,4 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 68,16:51,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v5,19,Paetyn Levis,,,,,35,Ann-Renée Desbiens,,,,,,,69.7,-3.7,0.0838,-1,O14,13,2024-01-16,PWHL,2023/2024,Regular Season
 69,17:37,Penalty,Montréal Victoire,Home,Montréal Victoire,New York Sirens,3,event,5v5,4,Catherine Daoust,,,,,,,,,,,,,,,,1,,13,2024-01-16,PWHL,2023/2024,Regular Season
 70,18:55,Penalty,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v4,67,Emma Woods,,,,,,,,,,,,,,,,-1,,13,2024-01-16,PWHL,2023/2024,Regular Season
-71,19:58,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,4v5,25,Alex Carpenter,,,,,35,Ann-Renée Desbiens,,,,,,,85.3,-24.9,0.0331,-1,O05,13,2024-01-16,PWHL,2023/2024,Regular Season
+71,19:58,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,4v5 ENF,25,Alex Carpenter,,,,,35,Ann-Renée Desbiens,,,,,,,85.3,-24.9,0.0331,-1,O05,13,2024-01-16,PWHL,2023/2024,Regular Season

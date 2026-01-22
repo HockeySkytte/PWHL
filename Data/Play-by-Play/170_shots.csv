@@ -92,7 +92,7 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 91,15:11,Block,Montréal Victoire,Home,Montréal Victoire,New York Sirens,3,event,3v5,7,Laura Stacey,,,,,30,Corinne Schroeder,,,,,,,44.7,18.4,,-1,O22,170,2025-04-01,PWHL,2024/2025,Regular Season
 92,16:54,Block,Montréal Victoire,Home,Montréal Victoire,New York Sirens,3,event,5v5,18,Mikyla Grant-Mentis,,,,,30,Corinne Schroeder,,,,,,,36.3,1.7,,-1,O25,170,2025-04-01,PWHL,2024/2025,Regular Season
 93,17:45,Block,Montréal Victoire,Home,Montréal Victoire,New York Sirens,3,event,5v5,23,Erin Ambrose,,,,,30,Corinne Schroeder,,,,,,,51.0,-24.6,,-1,O19,170,2025-04-01,PWHL,2024/2025,Regular Season
-94,17:56,Shot,Montréal Victoire,Home,Montréal Victoire,New York Sirens,3,event,5v5,29,Marie-Philip Poulin,,,,,30,Corinne Schroeder,,,,,,,30.0,9.1,0.0450,-1,O25,170,2025-04-01,PWHL,2024/2025,Regular Season
-95,18:43,Penalty,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v5,20,Allyson Simpson,,,,,,,,,,,,,,,,1,,170,2025-04-01,PWHL,2024/2025,Regular Season
-96,19:16,Shot,Montréal Victoire,Home,Montréal Victoire,New York Sirens,3,event,5v4,12,Jenn Gardiner,,,,,30,Corinne Schroeder,,,,,,,82.0,7.6,0.1171,-1,O08,170,2025-04-01,PWHL,2024/2025,Regular Season
+94,17:56,Shot,Montréal Victoire,Home,Montréal Victoire,New York Sirens,3,event,5v5 ENF,29,Marie-Philip Poulin,,,,,30,Corinne Schroeder,,,,,,,30.0,9.1,0.0450,-1,O25,170,2025-04-01,PWHL,2024/2025,Regular Season
+95,18:43,Penalty,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v5 ENA,20,Allyson Simpson,,,,,,,,,,,,,,,,1,,170,2025-04-01,PWHL,2024/2025,Regular Season
+96,19:16,Shot,Montréal Victoire,Home,Montréal Victoire,New York Sirens,3,event,5v4 ENF,12,Jenn Gardiner,,,,,30,Corinne Schroeder,,,,,,,82.0,7.6,0.1171,-1,O08,170,2025-04-01,PWHL,2024/2025,Regular Season
 97,19:46,Block,Montréal Victoire,Home,Montréal Victoire,New York Sirens,3,event,5v5,7,Laura Stacey,,,,,30,Corinne Schroeder,,,,,,,47.0,-27.2,,-1,O19,170,2025-04-01,PWHL,2024/2025,Regular Season

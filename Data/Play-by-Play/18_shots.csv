@@ -52,7 +52,7 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 51,16:28,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,11,Akane Shiga,,,,,37,Erica Howe,,,,,,,57.0,-21.0,0.0443,1,O13,18,2024-01-23,PWHL,2023/2024,Regular Season
 52,16:45,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,14,Hayley Scamurra,,,,,37,Erica Howe,,,,,,,63.3,-16.7,0.0929,1,O14,18,2024-01-23,PWHL,2023/2024,Regular Season
 53,17:34,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5,18,Jesse Compher,,,,,38,Emerance Maschmeyer,,,,,,,84.0,-21.8,0.0190,-1,O05,18,2024-01-23,PWHL,2023/2024,Regular Season
-54,17:44,Penalty,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,26,Emily Clark,,,,,,,,,,,,,,,,1,,18,2024-01-23,PWHL,2023/2024,Regular Season
-55,17:57,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v4,20,Sarah Nurse,,,,,38,Emerance Maschmeyer,,,,,,,83.7,23.8,0.0504,-1,O09,18,2024-01-23,PWHL,2023/2024,Regular Season
-56,18:06,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v4,34,Hannah Miller,,,,,38,Emerance Maschmeyer,,,,,,,82.0,-7.4,0.1985,-1,O11,18,2024-01-23,PWHL,2023/2024,Regular Season
+54,17:44,Penalty,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5 ENA,26,Emily Clark,,,,,,,,,,,,,,,,1,,18,2024-01-23,PWHL,2023/2024,Regular Season
+55,17:57,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v4 ENF,20,Sarah Nurse,,,,,38,Emerance Maschmeyer,,,,,,,83.7,23.8,0.0504,-1,O09,18,2024-01-23,PWHL,2023/2024,Regular Season
+56,18:06,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v4 ENF,34,Hannah Miller,,,,,38,Emerance Maschmeyer,,,,,,,82.0,-7.4,0.1985,-1,O11,18,2024-01-23,PWHL,2023/2024,Regular Season
 57,19:17,Goal,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,4v5,88,Lexie Adzija,21,Ashton Bell,3,Zoe Boyd,37,Erica Howe,,2 3 17 21 88,Aneta Tejralová - Zoe Boyd - Gabbie Hughes - Ashton Bell - Lexie Adzija,,3 6 22 24 34 40,Jocelyne Larocque - Kali Flanagan - Maggie Connors - Natalie Spooner - Hannah Miller - Blayre Turnbull,-94.7,15.9,0.1102,1,D01,18,2024-01-23,PWHL,2023/2024,Regular Season

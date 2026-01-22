@@ -88,4 +88,4 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 87,16:58,Penalty,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,16,Sophie Jaques,,,,,,,,,,,,,,,,-2,,131,2025-01-17,PWHL,2024/2025,Regular Season
 88,19:09,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,5v5,71,Anna Kjellbin,,,,,29,Nicole Hensley,,,,,,,38.7,-23.2,0.0605,2,O24,131,2025-01-17,PWHL,2024/2025,Regular Season
 89,19:10,Shot,Montréal Victoire,Home,Montréal Victoire,Minnesota Frost,3,event,5v5,13,Alexandra Labelle,,,,,29,Nicole Hensley,,,,,,,68.0,4.0,0.1322,2,O16,131,2025-01-17,PWHL,2024/2025,Regular Season
-90,19:42,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5,27,Taylor Heise,,,,,35,Ann-Renée Desbiens,,,,,,,32.3,-13.3,0.0454,-2,O25,131,2025-01-17,PWHL,2024/2025,Regular Season
+90,19:42,Shot,Minnesota Frost,Away,Montréal Victoire,Minnesota Frost,3,event,5v5 ENF,27,Taylor Heise,,,,,35,Ann-Renée Desbiens,,,,,,,32.3,-13.3,0.0454,-2,O25,131,2025-01-17,PWHL,2024/2025,Regular Season

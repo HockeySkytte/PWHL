@@ -71,12 +71,12 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 70,13:33,Block,Ottawa Charge,Away,Boston Fleet,Ottawa Charge,3,event,5v4,94,Fanni Garát-Gasparics,,,,,31,Aerin Frankel,,,,,,,61.7,4.2,,-1,O15,34,2024-02-21,PWHL,2023/2024,Regular Season
 71,13:49,Goal,Boston Fleet,Home,Boston Fleet,Ottawa Charge,3,event,5v5,21,Hilary Knight,,,,,38,Emerance Maschmeyer,,2 7 11 21 36,Emily Brown - Sidney Morin - Alina Müller - Hilary Knight - Loren Gabel,,11 14 15 17 21,Akane Shiga - Hayley Scamurra - Savannah Harmon - Gabbie Hughes - Ashton Bell,67.0,-13.6,0.0929,1,O14,34,2024-02-21,PWHL,2023/2024,Regular Season
 72,14:36,Shot,Boston Fleet,Home,Boston Fleet,Ottawa Charge,3,event,5v5,36,Loren Gabel,,,,,38,Emerance Maschmeyer,,,,,,,85.3,-6.8,0.0982,2,O06,34,2024-02-21,PWHL,2023/2024,Regular Season
-73,16:56,Shot,Ottawa Charge,Away,Boston Fleet,Ottawa Charge,3,event,5v5,14,Hayley Scamurra,,,,,31,Aerin Frankel,,,,,,,71.3,-18.7,0.0402,-2,O13,34,2024-02-21,PWHL,2023/2024,Regular Season
-74,17:05,Shot,Ottawa Charge,Away,Boston Fleet,Ottawa Charge,3,event,5v5,14,Hayley Scamurra,,,,,31,Aerin Frankel,,,,,,,47.0,0.8,0.0620,-2,O21,34,2024-02-21,PWHL,2023/2024,Regular Season
-75,17:22,Shot,Ottawa Charge,Away,Boston Fleet,Ottawa Charge,3,event,5v5,15,Savannah Harmon,,,,,31,Aerin Frankel,,,,,,,70.7,23.5,0.0443,-2,O17,34,2024-02-21,PWHL,2023/2024,Regular Season
-76,18:08,Penalty,Boston Fleet,Home,Boston Fleet,Ottawa Charge,3,event,5v5,97,Jess Healey,,,,,,,,,,,,,,,,2,,34,2024-02-21,PWHL,2023/2024,Regular Season
-77,18:08,Penalty,Ottawa Charge,Away,Boston Fleet,Ottawa Charge,3,event,5v5,11,Akane Shiga,,,,,,,,,,,,,,,,-2,,34,2024-02-21,PWHL,2023/2024,Regular Season
+73,16:56,Shot,Ottawa Charge,Away,Boston Fleet,Ottawa Charge,3,event,5v5 ENF,14,Hayley Scamurra,,,,,31,Aerin Frankel,,,,,,,71.3,-18.7,0.0402,-2,O13,34,2024-02-21,PWHL,2023/2024,Regular Season
+74,17:05,Shot,Ottawa Charge,Away,Boston Fleet,Ottawa Charge,3,event,5v5 ENF,14,Hayley Scamurra,,,,,31,Aerin Frankel,,,,,,,47.0,0.8,0.0620,-2,O21,34,2024-02-21,PWHL,2023/2024,Regular Season
+75,17:22,Shot,Ottawa Charge,Away,Boston Fleet,Ottawa Charge,3,event,5v5 ENF,15,Savannah Harmon,,,,,31,Aerin Frankel,,,,,,,70.7,23.5,0.0443,-2,O17,34,2024-02-21,PWHL,2023/2024,Regular Season
+76,18:08,Penalty,Boston Fleet,Home,Boston Fleet,Ottawa Charge,3,event,5v5 ENA,97,Jess Healey,,,,,,,,,,,,,,,,2,,34,2024-02-21,PWHL,2023/2024,Regular Season
+77,18:08,Penalty,Ottawa Charge,Away,Boston Fleet,Ottawa Charge,3,event,5v5 ENF,11,Akane Shiga,,,,,,,,,,,,,,,,-2,,34,2024-02-21,PWHL,2023/2024,Regular Season
 78,18:32,Block,Ottawa Charge,Away,Boston Fleet,Ottawa Charge,3,event,5v5,2,Aneta Tejralová,,,,,31,Aerin Frankel,,,,,,,35.0,13.9,,-2,O25,34,2024-02-21,PWHL,2023/2024,Regular Season
-79,19:40,Shot,Ottawa Charge,Away,Boston Fleet,Ottawa Charge,3,event,5v5,19,Brianne Jenner,,,,,31,Aerin Frankel,,,,,,,65.7,-16.7,0.0402,-2,O13,34,2024-02-21,PWHL,2023/2024,Regular Season
+79,19:40,Shot,Ottawa Charge,Away,Boston Fleet,Ottawa Charge,3,event,5v5 ENF,19,Brianne Jenner,,,,,31,Aerin Frankel,,,,,,,65.7,-16.7,0.0402,-2,O13,34,2024-02-21,PWHL,2023/2024,Regular Season
 80,19:48,Block,Ottawa Charge,Away,Boston Fleet,Ottawa Charge,3,event,5v5,19,Brianne Jenner,,,,,31,Aerin Frankel,,,,,,,59.0,-14.7,,-2,O14,34,2024-02-21,PWHL,2023/2024,Regular Season
-81,19:59,Shot,Ottawa Charge,Away,Boston Fleet,Ottawa Charge,3,event,5v5,19,Brianne Jenner,,,,,31,Aerin Frankel,,,,,,,13.3,-12.8,0.0597,-2,N02,34,2024-02-21,PWHL,2023/2024,Regular Season
+81,19:59,Shot,Ottawa Charge,Away,Boston Fleet,Ottawa Charge,3,event,5v5 ENF,19,Brianne Jenner,,,,,31,Aerin Frankel,,,,,,,13.3,-12.8,0.0597,-2,N02,34,2024-02-21,PWHL,2023/2024,Regular Season

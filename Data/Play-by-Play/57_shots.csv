@@ -48,5 +48,5 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 47,12:33,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,3,event,5v5,34,Hannah Miller,,,,,31,Aerin Frankel,,,,,,,66.7,17.3,0.0438,-1,O17,57,2024-04-18,PWHL,2023/2024,Regular Season
 48,16:01,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,3,event,5v5,18,Jesse Compher,,,,,31,Aerin Frankel,,,,,,,69.0,23.8,0.0438,-1,O17,57,2024-04-18,PWHL,2023/2024,Regular Season
 49,17:15,Penalty,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,3,event,5v5,16,Amanda Pelkey,,,,,,,,,,,,,,,,1,,57,2024-04-18,PWHL,2023/2024,Regular Season
-50,18:55,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,3,event,5v4,6,Kali Flanagan,,,,,31,Aerin Frankel,,,,,,,40.3,-10.5,0.0707,-1,O25,57,2024-04-18,PWHL,2023/2024,Regular Season
-51,20:00,Penalty,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,3,event,5v5,16,Amanda Pelkey,,,,,,,,,,,,,,,,1,,57,2024-04-18,PWHL,2023/2024,Regular Season
+50,18:55,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,3,event,5v4 ENF,6,Kali Flanagan,,,,,31,Aerin Frankel,,,,,,,40.3,-10.5,0.0707,-1,O25,57,2024-04-18,PWHL,2023/2024,Regular Season
+51,20:00,Penalty,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,3,event,5v5 ENA,16,Amanda Pelkey,,,,,,,,,,,,,,,,1,,57,2024-04-18,PWHL,2023/2024,Regular Season

@@ -73,5 +73,5 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 72,15:54,Block,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,3,event,4v5,9,Daryl Watts,,,,,35,Maddie Rooney,,,,,,,44.0,-26.6,,1,O19,210,2025-11-21,PWHL,2025/2026,Regular Season
 73,16:03,Shot,Toronto Sceptres,Away,Minnesota Frost,Toronto Sceptres,3,event,5v4,9,Daryl Watts,,,,,35,Maddie Rooney,,,,,,,55.7,-19.6,0.0854,1,O20,210,2025-11-21,PWHL,2025/2026,Regular Season
 74,18:50,Block,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,5v5,2,Lee Stecklein,,,,,1,Raygan Kirk,,,,,,,34.0,-30.3,,-1,O24,210,2025-11-21,PWHL,2025/2026,Regular Season
-75,19:28,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,5v5,14,Dominique Petrie,,,,,1,Raygan Kirk,,,,,,,73.0,11.1,0.1328,-1,O11,210,2025-11-21,PWHL,2025/2026,Regular Season
-76,19:43,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,5v5,5,Sidney Morin,,,,,1,Raygan Kirk,,,,,,,34.0,0.8,0.0450,-1,O25,210,2025-11-21,PWHL,2025/2026,Regular Season
+75,19:28,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,5v5 ENF,14,Dominique Petrie,,,,,1,Raygan Kirk,,,,,,,73.0,11.1,0.1328,-1,O11,210,2025-11-21,PWHL,2025/2026,Regular Season
+76,19:43,Shot,Minnesota Frost,Home,Minnesota Frost,Toronto Sceptres,3,event,5v5 ENF,5,Sidney Morin,,,,,1,Raygan Kirk,,,,,,,34.0,0.8,0.0450,-1,O25,210,2025-11-21,PWHL,2025/2026,Regular Season

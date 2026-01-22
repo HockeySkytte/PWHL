@@ -69,4 +69,4 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 68,14:32,Block,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v5,3,Cayla Barnes,,,,,33,Gwyneth Philips,,,,,,,59.0,-23.0,,-1,O13,200,2025-05-13,PWHL,2024/2025,Playoffs
 69,16:24,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v5,25,Lina Ljungblom,,,,,33,Gwyneth Philips,,,,,,,79.3,5.7,0.1328,-1,O11,200,2025-05-13,PWHL,2024/2025,Playoffs
 70,17:09,Shot,Ottawa Charge,Home,Ottawa Charge,Montréal Victoire,3,event,5v5,16,Kateřina Mrázová,,,,,35,Ann-Renée Desbiens,,,,,,,72.0,11.1,0.1061,1,O16,200,2025-05-13,PWHL,2024/2025,Playoffs
-71,18:26,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v5,7,Laura Stacey,,,,,33,Gwyneth Philips,,,,,,,60.7,-12.8,0.0838,-1,O14,200,2025-05-13,PWHL,2024/2025,Playoffs
+71,18:26,Shot,Montréal Victoire,Away,Ottawa Charge,Montréal Victoire,3,event,5v5 ENF,7,Laura Stacey,,,,,33,Gwyneth Philips,,,,,,,60.7,-12.8,0.0838,-1,O14,200,2025-05-13,PWHL,2024/2025,Playoffs

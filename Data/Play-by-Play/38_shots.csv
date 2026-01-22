@@ -20,7 +20,7 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 19,13:23,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,1,event,5v5,36,Loren Gabel,,,,,29,Nicole Hensley,,,,,,,69.0,16.1,0.0409,0,O17,38,2024-02-25,PWHL,2023/2024,Regular Season
 20,14:04,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,1,event,5v5,16,Sophie Jaques,,,,,31,Aerin Frankel,,,,,,,33.0,25.8,0.0258,0,O26,38,2024-02-25,PWHL,2023/2024,Regular Season
 21,14:57,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,1,event,5v5,7,Sidney Morin,,,,,29,Nicole Hensley,,,,,,,56.7,29.2,0.0152,0,O23,38,2024-02-25,PWHL,2023/2024,Regular Season
-22,15:27,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,1,event,5v5,7,Sidney Morin,,,,,29,Nicole Hensley,,,,,,,32.3,3.4,0.0420,0,O25,38,2024-02-25,PWHL,2023/2024,Regular Season
+22,15:27,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,1,event,5v5 ENF,7,Sidney Morin,,,,,29,Nicole Hensley,,,,,,,32.3,3.4,0.0420,0,O25,38,2024-02-25,PWHL,2023/2024,Regular Season
 23,15:48,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,1,event,5v5,5,Megan Keller,,,,,29,Nicole Hensley,,,,,,,46.0,-12.5,0.0573,0,O21,38,2024-02-25,PWHL,2023/2024,Regular Season
 24,15:48,Penalty,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,1,event,5v5,29,Nicole Hensley,,,,,,,,,,,,,,,,0,,38,2024-02-25,PWHL,2023/2024,Regular Season
 25,15:49,Shot,Boston Fleet,Away,Minnesota Frost,Boston Fleet,1,event,5v4,21,Hilary Knight,,,,,29,Nicole Hensley,,,,,,,84.3,6.2,0.3021,0,O07,38,2024-02-25,PWHL,2023/2024,Regular Season
@@ -77,6 +77,6 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 76,15:25,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,3,event,5v5,26,Kendall Coyne Schofield,,,,,31,Aerin Frankel,,,,,,,85.3,-9.9,0.0705,-1,O06,38,2024-02-25,PWHL,2023/2024,Regular Season
 77,15:45,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,3,event,5v5,2,Lee Stecklein,,,,,31,Aerin Frankel,,,,,,,40.7,-25.8,0.0429,-1,O24,38,2024-02-25,PWHL,2023/2024,Regular Season
 78,16:33,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,3,event,5v5,26,Kendall Coyne Schofield,,,,,31,Aerin Frankel,,,,,,,53.3,-1.1,0.0614,-1,O21,38,2024-02-25,PWHL,2023/2024,Regular Season
-79,18:41,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,3,event,5v5,12,Kelly Pannek,,,,,31,Aerin Frankel,,,,,,,41.3,9.3,0.0614,-1,O21,38,2024-02-25,PWHL,2023/2024,Regular Season
-80,19:11,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,3,event,5v5,16,Sophie Jaques,,,,,31,Aerin Frankel,,,,,,,48.3,-2.8,0.0614,-1,O21,38,2024-02-25,PWHL,2023/2024,Regular Season
+79,18:41,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,3,event,5v5 ENF,12,Kelly Pannek,,,,,31,Aerin Frankel,,,,,,,41.3,9.3,0.0614,-1,O21,38,2024-02-25,PWHL,2023/2024,Regular Season
+80,19:11,Shot,Minnesota Frost,Home,Minnesota Frost,Boston Fleet,3,event,5v5 ENF,16,Sophie Jaques,,,,,31,Aerin Frankel,,,,,,,48.3,-2.8,0.0614,-1,O21,38,2024-02-25,PWHL,2023/2024,Regular Season
 81,19:52,Goal,Boston Fleet,Away,Minnesota Frost,Boston Fleet,3,event,5v5,19,Gigi Marvin,,,,,29,Nicole Hensley,,2 12 13 16 24 26,Lee Stecklein - Kelly Pannek - Grace Zumwinkle - Sophie Jaques - Abby Boreen - Kendall Coyne Schofield,,5 13 19 20 21,Megan Keller - Kaleigh Fratkin - Gigi Marvin - Hannah Brandt - Hilary Knight,32.0,13.0,0.0500,1,O25,38,2024-02-25,PWHL,2023/2024,Regular Season

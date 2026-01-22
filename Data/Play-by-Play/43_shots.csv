@@ -86,7 +86,7 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 85,15:34,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,26,Kendall Coyne Schofield,,,,,30,Corinne Schroeder,,,,,,,13.0,-14.2,0.0828,2,N02,43,2024-03-03,PWHL,2023/2024,Regular Season
 86,16:25,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,28,Micah Zandee-Hart,,,,,35,Maddie Rooney,,,,,,,72.3,-2.0,0.0847,-2,O14,43,2024-03-03,PWHL,2023/2024,Regular Season
 87,16:28,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,25,Alex Carpenter,,,,,35,Maddie Rooney,,,,,,,77.0,-0.3,0.1341,-2,O11,43,2024-03-03,PWHL,2023/2024,Regular Season
-88,18:20,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,9,Jessie Eldridge,,,,,35,Maddie Rooney,,,,,,,87.7,-21.2,0.0192,-2,O05,43,2024-03-03,PWHL,2023/2024,Regular Season
+88,18:20,Shot,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5 ENF,9,Jessie Eldridge,,,,,35,Maddie Rooney,,,,,,,87.7,-21.2,0.0192,-2,O05,43,2024-03-03,PWHL,2023/2024,Regular Season
 89,18:39,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,27,Jade Downie-Landry,,,,,35,Maddie Rooney,,,,,,,36.0,-7.9,,-2,O25,43,2024-03-03,PWHL,2023/2024,Regular Season
 90,18:53,Block,New York Sirens,Home,New York Sirens,Minnesota Frost,3,event,5v5,25,Alex Carpenter,,,,,35,Maddie Rooney,,,,,,,37.0,12.8,,-2,O25,43,2024-03-03,PWHL,2023/2024,Regular Season
 91,19:35,Shot,Minnesota Frost,Away,New York Sirens,Minnesota Frost,3,event,5v5,24,Abby Boreen,,,,,30,Corinne Schroeder,,,,,,,82.3,-10.5,0.0982,2,O06,43,2024-03-03,PWHL,2023/2024,Regular Season

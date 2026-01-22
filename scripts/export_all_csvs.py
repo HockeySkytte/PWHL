@@ -35,11 +35,14 @@ def load_teams(path: str) -> Dict[str, Dict[str, str]]:
             name = (row.get('name') or '').strip()
             if not name:
                 continue
+            tid = (row.get('id') or row.get('\ufeffid') or '').strip()
+            team_code = (row.get('team_code') or row.get('code') or '').strip()
             teams[name] = {
-                'id': row.get('id', ''),
+                'id': tid,
                 'color': row.get('color', ''),
                 'logo': row.get('logo', ''),
                 'nickname': row.get('nickname', ''),
+                'team_code': team_code,
             }
     return teams
 

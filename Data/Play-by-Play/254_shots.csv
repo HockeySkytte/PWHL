@@ -1,1 +1,86 @@
-id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,xG,ScoreState,BoxID,game_id,game_date,competition,season,state
+1,0:17,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v5,23,Sarah Wozniewicz,,,,,35,Ann-Renée Desbiens,,,,,,,81.0,-6.5,0.1248,0,O11,254,2026-01-13,PWHL,2025/2026,Regular Season
+2,0:19,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v5,23,Sarah Wozniewicz,,,,,35,Ann-Renée Desbiens,,,,,,,73.3,-8.8,0.1248,0,O11,254,2026-01-13,PWHL,2025/2026,Regular Season
+3,0:44,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v5,71,Fanuza Kadirova,,,,,35,Ann-Renée Desbiens,,,,,,,71.0,11.1,0.0899,0,O16,254,2026-01-13,PWHL,2025/2026,Regular Season
+4,0:57,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v5,6,Stephanie Markowski,,,,,35,Ann-Renée Desbiens,,,,,,,31.7,-35.7,0.0400,0,O24,254,2026-01-13,PWHL,2025/2026,Regular Season
+5,1:46,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v5,97,Anna Shokhina,,,,,35,Ann-Renée Desbiens,,,,,,,75.0,6.2,0.1248,0,O11,254,2026-01-13,PWHL,2025/2026,Regular Season
+6,2:08,Penalty,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v5,17,Gabbie Hughes,,,,,,,,,,,,,,,,0,,254,2026-01-13,PWHL,2025/2026,Regular Season
+7,2:22,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v4,23,Erin Ambrose,,,,,33,Gwyneth Philips,,,,,,,41.0,2.5,0.0895,0,O21,254,2026-01-13,PWHL,2025/2026,Regular Season
+8,2:40,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v4,61,Nicole Gosling,,,,,33,Gwyneth Philips,,,,,,,70.7,-18.1,0.0586,0,O13,254,2026-01-13,PWHL,2025/2026,Regular Season
+9,3:00,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v4,61,Nicole Gosling,,,,,33,Gwyneth Philips,,,,,,,38.7,-24.4,0.0632,0,O24,254,2026-01-13,PWHL,2025/2026,Regular Season
+10,3:58,Goal,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v4,27,Shiann Darkangelo,16,Hayley Scamurra,91,Maggie Flaherty,33,Gwyneth Philips,,9 16 21 27 91,Kati Tabin - Hayley Scamurra - Maureen Murphy - Shiann Darkangelo - Maggie Flaherty,,8 11 16 94,Kathryn Reilly - Brooke Hobson - Kateřina Mrázová - Anna Meixner,78.0,11.3,0.1099,0,O08,254,2026-01-13,PWHL,2025/2026,Regular Season
+11,4:31,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v5,88,Skylar Irving,,,,,33,Gwyneth Philips,,,,,,,82.0,-15.3,0.0782,1,O06,254,2026-01-13,PWHL,2025/2026,Regular Season
+12,5:11,Penalty,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v5,88,Skylar Irving,,,,,,,,,,,,,,,,1,,254,2026-01-13,PWHL,2025/2026,Regular Season
+13,5:55,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v4,19,Brianne Jenner,,,,,35,Ann-Renée Desbiens,,,,,,,57.3,-23.8,0.0627,-1,O13,254,2026-01-13,PWHL,2025/2026,Regular Season
+14,6:19,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v4,19,Brianne Jenner,,,,,35,Ann-Renée Desbiens,,,,,,,64.0,19.6,,-1,O17,254,2026-01-13,PWHL,2025/2026,Regular Season
+15,6:25,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,4v5,7,Laura Stacey,,,,,33,Gwyneth Philips,,,,,,,80.7,3.1,0.2319,1,O11,254,2026-01-13,PWHL,2025/2026,Regular Season
+16,6:38,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v4,19,Brianne Jenner,,,,,35,Ann-Renée Desbiens,,,,,,,66.3,17.0,0.0690,-1,O17,254,2026-01-13,PWHL,2025/2026,Regular Season
+17,7:21,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v5,71,Fanuza Kadirova,,,,,35,Ann-Renée Desbiens,,,,,,,76.3,-6.5,0.1328,-1,O11,254,2026-01-13,PWHL,2025/2026,Regular Season
+18,7:52,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v5,19,Kaitlin Willoughby,,,,,33,Gwyneth Philips,,,,,,,76.7,-0.8,0.1463,1,O11,254,2026-01-13,PWHL,2025/2026,Regular Season
+19,8:04,Penalty,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v5,28,Catherine Dubois,,,,,,,,,,,,,,,,1,,254,2026-01-13,PWHL,2025/2026,Regular Season
+20,10:05,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v5,71,Fanuza Kadirova,,,,,35,Ann-Renée Desbiens,,,,,,,76.3,17.0,,-1,O08,254,2026-01-13,PWHL,2025/2026,Regular Season
+21,10:11,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v5,3,Jocelyne Larocque,,,,,35,Ann-Renée Desbiens,,,,,,,62.7,-23.0,0.0398,-1,O13,254,2026-01-13,PWHL,2025/2026,Regular Season
+22,11:50,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v5,3,Jocelyne Larocque,,,,,35,Ann-Renée Desbiens,,,,,,,31.0,18.7,,-1,O25,254,2026-01-13,PWHL,2025/2026,Regular Season
+23,12:57,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v5,9,Kati Tabin,,,,,33,Gwyneth Philips,,,,,,,32.0,22.7,0.0309,1,O26,254,2026-01-13,PWHL,2025/2026,Regular Season
+24,14:16,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v5,27,Shiann Darkangelo,,,,,33,Gwyneth Philips,,,,,,,44.3,-23.2,,1,O20,254,2026-01-13,PWHL,2025/2026,Regular Season
+25,14:18,Goal,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v5,22,Jessica DiGirolamo,27,Shiann Darkangelo,21,Maureen Murphy,33,Gwyneth Philips,,21 22 25 27 44,Maureen Murphy - Jessica DiGirolamo - Lina Ljungblom - Shiann Darkangelo - Amanda Boulier,,8 10 11 94 97,Kathryn Reilly - Alexa Vasko - Brooke Hobson - Anna Meixner - Anna Shokhina,81.7,0.8,0.1463,1,O11,254,2026-01-13,PWHL,2025/2026,Regular Season
+26,15:08,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v5,21,Maureen Murphy,,,,,33,Gwyneth Philips,,,,,,,72.7,-17.0,0.0561,2,O13,254,2026-01-13,PWHL,2025/2026,Regular Season
+27,15:57,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v5,22,Jessica DiGirolamo,,,,,33,Gwyneth Philips,,,,,,,38.0,-33.1,0.0605,2,O24,254,2026-01-13,PWHL,2025/2026,Regular Season
+28,16:05,Penalty,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v5,71,Fanuza Kadirova,,,,,,,,,,,,,,,,-2,,254,2026-01-13,PWHL,2025/2026,Regular Season
+29,17:56,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v4,27,Shiann Darkangelo,,,,,33,Gwyneth Philips,,,,,,,67.3,17.3,0.0962,2,O17,254,2026-01-13,PWHL,2025/2026,Regular Season
+30,18:11,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v5,21,Maureen Murphy,,,,,33,Gwyneth Philips,,,,,,,67.3,-25.8,0.0561,2,O13,254,2026-01-13,PWHL,2025/2026,Regular Season
+31,19:05,Penalty,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,1,event,5v5,23,Erin Ambrose,,,,,,,,,,,,,,,,2,,254,2026-01-13,PWHL,2025/2026,Regular Season
+32,19:56,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v4,71,Fanuza Kadirova,,,,,35,Ann-Renée Desbiens,,,,,,,61.0,20.7,0.0697,-2,O17,254,2026-01-13,PWHL,2025/2026,Regular Season
+33,19:57,Goal,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,1,event,5v4,88,Ronja Savolainen,71,Fanuza Kadirova,16,Kateřina Mrázová,35,Ann-Renée Desbiens,,9 21 27 91,Kati Tabin - Maureen Murphy - Shiann Darkangelo - Maggie Flaherty,,3 16 23 71 88,Jocelyne Larocque - Kateřina Mrázová - Sarah Wozniewicz - Fanuza Kadirova - Ronja Savolainen,81.3,0.6,0.2002,-2,O11,254,2026-01-13,PWHL,2025/2026,Regular Season
+34,1:33,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v5,9,Kati Tabin,,,,,33,Gwyneth Philips,,,,,,,32.7,23.8,0.0309,1,O26,254,2026-01-13,PWHL,2025/2026,Regular Season
+35,1:37,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v5,21,Maureen Murphy,,,,,33,Gwyneth Philips,,,,,,,78.3,34.6,0.0268,1,O10,254,2026-01-13,PWHL,2025/2026,Regular Season
+36,2:02,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,5v5,29,Peyton Hemp,,,,,35,Ann-Renée Desbiens,,,,,,,78.3,36.5,0.0240,-1,O10,254,2026-01-13,PWHL,2025/2026,Regular Season
+37,2:22,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,4v5,8,Kathryn Reilly,,,,,35,Ann-Renée Desbiens,,,,,,,32.3,26.4,,-1,O26,254,2026-01-13,PWHL,2025/2026,Regular Season
+38,2:25,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,5v5,71,Fanuza Kadirova,,,,,35,Ann-Renée Desbiens,,,,,,,52.7,17.0,0.0414,-1,O22,254,2026-01-13,PWHL,2025/2026,Regular Season
+39,3:10,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,4v5,97,Anna Shokhina,,,,,35,Ann-Renée Desbiens,,,,,,,53.3,-30.9,,-1,O19,254,2026-01-13,PWHL,2025/2026,Regular Season
+40,4:34,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,5v5,19,Brianne Jenner,,,,,35,Ann-Renée Desbiens,,,,,,,32.7,34.9,,-1,O26,254,2026-01-13,PWHL,2025/2026,Regular Season
+41,4:45,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,5v5,19,Brianne Jenner,,,,,35,Ann-Renée Desbiens,,,,,,,76.3,3.4,0.1328,-1,O11,254,2026-01-13,PWHL,2025/2026,Regular Season
+42,5:14,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,4v5,23,Erin Ambrose,,,,,33,Gwyneth Philips,,,,,,,69.3,-0.6,,1,O15,254,2026-01-13,PWHL,2025/2026,Regular Season
+43,5:27,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v5,23,Erin Ambrose,,,,,33,Gwyneth Philips,,,,,,,53.0,-3.7,0.0682,1,O21,254,2026-01-13,PWHL,2025/2026,Regular Season
+44,6:24,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v5,77,Jade Downie-Landry,,,,,33,Gwyneth Philips,,,,,,,67.7,-2.3,0.1225,1,O15,254,2026-01-13,PWHL,2025/2026,Regular Season
+45,7:16,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v5,7,Laura Stacey,,,,,33,Gwyneth Philips,,,,,,,61.0,1.7,0.1225,1,O15,254,2026-01-13,PWHL,2025/2026,Regular Season
+46,7:17,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v5,91,Maggie Flaherty,,,,,33,Gwyneth Philips,,,,,,,55.7,14.5,,1,O22,254,2026-01-13,PWHL,2025/2026,Regular Season
+47,7:32,Penalty,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v5,7,Laura Stacey,,,,,,,,,,,,,,,,1,,254,2026-01-13,PWHL,2025/2026,Regular Season
+48,7:44,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,5v5,5,Rory Guilday,,,,,35,Ann-Renée Desbiens,,,,,,,30.0,-3.7,,-1,O25,254,2026-01-13,PWHL,2025/2026,Regular Season
+49,10:00,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v5,7,Laura Stacey,,,,,33,Gwyneth Philips,,,,,,,81.0,-0.6,0.1463,1,O11,254,2026-01-13,PWHL,2025/2026,Regular Season
+50,10:13,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v5,7,Laura Stacey,,,,,33,Gwyneth Philips,,,,,,,83.3,-3.1,0.2435,1,O07,254,2026-01-13,PWHL,2025/2026,Regular Season
+51,10:42,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v5,21,Maureen Murphy,,,,,33,Gwyneth Philips,,,,,,,77.3,35.1,,1,O10,254,2026-01-13,PWHL,2025/2026,Regular Season
+52,11:33,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v5,88,Skylar Irving,,,,,33,Gwyneth Philips,,,,,,,75.0,1.7,0.1463,1,O11,254,2026-01-13,PWHL,2025/2026,Regular Season
+53,12:04,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,5v5,88,Ronja Savolainen,,,,,35,Ann-Renée Desbiens,,,,,,,33.3,4.5,,-1,O25,254,2026-01-13,PWHL,2025/2026,Regular Season
+54,12:09,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,5v5,3,Jocelyne Larocque,,,,,35,Ann-Renée Desbiens,,,,,,,34.0,2.8,,-1,O25,254,2026-01-13,PWHL,2025/2026,Regular Season
+55,12:48,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,5v5,94,Anna Meixner,,,,,35,Ann-Renée Desbiens,,,,,,,33.7,-20.7,,-1,O24,254,2026-01-13,PWHL,2025/2026,Regular Season
+56,13:20,Penalty,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,5v5,5,Rory Guilday,,,,,,,,,,,,,,,,-1,,254,2026-01-13,PWHL,2025/2026,Regular Season
+57,14:15,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v5,61,Nicole Gosling,,,,,33,Gwyneth Philips,,,,,,,34.3,-2.8,,1,O25,254,2026-01-13,PWHL,2025/2026,Regular Season
+58,14:21,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,4v5,18,Mannon McMahon,,,,,35,Ann-Renée Desbiens,,,,,,,-67.0,5.1,0.0997,-1,D14,254,2026-01-13,PWHL,2025/2026,Regular Season
+59,16:37,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v5,96,Natálie Mlýnková,,,,,33,Gwyneth Philips,,,,,,,87.0,-28.1,0.0213,1,O05,254,2026-01-13,PWHL,2025/2026,Regular Season
+60,16:39,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v5,88,Skylar Irving,,,,,33,Gwyneth Philips,,,,,,,77.7,-11.1,0.0782,1,O06,254,2026-01-13,PWHL,2025/2026,Regular Season
+61,17:13,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,4v5,88,Ronja Savolainen,,,,,35,Ann-Renée Desbiens,,,,,,,37.3,16.7,,-1,O25,254,2026-01-13,PWHL,2025/2026,Regular Season
+62,18:26,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v5,29,Marie-Philip Poulin,,,,,33,Gwyneth Philips,,,,,,,85.0,-13.3,0.0782,1,O06,254,2026-01-13,PWHL,2025/2026,Regular Season
+63,19:07,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v5,77,Jade Downie-Landry,,,,,33,Gwyneth Philips,,,,,,,63.0,22.4,0.0488,1,O17,254,2026-01-13,PWHL,2025/2026,Regular Season
+64,19:14,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,2,event,5v5,77,Jade Downie-Landry,,,,,33,Gwyneth Philips,,,,,,,59.0,10.8,0.1061,1,O16,254,2026-01-13,PWHL,2025/2026,Regular Season
+65,19:23,Penalty,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,2,event,5v5,19,Brianne Jenner,,,,,,,,,,,,,,,,-1,,254,2026-01-13,PWHL,2025/2026,Regular Season
+66,0:49,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v5,29,Marie-Philip Poulin,,,,,33,Gwyneth Philips,,,,,,,34.0,-8.2,,1,O25,254,2026-01-13,PWHL,2025/2026,Regular Season
+67,1:34,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,3,event,5v5,23,Sarah Wozniewicz,,,,,35,Ann-Renée Desbiens,,,,,,,33.0,26.1,,-1,O26,254,2026-01-13,PWHL,2025/2026,Regular Season
+68,1:49,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,3,event,5v5,37,Rebecca Leslie,,,,,35,Ann-Renée Desbiens,,,,,,,39.0,18.1,,-1,O26,254,2026-01-13,PWHL,2025/2026,Regular Season
+69,2:20,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,3,event,5v5,11,Brooke Hobson,,,,,35,Ann-Renée Desbiens,,,,,,,37.0,-30.9,0.0429,-1,O24,254,2026-01-13,PWHL,2025/2026,Regular Season
+70,5:02,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v5,16,Hayley Scamurra,,,,,33,Gwyneth Philips,,,,,,,33.0,-26.6,0.0477,1,O24,254,2026-01-13,PWHL,2025/2026,Regular Season
+71,5:38,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,4v5,16,Hayley Scamurra,,,,,33,Gwyneth Philips,,,,,,,76.3,8.2,,1,O11,254,2026-01-13,PWHL,2025/2026,Regular Season
+72,6:09,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,3,event,5v4,17,Gabbie Hughes,,,,,35,Ann-Renée Desbiens,,,,,,,62.7,-5.1,,-1,O15,254,2026-01-13,PWHL,2025/2026,Regular Season
+73,7:10,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,3,event,5v4,29,Peyton Hemp,,,,,35,Ann-Renée Desbiens,,,,,,,56.3,8.2,,-1,O21,254,2026-01-13,PWHL,2025/2026,Regular Season
+74,7:32,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v5,25,Lina Ljungblom,,,,,33,Gwyneth Philips,,,,,,,52.7,-24.6,,1,O19,254,2026-01-13,PWHL,2025/2026,Regular Season
+75,7:49,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v5,23,Erin Ambrose,,,,,33,Gwyneth Philips,,,,,,,66.7,10.5,0.1061,1,O16,254,2026-01-13,PWHL,2025/2026,Regular Season
+76,7:55,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v5,23,Erin Ambrose,,,,,33,Gwyneth Philips,,,,,,,38.0,15.3,,1,O25,254,2026-01-13,PWHL,2025/2026,Regular Season
+77,7:58,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v5,23,Erin Ambrose,,,,,33,Gwyneth Philips,,,,,,,49.0,21.2,,1,O22,254,2026-01-13,PWHL,2025/2026,Regular Season
+78,9:01,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,4v5,9,Kati Tabin,,,,,33,Gwyneth Philips,,,,,,,32.0,-5.4,,1,O25,254,2026-01-13,PWHL,2025/2026,Regular Season
+79,9:31,Block,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,4v5,29,Marie-Philip Poulin,,,,,33,Gwyneth Philips,,,,,,,45.7,6.5,,1,O21,254,2026-01-13,PWHL,2025/2026,Regular Season
+80,10:49,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v5,22,Jessica DiGirolamo,,,,,33,Gwyneth Philips,,,,,,,19.0,-14.2,0.0657,1,N02,254,2026-01-13,PWHL,2025/2026,Regular Season
+81,10:53,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v5,7,Laura Stacey,,,,,33,Gwyneth Philips,,,,,,,66.7,-33.7,0.0166,1,O12,254,2026-01-13,PWHL,2025/2026,Regular Season
+82,18:19,Shot,Montréal Victoire,Home,Montréal Victoire,Ottawa Charge,3,event,5v5,27,Shiann Darkangelo,,,,,33,Gwyneth Philips,,,,,,,47.0,2.3,0.0682,1,O21,254,2026-01-13,PWHL,2025/2026,Regular Season
+83,19:30,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,3,event,5v5 ENF,26,Emily Clark,,,,,35,Ann-Renée Desbiens,,,,,,,84.0,19.3,0.0318,-1,O09,254,2026-01-13,PWHL,2025/2026,Regular Season
+84,19:40,Block,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,3,event,5v4,19,Brianne Jenner,,,,,35,Ann-Renée Desbiens,,,,,,,40.3,24.6,,-1,O26,254,2026-01-13,PWHL,2025/2026,Regular Season
+85,19:56,Shot,Ottawa Charge,Away,Montréal Victoire,Ottawa Charge,3,event,5v5 ENF,16,Kateřina Mrázová,,,,,35,Ann-Renée Desbiens,,,,,,,69.3,-13.6,0.0838,-1,O14,254,2026-01-13,PWHL,2025/2026,Regular Season

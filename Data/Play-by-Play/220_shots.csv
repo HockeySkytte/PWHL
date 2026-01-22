@@ -66,5 +66,5 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 65,17:31,Shot,Vancouver Goldeneyes,Away,Boston Fleet,Vancouver Goldeneyes,3,event,5v5,34,Hannah Miller,,,,,31,Aerin Frankel,,,,,,,47.0,-21.0,0.0496,-2,O20,220,2025-12-03,PWHL,2025/2026,Regular Season
 66,17:33,Shot,Vancouver Goldeneyes,Away,Boston Fleet,Vancouver Goldeneyes,3,event,5v5,22,Abby Boreen,,,,,31,Aerin Frankel,,,,,,,83.3,10.2,0.0766,-2,O08,220,2025-12-03,PWHL,2025/2026,Regular Season
 67,17:50,Block,Boston Fleet,Home,Boston Fleet,Vancouver Goldeneyes,3,event,5v5,20,Hannah Brandt,,,,,38,Emerance Maschmeyer,,,,,,,70.3,-6.2,,2,O14,220,2025-12-03,PWHL,2025/2026,Regular Season
-68,19:01,Shot,Vancouver Goldeneyes,Away,Boston Fleet,Vancouver Goldeneyes,3,event,5v5,16,Sophie Jaques,,,,,31,Aerin Frankel,,,,,,,73.7,9.6,0.1341,-2,O11,220,2025-12-03,PWHL,2025/2026,Regular Season
-69,19:28,Shot,Vancouver Goldeneyes,Away,Boston Fleet,Vancouver Goldeneyes,3,event,5v5,33,Michelle Karvinen,,,,,31,Aerin Frankel,,,,,,,18.7,-12.5,0.0597,-2,N02,220,2025-12-03,PWHL,2025/2026,Regular Season
+68,19:01,Shot,Vancouver Goldeneyes,Away,Boston Fleet,Vancouver Goldeneyes,3,event,5v5 ENF,16,Sophie Jaques,,,,,31,Aerin Frankel,,,,,,,73.7,9.6,0.1341,-2,O11,220,2025-12-03,PWHL,2025/2026,Regular Season
+69,19:28,Shot,Vancouver Goldeneyes,Away,Boston Fleet,Vancouver Goldeneyes,3,event,5v5 ENF,33,Michelle Karvinen,,,,,31,Aerin Frankel,,,,,,,18.7,-12.5,0.0597,-2,N02,220,2025-12-03,PWHL,2025/2026,Regular Season

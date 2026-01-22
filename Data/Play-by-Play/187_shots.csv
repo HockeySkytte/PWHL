@@ -37,8 +37,8 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 36,14:47,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,2,event,5v5,14,Renata Fast,,,,,29,Klára Peslarová,,,,,,,53.3,14.5,0.0418,-2,O22,187,2025-04-26,PWHL,2024/2025,Regular Season
 37,15:44,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,2,event,5v5,37,Theresa Schafzahl,,,,,50,Kristen Campbell,,,,,,,57.0,5.1,0.1520,2,O15,187,2025-04-26,PWHL,2024/2025,Regular Season
 38,16:54,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,2,event,5v5,16,Hayley Scamurra,,,,,29,Klára Peslarová,,,,,,,82.3,-6.2,0.1341,-2,O11,187,2025-04-26,PWHL,2024/2025,Regular Season
-39,17:35,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,2,event,5v5,36,Loren Gabel,,,,,50,Kristen Campbell,,,,,,,54.3,-19.6,0.0690,2,O20,187,2025-04-26,PWHL,2024/2025,Regular Season
-40,18:12,Penalty,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,2,event,5v5,14,Renata Fast,,,,,,,,,,,,,,,,-2,,187,2025-04-26,PWHL,2024/2025,Regular Season
+39,17:35,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,2,event,5v5 ENF,36,Loren Gabel,,,,,50,Kristen Campbell,,,,,,,54.3,-19.6,0.0690,2,O20,187,2025-04-26,PWHL,2024/2025,Regular Season
+40,18:12,Penalty,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,2,event,5v5 ENA,14,Renata Fast,,,,,,,,,,,,,,,,-2,,187,2025-04-26,PWHL,2024/2025,Regular Season
 41,19:54,Goal,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,2,event,5v4,37,Theresa Schafzahl,47,Jamie Lee Rattray,36,Loren Gabel,50,Kristen Campbell,,5 9 36 37 47,Megan Keller - Sophie Shirley - Loren Gabel - Theresa Schafzahl - Jamie Lee Rattray,,12 23 34 40,Allie Munroe - Megan Carter - Hannah Miller - Blayre Turnbull,75.7,-12.8,0.1498,2,O06,187,2025-04-26,PWHL,2024/2025,Regular Season
 42,0:15,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,3,event,5v5,21,Hilary Knight,,,,,50,Kristen Campbell,,,,,,,45.0,-23.0,0.0690,3,O20,187,2025-04-26,PWHL,2024/2025,Regular Season
 43,1:44,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,3,event,5v5,16,Hayley Scamurra,,,,,29,Klára Peslarová,,,,,,,56.0,18.1,0.0418,-3,O22,187,2025-04-26,PWHL,2024/2025,Regular Season

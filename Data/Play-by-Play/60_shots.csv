@@ -71,8 +71,8 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 70,4:24,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v5,25,Alex Carpenter,,,,,35,Ann-Renée Desbiens,,,,,,,77.3,19.6,0.0766,-3,O08,60,2024-04-24,PWHL,2023/2024,Regular Season
 71,4:26,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v5,67,Emma Woods,,,,,35,Ann-Renée Desbiens,,,,,,,83.7,-4.2,0.2253,-3,O07,60,2024-04-24,PWHL,2023/2024,Regular Season
 72,4:27,Penalty,Montréal Victoire,Home,Montréal Victoire,New York Sirens,3,event,5v5,2,Mariah Keopple,,,,,,,,,,,,,,,,3,,60,2024-04-24,PWHL,2023/2024,Regular Season
-73,5:52,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v4,67,Emma Woods,,,,,35,Ann-Renée Desbiens,,,,,,,82.7,1.4,0.2002,-3,O11,60,2024-04-24,PWHL,2023/2024,Regular Season
-74,5:56,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v4,9,Jessie Eldridge,,,,,35,Ann-Renée Desbiens,,,,,,,82.3,-13.3,0.1103,-3,O06,60,2024-04-24,PWHL,2023/2024,Regular Season
+73,5:52,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v4 ENF,67,Emma Woods,,,,,35,Ann-Renée Desbiens,,,,,,,82.7,1.4,0.2002,-3,O11,60,2024-04-24,PWHL,2023/2024,Regular Season
+74,5:56,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v4 ENF,9,Jessie Eldridge,,,,,35,Ann-Renée Desbiens,,,,,,,82.3,-13.3,0.1103,-3,O06,60,2024-04-24,PWHL,2023/2024,Regular Season
 75,6:07,Block,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v5,14,Jaime Bourbonnais,,,,,35,Ann-Renée Desbiens,,,,,,,34.7,21.2,,-3,O26,60,2024-04-24,PWHL,2023/2024,Regular Season
 76,6:32,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v5,9,Jessie Eldridge,,,,,35,Ann-Renée Desbiens,,,,,,,79.3,-14.2,0.0712,-3,O06,60,2024-04-24,PWHL,2023/2024,Regular Season
 77,8:45,Block,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v4,67,Emma Woods,,,,,35,Ann-Renée Desbiens,,,,,,,81.7,-6.5,,-3,O11,60,2024-04-24,PWHL,2023/2024,Regular Season
@@ -85,8 +85,8 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 84,15:40,Block,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v5,6,Brooke Hobson,,,,,35,Ann-Renée Desbiens,,,,,,,83.0,1.4,,-3,O07,60,2024-04-24,PWHL,2023/2024,Regular Season
 85,15:41,Goal,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,4v5,13,Alexandra Labelle,6,Brooke Hobson,14,Jaime Bourbonnais,35,Ann-Renée Desbiens,,6 7 9 15 18,Madison Bizal - Laura Stacey - Kati Tabin - Maureen Murphy - Mikyla Grant-Mentis,,6 10 13 14,Brooke Hobson - Kayla Vespa - Alexandra Labelle - Jaime Bourbonnais,87.7,6.0,0.1275,-3,O08,60,2024-04-24,PWHL,2023/2024,Regular Season
 86,16:08,Block,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v5,28,Micah Zandee-Hart,,,,,35,Ann-Renée Desbiens,,,,,,,36.3,-22.7,,-2,O24,60,2024-04-24,PWHL,2023/2024,Regular Season
-87,16:12,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,4v5,17,Ella Shelton,,,,,35,Ann-Renée Desbiens,,,,,,,53.0,-6.0,0.1043,-2,O21,60,2024-04-24,PWHL,2023/2024,Regular Season
-88,16:29,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v5,17,Ella Shelton,,,,,35,Ann-Renée Desbiens,,,,,,,58.7,21.0,0.0443,-2,O17,60,2024-04-24,PWHL,2023/2024,Regular Season
+87,16:12,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,4v5 ENF,17,Ella Shelton,,,,,35,Ann-Renée Desbiens,,,,,,,53.0,-6.0,0.1043,-2,O21,60,2024-04-24,PWHL,2023/2024,Regular Season
+88,16:29,Shot,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v5 ENF,17,Ella Shelton,,,,,35,Ann-Renée Desbiens,,,,,,,58.7,21.0,0.0443,-2,O17,60,2024-04-24,PWHL,2023/2024,Regular Season
 89,17:16,Block,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v5,17,Ella Shelton,,,,,35,Ann-Renée Desbiens,,,,,,,47.3,6.8,,-2,O21,60,2024-04-24,PWHL,2023/2024,Regular Season
 90,17:55,Block,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v5,6,Brooke Hobson,,,,,35,Ann-Renée Desbiens,,,,,,,58.7,-23.0,,-2,O13,60,2024-04-24,PWHL,2023/2024,Regular Season
 91,18:35,Block,New York Sirens,Away,Montréal Victoire,New York Sirens,3,event,5v4,14,Jaime Bourbonnais,,,,,35,Ann-Renée Desbiens,,,,,,,31.7,32.0,,-2,O26,60,2024-04-24,PWHL,2023/2024,Regular Season

@@ -82,6 +82,6 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 81,15:55,Block,Vancouver Goldeneyes,Away,New York Sirens,Vancouver Goldeneyes,3,event,5v4,16,Sophie Jaques,,,,,82,Kayle Osborne,,,,,,,35.0,0.6,,-2,O25,242,2025-12-31,PWHL,2025/2026,Regular Season
 82,16:08,Shot,Vancouver Goldeneyes,Away,New York Sirens,Vancouver Goldeneyes,3,event,5v5,16,Sophie Jaques,,,,,82,Kayle Osborne,,,,,,,34.3,-16.1,0.0454,-2,O25,242,2025-12-31,PWHL,2025/2026,Regular Season
 83,17:08,Block,Vancouver Goldeneyes,Away,New York Sirens,Vancouver Goldeneyes,3,event,5v4,34,Hannah Miller,,,,,82,Kayle Osborne,,,,,,,55.0,-19.3,,-2,O20,242,2025-12-31,PWHL,2025/2026,Regular Season
-84,17:19,Shot,Vancouver Goldeneyes,Away,New York Sirens,Vancouver Goldeneyes,3,event,5v5,21,Ashton Bell,,,,,82,Kayle Osborne,,,,,,,40.0,4.5,0.0454,-2,O25,242,2025-12-31,PWHL,2025/2026,Regular Season
+84,17:19,Shot,Vancouver Goldeneyes,Away,New York Sirens,Vancouver Goldeneyes,3,event,5v5 ENF,21,Ashton Bell,,,,,82,Kayle Osborne,,,,,,,40.0,4.5,0.0454,-2,O25,242,2025-12-31,PWHL,2025/2026,Regular Season
 85,18:10,Block,Vancouver Goldeneyes,Away,New York Sirens,Vancouver Goldeneyes,3,event,5v5,33,Michelle Karvinen,,,,,82,Kayle Osborne,,,,,,,63.0,-27.2,,-2,O13,242,2025-12-31,PWHL,2025/2026,Regular Season
-86,20:00,Shot,Vancouver Goldeneyes,Away,New York Sirens,Vancouver Goldeneyes,3,event,5v5,22,Abby Boreen,,,,,82,Kayle Osborne,,,,,,,71.0,19.6,0.0443,-2,O17,242,2025-12-31,PWHL,2025/2026,Regular Season
+86,20:00,Shot,Vancouver Goldeneyes,Away,New York Sirens,Vancouver Goldeneyes,3,event,5v5 ENF,22,Abby Boreen,,,,,82,Kayle Osborne,,,,,,,71.0,19.6,0.0443,-2,O17,242,2025-12-31,PWHL,2025/2026,Regular Season

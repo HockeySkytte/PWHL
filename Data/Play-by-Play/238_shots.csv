@@ -58,7 +58,7 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 57,19:07,Block,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,18,Jesse Compher,,,,,35,Ann-Renée Desbiens,,,,,,,78.0,-23.5,,1,O05,238,2025-12-27,PWHL,2025/2026,Regular Season
 58,19:11,Penalty,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5,91,Maggie Flaherty,,,,,,,,,,,,,,,,-1,,238,2025-12-27,PWHL,2025/2026,Regular Season
 59,19:11,Penalty,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,18,Jesse Compher,,,,,,,,,,,,,,,,1,,238,2025-12-27,PWHL,2025/2026,Regular Season
-60,19:37,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5,27,Shiann Darkangelo,,,,,29,Elaine Chuli,,,,,,,73.3,-5.7,0.1328,-1,O11,238,2025-12-27,PWHL,2025/2026,Regular Season
+60,19:37,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v5 ENF,27,Shiann Darkangelo,,,,,29,Elaine Chuli,,,,,,,73.3,-5.7,0.1328,-1,O11,238,2025-12-27,PWHL,2025/2026,Regular Season
 61,19:38,Penalty,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,2,event,5v5,19,Sara Hjalmarsson,,,,,,,,,,,,,,,,1,,238,2025-12-27,PWHL,2025/2026,Regular Season
 62,19:43,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,2,event,5v4,11,Abby Roque,,,,,29,Elaine Chuli,,,,,,,49.0,-0.8,0.0956,-1,O21,238,2025-12-27,PWHL,2025/2026,Regular Season
 63,1:05,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v4,7,Laura Stacey,,,,,29,Elaine Chuli,,,,,,,60.7,-23.0,0.0627,-1,O13,238,2025-12-27,PWHL,2025/2026,Regular Season
@@ -89,5 +89,5 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 88,14:57,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5,61,Nicole Gosling,,,,,29,Elaine Chuli,,,,,,,32.0,7.6,,-1,O25,238,2025-12-27,PWHL,2025/2026,Regular Season
 89,16:10,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5,9,Kati Tabin,,,,,29,Elaine Chuli,,,,,,,30.3,-38.0,,-1,O24,238,2025-12-27,PWHL,2025/2026,Regular Season
 90,17:00,Shot,Toronto Sceptres,Away,Montréal Victoire,Toronto Sceptres,3,event,5v5,24,Natalie Spooner,,,,,35,Ann-Renée Desbiens,,,,,,,78.0,-5.4,0.1463,1,O11,238,2025-12-27,PWHL,2025/2026,Regular Season
-91,18:47,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5,16,Hayley Scamurra,,,,,29,Elaine Chuli,,,,,,,51.0,-28.1,0.0341,-1,O19,238,2025-12-27,PWHL,2025/2026,Regular Season
+91,18:47,Shot,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5 ENF,16,Hayley Scamurra,,,,,29,Elaine Chuli,,,,,,,51.0,-28.1,0.0341,-1,O19,238,2025-12-27,PWHL,2025/2026,Regular Season
 92,19:30,Block,Montréal Victoire,Home,Montréal Victoire,Toronto Sceptres,3,event,5v5,9,Kati Tabin,,,,,29,Elaine Chuli,,,,,,,30.7,-37.4,,-1,O24,238,2025-12-27,PWHL,2025/2026,Regular Season

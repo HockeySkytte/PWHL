@@ -386,6 +386,150 @@ def generate_pbp_csv(
     consumed: set[int] = set()
     final_events: List[Dict[str, Any]] = []
 
+    def _norm_key_ci(k: str) -> str:
+        return normalize_key(k).replace('__', '_')
+
+    def _get_ci(dct: Dict[str, Any], *candidates: str) -> Any:
+        if not isinstance(dct, dict):
+            return None
+        want = {_norm_key_ci(c) for c in candidates}
+        for k, v in dct.items():
+            if _norm_key_ci(str(k)) in want:
+                return v
+        return None
+
+    def _has_meaningful(v: Any) -> bool:
+        if v is None:
+            return False
+        if isinstance(v, dict):
+            # common shapes: {id, name} or {playerId,...}
+            for kk in ('id', 'playerId', 'playerID', 'name', 'fullName'):
+                if v.get(kk) not in (None, '', 0):
+                    return True
+            return bool(v)
+        if isinstance(v, (list, tuple, set)):
+            return len(v) > 0
+        s = str(v).strip()
+        return s not in ('', '0', 'none', 'null')
+
+    def _goalie_change_team_id(ev: Dict[str, Any]) -> str:
+        d0 = ev.get('details') or {}
+        # Prefer explicit team object
+        tid = str((d0.get('team') or {}).get('id') or '').strip() if isinstance(d0.get('team'), dict) else ''
+        if tid:
+            return tid
+        # Common alternates
+        for key in ('teamId', 'team_id', 'goalieTeamId', 'goalie_team_id'):
+            v = _get_ci(d0, key)
+            if v not in (None, ''):
+                return str(v).strip()
+        return ''
+
+    def _compute_empty_net_tags(events: List[Dict[str, Any]], pbp_all: List[Dict[str, Any]]) -> List[str]:
+        """Return list of tags ('' | 'ENF' | 'ENA' | 'ENF+ENA') for each final event.
+
+        Uses goalie_change events (GoalieComingIn/GoalieComingOut) to track whether each team has a goalie.
+        At any event time:
+          - if event team has no goalie -> ENF
+          - if opposing team has no goalie -> ENA
+        """
+
+        def to_seconds(ts: str) -> int:
+            if not ts:
+                return 0
+            parts = str(ts).split(':')
+            try:
+                mm = int(parts[0] or 0)
+                ss = int(parts[1] or 0)
+                return mm * 60 + ss
+            except Exception:
+                return 0
+
+        def period_index_from_details(d: Dict[str, Any]) -> int:
+            p = d.get('period')
+            v = (p.get('id') if isinstance(p, dict) else p) if p is not None else ''
+            s = str((p.get('shortName') if isinstance(p, dict) else v) or '').upper()
+            if s in ('1', '2', '3'):
+                return int(s)
+            if s in ('4', 'OT') or s.startswith('OT'):
+                return 4
+            if s in ('SO', 'SHOOTOUT'):
+                return 5
+            try:
+                return int(s)
+            except Exception:
+                return 1
+
+        home_id, away_id = get_team_ids()
+        goalie_present: Dict[str, bool] = {
+            str(home_id): True,
+            str(away_id): True,
+        }
+
+        timeline: List[Tuple[int, int, int, int, Dict[str, Any] | None]] = []
+        # (pi, ts, kind, stable, finalEventOrNone)
+        # kind: 0 goalie_change, 1 final_event
+        for j, ev0 in enumerate(pbp_all or []):
+            et0 = str(ev0.get('event') or '').lower()
+            if et0 not in ('goalie_change', 'goalie-change'):
+                continue
+            d0 = ev0.get('details') or {}
+            pi = period_index_from_details(d0)
+            ts = to_seconds(str(d0.get('time') or '0:00'))
+            timeline.append((pi, ts, 0, j, ev0))
+
+        for i2, ev2 in enumerate(events):
+            d2 = ev2.get('details') or {}
+            pi = period_index_from_details(d2)
+            ts = to_seconds(str(d2.get('time') or '0:00'))
+            timeline.append((pi, ts, 1, i2, ev2))
+
+        timeline.sort(key=lambda x: (x[0], x[1], x[2], x[3]))
+
+        tags = ['' for _ in range(len(events))]
+        for pi, ts, kind, stable, evx in timeline:
+            if kind == 0:
+                if not isinstance(evx, dict):
+                    continue
+                d0 = evx.get('details') or {}
+                team_id = _goalie_change_team_id(evx)
+                if not team_id:
+                    continue
+                coming_in = _get_ci(d0, 'GoalieComingIn', 'goalieComingIn', 'goalie_coming_in', 'goalie_in')
+                coming_out = _get_ci(
+                    d0,
+                    'GoalieComingOut',
+                    'goalieComingOut',
+                    'goalie_coming_out',
+                    'goalie_out',
+                    # HockeyTech uses goalieGoingOut for goalie pulls
+                    'goalieGoingOut',
+                    'GoalieGoingOut',
+                    'goalie_going_out',
+                )
+                if _has_meaningful(coming_in):
+                    goalie_present[team_id] = True
+                elif _has_meaningful(coming_out):
+                    goalie_present[team_id] = False
+                continue
+
+            # final event
+            if not isinstance(evx, dict):
+                continue
+            team_id = str(evx.get('_computedTeamId') or '').strip()
+            if team_id not in (str(home_id), str(away_id)):
+                continue
+            opp = str(away_id) if team_id == str(home_id) else str(home_id)
+            enf = not goalie_present.get(team_id, True)
+            ena = not goalie_present.get(opp, True)
+            if enf and ena:
+                tags[stable] = 'ENF+ENA'
+            elif enf:
+                tags[stable] = 'ENF'
+            elif ena:
+                tags[stable] = 'ENA'
+        return tags
+
     # Flatten with merge rules
     for idx, ev in enumerate(pbp or []):
         if idx in consumed:
@@ -787,6 +931,13 @@ def generate_pbp_csv(
         return [results.get(ii, '') for ii in range(len(events))]
 
     strengths = compute_strengths(final_events)
+    empty_net_tags = _compute_empty_net_tags(final_events, pbp)
+    if len(empty_net_tags) == len(strengths):
+        for i_tag, tag in enumerate(empty_net_tags):
+            if not tag:
+                continue
+            base = strengths[i_tag] or ''
+            strengths[i_tag] = (f"{base} {tag}".strip() if base else tag)
 
     # --- xG model helpers ---
     _XG_MODEL: Dict[str, Any] | None = None
@@ -807,7 +958,8 @@ def generate_pbp_csv(
 
     def strength_state_from(s: str) -> str:
         try:
-            parts = str(s or '').lower().split('v')
+            token = str(s or '').strip().split(' ', 1)[0]
+            parts = token.lower().split('v')
             a = int(parts[0])
             b = int(parts[1])
             if a == b:
@@ -1265,7 +1417,11 @@ def generate_pbp_csv(
         # Compute xG for Shots and Goals only
         xg_val = ''
         if ev_key_norm in ('shot','goal'):
-            xg_val = xg_for(strengths[i] or '', score_state, box_id)
+            # Empty net against: force xG to 1 (per spec)
+            if i < len(empty_net_tags) and ('ENA' in (empty_net_tags[i] or '')):
+                xg_val = '1.0000'
+            else:
+                xg_val = xg_for(strengths[i] or '', score_state, box_id)
 
         row = [
             str(eid),

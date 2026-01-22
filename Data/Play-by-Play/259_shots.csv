@@ -1,1 +1,122 @@
-id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,xG,ScoreState,BoxID,game_id,game_date,competition,season,state
+1,1:40,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,1,event,5v5,3,Cayla Barnes,,,,,31,Aerin Frankel,,,,,,,32.7,27.2,,0,O26,259,2026-01-18,PWHL,2025/2026,Regular Season
+2,2:12,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,1,event,5v5,88,Julia Gosling,,,,,31,Aerin Frankel,,,,,,,78.0,-12.5,0.0659,0,O06,259,2026-01-18,PWHL,2025/2026,Regular Season
+3,3:38,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,1,event,5v5,25,Alex Carpenter,,,,,31,Aerin Frankel,,,,,,,66.3,11.6,,0,O16,259,2026-01-18,PWHL,2025/2026,Regular Season
+4,4:21,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,1,event,5v5,8,Natalie Snodgrass,,,,,31,Aerin Frankel,,,,,,,54.7,-12.2,0.0458,0,O20,259,2026-01-18,PWHL,2025/2026,Regular Season
+5,4:59,Block,Boston Fleet,Away,Seattle Torrent,Boston Fleet,1,event,5v5,16,Riley Brengman,,,,,30,Corinne Schroeder,,,,,,,33.0,33.4,,0,O26,259,2026-01-18,PWHL,2025/2026,Regular Season
+6,5:11,Penalty,Boston Fleet,Away,Seattle Torrent,Boston Fleet,1,event,5v5,55,Daniela Pejšová,,,,,,,,,,,,,,,,0,,259,2026-01-18,PWHL,2025/2026,Regular Season
+7,5:37,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,1,event,5v4,3,Cayla Barnes,,,,,31,Aerin Frankel,,,,,,,42.0,-14.7,0.0895,0,O21,259,2026-01-18,PWHL,2025/2026,Regular Season
+8,6:20,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,1,event,5v4,25,Alex Carpenter,,,,,31,Aerin Frankel,,,,,,,41.7,2.0,,0,O21,259,2026-01-18,PWHL,2025/2026,Regular Season
+9,6:30,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,1,event,5v4,13,Mikyla Grant-Mentis,,,,,31,Aerin Frankel,,,,,,,57.0,18.1,,0,O16,259,2026-01-18,PWHL,2025/2026,Regular Season
+10,6:32,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,1,event,5v4,5,Anna Wilgren,,,,,31,Aerin Frankel,,,,,,,53.0,27.5,,0,O23,259,2026-01-18,PWHL,2025/2026,Regular Season
+11,6:45,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,1,event,5v4,21,Hilary Knight,,,,,31,Aerin Frankel,,,,,,,79.0,-2.5,,0,O11,259,2026-01-18,PWHL,2025/2026,Regular Season
+12,6:52,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,1,event,5v4,25,Alex Carpenter,,,,,31,Aerin Frankel,,,,,,,48.0,-26.9,0.0505,0,O19,259,2026-01-18,PWHL,2025/2026,Regular Season
+13,6:53,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,1,event,5v4,25,Alex Carpenter,,,,,31,Aerin Frankel,,,,,,,44.3,-31.7,0.0505,0,O19,259,2026-01-18,PWHL,2025/2026,Regular Season
+14,9:06,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,1,event,5v5,9,Jessie Eldridge,,,,,31,Aerin Frankel,,,,,,,72.3,11.1,0.0899,0,O16,259,2026-01-18,PWHL,2025/2026,Regular Season
+15,9:58,Block,Boston Fleet,Away,Seattle Torrent,Boston Fleet,1,event,5v5,13,Liz Schepers,,,,,30,Corinne Schroeder,,,,,,,41.3,-24.1,,0,O20,259,2026-01-18,PWHL,2025/2026,Regular Season
+16,10:35,Penalty,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,1,event,5v5,2,Aneta Tejralová,,,,,,,,,,,,,,,,0,,259,2026-01-18,PWHL,2025/2026,Regular Season
+17,10:58,Shot,Boston Fleet,Away,Seattle Torrent,Boston Fleet,1,event,5v4,77,Susanna Tapani,,,,,30,Corinne Schroeder,,,,,,,57.0,-23.0,0.0586,0,O13,259,2026-01-18,PWHL,2025/2026,Regular Season
+18,12:24,Penalty,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,1,event,4v5,13,Mikyla Grant-Mentis,,,,,,,,,,,,,,,,0,,259,2026-01-18,PWHL,2025/2026,Regular Season
+19,12:28,Goal,Boston Fleet,Away,Seattle Torrent,Boston Fleet,1,event,5v3,5,Megan Keller,19,Abby Newhook,11,Alina Müller,30,Corinne Schroeder,,3 11 78,Cayla Barnes - Emily Brown - Lexie Adzija,,5 8 11 19 77,Megan Keller - Haley Winn - Alina Müller - Abby Newhook - Susanna Tapani,41.0,15.0,0.0895,0,O21,259,2026-01-18,PWHL,2025/2026,Regular Season
+20,13:43,Shot,Boston Fleet,Away,Seattle Torrent,Boston Fleet,1,event,5v4,77,Susanna Tapani,,,,,30,Corinne Schroeder,,,,,,,62.3,-29.7,0.0265,1,O12,259,2026-01-18,PWHL,2025/2026,Regular Season
+21,13:50,Block,Boston Fleet,Away,Seattle Torrent,Boston Fleet,1,event,5v4,5,Megan Keller,,,,,30,Corinne Schroeder,,,,,,,44.7,19.0,,1,O22,259,2026-01-18,PWHL,2025/2026,Regular Season
+22,14:00,Block,Boston Fleet,Away,Seattle Torrent,Boston Fleet,1,event,5v4,8,Haley Winn,,,,,30,Corinne Schroeder,,,,,,,29.7,6.5,,1,O25,259,2026-01-18,PWHL,2025/2026,Regular Season
+23,14:52,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,1,event,5v5,5,Anna Wilgren,,,,,31,Aerin Frankel,,,,,,,32.7,-34.9,0.0429,-1,O24,259,2026-01-18,PWHL,2025/2026,Regular Season
+24,15:24,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,1,event,5v5,92,Danielle Serdachny,,,,,31,Aerin Frankel,,,,,,,79.3,-0.3,0.1328,-1,O11,259,2026-01-18,PWHL,2025/2026,Regular Season
+25,15:57,Shot,Boston Fleet,Away,Seattle Torrent,Boston Fleet,1,event,5v5,19,Abby Newhook,,,,,30,Corinne Schroeder,,,,,,,47.3,20.1,0.0461,1,O22,259,2026-01-18,PWHL,2025/2026,Regular Season
+26,16:37,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,1,event,5v5,11,Emily Brown,,,,,31,Aerin Frankel,,,,,,,39.0,25.5,0.0277,-1,O26,259,2026-01-18,PWHL,2025/2026,Regular Season
+27,17:02,Penalty,Boston Fleet,Away,Seattle Torrent,Boston Fleet,1,event,5v5,3,Zoe Boyd,,,,,,,,,,,,,,,,1,,259,2026-01-18,PWHL,2025/2026,Regular Season
+28,17:10,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,1,event,5v4,19,Hannah Bilka,,,,,31,Aerin Frankel,,,,,,,63.0,18.4,,-1,O17,259,2026-01-18,PWHL,2025/2026,Regular Season
+29,17:16,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,1,event,5v4,19,Hannah Bilka,,,,,31,Aerin Frankel,,,,,,,83.7,19.0,0.0504,-1,O09,259,2026-01-18,PWHL,2025/2026,Regular Season
+30,18:34,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,1,event,5v4,88,Julia Gosling,,,,,31,Aerin Frankel,,,,,,,79.0,26.6,0.0504,-1,O09,259,2026-01-18,PWHL,2025/2026,Regular Season
+31,19:21,Block,Boston Fleet,Away,Seattle Torrent,Boston Fleet,1,event,5v5,47,Jamie Lee Rattray,,,,,30,Corinne Schroeder,,,,,,,43.0,-24.9,,1,O20,259,2026-01-18,PWHL,2025/2026,Regular Season
+32,0:34,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,2,event,5v5,5,Anna Wilgren,,,,,31,Aerin Frankel,,,,,,,27.0,-24.9,,-1,O24,259,2026-01-18,PWHL,2025/2026,Regular Season
+33,1:54,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,2,event,5v5,20,Mariah Keopple,,,,,31,Aerin Frankel,,,,,,,33.0,-23.8,,-1,O24,259,2026-01-18,PWHL,2025/2026,Regular Season
+34,1:59,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,2,event,5v5,88,Julia Gosling,,,,,31,Aerin Frankel,,,,,,,68.3,3.4,0.0959,-1,O16,259,2026-01-18,PWHL,2025/2026,Regular Season
+35,2:18,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,2,event,5v5,88,Julia Gosling,,,,,31,Aerin Frankel,,,,,,,45.7,19.0,0.0414,-1,O22,259,2026-01-18,PWHL,2025/2026,Regular Season
+36,3:41,Shot,Boston Fleet,Away,Seattle Torrent,Boston Fleet,2,event,5v5,17,Theresa Schafzahl,,,,,30,Corinne Schroeder,,,,,,,80.7,-2.8,0.1463,1,O11,259,2026-01-18,PWHL,2025/2026,Regular Season
+37,3:46,Shot,Boston Fleet,Away,Seattle Torrent,Boston Fleet,2,event,5v5,17,Theresa Schafzahl,,,,,30,Corinne Schroeder,,,,,,,61.0,0.8,0.1225,1,O15,259,2026-01-18,PWHL,2025/2026,Regular Season
+38,3:50,Shot,Boston Fleet,Away,Seattle Torrent,Boston Fleet,2,event,5v5,8,Haley Winn,,,,,30,Corinne Schroeder,,,,,,,65.0,-13.3,0.0929,1,O14,259,2026-01-18,PWHL,2025/2026,Regular Season
+39,4:44,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,2,event,5v5,5,Anna Wilgren,,,,,31,Aerin Frankel,,,,,,,28.0,11.1,,-1,O25,259,2026-01-18,PWHL,2025/2026,Regular Season
+40,5:47,Goal,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,2,event,5v5,88,Julia Gosling,17,Brooke Bryant,3,Cayla Barnes,31,Aerin Frankel,,3 10 17 27 88,Cayla Barnes - Jenna Buglioni - Brooke Bryant - Megan Carter - Julia Gosling,,6 20 25 26 55,Hadley Hartmetz - Hannah Brandt - Laura Kluge - Ella Huber - Daniela Pejšová,73.0,23.5,0.0758,-1,O08,259,2026-01-18,PWHL,2025/2026,Regular Season
+41,8:45,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,2,event,5v5,10,Jenna Buglioni,,,,,31,Aerin Frankel,,,,,,,82.3,12.8,,0,O08,259,2026-01-18,PWHL,2025/2026,Regular Season
+42,8:53,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,2,event,5v5,27,Megan Carter,,,,,31,Aerin Frankel,,,,,,,65.3,-9.3,,0,O14,259,2026-01-18,PWHL,2025/2026,Regular Season
+43,9:07,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,2,event,5v5,27,Megan Carter,,,,,31,Aerin Frankel,,,,,,,39.0,-29.7,0.0400,0,O24,259,2026-01-18,PWHL,2025/2026,Regular Season
+44,11:18,Shot,Boston Fleet,Away,Seattle Torrent,Boston Fleet,2,event,5v5,16,Riley Brengman,,,,,30,Corinne Schroeder,,,,,,,10.3,38.2,0.0553,0,N03,259,2026-01-18,PWHL,2025/2026,Regular Season
+45,11:42,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,2,event,5v5,21,Hilary Knight,,,,,31,Aerin Frankel,,,,,,,38.7,-31.7,0.0400,0,O24,259,2026-01-18,PWHL,2025/2026,Regular Season
+46,12:10,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,2,event,4v5,9,Jessie Eldridge,,,,,31,Aerin Frankel,,,,,,,29.0,-34.0,,0,O24,259,2026-01-18,PWHL,2025/2026,Regular Season
+47,13:23,Block,Boston Fleet,Away,Seattle Torrent,Boston Fleet,2,event,5v4,6,Hadley Hartmetz,,,,,30,Corinne Schroeder,,,,,,,39.7,32.3,,0,O26,259,2026-01-18,PWHL,2025/2026,Regular Season
+48,14:13,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,2,event,5v5,3,Cayla Barnes,,,,,31,Aerin Frankel,,,,,,,88.3,-20.1,0.0177,0,O05,259,2026-01-18,PWHL,2025/2026,Regular Season
+49,14:52,Penalty,Boston Fleet,Away,Seattle Torrent,Boston Fleet,2,event,5v5,77,Susanna Tapani,,,,,,,,,,,,,,,,0,,259,2026-01-18,PWHL,2025/2026,Regular Season
+50,16:25,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,2,event,5v5,21,Hilary Knight,,,,,31,Aerin Frankel,,,,,,,58.0,-19.0,,0,O14,259,2026-01-18,PWHL,2025/2026,Regular Season
+51,16:33,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,2,event,5v5,3,Cayla Barnes,,,,,31,Aerin Frankel,,,,,,,52.7,16.7,,0,O22,259,2026-01-18,PWHL,2025/2026,Regular Season
+52,17:06,Shot,Boston Fleet,Away,Seattle Torrent,Boston Fleet,2,event,5v5,8,Haley Winn,,,,,30,Corinne Schroeder,,,,,,,55.3,29.5,0.0152,0,O23,259,2026-01-18,PWHL,2025/2026,Regular Season
+53,17:24,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,2,event,5v4,2,Aneta Tejralová,,,,,31,Aerin Frankel,,,,,,,33.0,17.8,,0,O25,259,2026-01-18,PWHL,2025/2026,Regular Season
+54,17:31,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,2,event,5v4,2,Aneta Tejralová,,,,,31,Aerin Frankel,,,,,,,45.0,5.4,,0,O21,259,2026-01-18,PWHL,2025/2026,Regular Season
+55,19:00,Block,Boston Fleet,Away,Seattle Torrent,Boston Fleet,2,event,4v5,3,Zoe Boyd,,,,,30,Corinne Schroeder,,,,,,,32.0,-23.8,,0,O24,259,2026-01-18,PWHL,2025/2026,Regular Season
+56,19:05,Shot,Boston Fleet,Away,Seattle Torrent,Boston Fleet,2,event,5v5,44,Jill Saulnier,,,,,30,Corinne Schroeder,,,,,,,81.3,8.2,0.0709,0,O08,259,2026-01-18,PWHL,2025/2026,Regular Season
+57,19:25,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,2,event,5v5,92,Danielle Serdachny,,,,,31,Aerin Frankel,,,,,,,35.0,9.6,,0,O25,259,2026-01-18,PWHL,2025/2026,Regular Season
+58,19:27,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,2,event,5v5,7,Lily Delianedis,,,,,31,Aerin Frankel,,,,,,,57.3,-23.8,0.0371,0,O13,259,2026-01-18,PWHL,2025/2026,Regular Season
+59,19:40,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,2,event,5v5,3,Cayla Barnes,,,,,31,Aerin Frankel,,,,,,,79.7,6.5,,0,O11,259,2026-01-18,PWHL,2025/2026,Regular Season
+60,0:20,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,3,event,5v5,27,Megan Carter,,,,,31,Aerin Frankel,,,,,,,71.0,-6.8,0.0785,0,O14,259,2026-01-18,PWHL,2025/2026,Regular Season
+61,1:17,Block,Boston Fleet,Away,Seattle Torrent,Boston Fleet,3,event,5v5,3,Zoe Boyd,,,,,30,Corinne Schroeder,,,,,,,47.7,-29.5,,0,O19,259,2026-01-18,PWHL,2025/2026,Regular Season
+62,1:49,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,3,event,5v5,21,Hilary Knight,,,,,31,Aerin Frankel,,,,,,,26.7,7.6,0.0420,0,O25,259,2026-01-18,PWHL,2025/2026,Regular Season
+63,2:27,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,3,event,5v5,5,Anna Wilgren,,,,,31,Aerin Frankel,,,,,,,33.3,-21.2,,0,O24,259,2026-01-18,PWHL,2025/2026,Regular Season
+64,3:12,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,3,event,5v5,11,Emily Brown,,,,,31,Aerin Frankel,,,,,,,34.3,3.7,0.0420,0,O25,259,2026-01-18,PWHL,2025/2026,Regular Season
+65,4:06,Shot,Boston Fleet,Away,Seattle Torrent,Boston Fleet,3,event,5v5,26,Ella Huber,,,,,30,Corinne Schroeder,,,,,,,58.3,21.2,0.0409,0,O17,259,2026-01-18,PWHL,2025/2026,Regular Season
+66,4:18,Block,Boston Fleet,Away,Seattle Torrent,Boston Fleet,3,event,5v5,44,Jill Saulnier,,,,,30,Corinne Schroeder,,,,,,,65.7,-4.8,,0,O14,259,2026-01-18,PWHL,2025/2026,Regular Season
+67,4:58,Shot,Boston Fleet,Away,Seattle Torrent,Boston Fleet,3,event,5v5,11,Alina Müller,,,,,30,Corinne Schroeder,,,,,,,45.3,-4.2,0.0573,0,O21,259,2026-01-18,PWHL,2025/2026,Regular Season
+68,5:21,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,3,event,5v5,19,Hannah Bilka,,,,,31,Aerin Frankel,,,,,,,79.7,-27.8,0.0177,0,O05,259,2026-01-18,PWHL,2025/2026,Regular Season
+69,5:49,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,3,event,5v5,25,Alex Carpenter,,,,,31,Aerin Frankel,,,,,,,45.0,11.3,0.0573,0,O21,259,2026-01-18,PWHL,2025/2026,Regular Season
+70,5:58,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,3,event,5v4,25,Alex Carpenter,,,,,31,Aerin Frankel,,,,,,,70.0,7.6,,0,O16,259,2026-01-18,PWHL,2025/2026,Regular Season
+71,6:07,Block,Boston Fleet,Away,Seattle Torrent,Boston Fleet,3,event,4v5,8,Haley Winn,,,,,30,Corinne Schroeder,,,,,,,56.0,9.9,,0,O22,259,2026-01-18,PWHL,2025/2026,Regular Season
+72,6:34,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,3,event,5v5,88,Julia Gosling,,,,,31,Aerin Frankel,,,,,,,83.0,7.6,0.0709,0,O08,259,2026-01-18,PWHL,2025/2026,Regular Season
+73,6:45,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,3,event,5v5,2,Aneta Tejralová,,,,,31,Aerin Frankel,,,,,,,45.7,-6.2,0.0573,0,O21,259,2026-01-18,PWHL,2025/2026,Regular Season
+74,7:08,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,3,event,5v4,13,Mikyla Grant-Mentis,,,,,31,Aerin Frankel,,,,,,,56.3,19.3,,0,O22,259,2026-01-18,PWHL,2025/2026,Regular Season
+75,7:09,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,3,event,5v5,13,Mikyla Grant-Mentis,,,,,31,Aerin Frankel,,,,,,,43.7,29.7,0.0152,0,O23,259,2026-01-18,PWHL,2025/2026,Regular Season
+76,7:56,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,3,event,5v5,92,Danielle Serdachny,,,,,31,Aerin Frankel,,,,,,,69.7,20.1,0.0409,0,O17,259,2026-01-18,PWHL,2025/2026,Regular Season
+77,8:04,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,3,event,5v5,5,Anna Wilgren,,,,,31,Aerin Frankel,,,,,,,41.3,-40.5,0.0318,0,O19,259,2026-01-18,PWHL,2025/2026,Regular Season
+78,8:25,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,3,event,5v5,3,Cayla Barnes,,,,,31,Aerin Frankel,,,,,,,73.7,13.9,0.0709,0,O08,259,2026-01-18,PWHL,2025/2026,Regular Season
+79,9:09,Block,Boston Fleet,Away,Seattle Torrent,Boston Fleet,3,event,5v5,19,Abby Newhook,,,,,30,Corinne Schroeder,,,,,,,49.3,-17.0,,0,O20,259,2026-01-18,PWHL,2025/2026,Regular Season
+80,9:59,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,3,event,5v5,78,Lexie Adzija,,,,,31,Aerin Frankel,,,,,,,75.0,-2.8,,0,O11,259,2026-01-18,PWHL,2025/2026,Regular Season
+81,10:00,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,3,event,5v5,78,Lexie Adzija,,,,,31,Aerin Frankel,,,,,,,78.0,-0.8,,0,O11,259,2026-01-18,PWHL,2025/2026,Regular Season
+82,10:07,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,3,event,5v5,11,Emily Brown,,,,,31,Aerin Frankel,,,,,,,35.0,2.5,,0,O25,259,2026-01-18,PWHL,2025/2026,Regular Season
+83,10:10,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,3,event,5v5,20,Mariah Keopple,,,,,31,Aerin Frankel,,,,,,,71.0,-29.2,,0,O12,259,2026-01-18,PWHL,2025/2026,Regular Season
+84,10:32,Block,Boston Fleet,Away,Seattle Torrent,Boston Fleet,3,event,5v5,27,Shay Maloney,,,,,30,Corinne Schroeder,,,,,,,32.3,-17.6,,0,O25,259,2026-01-18,PWHL,2025/2026,Regular Season
+85,11:05,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,3,event,4v5,88,Julia Gosling,,,,,31,Aerin Frankel,,,,,,,56.7,-1.4,,0,O21,259,2026-01-18,PWHL,2025/2026,Regular Season
+86,11:16,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,3,event,5v5,27,Megan Carter,,,,,31,Aerin Frankel,,,,,,,35.7,-8.5,0.0420,0,O25,259,2026-01-18,PWHL,2025/2026,Regular Season
+87,12:13,Shot,Boston Fleet,Away,Seattle Torrent,Boston Fleet,3,event,5v5,47,Jamie Lee Rattray,,,,,30,Corinne Schroeder,,,,,,,57.3,-9.1,0.0785,0,O14,259,2026-01-18,PWHL,2025/2026,Regular Season
+88,12:21,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,3,event,4v5,8,Natalie Snodgrass,,,,,31,Aerin Frankel,,,,,,,44.0,4.8,,0,O21,259,2026-01-18,PWHL,2025/2026,Regular Season
+89,12:25,Shot,Boston Fleet,Away,Seattle Torrent,Boston Fleet,3,event,5v5,5,Megan Keller,,,,,30,Corinne Schroeder,,,,,,,55.0,-23.5,0.0318,0,O19,259,2026-01-18,PWHL,2025/2026,Regular Season
+90,13:41,Shot,Boston Fleet,Away,Seattle Torrent,Boston Fleet,3,event,5v5,26,Ella Huber,,,,,30,Corinne Schroeder,,,,,,,76.7,17.3,0.0709,0,O08,259,2026-01-18,PWHL,2025/2026,Regular Season
+91,14:03,Shot,Boston Fleet,Away,Seattle Torrent,Boston Fleet,3,event,5v5,8,Haley Winn,,,,,30,Corinne Schroeder,,,,,,,46.7,19.0,0.0386,0,O22,259,2026-01-18,PWHL,2025/2026,Regular Season
+92,14:21,Shot,Boston Fleet,Away,Seattle Torrent,Boston Fleet,3,event,5v5,11,Alina Müller,,,,,30,Corinne Schroeder,,,,,,,33.0,0.8,0.0420,0,O25,259,2026-01-18,PWHL,2025/2026,Regular Season
+93,14:51,Block,Boston Fleet,Away,Seattle Torrent,Boston Fleet,3,event,5v5,17,Theresa Schafzahl,,,,,30,Corinne Schroeder,,,,,,,52.0,6.0,,0,O21,259,2026-01-18,PWHL,2025/2026,Regular Season
+94,15:30,Shot,Boston Fleet,Away,Seattle Torrent,Boston Fleet,3,event,5v5,44,Jill Saulnier,,,,,30,Corinne Schroeder,,,,,,,84.7,6.8,0.0709,0,O08,259,2026-01-18,PWHL,2025/2026,Regular Season
+95,17:31,Block,Boston Fleet,Away,Seattle Torrent,Boston Fleet,3,event,4v5,5,Megan Keller,,,,,30,Corinne Schroeder,,,,,,,62.7,-27.8,,0,O13,259,2026-01-18,PWHL,2025/2026,Regular Season
+96,17:44,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,3,event,5v5,13,Mikyla Grant-Mentis,,,,,31,Aerin Frankel,,,,,,,63.3,-40.2,0.0138,0,O12,259,2026-01-18,PWHL,2025/2026,Regular Season
+97,18:05,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,3,event,5v5,92,Danielle Serdachny,,,,,31,Aerin Frankel,,,,,,,66.7,26.4,0.0409,0,O17,259,2026-01-18,PWHL,2025/2026,Regular Season
+98,18:41,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,3,event,5v4,19,Hannah Bilka,,,,,31,Aerin Frankel,,,,,,,61.0,-15.6,,0,O14,259,2026-01-18,PWHL,2025/2026,Regular Season
+99,18:58,Block,Boston Fleet,Away,Seattle Torrent,Boston Fleet,3,event,4v5,44,Jill Saulnier,,,,,30,Corinne Schroeder,,,,,,,57.3,4.8,,0,O15,259,2026-01-18,PWHL,2025/2026,Regular Season
+100,19:26,Block,Boston Fleet,Away,Seattle Torrent,Boston Fleet,3,event,5v5,47,Jamie Lee Rattray,,,,,30,Corinne Schroeder,,,,,,,67.0,11.3,,0,O16,259,2026-01-18,PWHL,2025/2026,Regular Season
+101,19:51,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,3,event,5v5,8,Natalie Snodgrass,,,,,31,Aerin Frankel,,,,,,,41.7,15.9,0.0386,0,O22,259,2026-01-18,PWHL,2025/2026,Regular Season
+102,19:56,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,3,event,5v5,3,Cayla Barnes,,,,,31,Aerin Frankel,,,,,,,40.0,-9.1,,0,O25,259,2026-01-18,PWHL,2025/2026,Regular Season
+103,19:58,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,3,event,5v5,3,Cayla Barnes,,,,,31,Aerin Frankel,,,,,,,40.3,-4.2,,0,O25,259,2026-01-18,PWHL,2025/2026,Regular Season
+104,0:30,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,OT1,event,3v3,21,Hilary Knight,,,,,31,Aerin Frankel,,,,,,,29.0,-4.2,0.0420,0,O25,259,2026-01-18,PWHL,2025/2026,Regular Season
+105,0:41,Shot,Boston Fleet,Away,Seattle Torrent,Boston Fleet,OT1,event,3v3,8,Haley Winn,,,,,30,Corinne Schroeder,,,,,,,69.0,0.8,0.1041,0,O15,259,2026-01-18,PWHL,2025/2026,Regular Season
+106,3:12,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,OT1,event,3v3,8,Natalie Snodgrass,,,,,31,Aerin Frankel,,,,,,,48.3,-28.6,0.0318,0,O19,259,2026-01-18,PWHL,2025/2026,Regular Season
+107,3:20,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,OT1,event,5v5,8,Natalie Snodgrass,,,,,31,Aerin Frankel,,,,,,,86.0,6.2,,0,O08,259,2026-01-18,PWHL,2025/2026,Regular Season
+108,3:22,Block,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,OT1,event,5v5,3,Cayla Barnes,,,,,31,Aerin Frankel,,,,,,,41.0,-26.6,,0,O20,259,2026-01-18,PWHL,2025/2026,Regular Season
+109,4:41,Shot,Boston Fleet,Away,Seattle Torrent,Boston Fleet,OT1,event,3v3,77,Susanna Tapani,,,,,30,Corinne Schroeder,,,,,,,46.3,27.8,0.0152,0,O23,259,2026-01-18,PWHL,2025/2026,Regular Season
+110,4:52,Shot,Boston Fleet,Away,Seattle Torrent,Boston Fleet,OT1,event,3v3,27,Shay Maloney,,,,,30,Corinne Schroeder,,,,,,,77.7,21.5,0.0709,0,O08,259,2026-01-18,PWHL,2025/2026,Regular Season
+111,4:59,Shot,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,OT1,event,3v3,19,Hannah Bilka,,,,,31,Aerin Frankel,,,,,,,63.0,20.4,0.0409,0,O17,259,2026-01-18,PWHL,2025/2026,Regular Season
+112,,SO Miss,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,SO,event,1v0,19,Hannah Bilka,,,,,31,Aerin Frankel,,,,,,,,,,0,,259,2026-01-18,PWHL,2025/2026,Regular Season
+113,,SO Miss,Boston Fleet,Away,Seattle Torrent,Boston Fleet,SO,event,1v0,20,Hannah Brandt,,,,,30,Corinne Schroeder,,,,,,,,,,0,,259,2026-01-18,PWHL,2025/2026,Regular Season
+114,,SO Miss,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,SO,event,1v0,5,Anna Wilgren,,,,,31,Aerin Frankel,,,,,,,,,,0,,259,2026-01-18,PWHL,2025/2026,Regular Season
+115,,SO Miss,Boston Fleet,Away,Seattle Torrent,Boston Fleet,SO,event,1v0,47,Jamie Lee Rattray,,,,,30,Corinne Schroeder,,,,,,,,,,0,,259,2026-01-18,PWHL,2025/2026,Regular Season
+116,,SO Miss,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,SO,event,1v0,25,Alex Carpenter,,,,,31,Aerin Frankel,,,,,,,,,,0,,259,2026-01-18,PWHL,2025/2026,Regular Season
+117,,SO Miss,Boston Fleet,Away,Seattle Torrent,Boston Fleet,SO,event,1v0,77,Susanna Tapani,,,,,30,Corinne Schroeder,,,,,,,,,,0,,259,2026-01-18,PWHL,2025/2026,Regular Season
+118,,SO Miss,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,SO,event,1v0,21,Hilary Knight,,,,,31,Aerin Frankel,,,,,,,,,,0,,259,2026-01-18,PWHL,2025/2026,Regular Season
+119,,SO Miss,Boston Fleet,Away,Seattle Torrent,Boston Fleet,SO,event,1v0,8,Haley Winn,,,,,30,Corinne Schroeder,,,,,,,,,,0,,259,2026-01-18,PWHL,2025/2026,Regular Season
+120,,SO Miss,Seattle Torrent,Home,Seattle Torrent,Boston Fleet,SO,event,1v0,88,Julia Gosling,,,,,31,Aerin Frankel,,,,,,,,,,0,,259,2026-01-18,PWHL,2025/2026,Regular Season
+121,,SO Goal,Boston Fleet,Away,Seattle Torrent,Boston Fleet,SO,event,1v0,,,,,,,30,Corinne Schroeder,,,,,,,,,,0,,259,2026-01-18,PWHL,2025/2026,Regular Season

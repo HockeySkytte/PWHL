@@ -6,7 +6,7 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 5,2:03,Shot,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,1,event,5v5,23,Sarah Wozniewicz,,,,,83,Hannah Murphy,,,,,,,78.7,6.5,0.1248,0,O11,229,2025-12-17,PWHL,2025/2026,Regular Season
 6,3:20,Block,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,1,event,5v5,11,Brooke Hobson,,,,,83,Hannah Murphy,,,,,,,49.7,-9.6,,0,O21,229,2025-12-17,PWHL,2025/2026,Regular Season
 7,3:21,Penalty,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,1,event,5v5,5,Anna Wilgren,,,,,,,,,,,,,,,,0,,229,2025-12-17,PWHL,2025/2026,Regular Season
-8,3:44,Block,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,1,event,5v5,19,Brianne Jenner,,,,,83,Hannah Murphy,,,,,,,54.3,23.0,,0,O23,229,2025-12-17,PWHL,2025/2026,Regular Season
+8,3:44,Block,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,1,event,5v4,19,Brianne Jenner,,,,,83,Hannah Murphy,,,,,,,54.3,23.0,,0,O23,229,2025-12-17,PWHL,2025/2026,Regular Season
 9,5:23,Block,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,1,event,5v5,18,Mannon McMahon,,,,,83,Hannah Murphy,,,,,,,33.3,-16.1,,0,O25,229,2025-12-17,PWHL,2025/2026,Regular Season
 10,5:33,Block,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,1,event,5v5,13,Mikyla Grant-Mentis,,,,,1,Sanni Ahola,,,,,,,-35.7,34.6,,0,D24,229,2025-12-17,PWHL,2025/2026,Regular Season
 11,5:51,Shot,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,1,event,5v5,3,Cayla Barnes,,,,,1,Sanni Ahola,,,,,,,54.7,3.4,0.0573,0,O21,229,2025-12-17,PWHL,2025/2026,Regular Season
@@ -17,10 +17,10 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 16,9:49,Shot,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,1,event,5v5,22,Taylor House,,,,,83,Hannah Murphy,,,,,,,15.0,-22.4,0.0553,0,N01,229,2025-12-17,PWHL,2025/2026,Regular Season
 17,10:21,Block,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,1,event,5v5,6,Stephanie Markowski,,,,,83,Hannah Murphy,,,,,,,28.3,-22.4,,0,O24,229,2025-12-17,PWHL,2025/2026,Regular Season
 18,10:29,Penalty,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,1,event,5v5,2,Aneta Tejralová,,,,,,,,,,,,,,,,0,,229,2025-12-17,PWHL,2025/2026,Regular Season
-19,11:13,Shot,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,1,event,5v5,5,Rory Guilday,,,,,83,Hannah Murphy,,,,,,,50.7,-19.8,0.0458,0,O20,229,2025-12-17,PWHL,2025/2026,Regular Season
-20,11:16,Shot,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,1,event,5v5,26,Emily Clark,,,,,83,Hannah Murphy,,,,,,,81.0,0.3,0.1248,0,O11,229,2025-12-17,PWHL,2025/2026,Regular Season
-21,11:36,Shot,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,1,event,5v5,19,Brianne Jenner,,,,,83,Hannah Murphy,,,,,,,83.3,-6.0,0.2112,0,O07,229,2025-12-17,PWHL,2025/2026,Regular Season
-22,12:08,Shot,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,1,event,5v5,71,Fanuza Kadirova,,,,,83,Hannah Murphy,,,,,,,40.0,13.6,0.0420,0,O25,229,2025-12-17,PWHL,2025/2026,Regular Season
+19,11:13,Shot,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,1,event,5v4,5,Rory Guilday,,,,,83,Hannah Murphy,,,,,,,50.7,-19.8,0.0721,0,O20,229,2025-12-17,PWHL,2025/2026,Regular Season
+20,11:16,Shot,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,1,event,5v4,26,Emily Clark,,,,,83,Hannah Murphy,,,,,,,81.0,0.3,0.1873,0,O11,229,2025-12-17,PWHL,2025/2026,Regular Season
+21,11:36,Shot,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,1,event,5v4,19,Brianne Jenner,,,,,83,Hannah Murphy,,,,,,,83.3,-6.0,0.3021,0,O07,229,2025-12-17,PWHL,2025/2026,Regular Season
+22,12:08,Shot,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,1,event,5v4,71,Fanuza Kadirova,,,,,83,Hannah Murphy,,,,,,,40.0,13.6,0.0661,0,O25,229,2025-12-17,PWHL,2025/2026,Regular Season
 23,13:24,Shot,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,1,event,5v5,97,Anna Shokhina,,,,,83,Hannah Murphy,,,,,,,56.3,-3.7,0.0573,0,O21,229,2025-12-17,PWHL,2025/2026,Regular Season
 24,13:38,Block,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,1,event,5v5,97,Anna Shokhina,,,,,83,Hannah Murphy,,,,,,,40.7,24.6,,0,O26,229,2025-12-17,PWHL,2025/2026,Regular Season
 25,13:58,Block,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,1,event,5v5,23,Sarah Wozniewicz,,,,,83,Hannah Murphy,,,,,,,67.3,4.8,,0,O16,229,2025-12-17,PWHL,2025/2026,Regular Season
@@ -35,14 +35,14 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 34,18:32,Shot,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,1,event,5v5,19,Brianne Jenner,,,,,83,Hannah Murphy,,,,,,,49.7,14.7,0.0386,0,O22,229,2025-12-17,PWHL,2025/2026,Regular Season
 35,19:27,Block,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,1,event,5v5,11,Emily Brown,,,,,1,Sanni Ahola,,,,,,,37.7,3.4,,0,O25,229,2025-12-17,PWHL,2025/2026,Regular Season
 36,19:27,Penalty,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,1,event,5v5,5,Rory Guilday,,,,,,,,,,,,,,,,0,,229,2025-12-17,PWHL,2025/2026,Regular Season
-37,19:57,Goal,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,1,event,5v5,88,Julia Gosling,19,Hannah Bilka,25,Alex Carpenter,1,Sanni Ahola,,3 19 21 25 88,Cayla Barnes - Hannah Bilka - Hilary Knight - Alex Carpenter - Julia Gosling,,6 10 37 88,Stephanie Markowski - Alexa Vasko - Rebecca Leslie - Ronja Savolainen,81.3,9.3,0.0709,0,O08,229,2025-12-17,PWHL,2025/2026,Regular Season
+37,19:57,Goal,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,1,event,5v4,88,Julia Gosling,19,Hannah Bilka,25,Alex Carpenter,1,Sanni Ahola,,3 19 21 25 88,Cayla Barnes - Hannah Bilka - Hilary Knight - Alex Carpenter - Julia Gosling,,6 10 37 88,Stephanie Markowski - Alexa Vasko - Rebecca Leslie - Ronja Savolainen,81.3,9.3,0.1099,0,O08,229,2025-12-17,PWHL,2025/2026,Regular Season
 38,0:43,Block,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,2,event,5v5,11,Emily Brown,,,,,1,Sanni Ahola,,,,,,,36.3,21.0,,1,O26,229,2025-12-17,PWHL,2025/2026,Regular Season
 39,0:59,Shot,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,2,event,5v5,88,Ronja Savolainen,,,,,83,Hannah Murphy,,,,,,,60.3,-16.4,0.0838,-1,O14,229,2025-12-17,PWHL,2025/2026,Regular Season
 40,1:46,Block,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,2,event,5v5,18,Mannon McMahon,,,,,83,Hannah Murphy,,,,,,,55.7,-22.4,,-1,O19,229,2025-12-17,PWHL,2025/2026,Regular Season
 41,3:21,Shot,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,2,event,5v5,66,Marah Wagner,,,,,1,Sanni Ahola,,,,,,,32.0,-20.1,0.0500,1,O25,229,2025-12-17,PWHL,2025/2026,Regular Season
 42,5:34,Penalty,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,2,event,5v5,18,Mannon McMahon,,,,,,,,,,,,,,,,-1,,229,2025-12-17,PWHL,2025/2026,Regular Season
-43,5:52,Shot,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,2,event,5v5,3,Cayla Barnes,,,,,1,Sanni Ahola,,,,,,,39.0,4.2,0.0500,1,O25,229,2025-12-17,PWHL,2025/2026,Regular Season
-44,6:25,Goal,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,2,event,5v5,25,Alex Carpenter,21,Hilary Knight,19,Hannah Bilka,1,Sanni Ahola,,3 19 21 25 88,Cayla Barnes - Hannah Bilka - Hilary Knight - Alex Carpenter - Julia Gosling,,5 6 10 29,Rory Guilday - Stephanie Markowski - Alexa Vasko - Peyton Hemp,81.7,-5.7,0.1463,1,O11,229,2025-12-17,PWHL,2025/2026,Regular Season
+43,5:52,Shot,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,2,event,5v4,3,Cayla Barnes,,,,,1,Sanni Ahola,,,,,,,39.0,4.2,0.0785,1,O25,229,2025-12-17,PWHL,2025/2026,Regular Season
+44,6:25,Goal,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,2,event,5v4,25,Alex Carpenter,21,Hilary Knight,19,Hannah Bilka,1,Sanni Ahola,,3 19 21 25 88,Cayla Barnes - Hannah Bilka - Hilary Knight - Alex Carpenter - Julia Gosling,,5 6 10 29,Rory Guilday - Stephanie Markowski - Alexa Vasko - Peyton Hemp,81.7,-5.7,0.2170,1,O11,229,2025-12-17,PWHL,2025/2026,Regular Season
 45,8:15,Block,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,2,event,5v5,19,Brianne Jenner,,,,,83,Hannah Murphy,,,,,,,44.3,-11.3,,-2,O21,229,2025-12-17,PWHL,2025/2026,Regular Season
 46,9:44,Block,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,2,event,5v5,16,Kateřina Mrázová,,,,,83,Hannah Murphy,,,,,,,45.7,-6.0,,-2,O21,229,2025-12-17,PWHL,2025/2026,Regular Season
 47,10:04,Block,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,2,event,5v5,55,Samantha Isbell,,,,,83,Hannah Murphy,,,,,,,43.7,10.2,,-2,O21,229,2025-12-17,PWHL,2025/2026,Regular Season
@@ -54,7 +54,7 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 53,13:45,Shot,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,2,event,5v5,92,Danielle Serdachny,,,,,1,Sanni Ahola,,,,,,,-83.0,35.4,0.0828,3,D04,229,2025-12-17,PWHL,2025/2026,Regular Season
 54,13:53,Block,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,2,event,5v5,5,Anna Wilgren,,,,,1,Sanni Ahola,,,,,,,45.0,-28.9,,3,O19,229,2025-12-17,PWHL,2025/2026,Regular Season
 55,14:58,Penalty,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,2,event,5v5,16,Kateřina Mrázová,,,,,,,,,,,,,,,,-3,,229,2025-12-17,PWHL,2025/2026,Regular Season
-56,15:45,Shot,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,2,event,5v5,19,Hannah Bilka,,,,,1,Sanni Ahola,,,,,,,66.7,-16.4,0.0561,3,O13,229,2025-12-17,PWHL,2025/2026,Regular Season
+56,15:45,Shot,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,2,event,5v4,19,Hannah Bilka,,,,,1,Sanni Ahola,,,,,,,66.7,-16.4,0.0877,3,O13,229,2025-12-17,PWHL,2025/2026,Regular Season
 57,16:45,Block,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,2,event,5v5,5,Anna Wilgren,,,,,1,Sanni Ahola,,,,,,,48.3,-13.9,,3,O20,229,2025-12-17,PWHL,2025/2026,Regular Season
 58,16:54,Block,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,2,event,5v5,2,Aneta Tejralová,,,,,1,Sanni Ahola,,,,,,,45.3,2.8,,3,O21,229,2025-12-17,PWHL,2025/2026,Regular Season
 59,17:25,Shot,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,2,event,5v5,26,Emily Clark,,,,,83,Hannah Murphy,,,,,,,86.0,9.3,0.0766,-3,O08,229,2025-12-17,PWHL,2025/2026,Regular Season
@@ -65,9 +65,9 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 64,0:33,Shot,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,3,event,5v5,19,Brianne Jenner,,,,,83,Hannah Murphy,,,,,,,47.7,27.2,0.0164,-3,O23,229,2025-12-17,PWHL,2025/2026,Regular Season
 65,0:44,Block,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,3,event,5v5,25,Alex Carpenter,,,,,1,Sanni Ahola,,,,,,,53.0,11.3,,3,O22,229,2025-12-17,PWHL,2025/2026,Regular Season
 66,0:54,Penalty,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,3,event,5v5,21,Hilary Knight,,,,,,,,,,,,,,,,3,,229,2025-12-17,PWHL,2025/2026,Regular Season
-67,1:02,Shot,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,3,event,5v5,88,Julia Gosling,,,,,1,Sanni Ahola,,,,,,,-56.0,-41.4,0.0828,3,D23,229,2025-12-17,PWHL,2025/2026,Regular Season
-68,1:17,Shot,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,3,event,5v5,94,Anna Meixner,,,,,83,Hannah Murphy,,,,,,,74.0,-17.3,0.0712,-3,O06,229,2025-12-17,PWHL,2025/2026,Regular Season
-69,1:17,Penalty,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,3,event,5v5,3,Jocelyne Larocque,,,,,,,,,,,,,,,,-3,,229,2025-12-17,PWHL,2025/2026,Regular Season
+67,1:02,Shot,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,3,event,4v5,88,Julia Gosling,,,,,1,Sanni Ahola,,,,,,,-56.0,-41.4,0.1372,3,D23,229,2025-12-17,PWHL,2025/2026,Regular Season
+68,1:17,Shot,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,3,event,5v4,94,Anna Meixner,,,,,83,Hannah Murphy,,,,,,,74.0,-17.3,0.1103,-3,O06,229,2025-12-17,PWHL,2025/2026,Regular Season
+69,1:17,Penalty,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,3,event,5v4,3,Jocelyne Larocque,,,,,,,,,,,,,,,,-3,,229,2025-12-17,PWHL,2025/2026,Regular Season
 70,2:00,Block,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,3,event,5v5,5,Rory Guilday,,,,,83,Hannah Murphy,,,,,,,32.3,2.8,,-3,O25,229,2025-12-17,PWHL,2025/2026,Regular Season
 71,5:10,Shot,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,3,event,5v5,13,Mikyla Grant-Mentis,,,,,1,Sanni Ahola,,,,,,,9.0,21.8,0.0828,3,N03,229,2025-12-17,PWHL,2025/2026,Regular Season
 72,5:22,Block,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,3,event,5v5,19,Brianne Jenner,,,,,83,Hannah Murphy,,,,,,,48.0,-9.3,,-3,O21,229,2025-12-17,PWHL,2025/2026,Regular Season
@@ -75,13 +75,13 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 74,5:43,Block,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,3,event,5v5,7,Lily Delianedis,,,,,1,Sanni Ahola,,,,,,,40.3,-23.2,,3,O24,229,2025-12-17,PWHL,2025/2026,Regular Season
 75,6:59,Block,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,3,event,5v5,16,Kateřina Mrázová,,,,,83,Hannah Murphy,,,,,,,71.0,-9.1,,-3,O14,229,2025-12-17,PWHL,2025/2026,Regular Season
 76,7:05,Penalty,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,3,event,5v5,3,Cayla Barnes,,,,,,,,,,,,,,,,3,,229,2025-12-17,PWHL,2025/2026,Regular Season
-77,8:21,Shot,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,3,event,5v5,88,Ronja Savolainen,,,,,83,Hannah Murphy,,,,,,,48.0,-15.3,0.0496,-3,O20,229,2025-12-17,PWHL,2025/2026,Regular Season
+77,8:21,Shot,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,3,event,5v4,88,Ronja Savolainen,,,,,83,Hannah Murphy,,,,,,,48.0,-15.3,0.0778,-3,O20,229,2025-12-17,PWHL,2025/2026,Regular Season
 78,8:40,Block,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,3,event,5v5,94,Anna Meixner,,,,,83,Hannah Murphy,,,,,,,68.3,9.3,,-3,O16,229,2025-12-17,PWHL,2025/2026,Regular Season
 79,9:16,Block,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,3,event,5v5,21,Hilary Knight,,,,,1,Sanni Ahola,,,,,,,65.0,7.6,,3,O16,229,2025-12-17,PWHL,2025/2026,Regular Season
-80,10:53,Block,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,3,event,5v5,19,Hannah Bilka,,,,,1,Sanni Ahola,,,,,,,31.0,2.5,,3,O25,229,2025-12-17,PWHL,2025/2026,Regular Season
+80,10:53,Block,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,3,event,4v5,19,Hannah Bilka,,,,,1,Sanni Ahola,,,,,,,31.0,2.5,,3,O25,229,2025-12-17,PWHL,2025/2026,Regular Season
 81,10:54,Shot,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,3,event,5v5,92,Danielle Serdachny,,,,,1,Sanni Ahola,,,,,,,85.7,-10.8,0.0982,3,O06,229,2025-12-17,PWHL,2025/2026,Regular Season
 82,11:15,Shot,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,3,event,5v5,23,Sarah Wozniewicz,,,,,83,Hannah Murphy,,,,,,,-5.0,24.9,0.0597,-3,N06,229,2025-12-17,PWHL,2025/2026,Regular Season
-83,11:28,Block,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,3,event,5v5,97,Anna Shokhina,,,,,83,Hannah Murphy,,,,,,,84.3,-9.6,,-3,O06,229,2025-12-17,PWHL,2025/2026,Regular Season
+83,11:28,Block,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,3,event,5v4,97,Anna Shokhina,,,,,83,Hannah Murphy,,,,,,,84.3,-9.6,,-3,O06,229,2025-12-17,PWHL,2025/2026,Regular Season
 84,13:09,Shot,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,3,event,5v5,25,Alex Carpenter,,,,,1,Sanni Ahola,,,,,,,65.0,10.5,0.1322,3,O16,229,2025-12-17,PWHL,2025/2026,Regular Season
 85,13:27,Shot,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,3,event,5v5,88,Julia Gosling,,,,,1,Sanni Ahola,,,,,,,30.7,-35.1,0.0605,3,O24,229,2025-12-17,PWHL,2025/2026,Regular Season
 86,13:39,Block,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,3,event,5v5,5,Anna Wilgren,,,,,1,Sanni Ahola,,,,,,,31.0,-4.2,,3,O25,229,2025-12-17,PWHL,2025/2026,Regular Season
@@ -93,4 +93,4 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 92,18:58,Block,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,3,event,5v5,5,Anna Wilgren,,,,,1,Sanni Ahola,,,,,,,72.3,-15.3,,4,O13,229,2025-12-17,PWHL,2025/2026,Regular Season
 93,19:21,Goal,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,3,event,5v5,37,Rebecca Leslie,5,Rory Guilday,,,83,Hannah Murphy,,7 10 11 17 27,Lily Delianedis - Jenna Buglioni - Emily Brown - Brooke Bryant - Megan Carter,,5 6 19 37 94,Rory Guilday - Stephanie Markowski - Brianne Jenner - Rebecca Leslie - Anna Meixner,52.3,18.4,0.0418,-4,O22,229,2025-12-17,PWHL,2025/2026,Regular Season
 94,19:32,Shot,Seattle Torrent,Home,Seattle Torrent,Ottawa Charge,3,event,5v5,17,Brooke Bryant,,,,,1,Sanni Ahola,,,,,,,38.0,11.1,0.0633,3,O25,229,2025-12-17,PWHL,2025/2026,Regular Season
-95,19:49,Block,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,3,event,5v5,23,Sarah Wozniewicz,,,,,83,Hannah Murphy,,,,,,,31.7,32.9,,-3,O26,229,2025-12-17,PWHL,2025/2026,Regular Season
+95,19:49,Block,Ottawa Charge,Away,Seattle Torrent,Ottawa Charge,3,event,4v5,23,Sarah Wozniewicz,,,,,83,Hannah Murphy,,,,,,,31.7,32.9,,-3,O26,229,2025-12-17,PWHL,2025/2026,Regular Season

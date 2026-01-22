@@ -29,58 +29,59 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 28,2:50,Goal,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,98,Kristýna Kaltounková,71,Jincy Roese,26,Casey O'Brien,29,Elaine Chuli,,6 15 19 25 67,Kali Flanagan - Savannah Harmon - Sara Hjalmarsson - Clara Van Wieren - Emma Woods,,4 20 26 71 98,Elle Hartje - Allyson Simpson - Casey O'Brien - Jincy Roese - Kristýna Kaltounková,73.3,-8.2,0.1248,0,O11,248,2026-01-06,PWHL,2025/2026,Regular Season
 29,3:45,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,8,Maja Nylen Persson,,,,,29,Elaine Chuli,,,,,,,32.7,22.1,0.0309,1,O26,248,2026-01-06,PWHL,2025/2026,Regular Season
 30,3:53,Penaltyshot,,,Toronto Sceptres,New York Sirens,2,event,5v5,98,Kristýna Kaltounková,,,,,29,Elaine Chuli,,,,,,,,,,,,248,2026-01-06,PWHL,2025/2026,Regular Season
-31,4:16,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,28,Micah Zandee-Hart,,,,,29,Elaine Chuli,,,,,,,38.3,-18.7,,1,O24,248,2026-01-06,PWHL,2025/2026,Regular Season
-32,6:38,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,14,Renata Fast,,,,,82,Kayle Osborne,,,,,,,61.0,21.8,,-1,O17,248,2026-01-06,PWHL,2025/2026,Regular Season
-33,6:47,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,14,Renata Fast,,,,,82,Kayle Osborne,,,,,,,47.0,19.3,,-1,O22,248,2026-01-06,PWHL,2025/2026,Regular Season
-34,8:31,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,10,Sarah Fillier,,,,,29,Elaine Chuli,,,,,,,59.0,-14.7,0.0929,1,O14,248,2026-01-06,PWHL,2025/2026,Regular Season
-35,8:36,Penalty,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,19,Paetyn Levis,,,,,,,,,,,,,,,,1,,248,2026-01-06,PWHL,2025/2026,Regular Season
-36,8:55,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v4,14,Renata Fast,,,,,82,Kayle Osborne,,,,,,,47.3,25.2,0.0261,-1,O23,248,2026-01-06,PWHL,2025/2026,Regular Season
-37,9:22,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,9,Daryl Watts,,,,,82,Kayle Osborne,,,,,,,36.0,-4.2,,-1,O25,248,2026-01-06,PWHL,2025/2026,Regular Season
-38,9:50,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v4,6,Kali Flanagan,,,,,82,Kayle Osborne,,,,,,,38.0,-23.0,0.0676,-1,O24,248,2026-01-06,PWHL,2025/2026,Regular Season
-39,10:05,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,6,Kali Flanagan,,,,,82,Kayle Osborne,,,,,,,43.0,-15.9,,-1,O20,248,2026-01-06,PWHL,2025/2026,Regular Season
-40,10:52,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,14,Jaime Bourbonnais,,,,,29,Elaine Chuli,,,,,,,71.0,-24.4,0.0443,1,O13,248,2026-01-06,PWHL,2025/2026,Regular Season
-41,11:00,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,98,Kristýna Kaltounková,,,,,29,Elaine Chuli,,,,,,,53.3,12.8,,1,O22,248,2026-01-06,PWHL,2025/2026,Regular Season
-42,13:34,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,71,Anna Kjellbin,,,,,82,Kayle Osborne,,,,,,,-82.3,-21.8,0.0591,-1,D09,248,2026-01-06,PWHL,2025/2026,Regular Season
-43,14:41,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,18,Jesse Compher,,,,,82,Kayle Osborne,,,,,,,67.0,14.2,0.0959,-1,O16,248,2026-01-06,PWHL,2025/2026,Regular Season
-44,14:48,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,9,Daryl Watts,,,,,82,Kayle Osborne,,,,,,,76.3,16.1,0.0758,-1,O08,248,2026-01-06,PWHL,2025/2026,Regular Season
-45,15:21,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,15,Savannah Harmon,,,,,82,Kayle Osborne,,,,,,,54.0,13.3,,-1,O22,248,2026-01-06,PWHL,2025/2026,Regular Season
-46,16:38,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,71,Anna Kjellbin,,,,,82,Kayle Osborne,,,,,,,36.3,32.6,0.0277,-1,O26,248,2026-01-06,PWHL,2025/2026,Regular Season
-47,16:43,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,19,Sara Hjalmarsson,,,,,82,Kayle Osborne,,,,,,,71.7,-32.6,0.0148,-1,O12,248,2026-01-06,PWHL,2025/2026,Regular Season
-48,17:53,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,27,Emma Maltais,,,,,82,Kayle Osborne,,,,,,,47.0,-0.3,,-1,O21,248,2026-01-06,PWHL,2025/2026,Regular Season
-49,18:39,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,17,Ella Shelton,,,,,82,Kayle Osborne,,,,,,,37.7,-1.4,,-1,O25,248,2026-01-06,PWHL,2025/2026,Regular Season
-50,19:15,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,6,Kali Flanagan,,,,,82,Kayle Osborne,,,,,,,47.3,30.9,0.0163,-1,O23,248,2026-01-06,PWHL,2025/2026,Regular Season
-51,19:28,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,15,Savannah Harmon,,,,,82,Kayle Osborne,,,,,,,67.7,23.2,,-1,O17,248,2026-01-06,PWHL,2025/2026,Regular Season
-52,19:57,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,26,Casey O'Brien,,,,,29,Elaine Chuli,,,,,,,36.3,13.6,0.0500,1,O25,248,2026-01-06,PWHL,2025/2026,Regular Season
-53,1:07,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,14,Renata Fast,,,,,82,Kayle Osborne,,,,,,,37.0,17.0,0.0450,-1,O25,248,2026-01-06,PWHL,2025/2026,Regular Season
-54,1:28,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,25,Clara Van Wieren,,,,,82,Kayle Osborne,,,,,,,36.3,11.1,0.0450,-1,O25,248,2026-01-06,PWHL,2025/2026,Regular Season
-55,3:04,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,29,Emmy Fecteau,,,,,29,Elaine Chuli,,,,,,,66.7,-17.3,0.0443,1,O13,248,2026-01-06,PWHL,2025/2026,Regular Season
-56,3:12,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,19,Paetyn Levis,,,,,29,Elaine Chuli,,,,,,,59.0,-11.1,0.0929,1,O14,248,2026-01-06,PWHL,2025/2026,Regular Season
-57,3:57,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,20,Emma Gentry,,,,,82,Kayle Osborne,,,,,,,43.0,-23.5,,-1,O20,248,2026-01-06,PWHL,2025/2026,Regular Season
-58,4:33,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,24,Natalie Spooner,,,,,82,Kayle Osborne,,,,,,,79.7,-9.1,0.0705,-1,O06,248,2026-01-06,PWHL,2025/2026,Regular Season
-59,4:42,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,6,Kali Flanagan,,,,,82,Kayle Osborne,,,,,,,42.0,11.9,,-1,O21,248,2026-01-06,PWHL,2025/2026,Regular Season
-60,5:02,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,17,Taylor Girard,,,,,29,Elaine Chuli,,,,,,,48.0,21.2,,1,O22,248,2026-01-06,PWHL,2025/2026,Regular Season
-61,5:28,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,40,Blayre Turnbull,,,,,82,Kayle Osborne,,,,,,,72.7,7.6,0.0959,-1,O16,248,2026-01-06,PWHL,2025/2026,Regular Season
-62,5:34,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,67,Emma Woods,,,,,82,Kayle Osborne,,,,,,,66.7,-16.1,0.0398,-1,O13,248,2026-01-06,PWHL,2025/2026,Regular Season
-63,5:54,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,25,Clara Van Wieren,,,,,82,Kayle Osborne,,,,,,,71.3,-16.1,0.0398,-1,O13,248,2026-01-06,PWHL,2025/2026,Regular Season
-64,7:34,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,8,Maja Nylen Persson,,,,,29,Elaine Chuli,,,,,,,39.0,-23.2,0.0477,1,O24,248,2026-01-06,PWHL,2025/2026,Regular Season
-65,8:13,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,10,Sarah Fillier,,,,,29,Elaine Chuli,,,,,,,72.0,2.5,0.1061,1,O16,248,2026-01-06,PWHL,2025/2026,Regular Season
-66,8:16,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,10,Sarah Fillier,,,,,29,Elaine Chuli,,,,,,,79.0,9.6,0.0841,1,O08,248,2026-01-06,PWHL,2025/2026,Regular Season
-67,8:23,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,19,Paetyn Levis,,,,,29,Elaine Chuli,,,,,,,47.7,3.4,,1,O21,248,2026-01-06,PWHL,2025/2026,Regular Season
-68,8:42,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,11,Kiara Zanon,,,,,82,Kayle Osborne,,,,,,,61.0,-3.1,,-1,O15,248,2026-01-06,PWHL,2025/2026,Regular Season
-69,10:00,Penalty,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,14,Jaime Bourbonnais,,,,,,,,,,,,,,,,1,,248,2026-01-06,PWHL,2025/2026,Regular Season
-70,10:00,Penalty,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,25,Clara Van Wieren,,,,,,,,,,,,,,,,-1,,248,2026-01-06,PWHL,2025/2026,Regular Season
-71,12:26,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,4,Elle Hartje,,,,,29,Elaine Chuli,,,,,,,84.3,18.1,0.0841,1,O08,248,2026-01-06,PWHL,2025/2026,Regular Season
-72,12:39,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,28,Micah Zandee-Hart,,,,,29,Elaine Chuli,,,,,,,25.7,-3.7,,1,O25,248,2026-01-06,PWHL,2025/2026,Regular Season
-73,14:24,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,6,Kali Flanagan,,,,,82,Kayle Osborne,,,,,,,53.7,26.9,0.0163,-1,O23,248,2026-01-06,PWHL,2025/2026,Regular Season
-74,14:45,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,6,Kali Flanagan,,,,,82,Kayle Osborne,,,,,,,47.7,21.5,,-1,O22,248,2026-01-06,PWHL,2025/2026,Regular Season
-75,16:21,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,28,Micah Zandee-Hart,,,,,29,Elaine Chuli,,,,,,,30.0,9.1,,1,O25,248,2026-01-06,PWHL,2025/2026,Regular Season
-76,16:46,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,16,Lauren Bernard,,,,,29,Elaine Chuli,,,,,,,46.3,-16.7,,1,O20,248,2026-01-06,PWHL,2025/2026,Regular Season
-77,16:53,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,43,Kristin O'Neill,,,,,29,Elaine Chuli,,,,,,,57.3,26.4,,1,O17,248,2026-01-06,PWHL,2025/2026,Regular Season
-78,18:18,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,27,Emma Maltais,,,,,82,Kayle Osborne,,,,,,,73.0,16.7,0.0758,-1,O08,248,2026-01-06,PWHL,2025/2026,Regular Season
-79,18:57,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,14,Renata Fast,,,,,82,Kayle Osborne,,,,,,,45.3,-31.2,0.0341,-1,O19,248,2026-01-06,PWHL,2025/2026,Regular Season
-80,19:02,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,9,Daryl Watts,,,,,82,Kayle Osborne,,,,,,,58.7,-23.2,,-1,O13,248,2026-01-06,PWHL,2025/2026,Regular Season
-81,19:14,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,14,Renata Fast,,,,,82,Kayle Osborne,,,,,,,43.3,8.5,,-1,O21,248,2026-01-06,PWHL,2025/2026,Regular Season
-82,19:23,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,9,Daryl Watts,,,,,82,Kayle Osborne,,,,,,,51.3,-37.7,0.0341,-1,O19,248,2026-01-06,PWHL,2025/2026,Regular Season
-83,19:33,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,9,Daryl Watts,,,,,82,Kayle Osborne,,,,,,,35.0,-23.0,0.0429,-1,O24,248,2026-01-06,PWHL,2025/2026,Regular Season
-84,19:33,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,10,Hanna Baskin,,,,,82,Kayle Osborne,,,,,,,80.7,-15.0,0.0705,-1,O06,248,2026-01-06,PWHL,2025/2026,Regular Season
-85,19:53,Goal,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,98,Kristýna Kaltounková,,,,,29,Elaine Chuli,,9 14 17 24 27 40,Daryl Watts - Renata Fast - Ella Shelton - Natalie Spooner - Emma Maltais - Blayre Turnbull,,8 10 19 28 98,Maja Nylen Persson - Sarah Fillier - Paetyn Levis - Micah Zandee-Hart - Kristýna Kaltounková,-25.7,34.9,0.0657,1,D24,248,2026-01-06,PWHL,2025/2026,Regular Season
+31,3:53,Penalty,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,17,Ella Shelton,,,,,,,,,,,,,,,,-1,,248,2026-01-06,PWHL,2025/2026,Regular Season
+32,4:16,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,28,Micah Zandee-Hart,,,,,29,Elaine Chuli,,,,,,,38.3,-18.7,,1,O24,248,2026-01-06,PWHL,2025/2026,Regular Season
+33,6:38,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,14,Renata Fast,,,,,82,Kayle Osborne,,,,,,,61.0,21.8,,-1,O17,248,2026-01-06,PWHL,2025/2026,Regular Season
+34,6:47,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,14,Renata Fast,,,,,82,Kayle Osborne,,,,,,,47.0,19.3,,-1,O22,248,2026-01-06,PWHL,2025/2026,Regular Season
+35,8:31,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,10,Sarah Fillier,,,,,29,Elaine Chuli,,,,,,,59.0,-14.7,0.0929,1,O14,248,2026-01-06,PWHL,2025/2026,Regular Season
+36,8:36,Penalty,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,19,Paetyn Levis,,,,,,,,,,,,,,,,1,,248,2026-01-06,PWHL,2025/2026,Regular Season
+37,8:55,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v4,14,Renata Fast,,,,,82,Kayle Osborne,,,,,,,47.3,25.2,0.0261,-1,O23,248,2026-01-06,PWHL,2025/2026,Regular Season
+38,9:22,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,9,Daryl Watts,,,,,82,Kayle Osborne,,,,,,,36.0,-4.2,,-1,O25,248,2026-01-06,PWHL,2025/2026,Regular Season
+39,9:50,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v4,6,Kali Flanagan,,,,,82,Kayle Osborne,,,,,,,38.0,-23.0,0.0676,-1,O24,248,2026-01-06,PWHL,2025/2026,Regular Season
+40,10:05,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,6,Kali Flanagan,,,,,82,Kayle Osborne,,,,,,,43.0,-15.9,,-1,O20,248,2026-01-06,PWHL,2025/2026,Regular Season
+41,10:52,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,14,Jaime Bourbonnais,,,,,29,Elaine Chuli,,,,,,,71.0,-24.4,0.0443,1,O13,248,2026-01-06,PWHL,2025/2026,Regular Season
+42,11:00,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,98,Kristýna Kaltounková,,,,,29,Elaine Chuli,,,,,,,53.3,12.8,,1,O22,248,2026-01-06,PWHL,2025/2026,Regular Season
+43,13:34,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,71,Anna Kjellbin,,,,,82,Kayle Osborne,,,,,,,-82.3,-21.8,0.0591,-1,D09,248,2026-01-06,PWHL,2025/2026,Regular Season
+44,14:41,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,18,Jesse Compher,,,,,82,Kayle Osborne,,,,,,,67.0,14.2,0.0959,-1,O16,248,2026-01-06,PWHL,2025/2026,Regular Season
+45,14:48,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,9,Daryl Watts,,,,,82,Kayle Osborne,,,,,,,76.3,16.1,0.0758,-1,O08,248,2026-01-06,PWHL,2025/2026,Regular Season
+46,15:21,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,15,Savannah Harmon,,,,,82,Kayle Osborne,,,,,,,54.0,13.3,,-1,O22,248,2026-01-06,PWHL,2025/2026,Regular Season
+47,16:38,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,71,Anna Kjellbin,,,,,82,Kayle Osborne,,,,,,,36.3,32.6,0.0277,-1,O26,248,2026-01-06,PWHL,2025/2026,Regular Season
+48,16:43,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,19,Sara Hjalmarsson,,,,,82,Kayle Osborne,,,,,,,71.7,-32.6,0.0148,-1,O12,248,2026-01-06,PWHL,2025/2026,Regular Season
+49,17:53,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,27,Emma Maltais,,,,,82,Kayle Osborne,,,,,,,47.0,-0.3,,-1,O21,248,2026-01-06,PWHL,2025/2026,Regular Season
+50,18:39,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,17,Ella Shelton,,,,,82,Kayle Osborne,,,,,,,37.7,-1.4,,-1,O25,248,2026-01-06,PWHL,2025/2026,Regular Season
+51,19:15,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,6,Kali Flanagan,,,,,82,Kayle Osborne,,,,,,,47.3,30.9,0.0163,-1,O23,248,2026-01-06,PWHL,2025/2026,Regular Season
+52,19:28,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,2,event,5v5,15,Savannah Harmon,,,,,82,Kayle Osborne,,,,,,,67.7,23.2,,-1,O17,248,2026-01-06,PWHL,2025/2026,Regular Season
+53,19:57,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,2,event,5v5,26,Casey O'Brien,,,,,29,Elaine Chuli,,,,,,,36.3,13.6,0.0500,1,O25,248,2026-01-06,PWHL,2025/2026,Regular Season
+54,1:07,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,14,Renata Fast,,,,,82,Kayle Osborne,,,,,,,37.0,17.0,0.0450,-1,O25,248,2026-01-06,PWHL,2025/2026,Regular Season
+55,1:28,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,25,Clara Van Wieren,,,,,82,Kayle Osborne,,,,,,,36.3,11.1,0.0450,-1,O25,248,2026-01-06,PWHL,2025/2026,Regular Season
+56,3:04,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,29,Emmy Fecteau,,,,,29,Elaine Chuli,,,,,,,66.7,-17.3,0.0443,1,O13,248,2026-01-06,PWHL,2025/2026,Regular Season
+57,3:12,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,19,Paetyn Levis,,,,,29,Elaine Chuli,,,,,,,59.0,-11.1,0.0929,1,O14,248,2026-01-06,PWHL,2025/2026,Regular Season
+58,3:57,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,20,Emma Gentry,,,,,82,Kayle Osborne,,,,,,,43.0,-23.5,,-1,O20,248,2026-01-06,PWHL,2025/2026,Regular Season
+59,4:33,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,24,Natalie Spooner,,,,,82,Kayle Osborne,,,,,,,79.7,-9.1,0.0705,-1,O06,248,2026-01-06,PWHL,2025/2026,Regular Season
+60,4:42,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,6,Kali Flanagan,,,,,82,Kayle Osborne,,,,,,,42.0,11.9,,-1,O21,248,2026-01-06,PWHL,2025/2026,Regular Season
+61,5:02,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,17,Taylor Girard,,,,,29,Elaine Chuli,,,,,,,48.0,21.2,,1,O22,248,2026-01-06,PWHL,2025/2026,Regular Season
+62,5:28,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,40,Blayre Turnbull,,,,,82,Kayle Osborne,,,,,,,72.7,7.6,0.0959,-1,O16,248,2026-01-06,PWHL,2025/2026,Regular Season
+63,5:34,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,67,Emma Woods,,,,,82,Kayle Osborne,,,,,,,66.7,-16.1,0.0398,-1,O13,248,2026-01-06,PWHL,2025/2026,Regular Season
+64,5:54,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,25,Clara Van Wieren,,,,,82,Kayle Osborne,,,,,,,71.3,-16.1,0.0398,-1,O13,248,2026-01-06,PWHL,2025/2026,Regular Season
+65,7:34,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,8,Maja Nylen Persson,,,,,29,Elaine Chuli,,,,,,,39.0,-23.2,0.0477,1,O24,248,2026-01-06,PWHL,2025/2026,Regular Season
+66,8:13,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,10,Sarah Fillier,,,,,29,Elaine Chuli,,,,,,,72.0,2.5,0.1061,1,O16,248,2026-01-06,PWHL,2025/2026,Regular Season
+67,8:16,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,10,Sarah Fillier,,,,,29,Elaine Chuli,,,,,,,79.0,9.6,0.0841,1,O08,248,2026-01-06,PWHL,2025/2026,Regular Season
+68,8:23,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,19,Paetyn Levis,,,,,29,Elaine Chuli,,,,,,,47.7,3.4,,1,O21,248,2026-01-06,PWHL,2025/2026,Regular Season
+69,8:42,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,11,Kiara Zanon,,,,,82,Kayle Osborne,,,,,,,61.0,-3.1,,-1,O15,248,2026-01-06,PWHL,2025/2026,Regular Season
+70,10:00,Penalty,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,14,Jaime Bourbonnais,,,,,,,,,,,,,,,,1,,248,2026-01-06,PWHL,2025/2026,Regular Season
+71,10:00,Penalty,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,25,Clara Van Wieren,,,,,,,,,,,,,,,,-1,,248,2026-01-06,PWHL,2025/2026,Regular Season
+72,12:26,Shot,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,4,Elle Hartje,,,,,29,Elaine Chuli,,,,,,,84.3,18.1,0.0841,1,O08,248,2026-01-06,PWHL,2025/2026,Regular Season
+73,12:39,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,28,Micah Zandee-Hart,,,,,29,Elaine Chuli,,,,,,,25.7,-3.7,,1,O25,248,2026-01-06,PWHL,2025/2026,Regular Season
+74,14:24,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,6,Kali Flanagan,,,,,82,Kayle Osborne,,,,,,,53.7,26.9,0.0163,-1,O23,248,2026-01-06,PWHL,2025/2026,Regular Season
+75,14:45,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,6,Kali Flanagan,,,,,82,Kayle Osborne,,,,,,,47.7,21.5,,-1,O22,248,2026-01-06,PWHL,2025/2026,Regular Season
+76,16:21,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,28,Micah Zandee-Hart,,,,,29,Elaine Chuli,,,,,,,30.0,9.1,,1,O25,248,2026-01-06,PWHL,2025/2026,Regular Season
+77,16:46,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,16,Lauren Bernard,,,,,29,Elaine Chuli,,,,,,,46.3,-16.7,,1,O20,248,2026-01-06,PWHL,2025/2026,Regular Season
+78,16:53,Block,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,43,Kristin O'Neill,,,,,29,Elaine Chuli,,,,,,,57.3,26.4,,1,O17,248,2026-01-06,PWHL,2025/2026,Regular Season
+79,18:18,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5 ENF,27,Emma Maltais,,,,,82,Kayle Osborne,,,,,,,73.0,16.7,0.0758,-1,O08,248,2026-01-06,PWHL,2025/2026,Regular Season
+80,18:57,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5 ENF,14,Renata Fast,,,,,82,Kayle Osborne,,,,,,,45.3,-31.2,0.0341,-1,O19,248,2026-01-06,PWHL,2025/2026,Regular Season
+81,19:02,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,9,Daryl Watts,,,,,82,Kayle Osborne,,,,,,,58.7,-23.2,,-1,O13,248,2026-01-06,PWHL,2025/2026,Regular Season
+82,19:14,Block,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5,14,Renata Fast,,,,,82,Kayle Osborne,,,,,,,43.3,8.5,,-1,O21,248,2026-01-06,PWHL,2025/2026,Regular Season
+83,19:23,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5 ENF,9,Daryl Watts,,,,,82,Kayle Osborne,,,,,,,51.3,-37.7,0.0341,-1,O19,248,2026-01-06,PWHL,2025/2026,Regular Season
+84,19:33,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5 ENF,9,Daryl Watts,,,,,82,Kayle Osborne,,,,,,,35.0,-23.0,0.0429,-1,O24,248,2026-01-06,PWHL,2025/2026,Regular Season
+85,19:33,Shot,Toronto Sceptres,Home,Toronto Sceptres,New York Sirens,3,event,5v5 ENF,10,Hanna Baskin,,,,,82,Kayle Osborne,,,,,,,80.7,-15.0,0.0705,-1,O06,248,2026-01-06,PWHL,2025/2026,Regular Season
+86,19:53,Goal,New York Sirens,Away,Toronto Sceptres,New York Sirens,3,event,5v5,98,Kristýna Kaltounková,,,,,29,Elaine Chuli,,9 14 17 24 27 40,Daryl Watts - Renata Fast - Ella Shelton - Natalie Spooner - Emma Maltais - Blayre Turnbull,,8 10 19 28 98,Maja Nylen Persson - Sarah Fillier - Paetyn Levis - Micah Zandee-Hart - Kristýna Kaltounková,-25.7,34.9,0.0657,1,D24,248,2026-01-06,PWHL,2025/2026,Regular Season

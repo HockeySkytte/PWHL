@@ -274,9 +274,11 @@ class ReportDataStore:
 
     def _parse_strength(self, s: str) -> Optional[Tuple[int,int]]:
         # Expect formats like '5v4', '4v5', '5v5', '3v5'; return (for, against)
-        if 'v' not in s: return None
+        token = (s or '').strip().split(' ', 1)[0]
+        if 'v' not in token:
+            return None
         try:
-            a,b = s.lower().split('v',1)
+            a, b = token.lower().split('v', 1)
             return int(a), int(b)
         except Exception:
             return None

@@ -73,6 +73,6 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 72,16:05,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,92,Danielle Serdachny,,,,,50,Kristen Campbell,,,,,,,89.0,7.4,0.1751,1,O02,108,2024-12-03,PWHL,2024/2025,Regular Season
 73,16:38,Shot,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,26,Emily Clark,,,,,50,Kristen Campbell,,,,,,,57.7,32.9,0.0179,1,O18,108,2024-12-03,PWHL,2024/2025,Regular Season
 74,17:00,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5,12,Allie Munroe,,,,,38,Emerance Maschmeyer,,,,,,,65.3,14.5,0.0959,-1,O16,108,2024-12-03,PWHL,2024/2025,Regular Season
-75,18:20,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5,34,Hannah Miller,,,,,38,Emerance Maschmeyer,,,,,,,39.0,-0.6,0.0450,-1,O25,108,2024-12-03,PWHL,2024/2025,Regular Season
-76,19:04,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5,8,Izzy Daniel,,,,,38,Emerance Maschmeyer,,,,,,,69.3,-15.9,0.0398,-1,O13,108,2024-12-03,PWHL,2024/2025,Regular Season
-77,19:55,Penalty,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5,88,Ronja Savolainen,,,,,,,,,,,,,,,,1,,108,2024-12-03,PWHL,2024/2025,Regular Season
+75,18:20,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5 ENF,34,Hannah Miller,,,,,38,Emerance Maschmeyer,,,,,,,39.0,-0.6,0.0450,-1,O25,108,2024-12-03,PWHL,2024/2025,Regular Season
+76,19:04,Shot,Toronto Sceptres,Away,Ottawa Charge,Toronto Sceptres,3,event,5v5 ENF,8,Izzy Daniel,,,,,38,Emerance Maschmeyer,,,,,,,69.3,-15.9,0.0398,-1,O13,108,2024-12-03,PWHL,2024/2025,Regular Season
+77,19:55,Penalty,Ottawa Charge,Home,Ottawa Charge,Toronto Sceptres,3,event,5v5 ENA,88,Ronja Savolainen,,,,,,,,,,,,,,,,1,,108,2024-12-03,PWHL,2024/2025,Regular Season
