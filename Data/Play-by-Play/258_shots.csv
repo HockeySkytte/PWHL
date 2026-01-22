@@ -1,4 +1,5 @@
 id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,xG,ScoreState,BoxID,game_id,game_date,competition,season,state
+<<<<<<< HEAD
 1,0:22,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,5v5,26,Casey O'Brien,,,,,35,Ann-Renée Desbiens,,,,,,,75.0,7.9,0.1248,0,O11,258,2026-01-18,PWHL,2025/2026,Regular Season
 2,0:42,Penalty,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v5,88,Skylar Irving,,,,,,,,,,,,,,,,0,,258,2026-01-18,PWHL,2025/2026,Regular Season
 3,1:24,Goal,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,5v4,98,Kristýna Kaltounková,10,Sarah Fillier,8,Maja Nylen Persson,35,Ann-Renée Desbiens,,8 10 17 26 98,Maja Nylen Persson - Sarah Fillier - Taylor Girard - Casey O'Brien - Kristýna Kaltounková,,16 23 29 44,Hayley Scamurra - Erin Ambrose - Marie-Philip Poulin - Amanda Boulier,81.7,-1.1,0.1873,0,O11,258,2026-01-18,PWHL,2025/2026,Regular Season
@@ -85,10 +86,99 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 84,16:46,Block,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,18,Maddi Wheeler,,,,,35,Ann-Renée Desbiens,,,,,,,77.7,-4.8,,1,O11,258,2026-01-18,PWHL,2025/2026,Regular Season
 85,17:00,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,98,Kristýna Kaltounková,,,,,35,Ann-Renée Desbiens,,,,,,,17.3,-31.4,0.0657,1,N01,258,2026-01-18,PWHL,2025/2026,Regular Season
 86,17:41,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,7,Laura Stacey,,,,,82,Kayle Osborne,,,,,,,83.0,0.3,0.2235,-1,O07,258,2026-01-18,PWHL,2025/2026,Regular Season
+=======
+1,0:22,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,5v5,26,Casey O'Brien,,,,,35,Ann-Renée Desbiens,,,,,,,75.0,7.9,,0,O11,258,2026-01-18,PWHL,2025/2026,Regular Season
+2,0:42,Penalty,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v5,88,Skylar Irving,,,,,,,,,,,,,,,,0,,258,2026-01-18,PWHL,2025/2026,Regular Season
+3,1:24,Goal,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,5v4,98,Kristýna Kaltounková,10,Sarah Fillier,8,Maja Nylen Persson,35,Ann-Renée Desbiens,,8 10 17 26 98,Maja Nylen Persson - Sarah Fillier - Taylor Girard - Casey O'Brien - Kristýna Kaltounková,,16 23 29 44,Hayley Scamurra - Erin Ambrose - Marie-Philip Poulin - Amanda Boulier,81.7,-1.1,,0,O11,258,2026-01-18,PWHL,2025/2026,Regular Season
+4,2:17,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v5,13,Alexandra Labelle,,,,,82,Kayle Osborne,,,,,,,63.0,35.1,,-1,O18,258,2026-01-18,PWHL,2025/2026,Regular Season
+5,3:40,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v5,7,Laura Stacey,,,,,82,Kayle Osborne,,,,,,,75.0,33.1,,-1,O09,258,2026-01-18,PWHL,2025/2026,Regular Season
+6,3:46,Block,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v5,11,Abby Roque,,,,,82,Kayle Osborne,,,,,,,75.0,18.7,,-1,O08,258,2026-01-18,PWHL,2025/2026,Regular Season
+7,4:01,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v5,11,Abby Roque,,,,,82,Kayle Osborne,,,,,,,19.0,36.0,,-1,N03,258,2026-01-18,PWHL,2025/2026,Regular Season
+8,6:11,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v5,7,Laura Stacey,,,,,82,Kayle Osborne,,,,,,,66.7,38.0,,-1,O18,258,2026-01-18,PWHL,2025/2026,Regular Season
+9,6:54,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,5v5,2,Dayle Ross,,,,,35,Ann-Renée Desbiens,,,,,,,29.7,28.1,,1,O26,258,2026-01-18,PWHL,2025/2026,Regular Season
+10,7:05,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,5v5,14,Jaime Bourbonnais,,,,,35,Ann-Renée Desbiens,,,,,,,31.0,2.3,,1,O25,258,2026-01-18,PWHL,2025/2026,Regular Season
+11,7:30,Penalty,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,5v5,20,Allyson Simpson,,,,,,,,,,,,,,,,1,,258,2026-01-18,PWHL,2025/2026,Regular Season
+12,9:05,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v4,21,Maureen Murphy,,,,,82,Kayle Osborne,,,,,,,53.3,22.1,,-1,O23,258,2026-01-18,PWHL,2025/2026,Regular Season
+13,9:19,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v4,27,Shiann Darkangelo,,,,,82,Kayle Osborne,,,,,,,55.3,0.6,,-1,O21,258,2026-01-18,PWHL,2025/2026,Regular Season
+14,9:45,Block,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v5,13,Alexandra Labelle,,,,,82,Kayle Osborne,,,,,,,68.0,6.0,,-1,O16,258,2026-01-18,PWHL,2025/2026,Regular Season
+15,10:37,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,5v5,20,Allyson Simpson,,,,,35,Ann-Renée Desbiens,,,,,,,58.0,28.1,,1,O17,258,2026-01-18,PWHL,2025/2026,Regular Season
+16,11:21,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v5,23,Erin Ambrose,,,,,82,Kayle Osborne,,,,,,,33.0,34.6,,-1,O26,258,2026-01-18,PWHL,2025/2026,Regular Season
+17,11:27,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,5v5,10,Sarah Fillier,,,,,35,Ann-Renée Desbiens,,,,,,,61.0,6.0,,1,O15,258,2026-01-18,PWHL,2025/2026,Regular Season
+18,11:46,Block,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,5v5,17,Taylor Girard,,,,,35,Ann-Renée Desbiens,,,,,,,53.0,12.5,,1,O22,258,2026-01-18,PWHL,2025/2026,Regular Season
+19,13:06,Penalty,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,5v5,18,Maddi Wheeler,,,,,,,,,,,,,,,,1,,258,2026-01-18,PWHL,2025/2026,Regular Season
+20,13:15,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v4,7,Laura Stacey,,,,,82,Kayle Osborne,,,,,,,53.0,-21.8,,-1,O20,258,2026-01-18,PWHL,2025/2026,Regular Season
+21,13:29,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v4,29,Marie-Philip Poulin,,,,,82,Kayle Osborne,,,,,,,65.7,21.5,,-1,O17,258,2026-01-18,PWHL,2025/2026,Regular Season
+22,14:30,Block,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v4,29,Marie-Philip Poulin,,,,,82,Kayle Osborne,,,,,,,69.0,11.6,,-1,O16,258,2026-01-18,PWHL,2025/2026,Regular Season
+23,15:06,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v5,21,Maureen Murphy,,,,,82,Kayle Osborne,,,,,,,85.7,4.5,,-1,O07,258,2026-01-18,PWHL,2025/2026,Regular Season
+24,15:53,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v5,17,Dara Greig,,,,,82,Kayle Osborne,,,,,,,88.3,-2.5,,-1,O07,258,2026-01-18,PWHL,2025/2026,Regular Season
+25,16:53,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v5,22,Jessica DiGirolamo,,,,,82,Kayle Osborne,,,,,,,-44.0,-39.4,,-1,D23,258,2026-01-18,PWHL,2025/2026,Regular Season
+26,19:20,Penalty,New York Sirens,Home,New York Sirens,Montréal Victoire,1,event,5v5,19,Paetyn Levis,,,,,,,,,,,,,,,,1,,258,2026-01-18,PWHL,2025/2026,Regular Season
+27,19:29,Goal,Montréal Victoire,Away,New York Sirens,Montréal Victoire,1,event,5v4,91,Maggie Flaherty,9,Kati Tabin,16,Hayley Scamurra,82,Kayle Osborne,,14 16 18 26,Jaime Bourbonnais - Lauren Bernard - Maddi Wheeler - Casey O'Brien,,9 16 21 27 91,Kati Tabin - Hayley Scamurra - Maureen Murphy - Shiann Darkangelo - Maggie Flaherty,31.7,13.9,,-1,O25,258,2026-01-18,PWHL,2025/2026,Regular Season
+28,0:47,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,2,event,5v5,27,Shiann Darkangelo,,,,,82,Kayle Osborne,,,,,,,73.7,11.6,,0,O11,258,2026-01-18,PWHL,2025/2026,Regular Season
+29,1:54,Block,Montréal Victoire,Away,New York Sirens,Montréal Victoire,2,event,5v5,96,Natálie Mlýnková,,,,,82,Kayle Osborne,,,,,,,67.0,-1.4,,0,O15,258,2026-01-18,PWHL,2025/2026,Regular Season
+30,3:40,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,2,event,5v5,91,Maggie Flaherty,,,,,82,Kayle Osborne,,,,,,,-33.0,6.5,,0,D25,258,2026-01-18,PWHL,2025/2026,Regular Season
+31,4:26,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,2,event,5v5,27,Shiann Darkangelo,,,,,82,Kayle Osborne,,,,,,,84.3,-8.8,,0,O06,258,2026-01-18,PWHL,2025/2026,Regular Season
+32,4:53,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,2,event,5v5,26,Casey O'Brien,,,,,35,Ann-Renée Desbiens,,,,,,,73.7,-6.0,,0,O11,258,2026-01-18,PWHL,2025/2026,Regular Season
+33,4:55,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,2,event,5v5,20,Allyson Simpson,,,,,35,Ann-Renée Desbiens,,,,,,,71.7,-3.7,,0,O14,258,2026-01-18,PWHL,2025/2026,Regular Season
+34,6:13,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,2,event,5v5,11,Abby Roque,,,,,82,Kayle Osborne,,,,,,,82.3,11.6,,0,O08,258,2026-01-18,PWHL,2025/2026,Regular Season
+35,6:34,Block,Montréal Victoire,Away,New York Sirens,Montréal Victoire,2,event,5v5,91,Maggie Flaherty,,,,,82,Kayle Osborne,,,,,,,76.3,0.8,,0,O11,258,2026-01-18,PWHL,2025/2026,Regular Season
+36,7:05,Block,New York Sirens,Home,New York Sirens,Montréal Victoire,2,event,5v5,17,Taylor Girard,,,,,35,Ann-Renée Desbiens,,,,,,,56.0,0.6,,0,O21,258,2026-01-18,PWHL,2025/2026,Regular Season
+37,7:07,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,2,event,5v5,43,Kristin O'Neill,,,,,35,Ann-Renée Desbiens,,,,,,,63.0,-9.9,,0,O14,258,2026-01-18,PWHL,2025/2026,Regular Season
+38,7:32,Block,New York Sirens,Home,New York Sirens,Montréal Victoire,2,event,4v5,2,Dayle Ross,,,,,35,Ann-Renée Desbiens,,,,,,,53.0,22.1,,0,O23,258,2026-01-18,PWHL,2025/2026,Regular Season
+39,8:12,Penalty,Montréal Victoire,Away,New York Sirens,Montréal Victoire,2,event,5v5,9,Kati Tabin,,,,,,,,,,,,,,,,0,,258,2026-01-18,PWHL,2025/2026,Regular Season
+40,8:25,Block,New York Sirens,Home,New York Sirens,Montréal Victoire,2,event,4v5,98,Kristýna Kaltounková,,,,,35,Ann-Renée Desbiens,,,,,,,60.3,18.7,,0,O17,258,2026-01-18,PWHL,2025/2026,Regular Season
+41,8:27,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,2,event,4v5,22,Jessica DiGirolamo,,,,,82,Kayle Osborne,,,,,,,-67.7,-13.6,,0,D16,258,2026-01-18,PWHL,2025/2026,Regular Season
+42,9:00,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,2,event,5v4,8,Maja Nylen Persson,,,,,35,Ann-Renée Desbiens,,,,,,,39.7,-20.1,,0,O24,258,2026-01-18,PWHL,2025/2026,Regular Season
+43,9:54,Block,New York Sirens,Home,New York Sirens,Montréal Victoire,2,event,5v5,14,Jaime Bourbonnais,,,,,35,Ann-Renée Desbiens,,,,,,,49.0,1.1,,0,O21,258,2026-01-18,PWHL,2025/2026,Regular Season
+44,10:11,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,2,event,5v4,43,Kristin O'Neill,,,,,35,Ann-Renée Desbiens,,,,,,,73.0,-1.7,,0,O11,258,2026-01-18,PWHL,2025/2026,Regular Season
+45,10:11,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,2,event,5v4,19,Paetyn Levis,,,,,35,Ann-Renée Desbiens,,,,,,,78.7,2.0,,0,O11,258,2026-01-18,PWHL,2025/2026,Regular Season
+46,12:39,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,2,event,5v5,2,Dayle Ross,,,,,35,Ann-Renée Desbiens,,,,,,,30.0,-3.1,,0,O25,258,2026-01-18,PWHL,2025/2026,Regular Season
+47,13:01,Block,New York Sirens,Home,New York Sirens,Montréal Victoire,2,event,5v5,98,Kristýna Kaltounková,,,,,35,Ann-Renée Desbiens,,,,,,,48.7,3.7,,0,O21,258,2026-01-18,PWHL,2025/2026,Regular Season
+48,14:06,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,2,event,5v5,21,Maureen Murphy,,,,,82,Kayle Osborne,,,,,,,76.3,-2.8,,0,O11,258,2026-01-18,PWHL,2025/2026,Regular Season
+49,14:42,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,2,event,5v5,22,Anna Bargman,,,,,35,Ann-Renée Desbiens,,,,,,,78.3,-11.3,,0,O06,258,2026-01-18,PWHL,2025/2026,Regular Season
+50,14:47,Goal,New York Sirens,Home,New York Sirens,Montréal Victoire,2,event,5v5,24,Anne Cherkowski,19,Paetyn Levis,10,Sarah Fillier,35,Ann-Renée Desbiens,,8 10 19 24 28,Maja Nylen Persson - Sarah Fillier - Paetyn Levis - Anne Cherkowski - Micah Zandee-Hart,,7 11 23 29 61,Laura Stacey - Abby Roque - Erin Ambrose - Marie-Philip Poulin - Nicole Gosling,53.0,-18.4,,0,O20,258,2026-01-18,PWHL,2025/2026,Regular Season
+51,17:23,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,2,event,5v5,7,Savannah Norcross,,,,,35,Ann-Renée Desbiens,,,,,,,63.0,8.2,,1,O16,258,2026-01-18,PWHL,2025/2026,Regular Season
+52,17:58,Block,New York Sirens,Home,New York Sirens,Montréal Victoire,2,event,5v5,81,Kayla Vespa,,,,,35,Ann-Renée Desbiens,,,,,,,60.0,4.8,,1,O15,258,2026-01-18,PWHL,2025/2026,Regular Season
+53,18:16,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,2,event,5v5,23,Erin Ambrose,,,,,82,Kayle Osborne,,,,,,,14.7,2.0,,-1,N02,258,2026-01-18,PWHL,2025/2026,Regular Season
+54,0:16,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,28,Micah Zandee-Hart,,,,,35,Ann-Renée Desbiens,,,,,,,45.7,-29.7,,1,O19,258,2026-01-18,PWHL,2025/2026,Regular Season
+55,0:46,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,18,Maddi Wheeler,,,,,35,Ann-Renée Desbiens,,,,,,,79.0,-14.7,,1,O06,258,2026-01-18,PWHL,2025/2026,Regular Season
+56,0:59,Penalty,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,29,Marie-Philip Poulin,,,,,,,,,,,,,,,,-1,,258,2026-01-18,PWHL,2025/2026,Regular Season
+57,1:53,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v4,17,Taylor Girard,,,,,35,Ann-Renée Desbiens,,,,,,,63.0,-17.3,,1,O13,258,2026-01-18,PWHL,2025/2026,Regular Season
+58,2:16,Block,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,14,Jaime Bourbonnais,,,,,35,Ann-Renée Desbiens,,,,,,,57.3,-6.2,,1,O15,258,2026-01-18,PWHL,2025/2026,Regular Season
+59,2:41,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v4,18,Maddi Wheeler,,,,,35,Ann-Renée Desbiens,,,,,,,61.0,-22.7,,1,O13,258,2026-01-18,PWHL,2025/2026,Regular Season
+60,4:03,Block,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,20,Allyson Simpson,,,,,35,Ann-Renée Desbiens,,,,,,,53.0,8.5,,1,O21,258,2026-01-18,PWHL,2025/2026,Regular Season
+61,4:26,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,71,Jincy Roese,,,,,35,Ann-Renée Desbiens,,,,,,,38.0,-32.3,,1,O24,258,2026-01-18,PWHL,2025/2026,Regular Season
+62,5:10,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,77,Jade Downie-Landry,,,,,82,Kayle Osborne,,,,,,,57.0,-23.0,,-1,O13,258,2026-01-18,PWHL,2025/2026,Regular Season
+63,5:28,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,13,Alexandra Labelle,,,,,82,Kayle Osborne,,,,,,,78.0,-7.4,,-1,O11,258,2026-01-18,PWHL,2025/2026,Regular Season
+64,5:29,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,13,Alexandra Labelle,,,,,82,Kayle Osborne,,,,,,,83.3,-4.2,,-1,O07,258,2026-01-18,PWHL,2025/2026,Regular Season
+65,5:59,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,44,Amanda Boulier,,,,,82,Kayle Osborne,,,,,,,29.0,-2.0,,-1,O25,258,2026-01-18,PWHL,2025/2026,Regular Season
+66,6:00,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,7,Laura Stacey,,,,,82,Kayle Osborne,,,,,,,71.0,-6.0,,-1,O14,258,2026-01-18,PWHL,2025/2026,Regular Season
+67,6:46,Block,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,7,Laura Stacey,,,,,82,Kayle Osborne,,,,,,,75.0,-1.1,,-1,O11,258,2026-01-18,PWHL,2025/2026,Regular Season
+68,7:51,Penalty,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,88,Skylar Irving,,,,,,,,,,,,,,,,-1,,258,2026-01-18,PWHL,2025/2026,Regular Season
+69,8:34,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v4,8,Maja Nylen Persson,,,,,35,Ann-Renée Desbiens,,,,,,,40.7,-16.4,,1,O24,258,2026-01-18,PWHL,2025/2026,Regular Season
+70,9:59,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,88,Skylar Irving,,,,,82,Kayle Osborne,,,,,,,82.0,1.1,,-1,O11,258,2026-01-18,PWHL,2025/2026,Regular Season
+71,10:01,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,17,Dara Greig,,,,,82,Kayle Osborne,,,,,,,78.3,16.1,,-1,O08,258,2026-01-18,PWHL,2025/2026,Regular Season
+72,10:20,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,10,Sarah Fillier,,,,,35,Ann-Renée Desbiens,,,,,,,60.0,-17.6,,1,O14,258,2026-01-18,PWHL,2025/2026,Regular Season
+73,11:27,Penalty,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,43,Kristin O'Neill,,,,,,,,,,,,,,,,1,,258,2026-01-18,PWHL,2025/2026,Regular Season
+74,12:04,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v4,29,Marie-Philip Poulin,,,,,82,Kayle Osborne,,,,,,,74.7,8.8,,-1,O11,258,2026-01-18,PWHL,2025/2026,Regular Season
+75,12:11,Block,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,23,Erin Ambrose,,,,,82,Kayle Osborne,,,,,,,70.7,12.5,,-1,O16,258,2026-01-18,PWHL,2025/2026,Regular Season
+76,13:01,Block,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,61,Nicole Gosling,,,,,82,Kayle Osborne,,,,,,,66.7,-9.6,,-1,O14,258,2026-01-18,PWHL,2025/2026,Regular Season
+77,13:27,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,29,Marie-Philip Poulin,,,,,82,Kayle Osborne,,,,,,,73.0,14.5,,-1,O08,258,2026-01-18,PWHL,2025/2026,Regular Season
+78,14:54,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,16,Lauren Bernard,,,,,35,Ann-Renée Desbiens,,,,,,,28.0,-33.1,,1,O24,258,2026-01-18,PWHL,2025/2026,Regular Season
+79,15:18,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,44,Amanda Boulier,,,,,82,Kayle Osborne,,,,,,,-63.3,36.8,,-1,D12,258,2026-01-18,PWHL,2025/2026,Regular Season
+80,15:40,Block,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,7,Laura Stacey,,,,,82,Kayle Osborne,,,,,,,79.7,4.5,,-1,O11,258,2026-01-18,PWHL,2025/2026,Regular Season
+81,16:10,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,29,Marie-Philip Poulin,,,,,82,Kayle Osborne,,,,,,,74.0,-16.1,,-1,O06,258,2026-01-18,PWHL,2025/2026,Regular Season
+82,16:27,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,18,Maddi Wheeler,,,,,35,Ann-Renée Desbiens,,,,,,,74.0,14.2,,1,O08,258,2026-01-18,PWHL,2025/2026,Regular Season
+83,16:35,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,26,Casey O'Brien,,,,,35,Ann-Renée Desbiens,,,,,,,67.7,-17.0,,1,O13,258,2026-01-18,PWHL,2025/2026,Regular Season
+84,16:46,Block,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,18,Maddi Wheeler,,,,,35,Ann-Renée Desbiens,,,,,,,77.7,-4.8,,1,O11,258,2026-01-18,PWHL,2025/2026,Regular Season
+85,17:00,Shot,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,98,Kristýna Kaltounková,,,,,35,Ann-Renée Desbiens,,,,,,,17.3,-31.4,,1,N01,258,2026-01-18,PWHL,2025/2026,Regular Season
+86,17:41,Shot,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,7,Laura Stacey,,,,,82,Kayle Osborne,,,,,,,83.0,0.3,,-1,O07,258,2026-01-18,PWHL,2025/2026,Regular Season
+>>>>>>> 1a64fb0894a785f9589fc603ab82cbb33da10b7e
 87,17:44,Penalty,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,11,Abby Roque,,,,,,,,,,,,,,,,-1,,258,2026-01-18,PWHL,2025/2026,Regular Season
 88,18:45,Block,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,7,Laura Stacey,,,,,82,Kayle Osborne,,,,,,,31.7,32.0,,-1,O26,258,2026-01-18,PWHL,2025/2026,Regular Season
 89,19:19,Block,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,14,Jaime Bourbonnais,,,,,35,Ann-Renée Desbiens,,,,,,,63.7,-2.3,,1,O15,258,2026-01-18,PWHL,2025/2026,Regular Season
 90,19:54,Block,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,11,Abby Roque,,,,,82,Kayle Osborne,,,,,,,71.0,0.3,,-1,O15,258,2026-01-18,PWHL,2025/2026,Regular Season
+<<<<<<< HEAD
 91,20:00,Penalty,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5 ENA,28,Micah Zandee-Hart,,,,,,,,,,,,,,,,1,,258,2026-01-18,PWHL,2025/2026,Regular Season
 92,20:00,Penalty,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5 ENA,8,Maja Nylen Persson,,,,,,,,,,,,,,,,1,,258,2026-01-18,PWHL,2025/2026,Regular Season
 93,20:00,Penalty,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5 ENA,98,Kristýna Kaltounková,,,,,,,,,,,,,,,,1,,258,2026-01-18,PWHL,2025/2026,Regular Season
@@ -98,3 +188,14 @@ id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1
 97,20:00,Penalty,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5 ENF,11,Abby Roque,,,,,,,,,,,,,,,,-1,,258,2026-01-18,PWHL,2025/2026,Regular Season
 98,20:00,Penalty,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5 ENF,29,Marie-Philip Poulin,,,,,,,,,,,,,,,,-1,,258,2026-01-18,PWHL,2025/2026,Regular Season
 99,20:00,Penalty,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5 ENF,91,Maggie Flaherty,,,,,,,,,,,,,,,,-1,,258,2026-01-18,PWHL,2025/2026,Regular Season
+=======
+91,20:00,Penalty,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,28,Micah Zandee-Hart,,,,,,,,,,,,,,,,1,,258,2026-01-18,PWHL,2025/2026,Regular Season
+92,20:00,Penalty,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,8,Maja Nylen Persson,,,,,,,,,,,,,,,,1,,258,2026-01-18,PWHL,2025/2026,Regular Season
+93,20:00,Penalty,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,98,Kristýna Kaltounková,,,,,,,,,,,,,,,,1,,258,2026-01-18,PWHL,2025/2026,Regular Season
+94,20:00,Penalty,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,17,Taylor Girard,,,,,,,,,,,,,,,,1,,258,2026-01-18,PWHL,2025/2026,Regular Season
+95,20:00,Penalty,New York Sirens,Home,New York Sirens,Montréal Victoire,3,event,5v5,17,Taylor Girard,,,,,,,,,,,,,,,,1,,258,2026-01-18,PWHL,2025/2026,Regular Season
+96,20:00,Penalty,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,16,Hayley Scamurra,,,,,,,,,,,,,,,,-1,,258,2026-01-18,PWHL,2025/2026,Regular Season
+97,20:00,Penalty,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,11,Abby Roque,,,,,,,,,,,,,,,,-1,,258,2026-01-18,PWHL,2025/2026,Regular Season
+98,20:00,Penalty,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,29,Marie-Philip Poulin,,,,,,,,,,,,,,,,-1,,258,2026-01-18,PWHL,2025/2026,Regular Season
+99,20:00,Penalty,Montréal Victoire,Away,New York Sirens,Montréal Victoire,3,event,5v5,91,Maggie Flaherty,,,,,,,,,,,,,,,,-1,,258,2026-01-18,PWHL,2025/2026,Regular Season
+>>>>>>> 1a64fb0894a785f9589fc603ab82cbb33da10b7e
