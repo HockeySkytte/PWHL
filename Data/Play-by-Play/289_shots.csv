@@ -1,1 +1,84 @@
-id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,game_id,game_date,competition,season,state
+id,timestamp,event,team,venue,team_home,team_away,period,perspective,strength,p1_no,p1_name,p2_no,p2_name,p3_no,p3_name,g_no,goalie_name,home_line,home_players,home_players_names,away_line,away_players,away_players_names,x,y,xG,ScoreState,BoxID,game_id,game_date,competition,season,state
+1,0:54,Block,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,1,event,5v5,36,Loren Gabel,,,,,1,Raygan Kirk,,,,,,,63.3,-3.1,,0,O15,289,2026-03-17,PWHL,2025/2026,Regular Season
+2,0:59,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,1,event,5v5,55,Daniela Pejšová,,,,,1,Raygan Kirk,,,,,,,69.0,-10.8,,0,O14,289,2026-03-17,PWHL,2025/2026,Regular Season
+3,1:19,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,1,event,5v5,27,Shay Maloney,,,,,1,Raygan Kirk,,,,,,,73.7,11.1,,0,O11,289,2026-03-17,PWHL,2025/2026,Regular Season
+4,2:04,Penalty,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,1,event,5v5,6,Hadley Hartmetz,,,,,,,,,,,,,,,,0,,289,2026-03-17,PWHL,2025/2026,Regular Season
+5,2:46,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,1,event,4v5,27,Shay Maloney,,,,,1,Raygan Kirk,,,,,,,75.7,3.4,,0,O11,289,2026-03-17,PWHL,2025/2026,Regular Season
+6,3:36,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,1,event,5v4,22,Maggie Connors,,,,,31,Aerin Frankel,,,,,,,49.7,2.8,,0,O21,289,2026-03-17,PWHL,2025/2026,Regular Season
+7,5:05,Block,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,1,event,5v5,6,Kali Flanagan,,,,,31,Aerin Frankel,,,,,,,34.7,20.4,,0,O26,289,2026-03-17,PWHL,2025/2026,Regular Season
+8,6:46,Block,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,1,event,5v5,6,Hadley Hartmetz,,,,,1,Raygan Kirk,,,,,,,45.0,16.1,,0,O22,289,2026-03-17,PWHL,2025/2026,Regular Season
+9,8:46,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,1,event,5v5,67,Emma Woods,,,,,31,Aerin Frankel,,,,,,,87.0,-7.9,,0,O06,289,2026-03-17,PWHL,2025/2026,Regular Season
+10,8:48,Penalty,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,1,event,5v5,27,Shay Maloney,,,,,,,,,,,,,,,,0,,289,2026-03-17,PWHL,2025/2026,Regular Season
+11,8:54,Block,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,1,event,5v4,14,Renata Fast,,,,,31,Aerin Frankel,,,,,,,72.0,17.3,,0,O17,289,2026-03-17,PWHL,2025/2026,Regular Season
+12,9:58,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,1,event,5v4,6,Kali Flanagan,,,,,31,Aerin Frankel,,,,,,,33.0,-1.7,,0,O25,289,2026-03-17,PWHL,2025/2026,Regular Season
+13,10:18,Block,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,1,event,5v4,6,Kali Flanagan,,,,,31,Aerin Frankel,,,,,,,34.0,2.5,,0,O25,289,2026-03-17,PWHL,2025/2026,Regular Season
+14,10:34,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,1,event,5v4,24,Natalie Spooner,,,,,31,Aerin Frankel,,,,,,,55.0,6.5,,0,O21,289,2026-03-17,PWHL,2025/2026,Regular Season
+15,11:31,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,1,event,5v5,8,Haley Winn,,,,,1,Raygan Kirk,,,,,,,54.0,22.7,,0,O23,289,2026-03-17,PWHL,2025/2026,Regular Season
+16,12:50,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,1,event,5v5,36,Loren Gabel,,,,,1,Raygan Kirk,,,,,,,32.0,-28.9,,0,O24,289,2026-03-17,PWHL,2025/2026,Regular Season
+17,13:17,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,1,event,5v5,13,Liz Schepers,,,,,1,Raygan Kirk,,,,,,,41.7,3.4,,0,O21,289,2026-03-17,PWHL,2025/2026,Regular Season
+18,13:38,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,1,event,5v5,47,Jamie Lee Rattray,,,,,1,Raygan Kirk,,,,,,,85.0,-8.5,,0,O06,289,2026-03-17,PWHL,2025/2026,Regular Season
+19,15:26,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,1,event,5v5,18,Jesse Compher,,,,,31,Aerin Frankel,,,,,,,55.0,29.7,,0,O23,289,2026-03-17,PWHL,2025/2026,Regular Season
+20,16:52,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,1,event,5v5,22,Maggie Connors,,,,,31,Aerin Frankel,,,,,,,68.7,-9.1,,0,O14,289,2026-03-17,PWHL,2025/2026,Regular Season
+21,16:52,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,1,event,5v5,14,Renata Fast,,,,,31,Aerin Frankel,,,,,,,43.7,32.6,,0,O23,289,2026-03-17,PWHL,2025/2026,Regular Season
+22,18:37,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,1,event,5v5,15,Savannah Harmon,,,,,31,Aerin Frankel,,,,,,,37.7,9.1,,0,O25,289,2026-03-17,PWHL,2025/2026,Regular Season
+23,18:59,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,1,event,5v5,20,Hannah Brandt,,,,,1,Raygan Kirk,,,,,,,76.0,-2.5,,0,O11,289,2026-03-17,PWHL,2025/2026,Regular Season
+24,19:27,Penalty,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,1,event,5v5,27,Emma Maltais,,,,,,,,,,,,,,,,0,,289,2026-03-17,PWHL,2025/2026,Regular Season
+25,0:45,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,2,event,5v4,77,Susanna Tapani,,,,,1,Raygan Kirk,,,,,,,75.0,2.0,,0,O11,289,2026-03-17,PWHL,2025/2026,Regular Season
+26,1:58,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,2,event,5v5,18,Jesse Compher,,,,,31,Aerin Frankel,,,,,,,58.7,22.1,,0,O17,289,2026-03-17,PWHL,2025/2026,Regular Season
+27,2:06,Penalty,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,2,event,5v5,12,Allie Munroe,,,,,,,,,,,,,,,,0,,289,2026-03-17,PWHL,2025/2026,Regular Season
+28,3:31,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,2,event,5v4,5,Megan Keller,,,,,1,Raygan Kirk,,,,,,,60.3,28.1,,0,O17,289,2026-03-17,PWHL,2025/2026,Regular Season
+29,4:45,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,2,event,5v5,13,Liz Schepers,,,,,1,Raygan Kirk,,,,,,,48.3,29.2,,0,O23,289,2026-03-17,PWHL,2025/2026,Regular Season
+30,6:59,Block,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,2,event,5v5,5,Megan Keller,,,,,1,Raygan Kirk,,,,,,,43.3,-22.4,,0,O20,289,2026-03-17,PWHL,2025/2026,Regular Season
+31,7:24,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,2,event,5v5,18,Jessie Eldridge,,,,,1,Raygan Kirk,,,,,,,61.0,35.7,,0,O18,289,2026-03-17,PWHL,2025/2026,Regular Season
+32,8:35,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,2,event,5v5,19,Sara Hjalmarsson,,,,,31,Aerin Frankel,,,,,,,41.7,-7.9,,0,O21,289,2026-03-17,PWHL,2025/2026,Regular Season
+33,8:57,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,2,event,5v5,6,Hadley Hartmetz,,,,,1,Raygan Kirk,,,,,,,3.0,16.7,,0,N02,289,2026-03-17,PWHL,2025/2026,Regular Season
+34,9:24,Penalty,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,2,event,5v5,26,Ella Huber,,,,,,,,,,,,,,,,0,,289,2026-03-17,PWHL,2025/2026,Regular Season
+35,9:24,Penalty,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,2,event,5v5,17,Ella Shelton,,,,,,,,,,,,,,,,0,,289,2026-03-17,PWHL,2025/2026,Regular Season
+36,9:43,Block,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,2,event,4v5,8,Haley Winn,,,,,1,Raygan Kirk,,,,,,,34.0,0.8,,0,O25,289,2026-03-17,PWHL,2025/2026,Regular Season
+37,10:19,Block,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,2,event,5v4,40,Blayre Turnbull,,,,,31,Aerin Frankel,,,,,,,52.3,4.0,,0,O21,289,2026-03-17,PWHL,2025/2026,Regular Season
+38,12:09,Penalty,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,2,event,5v5,47,Jamie Lee Rattray,,,,,,,,,,,,,,,,0,,289,2026-03-17,PWHL,2025/2026,Regular Season
+39,12:56,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,2,event,4v5,27,Shay Maloney,,,,,1,Raygan Kirk,,,,,,,73.0,5.1,,0,O11,289,2026-03-17,PWHL,2025/2026,Regular Season
+40,12:57,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,2,event,4v5,13,Liz Schepers,,,,,1,Raygan Kirk,,,,,,,77.7,4.2,,0,O11,289,2026-03-17,PWHL,2025/2026,Regular Season
+41,13:44,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,2,event,5v4,22,Maggie Connors,,,,,31,Aerin Frankel,,,,,,,66.0,-22.7,,0,O13,289,2026-03-17,PWHL,2025/2026,Regular Season
+42,13:58,Block,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,2,event,5v5,15,Savannah Harmon,,,,,31,Aerin Frankel,,,,,,,37.0,19.3,,0,O26,289,2026-03-17,PWHL,2025/2026,Regular Season
+43,14:08,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,2,event,5v4,15,Savannah Harmon,,,,,31,Aerin Frankel,,,,,,,48.3,17.6,,0,O22,289,2026-03-17,PWHL,2025/2026,Regular Season
+44,14:52,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,2,event,5v5,14,Renata Fast,,,,,31,Aerin Frankel,,,,,,,33.0,26.9,,0,O26,289,2026-03-17,PWHL,2025/2026,Regular Season
+45,15:00,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,2,event,5v5,20,Emma Gentry,,,,,31,Aerin Frankel,,,,,,,79.0,4.5,,0,O11,289,2026-03-17,PWHL,2025/2026,Regular Season
+46,16:50,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,2,event,5v5,6,Hadley Hartmetz,,,,,1,Raygan Kirk,,,,,,,33.0,30.3,,0,O26,289,2026-03-17,PWHL,2025/2026,Regular Season
+47,18:46,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,2,event,5v5,9,Daryl Watts,,,,,31,Aerin Frankel,,,,,,,74.7,-9.3,,0,O11,289,2026-03-17,PWHL,2025/2026,Regular Season
+48,19:19,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,2,event,5v5,18,Jesse Compher,,,,,31,Aerin Frankel,,,,,,,52.0,-16.1,,0,O20,289,2026-03-17,PWHL,2025/2026,Regular Season
+49,0:42,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,3,event,5v5,5,Megan Keller,,,,,1,Raygan Kirk,,,,,,,79.3,-8.8,,0,O11,289,2026-03-17,PWHL,2025/2026,Regular Season
+50,0:47,Block,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,3,event,5v5,27,Shay Maloney,,,,,1,Raygan Kirk,,,,,,,60.3,-2.0,,0,O15,289,2026-03-17,PWHL,2025/2026,Regular Season
+51,1:27,Block,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,3,event,5v5,6,Hadley Hartmetz,,,,,1,Raygan Kirk,,,,,,,38.3,14.5,,0,O25,289,2026-03-17,PWHL,2025/2026,Regular Season
+52,2:48,Block,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,3,event,4v5,8,Haley Winn,,,,,1,Raygan Kirk,,,,,,,62.0,15.6,,0,O16,289,2026-03-17,PWHL,2025/2026,Regular Season
+53,3:07,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,3,event,5v5,11,Alina Müller,,,,,1,Raygan Kirk,,,,,,,50.7,1.4,,0,O21,289,2026-03-17,PWHL,2025/2026,Regular Season
+54,3:19,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,3,event,5v5,55,Daniela Pejšová,,,,,1,Raygan Kirk,,,,,,,37.0,-11.1,,0,O25,289,2026-03-17,PWHL,2025/2026,Regular Season
+55,4:17,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,3,event,5v5,8,Haley Winn,,,,,1,Raygan Kirk,,,,,,,34.7,30.6,,0,O26,289,2026-03-17,PWHL,2025/2026,Regular Season
+56,4:26,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,3,event,5v5,27,Shay Maloney,,,,,1,Raygan Kirk,,,,,,,78.7,6.0,,0,O11,289,2026-03-17,PWHL,2025/2026,Regular Season
+57,5:24,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,3,event,5v5,15,Savannah Harmon,,,,,31,Aerin Frankel,,,,,,,35.7,-31.2,,0,O24,289,2026-03-17,PWHL,2025/2026,Regular Season
+58,5:50,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,3,event,5v5,20,Emma Gentry,,,,,31,Aerin Frankel,,,,,,,37.3,-20.1,,0,O24,289,2026-03-17,PWHL,2025/2026,Regular Season
+59,6:03,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,3,event,5v5,24,Natalie Spooner,,,,,31,Aerin Frankel,,,,,,,85.0,4.2,,0,O07,289,2026-03-17,PWHL,2025/2026,Regular Season
+60,6:05,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,3,event,5v5,19,Sara Hjalmarsson,,,,,31,Aerin Frankel,,,,,,,81.0,-5.1,,0,O11,289,2026-03-17,PWHL,2025/2026,Regular Season
+61,6:13,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,3,event,5v5,14,Renata Fast,,,,,31,Aerin Frankel,,,,,,,45.0,25.8,,0,O22,289,2026-03-17,PWHL,2025/2026,Regular Season
+62,6:34,Block,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,3,event,5v5,40,Blayre Turnbull,,,,,31,Aerin Frankel,,,,,,,60.3,11.3,,0,O16,289,2026-03-17,PWHL,2025/2026,Regular Season
+63,6:39,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,3,event,5v5,40,Blayre Turnbull,,,,,31,Aerin Frankel,,,,,,,71.7,1.4,,0,O16,289,2026-03-17,PWHL,2025/2026,Regular Season
+64,6:53,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,3,event,5v5,17,Ella Shelton,,,,,31,Aerin Frankel,,,,,,,75.0,-6.0,,0,O11,289,2026-03-17,PWHL,2025/2026,Regular Season
+65,8:59,Goal,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,3,event,5v5,9,Daryl Watts,6,Kali Flanagan,,,31,Aerin Frankel,,8 11 16 18 26,Haley Winn - Alina Müller - Riley Brengman - Jessie Eldridge - Ella Huber,,6 9 12 40 42,Kali Flanagan - Daryl Watts - Allie Munroe - Blayre Turnbull - Claire Dalton,64.3,-12.8,,0,O14,289,2026-03-17,PWHL,2025/2026,Regular Season
+66,9:13,Penalty,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,3,event,5v5,40,Blayre Turnbull,,,,,,,,,,,,,,,,1,,289,2026-03-17,PWHL,2025/2026,Regular Season
+67,10:06,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,3,event,5v4,5,Megan Keller,,,,,1,Raygan Kirk,,,,,,,53.0,20.7,,-1,O22,289,2026-03-17,PWHL,2025/2026,Regular Season
+68,10:14,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,3,event,5v4,77,Susanna Tapani,,,,,1,Raygan Kirk,,,,,,,59.3,-23.0,,-1,O13,289,2026-03-17,PWHL,2025/2026,Regular Season
+69,10:28,Block,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,3,event,4v5,77,Susanna Tapani,,,,,1,Raygan Kirk,,,,,,,72.3,-11.6,,-1,O14,289,2026-03-17,PWHL,2025/2026,Regular Season
+70,12:26,Block,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,3,event,5v5,22,Maggie Connors,,,,,31,Aerin Frankel,,,,,,,48.3,-3.7,,1,O21,289,2026-03-17,PWHL,2025/2026,Regular Season
+71,12:57,Penalty,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,3,event,5v5,22,Maggie Connors,,,,,,,,,,,,,,,,1,,289,2026-03-17,PWHL,2025/2026,Regular Season
+72,12:57,Penalty,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,3,event,5v5,8,Haley Winn,,,,,,,,,,,,,,,,-1,,289,2026-03-17,PWHL,2025/2026,Regular Season
+73,13:02,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,3,event,5v5,19,Abby Newhook,,,,,1,Raygan Kirk,,,,,,,84.0,-7.9,,-1,O06,289,2026-03-17,PWHL,2025/2026,Regular Season
+74,15:26,Block,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,3,event,5v5,5,Megan Keller,,,,,1,Raygan Kirk,,,,,,,32.7,0.3,,-1,O25,289,2026-03-17,PWHL,2025/2026,Regular Season
+75,15:45,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,3,event,5v5,6,Hadley Hartmetz,,,,,1,Raygan Kirk,,,,,,,43.7,26.4,,-1,O22,289,2026-03-17,PWHL,2025/2026,Regular Season
+76,16:27,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,3,event,5v5,12,Allie Munroe,,,,,31,Aerin Frankel,,,,,,,70.0,-18.4,,1,O13,289,2026-03-17,PWHL,2025/2026,Regular Season
+77,17:05,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,3,event,5v5,9,Daryl Watts,,,,,31,Aerin Frankel,,,,,,,65.3,-11.3,,1,O14,289,2026-03-17,PWHL,2025/2026,Regular Season
+78,17:12,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,3,event,5v5,14,Renata Fast,,,,,31,Aerin Frankel,,,,,,,46.3,-12.2,,1,O21,289,2026-03-17,PWHL,2025/2026,Regular Season
+79,18:13,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,3,event,5v5,22,Maggie Connors,,,,,31,Aerin Frankel,,,,,,,85.0,23.0,,1,O09,289,2026-03-17,PWHL,2025/2026,Regular Season
+80,18:20,Shot,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,3,event,5v5,17,Ella Shelton,,,,,31,Aerin Frankel,,,,,,,39.3,27.8,,1,O26,289,2026-03-17,PWHL,2025/2026,Regular Season
+81,19:15,Shot,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,3,event,ENF,27,Shay Maloney,,,,,1,Raygan Kirk,,,,,,,79.0,-10.2,,-1,O06,289,2026-03-17,PWHL,2025/2026,Regular Season
+82,19:28,Block,Boston Fleet,Home,Boston Fleet,Toronto Sceptres,3,event,5v4,5,Megan Keller,,,,,1,Raygan Kirk,,,,,,,46.7,23.0,,-1,O22,289,2026-03-17,PWHL,2025/2026,Regular Season
+83,19:33,Goal,Toronto Sceptres,Away,Boston Fleet,Toronto Sceptres,3,event,ENA,40,Blayre Turnbull,,,,,,,,5 8 11 18 19 27,Megan Keller - Haley Winn - Alina Müller - Jessie Eldridge - Abby Newhook - Shay Maloney,,9 12 14 40 42,Daryl Watts - Allie Munroe - Renata Fast - Blayre Turnbull - Claire Dalton,-17.7,-2.3,1.0000,1,N05,289,2026-03-17,PWHL,2025/2026,Regular Season
