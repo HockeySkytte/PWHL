@@ -18,7 +18,8 @@ class PWHLScraper:
         1: "2023/2024 Regular Season",
         3: "2023/2024 Playoffs",
         5: "2024/2025 Regular Season", 
-        6: "2024/2025 Playoffs"
+        6: "2024/2025 Playoffs",
+        8: "2025/2026 Regular Season",
     }
     
     def __init__(self):

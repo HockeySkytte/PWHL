@@ -15,6 +15,14 @@ if REPO_ROOT not in sys.path:
     sys.path.insert(0, REPO_ROOT)
 from export_utils import generate_lineups_csv, generate_pbp_csv
 
+# Supabase support (optional – enabled when SUPABASE_URL is set)
+try:
+    from supabase_utils import get_supabase_client, upsert_teams, upsert_game
+    _HAS_SUPABASE = True
+except ImportError as _imp_err:
+    _HAS_SUPABASE = False
+    print(f"Note: Supabase support disabled ({_imp_err}). Running in CSV-only mode.")
+
 BASE_URL = os.environ.get("PWHL_BASE_URL", "http://localhost:8501")
 TEAMS_CSV = os.path.join(REPO_ROOT, 'Teams.csv')
 OUT_LINEUPS = os.path.join("Data", "Lineups")
@@ -385,7 +393,29 @@ def main():
     parser.add_argument('--start-date', type=str, help='Start date for filtering games (YYYY-MM-DD format, e.g., 2025-11-01)')
     parser.add_argument('--end-date', type=str, help='End date for filtering games (YYYY-MM-DD format, e.g., 2025-11-30)')
     parser.add_argument('--season', type=str, help='Filter by season (e.g., 2025/2026)')
+    parser.add_argument('--no-supabase', action='store_true', help='Skip Supabase upserts (CSV-only mode)')
+    parser.add_argument('--no-csv', action='store_true', default=True, help='Skip writing CSV files (default; Supabase-only mode)')
+    parser.add_argument('--csv', action='store_true', help='Also write CSV files to disk (overrides --no-csv default)')
     args = parser.parse_args()
+
+    # --csv explicitly enables CSV output, overriding the --no-csv default
+    write_csv = args.csv or not args.no_csv
+
+    # Determine whether to upsert to Supabase
+    use_supabase = _HAS_SUPABASE and not args.no_supabase and os.environ.get("SUPABASE_URL")
+    if use_supabase:
+        try:
+            get_supabase_client()
+            print("Supabase connection OK — will upsert alongside CSV writes.")
+            # Upsert teams once at startup (only if Teams.csv still exists on disk)
+            if os.path.exists(TEAMS_CSV):
+                upsert_teams(TEAMS_CSV)
+                print("  ✓ pwhl_teams upserted")
+            else:
+                print("  Teams.csv not found — skipping team upsert (already in Supabase).")
+        except Exception as exc:
+            print(f"⚠ Supabase init failed ({exc}); falling back to CSV-only mode.")
+            use_supabase = False
 
     if args.game_id:
         # Fetch that single game by scanning schedule
@@ -460,24 +490,38 @@ def main():
         teams_meta = build_teams_meta()
 
         wrote_any = False
+        lineups_csv_text = None
+        pbp_csv_text = None
+
         if summary:
             try:
-                csv_text = generate_lineups_csv(game, summary, TEAM_COLOR_BY_NAME, TEAM_COLOR_BY_ID)
-                if csv_text.strip():
+                lineups_csv_text = generate_lineups_csv(game, summary, TEAM_COLOR_BY_NAME, TEAM_COLOR_BY_ID)
+                if lineups_csv_text and lineups_csv_text.strip() and write_csv:
                     with open(lineups_path, 'w', encoding='utf-8', newline='') as f:
-                        f.write(csv_text)
+                        f.write(lineups_csv_text)
                     wrote_any = True
             except Exception:
                 pass
         if pbp:
             try:
-                csv_text = generate_pbp_csv(game, pbp, summary, teams_meta)
-                if csv_text.strip():
+                pbp_csv_text = generate_pbp_csv(game, pbp, summary, teams_meta)
+                if pbp_csv_text and pbp_csv_text.strip() and write_csv:
                     with open(pbp_path, 'w', encoding='utf-8', newline='') as f:
-                        f.write(csv_text)
+                        f.write(pbp_csv_text)
                     wrote_any = True
             except Exception:
                 pass
+
+        # Upsert to Supabase (non-fatal; failures don't block CSV output)
+        if use_supabase and (lineups_csv_text or pbp_csv_text):
+            try:
+                counts = upsert_game(lineups_csv=lineups_csv_text, pbp_csv=pbp_csv_text)  # type: ignore[possibly-unbound]
+                sb_detail = ", ".join(f"{k}={v}" for k, v in counts.items())
+                print(f" [SB: {sb_detail}]", end="")
+                wrote_any = True
+            except Exception as exc:
+                print(f" [SB err: {exc}]", end="")
+
         print(" done" if wrote_any else " no data")
         time.sleep(0.02)
 

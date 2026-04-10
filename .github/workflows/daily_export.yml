@@ -7,7 +7,7 @@ on:
     - cron: "7 * * * *"
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: daily-export
@@ -20,8 +20,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -59,6 +57,8 @@ jobs:
           # Prefer repository secret; fall back to repository variable.
           PWHL_BASE_URL_SECRET: ${{ secrets.PWHL_BASE_URL }}
           PWHL_BASE_URL_VAR: ${{ vars.PWHL_BASE_URL }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
         shell: bash
         run: |
           set -euo pipefail
@@ -74,23 +74,15 @@ jobs:
           YESTERDAY=$(TZ=Europe/Copenhagen date -d 'yesterday' +%F)
           echo "Exporting date range: $YESTERDAY -> $TODAY (Europe/Copenhagen)"
 
-          python export_all_csvs.py --start-date "$YESTERDAY" --end-date "$TODAY"
+          python scripts/export_all_csvs.py --no-csv --start-date "$YESTERDAY" --end-date "$TODAY"
 
-      - name: Commit and push changes
+      - name: Verify no file changes
         if: steps.gate.outputs.run_export == 'true'
         shell: bash
         run: |
           set -euo pipefail
-
-          if [ -z "$(git status --porcelain)" ]; then
-            echo "No changes to commit."
-            exit 0
+          # In Supabase-only mode no files should change on disk.
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "::warning::Unexpected file changes detected (Supabase-only mode should produce none):"
+            git status --short
           fi
-
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          git add -A
-          TODAY=$(TZ=Europe/Copenhagen date +%F)
-          git commit -m "Daily export: ${TODAY}"
-          git push

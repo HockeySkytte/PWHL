@@ -43,8 +43,15 @@ pip-wheel-metadata/
 !scripts/
 !scripts/export_all_csvs.py
 !scripts/__init__.py
-!Data/
-!Data/Play-by-Play/
-!Data/Play-by-Play/**
-!Data/Lineups/
-!Data/Lineups/**
+# Data CSVs are no longer tracked — all data lives in Supabase.
+# Keep the directories locally for ad-hoc analysis but don't commit them.
+!supabase_utils.py
+!supabase_schema.sql
+!.env.example
+!conftest.py
+!pytest.ini
+!build_xg_model.py
+!models/
+!models/**
+!app_requirements.txt
+!IMPLEMENTATION_SUMMARY.md

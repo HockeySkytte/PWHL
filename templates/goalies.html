@@ -1433,7 +1433,7 @@
     }
 
     // Team color cache
-    const teamColorCache = (function(){ let colors=null; return async function(team){ if(colors) return colors[team]||'#53b3ff'; try{ const resp=await fetch('/Teams.csv'); if(resp.ok){ colors={}; const txt=await resp.text(); const lines=txt.split(/\n/); lines.shift(); lines.forEach(l=>{ const c=l.split(','); if(c.length>5){ colors[c[1]]=c[5]; }}); return colors[team]||'#53b3ff'; } }catch(e){} return '#53b3ff'; }; })();
+    const teamColorCache = (function(){ let colors=null; return async function(team){ if(colors) return colors[team]||'#53b3ff'; try{ const resp=await fetch('/api/teams'); if(resp.ok){ colors={}; const teams=await resp.json(); teams.forEach(t=>{ colors[t.name]=t.color; }); return colors[team]||'#53b3ff'; } }catch(e){} return '#53b3ff'; }; })();
 
     // Rink
     function setupCanvas(c){ c.width=c.clientWidth; c.height=c.clientHeight; return c.getContext('2d'); }

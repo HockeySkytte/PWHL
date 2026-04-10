@@ -75,40 +75,76 @@
     .csv-btn:hover { background-color: #4a2899; }
     .tab-list .csv-btn { margin-top: 6px; }
     .pbp-scroll { max-height: 70vh; overflow-y: auto; }
+
+    /* ── Report-style rink-row + KPI card classes ── */
+    .rink-row{
+      display:grid;
+      grid-template-columns:1fr auto 1fr;
+      grid-template-areas:"def kpi off" "legend legend legend";
+      gap:1rem;
+      padding:.4rem 0 0;
+      align-items:stretch;
+    }
+    #defRinkWrap{grid-area:def;}
+    #offRinkWrap{grid-area:off;}
+    #gamereport-kpis{grid-area:kpi;}
+    #gr-legend{grid-area:legend;}
+    .rink{background:var(--pwhl-surface);border:1px solid var(--pwhl-border);border-radius:.9rem;padding:.55rem;display:flex;flex-direction:column;}
+    .rink h2{font-size:.95rem;margin:0 0 .35rem;font-weight:600;letter-spacing:.03em;color:var(--pwhl-accent-strong);text-align:center;}
+    .zone-wrap{position:relative;width:100%;aspect-ratio:75/85;overflow:hidden;border-radius:.65rem;background:#0d0d18;display:flex;align-items:center;justify-content:center;}
+    .rink-base,.zone-canvas{position:absolute;inset:0;width:100%;height:100%;image-rendering:crisp-edges;}
+    .kpi-column{display:flex;flex-direction:column;gap:1rem;}
+    .kpi-card{background:var(--pwhl-surface);border:1px solid var(--pwhl-border);border-radius:.85rem;padding:.7rem;width:260px;display:flex;flex-direction:column;gap:.4rem;}
+    .kpi-card h3{margin:0;font-size:.9rem;font-weight:600;letter-spacing:.03em;text-align:center;}
+    .kpi-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem;}
+    .kpi-metric{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:.55rem;padding:.35rem .3rem;display:flex;flex-direction:column;align-items:center;gap:.25rem;min-height:50px;}
+    .kpi-metric .label{font-size:.55rem;letter-spacing:.05em;font-weight:600;color:#b7b3cf;text-transform:uppercase;}
+    .kpi-metric .value{font-size:1.05rem;font-weight:600;line-height:1;color:#fff;}
+    .kpi-metric.middle{background:#fff;border-color:#fff;color:#111827;}
+    .kpi-metric.middle .value{color:#111827;}
+    .kpi-metric.middle .label{color:#374151;}
+
+    /* ── Sortable table headers ── */
+    .gr-table th{cursor:pointer;user-select:none;position:relative;padding-right:1.1rem !important;}
+    .gr-table th .sort-arrow{position:absolute;right:.25rem;top:50%;transform:translateY(-50%);font-size:.55rem;opacity:.45;}
+    .gr-table th.sort-asc .sort-arrow,.gr-table th.sort-desc .sort-arrow{opacity:1;color:var(--pwhl-accent-strong);}
+
         @media (max-width: 768px) {
             .header { flex-direction: column; text-align: center; gap: 1rem; border-radius: 0; border-left: none; border-right: none; }
             .game-info { margin: 0; }
-            /* Keep tabs on a single row; allow horizontal scroll if needed */
             .tab-list { flex-direction: row; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; }
             .tab { padding: .7rem .8rem; font-size: .9rem; flex: 0 0 auto; }
             .tab-content { padding: .75rem; }
             .roster-grid { grid-template-columns: 1fr; }
         }
 
-        /* Phone-only: hide Export CSV buttons (keep on desktop/tablet) */
         @media (hover: none) and (pointer: coarse) and (max-width: 600px), (hover: none) and (pointer: coarse) and (max-height: 520px){
             .tab-list .csv-btn{display:none !important;}
         }
 
-        /* Mobile full-width + Game Report layout ordering (coarse pointer devices) */
+        /* Mobile: Game Report layout (portrait) */
         @media (max-width: 1100px) and (hover: none) and (pointer: coarse){
             .container{padding:0;}
             .tabs{border-radius:0;border-left:none;border-right:none;margin-bottom:1rem;}
-            /* Override inline slicer sizing so multiple can sit on one row */
             #gamereport-content .slicers-wrapper{padding:.75rem .75rem !important;}
             #gamereport-content .slicers{gap:.65rem !important;}
             #gamereport-content .filter-group{min-width:140px !important;flex:1 1 140px !important;}
             #gamereport-content .filter-select{width:100% !important;}
-
-            /* Order: KPIs -> Defensive -> Offensive; table already last */
-            #gamereport-shotmap-wrapper{display:grid !important;grid-template-columns:1fr;grid-template-areas:"kpis" "def" "off";gap:.9rem !important;}
-            #gamereport-kpis{grid-area:kpis !important;flex:none !important;width:100% !important;max-width:none !important;flex-direction:row !important;flex-wrap:wrap !important;justify-content:center;}
-            #gamereport-shotmap-wrapper .defensive-zone{grid-area:def !important;max-width:none !important;}
-            #gamereport-shotmap-wrapper .offensive-zone{grid-area:off !important;max-width:none !important;}
+            .rink-row{grid-template-columns:1fr;grid-template-areas:"kpi" "def" "off" "legend";gap:.75rem;padding:.4rem .75rem 0 !important;}
+            .kpi-column{flex-direction:row;flex-wrap:wrap;justify-content:center;}
+            .kpi-card{width:100%;min-width:0;}
+            #gamereport-content .gr-tables-wrap{padding:.75rem .75rem 0 !important;}
         }
         @media (max-width: 1100px) and (hover: none) and (pointer: coarse) and (orientation: landscape){
-            /* Rotated mobile: show Defensive + Offensive side-by-side */
-            #gamereport-shotmap-wrapper{grid-template-columns:1fr 1fr;grid-template-areas:"kpis kpis" "def off";}
+            .rink-row{grid-template-columns:1fr 1fr;grid-template-areas:"kpi kpi" "def off" "legend legend";}
+            .kpi-column{flex-direction:row;flex-wrap:wrap;justify-content:center;}
+            .kpi-card{width:calc(50% - .5rem);min-width:150px;}
+        }
+        /* Also handle narrow desktop/tablet screens without coarse pointer */
+        @media (max-width: 800px){
+            .rink-row{grid-template-columns:1fr;grid-template-areas:"kpi" "def" "off" "legend";gap:.75rem;padding:.4rem 1rem 0 !important;}
+            .kpi-column{flex-direction:row;flex-wrap:wrap;justify-content:center;}
+            .kpi-card{width:100%;min-width:0;}
         }
     </style>
 </head>
@@ -175,38 +211,34 @@
                                     <option value="Block">Block</option>
                                 </select>
                             </div>
-                            <div class="filter-group" style="display:flex;flex-direction:column;min-width:170px;">
-                                <label class="filter-label" style="margin-bottom:.4rem;font-weight:600;color:#e2e8f0;font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;">Table</label>
-                                <select class="filter-select" id="grTable" onchange="loadGameReport()" style="width:170px;background:#4a5568;border:1px solid #718096;border-radius:.375rem;padding:.45rem .6rem;color:#fff;font-size:.7rem;">
-                                    <option value="skaters">Skaters</option>
-                                    <option value="goalies">Goalies</option>
-                                    <option value="teams">Teams</option>
-                                </select>
-                            </div>
-                            <div class="filter-group" style="display:flex;flex-direction:column;justify-content:flex-end;">
-                                <button onclick="resetGameReportFilters()" style="background:#2d3748;color:#e2e8f0;border:1px solid #4a5568;padding:.45rem .8rem;border-radius:.375rem;font-size:.7rem;cursor:pointer;">Reset Filters</button>
-                            </div>
                         </div>
                     </div>
-                    <div style="padding:.5rem .5rem;">
-                        <div id="gamereport-shotmap-wrapper" style="display:flex;gap:1rem;align-items:flex-start;margin-bottom:2rem;margin-top:.75rem;">
-                            <div class="rink defensive-zone" style="flex:1;display:flex;flex-direction:column;max-width:450px;">
-                                <h3 style="margin:0 0 1rem;font-size:1.1rem;font-weight:600;color:#b9a7ff;text-align:center;">Defensive Zone</h3>
-                                <div class="zone-wrap" style="position:relative;width:100%;aspect-ratio:75/85;background:rgba(19,13,46,.75);border:1px solid rgba(142,124,214,.25);border-radius:.65rem;">
-                                    <canvas id="defRinkBase" class="rink-base" style="position:absolute;top:0;left:0;width:100%;height:100%;"></canvas>
-                                    <canvas id="defShotCanvas" class="zone-canvas" style="position:absolute;top:0;left:0;width:100%;height:100%;"></canvas>
-                                </div>
-                            </div>
-                            <div id="gamereport-kpis" style="flex:0 0 240px;display:flex;flex-direction:column;gap:.75rem;"></div>
-                            <div class="rink offensive-zone" style="flex:1;display:flex;flex-direction:column;max-width:450px;">
-                                <h3 style="margin:0 0 1rem;font-size:1.1rem;font-weight:600;color:#b9a7ff;text-align:center;">Offensive Zone</h3>
-                                <div class="zone-wrap" style="position:relative;width:100%;aspect-ratio:75/85;background:rgba(19,13,46,.75);border:1px solid rgba(142,124,214,.25);border-radius:.65rem;">
-                                    <canvas id="offRinkBase" class="rink-base" style="position:absolute;top:0;left:0;width:100%;height:100%;"></canvas>
-                                    <canvas id="offShotCanvas" class="zone-canvas" style="position:absolute;top:0;left:0;width:100%;height:100%;"></canvas>
-                                </div>
-                            </div>
+                    <div class="rink-row" style="padding:.4rem 2rem 0;">
+                      <div class="rink" id="defRinkWrap">
+                        <h2>Defensive Zone</h2>
+                        <div class="zone-wrap">
+                          <canvas id="defRinkBase" class="rink-base"></canvas>
+                          <canvas id="defShotCanvas" class="zone-canvas"></canvas>
                         </div>
-                        <div id="gamereport-table" style="overflow-x:auto;"></div>
+                      </div>
+                      <div class="kpi-column" id="gamereport-kpis"></div>
+                      <div class="rink" id="offRinkWrap">
+                        <h2>Offensive Zone</h2>
+                        <div class="zone-wrap">
+                          <canvas id="offRinkBase" class="rink-base"></canvas>
+                          <canvas id="offShotCanvas" class="zone-canvas"></canvas>
+                        </div>
+                      </div>
+                      <div id="gr-legend" style="display:flex;flex-wrap:wrap;gap:.9rem;justify-content:center;align-items:center;padding:.25rem 0;">
+                        <div style="display:flex;align-items:center;gap:.35rem;font-size:.8rem;"><canvas data-icon="shot" width="14" height="14" style="background:transparent;"></canvas><span>Shot</span></div>
+                        <div style="display:flex;align-items:center;gap:.35rem;font-size:.8rem;"><canvas data-icon="goal" width="14" height="14" style="background:transparent;"></canvas><span>Goal</span></div>
+                        <div style="display:flex;align-items:center;gap:.35rem;font-size:.8rem;"><canvas data-icon="miss" width="14" height="14" style="background:transparent;"></canvas><span>Miss</span></div>
+                        <div style="display:flex;align-items:center;gap:.35rem;font-size:.8rem;"><canvas data-icon="block" width="14" height="14" style="background:transparent;"></canvas><span>Block</span></div>
+                      </div>
+                    </div>
+                    <div class="gr-tables-wrap" style="padding:1rem 2rem 0;">
+                      <div id="gamereport-skaters-table" style="overflow-x:auto;margin-bottom:2rem;"></div>
+                      <div id="gamereport-goalies-table" style="overflow-x:auto;"></div>
                     </div>
                 </div>
             </div>
@@ -376,14 +408,6 @@
             }
         }
 
-        function resetGameReportFilters(){
-            const s=document.getElementById('grStrength'); if(s) s.value='All';
-            const p=document.getElementById('grPerspective'); if(p && p.options.length>0) p.selectedIndex=0;
-            const t=document.getElementById('grTable'); if(t) t.value='skaters';
-            const evs=document.getElementById('grEvents'); if(evs) evs.value='All';
-            loadGameReport();
-        }
-
         function populateGameReportPerspective(){
             const perspSel=document.getElementById('grPerspective');
             if(!perspSel || perspSel.options.length>0) return; // already populated
@@ -397,9 +421,8 @@
             // Guard DOM lookups to avoid null errors if tab not yet in DOM
             const strengthSel=document.getElementById('grStrength');
             const perspSel=document.getElementById('grPerspective');
-            const tableSel=document.getElementById('grTable');
             const eventsSelBox=document.getElementById('grEvents');
-            if(!strengthSel || !perspSel || !tableSel || !eventsSelBox){
+            if(!strengthSel || !perspSel || !eventsSelBox){
                 console.warn('Game Report controls not found yet; skipping render');
                 return;
             }
@@ -409,8 +432,7 @@
             
             const strength=strengthSel.value || 'All';
             const perspective=perspSel.value || 'For';
-            const table=tableSel.value || 'skaters';
-            const eventFilter=eventsSelBox.value || 'All'; // Single value now
+            const eventFilter=eventsSelBox.value || 'All';
 
             try{
                 // Ensure PBP is available
@@ -448,6 +470,29 @@
                 // Build attempts for shotmap and KPIs (with event filter for shotmap only)
                 const allAttempts=[]; // All shot attempts for KPI calculations (ignores Event filter)
                 const filteredAttempts=[]; // Filtered by Event for shotmap display
+
+                // Pre-compute running score state and xG for every finalEvent
+                let _hGoals=0, _aGoals=0;
+                const _xgByIdx={};
+                finalEvents.forEach((ev,idx)=>{
+                    const tid=String(ev._computedTeamId||'');
+                    const lbl=prettifyEventLabel(getEventLabel(ev)).toLowerCase();
+                    const isH=tid===homeId;
+                    const scoreDiff=Math.max(-2,Math.min(2,isH?(_hGoals-_aGoals):(_aGoals-_hGoals)));
+                    if(lbl==='shot'||lbl==='goal'){
+                        const d=ev.details||{};
+                        const xr=(ev._x!==undefined)?ev._x:(d.xLocation!==undefined?d.xLocation:d.xCoord);
+                        const yr=(ev._y!==undefined)?ev._y:(d.yLocation!==undefined?d.yLocation:d.yCoord);
+                        const ax=(xr||xr===0)?((xr-300)/300*100):null;
+                        const ay=(yr||yr===0)?((yr-150)/150*42.5):null;
+                        const s=strengths[idx]||'';
+                        if(ax!==null&&ay!==null){
+                            if(s.includes('ENA')){ _xgByIdx[idx]=1.0; }
+                            else { _xgByIdx[idx]=computeXG(s,scoreDiff,getBoxId(isH?-ax:ax,isH?-ay:ay)); }
+                        }
+                    }
+                    if(lbl==='goal'){ if(tid===homeId) _hGoals++; else if(tid===awayId) _aGoals++; }
+                });
                 
                 finalEvents.forEach((ev,idx)=>{
                     const lbl = prettifyEventLabel(getEventLabel(ev));
@@ -470,6 +515,12 @@
                     const eventTeamName = getTeamNameById(tid) || (tid===homeId?gameInfo.home_team: tid===awayId?gameInfo.away_team: '');
                     const opposingTeamName = (tid===homeId) ? gameInfo.away_team : gameInfo.home_team;
                     
+                    // Extract shooter and goalie names for table use
+                    const _shooter = (lblKey==='goal') ? (ev._mergedScorer || d.scoredBy || d.scorer || d.player) : (d.shooter || d.player);
+                    const _goalie = (lblKey==='goal') ? (ev._mergedGoalie || d.goalie) : d.goalie;
+                    const shooterName = _shooter ? (_shooter.name || _shooter.fullName || `${_shooter.firstName||''} ${_shooter.lastName||''}`.trim()) : '';
+                    const goalieName = _goalie ? (_goalie.name || _goalie.fullName || `${_goalie.firstName||''} ${_goalie.lastName||''}`.trim()) : '';
+                    
                     const attempt = {
                         period,
                         event: lbl,
@@ -481,7 +532,10 @@
                         x: x,
                         y: y,
                         adj_x: (x||x===0)?(((x-300)/300*100).toFixed(1)): null,
-                        adj_y: (y||y===0)?(((y-150)/150*42.5).toFixed(1)): null
+                        adj_y: (y||y===0)?(((y-150)/150*42.5).toFixed(1)): null,
+                        xG: _xgByIdx[idx] ?? null,
+                        shooter: shooterName,
+                        goalie: goalieName
                     };
                     
                     allAttempts.push(attempt);
@@ -530,64 +584,176 @@
                 // Shotmap: use filtered attempts
                 renderGameReportShotmap({ attempts: filteredAttempts });
 
-                // Table rows - use ALL attempts (ignore Event filter), only filter by strength
-                let tableRows=[];
-                if(table==='teams'){
-                    tableRows = [
-                        { Team: gameInfo.home_team||'Home', Attempts: homeAgg.attempts, Shots: homeAgg.shots, Goals: homeAgg.goals, Misses: homeAgg.misses, Blocks: homeAgg.blocks },
-                        { Team: gameInfo.away_team||'Away', Attempts: awayAgg.attempts, Shots: awayAgg.shots, Goals: awayAgg.goals, Misses: awayAgg.misses, Blocks: awayAgg.blocks }
-                    ];
-                } else if(table==='skaters'){
-                    // Aggregate by shooter/scorer using ALL attempts
+                // ── Skaters table ──
+                {
+
+                    // Build summary lookup: player name → { toi, pim, plusMinus }
+                    const summaryLookup = {};
+                    const addSummaryPlayer = (p, tid) => {
+                        if(!p) return;
+                        const nm = p.name || `${p.firstName||''} ${p.lastName||''}`.trim();
+                        if(!nm) return;
+                        const st = p.stats || {};
+                        summaryLookup[`${nm}|${tid}`] = {
+                            toi: st.toi || st.timeOnIce || '',
+                            pim: st.penaltyMinutes || st.pim || 0,
+                            plusMinus: st.plusMinus
+                        };
+                    };
+                    const sumData = window.currentGameSummaryData;
+                    if(sumData?.homeTeam){
+                        (sumData.homeTeam.skaters||[]).forEach(p=>addSummaryPlayer(p, homeId));
+                    }
+                    if(sumData?.visitingTeam){
+                        (sumData.visitingTeam.skaters||[]).forEach(p=>addSummaryPlayer(p, awayId));
+                    }
+                    // Aggregate: Goals, Shots, Blocks, ixG, A1, A2 per player
                     const lineupIdx = buildLineupIndex(window.currentGameSummaryData, gameInfo);
                     const skMap = new Map();
+                    const ensureRec = (name, tid) => {
+                        const key = `${name}|${tid}`;
+                        if(!skMap.has(key)){
+                            const teamName = getTeamNameById(tid) || (tid===homeId?gameInfo.home_team: tid===awayId?gameInfo.away_team:'');
+                            const sl = summaryLookup[key] || {};
+                            skMap.set(key, { Player:name, Team:teamName, TOI:sl.toi||'', Goals:0, A1:0, A2:0, Points:0, ixG:0, Shots:0, 'Blocked Shots':0, PIM:parseInt(sl.pim)||0, '+/-': sl.plusMinus!=null ? (sl.plusMinus>0?'+'+sl.plusMinus:String(sl.plusMinus)) : '' });
+                        }
+                        return skMap.get(key);
+                    };
                     finalEvents.forEach((ev,idx)=>{
                         const lbl = prettifyEventLabel(getEventLabel(ev));
                         const lblKey = String(lbl).toLowerCase();
-                        if(!['shot','goal','miss','block'].includes(lblKey)) return;
+                        if(!['shot','goal','miss','block','penalty'].includes(lblKey)) return;
                         const s = strengths[idx]||''; if(!passStrength(s)) return;
                         const d=ev.details||{}; const tid=String(ev._computedTeamId||'');
-                        let player = null; if(lblKey==='goal'){ player = ev._mergedScorer || d.scoredBy || d.scorer || d.player; } else { player = d.shooter || d.player; }
-                        if(!player) return;
-                        const name = player.name || player.fullName || `${player.firstName||''} ${player.lastName||''}`.trim() || 'Unknown';
-                        const key = `${name}|${tid}`;
-                        if(!skMap.has(key)) skMap.set(key, { Team:getTeamNameById(tid) || (tid===homeId?gameInfo.home_team: tid===awayId?gameInfo.away_team:''), Player:name, Goals:0, Shots:0, Misses:0, Blocks:0, Attempts:0 });
-                        const rec = skMap.get(key);
-                        if(lblKey==='goal'){ rec.Goals++; rec.Attempts++; }
-                        else if(lblKey==='shot'){ rec.Shots++; rec.Attempts++; }
-                        else if(lblKey==='miss'){ rec.Misses++; rec.Attempts++; }
-                        else if(lblKey==='block'){ rec.Blocks++; rec.Attempts++; }
+                        if(lblKey==='goal'){
+                            // Scorer
+                            const scorer = ev._mergedScorer || d.scoredBy || d.scorer || d.player;
+                            if(scorer){
+                                const nm = scorer.name || scorer.fullName || `${scorer.firstName||''} ${scorer.lastName||''}`.trim();
+                                if(nm){ const rec=ensureRec(nm, tid); rec.Goals++; rec.Points++; const xv=_xgByIdx[idx]; if(xv!=null) rec.ixG+=xv; }
+                            }
+                            // Assists
+                            const assists = Array.isArray(ev._mergedAssists) ? ev._mergedAssists : (Array.isArray(d.assists) ? d.assists : []);
+                            if(assists[0]){
+                                const nm = `${assists[0].firstName||''} ${assists[0].lastName||''}`.trim();
+                                if(nm){ const rec=ensureRec(nm, tid); rec.A1++; rec.Points++; }
+                            }
+                            if(assists[1]){
+                                const nm = `${assists[1].firstName||''} ${assists[1].lastName||''}`.trim();
+                                if(nm){ const rec=ensureRec(nm, tid); rec.A2++; rec.Points++; }
+                            }
+                        } else if(lblKey==='shot'){
+                            const shooter = d.shooter || d.player;
+                            if(shooter){
+                                const nm = shooter.name || shooter.fullName || `${shooter.firstName||''} ${shooter.lastName||''}`.trim();
+                                if(nm){ const rec=ensureRec(nm, tid); rec.Shots++; const xv=_xgByIdx[idx]; if(xv!=null) rec.ixG+=xv; }
+                            }
+                        } else if(lblKey==='block'){
+                            const shooter = d.shooter || d.player;
+                            if(shooter){
+                                const nm = shooter.name || shooter.fullName || `${shooter.firstName||''} ${shooter.lastName||''}`.trim();
+                                if(nm){ ensureRec(nm, tid)['Blocked Shots']++; }
+                            }
+                        } else if(lblKey==='penalty'){
+                            const taker = d.takenBy || d.player || d.servedBy;
+                            if(taker){
+                                const nm = taker.name || taker.fullName || `${taker.firstName||''} ${taker.lastName||''}`.trim();
+                                if(nm){
+                                    const rec=ensureRec(nm, tid);
+                                    const mins = parseInt(d.minutes || d.penaltyMinutes || 2, 10);
+                                    rec.PIM += mins;
+                                }
+                            }
+                        }
                     });
-                    tableRows = Array.from(skMap.values());
-                } else if(table==='goalies'){
-                    // Aggregate by goalie using ALL shots/goals
+                    // Format ixG
+                    skMap.forEach(rec=>{ rec.ixG = rec.ixG > 0 ? rec.ixG.toFixed(2) : '0.00'; });
+                    renderGameReportTable(Array.from(skMap.values()), 'Skaters', document.getElementById('gamereport-skaters-table'));
+                }
+
+                // ── Goalies table ──
+                {
                     const gMap = new Map();
+                    const goalieToiLookup = {};
+                    const sumData = window.currentGameSummaryData;
+                    const lineupIdxG = buildLineupIndex(sumData, gameInfo);
+                    const addGoalieSummary = (p, tid) => {
+                        if(!p) return;
+                        const nm = p.name || `${p.firstName||''} ${p.lastName||''}`.trim();
+                        if(!nm) return;
+                        const st = p.stats || {};
+                        goalieToiLookup[`${nm}|${tid}`] = st.timeOnIce || st.toi || '';
+                    };
+                    if(sumData?.homeTeam) (sumData.homeTeam.goalies||[]).forEach(p=>addGoalieSummary(p, homeId));
+                    if(sumData?.visitingTeam) (sumData.visitingTeam.goalies||[]).forEach(p=>addGoalieSummary(p, awayId));
+                    
                     finalEvents.forEach((ev,idx)=>{
                         const lbl = prettifyEventLabel(getEventLabel(ev));
                         const k=String(lbl).toLowerCase();
                         if(!(k==='shot' || k==='goal')) return;
                         const s=strengths[idx]||''; if(!passStrength(s)) return;
-                        const d=ev.details||{}; const goalie=d.goalie; if(!goalie) return;
+                        const d=ev.details||{}; const goalie=d.goalie || ev._mergedGoalie;
+                        if(!goalie) return;
                         const shooterTid=String(ev._computedTeamId||'');
-                        let goalieTid = getPlayerTeamIdFromLineups(goalie, buildLineupIndex(window.currentGameSummaryData, gameInfo), gameInfo);
+                        let goalieTid = getPlayerTeamIdFromLineups(goalie, lineupIdxG, gameInfo);
                         if(!goalieTid){ goalieTid = (shooterTid===homeId?awayId:homeId); }
                         const name = goalie.name || goalie.fullName || `${goalie.firstName||''} ${goalie.lastName||''}`.trim() || 'Unknown';
                         const key = `${name}|${goalieTid}`;
-                        if(!gMap.has(key)) gMap.set(key, { Team:getTeamNameById(goalieTid) || (goalieTid===homeId?gameInfo.home_team:gameInfo.away_team), Goalie:name, SA:0, GA:0, SV:0, 'SV%':'' });
+                        if(!gMap.has(key)){
+                            const teamName = getTeamNameById(goalieTid) || (goalieTid===homeId?gameInfo.home_team:gameInfo.away_team);
+                            const toi = goalieToiLookup[key] || '';
+                            gMap.set(key, { Goalie:name, Team:teamName, TOI:toi, SA:0, xGA:0, GA:0, GSAx:'', 'Sv%':'', 'xSv%':'', 'dSv%':'' });
+                        }
                         const rec=gMap.get(key);
                         rec.SA++;
+                        const xv = _xgByIdx[idx]; if(xv!=null) rec.xGA += xv;
                         if(k==='goal') rec.GA++;
                     });
-                    gMap.forEach(rec=>{ rec.SV = Math.max(0, rec.SA - rec.GA); rec['SV%'] = rec.SA>0 ? ( (rec.SV/rec.SA)*100 ).toFixed(1)+'%' : '—'; });
-                    tableRows = Array.from(gMap.values());
+                    gMap.forEach(rec=>{
+                        const gsax = rec.xGA - rec.GA;
+                        rec.GSAx = gsax >= 0 ? '+'+gsax.toFixed(2) : gsax.toFixed(2);
+                        rec.xGA = rec.xGA.toFixed(2);
+                        rec['Sv%'] = rec.SA>0 ? (((rec.SA-rec.GA)/rec.SA)*100).toFixed(1)+'%' : '—';
+                        const xSv = rec.SA>0 ? ((rec.SA-parseFloat(rec.xGA))/rec.SA)*100 : 0;
+                        rec['xSv%'] = rec.SA>0 ? xSv.toFixed(1)+'%' : '—';
+                        const sv = rec.SA>0 ? ((rec.SA-rec.GA)/rec.SA)*100 : 0;
+                        rec['dSv%'] = rec.SA>0 ? (sv-xSv>=0?'+':'')+(sv-xSv).toFixed(1)+'%' : '—';
+                    });
+                    renderGameReportTable(Array.from(gMap.values()), 'Goaltenders', document.getElementById('gamereport-goalies-table'));
                 }
-                renderGameReportTable(tableRows);
             }catch(e){
                 console.error('Failed to compute Game Report in-browser:', e);
                 renderGameReportKPIs(null);
                 renderGameReportShotmap(null);
-                renderGameReportTable([]);
+                renderGameReportTable([], 'Skaters', document.getElementById('gamereport-skaters-table'));
+                renderGameReportTable([], 'Goaltenders', document.getElementById('gamereport-goalies-table'));
             }
+        }
+
+        /* ── KPI gradient coloring (from report.html) ── */
+        function _blendColor(t,a,b){
+          function hexToRgb(h){const r=parseInt(h.slice(1,3),16),g=parseInt(h.slice(3,5),16),bl=parseInt(h.slice(5,7),16);return[r,g,bl];}
+          function rgbToHex([r,g,b]){return'#'+[r,g,b].map(x=>x.toString(16).padStart(2,'0')).join('');}
+          const ar=hexToRgb(a),br=hexToRgb(b);const cr=[0,1,2].map(i=>Math.round(ar[i]*(1-t)+br[i]*t));const light=(0.299*cr[0]+0.587*cr[1]+0.114*cr[2]);return{hex:rgbToHex(cr),fg:light>170?'#111827':'#ffffff'};}
+        function _pctGradient(val,low,mid,high){
+          if(val==null||isNaN(val))return null;const v=parseFloat(val);
+          const RED='#c62828',WHITE='#ffffff',BLUE='#1e4fa8';
+          if(v<=low)return{bg:RED,fg:'#ffffff'};if(v>=high)return{bg:BLUE,fg:'#ffffff'};if(v===mid)return{bg:WHITE,fg:'#111827'};
+          if(v<mid){const t=(v-low)/(mid-low);const bl=_blendColor(t,RED,WHITE);return{bg:bl.hex,fg:bl.fg};}
+          const t=(v-mid)/(high-mid);const bl=_blendColor(t,WHITE,BLUE);return{bg:bl.hex,fg:bl.fg};
+        }
+        function _applyKpiColoring(){
+          const targets=[['gkpi-cfpct',[30,50,70]],['gkpi-ffpct',[30,50,70]],['gkpi-sfpct',[30,50,70]],['gkpi-gfpct',[30,50,70]],['gkpi-xgfpct',[30,50,70]],['gkpi-pdo',[90,100,110]]];
+          targets.forEach(([id,range])=>{
+            const el=document.getElementById(id);if(!el)return;
+            const valEl=el.querySelector('.value');if(!valEl)return;
+            const raw=(valEl.textContent||'').replace(/[^0-9.\-]/g,'');if(!raw)return;
+            const val=parseFloat(raw);if(isNaN(val))return;
+            const grad=_pctGradient(val,range[0],range[1],range[2]);if(!grad)return;
+            el.style.background=grad.bg;el.style.borderColor=grad.bg;
+            valEl.style.color=grad.fg;
+            const lbl=el.querySelector('.label');if(lbl)lbl.style.color=grad.fg;
+          });
         }
 
         function renderGameReportKPIs(data){
@@ -597,93 +763,42 @@
                 cont.innerHTML = '<div style="opacity:0.6;font-size:.85rem;padding:1rem;text-align:center;color:#b7b3cf;">No data for selected filters.</div>';
                 return;
             }
-            
-            // Get selected team from Perspective slicer
             const perspectiveSelect = document.getElementById('grPerspective');
             const forTeam = perspectiveSelect ? perspectiveSelect.value : '';
-            
             const attempts = data.attempts;
-            
-            // Calculate KPIs based on selected perspective team
-            let CA = 0, CF = 0, SA = 0, SF = 0, GA = 0, GF = 0;
-            
+            let CA=0,CF=0,FA=0,FF=0,SA=0,SF=0,GA=0,GF=0,xGA=0,xGF=0;
             attempts.forEach(a => {
                 const evt = a.event || '';
-                // CF = attempts FOR the selected team, CA = attempts AGAINST the selected team
                 const isFor = a.team_for === forTeam;
-                
-                // Corsi: Shot, Goal, Miss, Block
-                if(['Shot', 'Goal', 'Miss', 'Block'].includes(evt)){
-                    if(isFor) CF++; else CA++;
-                }
-                
-                // Shots: Shot, Goal
-                if(['Shot', 'Goal'].includes(evt)){
+                if(['Shot','Goal','Miss','Block'].includes(evt)){ if(isFor) CF++; else CA++; }
+                if(['Shot','Goal','Miss'].includes(evt)){ if(isFor) FF++; else FA++; }
+                if(['Shot','Goal'].includes(evt)){
                     if(isFor) SF++; else SA++;
+                    const xv = (a.xG!=null && !isNaN(a.xG)) ? a.xG : 0;
+                    if(isFor) xGF+=xv; else xGA+=xv;
                 }
-                
-                // Goals
-                if(evt === 'Goal'){
-                    if(isFor) GF++; else GA++;
-                }
+                if(evt==='Goal'){ if(isFor) GF++; else GA++; }
             });
-            
-            // Calculate percentages
-            const CF_pct = (CF + CA) > 0 ? ((CF / (CF + CA)) * 100).toFixed(1) : '0.0';
-            const SF_pct = (SF + SA) > 0 ? ((SF / (SF + SA)) * 100).toFixed(1) : '0.0';
-            const GF_pct = (GF + GA) > 0 ? ((GF / (GF + GA)) * 100).toFixed(1) : '0.0';
-            const Sv_pct = SA > 0 ? (((SA - GA) / SA) * 100).toFixed(1) : '0.0';
-            const Sh_pct = SF > 0 ? ((GF / SF) * 100).toFixed(1) : '0.0';
-            const PDO = (parseFloat(Sv_pct) + parseFloat(Sh_pct)).toFixed(1);
-            
-            cont.innerHTML = `
-                <div style="display:flex;flex-direction:column;gap:1rem;">
-                    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:.55rem;padding:.75rem;">
-                        <div style="font-size:.65rem;letter-spacing:.05em;font-weight:600;color:#b7b3cf;text-transform:uppercase;margin-bottom:.5rem;text-align:center;">Corsi</div>
-                        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.5rem;text-align:center;">
-                            <div><div style="font-size:.55rem;color:#999;">CA</div><div style="font-size:1.1rem;font-weight:600;color:#fff;">${CA}</div></div>
-                            <div style="border-left:1px solid rgba(255,255,255,.1);border-right:1px solid rgba(255,255,255,.1);"><div style="font-size:.55rem;color:#999;">CF%</div><div style="font-size:1.1rem;font-weight:600;color:#fff;">${CF_pct}%</div></div>
-                            <div><div style="font-size:.55rem;color:#999;">CF</div><div style="font-size:1.1rem;font-weight:600;color:#fff;">${CF}</div></div>
-                        </div>
-                    </div>
-                    
-                    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:.55rem;padding:.75rem;">
-                        <div style="font-size:.65rem;letter-spacing:.05em;font-weight:600;color:#b7b3cf;text-transform:uppercase;margin-bottom:.5rem;text-align:center;">Shots</div>
-                        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.5rem;text-align:center;">
-                            <div><div style="font-size:.55rem;color:#999;">SA</div><div style="font-size:1.1rem;font-weight:600;color:#fff;">${SA}</div></div>
-                            <div style="border-left:1px solid rgba(255,255,255,.1);border-right:1px solid rgba(255,255,255,.1);"><div style="font-size:.55rem;color:#999;">SF%</div><div style="font-size:1.1rem;font-weight:600;color:#fff;">${SF_pct}%</div></div>
-                            <div><div style="font-size:.55rem;color:#999;">SF</div><div style="font-size:1.1rem;font-weight:600;color:#fff;">${SF}</div></div>
-                        </div>
-                    </div>
-                    
-                    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:.55rem;padding:.75rem;">
-                        <div style="font-size:.65rem;letter-spacing:.05em;font-weight:600;color:#b7b3cf;text-transform:uppercase;margin-bottom:.5rem;text-align:center;">Goals</div>
-                        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.5rem;text-align:center;">
-                            <div><div style="font-size:.55rem;color:#999;">GA</div><div style="font-size:1.1rem;font-weight:600;color:#fff;">${GA}</div></div>
-                            <div style="border-left:1px solid rgba(255,255,255,.1);border-right:1px solid rgba(255,255,255,.1);"><div style="font-size:.55rem;color:#999;">GF%</div><div style="font-size:1.1rem;font-weight:600;color:#fff;">${GF_pct}%</div></div>
-                            <div><div style="font-size:.55rem;color:#999;">GF</div><div style="font-size:1.1rem;font-weight:600;color:#fff;">${GF}</div></div>
-                        </div>
-                    </div>
-                    
-                    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:.55rem;padding:.75rem;">
-                        <div style="font-size:.65rem;letter-spacing:.05em;font-weight:600;color:#b7b3cf;text-transform:uppercase;margin-bottom:.5rem;text-align:center;">Expected Goals</div>
-                        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.5rem;text-align:center;">
-                            <div><div style="font-size:.55rem;color:#999;">xGA</div><div style="font-size:1.1rem;font-weight:600;color:#fff;">—</div></div>
-                            <div style="border-left:1px solid rgba(255,255,255,.1);border-right:1px solid rgba(255,255,255,.1);"><div style="font-size:.55rem;color:#999;">xGF%</div><div style="font-size:1.1rem;font-weight:600;color:#fff;">—</div></div>
-                            <div><div style="font-size:.55rem;color:#999;">xGF</div><div style="font-size:1.1rem;font-weight:600;color:#fff;">—</div></div>
-                        </div>
-                    </div>
-                    
-                    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:.55rem;padding:.75rem;">
-                        <div style="font-size:.65rem;letter-spacing:.05em;font-weight:600;color:#b7b3cf;text-transform:uppercase;margin-bottom:.5rem;text-align:center;">Goaltending / Shooting</div>
-                        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.5rem;text-align:center;">
-                            <div><div style="font-size:.55rem;color:#999;">Sv%</div><div style="font-size:1.1rem;font-weight:600;color:#fff;">${Sv_pct}%</div></div>
-                            <div style="border-left:1px solid rgba(255,255,255,.1);border-right:1px solid rgba(255,255,255,.1);"><div style="font-size:.55rem;color:#999;">PDO</div><div style="font-size:1.1rem;font-weight:600;color:#fff;">${PDO}</div></div>
-                            <div><div style="font-size:.55rem;color:#999;">Sh%</div><div style="font-size:1.1rem;font-weight:600;color:#fff;">${Sh_pct}%</div></div>
-                        </div>
-                    </div>
-                </div>
-            `;
+            const pct=(n,d)=>(n+d)>0?((n/(n+d))*100).toFixed(1):'0.0';
+            const CF_pct=pct(CF,CA), FF_pct=pct(FF,FA), SF_pct=pct(SF,SA), GF_pct=pct(GF,GA);
+            const xGF_pct=(xGF+xGA)>0?((xGF/(xGF+xGA))*100).toFixed(1):'0.0';
+            const Sv_pct=SA>0?(((SA-GA)/SA)*100).toFixed(1):'0.0';
+            const Sh_pct=SF>0?((GF/SF)*100).toFixed(1):'0.0';
+            const PDO=(parseFloat(Sv_pct)+parseFloat(Sh_pct)).toFixed(1);
+            const card=(title,idA,lA,vA,idP,lP,vP,idF,lF,vF)=>`
+              <div class="kpi-card"><h3>${title}</h3><div class="kpi-metrics">
+                <div class="kpi-metric" id="${idA}"><span class="label">${lA}</span><span class="value">${vA}</span></div>
+                <div class="kpi-metric middle" id="${idP}"><span class="label">${lP}</span><span class="value">${vP}</span></div>
+                <div class="kpi-metric" id="${idF}"><span class="label">${lF}</span><span class="value">${vF}</span></div>
+              </div></div>`;
+            cont.innerHTML =
+              card('Corsi','gkpi-ca','CA',CA,'gkpi-cfpct','CF%',CF_pct+'%','gkpi-cf','CF',CF)+
+              card('Fenwick','gkpi-fa','FA',FA,'gkpi-ffpct','FF%',FF_pct+'%','gkpi-ff','FF',FF)+
+              card('Shots','gkpi-sa','SA',SA,'gkpi-sfpct','SF%',SF_pct+'%','gkpi-sf','SF',SF)+
+              card('xG','gkpi-xga','xGA',xGA.toFixed(2),'gkpi-xgfpct','xGF%',xGF_pct+'%','gkpi-xgf','xGF',xGF.toFixed(2))+
+              card('Goals','gkpi-ga','GA',GA,'gkpi-gfpct','GF%',GF_pct+'%','gkpi-gf','GF',GF)+
+              card('Shooting / Goaltending','gkpi-svpct','Sv%',Sv_pct+'%','gkpi-pdo','PDO',PDO,'gkpi-shpct','Sh%',Sh_pct+'%');
+            _applyKpiColoring();
         }
 
         async function renderGameReportShotmap(data){
@@ -715,15 +830,42 @@
             await drawShotMarkers(attemptsArr, forTeam);
         }
 
-        function renderGameReportTable(rows){
-            const cont=document.getElementById('gamereport-table');
-            if(!rows||!rows.length){ cont.innerHTML='<div style="opacity:0.6;font-size:.85rem;padding:1rem;text-align:center;color:#b7b3cf;">No data available for the selected table type.</div>'; return; }
-            const first=rows[0];
-            const cols=Object.keys(first);
-            const header=cols.map(c=>`<th style="padding:.5rem .55rem;text-align:left;font-size:.75rem;letter-spacing:.03em;font-weight:600;">${c}</th>`).join('');
-            const body=rows.map(r=>`<tr style="border-bottom:1px solid rgba(255,255,255,.05);">${cols.map(c=>`<td style="padding:.45rem .55rem;font-size:.8rem;">${r[c]===null||r[c]===undefined?'':r[c]}</td>`).join('')}</tr>`).join('');
-            const tableType = document.getElementById('grTable')?.value || 'data';
-            cont.innerHTML=`<h4 style="margin:0 0 .75rem;font-size:1rem;font-weight:600;letter-spacing:.03em;color:#b9a7ff;text-transform:capitalize;">${tableType} Table</h4><div style="max-height:420px;overflow:auto;border:1px solid rgba(142,124,214,.25);border-radius:.65rem;background:rgba(19,13,46,.75);">\n<table style="width:100%;border-collapse:collapse;">\n<thead style="position:sticky;top:0;background:rgba(25,28,48,.92);backdrop-filter:blur(4px);z-index:10;"><tr style="border-bottom:1px solid rgba(255,255,255,.08);">${header}</tr></thead><tbody>${body}</tbody></table></div>`;
+        function renderGameReportTable(rows, title, cont){
+            if(!cont) return;
+            if(!rows||!rows.length){ cont.innerHTML=`<div style="opacity:0.6;font-size:.85rem;padding:1rem;text-align:center;color:#b7b3cf;">No ${title||'data'} data.</div>`; return; }
+            let sortCol=null, sortAsc=true;
+            function render(){
+                const sorted=[...rows];
+                if(sortCol!==null){
+                    sorted.sort((a,b)=>{
+                        let va=a[sortCol], vb=b[sortCol];
+                        // Attempt numeric comparison
+                        const na=parseFloat(String(va).replace(/[^\d.\-]/g,'')), nb=parseFloat(String(vb).replace(/[^\d.\-]/g,''));
+                        if(!isNaN(na)&&!isNaN(nb)) return sortAsc?na-nb:nb-na;
+                        va=String(va||'').toLowerCase(); vb=String(vb||'').toLowerCase();
+                        return sortAsc?va.localeCompare(vb):vb.localeCompare(va);
+                    });
+                }
+                const cols=Object.keys(rows[0]);
+                const header=cols.map(c=>{
+                    const cls=sortCol===c?(sortAsc?'sort-asc':'sort-desc'):'';
+                    const arrow=sortCol===c?(sortAsc?'▲':'▼'):'⇅';
+                    return `<th class="${cls}" data-col="${c}" style="padding:.5rem .55rem;text-align:left;font-size:.75rem;letter-spacing:.03em;font-weight:600;white-space:nowrap;">${c}<span class="sort-arrow">${arrow}</span></th>`;
+                }).join('');
+                const body=sorted.map(r=>`<tr style="border-bottom:1px solid rgba(255,255,255,.05);">${cols.map(c=>`<td style="padding:.45rem .55rem;font-size:.8rem;white-space:nowrap;">${r[c]===null||r[c]===undefined?'':r[c]}</td>`).join('')}</tr>`).join('');
+                cont.innerHTML=`<h4 style="margin:0 0 .75rem;font-size:1rem;font-weight:600;letter-spacing:.03em;color:var(--pwhl-accent-strong);">${title}</h4><div style="max-height:420px;overflow:auto;border:1px solid var(--pwhl-border);border-radius:.65rem;background:var(--pwhl-surface);">
+<table class="gr-table" style="width:100%;border-collapse:collapse;">
+<thead style="position:sticky;top:0;background:rgba(25,28,48,.92);backdrop-filter:blur(4px);z-index:10;"><tr style="border-bottom:1px solid rgba(255,255,255,.08);">${header}</tr></thead><tbody>${body}</tbody></table></div>`;
+                // Attach sort handlers
+                cont.querySelectorAll('.gr-table th').forEach(th=>{
+                    th.onclick=()=>{
+                        const col=th.dataset.col;
+                        if(sortCol===col) sortAsc=!sortAsc; else { sortCol=col; sortAsc=false; }
+                        render();
+                    };
+                });
+            }
+            render();
         }
         
         // Helper functions for drawing shot maps on canvas
@@ -736,18 +878,11 @@
             return async function(team){
                 if(colors) return colors[team] || '#53b3ff';
                 try{
-                    const resp = await fetch('/Teams.csv');
+                    const resp = await fetch('/api/teams');
                     if(resp.ok){
                         colors = {};
-                        const txt = await resp.text();
-                        const lines = txt.split(/\n/);
-                        const header = lines.shift();
-                        lines.forEach(l => {
-                            const c = l.split(',');
-                            if(c.length > 5){
-                                colors[c[1]] = c[5];
-                            }
-                        });
+                        const teams = await resp.json();
+                        teams.forEach(t => { colors[t.name] = t.color; });
                         return colors[team] || '#53b3ff';
                     }
                 } catch(e) {}
@@ -765,6 +900,92 @@
                 i.src=RINK_SRC;
             });
             return rinkImgPromise;
+        }
+
+        // ─── xG Model (from models/xg_model.json coefficients) ───
+        const XG_COEFS = {
+            'StrengthState_EV':-1.7821,'StrengthState_PP':-1.3503,'StrengthState_SH':-1.5099,
+            'ScoreState_-2':-0.9561,'ScoreState_-1':-1.0100,'ScoreState_0':-1.0753,
+            'ScoreState_1':-0.9091,'ScoreState_2':-0.6917,
+            'BoxID_N_or_D':0.1032,
+            'BoxID_O01':1.0189,'BoxID_O02':0.9691,'BoxID_O03':0.0937,'BoxID_O04':-0.8360,
+            'BoxID_O05':-1.0737,'BoxID_O06':0.2464,'BoxID_O07':1.4738,'BoxID_O08':0.3600,
+            'BoxID_O09':-0.8460,'BoxID_O10':-0.9441,'BoxID_O11':0.9485,'BoxID_O12':-1.5153,
+            'BoxID_O13':-0.3514,'BoxID_O14':0.4024,'BoxID_O15':0.6572,'BoxID_O16':0.5955,
+            'BoxID_O17':-0.2261,'BoxID_O18':-1.4733,'BoxID_O19':-0.7448,'BoxID_O20':-0.1177,
+            'BoxID_O21':0.0580,'BoxID_O22':-0.2907,'BoxID_O23':-1.4879,'BoxID_O24':-0.3906,
+            'BoxID_O25':-0.3447,'BoxID_O26':-0.9267
+        };
+        // Simplified offensive zone polygons (x in [25,100], y in [-42.5,42.5])
+        const O_ZONES = [
+            ['O01',[[89,-12.5],[100,-12.5],[100,-14],[99,-20],[97,-27],[94,-32],[91,-35],[89,-36.5],[89,-12.5]]],
+            ['O02',[[89,-12.5],[100,-12.5],[100,12.5],[89,12.5],[89,-12.5]]],
+            ['O03',[[89,12.5],[100,12.5],[100,14],[99,20],[97,27],[94,32],[91,35],[89,36.5],[89,12.5]]],
+            ['O04',[[89,-36.5],[89,-28],[60,-42.5],[71.5,-42.5],[81,-41],[86,-38.5],[89,-36.5]]],
+            ['O05',[[89,-28],[89,-16],[73,-24],[73,-36],[89,-28]]],
+            ['O06',[[89,-16],[89,-4],[73,-12],[73,-24],[89,-16]]],
+            ['O07',[[89,-4],[89,4],[83,7],[83,-7],[89,-4]]],
+            ['O08',[[89,4],[89,16],[73,24],[73,12],[89,4]]],
+            ['O09',[[89,16],[89,28],[73,36],[73,24],[89,16]]],
+            ['O10',[[89,36.5],[89,28],[60,42.5],[71.5,42.5],[81,41],[86,38.5],[89,36.5]]],
+            ['O11',[[83,-7],[83,7],[73,12],[73,-12],[83,-7]]],
+            ['O12',[[73,-36],[73,-24],[57,-32],[57,-42.5],[60,-42.5],[73,-36]]],
+            ['O13',[[73,-24],[73,-12],[57,-20],[57,-32],[73,-24]]],
+            ['O14',[[73,-12],[73,0],[57,-8],[57,-20],[73,-12]]],
+            ['O15',[[73,0],[57,8],[57,-8],[73,0]]],
+            ['O16',[[73,0],[73,12],[57,20],[57,8],[73,0]]],
+            ['O17',[[73,12],[73,24],[57,32],[57,20],[73,12]]],
+            ['O18',[[73,24],[73,36],[60,42.5],[57,42.5],[57,32],[73,24]]],
+            ['O19',[[57,-42.5],[57,-20],[41,-28],[41,-42.5],[57,-42.5]]],
+            ['O20',[[57,-20],[57,-8],[41,-16],[41,-28],[57,-20]]],
+            ['O21',[[57,-8],[57,8],[41,16],[41,-16],[57,-8]]],
+            ['O22',[[57,8],[57,20],[41,28],[41,16],[57,8]]],
+            ['O23',[[57,20],[57,42.5],[41,42.5],[41,28],[57,20]]],
+            ['O24',[[41,-42.5],[41,-16],[25,-24],[25,-42.5],[41,-42.5]]],
+            ['O25',[[41,-16],[41,16],[25,24],[25,-24],[41,-16]]],
+            ['O26',[[41,16],[41,42.5],[25,42.5],[25,24],[41,16]]]
+        ];
+        function pointInPoly(px,py,poly){
+            let inside=false;
+            for(let i=0,j=poly.length-1;i<poly.length;j=i++){
+                const xi=poly[i][0],yi=poly[i][1],xj=poly[j][0],yj=poly[j][1];
+                if((yi>py)!==(yj>py) && px<(xj-xi)*(py-yi)/(yj-yi)+xi) inside=!inside;
+            }
+            return inside;
+        }
+        function getBoxId(adjX,adjY){
+            if(adjX==null||adjY==null||isNaN(adjX)||isNaN(adjY)) return 'N_or_D';
+            for(const [zid,poly] of O_ZONES){ if(pointInPoly(adjX,adjY,poly)) return zid; }
+            return 'N_or_D';
+        }
+        function strengthStateFromStr(s){
+            const str=String(s||'');
+            if(str.includes('ENA')||str.includes('ENF')) return 'EV';
+            const m=str.match(/^(\d+)v(\d+)$/i);
+            if(!m) return 'EV';
+            const a=parseInt(m[1],10),b=parseInt(m[2],10);
+            if(a>b) return 'PP'; if(a<b) return 'SH'; return 'EV';
+        }
+        function computeXG(strengthStr,scoreState,boxId){
+            const ss=strengthStateFromStr(strengthStr);
+            const sc=Math.max(-2,Math.min(2,parseInt(scoreState)||0));
+            const bx=(typeof boxId==='string'&&boxId.startsWith('O'))?boxId:'N_or_D';
+            let z=0;
+            const k1='StrengthState_'+ss; if(k1 in XG_COEFS) z+=XG_COEFS[k1];
+            const k2='ScoreState_'+sc;    if(k2 in XG_COEFS) z+=XG_COEFS[k2];
+            const k3='BoxID_'+bx;         if(k3 in XG_COEFS) z+=XG_COEFS[k3];
+            return 1/(1+Math.exp(-z));
+        }
+        function drawShape(ctx,shape,x,y,color){
+            ctx.save(); ctx.strokeStyle=color; ctx.fillStyle=color; ctx.lineWidth=1.4;
+            switch(shape){
+                case 'goal': ctx.beginPath(); ctx.moveTo(x,y-5); ctx.lineTo(x+4.5,y+5); ctx.lineTo(x-4.5,y+1.5); ctx.lineTo(x+4.5,y+1.5); ctx.lineTo(x-4.5,y+5); ctx.closePath(); ctx.fill(); break;
+                case 'shot': ctx.beginPath(); ctx.arc(x,y,5,0,Math.PI*2); ctx.stroke(); break;
+                case 'miss': ctx.beginPath(); ctx.moveTo(x,y-5); ctx.lineTo(x+5,y+5); ctx.lineTo(x-5,y+5); ctx.closePath(); ctx.stroke(); break;
+                case 'block': ctx.strokeRect(x-5,y-5,10,10); break;
+                case 'penalty': ctx.beginPath(); ctx.moveTo(x,y-5); ctx.lineTo(x+5,y); ctx.lineTo(x,y+5); ctx.lineTo(x-5,y); ctx.closePath(); ctx.stroke(); break;
+            }
+            ctx.restore();
         }
 
         async function drawRinkBases(){
@@ -795,130 +1016,74 @@
         async function drawShotMarkers(attempts, forTeam){
             const canvasDef = document.getElementById('defShotCanvas');
             const canvasOff = document.getElementById('offShotCanvas');
-            
             if(!canvasDef || !canvasOff) return;
-            
-            // Setup canvases
             const ctxDef = setupCanvas(canvasDef);
             const ctxOff = setupCanvas(canvasOff);
-            
             ctxDef.clearRect(0, 0, canvasDef.width, canvasDef.height);
             ctxOff.clearRect(0, 0, canvasOff.width, canvasOff.height);
-            
-            console.log('Drawing shots for team:', forTeam);
-            console.log('Total attempts:', attempts.length);
-            
             // Get team colors
             const teamColors = {};
             const uniqueTeams = [...new Set(attempts.map(a => a.team_for))];
-            for(const team of uniqueTeams){
-                teamColors[team] = await teamColorCache(team);
-            }
-            console.log('Team colors:', teamColors);
-            
-            let defCount = 0, offCount = 0;
-            
+            for(const team of uniqueTeams){ teamColors[team] = await teamColorCache(team); }
+            // Tooltip support
+            const pointIndex = [];
             attempts.forEach(a => {
                 if(a.adj_x == null || a.adj_y == null) return;
-                
                 const origX = parseFloat(a.adj_x);
                 const origY = parseFloat(a.adj_y);
-                
-                // Determine if this is a shot FOR the selected team or AGAINST
                 const isFor = a.team_for === forTeam;
-                
-                // Determine if the shot was in offensive zone for the shooting team
-                // A shot is offensive if |x| > 25 (far from center)
-                const isOffensiveShot = Math.abs(origX) > 25;
-                
-                // Transform coordinates relative to selected team
-                // If it's for our team, keep sign; if against, flip sign
+                if(Math.abs(origX) <= 25) return;
                 const rawX = isFor ? origX : -origX;
                 const rawY = isFor ? origY : -origY;
-                
-                // Debug first few shots
-                if(defCount + offCount < 5){
-                    console.log(`Shot ${defCount + offCount}:`, {
-                        team_for: a.team_for,
-                        isFor,
-                        origX,
-                        rawX,
-                        isOffensiveShot,
-                        willShowIn: (isOffensiveShot ? 'offensive' : 'defensive')
-                    });
-                }
-                
-                // Skip neutral zone (|x| < 25)
-                if(!isOffensiveShot) return;
-                
-                // Determine which canvas based on whose shot it is
-                // Selected team's shots → offensive zone (right)
-                // Opponent's shots → defensive zone (left)
                 let ctx, canvas, zx;
                 if(isFor){
-                    // Our team's shot - show in offensive zone
-                    ctx = ctxOff;
-                    canvas = canvasOff;
-                    // Normalize to [0,1] using absolute coordinates
+                    ctx = ctxOff; canvas = canvasOff;
                     zx = (Math.abs(rawX) - 25) / 75;
-                    offCount++;
                 } else {
-                    // Opponent's shot - show in defensive zone (flip x-axis)
-                    ctx = ctxDef;
-                    canvas = canvasDef;
-                    // Flip x-axis for defensive zone by subtracting from 1
+                    ctx = ctxDef; canvas = canvasDef;
                     zx = 1 - ((Math.abs(rawX) - 25) / 75);
-                    defCount++;
                 }
-                
                 const zy = (42.5 - rawY) / 85;
-                
                 const px = zx * canvas.width;
                 const py = zy * canvas.height;
-                
-                // Get team color
                 const teamColor = teamColors[a.team_for] || '#53b3ff';
-                
-                // Determine marker type
-                const event = a.event || '';
-                
-                ctx.save();
-                ctx.fillStyle = teamColor;
-                ctx.strokeStyle = teamColor;
-                ctx.lineWidth = 1.5;
-                
-                if(event === 'Goal') {
-                    // Star for goals in team color
-                    ctx.beginPath();
-                    ctx.moveTo(px, py - 5);
-                    ctx.lineTo(px + 4.5, py + 5);
-                    ctx.lineTo(px - 4.5, py + 1.5);
-                    ctx.lineTo(px + 4.5, py + 1.5);
-                    ctx.lineTo(px - 4.5, py + 5);
-                    ctx.closePath();
-                    ctx.fill();
-                } else if(event === 'Shot') {
-                    // Filled circle for shots
-                    ctx.beginPath();
-                    ctx.arc(px, py, 4, 0, Math.PI * 2);
-                    ctx.fill();
-                } else if(event === 'Miss') {
-                    // Filled triangle for misses
-                    ctx.beginPath();
-                    ctx.moveTo(px, py - 5);
-                    ctx.lineTo(px + 5, py + 5);
-                    ctx.lineTo(px - 5, py + 5);
-                    ctx.closePath();
-                    ctx.fill();
-                } else if(event === 'Block') {
-                    // Filled square for blocks
-                    ctx.fillRect(px - 4, py - 4, 8, 8);
-                }
-                
-                ctx.restore();
+                const shape = a.event==='Goal'?'goal': a.event==='Shot'?'shot': a.event==='Miss'?'miss': a.event==='Block'?'block':'shot';
+                drawShape(ctx, shape, px, py, teamColor);
+                pointIndex.push({canvas,x:px,y:py,r:7,data:a,isFor});
             });
-            
-            console.log(`Defensive zone: ${defCount} shots, Offensive zone: ${offCount} shots`);
+            // Tooltip handlers
+            const tooltip = document.getElementById('gr-tooltip') || (()=>{
+                const t=document.createElement('div'); t.id='gr-tooltip';
+                t.style.cssText='position:absolute;pointer-events:none;background:rgba(20,24,38,.94);border:1px solid #6b7280;padding:.55rem .7rem;border-radius:.5rem;font-size:.7rem;line-height:1.25;z-index:200;display:none;max-width:220px;white-space:normal;font-weight:500;';
+                document.body.appendChild(t); return t;
+            })();
+            function handleMove(e){
+                let found=null;
+                for(const p of pointIndex){
+                    const rect=p.canvas.getBoundingClientRect();
+                    if(e.clientX<rect.left||e.clientX>rect.right||e.clientY<rect.top||e.clientY>rect.bottom) continue;
+                    const dx=e.clientX-(rect.left+p.x/p.canvas.width*rect.width);
+                    const dy=e.clientY-(rect.top+p.y/p.canvas.height*rect.height);
+                    if(Math.hypot(dx,dy)<=p.r){ found=p; break; }
+                }
+                if(found){
+                    const d=found.data;
+                    const xgStr = (d.xG!=null && !isNaN(d.xG)) ? d.xG.toFixed(3) : '—';
+                    tooltip.innerHTML=`<strong style="color:#e2e8f0">${d.team_for}</strong><br>${d.event} (${d.strength||''})<br>Shooter: ${d.shooter||'—'}<br>Goalie: ${d.goalie||'—'}<br>xG: ${xgStr}<br>Period: ${d.period}`;
+                    tooltip.style.display='block';
+                    tooltip.style.left=(e.clientX+window.scrollX+12)+'px';
+                    tooltip.style.top=(e.clientY+window.scrollY+12)+'px';
+                } else { tooltip.style.display='none'; }
+            }
+            [canvasDef,canvasOff].forEach(c=>{
+                c.onmousemove=handleMove;
+                c.onmouseleave=()=>{ tooltip.style.display='none'; };
+            });
+            // Draw legend icons
+            document.querySelectorAll('#gr-legend canvas[data-icon]').forEach(c=>{
+                const lctx=c.getContext('2d'); lctx.clearRect(0,0,c.width,c.height);
+                drawShape(lctx, c.dataset.icon, 7, 7, '#ffffff');
+            });
         }
 
         function formatGameSummary(data) {
@@ -1770,6 +1935,7 @@
             // Only override the specified events; leave others as-is
             if (k === 'goal') return 'Goal';
             if (k === 'shot') return 'Shot';
+            if (k === 'miss') return 'Miss';
             if (k === 'penalty') return 'Penalty';
             if (k === 'blocked-shot' || k === 'blocked_shot' || k === 'block') return 'Block';
             // Keep shootout labels and other events unchanged

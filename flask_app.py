@@ -9,6 +9,13 @@ import csv
 import os
 from typing import Dict, Any, List
 
+# Load .env early so Supabase credentials are available to report_data etc.
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
 try:
     import stripe  # type: ignore
 except Exception:
@@ -19,7 +26,7 @@ CORS(app)
 
 
 def _team_logo_url(team_name: str) -> str:
-    """Resolve a team's logo URL from Teams.csv-loaded metadata.
+    """Resolve a team's logo URL from loaded team metadata.
 
     Supports both full team names (e.g., 'Boston Fleet') and common
     city-name aliases (e.g., 'Boston') via data_api.city_to_full_name.
@@ -160,85 +167,150 @@ def _allow_wp_embed(resp: Response):
     return resp
 
 class PWHLDataAPI:
+    # Hardcoded fallback season data (used when API is unreachable)
+    _FALLBACK_SEASON_INFO = {
+        1: {"year": "2023/2024", "state": "Regular Season"},
+        2: {"year": "2023/2024", "state": "Preseason"},
+        3: {"year": "2023/2024", "state": "Playoffs"},
+        4: {"year": "2024/2025", "state": "Preseason"},
+        5: {"year": "2024/2025", "state": "Regular Season"},
+        6: {"year": "2024/2025", "state": "Playoffs"},
+        7: {"year": "2025/2026", "state": "Preseason"},
+        8: {"year": "2025/2026", "state": "Regular Season"},
+    }
+
     def __init__(self):
         self.api_base_url = "https://lscluster.hockeytech.com/feed/index.php"
         self.api_key = "446521baf8c38984"
         self.client_code = "pwhl"
-        
-        # Season mapping - organized by year and type
-        self.season_mapping = {
-            "2023/2024": {
-                "Regular Season": 1,
-                "Playoffs": 3
-            },
-            "2024/2025": {
-                "Regular Season": 5,
-                "Playoffs": 6
-            },
-            "2025/2026": {
-                "Regular Season": 8
-            }
-        }
-        
-        # All available seasons for API calls
-        self.all_seasons = [1, 3, 5, 6, 8]  # Include new 2025/2026 Regular Season (8)
-        
-        # Season years
-        self.season_years = ["2023/2024", "2024/2025", "2025/2026"]
+
+        # Build season info from live API, falling back to hardcoded data
+        self.season_info = self._fetch_season_info()
+
+        # Derive convenience structures from season_info
+        self.all_seasons = sorted(
+            sid for sid, info in self.season_info.items()
+            if info["state"] in ("Regular Season", "Playoffs")
+        )
+        self.season_mapping = {}          # {"2023/2024": {"Regular Season": 1, ...}}
+        self.season_years = []
+        for sid, info in sorted(self.season_info.items()):
+            yr, st = info["year"], info["state"]
+            if st in ("Regular Season", "Playoffs"):
+                self.season_mapping.setdefault(yr, {})[st] = sid
+        self.season_years = sorted(self.season_mapping.keys())
         self.season_states = ["Regular Season", "Playoffs"]
-        
+
         # Load team data
         self.teams = self.load_team_data()
+
+    # ------------------------------------------------------------------
+    def _fetch_season_info(self) -> dict:
+        """Fetch season metadata from the HockeyTech modulekit/seasons
+        endpoint and return a dict  {season_id: {"year": "YYYY/YYYY", "state": "..."}}
+        Falls back to _FALLBACK_SEASON_INFO on failure."""
+        try:
+            resp = requests.get(self.api_base_url, params={
+                "feed": "modulekit",
+                "view": "seasons",
+                "key": self.api_key,
+                "client_code": self.client_code,
+                "site_id": 0,
+                "lang": "en",
+            }, timeout=10)
+            resp.raise_for_status()
+            raw = resp.text.strip()
+            if raw.startswith("(") and raw.endswith(")"):
+                raw = raw[1:-1]
+            data = json.loads(raw)
+            seasons_list = data.get("SiteKit", {}).get("Seasons", [])
+            if not seasons_list:
+                raise ValueError("Empty seasons list")
+
+            info = {}
+            for s in seasons_list:
+                sid = int(s["season_id"])
+                name = s.get("season_name", "")
+                is_playoff = str(s.get("playoff", "0")) == "1"
+                is_pre = "pre" in name.lower()
+                if is_pre:
+                    state = "Preseason"
+                elif is_playoff:
+                    state = "Playoffs"
+                else:
+                    state = "Regular Season"
+
+                # Derive year span from season_name, e.g. "2025-26 Regular Season"
+                year = self._parse_year_from_name(name)
+                info[sid] = {"year": year, "state": state}
+
+            print(f"Loaded {len(info)} seasons from API: { {k: v for k, v in sorted(info.items())} }")
+            return info
+        except Exception as e:
+            print(f"Warning: could not fetch seasons from API ({e}); using fallback")
+            return dict(self._FALLBACK_SEASON_INFO)
+
+    @staticmethod
+    def _parse_year_from_name(name: str) -> str:
+        """Turn a season name like '2025-26 Regular Season' into '2025/2026'."""
+        import re
+        m = re.search(r"(\d{4})-(\d{2})", name)
+        if m:
+            start = int(m.group(1))
+            end_short = int(m.group(2))
+            end_full = start // 100 * 100 + end_short
+            return f"{start}/{end_full}"
+        # Try "YYYY" standalone
+        m = re.search(r"(\d{4})", name)
+        if m:
+            yr = int(m.group(1))
+            return f"{yr-1}/{yr}"
+        return "Unknown"
     
     def load_team_data(self):
-        """Load team data from Teams.csv"""
+        """Load team data from Supabase pwhl_teams table."""
         teams = {}
         city_to_full_name = {}
-        csv_path = os.path.join(os.path.dirname(__file__), 'Teams.csv')
         
         try:
-            with open(csv_path, 'r', encoding='utf-8') as file:
-                reader = csv.DictReader(file)
-                for row in reader:
-                    if not row or 'name' not in row:
-                        continue
-                    
-                    team_data = {
-                        'id': row.get('id', ''),
-                        'name': row.get('name', ''),
-                        'nickname': row.get('nickname', ''),
-                        'team_code': row.get('team_code', ''),
-                        'logo': row.get('logo', ''),
-                        'color': row.get('color', '')
-                    }
-                    
-                    # Use full team name as key for easy lookup
-                    teams[row['name']] = team_data
-                    
-                    # Create city to full name mapping
-                    # Handle special cases like "New York" and Montreal variations
-                    if row['name'].startswith('New York'):
-                        city_name = 'New York'
-                    elif row['name'].startswith('Montréal'):
-                        # Handle both Montreal and Montréal variations
-                        city_to_full_name['Montreal'] = row['name']
-                        city_to_full_name['Montréal'] = row['name']
-                        city_name = 'Montréal'
+            from supabase_utils import fetch_teams
+            rows = fetch_teams()
+            for row in rows:
+                name = (row.get('name') or '').strip()
+                if not name:
+                    continue
+                
+                team_data = {
+                    'id': str(row.get('id', '')),
+                    'name': name,
+                    'nickname': row.get('nickname', ''),
+                    'team_code': row.get('team_code', ''),
+                    'logo': row.get('logo', ''),
+                    'color': row.get('color', '')
+                }
+                
+                teams[name] = team_data
+                
+                # Create city to full name mapping
+                if name.startswith('New York'):
+                    city_name = 'New York'
+                elif name.startswith('Montréal'):
+                    city_to_full_name['Montreal'] = name
+                    city_to_full_name['Montréal'] = name
+                    city_name = 'Montréal'
+                else:
+                    parts = name.split(' ')
+                    if parts[0] == 'PWHL' and len(parts) > 1:
+                        city_name = parts[1]
                     else:
-                        # Extract city (first or second word for 'PWHL City' style names)
-                        parts = row['name'].split(' ')
-                        if parts[0] == 'PWHL' and len(parts) > 1:
-                            city_name = parts[1]  # e.g., 'Seattle' from 'PWHL Seattle'
-                        else:
-                            city_name = parts[0]
-                    city_to_full_name[city_name] = row['name']
+                        city_name = parts[0]
+                city_to_full_name[city_name] = name
                     
-            print(f"Loaded {len(teams)} teams: {list(teams.keys())}")
+            print(f"Loaded {len(teams)} teams from Supabase: {list(teams.keys())}")
             print(f"City mapping: {city_to_full_name}")
         except Exception as e:
             print(f"Error loading team data: {e}")
             
-        # Store the city mapping for later use
         self.city_to_full_name = city_to_full_name
         return teams
     
@@ -293,23 +365,10 @@ class PWHLDataAPI:
         for game in games_data:
             row = game.get('row', {})
             
-            # Determine season state and year based on season ID
-            # Determine season state and year based on season ID
-            if season in [1, 5, 8]:
-                season_state = "Regular Season"
-            elif season in [3, 6]:
-                season_state = "Playoffs"
-            else:
-                season_state = "Regular Season"
-
-            if season in [1, 3]:
-                season_year = "2023/2024"
-            elif season in [5, 6]:
-                season_year = "2024/2025"
-            elif season in [8]:
-                season_year = "2025/2026"
-            else:
-                season_year = "Unknown"
+            # Look up season info from the dynamic mapping
+            s_info = self.season_info.get(season, {})
+            season_state = s_info.get("state", "Regular Season")
+            season_year = s_info.get("year", "Unknown")
             
             # Parse date with better year detection
             date_str = row.get('date_with_day', '')
@@ -355,7 +414,7 @@ class PWHLDataAPI:
             if home_team_full_name in self.teams:
                 home_team_logo = self.teams[home_team_full_name]['logo']
             
-            # Resolve team IDs: prefer API fields; fallback to lookup by full team name from loaded Teams.csv
+            # Resolve team IDs: prefer API fields; fallback to lookup by full team name from Supabase teams
             away_team_id_val = row.get('visiting_team_id', '')
             home_team_id_val = row.get('home_team_id', '')
             if not away_team_id_val and away_team_full_name in self.teams:
@@ -591,7 +650,7 @@ def report_page():
 
 @app.route('/data')
 def data_page():
-    """Data export page: filter and export Play-by-Play from CSVs."""
+    """Data export page: filter and download Play-by-Play data."""
     return render_template('data.html')
 
 @app.route('/skaters')
@@ -1282,11 +1341,13 @@ def report_games():
 
 @app.route('/Teams.csv')
 def teams_csv_raw():
-    """Serve root Teams.csv so front-end color lookup succeeds (was 404)."""
-    root_csv = os.path.join(app.root_path, 'Teams.csv')
-    if os.path.exists(root_csv):
-        return send_from_directory(app.root_path, 'Teams.csv', mimetype='text/csv')
-    return jsonify({'error':'Teams.csv not found'}), 404
+    """Legacy endpoint — redirect to /api/teams JSON."""
+    return jsonify(list(data_api.teams.values()))
+
+@app.route('/api/teams')
+def api_teams():
+    """Return team metadata as JSON (replaces old Teams.csv serving)."""
+    return jsonify(list(data_api.teams.values()))
 
 @app.route('/health')
 def health():
@@ -1312,7 +1373,7 @@ def report_teams():
     """Return the list of distinct teams present in the loaded report store."""
     report_store.load()
     teams = sorted({r['team_for'] for r in report_store.rows if r.get('team_for')})
-    # Bootstrap: if no rows yet (e.g., Data not bundled on first deploy), fall back to Teams.csv list
+    # Bootstrap: if no rows yet (e.g., Supabase empty on first deploy), fall back to Supabase teams list
     if not teams and hasattr(data_api, 'teams') and data_api.teams:
         teams = sorted(data_api.teams.keys())
     return jsonify({'teams': teams})
@@ -1332,68 +1393,11 @@ def report_strengths():
 @app.route('/api/skaters/filters')
 def skaters_filters():
     """Return players list and common filters for Skaters page."""
-    import os
-    import csv
-
-    def _lineup_players_cached() -> list[str]:
-        """Return sorted unique player names from Data/Lineups CSVs.
-
-        Player slicer should be limited to players present in lineup exports.
-        """
-        # Cache lives on the function object to avoid module-level globals.
-        cache = getattr(_lineup_players_cached, '_cache', None)
-        sig = getattr(_lineup_players_cached, '_sig', None)
-
-        lineups_dir = os.path.join(os.path.dirname(__file__), 'Data', 'Lineups')
-        if not os.path.isdir(lineups_dir):
-            return []
-
-        # Build a cheap directory signature (count + max mtime) so we only re-scan
-        # when files change.
-        count = 0
-        max_mtime = 0.0
-        try:
-            for ent in os.scandir(lineups_dir):
-                if not ent.is_file() or not ent.name.endswith('.csv'):
-                    continue
-                count += 1
-                try:
-                    max_mtime = max(max_mtime, ent.stat().st_mtime)
-                except Exception:
-                    pass
-        except Exception:
-            return []
-
-        cur_sig = (count, int(max_mtime))
-        if cache is not None and sig == cur_sig:
-            return cache
-
-        players_set: set[str] = set()
-        for ent in os.scandir(lineups_dir):
-            if not ent.is_file() or not ent.name.endswith('.csv'):
-                continue
-            try:
-                with open(ent.path, 'r', encoding='utf-8') as f:
-                    reader = csv.DictReader(f)
-                    for row in reader:
-                        line_pos = (row.get('Line') or row.get('Position') or row.get('Pos') or '').strip().upper()
-                        # Goalies appear in lineup exports with Line=G.
-                        if line_pos == 'G' or line_pos == 'GOALIE':
-                            continue
-                        name = (row.get('Name') or row.get('player') or '').strip()
-                        if name:
-                            players_set.add(name)
-            except Exception:
-                continue
-
-        players = sorted(players_set, key=str)
-        setattr(_lineup_players_cached, '_cache', players)
-        setattr(_lineup_players_cached, '_sig', cur_sig)
-        return players
+    from supabase_utils import fetch_all_skater_names
 
     report_store.load()
     rows = report_store.rows
-    players = _lineup_players_cached()
+    players = fetch_all_skater_names()
     seasons = sorted({str(r.get('season')) for r in rows if r.get('season')}, key=str)
     season_states = sorted({str(r.get('state')) for r in rows if r.get('state')}, key=str)
     strengths = sorted({str(r.get('strength')) for r in rows if r.get('strength')}, key=str)
@@ -1404,61 +1408,11 @@ def skaters_filters():
 @app.route('/api/goalies/filters')
 def goalies_filters():
     """Return goalies list and common filters for Goalies page."""
-    import os
-    import csv
-
-    def _lineup_goalies_cached() -> list[str]:
-        """Return sorted unique goalie names from Data/Lineups CSVs."""
-        cache = getattr(_lineup_goalies_cached, '_cache', None)
-        sig = getattr(_lineup_goalies_cached, '_sig', None)
-
-        lineups_dir = os.path.join(os.path.dirname(__file__), 'Data', 'Lineups')
-        if not os.path.isdir(lineups_dir):
-            return []
-
-        count = 0
-        max_mtime = 0.0
-        try:
-            for ent in os.scandir(lineups_dir):
-                if not ent.is_file() or not ent.name.endswith('.csv'):
-                    continue
-                count += 1
-                try:
-                    max_mtime = max(max_mtime, ent.stat().st_mtime)
-                except Exception:
-                    pass
-        except Exception:
-            return []
-
-        cur_sig = (count, int(max_mtime))
-        if cache is not None and sig == cur_sig:
-            return cache
-
-        goalies_set: set[str] = set()
-        for ent in os.scandir(lineups_dir):
-            if not ent.is_file() or not ent.name.endswith('.csv'):
-                continue
-            try:
-                with open(ent.path, 'r', encoding='utf-8') as f:
-                    reader = csv.DictReader(f)
-                    for row in reader:
-                        line_pos = (row.get('Line') or row.get('Position') or row.get('Pos') or '').strip().upper()
-                        if line_pos != 'G' and line_pos != 'GOALIE':
-                            continue
-                        name = (row.get('Name') or row.get('player') or '').strip()
-                        if name:
-                            goalies_set.add(name)
-            except Exception:
-                continue
-
-        goalies = sorted(goalies_set, key=str)
-        setattr(_lineup_goalies_cached, '_cache', goalies)
-        setattr(_lineup_goalies_cached, '_sig', cur_sig)
-        return goalies
+    from supabase_utils import fetch_all_goalie_names
 
     report_store.load()
     rows = report_store.rows
-    goalies = _lineup_goalies_cached()
+    goalies = fetch_all_goalie_names()
     seasons = sorted({str(r.get('season')) for r in rows if r.get('season')}, key=str)
     season_states = sorted({str(r.get('state')) for r in rows if r.get('state')}, key=str)
     strengths = sorted({str(r.get('strength')) for r in rows if r.get('strength')}, key=str)
@@ -1545,17 +1499,8 @@ def goalies_stats():
         )
     if latest_gid:
         try:
-            import os
-            import csv
-            lineups_dir = os.path.join(os.path.dirname(__file__), 'Data', 'Lineups')
-            lineup_file = os.path.join(lineups_dir, f"{latest_gid}_teams.csv")
-            if os.path.exists(lineup_file):
-                with open(lineup_file, 'r', encoding='utf-8') as f:
-                    reader = csv.DictReader(f)
-                    for row in reader:
-                        if (row.get('Name') or '').strip() == goalie:
-                            team = (row.get('Team') or '').strip()
-                            break
+            from supabase_utils import fetch_player_team
+            team = fetch_player_team(goalie, int(latest_gid))
         except Exception:
             pass
 
@@ -1868,7 +1813,7 @@ def skaters_stats():
     points = goals + a1 + a2
     sh_pct = round((goals / shots * 100.0) if shots > 0 else 0.0, 1)
 
-    # PIM: minutes are not present in our exported PBP CSV right now.
+    # PIM: minutes are not present in our Supabase PBP data right now.
     # We approximate using 2 minutes per penalty taken.
     penalties_taken = sum(1 for r in rows if r.get('event') == 'Penalty' and r.get('shooter') == player)
     pim = penalties_taken * 2
@@ -1884,15 +1829,8 @@ def skaters_stats():
     if latest_gid:
         # Prefer lineup-derived team for that game
         try:
-            lineups_dir = os.path.join(os.path.dirname(__file__), 'Data', 'Lineups')
-            lineup_file = os.path.join(lineups_dir, f"{latest_gid}_teams.csv")
-            if os.path.exists(lineup_file):
-                with open(lineup_file, 'r', encoding='utf-8') as f:
-                    reader = csv.DictReader(f)
-                    for row in reader:
-                        if (row.get('Name') or '').strip() == player:
-                            team = (row.get('Team') or '').strip()
-                            break
+            from supabase_utils import fetch_player_team
+            team = fetch_player_team(player, int(latest_gid))
         except Exception:
             pass
         # Fallback: infer from shot rows in that specific game
@@ -2565,7 +2503,7 @@ def export_lineups_csv(game_id: int):
         summary_data = data_api.fetch_game_summary(game_id)
         if not isinstance(summary_data, dict):
             return jsonify({'error':'Summary unavailable'}), 404
-        # Build team color mapping from Teams.csv already loaded in data_api
+        # Build team color mapping from loaded team metadata
         team_color_by_name = { name: (t.get('color') or '') for name, t in data_api.teams.items() }
         team_color_by_id = { str(t.get('id') or ''): (t.get('color') or '') for t in data_api.teams.values() }
         csv_text = generate_lineups_csv(game_info, summary_data, team_color_by_name, team_color_by_id)
@@ -2588,7 +2526,7 @@ def export_pbp_csv(game_id: int):
             return jsonify({'error':'Play-by-play unavailable'}), 404
         # Also fetch summary for lineup-based shootout inference
         summary_data = data_api.fetch_game_summary(game_id)
-        # Build team code/name maps from Teams.csv to assist mapping when numeric ids are missing
+        # Build team code/name maps to assist mapping when numeric ids are missing
         code_to_name = { (t.get('team_code') or ''): name for name, t in data_api.teams.items() if t.get('team_code') }
         name_to_code = { name: (t.get('team_code') or '') for name, t in data_api.teams.items() if t.get('team_code') }
         teams_meta = { 'code_to_name': code_to_name, 'name_to_code': name_to_code }

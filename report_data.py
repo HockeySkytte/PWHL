@@ -1,14 +1,36 @@
 import os
-import csv
 from typing import Dict, List, Any, Optional, Tuple
 from datetime import datetime
 
-DATA_SHOTS_DIR = os.path.join(os.path.dirname(__file__), 'Data', 'Play-by-Play')
+# Supabase client singleton
+_supabase_client = None
+
+
+def _get_supabase():
+    """Return a Supabase client.  Raises RuntimeError if not configured."""
+    global _supabase_client
+    if _supabase_client is not None:
+        return _supabase_client
+    try:
+        from dotenv import load_dotenv
+        load_dotenv()
+    except ImportError:
+        pass
+    url = os.environ.get("SUPABASE_URL")
+    key = os.environ.get("SUPABASE_KEY")
+    if not url or not key:
+        raise RuntimeError(
+            "SUPABASE_URL and SUPABASE_KEY must be set. "
+            "See .env.example for details."
+        )
+    from supabase import create_client
+    _supabase_client = create_client(url, key)
+    return _supabase_client
 
 class ReportDataStore:
     """In-memory aggregation for Report page metrics.
 
-    Loads per-game *_shots.csv files (which include all PBP events we need) and derives:
+    Loads PBP data from Supabase (pwhl_pbp / pwhl_lineups) and derives:
       - Per attempt classification (Corsi/Fenwick/Shot/Goal)
       - Team for/against tallies by game
       - Strength filtering (exact string match for now)
@@ -18,45 +40,38 @@ class ReportDataStore:
         self.rows: List[Dict[str, Any]] = []   # Raw normalized attempts/events subset
         self.game_team_stats: Dict[Tuple[str,str], Dict[str, float]] = {}  # (game_id, team) -> metrics
         self.game_meta: Dict[str, Dict[str, Any]] = {}  # game_id -> {date, season, state}
-        # TOI cache from lineup CSVs: (game_id, player_name) -> seconds
+        # TOI cache from Supabase lineups: (game_id, player_name) -> seconds
         self.toi_lookup: Dict[Tuple[str,str], int] = {}
         self._lineups_loaded: set[str] = set()
+        # Lineup detail cache: (game_id, player_name) -> {team, venue, position}
+        self._lineup_detail: Dict[Tuple[str,str], Dict[str,str]] = {}
+        self._data_source: str = "supabase"
 
     def _load_lineups_for_game(self, game_id: str):
-        """Lazy-load specific lineup CSV for a game id; avoid re-scanning directory each call."""
+        """Lazy-load lineups for a game from Supabase."""
         if not game_id or game_id in self._lineups_loaded:
             return
-        lineups_dir = os.path.join(os.path.dirname(__file__), 'Data', 'Lineups')
-        if not os.path.isdir(lineups_dir):
-            self._lineups_loaded.add(game_id)
-            return
-        # Likely filenames
-        candidates = [f"{game_id}_teams.csv", f"{game_id}_lineups.csv", f"{game_id}.csv"]
-        matched_files = [c for c in candidates if os.path.isfile(os.path.join(lineups_dir, c))]
-        # Fallback: scan once if none of the candidates exist
-        if not matched_files:
-            for fname in os.listdir(lineups_dir):
-                if fname.endswith('.csv') and str(game_id) in fname:
-                    matched_files.append(fname)
-        for fname in matched_files:
-            fpath = os.path.join(lineups_dir, fname)
-            try:
-                with open(fpath, 'r', encoding='utf-8') as f:
-                    reader = csv.DictReader(f)
-                    for row in reader:
-                        gid = str(row.get('Game ID') or row.get('game_id') or row.get('gameId') or '')
-                        if gid != str(game_id):
-                            continue
-                        name = (row.get('Name') or row.get('player') or '').strip()
-                        if not name:
-                            continue
-                        try:
-                            toi = int(row.get('TOI') or 0)
-                        except Exception:
-                            toi = 0
-                        self.toi_lookup[(gid, name)] = toi
-            except Exception:
-                continue
+        sb = _get_supabase()
+        try:
+            resp = (
+                sb.table("pwhl_lineups")
+                .select("game_id,name,toi,team,venue,position")
+                .eq("game_id", int(game_id))
+                .execute()
+            )
+            for row in resp.data or []:
+                name = (row.get("name") or "").strip()
+                if not name:
+                    continue
+                toi = int(row.get("toi") or 0)
+                self.toi_lookup[(str(game_id), name)] = toi
+                self._lineup_detail[(str(game_id), name)] = {
+                    "team": (row.get("team") or "").strip(),
+                    "venue": (row.get("venue") or "").strip(),
+                    "position": (row.get("position") or "").strip(),
+                }
+        except Exception:
+            pass
         self._lineups_loaded.add(game_id)
 
     def load(self, force: bool = False):
@@ -67,146 +82,209 @@ class ReportDataStore:
         self.game_meta.clear()
         # Store video-capable events separately (populated below)
         self.video_events: List[Dict[str, Any]] = []
-        if not os.path.isdir(DATA_SHOTS_DIR):
-            self.loaded = True
-            return
-        for fname in os.listdir(DATA_SHOTS_DIR):
-            if not fname.endswith('_shots.csv'):
+
+        raw_rows = self._fetch_pbp_rows_supabase()
+        self._data_source = "supabase"
+        self._process_pbp_rows(raw_rows)
+
+        # Aggregate per game/team + orientation normalization
+        self._aggregate_and_normalize()
+        self.loaded = True
+
+    def _fetch_pbp_rows_supabase(self) -> List[Dict[str, str]]:
+        """Fetch all PBP rows from Supabase, returning internal-format dicts."""
+        sb = _get_supabase()
+        # Supabase client paginates at 1000 rows; we need all rows.
+        all_rows: List[Dict[str, Any]] = []
+        page_size = 1000
+        offset = 0
+        while True:
+            resp = (
+                sb.table("pwhl_pbp")
+                .select("*")
+                .range(offset, offset + page_size - 1)
+                .execute()
+            )
+            batch = resp.data or []
+            if not batch:
+                break
+            all_rows.extend(batch)
+            if len(batch) < page_size:
+                break
+            offset += page_size
+
+        # Map Supabase column names to the internal keys used by _process_pbp_rows
+        mapped: List[Dict[str, str]] = []
+        for r in all_rows:
+            mapped.append({
+                "game_id": str(r.get("game_id") or ""),
+                "id": str(r.get("event_id") or ""),
+                "game_date": str(r.get("game_date") or ""),
+                "timestamp": str(r.get("timestamp") or ""),
+                "event": str(r.get("event") or ""),
+                "team": str(r.get("team") or ""),
+                "venue": str(r.get("venue") or ""),
+                "team_home": str(r.get("team_home") or ""),
+                "team_away": str(r.get("team_away") or ""),
+                "period": str(r.get("period") or ""),
+                "perspective": str(r.get("perspective") or ""),
+                "strength": str(r.get("strength") or ""),
+                "p1_no": str(r.get("p1_no") or ""),
+                "p1_name": str(r.get("p1_name") or ""),
+                "p2_no": str(r.get("p2_no") or ""),
+                "p2_name": str(r.get("p2_name") or ""),
+                "p3_no": str(r.get("p3_no") or ""),
+                "p3_name": str(r.get("p3_name") or ""),
+                "g_no": str(r.get("g_no") or ""),
+                "goalie_name": str(r.get("goalie_name") or ""),
+                "home_players": str(r.get("home_players") or ""),
+                "home_players_names": str(r.get("home_players_names") or ""),
+                "away_players": str(r.get("away_players") or ""),
+                "away_players_names": str(r.get("away_players_names") or ""),
+                "x": str(r.get("x")) if r.get("x") is not None else "",
+                "y": str(r.get("y")) if r.get("y") is not None else "",
+                "xG": str(r.get("xg")) if r.get("xg") is not None else "",
+                "ScoreState": str(r.get("score_state") or ""),
+                "BoxID": str(r.get("box_id") or ""),
+                "competition": str(r.get("competition") or ""),
+                "season": str(r.get("season") or ""),
+                "state": str(r.get("state") or ""),
+            })
+        return mapped
+
+    def _process_pbp_rows(self, raw_rows: List[Dict[str, str]]):
+        """Process raw PBP row dicts into self.rows / self.game_meta / self.video_events."""
+        for row in raw_rows:
+            # Store basic meta once (augment with home/away if available)
+            gid = str(row.get('game_id') or '')
+            if gid and gid not in self.game_meta:
+                self.game_meta[gid] = {
+                    'date': row.get('game_date') or '',
+                    'season': row.get('season') or '',
+                    'state': row.get('state') or '',
+                    'home_team': row.get('team_home') or '',
+                    'away_team': row.get('team_away') or ''
+                }
+            # Only process shot-attempt related events (Shot, Goal, Block, Miss) + Penalties (for filtering)
+            ev = (row.get('event') or '').strip()
+            # Include penalty for plotting (if coordinates exist later) & filtering, even if no coords
+            if ev not in ('Shot','Goal','Block','Miss','Penalty'):
                 continue
-            fpath = os.path.join(DATA_SHOTS_DIR, fname)
+            strength = row.get('strength') or ''
+            team = row.get('team') or ''
+            home = row.get('team_home') or ''
+            away = row.get('team_away') or ''
+            venue = row.get('venue') or ''
+            period = row.get('period') or ''
+            timestamp = row.get('timestamp') or ''
+            shooter = row.get('p1_name') or ''
+            assist1 = row.get('p2_name') or ''
+            assist2 = row.get('p3_name') or ''
+            goalie = row.get('goalie_name') or ''
+            score_state = row.get('ScoreState') or ''
+            # On-ice player names (home / away) come as hyphen-separated in export (see export_utils)
+            def parse_onice(txt: str) -> List[str]:
+                """Parse on-ice players string.
+                Export uses ' - ' (space-hyphen-space) as delimiter between players.
+                Player names can contain hyphens (e.g., 'Marie-Philip Poulin'), so we ONLY
+                split on the exact ' - ' sequence. If that sequence is absent, treat the
+                whole string as a single player name (after stripping)."""
+                if not txt:
+                    return []
+                if ' - ' in txt:
+                    return [p.strip() for p in txt.split(' - ') if p.strip()]
+                return [txt.strip()]
+            home_on = parse_onice(row.get('home_players_names') or '')
+            away_on = parse_onice(row.get('away_players_names') or '')
+            on_ice_all = sorted({*home_on, *away_on})
+            # Coordinates
             try:
-                with open(fpath, 'r', encoding='utf-8') as f:
-                    reader = csv.DictReader(f)
-                    for row in reader:
-                        # Store basic meta once (augment with home/away if available in CSV export)
-                        gid = str(row.get('game_id') or '')
-                        if gid and gid not in self.game_meta:
-                            self.game_meta[gid] = {
-                                'date': row.get('game_date') or '',
-                                'season': row.get('season') or '',
-                                'state': row.get('state') or '',
-                                'home_team': row.get('team_home') or '',
-                                'away_team': row.get('team_away') or ''
-                            }
-                        # Only process shot-attempt related events (Shot, Goal, Block, Miss) + Penalties (for filtering)
-                        ev = (row.get('event') or '').strip()
-                        # Include penalty for plotting (if coordinates exist later) & filtering, even if no coords
-                        if ev not in ('Shot','Goal','Block','Miss','Penalty'):
-                            continue
-                        strength = row.get('strength') or ''
-                        team = row.get('team') or ''
-                        home = row.get('team_home') or ''
-                        away = row.get('team_away') or ''
-                        venue = row.get('venue') or ''
-                        period = row.get('period') or ''
-                        timestamp = row.get('timestamp') or ''
-                        shooter = row.get('p1_name') or ''
-                        assist1 = row.get('p2_name') or ''
-                        assist2 = row.get('p3_name') or ''
-                        goalie = row.get('goalie_name') or ''
-                        score_state = row.get('ScoreState') or ''
-                        # On-ice player names (home / away) come as hyphen-separated in export (see export_utils)
-                        def parse_onice(txt: str) -> List[str]:
-                            """Parse on-ice players string.
-                            Export uses ' - ' (space-hyphen-space) as delimiter between players.
-                            Player names can contain hyphens (e.g., 'Marie-Philip Poulin'), so we ONLY
-                            split on the exact ' - ' sequence. If that sequence is absent, treat the
-                            whole string as a single player name (after stripping)."""
-                            if not txt:
-                                return []
-                            if ' - ' in txt:
-                                return [p.strip() for p in txt.split(' - ') if p.strip()]
-                            return [txt.strip()]
-                        home_on = parse_onice(row.get('home_players_names') or '')
-                        away_on = parse_onice(row.get('away_players_names') or '')
-                        on_ice_all = sorted({*home_on, *away_on})
-                        # Coordinates
-                        try:
-                            x = float(row.get('x') or '')
-                        except Exception:
-                            x = None
-                        try:
-                            y = float(row.get('y') or '')
-                        except Exception:
-                            y = None
-                        # Determine shooting team for Corsi logic:
-                        # For Block rows we now record the SHOOTING team (export logic adjusted) so we can treat uniformly.
-                        shooting_team = team
-                        # Attempt flags
-                        is_goal = (ev == 'Goal')
-                        is_shot = ev in ('Shot','Goal')
-                        is_block = (ev == 'Block')
-                        is_miss = (ev == 'Miss')
-                        is_corsi = ev in ('Shot','Goal','Miss','Block')
-                        is_fenwick = ev in ('Shot','Goal','Miss')  # Unblocked attempts
-                        # Build row
-                        rec = {
-                            'game_id': gid,
-                            'date': self.game_meta[gid]['date'] if gid else '',
-                            'season': self.game_meta[gid]['season'] if gid else '',
-                            'state': self.game_meta[gid]['state'] if gid else '',
-                            'timestamp': timestamp,
-                            'score_state': score_state,
-                            'team_for': shooting_team,
-                            'team_against': away if shooting_team == home else home if shooting_team == away else '',
-                            'strength': strength,
-                            'event': ev,
-                            'period': period,
-                            'x': x,
-                            'y': y,
-                            'shooter': shooter,
-                            'assist1': assist1,
-                            'assist2': assist2,
-                            'goalie': goalie,
-                            'is_goal': is_goal,
-                            'is_shot': is_shot,
-                            'is_block': is_block,
-                            'is_miss': is_miss,
-                            'is_corsi': is_corsi,
-                            'is_fenwick': is_fenwick,
-                            'on_ice_home': home_on,
-                            'on_ice_away': away_on,
-                            'on_ice_all': on_ice_all,
-                        }
-                        # Expected goals from CSV (string to float if present)
-                        xg_raw = row.get('xG')
-                        if xg_raw not in (None, ''):
-                            try:
-                                rec['xG'] = float(xg_raw)
-                            except Exception:
-                                rec['xG'] = None
-                        else:
-                            rec['xG'] = None
-                        # Always add video_url and video_time keys, even if missing in CSV
-                        rec['video_url'] = row.get('video_url') or row.get('Video URL') or ''
-                        rec['video_time'] = row.get('video_time') or row.get('Video Time') or ''
-                        self.rows.append(rec)
-                        # Capture video-tagged events (any non-empty URL). If time missing or invalid, default to 0.
-                        if rec['video_url'] and rec['event'] in ('Shot','Goal','Block','Miss','Penalty'):
-                            raw_vtime = rec.get('video_time')
-                            vtime: int = 0
-                            if raw_vtime not in (None, '', 'NaN'):
-                                try:
-                                    vtime = int(float(raw_vtime))
-                                except Exception:
-                                    vtime = 0
-                            self.video_events.append({
-                                'game_id': rec['game_id'],
-                                'season': rec['season'],
-                                'state': rec['state'],
-                                'team': rec['team_for'],
-                                'opponent': rec.get('team_against',''),
-                                'event': rec['event'],
-                                'player': rec['shooter'] or '',
-                                'video_url': rec['video_url'],
-                                'video_time': vtime,
-                                'period': rec.get('period',''),
-                                'strength': rec.get('strength',''),
-                                'date': rec.get('date',''),
-                                'has_explicit_time': bool(raw_vtime not in (None, '', 'NaN'))
-                            })
+                x = float(row.get('x') or '')
             except Exception:
-                continue
+                x = None
+            try:
+                y = float(row.get('y') or '')
+            except Exception:
+                y = None
+            # Determine shooting team for Corsi logic:
+            # For Block rows we now record the SHOOTING team (export logic adjusted) so we can treat uniformly.
+            shooting_team = team
+            # Attempt flags
+            is_goal = (ev == 'Goal')
+            is_shot = ev in ('Shot','Goal')
+            is_block = (ev == 'Block')
+            is_miss = (ev == 'Miss')
+            is_corsi = ev in ('Shot','Goal','Miss','Block')
+            is_fenwick = ev in ('Shot','Goal','Miss')  # Unblocked attempts
+            # Build row
+            rec = {
+                'game_id': gid,
+                'date': self.game_meta[gid]['date'] if gid else '',
+                'season': self.game_meta[gid]['season'] if gid else '',
+                'state': self.game_meta[gid]['state'] if gid else '',
+                'timestamp': timestamp,
+                'score_state': score_state,
+                'team_for': shooting_team,
+                'team_against': away if shooting_team == home else home if shooting_team == away else '',
+                'strength': strength,
+                'event': ev,
+                'period': period,
+                'x': x,
+                'y': y,
+                'shooter': shooter,
+                'assist1': assist1,
+                'assist2': assist2,
+                'goalie': goalie,
+                'is_goal': is_goal,
+                'is_shot': is_shot,
+                'is_block': is_block,
+                'is_miss': is_miss,
+                'is_corsi': is_corsi,
+                'is_fenwick': is_fenwick,
+                'on_ice_home': home_on,
+                'on_ice_away': away_on,
+                'on_ice_all': on_ice_all,
+            }
+            # Expected goals (string to float if present)
+            xg_raw = row.get('xG')
+            if xg_raw not in (None, ''):
+                try:
+                    rec['xG'] = float(xg_raw)
+                except Exception:
+                    rec['xG'] = None
+            else:
+                rec['xG'] = None
+            # Always add video_url and video_time keys, even if missing in source data
+            rec['video_url'] = row.get('video_url') or row.get('Video URL') or ''
+            rec['video_time'] = row.get('video_time') or row.get('Video Time') or ''
+            self.rows.append(rec)
+            # Capture video-tagged events (any non-empty URL). If time missing or invalid, default to 0.
+            if rec['video_url'] and rec['event'] in ('Shot','Goal','Block','Miss','Penalty'):
+                raw_vtime = rec.get('video_time')
+                vtime: int = 0
+                if raw_vtime not in (None, '', 'NaN'):
+                    try:
+                        vtime = int(float(raw_vtime))
+                    except Exception:
+                        vtime = 0
+                self.video_events.append({
+                    'game_id': rec['game_id'],
+                    'season': rec['season'],
+                    'state': rec['state'],
+                    'team': rec['team_for'],
+                    'opponent': rec.get('team_against',''),
+                    'event': rec['event'],
+                    'player': rec['shooter'] or '',
+                    'video_url': rec['video_url'],
+                    'video_time': vtime,
+                    'period': rec.get('period',''),
+                    'strength': rec.get('strength',''),
+                    'date': rec.get('date',''),
+                    'has_explicit_time': bool(raw_vtime not in (None, '', 'NaN'))
+                })
+
+    def _aggregate_and_normalize(self):
+        """Aggregate per-game/team stats and normalize shot orientation."""
         # Aggregate per game/team
         for r in self.rows:
             gid = r['game_id']
@@ -264,7 +342,6 @@ class ReportDataStore:
             sign = group_sign.get((r['game_id'], r['period'], r['team_for']), 1)
             r['adj_x'] = r['x'] * sign
             r['adj_y'] = r['y'] * sign
-        self.loaded = True
 
     def _blank_metrics(self) -> Dict[str, float]:
         return {k:0.0 for k in ('CF','CA','FF','FA','SF','SA','GF','GA')}
@@ -923,7 +1000,7 @@ class ReportDataStore:
 
         goal_keys=set()
         
-        # Pre-populate all players from lineup CSVs to ensure players with no shot events are included
+        # Pre-populate all players from Supabase lineups to ensure players with no shot events are included
         # For aggregated mode, we need to track which games each player participated in based on TOI
         if by_game or not by_game:
             # Get all unique game IDs from filtered rows
@@ -945,25 +1022,14 @@ class ReportDataStore:
                     if season_state_filter != 'All' and game_state != season_state_filter:
                         continue
                     
-                    # Need to determine the player's team from lineup CSV
-                    lineups_dir = os.path.join(os.path.dirname(DATA_SHOTS_DIR), 'Lineups')
-                    lineup_file = os.path.join(lineups_dir, f"{gid}_teams.csv")
-                    if os.path.exists(lineup_file):
-                        try:
-                            with open(lineup_file, 'r', encoding='utf-8') as f:
-                                reader = csv.DictReader(f)
-                                for row in reader:
-                                    if row.get('Name', '').strip() == player_name:
-                                        player_team = row.get('Team', '')
-                                        # Ensure player exists in stats_agg
-                                        p = ensure_player(player_name, player_team, None)
-                                        # Add this game to their GP
-                                        p['GP'].add(gid)
-                                        break
-                        except:
-                            pass
+                    # Determine the player's team from cached lineup detail
+                    detail = self._lineup_detail.get((gid, player_name))
+                    if detail:
+                        player_team = detail.get('team', '')
+                        p = ensure_player(player_name, player_team, None)
+                        p['GP'].add(gid)
         
-        # For by_game mode, pre-populate all players from lineup CSVs to ensure players with no shot events are included
+        # For by_game mode, pre-populate all players from Supabase lineups to ensure players with no shot events are included
         if by_game:
             # Get all unique game IDs from filtered rows
             game_ids = {r['game_id'] for r in rows}
@@ -984,36 +1050,26 @@ class ReportDataStore:
                     if player_name in goalie_names:
                         continue
                     
-                    # Determine team and venue from lineup data
-                    # We need to scan the lineup CSV again to get team/venue info
-                    lineups_dir = os.path.join(os.path.dirname(DATA_SHOTS_DIR), 'Lineups')
-                    lineup_file = os.path.join(lineups_dir, f"{gid}_teams.csv")
-                    if os.path.exists(lineup_file):
-                        try:
-                            with open(lineup_file, 'r', encoding='utf-8') as f:
-                                reader = csv.DictReader(f)
-                                for row in reader:
-                                    if row.get('Name', '').strip() == player_name:
-                                        player_team = row.get('Team', '')
-                                        venue_str = row.get('Venue', '')
-                                        
-                                        # Create player entry if not exists
-                                        p = ensure_player(player_name, player_team, gid)
-                                        if not p.get('date'):
-                                            p['date'] = date
-                                            p['Season'] = season
-                                            p['Season_State'] = state
-                                            p['Strength'] = strength_filter
-                                            p['venue'] = venue_str
-                                            
-                                            # Determine opponent
-                                            if player_team == home_team:
-                                                p['opponent'] = away_team
-                                            elif player_team == away_team:
-                                                p['opponent'] = home_team
-                                        break
-                        except Exception:
-                            pass
+                    # Determine team and venue from cached lineup detail
+                    detail = self._lineup_detail.get((gid, player_name))
+                    if detail:
+                        player_team = detail.get('team', '')
+                        venue_str = detail.get('venue', '')
+                        
+                        # Create player entry if not exists
+                        p = ensure_player(player_name, player_team, gid)
+                        if not p.get('date'):
+                            p['date'] = date
+                            p['Season'] = season
+                            p['Season_State'] = state
+                            p['Strength'] = strength_filter
+                            p['venue'] = venue_str
+                            
+                            # Determine opponent
+                            if player_team == home_team:
+                                p['opponent'] = away_team
+                            elif player_team == away_team:
+                                p['opponent'] = home_team
         
         for r in rows:
             shooter = r.get('shooter')
@@ -1238,7 +1294,7 @@ class ReportDataStore:
                     'xGA': 0.0,
                 })
 
-        # For by_game mode, pre-populate all goalies from lineup CSVs
+        # For by_game mode, pre-populate all goalies from Supabase lineup data
         if by_game:
             # Get all unique game IDs from filtered rows
             game_ids = {r['game_id'] for r in rows}
@@ -1252,37 +1308,27 @@ class ReportDataStore:
                 season = meta.get('season', '')
                 state = meta.get('state', '')
                 
-                # Pre-populate all goalies from this game's lineup
-                lineups_dir = os.path.join(os.path.dirname(DATA_SHOTS_DIR), 'Lineups')
-                lineup_file = os.path.join(lineups_dir, f"{gid}_teams.csv")
-                if os.path.exists(lineup_file):
-                    try:
-                        with open(lineup_file, 'r', encoding='utf-8') as f:
-                            reader = csv.DictReader(f)
-                            for row in reader:
-                                player_name = row.get('Name', '').strip()
-                                line = row.get('Line', '')
-                                # Check if this is a goalie (Line = 'G')
-                                if line == 'G' and player_name:
-                                    goalie_team = row.get('Team', '')
-                                    venue_str = row.get('Venue', '')
-                                    
-                                    # Create goalie entry if not exists
-                                    g = ensure_goalie(player_name, goalie_team, gid)
-                                    if not g.get('date'):
-                                        g['date'] = date
-                                        g['Season'] = season
-                                        g['Season_State'] = state
-                                        g['Strength'] = strength_filter
-                                        g['venue'] = venue_str
-                                        
-                                        # Determine opponent
-                                        if goalie_team == home_team:
-                                            g['opponent'] = away_team
-                                        elif goalie_team == away_team:
-                                            g['opponent'] = home_team
-                    except Exception:
-                        pass
+                # Pre-populate all goalies from this game's cached lineup detail
+                for (lineup_gid, player_name), detail in self._lineup_detail.items():
+                    if lineup_gid != gid:
+                        continue
+                    if detail.get('position', '') != 'G':
+                        continue
+                    goalie_team = detail.get('team', '')
+                    venue_str = detail.get('venue', '')
+                    
+                    g = ensure_goalie(player_name, goalie_team, gid)
+                    if not g.get('date'):
+                        g['date'] = date
+                        g['Season'] = season
+                        g['Season_State'] = state
+                        g['Strength'] = strength_filter
+                        g['venue'] = venue_str
+                        
+                        if goalie_team == home_team:
+                            g['opponent'] = away_team
+                        elif goalie_team == away_team:
+                            g['opponent'] = home_team
 
         for r in rows:
             g = r.get('goalie')
