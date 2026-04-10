@@ -251,31 +251,41 @@ def fetch_lineups_for_game(game_id: int) -> List[Dict[str, Any]]:
     return resp.data or []
 
 
+def _fetch_all_names(position_filter: str) -> List[str]:
+    """Paginate through pwhl_lineups to collect all unique names.
+
+    position_filter: 'neq.G' for skaters, 'eq.G' for goalies.
+    """
+    client = get_supabase_client()
+    page_size = 1000
+    offset = 0
+    names: set[str] = set()
+    while True:
+        q = client.table("pwhl_lineups").select("name")
+        if position_filter == "neq.G":
+            q = q.neq("position", "G")
+        else:
+            q = q.eq("position", "G")
+        resp = q.range(offset, offset + page_size - 1).execute()
+        batch = resp.data or []
+        for r in batch:
+            n = (r.get("name") or "").strip()
+            if n:
+                names.add(n)
+        if len(batch) < page_size:
+            break
+        offset += page_size
+    return sorted(names)
+
+
 def fetch_all_skater_names() -> List[str]:
     """Return sorted unique skater names (position != 'G') from pwhl_lineups."""
-    client = get_supabase_client()
-    # Fetch only the name column for non-goalie players
-    resp = (
-        client.table("pwhl_lineups")
-        .select("name")
-        .neq("position", "G")
-        .execute()
-    )
-    names = sorted({(r.get("name") or "").strip() for r in (resp.data or []) if (r.get("name") or "").strip()})
-    return names
+    return _fetch_all_names("neq.G")
 
 
 def fetch_all_goalie_names() -> List[str]:
     """Return sorted unique goalie names (position == 'G') from pwhl_lineups."""
-    client = get_supabase_client()
-    resp = (
-        client.table("pwhl_lineups")
-        .select("name")
-        .eq("position", "G")
-        .execute()
-    )
-    names = sorted({(r.get("name") or "").strip() for r in (resp.data or []) if (r.get("name") or "").strip()})
-    return names
+    return _fetch_all_names("eq.G")
 
 
 def fetch_player_team(player_name: str, game_id: Optional[int] = None) -> str:
