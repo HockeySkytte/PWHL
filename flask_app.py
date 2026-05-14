@@ -177,6 +177,7 @@ class PWHLDataAPI:
         6: {"year": "2024/2025", "state": "Playoffs"},
         7: {"year": "2025/2026", "state": "Preseason"},
         8: {"year": "2025/2026", "state": "Regular Season"},
+        9: {"year": "2025/2026", "state": "Playoffs"},
     }
 
     def __init__(self):
@@ -642,6 +643,10 @@ def report_video_events():
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/schedule')
+def schedule_page():
+    return render_template('schedule.html')
 
 @app.route('/report')
 def report_page():

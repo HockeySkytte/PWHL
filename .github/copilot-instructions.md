@@ -8,10 +8,9 @@ A Flask web app + data pipeline for Professional Women's Hockey League analytics
 
 - **`flask_app.py`** (~2700 lines) – The monolith. Contains `PWHLDataAPI` (HockeyTech client), all `/api/*` routes, template rendering, Stripe checkout, and the `data_api` singleton. Runs on `localhost:8501`.
 - **`export_utils.py`** – Pure-function CSV generators (`generate_lineups_csv`, `generate_pbp_csv`). Imported by both `flask_app.py` (live export endpoints) and `scripts/export_all_csvs.py` (bulk CLI). Changes here affect both paths.
-- **`report_data.py`** – `ReportDataStore` class that reads exported `Data/Play-by-Play/*_shots.csv` files into memory for the Report page aggregation API (`/api/report/*`).
-- **`scripts/export_all_csvs.py`** – CLI bulk exporter. Calls the local Flask API _or_ falls back to direct HockeyTech feed. Writes to `Data/Lineups/` and `Data/Play-by-Play/`.
+- **`report_data.py`** – `ReportDataStore` class that reads from Supabase for the Report page aggregation API (`/api/report/*`).
+- **`scripts/export_all_csvs.py`** – CLI bulk exporter. Calls the local Flask API _or_ falls back to direct HockeyTech feed, then upserts data to Supabase by default. CSV writing is optional.
 - **`build_xg_model.py`** – Trains an xG logistic regression from the exported PBP CSVs; outputs to `models/`.
-- **`app.py`** – Legacy Streamlit prototype (not deployed). The production app is `flask_app.py`.
 - **`templates/`** – Jinja2 HTML pages; heavy client-side JS in `templates/game.html` and `templates/report/`.
 
 ## Data flow
@@ -21,8 +20,7 @@ HockeyTech API ──► PWHLDataAPI (flask_app.py) ──► /api/* JSON endpoi
                                                       │
                         scripts/export_all_csvs.py ◄───┘
                                 │
-                    Data/Lineups/*_teams.csv
-                    Data/Play-by-Play/*_shots.csv
+                             Supabase
                                 │
                     report_data.py (ReportDataStore) ──► /api/report/* endpoints
                     build_xg_model.py ──► models/xg_model.json
@@ -31,7 +29,7 @@ HockeyTech API ──► PWHLDataAPI (flask_app.py) ──► /api/* JSON endpoi
 ## Key conventions
 
 - **HockeyTech API quirk**: Responses are JSONP — JSON wrapped in parentheses `(...)`. All fetch methods strip the wrapping before `json.loads()`.
-- **Season IDs**: `1`=2023/24 Regular, `3`=2023/24 Playoffs, `5`=2024/25 Regular, `6`=2024/25 Playoffs, `8`=2025/26 Regular. These are defined in `PWHLDataAPI.season_mapping` and `PWHLScraper.SEASONS`.
+- **Seasons**: Season metadata should come from the live `modulekit/seasons` endpoint. Only use hardcoded season IDs as an offline fallback.
 - **Team identity**: `Teams.csv` is the single source of truth for team names, IDs, colors, and logos. Team names must match this file exactly (watch for `Montréal` accented é). Use `city_to_full_name` mapping for city→full-name resolution.
 - **CSV column naming**: PBP exports use snake_case headers (`game_id`, `team_home`, `p1_name`, `xG`, `strength`). Lineup exports use Title Case (`Number`, `Name`, `Team`, `TOI`).
 - **Strength strings**: Formatted as `"XvY"` (e.g. `"5v5"`, `"5v4"`, `"4v5"`, `"ENA"` for empty-net). Generated in `generate_pbp_csv` via on-ice skater counting logic.
@@ -58,7 +56,7 @@ pytest
 
 - **`PWHL_BASE_URL`** env var overrides the default `http://localhost:8501` for export scripts and CI.
 - **`STRIPE_SECRET_KEY`** env var required for the `/coffee` payment page.
-- The GitHub Actions workflow (`.github/workflows/daily_export.yml`) runs hourly but gates to noon Europe/Copenhagen, exporting yesterday's games and auto-committing CSVs.
+- The GitHub Actions workflow (`.github/workflows/daily_export.yml`) runs hourly but gates to noon Europe/Copenhagen, exporting yesterday's games and upserting them to Supabase in `--no-csv` mode.
 
 ## Testing
 
@@ -68,7 +66,4 @@ pytest
 
 ## Pitfalls to avoid
 
-- Don't modify `app.py` thinking it's the production app — it's a legacy Streamlit file. The live app is `flask_app.py`.
 - `export_utils.py` is shared between the Flask server and the CLI exporter. Test both paths after changes.
-- The `PWHL-b9443c6e0ec91f0190fe26c9313dcda31ee7fbb5/` directory is an archived snapshot — ignore it.
-- `tmp_*.py` files are throwaway debug scripts from past investigations. Don't rely on or commit them.

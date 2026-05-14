@@ -9,6 +9,12 @@ from typing import Dict, Any, List, Tuple
 import requests
 import sys
 
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
 # Discover repo root (script is in scripts/) early so we can add path before imports
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if REPO_ROOT not in sys.path:
@@ -20,6 +26,9 @@ try:
     from supabase_utils import get_supabase_client, upsert_teams, upsert_game
     _HAS_SUPABASE = True
 except ImportError as _imp_err:
+    get_supabase_client = None
+    upsert_teams = None
+    upsert_game = None
     _HAS_SUPABASE = False
     print(f"Note: Supabase support disabled ({_imp_err}). Running in CSV-only mode.")
 
@@ -88,7 +97,12 @@ def _direct_data_api():
 
 def list_all_games_direct() -> List[Dict[str, Any]]:
     api = _direct_data_api()
-    seasons = [1, 3, 5, 6, 8]
+    seasons = list(getattr(api, "all_seasons", []) or [])
+    if not seasons:
+        seasons = sorted(
+            sid for sid, info in (getattr(api, "season_info", {}) or {}).items()
+            if info.get("state") in ("Regular Season", "Playoffs")
+        )
     games: List[Dict[str, Any]] = []
     for season in seasons:
         try:
@@ -404,6 +418,7 @@ def main():
     # Determine whether to upsert to Supabase
     use_supabase = _HAS_SUPABASE and not args.no_supabase and os.environ.get("SUPABASE_URL")
     if use_supabase:
+        assert get_supabase_client is not None and upsert_teams is not None
         try:
             get_supabase_client()
             print("Supabase connection OK — will upsert alongside CSV writes.")
@@ -514,6 +529,7 @@ def main():
 
         # Upsert to Supabase (non-fatal; failures don't block CSV output)
         if use_supabase and (lineups_csv_text or pbp_csv_text):
+            assert upsert_game is not None
             try:
                 counts = upsert_game(lineups_csv=lineups_csv_text, pbp_csv=pbp_csv_text)  # type: ignore[possibly-unbound]
                 sb_detail = ", ".join(f"{k}={v}" for k, v in counts.items())

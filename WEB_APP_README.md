@@ -1,15 +1,14 @@
 # 🏒 PWHL Analytics Web App
 
-A professional web application for analyzing Professional Women's Hockey League (PWHL) data, designed with the same sleek aesthetic as your Shot Plotter application.
+A Flask web app for analyzing Professional Women's Hockey League (PWHL) data, backed by HockeyTech feeds and Supabase.
 
 ## ✨ Features
 
 ### 🎯 **Current Functionality**
 - **Schedule Tab**: Complete game schedule with advanced filtering
 - **Real-time API Integration**: Direct data from PWHL API
-- **Professional Dark Theme**: Matches your Shot Plotter design
 - **Advanced Filtering**:
-  - Season selection (2023/24 & 2024/25, Regular Season & Playoffs)
+  - Season selection from live HockeyTech season metadata
   - Month filtering
   - Team filtering  
   - Game status filtering
@@ -43,12 +42,12 @@ python flask_app.py
 
 The app will be available at: **http://localhost:8501**
 
-## 🤖 Automated daily CSV updates (GitHub Actions)
+## 🤖 Automated daily data refresh (GitHub Actions)
 
 This repo includes a scheduled workflow at `.github/workflows/daily_export.yml` that:
 - Runs hourly, but only executes around **12:xx Europe/Copenhagen** (handles DST)
-- Runs `python export_all_csvs.py --start-date <yesterday> --end-date <today>` to refresh recent games
-- Commits and pushes updated CSVs back to the repo
+- Runs `python export_all_csvs.py --no-csv --start-date <yesterday> --end-date <today>` to refresh recent games
+- Upserts data to Supabase without committing generated CSVs back to the repo
 
 To enable it, add `PWHL_BASE_URL` as a GitHub **Secret** (recommended) or **Repository Variable**, pointing at your deployed app base URL (the one that serves `/api/schedule`, `/api/game/summary/<id>`, etc.).
 
@@ -104,13 +103,14 @@ The app is designed to match your Shot Plotter application with:
 ```
 PWHL/
 ├── flask_app.py          # Main Flask application
-├── templates/
-│   └── index.html        # Frontend HTML template
+├── report_data.py        # Report-page aggregation layer
+├── scraper.py            # Direct HockeyTech schedule scraper
+├── scripts/
+│   └── export_all_csvs.py # Bulk exporter / Supabase upsert path
+├── supabase_utils.py     # Supabase read + upsert helpers
+├── templates/            # Jinja templates + client-side JS
 ├── start_app.bat         # Windows launcher
 ├── start_app.ps1         # PowerShell launcher
-├── scraper.py            # Original data scraper
-├── visualizer.py         # Static visualization generator
-├── pwhl_analysis.ipynb   # Jupyter notebook analysis
 └── requirements.txt      # Python dependencies
 ```
 
@@ -127,7 +127,7 @@ The app is architected to easily add:
 ## 🔄 **API Integration**
 
 - **Automatic data refresh** from PWHL API
-- **Season support**: All available seasons (2023/24 - 2024/25)
+- **Season support**: All seasons exposed by the live HockeyTech seasons endpoint
 - **Real-time filtering** without page reloads
 - **Error handling** for API unavailability
 - **Data caching** for improved performance
@@ -158,6 +158,4 @@ The app can be easily customized by modifying:
 
 ---
 
-**Your PWHL Analytics app is now ready! 🏒✨**
-
-The interface matches your Shot Plotter design and provides a professional foundation for hockey analytics. The schedule tab is fully functional with live PWHL data, and the architecture is ready for additional features like player stats, shot charts, and advanced analytics.
+The app serves live schedule/game data, report views, and Supabase-backed exports with dynamically discovered seasons.

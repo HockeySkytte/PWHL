@@ -1,35 +1,25 @@
-# PWHL Scraper and Visualization
+# PWHL Analytics
 
-This project scrapes data from the Professional Women's Hockey League (PWHL) API and creates visualizations of the data.
+Flask-based PWHL analytics app with a Supabase-backed data store, HockeyTech schedule/game ingestion, and report/game/skater/goalie views.
 
-## Features
-- Schedule scraping
-- Data visualization
-- Multiple seasons support (2023/2024 and 2024/2025)
+## Core commands
 
-## Season Mapping
-- Season 1: 2023/2024 Regular Season
-- Season 3: 2023/2024 Playoffs  
-- Season 5: 2024/2025 Regular Season
-- Season 6: 2024/2025 Playoffs
-
-## Setup
 1. Install dependencies: `pip install -r requirements.txt`
-2. Run the scraper: `python scraper.py`
+2. Run the app: `python flask_app.py`
+3. Export/upsert games: `python scripts/export_all_csvs.py --start-date 2026-04-28 --end-date 2026-05-28`
 
-## Web App
-Run the Flask app locally:
-- `C:/Users/larss/Apps/PWHL/.venv/Scripts/python.exe flask_app.py`
+## Seasons
 
-## Buy Me a Coffee (Stripe)
-The web app includes a `/coffee` page that uses Stripe Checkout.
+Season metadata is fetched live from the HockeyTech `modulekit/seasons` endpoint. Regular season and playoff IDs are no longer hardcoded in the exporter path, so newly published seasons like 2025/2026 Playoffs are picked up automatically.
 
-Required env var:
-- `STRIPE_SECRET_KEY`
+## Environment
 
-Optional env vars:
-- `STRIPE_CURRENCY` (default: `usd`)
-- `STRIPE_PRODUCT_NAME` (default: `PWHL Analytics - Coffee`)
+- `PWHL_BASE_URL` overrides the default local Flask base URL for export scripts.
+- `SUPABASE_URL` and `SUPABASE_KEY` enable Supabase upserts.
+- `STRIPE_SECRET_KEY` enables the `/coffee` checkout flow.
 
-## Usage
-The scraper will fetch schedule data from the PWHL API and save it as JSON files for further analysis.
+## Notes
+
+- The production app is `flask_app.py`.
+- The bulk exporter lives in `scripts/export_all_csvs.py`.
+- The scheduled GitHub workflow runs the exporter in Supabase-only mode; it does not commit CSV files back to the repo.

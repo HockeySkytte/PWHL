@@ -3,6 +3,7 @@ import json
 import pandas as pd
 from datetime import datetime
 import os
+import re
 from typing import Dict, List, Optional
 
 
@@ -13,13 +14,13 @@ class PWHLScraper:
     API_KEY = "446521baf8c38984"
     CLIENT_CODE = "pwhl"
     
-    # Season mapping
-    SEASONS = {
+    FALLBACK_SEASONS = {
         1: "2023/2024 Regular Season",
         3: "2023/2024 Playoffs",
-        5: "2024/2025 Regular Season", 
+        5: "2024/2025 Regular Season",
         6: "2024/2025 Playoffs",
         8: "2025/2026 Regular Season",
+        9: "2025/2026 Playoffs",
     }
     
     def __init__(self):
@@ -27,6 +28,61 @@ class PWHLScraper:
         self.session.headers.update({
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
         })
+        self.seasons = self._fetch_seasons()
+
+    def _fetch_seasons(self) -> Dict[int, str]:
+        """Fetch live season metadata and fall back to a minimal known set."""
+        params = {
+            'feed': 'modulekit',
+            'view': 'seasons',
+            'key': self.API_KEY,
+            'client_code': self.CLIENT_CODE,
+            'site_id': 0,
+            'lang': 'en',
+        }
+        try:
+            response = self.session.get(self.BASE_URL, params=params, timeout=30)
+            response.raise_for_status()
+            raw_data = response.text.strip()
+            if raw_data.startswith('(') and raw_data.endswith(')'):
+                raw_data = raw_data[1:-1]
+            data = json.loads(raw_data)
+            season_rows = data.get('SiteKit', {}).get('Seasons', [])
+            seasons: Dict[int, str] = {}
+            for row in season_rows:
+                sid = int(row.get('season_id'))
+                name = (row.get('season_name') or '').strip()
+                if not name:
+                    continue
+                seasons[sid] = self._normalize_season_name(name, str(row.get('playoff', '0')) == '1')
+            if seasons:
+                return dict(sorted(seasons.items()))
+        except Exception as exc:
+            print(f"Warning: could not fetch seasons from API ({exc}); using fallback")
+        return dict(self.FALLBACK_SEASONS)
+
+    @staticmethod
+    def _normalize_season_name(name: str, is_playoff: bool) -> str:
+        lower = name.lower()
+        if 'preseason' in lower:
+            suffix = 'Preseason'
+        elif is_playoff or 'playoff' in lower:
+            suffix = 'Playoffs'
+        else:
+            suffix = 'Regular Season'
+
+        match = re.search(r'(\d{4})-(\d{2})', name)
+        if match:
+            start_year = int(match.group(1))
+            end_year = start_year // 100 * 100 + int(match.group(2))
+            return f"{start_year}/{end_year} {suffix}"
+
+        match = re.search(r'(\d{4})', name)
+        if match:
+            end_year = int(match.group(1))
+            return f"{end_year - 1}/{end_year} {suffix}"
+
+        return name
     
     def get_schedule(self, season: int = 5, team: int = -1, month: int = -1) -> Optional[Dict]:
         """
@@ -58,7 +114,7 @@ class PWHLScraper:
         }
         
         try:
-            print(f"Fetching schedule for {self.SEASONS.get(season, f'Season {season}')}...")
+            print(f"Fetching schedule for {self.seasons.get(season, f'Season {season}')}...")
             response = self.session.get(self.BASE_URL, params=params)
             response.raise_for_status()
             
@@ -113,7 +169,7 @@ class PWHLScraper:
             Path to saved file
         """
         if filename is None:
-            season_name = self.SEASONS.get(season, f"season_{season}")
+            season_name = self.seasons.get(season, f"season_{season}")
             safe_name = season_name.replace("/", "_").replace(" ", "_").lower()
             filename = f"pwhl_schedule_{safe_name}.json"
         
@@ -176,12 +232,15 @@ def main():
     """Main function to demonstrate the scraper."""
     scraper = PWHLScraper()
     
-    # Fetch current season schedule (2024/2025 regular season)
-    current_season_data = scraper.get_schedule(season=5)
+    regular_seasons = [sid for sid, name in scraper.seasons.items() if 'Regular Season' in name]
+    default_season = max(regular_seasons) if regular_seasons else 5
+
+    # Fetch the most recent regular-season schedule
+    current_season_data = scraper.get_schedule(season=default_season)
     
     if current_season_data:
         # Save the raw data
-        scraper.save_schedule_data(current_season_data, season=5)
+        scraper.save_schedule_data(current_season_data, season=default_season)
         
         # Parse to DataFrame for analysis
         df = scraper.parse_schedule_to_dataframe(current_season_data)
@@ -197,7 +256,7 @@ def main():
     # Optionally fetch other seasons
     print("\n" + "="*50)
     print("Available seasons:")
-    for season_id, season_name in scraper.SEASONS.items():
+    for season_id, season_name in scraper.seasons.items():
         print(f"Season {season_id}: {season_name}")
 
 

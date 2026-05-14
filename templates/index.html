@@ -4,25 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PWHL Analytics</title>
-    <!-- Favicons: prefer small PNG; fallback to ICO -->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=2">
     <link rel="icon" href="/favicon.ico?v=2">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='PWHL_logo.png', v='2') }}">
     <meta name="theme-color" content="#160A3A">
-    <meta name="screen-orientation" content="landscape">
-    <meta name="x5-orientation" content="landscape">
-    <meta name="full-screen" content="yes">
-    <meta name="x5-fullscreen" content="true">
-    <meta name="360-fullscreen" content="true">
-    <!-- Social preview image -->
-    <meta property="og:image" content="https://pwhl.onrender.com/static/Thumbnail.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://pwhl.onrender.com/static/Thumbnail.png">
-    
-    <!-- Google Analytics -->
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LQY14MGCDV"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -30,16 +16,16 @@
       gtag('js', new Date());
       gtag('config', 'G-LQY14MGCDV');
     </script>
-    
+
     <style>
         :root {
-            --pwhl-bg-1: #160A3A; /* deep purple */
-            --pwhl-bg-2: #251055; /* mid purple */
-            --pwhl-bg-3: #3B1E7A; /* bright purple */
+            --pwhl-bg-1: #160A3A;
+            --pwhl-bg-2: #251055;
+            --pwhl-bg-3: #3B1E7A;
             --pwhl-surface: rgba(19, 13, 46, 0.75);
             --pwhl-surface-strong: rgba(25, 16, 60, 0.85);
             --pwhl-border: rgba(142, 124, 214, 0.25);
-            --pwhl-accent: #8E7CD6; /* light lavender accent */
+            --pwhl-accent: #8E7CD6;
             --pwhl-accent-strong: #B9A7FF;
         }
 
@@ -79,44 +65,9 @@
             gap: 1rem;
         }
 
-        .btn {
-            background-color: var(--pwhl-accent);
-            color: white;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 0.375rem;
-            cursor: pointer;
-            font-size: 0.875rem;
-            font-weight: 500;
-            transition: background-color 0.2s;
-        }
-
-        .btn:hover {
-            background-color: var(--pwhl-accent-strong);
-        }
-
-        .btn-secondary {
-            background-color: #718096;
-        }
-
-        .btn-secondary:hover {
-            background-color: #4a5568;
-        }
-
-        .btn-sm {
-            padding: 0.25rem 0.5rem;
-            font-size: 0.75rem;
-            margin: 0 0.125rem;
-            border-radius: 0.25rem;
-        }
-
-        .text-muted {
-            color: #718096;
-        }
-
         .container {
             display: flex;
-            height: calc(100vh - 80px);
+            min-height: calc(100vh - 80px);
         }
 
         .sidebar {
@@ -140,9 +91,32 @@
             border-bottom: 1px solid var(--pwhl-border);
         }
 
-        .tab {background:transparent;color:#d6d3e9;border:none;padding:1rem 2rem;cursor:pointer;border-bottom:3px solid transparent;transition:.2s;font-size:1.05rem;text-decoration:none;display:flex;align-items:center;gap:.4rem;font-weight:600;}
-        .tab:hover{color:#fff;text-decoration:none;}
-        .tab.active{color:var(--pwhl-accent-strong);border-bottom-color:var(--pwhl-accent-strong);text-decoration:none;}
+        .tab {
+            background: transparent;
+            color: #d6d3e9;
+            border: none;
+            padding: 1rem 2rem;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            transition: .2s;
+            font-size: 1.05rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: .4rem;
+            font-weight: 600;
+        }
+
+        .tab:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .tab.active {
+            color: var(--pwhl-accent-strong);
+            border-bottom-color: var(--pwhl-accent-strong);
+            text-decoration: none;
+        }
 
         .tab-content {
             flex: 1;
@@ -154,178 +128,153 @@
             margin-bottom: 1.5rem;
         }
 
-        .logo-section {
-            margin-top: 2rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid var(--pwhl-border);
-            text-align: center;
-        }
-
-        .logo-link {
-            display: inline-block;
-            transition: opacity 0.2s;
-        }
-
-        .logo-link:hover {
-            opacity: 0.8;
-        }
-
-        .logo-link img {
-            width: 120px;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .logo-attribution {
-            margin-top: 0.75rem;
-            font-size: 0.9rem;
-            font-style: italic;
-            color: rgba(255, 255, 255, 0.7);
-            letter-spacing: 0.05em;
-        }
-
         .filter-label {
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.6rem;
             font-weight: 600;
             color: #e2e8f0;
-            font-size: 0.875rem;
+            font-size: 0.75rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
         }
 
-        .filter-select {
-            width: 100%;
-            background-color: #4a5568;
-            border: 1px solid #718096;
-            border-radius: 0.375rem;
-            padding: 0.5rem;
+        .link-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+        }
+
+        .panel-link {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 0.8rem;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 0.75rem;
+            background: rgba(255,255,255,0.03);
+            text-decoration: none;
             color: #ffffff;
-            font-size: 0.875rem;
+            transition: background-color 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
         }
 
-        .filter-select:focus {
-            outline: none;
-            border-color: #4299e1;
-            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+        .panel-link:hover {
+            background: rgba(142, 124, 214, 0.16);
+            border-color: rgba(185, 167, 255, 0.28);
+            transform: translateY(-1px);
         }
 
-        /* Date input styling */
-        input[type="date"].filter-select {
-            color-scheme: dark;
+        .panel-link-logo {
+            width: 34px;
+            height: 34px;
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+            overflow: hidden;
+            flex: 0 0 auto;
         }
 
-        input[type="date"].filter-select::-webkit-calendar-picker-indicator {
-            filter: invert(1);
-            cursor: pointer;
+        .panel-link-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
-        .stats-grid {
+        .panel-link-title {
+            font-size: 0.95rem;
+            font-weight: 650;
+            line-height: 1.2;
+        }
+
+        .panel-link-meta {
+            color: #b8b0d6;
+            font-size: 0.72rem;
+            margin-top: 0.12rem;
+            line-height: 1.25;
+        }
+
+        .hero-copy {
+            margin-bottom: 1.5rem;
+            max-width: 900px;
+        }
+
+        .hero-copy h2 {
+            font-size: clamp(2rem, 3vw, 2.85rem);
+            line-height: 1.02;
+            margin-bottom: 0.85rem;
+        }
+
+        .hero-copy p {
+            color: #d9d1ef;
+            font-size: 1.1rem;
+            line-height: 1.75;
+        }
+
+        .columns {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-bottom: 2rem;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.1rem;
+            align-items: start;
         }
 
-        .stat-card {
-            background-color: #2d3748;
-            border: 1px solid #4a5568;
-            border-radius: 0.5rem;
-            padding: 1rem;
-            text-align: center;
-        }
-
-        .stat-value {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #4299e1;
-            margin-bottom: 0.25rem;
-        }
-
-        .stat-label {
-            color: #a0aec0;
-            font-size: 0.875rem;
-            font-weight: 500;
-        }
-
-        .table-container {
+        .column-card {
             background: var(--pwhl-surface);
             border: 1px solid var(--pwhl-border);
-            border-radius: 0.5rem;
+            border-radius: 1rem;
             overflow: hidden;
         }
 
-        .table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .table th,
-        .table td {
-            padding: 0.75rem;
-            text-align: center;
-            border-bottom: 1px solid #4a5568;
-        }
-
-        .table th:first-child,
-        .table td:first-child {
-            text-align: left;
-        }
-
-        .table th {
-            background: rgba(26, 32, 44, 0.5);
-            font-weight: 600;
-            color: #e2e8f0;
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .table td {
-            color: #e2e8f0;
-            font-size: 0.875rem;
-        }
-
-        .table tbody tr:hover {
-            background-color: rgba(142, 124, 214, 0.12);
-        }
-
-        .status-badge {
-            padding: 0.25rem 0.5rem;
-            border-radius: 0.25rem;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-        .status-final {
-            background-color: #48bb78;
-            color: #1a202c;
-        }
-
-        .status-pending {
-            background-color: #ed8936;
-            color: #1a202c;
-        }
-
-        .loading {
-            display: flex;
-            justify-content: center;
+        .feature-item {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 122px;
+            gap: 1rem;
             align-items: center;
-            height: 200px;
-            color: #a0aec0;
+            padding: 1.3rem 1rem;
+            color: inherit;
+            text-decoration: none;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            transition: background-color 0.18s ease;
         }
 
-        .no-data {
-            text-align: center;
-            color: #a0aec0;
-            padding: 2rem;
+        .feature-item:first-child {
+            border-top: none;
         }
 
-        .score {
-            font-weight: 600;
-            font-size: 1rem;
+        .feature-item:hover {
+            background: rgba(255,255,255,0.03);
         }
 
-        /* Mobile top menu + slicers toggle (mobile-only) */
+        .feature-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 0.35rem;
+        }
+
+        .feature-copy {
+            color: #c4bcdf;
+            line-height: 1.55;
+            font-size: 0.97rem;
+        }
+
+        .feature-thumb {
+            height: 72px;
+            border-radius: 0.75rem;
+            border: 1px solid rgba(255,255,255,0.08);
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(180deg, rgba(78, 104, 185, 0.18), rgba(8, 12, 22, 0.55));
+        }
+
+        .feature-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
         .mobile-actions { display: none; align-items: center; gap: 0.6rem; }
         .mobile-icon-btn {
             width: 44px;
@@ -375,196 +324,35 @@
         body.mobile-menu-open .mobile-menu-backdrop { display: block; }
         body.mobile-menu-open .mobile-menu-panel { display: block; }
 
-        /* Treat "mobile" as coarse-pointer devices (phones/tablets), regardless of rotation */
         @media (max-width: 1100px) and (hover: none) and (pointer: coarse) {
             .container {
                 flex-direction: column;
-                height: auto;
+                min-height: auto;
             }
 
             .header { padding: 0.75rem 1rem; }
-            .header-actions .btn { display: none; }
             .mobile-actions { display: inline-flex; }
-
-            /* Edge-to-edge content on mobile */
-            .content { padding: 0; }
-            .tab-content { padding: 0.75rem 0.75rem 1rem; }
-            .table-container { border-radius: 0; border-left: none; border-right: none; }
-            .table { font-size: 0.8rem; }
-            .table th, .table td { padding: 0.55rem 0.4rem; }
-            .table th { font-size: 0.65rem; letter-spacing: 0.04em; }
-            .score { font-size: 0.9rem; }
-
-            /* Hide less-important columns to fit the screen */
-            .table th:nth-child(2), .table td:nth-child(2),
-            .table th:nth-child(3), .table td:nth-child(3) {
-                display: none;
-            }
-
-            /* Hide desktop tabs; use the mobile menu instead */
+            .tab-content { padding: 0.9rem 0.75rem 1rem; }
             .tabs { display: none; }
-
-            /* Collapsible slicers (left sidebar) */
-            .sidebar { display: none; width: 100%; height: auto; max-height: none; }
+            .sidebar { display: none; width: 100%; border-right: none; border-bottom: 1px solid var(--pwhl-border); }
             body.mobile-slicers-open .sidebar { display: block; }
-
-            /* Remove KPI cards on mobile (Schedule only) */
-            .kpi-cards { display: none !important; }
+            .columns { grid-template-columns: 1fr; }
+            .hero-copy h2 { font-size: 1.9rem; }
+            .hero-copy p { font-size: 0.98rem; line-height: 1.65; }
         }
 
-        /* Modal styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        .modal-content {
-            background-color: #2d3748;
-            margin: 5% auto;
-            padding: 0;
-            border: 1px solid #4a5568;
-            border-radius: 0.5rem;
-            width: 90%;
-            max-width: 1000px;
-            max-height: 80vh;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .modal-header {
-            background-color: #1e2329;
-            padding: 1rem;
-            border-bottom: 1px solid #4a5568;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .modal-header h2 {
-            margin: 0;
-            color: #4299e1;
-        }
-
-        .close {
-            color: #a0aec0;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-            line-height: 1;
-        }
-
-        .close:hover {
-            color: #ffffff;
-        }
-
-        .modal-body {
-            padding: 1rem;
-            overflow-y: auto;
-            flex: 1;
-        }
-
-        .game-summary {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .section {
-            background-color: #1e2329;
-            border: 1px solid #4a5568;
-            border-radius: 0.375rem;
-            padding: 1rem;
-        }
-
-        .section h3 {
-            margin: 0 0 1rem 0;
-            color: #4299e1;
-            border-bottom: 1px solid #4a5568;
-            padding-bottom: 0.5rem;
-        }
-
-        .section h4 {
-            margin: 1rem 0 0.5rem 0;
-            color: #e2e8f0;
-        }
-
-        .roster-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 0.5rem;
-            margin-top: 0.5rem;
-        }
-
-        .player-card {
-            background-color: #2d3748;
-            border: 1px solid #4a5568;
-            border-radius: 0.25rem;
-            padding: 0.5rem;
-        }
-
-        .play-by-play {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .events-list {
-            max-height: 500px;
-            overflow-y: auto;
-            border: 1px solid #4a5568;
-            border-radius: 0.375rem;
-        }
-
-        .event-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 0.75rem;
-            border-bottom: 1px solid #4a5568;
-            background-color: #1e2329;
-        }
-
-        .event-item:last-child {
-            border-bottom: none;
-        }
-
-        .event-item.goal {
-            background-color: rgba(72, 187, 120, 0.1);
-            border-left: 4px solid #48bb78;
-        }
-
-        .event-item.penalty {
-            background-color: rgba(245, 101, 101, 0.1);
-            border-left: 4px solid #f56565;
-        }
-
-        .event-time {
-            min-width: 80px;
-            text-align: center;
-            font-family: 'Courier New', monospace;
-            color: #a0aec0;
-        }
-
-        .event-description {
-            flex: 1;
-            color: #e2e8f0;
-        }
-
-        /* Clickable row styles */
-        .game-row.clickable:hover {
-            background-color: #2d3748;
-            transition: background-color 0.2s;
-        }
-
-        .game-row.clickable:hover td {
-            color: #ffffff;
+        @media (max-width: 800px) {
+            .columns { grid-template-columns: 1fr; }
+            .feature-item { grid-template-columns: 1fr; }
+            .feature-thumb {
+                height: auto;
+                overflow: visible;
+                background: transparent;
+            }
+            .feature-thumb img {
+                height: auto;
+                object-fit: contain;
+            }
         }
     </style>
 </head>
@@ -575,9 +363,6 @@
             <span>PWHL Analytics</span>
         </h1>
         <div class="header-actions">
-            <button class="btn btn-secondary" onclick="exportCSV()">Export CSV</button>
-            <button class="btn" onclick="refreshData()">Refresh</button>
-
             <div class="mobile-actions" aria-label="Mobile controls">
                 <button class="mobile-icon-btn" id="mobileMenuBtn" type="button" aria-label="Menu" aria-expanded="false">
                     <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -586,7 +371,7 @@
                         <path d="M4 18h16" />
                     </svg>
                 </button>
-                <button class="mobile-icon-btn" id="mobileSlicersBtn" type="button" aria-label="Slicers" aria-expanded="false">
+                <button class="mobile-icon-btn" id="mobileSlicersBtn" type="button" aria-label="Links panel" aria-expanded="false">
                     <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M4 6h16" />
                         <path d="M7 12h10" />
@@ -597,11 +382,11 @@
         </div>
     </div>
 
-    <!-- Mobile menu overlay (mobile-only via CSS) -->
     <div class="mobile-menu-backdrop" id="mobileBackdrop" aria-hidden="true"></div>
     <nav class="mobile-menu-panel" id="mobileMenuPanel" aria-label="Menu" aria-hidden="true">
         <ul class="mobile-menu-list">
-            <li><a class="active" href="/">Schedule</a></li>
+            <li><a class="active" href="/">Home</a></li>
+            <li><a href="/schedule">Schedule</a></li>
             <li><a href="/report">Report</a></li>
             <li><a href="/skaters">Skaters</a></li>
             <li><a href="/goalies">Goalies</a></li>
@@ -612,72 +397,73 @@
     </nav>
 
     <div class="container">
-        <div class="sidebar">
+        <aside class="sidebar">
             <div class="filter-group">
-                <label class="filter-label">Season</label>
-                <select class="filter-select" id="seasonFilter" onchange="applyFilters({preferCache: true})">
-                    <option value="All">All Seasons</option>
-                    <option value="2025/2026" selected>2025/2026</option>
-                    <option value="2024/2025">2024/2025</option>
-                    <option value="2023/2024">2023/2024</option>
-                </select>
+                <label class="filter-label">Hockey-Statistics Sites</label>
+                <div class="link-stack">
+                    <a class="panel-link" href="https://hockey-statistics.com/" target="_blank" rel="noopener noreferrer">
+                        <div class="panel-link-logo"><img src="{{ url_for('static', filename='Logo.png') }}" alt="Main Site logo"></div>
+                        <div>
+                            <div class="panel-link-title">Main Site</div>
+                            <div class="panel-link-meta">hockey-statistics.com</div>
+                        </div>
+                    </a>
+                    <a class="panel-link" href="https://community.hockey-statistics.com/" target="_blank" rel="noopener noreferrer">
+                        <div class="panel-link-logo"><img src="{{ url_for('static', filename='Logo.png') }}" alt="Community Site logo"></div>
+                        <div>
+                            <div class="panel-link-title">Community Site</div>
+                            <div class="panel-link-meta">community.hockey-statistics.com</div>
+                        </div>
+                    </a>
+                    <a class="panel-link" href="https://nhl.hockey-statistics.com/" target="_blank" rel="noopener noreferrer">
+                        <div class="panel-link-logo"><img src="{{ url_for('static', filename='nhl-site.png') }}" alt="NHL Site logo"></div>
+                        <div>
+                            <div class="panel-link-title">NHL Site</div>
+                            <div class="panel-link-meta">nhl.hockey-statistics.com</div>
+                        </div>
+                    </a>
+                </div>
             </div>
 
             <div class="filter-group">
-                <label class="filter-label">Season State</label>
-                <select class="filter-select" id="seasonStateFilter" onchange="applyFilters({preferCache: true})">
-                    <option value="All">All Season States</option>
-                    <option value="Regular Season" selected>Regular Season</option>
-                    <option value="Playoffs">Playoffs</option>
-                </select>
+                <label class="filter-label">Hockey-Statistics Tools</label>
+                <div class="link-stack">
+                    <a class="panel-link" href="https://sports-tagging.netlify.app/" target="_blank" rel="noopener noreferrer">
+                        <div class="panel-link-logo"><img src="https://sports-tagging.netlify.app/hockey/puck.svg" alt="ShotPlotter logo"></div>
+                        <div>
+                            <div class="panel-link-title">ShotPlotter</div>
+                            <div class="panel-link-meta">sports-tagging.netlify.app</div>
+                        </div>
+                    </a>
+                </div>
             </div>
 
             <div class="filter-group">
-                <label class="filter-label">Date From</label>
-                <input type="date" class="filter-select" id="dateFromFilter" onchange="applyFilters({preferCache: true})">
+                <label class="filter-label">Other Links</label>
+                <div class="link-stack">
+                    <a class="panel-link" href="https://www.thepwhl.com/" target="_blank" rel="noopener noreferrer">
+                        <div class="panel-link-logo"><img src="{{ url_for('static', filename='PWHL_logo.png') }}" alt="PWHL Official logo"></div>
+                        <div>
+                            <div class="panel-link-title">PWHL Official</div>
+                            <div class="panel-link-meta">thepwhl.com</div>
+                        </div>
+                    </a>
+                </div>
             </div>
-
-            <div class="filter-group">
-                <label class="filter-label">Date To</label>
-                <input type="date" class="filter-select" id="dateToFilter" onchange="applyFilters({preferCache: true})">
-            </div>
-
-            <div class="filter-group">
-                <label class="filter-label">Team</label>
-                <select class="filter-select" id="teamFilter" onchange="applyFilters({preferCache: true})">
-                    <option value="All">All Teams</option>
-                </select>
-            </div>
-
-            <div class="filter-group">
-                <label class="filter-label">Status</label>
-                <select class="filter-select" id="statusFilter" onchange="applyFilters({preferCache: true})">
-                    <option value="All">All Statuses</option>
-                </select>
-            </div>
-
-            <div class="logo-section">
-                <a href="https://hockey-statistics.com/" target="_blank" rel="noopener noreferrer" class="logo-link">
-                    <img src="{{ url_for('static', filename='Logo.png') }}" alt="Hockey Statistics Logo">
-                </a>
-                <div class="logo-attribution">App by HockeySkytte</div>
-            </div>
-        </div>
+        </aside>
 
         <div class="main-content">
             <div class="tabs">
-                <button class="tab active" onclick="switchTab('schedule')">📅 Schedule</button>
+                <a class="tab active" href="/">🏠 Home</a>
+                <a class="tab" href="/schedule">📅 Schedule</a>
                 <a class="tab" href="/report">📊 Report</a>
                 <a class="tab" href="/skaters">🏒 Skaters</a>
                 <a class="tab" href="/goalies" aria-label="Goalies">
                     <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" focusable="false" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                        <!-- Helmet outline -->
                         <path d="M12 3c4.4 0 7.8 2.6 7.8 7.2 0 6-4.2 11-7.8 11.3C8.4 21.2 4.2 16.2 4.2 10.2 4.2 5.6 7.6 3 12 3z"/>
                         <path d="M7.2 10.4c.1-3 2.1-5 4.8-5s4.7 2 4.8 5"/>
-                        <!-- Forehead pads -->
                         <path d="M9 4.7h6"/>
                         <path d="M8.1 6.2h1.4M14.5 6.2h1.4"/>
-                        <!-- Cage -->
                         <path d="M8 11.2c1.2 1 2.7 1.6 4 1.6s2.8-.6 4-1.6"/>
                         <path d="M8.2 13.1h7.6"/>
                         <path d="M9.1 15h5.8"/>
@@ -693,120 +479,74 @@
             </div>
 
             <div class="tab-content">
-                <div class="stats-grid kpi-cards">
-                    <div class="stat-card">
-                        <div class="stat-value" id="totalGames">-</div>
-                        <div class="stat-label">Total Games</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-value" id="completedGames">-</div>
-                        <div class="stat-label">Completed</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-value" id="pendingGames">-</div>
-                        <div class="stat-label">Pending</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-value" id="avgGoals">-</div>
-                        <div class="stat-label">Avg Goals/Game</div>
-                    </div>
+                <div class="hero-copy">
+                    <h2>PWHL Analytics</h2>
+                    <p>
+                        A connected set of views for reading PWHL hockey at different levels of depth — from the full schedule and game reports to player, goalie, and team dashboards. Use this page as the landing hub, then jump directly into the section you need.
+                    </p>
                 </div>
 
-                <div class="table-container">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Season</th>
-                                <th>State</th>
-                                <th>Away Team</th>
-                                <th>Home Team</th>
-                                <th>Status</th>
-                                <th>Score</th>
-                            </tr>
-                        </thead>
-                        <tbody id="scheduleTableBody">
-                            <tr>
-                                <td colspan="7" class="loading">Loading schedule data...</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
+                <div class="columns">
+                    <div class="column-card">
+                        <a class="feature-item" href="/schedule">
+                            <div>
+                                <div class="feature-title">Schedule</div>
+                                <div class="feature-copy">Browse every game by season, state, team, date, and status. Open any matchup directly into the full game view.</div>
+                            </div>
+                            <div class="feature-thumb"><img src="{{ url_for('static', filename='schedule_screenshot.png') }}" alt="Schedule page screenshot"></div>
+                        </a>
+                        <a class="feature-item" href="/report">
+                            <div>
+                                <div class="feature-title">Report</div>
+                                <div class="feature-copy">Shot maps, xG, team filters, on-ice combinations, and report-table breakdowns from the shared data model.</div>
+                            </div>
+                            <div class="feature-thumb"><img src="{{ url_for('static', filename='report_screenshot.png') }}" alt="Report page screenshot"></div>
+                        </a>
+                        <a class="feature-item" href="/data">
+                            <div>
+                                <div class="feature-title">Data</div>
+                                <div class="feature-copy">Filter export-ready data views and pull the underlying play-by-play slices when you need raw outputs.</div>
+                            </div>
+                            <div class="feature-thumb"><img src="{{ url_for('static', filename='data_screenshot.png') }}" alt="Data page screenshot"></div>
+                        </a>
+                    </div>
 
-    <!-- Modal for Game Details -->
-    <div id="gameModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 id="modalTitle">Game Details</h2>
-                <span class="close" onclick="closeModal()">&times;</span>
-            </div>
-            <div class="modal-body" id="modalBody">
-                <!-- Content will be dynamically loaded here -->
+                    <div class="column-card">
+                        <a class="feature-item" href="/skaters">
+                            <div>
+                                <div class="feature-title">Skaters</div>
+                                <div class="feature-copy">Player cards, shot maps, trend charts, and EA integration for individual skater analysis.</div>
+                            </div>
+                            <div class="feature-thumb"><img src="{{ url_for('static', filename='skaters_screenshot.png') }}" alt="Skaters page screenshot"></div>
+                        </a>
+                        <a class="feature-item" href="/goalies">
+                            <div>
+                                <div class="feature-title">Goalies</div>
+                                <div class="feature-copy">GSAx, xGA, save-percentage context, and goalie-specific visual breakdowns.</div>
+                            </div>
+                            <div class="feature-thumb"><img src="{{ url_for('static', filename='goalies_screenshot.png') }}" alt="Goalies page screenshot"></div>
+                        </a>
+                        <a class="feature-item" href="/teams">
+                            <div>
+                                <div class="feature-title">Teams</div>
+                                <div class="feature-copy">Team-level dashboards across standings, shooting, play-driving, and roster-level performance splits.</div>
+                            </div>
+                            <div class="feature-thumb"><img src="{{ url_for('static', filename='teams_screenshot.png') }}" alt="Teams page screenshot"></div>
+                        </a>
+                        <a class="feature-item" href="/coffee">
+                            <div>
+                                <div class="feature-title">Support The Site</div>
+                                <div class="feature-copy">Open the donation page if you want to support hosting and continued iteration on the analytics stack.</div>
+                            </div>
+                            <div class="feature-thumb"><img src="{{ url_for('static', filename='donation_screenshot.png') }}" alt="Donation page screenshot"></div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <script>
-        let currentData = [];
-        let allFilters = {};
-
-        // Simple in-memory cache for schedule responses, keyed by request URL
-        const scheduleCache = {};
-        const CACHE_TTL_MS = 5 * 60 * 1000; // 5 minutes
-
-        // Helpers: filter state persistence
-        function getFilterStateFromUI() {
-            return {
-                seasonYear: document.getElementById('seasonFilter').value,
-                seasonState: document.getElementById('seasonStateFilter').value,
-                team: document.getElementById('teamFilter').value,
-                status: document.getElementById('statusFilter').value,
-                dateFrom: document.getElementById('dateFromFilter').value,
-                dateTo: document.getElementById('dateToFilter').value,
-            };
-        }
-
-        function saveFilterState(state) {
-            try {
-                localStorage.setItem('pwhl_filters', JSON.stringify(state));
-            } catch (e) {
-                console.warn('Unable to save filters to localStorage:', e);
-            }
-        }
-
-        function loadFilterState() {
-            try {
-                const raw = localStorage.getItem('pwhl_filters');
-                if (!raw) return null;
-                return JSON.parse(raw);
-            } catch (e) {
-                console.warn('Unable to load filters from localStorage:', e);
-                return null;
-            }
-        }
-
-        function restoreFiltersToUI(state) {
-            if (!state) return;
-            const seasonEl = document.getElementById('seasonFilter');
-            const seasonStateEl = document.getElementById('seasonStateFilter');
-            const teamEl = document.getElementById('teamFilter');
-            const statusEl = document.getElementById('statusFilter');
-            const dateFromEl = document.getElementById('dateFromFilter');
-            const dateToEl = document.getElementById('dateToFilter');
-
-            if (state.seasonYear) seasonEl.value = state.seasonYear;
-            if (state.seasonState) seasonStateEl.value = state.seasonState;
-            if (state.dateFrom) dateFromEl.value = state.dateFrom;
-            if (state.dateTo) dateToEl.value = state.dateTo;
-            // Team and status options are populated after fetching; set now if "All" or leave for later
-            if (state.team && state.team !== 'All') teamEl.value = state.team;
-            if (state.status && state.status !== 'All') statusEl.value = state.status;
-        }
-
-        // Mobile: menu + slicers toggles (mobile-only via CSS)
         (function setupMobileToggles(){
             const menuBtn = document.getElementById('mobileMenuBtn');
             const slicersBtn = document.getElementById('mobileSlicersBtn');
@@ -820,16 +560,17 @@
                 if(menuPanel) menuPanel.setAttribute('aria-hidden', open ? 'false' : 'true');
                 if(backdrop) backdrop.setAttribute('aria-hidden', open ? 'false' : 'true');
             }
+
             function setSlicersOpen(open){
                 document.body.classList.toggle('mobile-slicers-open', open);
                 if(slicersBtn) slicersBtn.classList.toggle('active', open);
                 if(slicersBtn) slicersBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
             }
-            function closeAll(){ setMenuOpen(false); setSlicersOpen(false); }
 
-            // Hide slicers button if there is no sidebar
-            const hasSidebar = !!document.querySelector('.sidebar');
-            if(slicersBtn && !hasSidebar) slicersBtn.style.display = 'none';
+            function closeAll(){
+                setMenuOpen(false);
+                setSlicersOpen(false);
+            }
 
             if(menuBtn){
                 menuBtn.addEventListener('click', ()=>{
@@ -838,6 +579,7 @@
                     setMenuOpen(next);
                 });
             }
+
             if(slicersBtn){
                 slicersBtn.addEventListener('click', ()=>{
                     const next = !document.body.classList.contains('mobile-slicers-open');
@@ -845,487 +587,15 @@
                     setSlicersOpen(next);
                 });
             }
+
             if(backdrop){
                 backdrop.addEventListener('click', closeAll);
             }
-            document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeAll(); });
+
+            document.addEventListener('keydown', (e)=>{
+                if(e.key === 'Escape') closeAll();
+            });
         })();
-
-        // Initialize the app
-        document.addEventListener('DOMContentLoaded', function() {
-            // Restore any saved filters, then apply
-            const saved = loadFilterState();
-            if (saved) {
-                restoreFiltersToUI(saved);
-            }
-            applyFilters({ preferCache: true });
-        });
-
-        async function loadSchedule() {
-            // This function is now handled by applyFilters()
-            applyFilters();
-        }
-
-        function updateFilterOptions() {
-            // Update team filter
-            const teamSelect = document.getElementById('teamFilter');
-            const currentTeam = teamSelect.value;
-            teamSelect.innerHTML = '<option value="All">All Teams</option>';
-            allFilters.teams.forEach(team => {
-                if (team) {
-                    const option = document.createElement('option');
-                    option.value = team;
-                    option.textContent = team;
-                    if (team === currentTeam) option.selected = true;
-                    teamSelect.appendChild(option);
-                }
-            });
-
-            // Update status filter
-            const statusSelect = document.getElementById('statusFilter');
-            const currentStatus = statusSelect.value;
-            statusSelect.innerHTML = '<option value="All">All Statuses</option>';
-            allFilters.statuses.forEach(status => {
-                if (status) {
-                    const option = document.createElement('option');
-                    option.value = status;
-                    option.textContent = status;
-                    if (status === currentStatus) option.selected = true;
-                    statusSelect.appendChild(option);
-                }
-            });
-        }
-
-        async function applyFilters(options = {}) {
-            const { preferCache = false, force = false } = options;
-            const seasonYear = document.getElementById('seasonFilter').value;
-            const seasonState = document.getElementById('seasonStateFilter').value;
-            const team = document.getElementById('teamFilter').value;
-            const status = document.getElementById('statusFilter').value;
-            const dateFrom = document.getElementById('dateFromFilter').value;
-            const dateTo = document.getElementById('dateToFilter').value;
-
-            // Persist current filters
-            saveFilterState({ seasonYear, seasonState, team, status, dateFrom, dateTo });
-
-            // Build request URL (also used as cache key)
-            let url = `/api/schedule?season_year=${encodeURIComponent(seasonYear)}&season_state=${encodeURIComponent(seasonState)}&team=${encodeURIComponent(team)}&status=${encodeURIComponent(status)}`;
-            if (dateFrom) url += `&date_from=${encodeURIComponent(dateFrom)}`;
-            if (dateTo) url += `&date_to=${encodeURIComponent(dateTo)}`;
-
-            const now = Date.now();
-
-            // Cache-first path
-            const cached = scheduleCache[url];
-            const fresh = cached && (now - cached.fetchedAt) < CACHE_TTL_MS;
-
-            if (!force && preferCache && cached) {
-                // Render immediately from cache
-                const data = cached.data;
-                currentData = data.games;
-                allFilters = data.filters;
-                updateFilterOptions();
-                updateStats(data.stats);
-                renderTable(data.games);
-
-                // If cache is fresh, skip network; else revalidate in background
-                if (fresh) return;
-
-                // Background revalidation
-                try {
-                    const resp = await fetch(url, { cache: 'no-store' });
-                    const newData = await resp.json();
-                    scheduleCache[url] = { data: newData, fetchedAt: Date.now() };
-                    currentData = newData.games;
-                    allFilters = newData.filters;
-                    updateFilterOptions();
-                    updateStats(newData.stats);
-                    renderTable(newData.games);
-                } catch (e) {
-                    console.warn('Revalidation failed, using cached data:', e);
-                }
-                return;
-            }
-
-            // If we get here and either no cache or not preferring cache, show loading
-            document.getElementById('scheduleTableBody').innerHTML = 
-                '<tr><td colspan="7" class="loading">Loading schedule data...</td></tr>';
-
-            try {
-                const response = await fetch(url, { cache: force ? 'reload' : 'default' });
-                const data = await response.json();
-                scheduleCache[url] = { data, fetchedAt: Date.now() };
-
-                currentData = data.games;
-                allFilters = data.filters;
-                updateFilterOptions();
-                updateStats(data.stats);
-                renderTable(data.games);
-            } catch (error) {
-                console.error('Error applying filters:', error);
-                document.getElementById('scheduleTableBody').innerHTML = 
-                    '<tr><td colspan="7" class="no-data">Error loading schedule data</td></tr>';
-            }
-        }
-
-        function updateStats(stats) {
-            document.getElementById('totalGames').textContent = stats.total_games;
-            document.getElementById('completedGames').textContent = stats.completed_games;
-            document.getElementById('pendingGames').textContent = stats.pending_games;
-            
-            // Calculate average goals per game
-            const completedGames = currentData.filter(game => game.status.includes('Final'));
-            if (completedGames.length > 0) {
-                const totalGoals = completedGames.reduce((sum, game) => {
-                    const home = parseInt(game.home_score) || 0;
-                    const away = parseInt(game.away_score) || 0;
-                    return sum + home + away;
-                }, 0);
-                const avgGoals = (totalGoals / completedGames.length).toFixed(1);
-                document.getElementById('avgGoals').textContent = avgGoals;
-            } else {
-                document.getElementById('avgGoals').textContent = '-';
-            }
-        }
-
-        function renderTable(games) {
-            const tbody = document.getElementById('scheduleTableBody');
-            
-            if (games.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="7" class="no-data">No games found for the selected filters</td></tr>';
-                return;
-            }
-
-            tbody.innerHTML = games.map(game => {
-                const statusClass = game.status.includes('Final') ? 'status-final' : 'status-pending';
-                const awayScore = game.away_score || '';
-                const homeScore = game.home_score || '';
-                const combinedScore = (awayScore !== '' || homeScore !== '') ? `${awayScore}-${homeScore}` : '';
-                
-                // Format team logos (just logo, no text as requested)
-                const awayTeamDisplay = game.away_team_logo ? 
-                    `<div style="display: flex; align-items: center; justify-content: center;"><img src="${game.away_team_logo}" alt="${game.away_team}" style="width: 32px; height: 32px;" title="${game.away_team}"></div>` : 
-                    game.away_team;
-                const homeTeamDisplay = game.home_team_logo ? 
-                    `<div style="display: flex; align-items: center; justify-content: center;"><img src="${game.home_team_logo}" alt="${game.home_team}" style="width: 32px; height: 32px;" title="${game.home_team}"></div>` : 
-                    game.home_team;
-                
-                // Make any game with a valid game_id clickable (including live / in-progress / upcoming)
-                const isClickable = !!game.game_id; // allow navigation even before Final for live tracking
-                return `
-                    <tr class="game-row ${isClickable ? 'clickable' : ''}" onclick="${isClickable ? `goToGamePage('${game.game_id}')` : ''}" style="${isClickable ? 'cursor: pointer;' : 'cursor: default;'}">
-                        <td>${game.date}</td>
-                        <td>${game.season_year}</td>
-                        <td>${game.season_state}</td>
-                        <td>${awayTeamDisplay}</td>
-                        <td>${homeTeamDisplay}</td>
-                        <td><span class="status-badge ${statusClass}">${game.status}</span></td>
-                        <td class="score">${combinedScore}</td>
-                    </tr>
-                `;
-            }).join('');
-        }
-
-        function switchTab(tabName) {
-            // For future expansion with multiple tabs
-            console.log('Switched to tab:', tabName);
-        }
-
-        function refreshData() {
-            // Force bypass cache for current filters
-            applyFilters({ force: true });
-        }
-
-        function goToGamePage(gameId) {
-            window.location.href = `/game/${gameId}?id=${gameId}`;
-        }
-
-        async function viewGameDetails(gameId, type) {
-            let endpoint, title;
-            
-            if (type === 'summary') {
-                endpoint = 'summary';
-                title = 'Game Lineups';
-            } else if (type === 'test') {
-                endpoint = 'summary/test';
-                title = 'Test Lineups (Sample Data)';
-            } else {
-                endpoint = 'playbyplay';
-                title = 'Play-by-Play';
-            }
-            
-            try {
-                document.getElementById('modalTitle').innerText = `${title} - Game ${gameId}`;
-                document.getElementById('modalBody').innerHTML = '<div style="text-align: center; padding: 2rem;">Loading...</div>';
-                document.getElementById('gameModal').style.display = 'block';
-                
-                const response = await fetch(`/api/game/${endpoint}/${gameId}`);
-                const data = await response.json();
-                
-                if (response.ok) {
-                    const modalBody = document.getElementById('modalBody');
-                    
-                    if (type === 'summary' || type === 'test') {
-                        modalBody.innerHTML = formatGameSummary(data);
-                    } else {
-                        modalBody.innerHTML = formatPlayByPlay(data);
-                    }
-                } else {
-                    document.getElementById('modalBody').innerHTML = 
-                        `<div style="color: #f56565; text-align: center; padding: 2rem;">
-                            Error loading ${title.toLowerCase()}: ${data.error || 'Unknown error'}
-                        </div>`;
-                }
-                
-            } catch (error) {
-                console.error(`Error fetching ${type} for game ${gameId}:`, error);
-                document.getElementById('modalBody').innerHTML = 
-                    `<div style="color: #f56565; text-align: center; padding: 2rem;">
-                        Error loading ${title.toLowerCase()}. Please try again.
-                    </div>`;
-            }
-        }
-
-        function formatGameSummary(data) {
-            let html = '<div class="game-summary">';
-            
-            // Home Team Lineup
-            if (data.homeTeam) {
-                html += `<div class="section"><h3>� ${data.homeTeam.name || 'Home Team'}</h3>`;
-                
-                // Goalies
-                if (data.homeTeam.goalies && Array.isArray(data.homeTeam.goalies)) {
-                    html += '<h4>🥅 Goalies</h4><div class="roster-grid">';
-                    data.homeTeam.goalies.forEach(player => {
-                        const stats = player.stats || {};
-                        html += `<div class="player-card">
-                            <strong>#${player.jersey || 'N/A'} ${player.name || 'Unknown'}</strong><br>
-                            <small>${player.position || 'G'}</small><br>
-                            ${stats.gamesPlayed ? `<small>GP: ${stats.gamesPlayed} | W: ${stats.wins || 0} | L: ${stats.losses || 0}</small><br>` : ''}
-                            ${stats.savePct ? `<small>Save %: ${(stats.savePct * 100).toFixed(1)}%</small>` : ''}
-                        </div>`;
-                    });
-                    html += '</div>';
-                }
-                
-                // Skaters
-                if (data.homeTeam.skaters && Array.isArray(data.homeTeam.skaters)) {
-                    html += '<h4>🏒 Skaters</h4><div class="roster-grid">';
-                    data.homeTeam.skaters.forEach(player => {
-                        const stats = player.stats || {};
-                        html += `<div class="player-card">
-                            <strong>#${player.jersey || 'N/A'} ${player.name || 'Unknown'}</strong><br>
-                            <small>${player.position || 'Skater'}</small><br>
-                            ${stats.goals !== undefined ? `<small>G: ${stats.goals} | A: ${stats.assists || 0} | P: ${stats.points || 0}</small><br>` : ''}
-                            ${stats.plusMinus !== undefined ? `<small>+/-: ${stats.plusMinus > 0 ? '+' + stats.plusMinus : stats.plusMinus}</small>` : ''}
-                        </div>`;
-                    });
-                    html += '</div>';
-                }
-                
-                html += '</div>';
-            }
-            
-            // Visiting Team Lineup
-            if (data.visitingTeam) {
-                html += `<div class="section"><h3>✈️ ${data.visitingTeam.name || 'Visiting Team'}</h3>`;
-                
-                // Goalies
-                if (data.visitingTeam.goalies && Array.isArray(data.visitingTeam.goalies)) {
-                    html += '<h4>🥅 Goalies</h4><div class="roster-grid">';
-                    data.visitingTeam.goalies.forEach(player => {
-                        const stats = player.stats || {};
-                        html += `<div class="player-card">
-                            <strong>#${player.jersey || 'N/A'} ${player.name || 'Unknown'}</strong><br>
-                            <small>${player.position || 'G'}</small><br>
-                            ${stats.gamesPlayed ? `<small>GP: ${stats.gamesPlayed} | W: ${stats.wins || 0} | L: ${stats.losses || 0}</small><br>` : ''}
-                            ${stats.savePct ? `<small>Save %: ${(stats.savePct * 100).toFixed(1)}%</small>` : ''}
-                        </div>`;
-                    });
-                    html += '</div>';
-                }
-                
-                // Skaters
-                if (data.visitingTeam.skaters && Array.isArray(data.visitingTeam.skaters)) {
-                    html += '<h4>🏒 Skaters</h4><div class="roster-grid">';
-                    data.visitingTeam.skaters.forEach(player => {
-                        const stats = player.stats || {};
-                        html += `<div class="player-card">
-                            <strong>#${player.jersey || 'N/A'} ${player.name || 'Unknown'}</strong><br>
-                            <small>${player.position || 'Skater'}</small><br>
-                            ${stats.goals !== undefined ? `<small>G: ${stats.goals} | A: ${stats.assists || 0} | P: ${stats.points || 0}</small><br>` : ''}
-                            ${stats.plusMinus !== undefined ? `<small>+/-: ${stats.plusMinus > 0 ? '+' + stats.plusMinus : stats.plusMinus}</small>` : ''}
-                        </div>`;
-                    });
-                    html += '</div>';
-                }
-                
-                html += '</div>';
-            }
-            
-            // Handle the case where API returns "Client access denied" or other errors
-            if (!data.homeTeam && !data.visitingTeam) {
-                if (typeof data === 'string' && data.includes('denied')) {
-                    html += `<div class="section" style="text-align: center; padding: 2rem;">
-                        <h3>🔒 Lineup Data Currently Unavailable</h3>
-                        <p style="color: #a0aec0; margin: 1rem 0;">
-                            The PWHL lineup data is currently restricted by the API provider.
-                        </p>
-                        <p style="color: #a0aec0; margin: 1rem 0;">
-                            We're working on alternative methods to provide team lineups including:
-                        </p>
-                        <ul style="text-align: left; max-width: 400px; margin: 1rem auto; color: #e2e8f0;">
-                            <li>🥅 Goalie assignments</li>
-                            <li>🏒 Starting skater lineups</li>
-                            <li>📋 Full roster information</li>
-                            <li>📊 Player statistics</li>
-                        </ul>
-                        <p style="color: #4299e1; margin-top: 1.5rem;">
-                            <strong>Play-by-Play data is still available!</strong>
-                        </p>
-                    </div>`;
-                } else {
-                    // Show raw data for debugging other cases
-                    html += '<div class="section">';
-                    html += '<h3>� Game Data</h3>';
-                    html += `<p style="color: #a0aec0; margin-bottom: 1rem;">Raw API response:</p>`;
-                    html += `<pre style="white-space: pre-wrap; font-size: 11px; overflow-x: auto; background-color: #1e2329; padding: 1rem; border-radius: 0.25rem; max-height: 400px; overflow-y: auto;">${JSON.stringify(data, null, 2)}</pre>`;
-                    html += '</div>';
-                }
-            }
-            
-            html += '</div>';
-            return html;
-        }
-
-        function formatPlayByPlay(data) {
-            if (!Array.isArray(data) || data.length === 0) {
-                return '<div style="text-align: center; padding: 2rem; color: #a0aec0;">No play-by-play data available.</div>';
-            }
-            
-            let html = '<div class="play-by-play"><h3>⚡ Game Events</h3>';
-            html += '<div class="events-list">';
-            
-            data.slice(0, 100).forEach((event, index) => { // Limit to first 100 events for performance
-                const details = event.details || {};
-                const eventType = event.event || 'unknown';
-                const time = details.time || 'N/A';
-                const period = details.period || 'N/A';
-                
-                let eventDescription = '';
-                let eventIcon = '';
-                
-                switch (eventType) {
-                    case 'goal':
-                        eventIcon = '⚽';
-                        eventDescription = `GOAL - ${details.scoredBy || 'Unknown'} (${details.scorerGoalNumber || '1'})`;
-                        break;
-                    case 'shot':
-                        eventIcon = details.isGoal ? '⚽' : '🏒';
-                        eventDescription = `${details.isGoal ? 'GOAL' : 'SHOT'} - ${details.shotQuality || 'Shot'}`;
-                        break;
-                    case 'penalty':
-                        eventIcon = '⚠️';
-                        eventDescription = `PENALTY - ${details.description || 'Penalty'} (${details.minutes || '2'} min)`;
-                        break;
-                    case 'faceoff':
-                        eventIcon = '🔄';
-                        eventDescription = `Faceoff - ${details.homeWin ? 'Home' : 'Away'} wins`;
-                        break;
-                    case 'hit':
-                        eventIcon = '💥';
-                        eventDescription = 'Hit';
-                        break;
-                    case 'blocked_shot':
-                        eventIcon = '🛡️';
-                        eventDescription = 'Blocked Shot';
-                        break;
-                    case 'goalie_change':
-                        eventIcon = '🥅';
-                        eventDescription = 'Goalie Change';
-                        break;
-                    default:
-                        eventIcon = '📝';
-                        eventDescription = eventType.replace('_', ' ').toUpperCase();
-                }
-                
-                html += `<div class="event-item ${eventType}">
-                    <div class="event-time">
-                        <strong>P${period}</strong><br>
-                        <span>${time}</span>
-                    </div>
-                    <div class="event-description">
-                        ${eventIcon} ${eventDescription}
-                    </div>
-                </div>`;
-            });
-            
-            if (data.length > 100) {
-                html += `<div class="event-item" style="text-align: center; color: #a0aec0;">
-                    <div class="event-description">... and ${data.length - 100} more events</div>
-                </div>`;
-            }
-            
-            html += '</div></div>';
-            return html;
-        }
-
-        function closeModal() {
-            document.getElementById('gameModal').style.display = 'none';
-        }
-
-        // Close modal when clicking outside of it
-        window.onclick = function(event) {
-            const modal = document.getElementById('gameModal');
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        }
-
-        async function exportCSV() {
-            const seasonYear = document.getElementById('seasonFilter').value;
-            const seasonState = document.getElementById('seasonStateFilter').value;
-
-            // Build CSV string with UTF-8 BOM so Excel respects encoding (handles accents like Montréal)
-            const header = "Date,Season,State,Away Team,Home Team,Status,Away Score,Home Score,Game ID\n";
-            const rows = currentData.map(game =>
-                `"${game.date}","${game.season_year}","${game.season_state}","${game.away_team}","${game.home_team}","${game.status}","${game.away_score}","${game.home_score}","${game.game_id}"`
-            ).join('\n');
-            const csvString = '\ufeff' + header + rows; // Keep BOM for schedule export (helps Excel)
-            const blob = new Blob([csvString], { type: 'text/csv;charset=utf-8' });
-
-            // Suggested filename
-            let filename = 'pwhl_schedule';
-            if (seasonYear !== 'All') filename += `_${seasonYear.replace('/', '_')}`;
-            if (seasonState !== 'All') filename += `_${seasonState.replace(' ', '_').toLowerCase()}`;
-            filename += '.csv';
-
-            // Use File System Access API when available (Chrome/Edge) for a real Save As dialog
-            try {
-                if ('showSaveFilePicker' in window) {
-                    const fileHandle = await window.showSaveFilePicker({
-                        suggestedName: filename,
-                        types: [{ description: 'CSV Files', accept: { 'text/csv': ['.csv'] } }]
-                    });
-                    const writable = await fileHandle.createWritable();
-                    await writable.write(blob);
-                    await writable.close();
-                    return;
-                }
-            } catch (err) {
-                console.warn('Save File Picker failed, falling back to standard download:', err);
-            }
-
-            // Fallback for browsers without File System Access API
-            const url = URL.createObjectURL(blob);
-            const link = document.createElement('a');
-            link.href = url;
-            link.download = filename; // Triggers Save As in most browsers or uses default Downloads
-            document.body.appendChild(link);
-            link.click();
-            link.remove();
-            URL.revokeObjectURL(url);
-        }
     </script>
 </body>
 </html>
